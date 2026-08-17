@@ -1,0 +1,821 @@
+{
+ "merged": {
+  "8位音乐盒_The 8-Bit Kit_主菜单": {
+   "nums": {
+    "bass": 726,
+    "drum": 726,
+    "guita": 726
+   },
+   "status": "merged"
+  },
+  "A_D_8_A_D_8_主菜单": {
+   "nums": {
+    "bass": 727,
+    "drum": 727,
+    "guita": 727
+   },
+   "status": "merged"
+  },
+  "CSGO精彩时刻_Moments CSGO_主菜单": {
+   "nums": {
+    "bass": 728,
+    "drum": 728,
+    "guita": 728
+   },
+   "status": "merged"
+  },
+  "EZ4ENCE_EZ4ENCE_主菜单": {
+   "nums": {
+    "bass": 729,
+    "drum": 729,
+    "guita": 729
+   },
+   "status": "merged"
+  },
+  "GLA_GLA_主菜单": {
+   "nums": {
+    "bass": 730,
+    "drum": 730,
+    "guita": 730
+   },
+   "status": "merged"
+  },
+  "II-爆头_Headshot_主菜单": {
+   "nums": {
+    "bass": 731,
+    "drum": 731,
+    "guita": 731
+   },
+   "status": "merged"
+  },
+  "III-竞技场_Arena_主菜单": {
+   "nums": {
+    "bass": 732,
+    "drum": 732,
+    "guita": 732
+   },
+   "status": "merged"
+  },
+  "M_U_D_D_ 军团_M_U_D_D_ FORCE_主菜单": {
+   "nums": {
+    "bass": 733,
+    "drum": 733,
+    "guita": 733
+   },
+   "status": "merged"
+  },
+  "_半衰期_爱莉克斯__反叛者_Anti-Citizen_主菜单": {
+   "nums": {
+    "bass": 734,
+    "drum": 734,
+    "guita": 734
+   },
+   "status": "merged"
+  },
+  "万众瞩目_Under Bright Lights_主菜单": {
+   "nums": {
+    "bass": 735,
+    "drum": 735,
+    "guita": 735
+   },
+   "status": "merged"
+  },
+  "万夫莫敌包_Battlepack_主菜单": {
+   "nums": {
+    "bass": 736,
+    "drum": 736,
+    "guita": 736
+   },
+   "status": "merged"
+  },
+  "人生何处不青山_Life_s Not Out To Get You_主菜单": {
+   "nums": {
+    "bass": 737,
+    "drum": 737,
+    "guita": 737
+   },
+   "status": "merged"
+  },
+  "令人发指_Disgusting_主菜单": {
+   "nums": {
+    "bass": 738,
+    "drum": 738,
+    "guita": 738
+   },
+   "status": "merged"
+  },
+  "你急了__u mad__主菜单": {
+   "nums": {
+    "bass": 739,
+    "drum": 739,
+    "guita": 739
+   },
+   "status": "merged"
+  },
+  "光环_士官长合集_The Master Chief Collection_主菜单": {
+   "nums": {
+    "bass": 740,
+    "drum": 740,
+    "guita": 740
+   },
+   "status": "merged"
+  },
+  "兔子洞_Rabbit Hole_主菜单": {
+   "nums": {
+    "bass": 741,
+    "drum": 741,
+    "guita": 741
+   },
+   "status": "merged"
+  },
+  "冲击星_dashstar__主菜单": {
+   "nums": {
+    "bass": 742,
+    "drum": 742,
+    "guita": 742
+   },
+   "status": "merged"
+  },
+  "冲破藩篱_FREE_主菜单": {
+   "nums": {
+    "bass": 743,
+    "drum": 743,
+    "guita": 743
+   },
+   "status": "merged"
+  },
+  "决心_Backbone_主菜单": {
+   "nums": {
+    "bass": 744,
+    "drum": 744,
+    "guita": 744
+   },
+   "status": "merged"
+  },
+  "危在旦夕_Clutch_主菜单": {
+   "nums": {
+    "bass": 745,
+    "drum": 745,
+    "guita": 745
+   },
+   "status": "merged"
+  },
+  "叛乱_Insurgency_主菜单": {
+   "nums": {
+    "bass": 746,
+    "drum": 746,
+    "guita": 746
+   },
+   "status": "merged"
+  },
+  "同型节奏_IsoRhythm_主菜单": {
+   "nums": {
+    "bass": 747,
+    "drum": 747,
+    "guita": 747
+   },
+   "status": "merged"
+  },
+  "咄咄逼人_Aggressive_主菜单": {
+   "nums": {
+    "bass": 748,
+    "drum": 748,
+    "guita": 748
+   },
+   "status": "merged"
+  },
+  "咖啡_加非_磕肥__Coffee_ Kofe_ Kahveh__主菜单": {
+   "nums": {
+    "bass": 749,
+    "drum": 749,
+    "guita": 749
+   },
+   "status": "merged"
+  },
+  "咖啡拉花_Mocha Petal_主菜单": {
+   "nums": {
+    "bass": 750,
+    "drum": 750,
+    "guita": 750
+   },
+   "status": "merged"
+  },
+  "哥特浮华_Gothic Luxury_主菜单": {
+   "nums": {
+    "bass": 751,
+    "drum": 751,
+    "guita": 751
+   },
+   "status": "merged"
+  },
+  "嚼玻璃_Chewing Glass_主菜单": {
+   "nums": {
+    "bass": 752,
+    "drum": 752,
+    "guita": 752
+   },
+   "status": "merged"
+  },
+  "困兽_Lock Me Up_主菜单": {
+   "nums": {
+    "bass": 753,
+    "drum": 753,
+    "guita": 753
+   },
+   "status": "merged"
+  },
+  "圣诞之欲_All I Want for Christmas_主菜单": {
+   "nums": {
+    "bass": 754,
+    "drum": 754,
+    "guita": 754
+   },
+   "status": "merged"
+  },
+  "地球末夜_LNOE_主菜单": {
+   "nums": {
+    "bass": 755,
+    "drum": 755,
+    "guita": 755
+   },
+   "status": "merged"
+  },
+  "塔罗斯的法则_The Talos Principle_主菜单": {
+   "nums": {
+    "bass": 756,
+    "drum": 756,
+    "guita": 756
+   },
+   "status": "merged"
+  },
+  "大举入侵__Invasion__主菜单": {
+   "nums": {
+    "bass": 3786,
+    "drum": 3786,
+    "guita": 3786
+   },
+   "status": "merged"
+  },
+  "大胆尝试_Bodacious_主菜单": {
+   "nums": {
+    "bass": 3787,
+    "drum": 3787,
+    "guita": 3787
+   },
+   "status": "merged"
+  },
+  "好好干_好好活_Work Hard_ Play Hard_主菜单": {
+   "nums": {
+    "bass": 3788,
+    "drum": 3788,
+    "guita": 3788
+   },
+   "status": "merged"
+  },
+  "如日中天_High Noon_主菜单": {
+   "nums": {
+    "bass": 3789,
+    "drum": 3789,
+    "guita": 3789
+   },
+   "status": "merged"
+  },
+  "如日中天_High Noon_炸弹安放": {
+   "nums": {
+    "bass": 3790,
+    "drum": 3790,
+    "guita": 3790
+   },
+   "status": "merged"
+  },
+  "尖峰时刻_Sharpened_主菜单": {
+   "nums": {
+    "bass": 3791,
+    "drum": 3791,
+    "guita": 3791
+   },
+   "status": "merged"
+  },
+  "尘归尘_All for Dust_主菜单": {
+   "nums": {
+    "bass": 3792,
+    "drum": 3792,
+    "guita": 3792
+   },
+   "status": "merged"
+  },
+  "就是我_I Am_主菜单": {
+   "nums": {
+    "bass": 3793,
+    "drum": 3793,
+    "guita": 3793
+   },
+   "status": "merged"
+  },
+  "巨龙之眼_Eye of the Dragon_主菜单": {
+   "nums": {
+    "bass": 3794,
+    "drum": 3794,
+    "guita": 3794
+   },
+   "status": "merged"
+  },
+  "巴克拉姆_Bachram_主菜单": {
+   "nums": {
+    "bass": 3795,
+    "drum": 3795,
+    "guita": 3795
+   },
+   "status": "merged"
+  },
+  "常青_Evergreen_主菜单": {
+   "nums": {
+    "bass": 3796,
+    "drum": 3796,
+    "guita": 3796
+   },
+   "status": "merged"
+  },
+  "征服_Vici_主菜单": {
+   "nums": {
+    "bass": 3797,
+    "drum": 3797,
+    "guita": 3797
+   },
+   "status": "merged"
+  },
+  "恶魔油漆刷_Devil_s Paintbrush_主菜单": {
+   "nums": {
+    "bass": 3798,
+    "drum": 3798,
+    "guita": 3798
+   },
+   "status": "merged"
+  },
+  "恶魔舞厅_The Devil Went Clubbing in Georgia_主菜单": {
+   "nums": {
+    "bass": 3799,
+    "drum": 3799,
+    "guita": 3799
+   },
+   "status": "merged"
+  },
+  "恶魔舞厅_The Devil Went Clubbing in Georgia_对局结束": {
+   "nums": {
+    "bass": 3800,
+    "drum": 3800,
+    "guita": 3800
+   },
+   "status": "merged"
+  },
+  "战火星空_Astro Bellum_主菜单": {
+   "nums": {
+    "bass": 3801,
+    "drum": 3801,
+    "guita": 3801
+   },
+   "status": "merged"
+  },
+  "新黑色电影_Neo Noir_主菜单": {
+   "nums": {
+    "bass": 3802,
+    "drum": 3802,
+    "guita": 3802
+   },
+   "status": "merged"
+  },
+  "新黑色魅影_Neo Noir_主菜单": {
+   "nums": {
+    "bass": 3803,
+    "drum": 3803,
+    "guita": 3803
+   },
+   "status": "merged"
+  },
+  "无人之境_For No Mankind_主菜单": {
+   "nums": {
+    "bass": 3804,
+    "drum": 3804,
+    "guita": 3804
+   },
+   "status": "merged"
+  },
+  "无拘空间_Floorspace_主菜单": {
+   "nums": {
+    "bass": 3842,
+    "drum": 3842,
+    "guita": 3842
+   },
+   "status": "merged"
+  },
+  "星际战机速龙号_Starship Velociraptor_主菜单": {
+   "nums": {
+    "bass": 3843,
+    "drum": 3843,
+    "guita": 3843
+   },
+   "status": "merged"
+  },
+  "星际战机速龙号_Starship Velociraptor_比赛结束": {
+   "nums": {
+    "bass": 3844,
+    "drum": 3844,
+    "guita": 3844
+   },
+   "status": "merged"
+  },
+  "有为青年_The Good Youth_主菜单": {
+   "nums": {
+    "bass": 3845,
+    "drum": 3845,
+    "guita": 3845
+   },
+   "status": "merged"
+  },
+  "有害物质环境_Environments_主菜单": {
+   "nums": {
+    "bass": 3846,
+    "drum": 3846,
+    "guita": 3846
+   },
+   "status": "merged"
+  },
+  "有害物质环境_Environments_炸弹安放": {
+   "nums": {
+    "bass": 3847,
+    "drum": 3847,
+    "guita": 3847
+   },
+   "status": "merged"
+  },
+  "枪手的卷饼卡车_Gunman Taco Truck_主菜单-1": {
+   "nums": {
+    "bass": 3848,
+    "drum": 3848,
+    "guita": 3848
+   },
+   "status": "merged"
+  },
+  "枪手的卷饼卡车_Gunman Taco Truck_主菜单-2": {
+   "nums": {
+    "bass": 3849,
+    "drum": 3849,
+    "guita": 3849
+   },
+   "status": "merged"
+  },
+  "柒月_Seventh Moon_主菜单": {
+   "nums": {
+    "bass": 3850,
+    "drum": 3850,
+    "guita": 3850
+   },
+   "status": "merged"
+  },
+  "柒月_Seventh Moon_对局结束": {
+   "nums": {
+    "bass": 3851,
+    "drum": 3851,
+    "guita": 3851
+   },
+   "status": "merged"
+  },
+  "永恒之钻_Diamonds_主菜单": {
+   "nums": {
+    "bass": 3852,
+    "drum": 3852,
+    "guita": 3852
+   },
+   "status": "merged"
+  },
+  "沙漠之焰_Desert Fire_主菜单": {
+   "nums": {
+    "bass": 3853,
+    "drum": 3853,
+    "guita": 3853
+   },
+   "status": "merged"
+  },
+  "海绵手指_Sponge Fingerz_主菜单": {
+   "nums": {
+    "bass": 3854,
+    "drum": 3854,
+    "guita": 3854
+   },
+   "status": "merged"
+  },
+  "深红突击_Crimson Assault_主菜单": {
+   "nums": {
+    "bass": 3855,
+    "drum": 3855,
+    "guita": 3855
+   },
+   "status": "merged"
+  },
+  "漂泊者_Drifter_主菜单": {
+   "nums": {
+    "bass": 3856,
+    "drum": 3856,
+    "guita": 3856
+   },
+   "status": "merged"
+  },
+  "燥起来__Make U SWEAT__主菜单": {
+   "nums": {
+    "bass": 3857,
+    "drum": 3857,
+    "guita": 3857
+   },
+   "status": "merged"
+  },
+  "爪哇哈瓦那放克乐_Java Havana Funkaloo_主菜单": {
+   "nums": {
+    "bass": 3858,
+    "drum": 3858,
+    "guita": 3858
+   },
+   "status": "merged"
+  },
+  "特工_Agency_主菜单": {
+   "nums": {
+    "bass": 3859,
+    "drum": 3859,
+    "guita": 3859
+   },
+   "status": "merged"
+  },
+  "特工_Agency_对局结束": {
+   "nums": {
+    "bass": 3860,
+    "drum": 3860,
+    "guita": 3860
+   },
+   "status": "merged"
+  },
+  "猩红密室_Red Room_主菜单": {
+   "nums": {
+    "bass": 3861,
+    "drum": 3861,
+    "guita": 3861
+   },
+   "status": "merged"
+  },
+  "理由_Reason_主菜单": {
+   "nums": {
+    "bass": 3862,
+    "drum": 3862,
+    "guita": 3862
+   },
+   "status": "merged"
+  },
+  "电锯_追命_CHAIN_AW_LXADXUT_主菜单": {
+   "nums": {
+    "bass": 3863,
+    "drum": 3863,
+    "guita": 3863
+   },
+   "status": "merged"
+  },
+  "疤王_King_ Scar_主菜单": {
+   "nums": {
+    "bass": 3864,
+    "drum": 3864,
+    "guita": 3864
+   },
+   "status": "merged"
+  },
+  "痞子帮_The Lowlife Pack_主菜单": {
+   "nums": {
+    "bass": 3865,
+    "drum": 3865,
+    "guita": 3865
+   },
+   "status": "merged"
+  },
+  "神枪手_Shooters_主菜单": {
+   "nums": {
+    "bass": 3866,
+    "drum": 3866,
+    "guita": 3866
+   },
+   "status": "merged"
+  },
+  "纵欲狂欢_No Love Only Pleasure_主菜单": {
+   "nums": {
+    "bass": 3867,
+    "drum": 3867,
+    "guita": 3867
+   },
+   "status": "merged"
+  },
+  "终极_ULTIMATE_主菜单": {
+   "nums": {
+    "bass": 3868,
+    "drum": 3868,
+    "guita": 3868
+   },
+   "status": "merged"
+  },
+  "绝对统御_Total Domination_主菜单": {
+   "nums": {
+    "bass": 3869,
+    "drum": 3869,
+    "guita": 3869
+   },
+   "status": "merged"
+  },
+  "腐朽香氛_The Perfume of Decay_主菜单": {
+   "nums": {
+    "bass": 3870,
+    "drum": 3870,
+    "guita": 3870
+   },
+   "status": "merged"
+  },
+  "致命一击_Dead Shot_主菜单": {
+   "nums": {
+    "bass": 3871,
+    "drum": 3871,
+    "guita": 3871
+   },
+   "status": "merged"
+  },
+  "花脸_Hua Lian (Painted Face)_主菜单": {
+   "nums": {
+    "bass": 3872,
+    "drum": 3872,
+    "guita": 3872
+   },
+   "status": "merged"
+  },
+  "莫洛托夫烈火_MOLOTOV_主菜单": {
+   "nums": {
+    "bass": 3873,
+    "drum": 3873,
+    "guita": 3873
+   },
+   "status": "merged"
+  },
+  "虚空_Void_主菜单": {
+   "nums": {
+    "bass": 3874,
+    "drum": 3874,
+    "guita": 3874
+   },
+   "status": "merged"
+  },
+  "虚空_Void_炸弹安放": {
+   "nums": {
+    "bass": 3875,
+    "drum": 3875,
+    "guita": 3875
+   },
+   "status": "merged"
+  },
+  "蜂鸟_KOLIBRI_主菜单": {
+   "nums": {
+    "bass": 3876,
+    "drum": 3876,
+    "guita": 3876
+   },
+   "status": "merged"
+  },
+  "触摸能量_Feel The Power_主菜单": {
+   "nums": {
+    "bass": 3877,
+    "drum": 3877,
+    "guita": 3877
+   },
+   "status": "merged"
+  },
+  "诶嘿_Ay Hey_主菜单": {
+   "nums": {
+    "bass": 3878,
+    "drum": 3878,
+    "guita": 3878
+   },
+   "status": "merged"
+  },
+  "超爆话筒_Uber Blasto Phone_主菜单": {
+   "nums": {
+    "bass": 3879,
+    "drum": 3879,
+    "guita": 3879
+   },
+   "status": "merged"
+  },
+  "迈克尔_MICHAEL_主菜单": {
+   "nums": {
+    "bass": 3880,
+    "drum": 3880,
+    "guita": 3880
+   },
+   "status": "merged"
+  },
+  "迈阿密热线_Hotline Miami_主菜单": {
+   "nums": {
+    "bass": 3881,
+    "drum": 3881,
+    "guita": 3881
+   },
+   "status": "merged"
+  },
+  "追溯起源_Heading for the Source_主菜单": {
+   "nums": {
+    "bass": 3882,
+    "drum": 3882,
+    "guita": 3882
+   },
+   "status": "merged"
+  },
+  "通宵达旦_All Night_主菜单": {
+   "nums": {
+    "bass": 3883,
+    "drum": 3883,
+    "guita": 3883
+   },
+   "status": "merged"
+  },
+  "金属_Metal_主菜单": {
+   "nums": {
+    "bass": 3884,
+    "drum": 3884,
+    "guita": 3884
+   },
+   "status": "merged"
+  },
+  "闪光舞_Flasbang Dance_主菜单": {
+   "nums": {
+    "bass": 3885,
+    "drum": 3885,
+    "guita": 3885
+   },
+   "status": "merged"
+  },
+  "雄狮之口_Lion_s Mouth_主菜单": {
+   "nums": {
+    "bass": 3886,
+    "drum": 3886,
+    "guita": 3886
+   },
+   "status": "merged"
+  },
+  "非人类_inhuman_主菜单": {
+   "nums": {
+    "bass": 3887,
+    "drum": 3887,
+    "guita": 3887
+   },
+   "status": "merged"
+  },
+  "骷髅爆破_Death_s Head Demolition_主菜单": {
+   "nums": {
+    "bass": 3888,
+    "drum": 3888,
+    "guita": 3888
+   },
+   "status": "merged"
+  },
+  "骸骨圣典_Skeletá_主菜单": {
+   "nums": {
+    "bass": 3889,
+    "drum": 3889,
+    "guita": 3889
+   },
+   "status": "merged"
+  },
+  "骸骨圣典_Skeletá_比赛结束": {
+   "nums": {
+    "bass": 3890,
+    "drum": 3890,
+    "guita": 3890
+   },
+   "status": "merged"
+  },
+  "黄色魔法__Yellow Magic__主菜单": {
+   "nums": {
+    "bass": 3891,
+    "drum": 3891,
+    "guita": 3891
+   },
+   "status": "merged"
+  },
+  "黑帝斯音乐盒_HADES MUSIC KIT_主菜单": {
+   "nums": {
+    "bass": 3892,
+    "drum": 3892,
+    "guita": 3892
+   },
+   "status": "merged"
+  },
+  "鼠役_RAT WARS_主菜单": {
+   "nums": {
+    "bass": 3893,
+    "drum": 3893,
+    "guita": 3893
+   },
+   "status": "merged"
+  }
+ },
+ "generated": "2026-08-17T13:39:09"
+}

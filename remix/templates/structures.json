@@ -1,0 +1,65 @@
+{
+  "_comment": "musickit 曲式模板库（Mubert jingle 方法论移植）。layers 里负数 = 距结尾偏移（如 -4 = 总小节-4）；min_bars 以下自动退化全铺平。",
+  "classic_drop": {
+    "description": "经典 phonk：intro(鼓+旋律) → bass 进入 → drop(牛铃+synth) → outro 淡出",
+    "min_bars": 13,
+    "intro_bars": 4,
+    "outro_bars": 4,
+    "fade_out_bars": 2,
+    "intensity": {
+      "enter_db": -6.0,
+      "exit_db": -8.0,
+      "ramp_bars": 1,
+      "drop_boost_db": 2.0,
+      "drop_layers": ["drum", "bass", "cowbell", "sfx"]
+    },
+    "layers": {
+      "drum": [0, -1],
+      "guita": [0, -1],
+      "bass": [4, -4],
+      "cowbell": [6, -4],
+      "vocal": [6, -4],
+      "synth": [8, -4],
+      "sfx": [8, -2]
+    }
+  },
+  "ambient_ghost": {
+    "description": "氛围幽灵：旋律+垫底先行，鼓后半才进，无牛铃 drop，适合暗黑氛围 phonk",
+    "min_bars": 13,
+    "intro_bars": 6,
+    "outro_bars": 6,
+    "fade_out_bars": 4,
+    "intensity": {
+      "enter_db": -4.0,
+      "exit_db": -10.0,
+      "ramp_bars": 2,
+      "drop_boost_db": 1.5,
+      "drop_layers": ["drum", "bass"]
+    },
+    "layers": {
+      "guita": [0, -1],
+      "synth": [0, -1],
+      "bass": [6, -6],
+      "drum": [8, -2],
+      "cowbell": [10, -8],
+      "vocal": [10, -6],
+      "sfx": [12, -2]
+    }
+  },
+  "loop_stack": {
+    "description": "堆叠循环：全层从第 0 小节齐进，靠 A/B 变体制造变化（适合 12~16 小节短曲）",
+    "min_bars": 1,
+    "intro_bars": 0,
+    "outro_bars": 0,
+    "fade_out_bars": 2,
+    "layers": {
+      "drum": [0, -1],
+      "bass": [0, -1],
+      "guita": [0, -1],
+      "cowbell": [0, -1],
+      "vocal": [0, -1],
+      "synth": [0, -1],
+      "sfx": [0, -1]
+    }
+  }
+}

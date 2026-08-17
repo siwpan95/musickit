@@ -1,0 +1,3384 @@
+{
+ "generated": "2026-08-14T14:12:55",
+ "entries": [
+  {
+   "file": "vocal (1).wav",
+   "source_pack": "mixkit_animals",
+   "original": "105_Monkey_excited_screech.wav",
+   "original_rel": "mixkit_animals/105_Monkey_excited_screech.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.6,
+   "sha256": "29356e90005c9d9e077642b19efcf0968a070a60dc742ab314498cd8904dc65e"
+  },
+  {
+   "file": "vocal (2).wav",
+   "source_pack": "mixkit_animals",
+   "original": "108_Cartoon_monkey_mocking_and_giggling.wav",
+   "original_rel": "mixkit_animals/108_Cartoon_monkey_mocking_and_giggling.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.8,
+   "sha256": "0e1b37819b9560e9fd897980518af2efc48db6550d88af54bd1df6fd8aae1f6d"
+  },
+  {
+   "file": "vocal (3).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1212_Forest_birds_singing.wav",
+   "original_rel": "mixkit_animals/1212_Forest_birds_singing.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.92,
+   "sha256": "874760a0af4b535885671ca85cf4dc76523e346a7d11d068dda0a954b2bb7536"
+  },
+  {
+   "file": "vocal (4).wav",
+   "source_pack": "mixkit_animals",
+   "original": "13_Aggressive_beast_roar.wav",
+   "original_rel": "mixkit_animals/13_Aggressive_beast_roar.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.17,
+   "sha256": "dae23c1111a2ad2341ec7677cfa3cee2105a881457f7d9748881d5da0be0a9ad"
+  },
+  {
+   "file": "vocal (5).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1741_Sheep_sounds.wav",
+   "original_rel": "mixkit_animals/1741_Sheep_sounds.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.54,
+   "sha256": "660c831fc6c83c74c548eb82acd9f69bc5c028ccfdafc9e3fc75b5840ad0bcc9"
+  },
+  {
+   "file": "vocal (6).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1744_Cow_moo.wav",
+   "original_rel": "mixkit_animals/1744_Cow_moo.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.0,
+   "sha256": "48940eeca1a6f63f109e9f11dce19ed962579a5bb613d8d3c4d519bb8a8f697f"
+  },
+  {
+   "file": "vocal (7).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1750_Multiple_moo_in_the_barn.wav",
+   "original_rel": "mixkit_animals/1750_Multiple_moo_in_the_barn.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.43,
+   "sha256": "93e4ff0f42ce6b837fbaae70c2239fafa7dab90aa3cd1283ae593c0cf249c003"
+  },
+  {
+   "file": "vocal (8).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1751_Cow_moo_in_the_barn.wav",
+   "original_rel": "mixkit_animals/1751_Cow_moo_in_the_barn.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.87,
+   "sha256": "188b2d0cd2b88ce0fd0a87bc7c4e5aad6853079fab4946a7760ba80a38408bff"
+  },
+  {
+   "file": "vocal (9).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1762_Stallion_horse_neigh.wav",
+   "original_rel": "mixkit_animals/1762_Stallion_horse_neigh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.55,
+   "sha256": "8b473deb26b6538513996b2811b021214b229a949cad38c965e2e84667aa6c7a"
+  },
+  {
+   "file": "vocal (10).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1763_Farm_goat_baa.wav",
+   "original_rel": "mixkit_animals/1763_Farm_goat_baa.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.9,
+   "sha256": "e6eb3c503cd24f627b988dca9a1e8354232fb4dbff1c2e2eecaba3b853b16d3a"
+  },
+  {
+   "file": "vocal (11).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1769_Chickens_and_pigeons.wav",
+   "original_rel": "mixkit_animals/1769_Chickens_and_pigeons.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.78,
+   "sha256": "82afc792164ae8c566534f822e474a342bfd6de92154d7914094b567b44bf9f2"
+  },
+  {
+   "file": "vocal (12).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1770_Donkey_scream.wav",
+   "original_rel": "mixkit_animals/1770_Donkey_scream.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 7.98,
+   "sha256": "4daa34fe37979c2bfa0c9af2db6701cee3e4b2ce6aac13899ad9974034ca8379"
+  },
+  {
+   "file": "vocal (13).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1775_Wolf_howling.wav",
+   "original_rel": "mixkit_animals/1775_Wolf_howling.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 6.87,
+   "sha256": "faf2e52815806a7c977b2758cd935f8d1808e17341a79c85385b2c5e23f4a052"
+  },
+  {
+   "file": "vocal (14).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1776_Wolves_pack_howling.wav",
+   "original_rel": "mixkit_animals/1776_Wolves_pack_howling.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.32,
+   "sha256": "37adfd63a9208559fb81d6c0b3f82c263245d6e7392408cd6e95c1873132d35c"
+  },
+  {
+   "file": "vocal (15).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1780_Single_cricket_screech.wav",
+   "original_rel": "mixkit_animals/1780_Single_cricket_screech.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.08,
+   "sha256": "973eb8f811498705de70a46a54f9f12f1fcb6bfaa0578908a7ea20f921a760f5"
+  },
+  {
+   "file": "vocal (16).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1781_Small_cricket_screech.wav",
+   "original_rel": "mixkit_animals/1781_Small_cricket_screech.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.74,
+   "sha256": "56771e9ddc24a1afa072f711ee0419598bfb94b1fd512832a647163b831b22d1"
+  },
+  {
+   "file": "vocal (17).wav",
+   "source_pack": "mixkit_animals",
+   "original": "17_Little_birds_singing_in_the_trees.wav",
+   "original_rel": "mixkit_animals/17_Little_birds_singing_in_the_trees.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 7.84,
+   "sha256": "e6b66283c46ab800e306e7de7d0f1d3036a2b2e86548c28c2370be63dc3784d3"
+  },
+  {
+   "file": "vocal (18).wav",
+   "source_pack": "mixkit_animals",
+   "original": "18_Toy_whistler_bird_sound.wav",
+   "original_rel": "mixkit_animals/18_Toy_whistler_bird_sound.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.64,
+   "sha256": "2edec1fd8008fd039f65bfdec23d450d55d9e9e172e1ccb3f758b770a5cb3053"
+  },
+  {
+   "file": "vocal (19).wav",
+   "source_pack": "mixkit_animals",
+   "original": "1_Dog_barking_twice.wav",
+   "original_rel": "mixkit_animals/1_Dog_barking_twice.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.1,
+   "sha256": "8233f38a9958fe28f5d63e12a4a942ad22af27f5d3b2bf7492b280c1d2f1ec7c"
+  },
+  {
+   "file": "vocal (20).wav",
+   "source_pack": "mixkit_animals",
+   "original": "20_Flock_of_wild_geese.wav",
+   "original_rel": "mixkit_animals/20_Flock_of_wild_geese.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.0,
+   "sha256": "62abaa77e9d3c9315622a370430056dbaae87562cce3a49488707cdbb0d994c5"
+  },
+  {
+   "file": "vocal (21).wav",
+   "source_pack": "mixkit_animals",
+   "original": "21_Double_little_bird_chirp.wav",
+   "original_rel": "mixkit_animals/21_Double_little_bird_chirp.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.54,
+   "sha256": "a0a8401c6a855576a9d1babc3964b3178bd4d44c7ed7889fe7f0c6d9fcf89a48"
+  },
+  {
+   "file": "vocal (22).wav",
+   "source_pack": "mixkit_animals",
+   "original": "2231_Loud_creature_breathing.wav",
+   "original_rel": "mixkit_animals/2231_Loud_creature_breathing.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.46,
+   "sha256": "1c1b761beca1b9b7dc39605a204e6ccd681083efb7a7d45b177c355f3f0a430f"
+  },
+  {
+   "file": "vocal (23).wav",
+   "source_pack": "mixkit_animals",
+   "original": "23_Little_bird_calling_chirp.wav",
+   "original_rel": "mixkit_animals/23_Little_bird_calling_chirp.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.93,
+   "sha256": "414b5f19daeeb629ff2babe7661f5bcf1986ddace63e0abf4bba5a9d46aacb57"
+  },
+  {
+   "file": "vocal (24).wav",
+   "source_pack": "mixkit_animals",
+   "original": "2462_Rooster_crowing_in_the_morning.wav",
+   "original_rel": "mixkit_animals/2462_Rooster_crowing_in_the_morning.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.59,
+   "sha256": "cf5c4ee9a573257ddb0d42f4f4ed87ab9af685755355341750464d544a3f616a"
+  },
+  {
+   "file": "vocal (25).wav",
+   "source_pack": "mixkit_animals",
+   "original": "2485_Wolves_at_scary_forest.wav",
+   "original_rel": "mixkit_animals/2485_Wolves_at_scary_forest.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 9.18,
+   "sha256": "bfbec760b152aeed5b825d8eabc8943d8c074d80562a63ed8fb3fd6d9ada807b"
+  },
+  {
+   "file": "vocal (26).wav",
+   "source_pack": "mixkit_animals",
+   "original": "2697_Fly_wings_movement.wav",
+   "original_rel": "mixkit_animals/2697_Fly_wings_movement.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.8,
+   "sha256": "309178b9df3ab4a11481c2a40ff70342990815ef036c07b213d9cd7034af0394"
+  },
+  {
+   "file": "vocal (27).wav",
+   "source_pack": "mixkit_animals",
+   "original": "27_Tropical_bird_squeak.wav",
+   "original_rel": "mixkit_animals/27_Tropical_bird_squeak.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.0,
+   "sha256": "03cc6adf840c49fefcd493db3e011e07d0aa80abd78452ddca0cfef9cc5c8d1f"
+  },
+  {
+   "file": "vocal (28).wav",
+   "source_pack": "mixkit_animals",
+   "original": "309_Angry_dragon_growl.wav",
+   "original_rel": "mixkit_animals/309_Angry_dragon_growl.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.81,
+   "sha256": "22ca2fe6543ad3bc6823b1631f6d0939f37a36de9194e72ad50160ac73189f2f"
+  },
+  {
+   "file": "vocal (29).wav",
+   "source_pack": "mixkit_animals",
+   "original": "3_Pig_grunting.wav",
+   "original_rel": "mixkit_animals/3_Pig_grunting.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 11.13,
+   "sha256": "6bb9d13119db90dfad80c300e557d97c00a08a83642ca0e045333d7bff6cea5c"
+  },
+  {
+   "file": "vocal (30).wav",
+   "source_pack": "mixkit_animals",
+   "original": "419_Hyena_cartoon_laugh.wav",
+   "original_rel": "mixkit_animals/419_Hyena_cartoon_laugh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.31,
+   "sha256": "8603accad7e13d414479fb58b2b6c4ada5229c915b3f0be9f408ee46252c4b7a"
+  },
+  {
+   "file": "vocal (31).wav",
+   "source_pack": "mixkit_animals",
+   "original": "45_Domestic_cat_hungry_meow.wav",
+   "original_rel": "mixkit_animals/45_Domestic_cat_hungry_meow.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.64,
+   "sha256": "173a98497623e4d041cde0fb9498ae7d1556d839785a641338dcb3c96ceac0d4"
+  },
+  {
+   "file": "vocal (32).wav",
+   "source_pack": "mixkit_animals",
+   "original": "51_Annoyed_big_dog_barking.wav",
+   "original_rel": "mixkit_animals/51_Annoyed_big_dog_barking.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.37,
+   "sha256": "acfd99611877f2bc84dd3304a7b285a7a7f510b31e72621604c5733017ba8264"
+  },
+  {
+   "file": "vocal (33).wav",
+   "source_pack": "mixkit_animals",
+   "original": "52_Big_tired_dog_panting.wav",
+   "original_rel": "mixkit_animals/52_Big_tired_dog_panting.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.09,
+   "sha256": "9c77b7f0728d924d19441c2c54f99b01a66035983db4c40b690c65efc9ac436e"
+  },
+  {
+   "file": "vocal (34).wav",
+   "source_pack": "mixkit_animals",
+   "original": "54_Medium_size_angry_dog_bark.wav",
+   "original_rel": "mixkit_animals/54_Medium_size_angry_dog_bark.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.39,
+   "sha256": "9f24681cbcc75d143533ee750fd0d092f77064114aea8f4f46c483f56dfc7311"
+  },
+  {
+   "file": "vocal (35).wav",
+   "source_pack": "mixkit_animals",
+   "original": "59_Giant_dog_aggressive_growl.wav",
+   "original_rel": "mixkit_animals/59_Giant_dog_aggressive_growl.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.35,
+   "sha256": "878bb0e964ceb61b5a82676752ec10e2e3ff2fa98987dc256b00493d1ae26abd"
+  },
+  {
+   "file": "vocal (36).wav",
+   "source_pack": "mixkit_animals",
+   "original": "5_Wounded_lion_growling.wav",
+   "original_rel": "mixkit_animals/5_Wounded_lion_growling.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.71,
+   "sha256": "61a92de4dbee51f98211ed149dc7caf09a28ec2f75c8a0c5ca1c0c8361b44378"
+  },
+  {
+   "file": "vocal (37).wav",
+   "source_pack": "mixkit_animals",
+   "original": "60_Horde_of_barking_dogs.wav",
+   "original_rel": "mixkit_animals/60_Horde_of_barking_dogs.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 9.95,
+   "sha256": "c33c4bd3142e5307b8f35f163bc9af8d7a7aaa1e6dad2efe0adc94591024241c"
+  },
+  {
+   "file": "vocal (38).wav",
+   "source_pack": "mixkit_animals",
+   "original": "62_Wild_raven_bird_calling.wav",
+   "original_rel": "mixkit_animals/62_Wild_raven_bird_calling.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.49,
+   "sha256": "c5966a869b7c940912a81525acae666840fc7142340c252adcae1854dcd10468"
+  },
+  {
+   "file": "vocal (39).wav",
+   "source_pack": "mixkit_animals",
+   "original": "67_Melodic_songbird_chirp.wav",
+   "original_rel": "mixkit_animals/67_Melodic_songbird_chirp.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.25,
+   "sha256": "1f957738d23bc9e47b8d5a0ff7ff6760f3457e1bdfe820f5faf9ee528a0c2bb8"
+  },
+  {
+   "file": "vocal (40).wav",
+   "source_pack": "mixkit_animals",
+   "original": "6_Wild_lion_animal_roar.wav",
+   "original_rel": "mixkit_animals/6_Wild_lion_animal_roar.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.03,
+   "sha256": "d963f0806cbfabdbe74fed3c2eb5bf90ed94b263ec83c047d83eb73b553ca308"
+  },
+  {
+   "file": "vocal (41).wav",
+   "source_pack": "mixkit_animals",
+   "original": "76_Intense_horse_stallion_neigh.wav",
+   "original_rel": "mixkit_animals/76_Intense_horse_stallion_neigh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.96,
+   "sha256": "e0c0717ac3d135c26036b5a4c2b42da88463b4daddb104d18d76391f5e49bcac"
+  },
+  {
+   "file": "vocal (42).wav",
+   "source_pack": "mixkit_animals",
+   "original": "77_Horse_fast_gallop_in_the_dirt.wav",
+   "original_rel": "mixkit_animals/77_Horse_fast_gallop_in_the_dirt.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 12.57,
+   "sha256": "79e78c3ab1f9569b185f0b86b4b0e255f6437a5fb95da55e36b932672380249c"
+  },
+  {
+   "file": "vocal (43).wav",
+   "source_pack": "mixkit_animals",
+   "original": "80_Hard_big_horse_snort.wav",
+   "original_rel": "mixkit_animals/80_Hard_big_horse_snort.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.85,
+   "sha256": "95525d70be70fe8ceb0063fe6465fa585a68036ebf02958a566f2a64150f6cc1"
+  },
+  {
+   "file": "vocal (44).wav",
+   "source_pack": "mixkit_animals",
+   "original": "83_Horse_fast_gallop_on_a_concrete_surface.wav",
+   "original_rel": "mixkit_animals/83_Horse_fast_gallop_on_a_concrete_surface.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 12.72,
+   "sha256": "4905e8be40eb70380d4a1b0de66a0d599026eaff90041696fbe37c5cd6cf69c2"
+  },
+  {
+   "file": "vocal (45).wav",
+   "source_pack": "mixkit_animals",
+   "original": "85_Scared_horse_neighing.wav",
+   "original_rel": "mixkit_animals/85_Scared_horse_neighing.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.81,
+   "sha256": "21ee5ce08128fbcc19b40415396159ea8f618031867a0b581bbbd3fe5f226453"
+  },
+  {
+   "file": "vocal (46).wav",
+   "source_pack": "mixkit_animals",
+   "original": "86_Little_cat_attention_meow.wav",
+   "original_rel": "mixkit_animals/86_Little_cat_attention_meow.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.54,
+   "sha256": "1eb8e716d86d76062dd319d85a3c3ea756a587577140d84426e9bf601684886a"
+  },
+  {
+   "file": "vocal (47).wav",
+   "source_pack": "mixkit_animals",
+   "original": "87_Little_cat_pain_meow.wav",
+   "original_rel": "mixkit_animals/87_Little_cat_pain_meow.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.7,
+   "sha256": "a1d0a04214181e5fc704b8702bb17e1938b062f6d25975302d1ff0202e8027b8"
+  },
+  {
+   "file": "vocal (48).wav",
+   "source_pack": "mixkit_animals",
+   "original": "89_Angry_wild_cat_roar.wav",
+   "original_rel": "mixkit_animals/89_Angry_wild_cat_roar.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.62,
+   "sha256": "c4c57d5617973362c6f326ccd2176a717d3d8f2a99b3c43db2a0bed4ab013034"
+  },
+  {
+   "file": "vocal (49).wav",
+   "source_pack": "mixkit_animals",
+   "original": "91_Cartoon_little_cat_meow.wav",
+   "original_rel": "mixkit_animals/91_Cartoon_little_cat_meow.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.09,
+   "sha256": "7528f21ce6cb72a0175e4229130640b02926038533e0cb325dd11ba6dd071036"
+  },
+  {
+   "file": "vocal (50).wav",
+   "source_pack": "mixkit_animals",
+   "original": "92_Cartoon_kitty_begging_meow.wav",
+   "original_rel": "mixkit_animals/92_Cartoon_kitty_begging_meow.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.08,
+   "sha256": "8b495d4aff969c4e62516c65aa696783758c7bc054f8968f554d46abc0085536"
+  },
+  {
+   "file": "vocal (51).wav",
+   "source_pack": "mixkit_animals",
+   "original": "93_Sweet_kitty_meow.wav",
+   "original_rel": "mixkit_animals/93_Sweet_kitty_meow.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.76,
+   "sha256": "cd7a909516b839c08668b1fe0cabf9136dcb7cec5bc5c0fda8e595f3e64ea1f0"
+  },
+  {
+   "file": "vocal (52).wav",
+   "source_pack": "mixkit_animals",
+   "original": "94_Angry_cartoon_kitty_meow.wav",
+   "original_rel": "mixkit_animals/94_Angry_cartoon_kitty_meow.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.49,
+   "sha256": "270422c7eded0d238ea900042cafa0d3dbf99a9da47ae9f33f36ed72d07c8179"
+  },
+  {
+   "file": "vocal (53).wav",
+   "source_pack": "mixkit_animals",
+   "original": "95_Big_wild_lion_growl.wav",
+   "original_rel": "mixkit_animals/95_Big_wild_lion_growl.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.49,
+   "sha256": "2a18891eab2b952e12c2a3874011dbbd055c9df71ca4d1ae4cabfb8901b9a7ad"
+  },
+  {
+   "file": "vocal (54).wav",
+   "source_pack": "mixkit_animals",
+   "original": "96_Big_wild_cat_long_purr.wav",
+   "original_rel": "mixkit_animals/96_Big_wild_cat_long_purr.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.2,
+   "sha256": "a14fdca5afaf65c4dd594ac78ac95ddb9adbd13ac8f8d7dd7db87de4ae9a5d2f"
+  },
+  {
+   "file": "vocal (105).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_01_Vocal_Loop_Chop_Feel_It_80_C.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (106).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_02_Vocal_Loop_Chop_Baby_80_F.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (107).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_03_Vocal_Loop_Chop_Can_t_Stay_80_E.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (108).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_04_Vocal_Loop_Chop_Everyday_80_C#.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (109).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_05_Vocal_Loop_Chop_My_Body_80_F.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (110).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_06_Vocal_Loop_Chop_I_Wanna_80_C.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (111).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_07_Vocal_Loop_Chop_Oh_80_E.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (112).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_08_Vocal_Loop_Chop_Uuh_80_F#.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (113).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "vox-Gotham.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/2-California (90 bpm)/Dry",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (114).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "vox-Gotham.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/2-California (90 bpm)/Wet",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (115).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Decatur_Voxchop.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (116).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Strange_Vocal_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (117).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Strange_Vocal_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (118).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_130_Gmin_Vocal.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_130_Gmin_RAVENOUS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (119).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_85_A#_Strange_Vocal_Chop.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_85_A#_DECATUR",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (120).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_90_Emin_HomelessVocalLayer.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_90_Emin_ESTUARY",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (121).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_100_Wiggle_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_FEMALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (122).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Sweet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_FEMALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (123).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_80_808_Cannon_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_FEMALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (124).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_100_ItsGood_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (125).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_100_PullEm_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (126).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_100_Spin_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (127).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_100_Wiggle_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (128).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_100_WontStop_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (129).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Gibberish_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (130).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Smoke_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (131).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Spinning_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (132).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Sweet_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (133).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_TickTock_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (134).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_160_Bustit_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (135).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_160_NoSleep_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (136).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_160_Party_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (137).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_160_SDRR_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (138).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_160_Splits_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (139).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_80_808_Cannon_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (140).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_80_BigOl_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (141).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_80_Drunk_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (142).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_80_Rollie_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (143).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_80_Shining_Male_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_MALE_PHRASE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (144).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_122_Bm_Stop_Chop_1_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_122_Bm_STOP_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (145).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_122_Bm_Stop_Chop_2_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_122_Bm_STOP_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (146).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_122_Bm_Stop_Chop_2_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_122_Bm_STOP_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (147).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_122_Bm_Stop_Drop_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_122_Bm_STOP_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (148).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_122_Bm_Stop_Main_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_122_Bm_STOP_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (149).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_122_Bm_Stop_Main_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_122_Bm_STOP_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (150).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_122_Bm_Stop_Rvs_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_122_Bm_STOP_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (151).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_122_Bm_Stop_Vocode_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_122_Bm_STOP_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (152).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_122_Bm_Stop_Vocode_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_122_Bm_STOP_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (153).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_126_Dm_Lady_BV_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_126_Dm_LADY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (154).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_126_Dm_Lady_BV_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_126_Dm_LADY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (155).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_126_Dm_Lady_Main_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_126_Dm_LADY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (156).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_126_Dm_Lady_Main_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_126_Dm_LADY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (157).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_126_Dm_Lady_Stab_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_126_Dm_LADY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (158).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_136_FMaj_HT_BV_All_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_136_FMaj_HOT_THING_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (159).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_136_FMaj_HT_End_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_136_FMaj_HOT_THING_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (160).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_136_FMaj_HT_End_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_136_FMaj_HOT_THING_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (161).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_136_FMaj_HT_Intro_Hook_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_136_FMaj_HOT_THING_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (162).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_136_FMaj_HT_Intro_Latino_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_136_FMaj_HOT_THING_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (163).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_136_FMaj_HT_Main_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_136_FMaj_HOT_THING_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (164).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_136_FMaj_HT_Main_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_136_FMaj_HOT_THING_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (165).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_136_FMaj_HT_Phrs_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_136_FMaj_HOT_THING_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (166).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_BV_1_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (167).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_BV_1_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (168).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_BV_2_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (169).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_BV_2_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (170).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_BV_Lo_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (171).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_BV_Lo_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (172).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_Chops_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (173).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_Lead_OD_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (174).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_Lead_OD_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (175).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_Main_ALT_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (176).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_Main_ALT_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (177).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_Main_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (178).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_140_Bm_SD_Main_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_140_Bm_SOMEDAY_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (179).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_97_Cm_Rose_Atmo_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_97_Cm_ROSE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (180).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_97_Cm_Rose_Dist_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_97_Cm_ROSE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (181).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_97_Cm_Rose_Dog_Fx_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_97_Cm_ROSE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (182).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_97_Cm_Rose_Main_Dry_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_97_Cm_ROSE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (183).wav",
+   "source_pack": "Loopmasters Vocals With Attitude WAV REX",
+   "original": "MODV_97_Cm_Rose_Main_Wet_Fem_Voc.wav",
+   "original_rel": "Loopmasters Vocals With Attitude WAV REX/MODV_WAV_LOOPS/MODV_VOCAL_KIT_LOOPS/MODV_97_Cm_ROSE_LPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (184).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_01_97_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (185).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_01_97_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (186).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_01_97_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (187).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_02_97_Dry_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (188).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_02_97_Wet_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (189).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_02_97_Wet_Tail_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (190).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_03_97_Dry_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (191).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_03_97_Wet_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (192).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_03_97_Wet_Tail_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (193).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_04_97_Dry_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (194).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_04_97_Wet_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (195).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_04_97_Wet_Tail_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (196).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_05_97_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (197).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_05_97_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (198).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_05_97_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (199).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_06_97_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (200).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_06_97_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (201).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_06_97_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (202).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_07_104_Dry_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (203).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_07_104_Wet_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (204).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_07_104_Wet_Tail_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (205).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_08_104_Dry_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (206).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_08_104_Wet_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (207).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_08_104_Wet_Tail_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (208).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_09_104_Dry_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (209).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_09_104_Wet_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (210).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_09_104_Wet_Tail_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (211).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_10_104_Dry_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (212).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_10_104_Wet_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (213).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_10_104_Wet_Tail_C.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (214).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_11_90_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (215).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_11_90_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (216).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_11_90_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (217).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_12_128_Dry_D#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (218).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_12_128_Wet_D#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (219).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_12_128_Wet_Tail_D#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (220).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_13_128_Dry_D#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (221).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_13_128_Wet_D#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (222).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_13_128_Wet_Tail_D#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (223).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_14_128_Dry_D#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (224).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_14_128_Wet_D#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (225).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_14_128_Wet_Tail_D#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (226).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_15_116_Dry_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (227).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_15_116_Wet_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (228).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_15_116_Wet_Tail_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (229).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_16_116_Dry_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (230).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_16_116_Wet_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (231).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_16_116_Wet_Tail_G#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (232).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_17_97_Dry_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (233).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_17_97_Wet_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (234).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_17_97_Wet_Tail_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (235).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_18_97_Dry_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (236).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_18_97_Wet_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (237).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_18_97_Wet_Tail_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (238).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_19_94_Dry_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (239).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_19_94_Wet_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (240).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_19_94_Wet_Tail_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (241).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_20_94_Dry_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (242).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_20_94_Wet_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (243).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_20_94_Wet_Tail_A.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (244).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_21_94_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (245).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_21_94_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (246).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_21_94_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (247).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_22_100_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (248).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_22_100_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (249).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_22_100_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (250).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_23_106_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (251).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_23_106_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (252).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_23_106_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (253).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_24_106_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (254).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_24_106_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (255).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_24_106_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (256).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_25_115_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (257).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_25_115_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (258).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_25_115_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (259).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_26_134_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (260).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_26_134_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (261).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_26_134_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (262).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_27_130_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (263).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_27_130_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (264).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_27_130_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (265).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_28_131_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (266).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_28_131_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (267).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_28_131_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (268).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_29_130_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (269).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_29_131_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (270).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_29_131_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (271).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_30_155_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (272).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_30_155_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (273).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_30_155_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (274).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_31_100_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (275).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_31_100_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (276).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_31_100_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (277).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_32_100_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (278).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_32_100_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (279).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_32_100_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (280).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_33_120_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (281).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_33_120_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (282).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_33_120_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (283).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_34_100_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (284).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_34_100_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (285).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_34_100_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (286).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_35_90_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (287).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_35_90_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (288).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_35_90_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (289).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_36_102_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (290).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_36_102_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (291).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_36_102_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (292).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_37_90_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (293).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_37_90_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (294).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_37_90_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (295).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_38_92_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (296).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_38_92_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (297).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_38_92_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (298).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_39_100_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (299).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_39_100_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (300).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_39_100_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (301).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_40_80_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (302).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_40_80_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (303).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_40_80_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (304).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_41_90_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (305).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_41_90_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (306).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_41_90_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (307).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_42_90_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (308).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_42_90_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (309).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_42_90_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (310).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_43_80_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (311).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_43_80_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (312).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_43_80_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (313).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_44_80_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (314).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_44_80_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (315).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_44_80_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (316).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_45_90_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (317).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_45_90_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (318).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_45_90_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (319).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_46_102_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (320).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_46_102_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (321).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_46_102_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (322).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_47_100_Dry_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (323).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_47_100_Wet_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (324).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_47_100_Wet_Tail_A#.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (325).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_48_90_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (326).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_48_90_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (327).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_48_90_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (328).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_49_90_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (329).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_49_90_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (330).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_49_90_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (331).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_50_90_Dry_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (332).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_50_90_Wet_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (333).wav",
+   "source_pack": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL",
+   "original": "PL_EPV_Loop_50_90_Wet_Tail_B.wav",
+   "original_rel": "Producer Loops Ethnic Pop Vocals MULTiFORMAT-DECiBEL/Ethnic Pop Vocals - ACID WAV",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (334).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_110_A_Vocal_Loop_04.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (335).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_110_D#_Vocal_Loop_01.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (336).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_110_D_Vocal_Loop_03.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (337).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_A#_Vocal_Loop_02.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (338).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_A#_Vocal_Loop_05.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (339).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_A#_Vocal_Loop_10.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (340).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_A#_Vocal_Loop_16.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (341).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_A#_Vocal_Loop_18.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (342).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_A_Vocal_Loop_19.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (343).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_A_Vocal_Loop_20.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (344).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_B_Vocal_Loop_15.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (345).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_C#_Vocal_Loop_17.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (346).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_C_Vocal_Loop_11.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (347).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_C_Vocal_Loop_12.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (348).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_E_Vocal_Loop_09.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (349).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_E_Vocal_Loop_13.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (350).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_F#_Vocal_Loop_06.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (351).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_F_Vocal_Loop_07.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (352).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_F_Vocal_Loop_08.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (353).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_120_G#_Vocal_Loop_14.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)"
+  },
+  {
+   "file": "vocal (354).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "01 - Vocal Chops - C#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (355).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "02 - Vocal Chops - C#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (356).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "03 - Vocal Chops - A#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (357).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "04 - Vocal Chops - A#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (358).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "05 - Vocal Chops - F#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (359).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "06 - Vocal Chops - C#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (360).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "07 - Vocal Chops - A#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (361).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "08 - Vocal Chops - D#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (362).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "09 - Vocal Chops - C#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (363).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "10 - Vocal Chops - C#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (364).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "100 - Vocal Chops - A.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (365).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "11 - Vocal Chops - C#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (366).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "12 - Vocal Chops - C#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (367).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "13 - Vocal Chops -.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (368).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "14 - Vocal Chops - D#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (369).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "15 - Vocal Chops - D#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (370).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "16 - Vocal Chops -.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (371).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "17 - Vocal Chops - Fm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (372).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "18 - Vocal Chops - Dm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (373).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "19 - Vocal Chops - Fm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (374).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "20 - Vocal Chops - G.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (375).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "21 - Vocal Chops - Fm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (376).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "22 - Vocal Chops - Reverse.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (377).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "23 - Vocal Chops - Reverse Ambiente.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (378).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "24 - Vocal Chops - Am.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (379).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "25 - Vocal Chops - F#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (380).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "26 - Vocal Chops - Cm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (381).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "27 - Vocal Chops - D#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (382).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "28 - Vocal Chops - Dm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (383).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "29 - Vocal Chops - B.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (384).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "30 - Vocal Chops - A.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (385).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "31 - Vocal Chops - F#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (386).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "32 - Vocal Chops - C.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (387).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "33 - Vocal Chops - Bbm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (388).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "34 - Vocal Chops - Bbm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (389).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "35 - Vocal Chops - Bbm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (390).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "36 - Vocal Chops - Bbm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (391).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "37 - Vocal Chops - Bbm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (392).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "38 - Vocal Chops - Bm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (393).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "39 - Vocal Chops - Bbm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (394).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "40 - Vocal Chops - Bbm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (395).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "41 - Vocal Chops - B.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (396).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "42 - Vocal Chops - C#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (397).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "43 - Vocal Chops - C#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (398).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "44 - Vocal Chops - Gm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (399).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "45 - Vocal Chops - Bm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (400).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "46 - Vocal Chops - Gm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (401).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "47 - Vocal Chops - Bm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (402).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "48 - Vocal Chops - Am.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (403).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "49 - Vocal Chops - Gm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (404).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "50 - Vocal Chops - Bm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (405).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "51 - Vocal Chops - Db.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (406).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "52 - Vocal Chops - Fm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (407).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "53 - Vocal Chops - Cm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (408).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "54 - Vocal Chops -.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (409).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "55 - Vocal Chops -.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (410).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "56 - Vocal Chops - Abm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (411).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "57 - Vocal Chops - C#m.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (412).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "58 - Vocal Chops - Ebm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (413).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "59 - Vocal Chops - F.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (414).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "60 - Vocal Chops - Bbm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (415).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "61 - Vocal Chops - Gm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (416).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "62 - Vocal Chops - bpm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (417).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "63 - Vocal Chops - F.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (418).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "64 - Vocal Chops - F.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (419).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "65 - Vocal Chops - C#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (420).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "66 - Vocal Chops - F# Major.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (421).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "67 - Vocal Chops - F#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (422).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "68 - Vocal Chops - Bm.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (423).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "69 - Vocal Chops - Em.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (424).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "70 - Vocal Chops - Em.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (425).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "71 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (426).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "72 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (427).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "73 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (428).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "74 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (429).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "75 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (430).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "76 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (431).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "77 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (432).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "78 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (433).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "79 - Vocal Chops - C#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (434).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "80 - Vocal Chops - C#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (435).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "81 - Vocal Chops - C#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (436).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "82 - Vocal Chops - C#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (437).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "83 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (438).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "84 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (439).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "85 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (440).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "86 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (441).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "87 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (442).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "88 - Vocal Chops - A#min.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (443).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "89 - Vocal Chops - F.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (444).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "90 - Vocal Chops - C.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (445).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "91 - Vocal Chops - B.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (446).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "92 - Vocal Chops - D.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (447).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "93 - Vocal Chops - C.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (448).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "94 - Vocal Chops - D#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (449).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "95 - Vocal Chops - F#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (450).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "96 - Vocal Chops - F#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (451).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "97 - Vocal Chops - G.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (452).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "98 - Vocal Chops - B.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (453).wav",
+   "source_pack": "Stivenz Beats Vocal Chops",
+   "original": "99 - Vocal Chops - F#.wav",
+   "original_rel": ".",
+   "license": "Verify license (producer-base freebie; confirm before commercial use)"
+  },
+  {
+   "file": "vocal (100).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (100).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (101).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (101).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (102).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (102).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (103).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (103).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (104).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (104).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (55).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (55).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (56).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (56).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (57).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (57).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (58).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (58).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (59).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (59).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (60).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (60).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (61).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (61).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (62).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (62).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (63).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (63).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (64).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (64).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (65).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (65).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (66).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (66).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (67).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (67).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (68).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (68).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (69).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (69).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (70).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (70).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (71).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (71).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (72).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (72).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (73).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (73).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (74).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (74).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (75).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (75).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (76).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (76).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (77).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (77).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (78).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (78).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (79).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (79).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (80).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (80).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (81).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (81).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (82).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (82).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (83).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (83).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (84).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (84).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (85).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (85).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (86).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (86).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (87).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (87).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (88).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (88).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (89).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (89).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (90).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (90).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (91).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (91).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (92).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (92).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (93).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (93).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (94).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (94).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (95).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (95).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (96).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (96).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (97).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (97).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (98).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (98).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "vocal (99).wav",
+   "subcategory": "(root)",
+   "source_pack": "sync",
+   "original": "vocal (99).wav",
+   "original_rel": "(root)",
+   "license": "see source",
+   "duration_s": null
+  }
+ ]
+}

@@ -1,0 +1,4595 @@
+{
+ "generated_by": "ingest_sakura.py",
+ "entries": [
+  {
+   "file": "sfx (1).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1146_Intro_transition.wav",
+   "original_rel": "mixkit_sfx/1146_Intro_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 6.08,
+   "sha256": "5fc9b9bedd8669bbe0bbc18e75be24905820a8d71db4f8a39560f409e75d67ab",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (2).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1168_Woosh_wind.wav",
+   "original_rel": "mixkit_sfx/1168_Woosh_wind.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.1,
+   "sha256": "00b3d717fb074ebe881ba09af8d51e81039b1947d3b6f27ab00af68ec2525f7b",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (3).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1279_Fast_thunder_impact.wav",
+   "original_rel": "mixkit_sfx/1279_Fast_thunder_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.41,
+   "sha256": "971abf98939c3abae7323ddbd477d8bd0268655e142b373a8a9df739b313a4e9",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (4).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1287_Cinematic_laser_gun_thunder.wav",
+   "original_rel": "mixkit_sfx/1287_Cinematic_laser_gun_thunder.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.96,
+   "sha256": "1816c079d0401fc87c4a9e8bff5a85ce8c264fffbdb5906db71bc770eab2c96d",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (5).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1465_Vacuum_swoosh_transition.wav",
+   "original_rel": "mixkit_sfx/1465_Vacuum_swoosh_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.87,
+   "sha256": "9f45ac92dd60625a7f54e838f3b86f9c518553d5f75a53531932351fcf733038",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (6).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1474_Transition_windy_swoosh.wav",
+   "original_rel": "mixkit_sfx/1474_Transition_windy_swoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.31,
+   "sha256": "854d46d8a079c49a1b61efb668f57b21a3d0743a2afc26fab9ac3f6dec4b5d55",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (7).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1485_Metal_hit_woosh.wav",
+   "original_rel": "mixkit_sfx/1485_Metal_hit_woosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.35,
+   "sha256": "caad50bf5822a92259c8109eff0c1b3f37310b2584c0ce11eba7305746c84618",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (8).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1486_Cinematic_tunnel_reverb_woosh.wav",
+   "original_rel": "mixkit_sfx/1486_Cinematic_tunnel_reverb_woosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.34,
+   "sha256": "3a03f5e1f645229d6452cf0a869b560df80427212ff510beb9f90bf8b086108f",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (9).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1489_Air_woosh.wav",
+   "original_rel": "mixkit_sfx/1489_Air_woosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.32,
+   "sha256": "e220f90d8eafeb54a02216855d79331cdd5267f4bf2177a75edbae5e4a3aa6a9",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (10).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1490_Fast_whoosh_transition.wav",
+   "original_rel": "mixkit_sfx/1490_Fast_whoosh_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.56,
+   "sha256": "170b544a24813a0d31da69f62af6d08c82e3708410b541ec1c77e3a469ecd4a6",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (11).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1491_Arrow_whoosh.wav",
+   "original_rel": "mixkit_sfx/1491_Arrow_whoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.28,
+   "sha256": "df14bc14dfab6e85edf61bd881609f9024846b8b8b8c51cf90ae77fa5d68ff92",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (12).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1492_Cinematic_whoosh_fast_transition.wav",
+   "original_rel": "mixkit_sfx/1492_Cinematic_whoosh_fast_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.18,
+   "sha256": "e0e0e65c5c92923a150c4a647eb17c1dfec69871906a86c876f5f9462f9b2cbb",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (13).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1493_Swirling_whoosh.wav",
+   "original_rel": "mixkit_sfx/1493_Swirling_whoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.98,
+   "sha256": "cb8d616de8e9c132c575dfbf86bbe3588728c88085f597f24929dcbb34c0ad04",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (14).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1520_Metallic_impact_with_whip.wav",
+   "original_rel": "mixkit_sfx/1520_Metallic_impact_with_whip.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.06,
+   "sha256": "18e0f131fb39a2ba787d2f8f057b8c70c397db4035d9286a7e5fad2e876c1a6b",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (15).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1521_Whip_metallic_impact.wav",
+   "original_rel": "mixkit_sfx/1521_Whip_metallic_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.43,
+   "sha256": "400645503863ca9b57fe71264f842fb84fb344165ef72ae91983433869bc4562",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (16).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "163_Slow_sweeping_swoosh.wav",
+   "original_rel": "mixkit_sfx/163_Slow_sweeping_swoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.33,
+   "sha256": "2026925a425a39423d15327420601b3ae48f7ad652638778731b2b8ca53ec7fb",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (17).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "164_Fast_sweeping_transition.wav",
+   "original_rel": "mixkit_sfx/164_Fast_sweeping_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.54,
+   "sha256": "98f5e32f6de7c5450acfb77c7a76405a056c0c416ff912c6c9af251bb6b992b9",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (18).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "165_Sweeping_the_sidewalk.wav",
+   "original_rel": "mixkit_sfx/165_Sweeping_the_sidewalk.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 12.7,
+   "sha256": "ef5d8d13dd340aeb95c2abe056d3a74f5194b8a6faa3ccb19dc5e06d2bd5a999",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (19).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "166_Fast_small_sweep_transition.wav",
+   "original_rel": "mixkit_sfx/166_Fast_small_sweep_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.6,
+   "sha256": "645f20dd74eb7eb1e52e616692909de6b86f5bcc54c48e465929c763b53f6258",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (20).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "167_Long_sweeping_air_swoosh.wav",
+   "original_rel": "mixkit_sfx/167_Long_sweeping_air_swoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.61,
+   "sha256": "b111a9f13c15fa756ddc880a14544e18281dd1b48bc89912507ab5682f339f45",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (21).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1686_Underground_explosion_impact_echo.wav",
+   "original_rel": "mixkit_sfx/1686_Underground_explosion_impact_echo.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.2,
+   "sha256": "193760c0405b3d0f1147aafe2d656d27012acec2da1b5642161784a6c7637df5",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (22).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1687_Dramatic_metal_explosion_impact.wav",
+   "original_rel": "mixkit_sfx/1687_Dramatic_metal_explosion_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.25,
+   "sha256": "becb8a9f30dba3ecbda3da9a0365ef1ce58f631b45bd9f47a1efe477240018b7",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (23).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "168_Fast_air_sweep_transition.wav",
+   "original_rel": "mixkit_sfx/168_Fast_air_sweep_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.65,
+   "sha256": "11da4eae46dbe9d5c337e0ddb0369c367c6cc4b3b10a9f5500084d766716e988",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (24).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1692_Pixel_chiptune_explosion.wav",
+   "original_rel": "mixkit_sfx/1692_Pixel_chiptune_explosion.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.41,
+   "sha256": "a9e9ee67866d4d33f51650a19e1c6b599dac0b37902a9e9298bf95a110b1b46b",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (25).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1695_Whoosh_transition_explosion_echo.wav",
+   "original_rel": "mixkit_sfx/1695_Whoosh_transition_explosion_echo.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 9.99,
+   "sha256": "1ffc4ae0824ad9ba622c4d0ccdb08f33aae1bd873d63171e8ec90e70820ca4fa",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (26).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "169_Futuristic_sweep_pass_by.wav",
+   "original_rel": "mixkit_sfx/169_Futuristic_sweep_pass_by.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.85,
+   "sha256": "58b07ec4241678953f05e95ade6be841f76eeadad5402570d608883c7c856046",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (27).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "170_Futuristic_ship_sweep_pass_by.wav",
+   "original_rel": "mixkit_sfx/170_Futuristic_ship_sweep_pass_by.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.17,
+   "sha256": "c9ffd7c3c8f84e98af40f45e7f00cdbe3f792c3deb0a9d3519c9848781681fcd",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (28).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1714_Fast_rocket_whoosh.wav",
+   "original_rel": "mixkit_sfx/1714_Fast_rocket_whoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.06,
+   "sha256": "40f311a78ed93cbd7fb42a23ff8316c37a58d1fcad74531d501de6869d22e81f",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (29).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "171_Futuristic_robotic_fast_sweep.wav",
+   "original_rel": "mixkit_sfx/171_Futuristic_robotic_fast_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.78,
+   "sha256": "b9d4681fd874b1f7650d4f44ce59400f77e397e8cbca2bc8213485425e426e7a",
+   "subcategory": "sfx_glitch"
+  },
+  {
+   "file": "sfx (30).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1721_Rocket_landing_whoosh.wav",
+   "original_rel": "mixkit_sfx/1721_Rocket_landing_whoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 9.29,
+   "sha256": "59316a69b2fa0de36c898d2e3c83017c9c8e5668a91e048222bd854bbf321bf4",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (31).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "172_Sweeping_glass_debris.wav",
+   "original_rel": "mixkit_sfx/172_Sweeping_glass_debris.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.67,
+   "sha256": "aee521a46d6666688a07f1f8b0feda009ee8681705111f57fb88ad91d04943fe",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (32).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "174_Fast_sweep_transition.wav",
+   "original_rel": "mixkit_sfx/174_Fast_sweep_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.44,
+   "sha256": "35e115d3adeff00afac9988b98448258cebe216e945e02d472e2397c0590b547",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (33).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "175_Short_transition_sweep.wav",
+   "original_rel": "mixkit_sfx/175_Short_transition_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.31,
+   "sha256": "b601d0e700d5f555ff62b53d020d550c8768f2691190d5a900ca8b58457f614c",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (34).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2150_Impact_of_a_blow.wav",
+   "original_rel": "mixkit_sfx/2150_Impact_of_a_blow.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.36,
+   "sha256": "0d772db5047ed531006680b80811b4136c8124f356901eb10993d7e252e106ec",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (35).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2159_Meat_hit_sound.wav",
+   "original_rel": "mixkit_sfx/2159_Meat_hit_sound.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.3,
+   "sha256": "90719ffc157c98cf18f7b062da72e353be57c48d87fcc1f18b50bf02959d9023",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (36).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2168_Sword_cutting_and_killing.wav",
+   "original_rel": "mixkit_sfx/2168_Sword_cutting_and_killing.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.38,
+   "sha256": "9c77774f131fe53c199b43a8d0af06c7b422687fa39176af512dffd657cda166",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (37).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2177_Metal_grill_quick_hit.wav",
+   "original_rel": "mixkit_sfx/2177_Metal_grill_quick_hit.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.21,
+   "sha256": "88473a472ac1c87cc634da773ad09a15c1aa90b1c4ae6460dafbbfc0d4ed520f",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (38).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2180_Exciting_fast_hit.wav",
+   "original_rel": "mixkit_sfx/2180_Exciting_fast_hit.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.17,
+   "sha256": "1a09e37825cf2e3cd3cdaf29ab329c1683b16892b1c55939fea9620460ca3ee5",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (39).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2181_Microphone_hit.wav",
+   "original_rel": "mixkit_sfx/2181_Microphone_hit.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.85,
+   "sha256": "d89f1b1b86aaf0c7359f23ab978563c75dea13d3ee2aca0ec7ea6ca3e74a876c",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (40).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2182_Wood_hard_hit.wav",
+   "original_rel": "mixkit_sfx/2182_Wood_hard_hit.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.19,
+   "sha256": "52b48cbe0461efa47f57e5b367886666b9bfcbe547e52e93f7f23f717cf40bbf",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (41).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2183_Glass_hitting_a_metal.wav",
+   "original_rel": "mixkit_sfx/2183_Glass_hitting_a_metal.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.15,
+   "sha256": "cfa96f5fb8444f722f0224a03f4191cf976aadc74766dc620d12a2539d4cf770",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (42).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2186_Blast_hit_with_echo.wav",
+   "original_rel": "mixkit_sfx/2186_Blast_hit_with_echo.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.04,
+   "sha256": "a25ddd5e16d8b3c28a8b2ee0ebda263519c20b33043ab3fef236a592eb3eb973",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (43).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2187_Low_explosion_indoors.wav",
+   "original_rel": "mixkit_sfx/2187_Low_explosion_indoors.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.27,
+   "sha256": "820121bca7739a677ed091fabd788f18d18616f1a2f151902b660c9e41b3f9ab",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (44).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2198_Strong_punches_to_the_body.wav",
+   "original_rel": "mixkit_sfx/2198_Strong_punches_to_the_body.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.77,
+   "sha256": "06eaf39cf5dd57cccf290f1dd3fa4fd7cb594f3448582be8373445aaf36a6cad",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (45).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2199_Body_cutting_impact.wav",
+   "original_rel": "mixkit_sfx/2199_Body_cutting_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.07,
+   "sha256": "4e09a5a34b7b4b313919196f3f563c9d8b7c0a978f5286e4da43c7b62575e26e",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (46).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2289_Warfare_horn.wav",
+   "original_rel": "mixkit_sfx/2289_Warfare_horn.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.66,
+   "sha256": "0da887bfac3cf2702fa613d79e5b058c9ec6dbe09d96bf3b6c0dc685beee8aad",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (47).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2290_Epic_orchestra_transition.wav",
+   "original_rel": "mixkit_sfx/2290_Epic_orchestra_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.65,
+   "sha256": "6c314b30788fdcd9b44819abbb90dd45fb079d84b1eaf1393a4721b0f6fcc1a6",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (48).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2291_Eerie_trailer_horn_transition.wav",
+   "original_rel": "mixkit_sfx/2291_Eerie_trailer_horn_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.13,
+   "sha256": "f434cd3bc3d8c1058d347b05120bef1d6811522047249c9c70d0c488f57e3533",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (49).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2295_Pulsating_bass_transition.wav",
+   "original_rel": "mixkit_sfx/2295_Pulsating_bass_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 6.41,
+   "sha256": "2be233ce0395c44d0d7a36e1e8b3ed8c436ef8522b4c3f51c4f4b2eab73208f1",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (50).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2297_Bass_rumble_hum.wav",
+   "original_rel": "mixkit_sfx/2297_Bass_rumble_hum.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 6.44,
+   "sha256": "1a25d8eaa8e4998f7a180b85649620ae3d2dcde7b805f3d8a889b78ff9ec5ed1",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (51).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2350_Magic_sparkle_whoosh.wav",
+   "original_rel": "mixkit_sfx/2350_Magic_sparkle_whoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.51,
+   "sha256": "949048b337daa413edc1da7b43b50a60fee31507652bbf3f6b0ca6f7a9291d47",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (52).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2408_Storm_coming_whoosh.wav",
+   "original_rel": "mixkit_sfx/2408_Storm_coming_whoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.86,
+   "sha256": "80e5952f8fbf976dded4f2b5efcbb6118aedec71d755523e8c626915fb3c6963",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (53).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2412_Storm_transition.wav",
+   "original_rel": "mixkit_sfx/2412_Storm_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 11.24,
+   "sha256": "243f19b9529920112130dff1c30bb08fb140382de856d9cc2d1528277cf2ed74",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (54).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "255_Fantasy_game_sweep_notification.wav",
+   "original_rel": "mixkit_sfx/255_Fantasy_game_sweep_notification.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.14,
+   "sha256": "61c411a8467da51073b9533ec832f1587402d01162bc9a77c0e9db99f7e888cb",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (55).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "257_Magic_sweep_game_trophy.wav",
+   "original_rel": "mixkit_sfx/257_Magic_sweep_game_trophy.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.97,
+   "sha256": "f126b77b45825959a9251b5661c040051cca09e1fcfe0884eb995609b4e5f8d0",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (56).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2586_Magical_light_sweep.wav",
+   "original_rel": "mixkit_sfx/2586_Magical_light_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.81,
+   "sha256": "1334b7083941fa4700ae3d856e5c549333c834a974d2a44faeaffd503109d810",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (57).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2589_Shot_light_energy_flowing.wav",
+   "original_rel": "mixkit_sfx/2589_Shot_light_energy_flowing.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.65,
+   "sha256": "a9bec4d9a5570da9277f6bc9382fe48489829208cbaed31966b9e2420affc6a4",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (58).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2596_Electric_whoosh.wav",
+   "original_rel": "mixkit_sfx/2596_Electric_whoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.47,
+   "sha256": "b793da27ca0cdd698d6c30f17490826122b52b108baa031f41b093c7180c9546",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (59).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2599_Heavy_electric_shockwave_impact.wav",
+   "original_rel": "mixkit_sfx/2599_Heavy_electric_shockwave_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.21,
+   "sha256": "f39e86b4b3339332400e218b8b249ddab1044bbed11383a6d0802a739d282217",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (60).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2600_Electricity_static_power_up.wav",
+   "original_rel": "mixkit_sfx/2600_Electricity_static_power_up.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.65,
+   "sha256": "cec4b9aac68c09ce21685ca3bd01645f4eafb760574baf707bce025d9475802a",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (61).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2608_Air_zoom_vacuum.wav",
+   "original_rel": "mixkit_sfx/2608_Air_zoom_vacuum.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.35,
+   "sha256": "2e3c58db536221b5dd8f6b92417ddf586e0af18d6991b47d3dd679a8faeff5f2",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (62).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2615_Mighty_mysterious_swoosh.wav",
+   "original_rel": "mixkit_sfx/2615_Mighty_mysterious_swoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.06,
+   "sha256": "a4352becb22e465a31c66caf4056620bc712895a4ab46806d78a6b170bd62cef",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (63).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2623_Ghostly_whoosh_passing.wav",
+   "original_rel": "mixkit_sfx/2623_Ghostly_whoosh_passing.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.11,
+   "sha256": "53b9aff230689797415a1d63f242c0f74785a766d246502f9bd4b5e7ccfd58c8",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (64).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2628_Relaxing_harp_sweep.wav",
+   "original_rel": "mixkit_sfx/2628_Relaxing_harp_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.14,
+   "sha256": "9af09554d4a30ad9ae446904ba10dbf615f8717c7b9a8e9501ca1c72b185f23d",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (65).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2629_Magic_astral_sweep_effect.wav",
+   "original_rel": "mixkit_sfx/2629_Magic_astral_sweep_effect.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.36,
+   "sha256": "61d6cbdf18f3e304fa7c3c47ca6c88434f6677300bbd308cd1e601eb91f3b176",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (66).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2630_Terror_sweep_of_darkness.wav",
+   "original_rel": "mixkit_sfx/2630_Terror_sweep_of_darkness.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.93,
+   "sha256": "4ffa9386dfa6edf455c41150dec18f5b2ef0224f89297bd253b083586f9efe82",
+   "subcategory": "sfx_glitch"
+  },
+  {
+   "file": "sfx (67).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2631_Digital_sweep_effect.wav",
+   "original_rel": "mixkit_sfx/2631_Digital_sweep_effect.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.43,
+   "sha256": "4a54f62ee155115a440453fa87ceb62206db8b79b1770ced6b358555526f54a7",
+   "subcategory": "sfx_glitch"
+  },
+  {
+   "file": "sfx (68).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2632_Whoosh_wind_sweep.wav",
+   "original_rel": "mixkit_sfx/2632_Whoosh_wind_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.78,
+   "sha256": "64d90ced93a11e029c01013ed6ff2c6e07b508cd8ba3b80d2d3a2f5c19464cb9",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (69).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2633_Sweeping_sparkle_presentation_intro.wav",
+   "original_rel": "mixkit_sfx/2633_Sweeping_sparkle_presentation_intro.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.03,
+   "sha256": "4f437e63ef61df561912953a7b576d301183461a8db39f45bd6053c04d327806",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (70).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2634_Futuristic_transition_sweep.wav",
+   "original_rel": "mixkit_sfx/2634_Futuristic_transition_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.07,
+   "sha256": "0f2427677961b1eede1f36a5fa6479d386bcc434aa52d8f6dbfda2352b415b50",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (71).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2635_Futuristic_cinematic_sweep.wav",
+   "original_rel": "mixkit_sfx/2635_Futuristic_cinematic_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.12,
+   "sha256": "93241209cec9757b48be058eae1a171da704edaa4cd100e42abe5fc0b2e35500",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (72).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2636_Futuristic_metal_transition_sweep.wav",
+   "original_rel": "mixkit_sfx/2636_Futuristic_metal_transition_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.77,
+   "sha256": "fa6b7afe32dd6b213e7ffed4d0b2ae187d844eb6bcf5e22f7157dfe4cf599005",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (73).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2637_Fast_air_transition_sweep.wav",
+   "original_rel": "mixkit_sfx/2637_Fast_air_transition_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.38,
+   "sha256": "cdf41598a9c8bdb32d0a352f7ba6e17e5aa8e514739ce2124dd3f24b45ddf883",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (74).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2638_Magic_transition_sweep_presentation.wav",
+   "original_rel": "mixkit_sfx/2638_Magic_transition_sweep_presentation.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.96,
+   "sha256": "bd420938ccd4875535de2f995b3065d4b631c55a7ed1cd66a72c50e58db9e339",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (75).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2639_Quick_metal_transition_sweep.wav",
+   "original_rel": "mixkit_sfx/2639_Quick_metal_transition_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.09,
+   "sha256": "bf0cb105da89ee62bfde7ced9dc3dc7b3d1f11bd2572d51016c25fbefb3e4daa",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (76).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "263_Gore_video_game_blood_splash.wav",
+   "original_rel": "mixkit_sfx/263_Gore_video_game_blood_splash.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.67,
+   "sha256": "dc025af74ba9004622888f880e7f29b37aa821d266404d291ac2ecb43d075248",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (77).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2650_Engine_slow_spinning_whoosh.wav",
+   "original_rel": "mixkit_sfx/2650_Engine_slow_spinning_whoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.19,
+   "sha256": "baf93e8493a9bc5c0ef2a900dde97dbba0488528eaddc9cb4e3c8219a5dea693",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (78).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2651_Flickering_insect_whoosh.wav",
+   "original_rel": "mixkit_sfx/2651_Flickering_insect_whoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.52,
+   "sha256": "5ea806b306425f9e547d53153ff1bb5dd6e3a12278599b71b3485f17ece4614e",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (79).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2654_Cartoon_blow_impact.wav",
+   "original_rel": "mixkit_sfx/2654_Cartoon_blow_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.71,
+   "sha256": "4231a19039d11f0849bb41ba276f5d6246c60ed44d14a84a8cf4c0641240a55b",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (80).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2655_Fast_impact_blow.wav",
+   "original_rel": "mixkit_sfx/2655_Fast_impact_blow.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.66,
+   "sha256": "aacba0416332f47b80bf512d2878948ab3326a356813bd3511fc771f1adfd0a8",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (81).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2719_Cinematic_riser_helicopter_engine.wav",
+   "original_rel": "mixkit_sfx/2719_Cinematic_riser_helicopter_engine.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 12.99,
+   "sha256": "ad3a4297593e9af97d493fc98f729435dac8a2e23b4140d08338af170a49f6f9",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (82).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2774_Axe_hits_to_a_plate.wav",
+   "original_rel": "mixkit_sfx/2774_Axe_hits_to_a_plate.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.16,
+   "sha256": "9746a0c13d7b42e0b15a03121976400abeaa09cad8a00e9df5939e74077a6cd5",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (83).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2775_Hitting_metal_armor.wav",
+   "original_rel": "mixkit_sfx/2775_Hitting_metal_armor.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.67,
+   "sha256": "0808ad9ed0d909aabb3bbc2265ef8f1a6e73a31a7fc61adb31501fcf23e1f739",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (84).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2777_Masive_explosion_in_battle.wav",
+   "original_rel": "mixkit_sfx/2777_Masive_explosion_in_battle.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 7.04,
+   "sha256": "57fff806c4204d735097e448cb134a1234fe9067743cda781d76e6822138c808",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (85).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2778_8-bit_game_shots.wav",
+   "original_rel": "mixkit_sfx/2778_8-bit_game_shots.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.61,
+   "sha256": "7e29748d98c00fb0c8ab1038c4baf912e47afe58720e1c7953b46f49cdf1a19b",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (86).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2779_8-bit_explosion_gun.wav",
+   "original_rel": "mixkit_sfx/2779_8-bit_explosion_gun.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.66,
+   "sha256": "0eaf8ccf24599fb0c9e877a47a9cecefef3f85688765c49d892b677809f2e3b3",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (87).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2780_Drums_of_war_call.wav",
+   "original_rel": "mixkit_sfx/2780_Drums_of_war_call.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.99,
+   "sha256": "bede258a41e66630fd8cc8048a46faac57c32675229f365b53cc8226c9b68ab4",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (88).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2782_Epic_impact_afar_explosion.wav",
+   "original_rel": "mixkit_sfx/2782_Epic_impact_afar_explosion.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.54,
+   "sha256": "bec1e488af02eea7248e305cf169890b646d4c3e892ebfc171ac19c120615338",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (89).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2784_Drums_of_war.wav",
+   "original_rel": "mixkit_sfx/2784_Drums_of_war.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.66,
+   "sha256": "a28bde5b1fdecc9622f6dea115b514462f22fd2c96d95e6476248589b8a102d7",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (90).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2800_Bomb_explosion_in_battle.wav",
+   "original_rel": "mixkit_sfx/2800_Bomb_explosion_in_battle.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.92,
+   "sha256": "c4788f4fc2a9b236c638e031a5c4869d18407cf85ab342e16febf722bbd11f58",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (91).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2804_Bomb_drop_impact.wav",
+   "original_rel": "mixkit_sfx/2804_Bomb_drop_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.78,
+   "sha256": "c8706cd7feca22679fe2e6cae61bc47cd74031847ce3df9fd18210713aeabe6b",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (92).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2805_Bomb_drop_exploding.wav",
+   "original_rel": "mixkit_sfx/2805_Bomb_drop_exploding.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.63,
+   "sha256": "5bd9a8fbe31231d12cd8b830d945bf5239c7ab1e1b440f0fb535f7771833571c",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (93).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2806_Bomb_drop_cold_water_explosion.wav",
+   "original_rel": "mixkit_sfx/2806_Bomb_drop_cold_water_explosion.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 6.56,
+   "sha256": "e58b260ad18f79cb5f6972f802a6bf9de203dfb0b6f58e81a17810c3e6b14007",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (94).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2807_Vide_game_time_bomb_explosion.wav",
+   "original_rel": "mixkit_sfx/2807_Vide_game_time_bomb_explosion.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 6.44,
+   "sha256": "c3b88932eabab14ca75cbc7c39e4577c2caa093a67049636b2d61f40744a235a",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (95).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2900_Movie_logo_intro_impact.wav",
+   "original_rel": "mixkit_sfx/2900_Movie_logo_intro_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 7.83,
+   "sha256": "423d761ad8b4d37ebf26c937aa4090b750483abd845a60f7265c54722bc56cdc",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (96).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2901_Epic_movie_impact.wav",
+   "original_rel": "mixkit_sfx/2901_Epic_movie_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.49,
+   "sha256": "44ddc490446326fea4aa622a3c20e0d14bd5b1a0cfe1ff86a37359833865c46b",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (97).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2902_Movie_impact_intro_presentation.wav",
+   "original_rel": "mixkit_sfx/2902_Movie_impact_intro_presentation.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.69,
+   "sha256": "06bc075e070d3a141ac6004f6220061a6e115bedd94b105e643efeba7a42fced",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (98).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2903_Movie_whoosh_impact_presentation.wav",
+   "original_rel": "mixkit_sfx/2903_Movie_whoosh_impact_presentation.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.92,
+   "sha256": "93b5edf609d51409f5cec7991ccd96825c7a426d400ff3c0fb951001fb0c522a",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (99).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2907_Epic_blockbuster_movie_transition.wav",
+   "original_rel": "mixkit_sfx/2907_Epic_blockbuster_movie_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.77,
+   "sha256": "6060488ef1612a96eeb0af946dc5ee99e8ae5e53d3a52517765125fae32888d1",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (100).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2908_Movie_trailer_epic_impact.wav",
+   "original_rel": "mixkit_sfx/2908_Movie_trailer_epic_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.94,
+   "sha256": "914bdad506516105f04e748662dff97ad69d942fca8f198ddefeb380ffcce48f",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (101).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2909_Cool_impact_movie_trailer.wav",
+   "original_rel": "mixkit_sfx/2909_Cool_impact_movie_trailer.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 4.03,
+   "sha256": "8961c4d885e684a414582682ca1306fb923c68038d072f7e05d4aa7c2d3a82bb",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (102).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2915_Blockbuster_suspense_movie_impact.wav",
+   "original_rel": "mixkit_sfx/2915_Blockbuster_suspense_movie_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.44,
+   "sha256": "8540edcb06859804cec8723c824218fe3bc24804c07704878b2104c3429ecdd5",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (103).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2917_Suspence_cinematic_impact.wav",
+   "original_rel": "mixkit_sfx/2917_Suspence_cinematic_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 9.94,
+   "sha256": "686dcb7d18b296aebf026c01fc647a97d00d40d603e81a6fc53f567ff4f2266c",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (104).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2918_Epic_movie_trailer_whoosh_impact.wav",
+   "original_rel": "mixkit_sfx/2918_Epic_movie_trailer_whoosh_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.05,
+   "sha256": "b0201710e5601ecbf8cddd802695d462d4f0af6a681f4c877a5a187d3b966edd",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (105).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2919_Movie_trailer_whoosh_hit.wav",
+   "original_rel": "mixkit_sfx/2919_Movie_trailer_whoosh_hit.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.91,
+   "sha256": "e796438940c95f362c0a8c38d2892e5779885366501ed2da283886f820fc0ff7",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (106).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "2937_Bone_breaking_with_echo.wav",
+   "original_rel": "mixkit_sfx/2937_Bone_breaking_with_echo.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.34,
+   "sha256": "da10ae51ba51b0dc59972f9a34f5aa49900f42293ccfb3e898b1b875fa5df015",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (107).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3005_Explainer_video_pops_whoosh_light_pop.wav",
+   "original_rel": "mixkit_sfx/3005_Explainer_video_pops_whoosh_light_pop.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.15,
+   "sha256": "3bea34f085f9f0d6e5d88d9f103ea2fdb3cb6a7b03387bc463992288a2f0e635",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (108).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3024_Meteor_whoosh.wav",
+   "original_rel": "mixkit_sfx/3024_Meteor_whoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.07,
+   "sha256": "5e0359f41f7e0acc8dd5ea706258666a9bfe3be6dec0052d8f420c3d2bae2ae0",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (109).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3057_Apocalyptic_stomp_impact.wav",
+   "original_rel": "mixkit_sfx/3057_Apocalyptic_stomp_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.54,
+   "sha256": "141631d94253641cda7caad8277f035199948622608320c6d5295f4fb7f88f85",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (110).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3089_Television_news_report_transition.wav",
+   "original_rel": "mixkit_sfx/3089_Television_news_report_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.67,
+   "sha256": "d0ae66850905ab49155d5f9bf36790524f9acfe72922924fca56b82a90a07fd5",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (111).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3111_Warfare_horn_trailer_hit.wav",
+   "original_rel": "mixkit_sfx/3111_Warfare_horn_trailer_hit.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 6.96,
+   "sha256": "8f4eea59e1a21a49e4a6c3fdcf740792d33266a8946adbf1783f18f113ceab46",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (112).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3112_Horn_suspense_transition.wav",
+   "original_rel": "mixkit_sfx/3112_Horn_suspense_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.76,
+   "sha256": "ccaaca75e3fe651750f7228a9f12b371e5d4b2a63d29ea8979d3fe30bdf49b63",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (113).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3114_Fast_sci_fi_transition_sweep.wav",
+   "original_rel": "mixkit_sfx/3114_Fast_sci_fi_transition_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.42,
+   "sha256": "ef15c3a724bf0844bf80133d71691ee81b4eaa4a52d1ca817d82eb040cc41ec8",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (114).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3115_Fast_transitions_swoosh.wav",
+   "original_rel": "mixkit_sfx/3115_Fast_transitions_swoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.17,
+   "sha256": "3ac9a8f64b0092cc2d452fed701b8e708859dadf7a99c0c276ce027f4bd11b18",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (115).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3120_Technology_transition_slide.wav",
+   "original_rel": "mixkit_sfx/3120_Technology_transition_slide.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.47,
+   "sha256": "81a0a68acdf594e5cf22c2fb2309bbc45e9c99f6a6cf87b1f43f9323b8e6ba8a",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (116).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3121_Technology_alert_transition.wav",
+   "original_rel": "mixkit_sfx/3121_Technology_alert_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.42,
+   "sha256": "6e5600929db4c4fa9fac6d11f4893052d09de66cefebe908362a4526657ba76a",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (117).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3131_Short_impact_static.wav",
+   "original_rel": "mixkit_sfx/3131_Short_impact_static.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 7.23,
+   "sha256": "be8aa34262c56d6d704a1585681fad85ba947a878e26ca7e49acd541241ab24d",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (118).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3146_Mechanical_brush_transition.wav",
+   "original_rel": "mixkit_sfx/3146_Mechanical_brush_transition.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.93,
+   "sha256": "f05b399f1046dd31b021dfabacbc7c7906594d7c951052f0d29a70922603b7a9",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (119).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3153_Robot_death.wav",
+   "original_rel": "mixkit_sfx/3153_Robot_death.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.37,
+   "sha256": "1480e0613e1415998ebaa16baf537515de4d896a024aa72523abf89b958e40fb",
+   "subcategory": "sfx_glitch"
+  },
+  {
+   "file": "sfx (120).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "3161_Transition_flying_swoosh.wav",
+   "original_rel": "mixkit_sfx/3161_Transition_flying_swoosh.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.77,
+   "sha256": "b483c4a03fbefa458d93ad54314fef17351f26f21b283c45f1bef3bab216d820",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (121).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "498_Deep_heartbeat_impact.wav",
+   "original_rel": "mixkit_sfx/498_Deep_heartbeat_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.55,
+   "sha256": "2d48a469ad6313d4ac221c630e371f9b68492188e9f17d258df648f15519468f",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (122).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "561_Cinematic_horror_trailer_long_sweep.wav",
+   "original_rel": "mixkit_sfx/561_Cinematic_horror_trailer_long_sweep.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.39,
+   "sha256": "8f0a956716b0e58f89e0bbe68e3570301f0d6be90e1783b4a1eca39f5b2ba031",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (123).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "645_Cinematic_synth_riser.wav",
+   "original_rel": "mixkit_sfx/645_Cinematic_synth_riser.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 8.82,
+   "sha256": "68c665cd3fb2b7fdf2b0180d13a9398e8c399c9185e74f75ad4d155d3f27412d",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (124).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "670_Metallic_sweep_suspense.wav",
+   "original_rel": "mixkit_sfx/670_Metallic_sweep_suspense.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.11,
+   "sha256": "8ed29cfa328f73b2a151c3b0dad7f4b185003c10812c3bb98572dad053144d1b",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (125).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "772_Quick_zoom_impact.wav",
+   "original_rel": "mixkit_sfx/772_Quick_zoom_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.59,
+   "sha256": "bf1d8055cd140e3a1473336e3feabbdff213924456bb50b0d93ae1aa821218a8",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (126).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "773_Horror_impact.wav",
+   "original_rel": "mixkit_sfx/773_Horror_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.78,
+   "sha256": "d9f9e469f03f5b18199d0e624e7e01b64b5b4b03ff0a01cf6113f5a244e62816",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (127).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "774_Space_impact.wav",
+   "original_rel": "mixkit_sfx/774_Space_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.87,
+   "sha256": "12da2cc7fb6b7c4c6f7b5f73efcabcd81d95d3cef971c7592ca598213d196ce8",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (128).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "778_Tunnel_impact_echo.wav",
+   "original_rel": "mixkit_sfx/778_Tunnel_impact_echo.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 2.29,
+   "sha256": "27718fa5d01aa22c26861a7bdb13413b62629bc32c005c8e64d03a35fbfe5a07",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (129).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "780_Cinematic_impact_echo.wav",
+   "original_rel": "mixkit_sfx/780_Cinematic_impact_echo.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.91,
+   "sha256": "96e57b53c8904816430989bc0c6af325e6d92204edfdb4e27366b286d4823f84",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (130).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "781_Cinematic_impact_waves.wav",
+   "original_rel": "mixkit_sfx/781_Cinematic_impact_waves.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 6.54,
+   "sha256": "615a96d11ab700e7af14f3c4dc38ab89bf34e2351098cc7be4bcc9a18834cef6",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (131).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "782_Laser_gun_impact_destruction.wav",
+   "original_rel": "mixkit_sfx/782_Laser_gun_impact_destruction.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 3.98,
+   "sha256": "d05d6df08ac268e14d75cb15d6641bfa8060702a4ec402233d9bca5d3c34b579",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (132).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "783_Submarine_metal_impact.wav",
+   "original_rel": "mixkit_sfx/783_Submarine_metal_impact.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 5.47,
+   "sha256": "9482a661f5045abcbcc36e85d64ee98f02d14d06bfec9a0372793f7ef6542d69",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (133).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "784_Reverse_cinematic_impact_trailer.wav",
+   "original_rel": "mixkit_sfx/784_Reverse_cinematic_impact_trailer.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 9.88,
+   "sha256": "77b27f07fcb99903c6d1eb9653283f86d8b2e1baa024be3d5afed89992940c03",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (134).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "787_Cinematic_whoosh_stutter.wav",
+   "original_rel": "mixkit_sfx/787_Cinematic_whoosh_stutter.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.95,
+   "sha256": "669acdc005a53c0d5393b89b4ecbb49641cf802a3663f1da778f0fbfc81bbc4b",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (135).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "790_Cinematic_trailer_riser.wav",
+   "original_rel": "mixkit_sfx/790_Cinematic_trailer_riser.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.65,
+   "sha256": "b4c54a617ec754236bcd3910c39f1d80e7b34b5498c6db84c6c06cacb667d159",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (136).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "833_Metal_hammer_hit.wav",
+   "original_rel": "mixkit_sfx/833_Metal_hammer_hit.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 0.23,
+   "sha256": "02058080a5e093bdbb3d18488c145522dfc7389200758bf285bc7ed6bf911ca8",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (137).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "868_Fairy_teleport.wav",
+   "original_rel": "mixkit_sfx/868_Fairy_teleport.wav",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 1.61,
+   "sha256": "50732ae5c8fccc4f012cd1516595d028b1925fa630b1d69315b1a1051fc2e4bd",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (138).wav",
+   "source_pack": "mixkit_sfx",
+   "original": "1144_Short_space_stutter_intro_riser.mp3",
+   "original_rel": "mixkit_sfx/1144_Short_space_stutter_intro_riser.mp3",
+   "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+   "duration_s": 6.22,
+   "sha256": "8b6821aab469ef7ed006aa8a19153acb6487d3a07476d01ddfe78348fd422e41",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (139).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "FMT - Dm - Dirty Groove.wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_BASS/_BASS_GUITAR_LOOPS/_110BPM",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (140).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "FMT - Cm - Dirty 70es Wah Rythm.wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_GUITARS/_LOOPS/_105BPM",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (141).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "FMT - Dm - Dirty Wah Chunks.wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_GUITARS/_LOOPS/_105BPM",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (142).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "FMT - Bm - Dirty Funk (Wet).wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_GUITARS/_LOOPS/_110BPM",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (143).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "FMT - Bm - Dirty Funk.wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_GUITARS/_LOOPS/_110BPM",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (144).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "FMT - Bm - Dirty Wah Rythm (Wet).wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_GUITARS/_LOOPS/_110BPM",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (145).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "FMT - Bm - Dirty Wah Rythm.wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_GUITARS/_LOOPS/_110BPM",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (146).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "FMT - Gm - Dirty Wahs.wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_GUITARS/_LOOPS/_90BPM",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (147).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "FMT - Gm - Dirty Chords.wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_GUITARS/_LOOPS/_94BPM",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (148).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "FMT - Am - Jazz Guitar Lick Fx.wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_GUITARS/_ONE-SHOTS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (149).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "FMT - Em - Tele Fx.wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_GUITARS/_ONE-SHOTS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (150).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "Em - Tele Fx.wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_NI_BATTERY_4_(Funk_Master_Tools_Patches)/FUNKY DRUMMER Samples",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (151).wav",
+   "source_pack": "Black Octopus Sound",
+   "original": "Em - Tele Fx.wav",
+   "original_rel": "Black Octopus Sound Funk Master Tools By Basement Freaks WAV NATiVE iNSTRUMENTS BATTERY/_NI_BATTERY_4_(Funk_Master_Tools_Patches)/GUITAR STABS Samples",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (152).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_01_Fx_Loop_Atmosphere_Noise_Dirt_80.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Atmosphere",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (153).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_02_Fx_Loop_Atmosphere_Noise_Wind_80.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Atmosphere",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (154).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_03_Fx_Loop_Atmosphere_Noise_Wave_80.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Atmosphere",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (155).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_04_Fx_Loop_Atmosphere_Noise_Birds_80.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Atmosphere",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (156).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_05_Fx_Loop_Atmosphere_Noise_Far_80.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Atmosphere",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (157).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_06_Fx_Loop_Atmosphere_Noise_Pulsating_80.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Atmosphere",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (158).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_Kick_One_Shot_Impact_Attack.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_One_Shots",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (159).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_Kick_One_Shot_Impactful.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_One_Shots",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (160).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_Snare_One_Shot_Impactful.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_One_Shots",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (161).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_Snare_One_Shot_Sampled_Impact.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_One_Shots",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (162).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_Snare_One_Shot_Sampled_Impact_Low.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_One_Shots",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (163).wav",
+   "source_pack": "Function Loops Sunlight – Soulful Beats WAV",
+   "original": "FL_SSB_03_Synth_Loop_Long_Woodwind_80_D#.wav",
+   "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Synth_Loops",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (164).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Impact.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/1-Until Death (82 bpm)/Dry",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (165).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Impact.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/1-Until Death (82 bpm)/Wet",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (166).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Impacts.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/4-Nothin' To Lose (90 bpm)/Dry",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (167).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Rise Fx.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/4-Nothin' To Lose (90 bpm)/Dry",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (168).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Impacts.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/4-Nothin' To Lose (90 bpm)/Wet",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (169).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Rise Fx.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/4-Nothin' To Lose (90 bpm)/Wet",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (170).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Cym reverse.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/5-Real Friends (88 bpm)/Dry",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (171).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Perc Fx.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/5-Real Friends (88 bpm)/Dry",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (172).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Transition.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/5-Real Friends (88 bpm)/Dry",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (173).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Cym reverse.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/5-Real Friends (88 bpm)/Wet",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (174).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Perc Fx.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/5-Real Friends (88 bpm)/Wet",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (175).wav",
+   "source_pack": "Kryptic Samples California Vol 1 WAV MIDI",
+   "original": "Transition.wav",
+   "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/5-Real Friends (88 bpm)/Wet",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (176).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_A#_Bass_Hit_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (177).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_B_Bass_Hit_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (178).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_C_Bass_Hit_03.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (179).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_C_Bass_Hit_04.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (180).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_D#_Bass_Hit_10.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (181).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_E_808_2.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (182).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_E_Bass_Hit_05.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (183).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_F_808_1.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (184).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_F_Bass_Hit_07.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (185).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_G#_Bass_Hit_06.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (186).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_G#_Bass_Hit_08.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (187).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_G#_Bass_Hit_09.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_BASS_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (188).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Estuary_Clap.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_CLAPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (189).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malachite_Clap.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_CLAPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (190).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malediction_Clap.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_CLAPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (191).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Mulligan_Clap_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_CLAPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (192).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Mulligan_Clap_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_CLAPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (193).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Unfolds_Clap_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_CLAPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (194).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Unfolds_Clap_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_CLAPS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (195).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Buffalo_Open_Hat.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (196).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Comfast_Closed_Hat_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (197).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Comfast_Closed_Hat_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (198).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Comfast_Closed_Hat_03.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (199).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Comfast_Open_Hat.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (200).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Decatur_Closed_Hat_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (201).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Decatur_Closed_Hat_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (202).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_Closed_Hat_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (203).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_Closed_Hat_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (204).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_Closed_Hat_03.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (205).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_Closed_Hat_04.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (206).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_Open_Hat.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (207).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Mulligan_Closed_Hat.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (208).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Ravenous_Closed_Hat_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (209).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Ravenous_Closed_Hat_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (210).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Ravenous_Closed_Hat_03.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (211).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Tallin_Hat.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_HATS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (212).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Buffalo_Kick_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (213).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Buffalo_Kick_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (214).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Buffalo_Kick_03.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (215).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Comfast_Kick_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (216).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Comfast_Kick_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (217).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Decatur_808_Kick_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (218).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Decatur_Kick_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (219).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Estuary_Kick_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (220).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Estuary_Kick_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (221).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Estuary_Kick_03.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (222).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Geneva_808_Kick.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (223).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Geneva_Kick.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (224).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_808_Kick_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (225).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_808_Kick_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (226).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_808_Kick_03.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (227).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_808_Kick_04.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (228).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malachite_808_Kick_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (229).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malachite_Kick_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (230).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malachite_Kick_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (231).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malediction_Kick.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (232).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Mulligan_Kick_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (233).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Mulligan_Kick_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (234).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Mulligan_Kick_Hat.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (235).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Ravenous_Kick_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (236).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Ravenous_Kick_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (237).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Tallin_808_Kick.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (238).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Tallin_Kick.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (239).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Terraces_808_Kick.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (240).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Terraces_Kick.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (241).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Unfolds_808_Kick.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (242).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Unfolds_Kick_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_KICKS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (243).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Buffalo_Wild_TomTom.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (244).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Decatur_Drum_Roll.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (245).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Decatur_Shaker_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (246).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Decatur_Shaker_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (247).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Estuary_Drum_Roll.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (248).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Estuary_Woodblock.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (249).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_Tom_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (250).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_Tom_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (251).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malachite_Ride_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (252).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malachite_Ride_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (253).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malediction_Ride.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (254).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malediction_Shaker.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (255).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Tallin_Tambo.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (256).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Unfolds_Surprised_Shaker.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_PERCUSSION",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (257).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Buffalo_Snare.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (258).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Buffalo_Snare_Slap.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (259).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Comfast_Snare_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (260).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Comfast_Snare_Roll.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (261).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Decatur_Slap.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (262).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Decatur_Snare.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (263).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Estuary_Double_Snare_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (264).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Estuary_Snare_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (265).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Estuary_Snare_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (266).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Estuary_Snare_03.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (267).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Estuary_Snare_04.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (268).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Geneva_Snare.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (269).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_Snare_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (270).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_Snare_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (271).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malachite_Snap.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (272).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malediction_Snare.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (273).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Ravenous_Snare.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (274).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Tallin_Rimshot.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (275).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Terraces_Snare.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_DRUM_HITS/HI3_SNARES",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (276).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Buffalo_Bell.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (277).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Buffalo_Bend.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (278).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Buffalo_Crazed_Animal.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (279).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Buffalo_Gyea.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (280).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Comfast_Spacenote.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (281).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Geneva_Space_Echo.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (282).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malabar_Eeek.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (283).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malachite_Riser_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (284).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malachite_Riser_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (285).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malachite_Yep.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (286).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Malediction_Riser.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (287).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Ravenous_Clanger.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (288).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Tallin_Hey.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (289).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Tallin_WindShaker.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (290).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Terraces_Ohhhh.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (291).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Unfolds_Violent_Sweep.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (292).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_A#_Dark_Layer_Synth.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (293).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_A#_Juno.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (294).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_A#_Piano.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (295).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_A#_Snowbound_Keys.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (296).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_A#_Snowy_Vocoder.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (297).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_B_Mournful_Piano.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (298).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_C#_Dream_Piano.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (299).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_C#_Phasing_GuitarChords.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (300).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_C#_Summer_Vibrato.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (301).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_C_Nervous_Harpsichord.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (302).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_C_Rhodes_Chord.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (303).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Cmin_Choir.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (304).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Cmin_Creepy_Bell_02.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (305).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Cmin_Ed_Fairground.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (306).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_D#_Choral.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (307).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_D#_PianoString.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (308).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_D#_Synth_Brass.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (309).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_D#_Whirly_Synth.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (310).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_D#_Wild_Stabs.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (311).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_D_Rhodes_Solo.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (312).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_D_Silky_Synth.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (313).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_E_Melancholy_Swarm.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (314).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_E_Smooth_Keys.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (315).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_F#_Asian_Chime.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (316).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_F#_MyKeyboardHasBeesInit.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (317).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_F_Creepy_Bell_01.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (318).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_F_Lumbering_Keys.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (319).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_F_X_Files_Pad.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (320).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Fmin_Repeat_Key.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (321).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_G#_Synth_Rise.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (322).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_G_Beautiful_Pluck.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (323).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_G_Repeater.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (324).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Gmaj_Moving_Angels.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (325).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_Gmin_String.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_MUSIC_HITS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (326).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_104_Dirt.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_104_Dmaj_TALLIN",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (327).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_104_FX.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_104_Dmaj_TALLIN",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (328).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_111_Extra_FX.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_111_Fmin_UNFOLDS",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (329).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_80_White_Noise.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_80_Gmaj_MALABAR",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (330).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_90_Dirty_Clap.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_90_Emin_ESTUARY",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (331).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_95_Extra_FX.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_95_A#_MALACHITE",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (332).wav",
+   "source_pack": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT",
+   "original": "HI3_95_Windy_Whistle.wav",
+   "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_95_A#_MALACHITE",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_noise"
+  },
+  {
+   "file": "sfx (333).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_01.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (334).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_02.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (335).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_03.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (336).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_04.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (337).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_05.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (338).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_06.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (339).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_07.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (340).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_08.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (341).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_09.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (342).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_10.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (343).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_11.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (344).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_12.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (345).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_13.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (346).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_14.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (347).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_15.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (348).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_16.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (349).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_17.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (350).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_18.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (351).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_19.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (352).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Downlifter_20.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Downlifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (353).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_01.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (354).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_02.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (355).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_03.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (356).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_04.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (357).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_05.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (358).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_06.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (359).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_07.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (360).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_08.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (361).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_09.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (362).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_10.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (363).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_11.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (364).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_12.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (365).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_13.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (366).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_14.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (367).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_15.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (368).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_16.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (369).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_17.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (370).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_18.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (371).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_19.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (372).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_20.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (373).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_21.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (374).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Impact_22.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Impacts",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (375).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_01.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (376).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_02.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (377).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_03.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (378).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_04.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (379).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_05.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (380).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_06.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (381).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_07.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (382).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_08.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (383).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_09.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (384).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_10.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (385).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_11.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (386).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_12.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (387).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_13.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (388).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_14.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (389).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_15.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (390).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_16.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (391).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_17.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (392).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_18.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (393).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_19.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (394).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Misc_Fx_20.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Misc_Fx",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (395).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_01.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (396).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_02.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (397).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_03.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (398).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_04.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (399).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_05.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (400).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_06.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (401).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_07.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (402).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_08.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (403).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_09.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (404).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_10.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (405).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_11.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (406).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_12.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (407).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_13.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (408).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_14.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (409).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_15.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (410).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_16.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (411).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_17.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (412).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_18.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (413).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_19.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (414).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_20.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "sfx (415).wav",
+   "source_pack": "Sakura",
+   "original": "SRHS_Uplifter_21.wav",
+   "original_rel": "Singomakers Sakura House/SRHS_FX/SRHS_Uplifters",
+   "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Quick 1.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\risers\\XAM Quick 1.wav",
+   "original_rel": "fx\\risers",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Quick 2.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\risers\\XAM Quick 2.wav",
+   "original_rel": "fx\\risers",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Quick 3.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\risers\\XAM Quick 3.wav",
+   "original_rel": "fx\\risers",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Quick 4.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\risers\\XAM Quick 4.wav",
+   "original_rel": "fx\\risers",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Reverse Vocal (G).wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\risers\\XAM Reverse Vocal (G).wav",
+   "original_rel": "fx\\risers",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Riser 1.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\risers\\XAM Riser 1.wav",
+   "original_rel": "fx\\risers",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Riser 2.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\risers\\XAM Riser 2.wav",
+   "original_rel": "fx\\risers",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Riser 3.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\risers\\XAM Riser 3.wav",
+   "original_rel": "fx\\risers",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Riser 4.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\risers\\XAM Riser 4.wav",
+   "original_rel": "fx\\risers",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Riser 5.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\risers\\XAM Riser 5.wav",
+   "original_rel": "fx\\risers",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "Ah aaaaaaaaaaaaaaaaaaaaaaaaa.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\Ah aaaaaaaaaaaaaaaaaaaaaaaaa.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "EEEEEEEEET.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\EEEEEEEEET.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "Lazer.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\Lazer.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "Loud Sword.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\Loud Sword.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "Metallic wosh.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\Metallic wosh.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "Organic Glitch.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\Organic Glitch.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "Reverse Glass.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\Reverse Glass.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "Reverse bells.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\Reverse bells.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "Shatter.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\Shatter.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "Spooky.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\Spooky.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "Sword.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\Sword.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "WOOSH.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\WOOSH.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "Weird reversed kick.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\Weird reversed kick.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "a a a a a a.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\a a a a a a.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "alien.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\alien.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "click woosh.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\click woosh.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "dont pack up early.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\dont pack up early.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "down clicks.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\down clicks.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "echo.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\echo.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "get down boi.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\get down boi.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "glitch 2.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\glitch 2.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "glitch 3.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\glitch 3.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "glitch.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\glitch.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "granular.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\granular.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "jutsu.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\jutsu.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "pitch bend thing.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\pitch bend thing.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "pitch down.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\pitch down.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "quick laser.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\quick laser.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "rewind time.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\rewind time.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "slippin.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\slippin.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "water.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\water.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "weird serum thing.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\weird serum thing.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "woop.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\sfx\\woop.wav",
+   "original_rel": "fx\\sfx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Impact (key of d).wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\stomps and impacts\\XAM Impact (key of d).wav",
+   "original_rel": "fx\\stomps and impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Impact 2.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\stomps and impacts\\XAM Impact 2.wav",
+   "original_rel": "fx\\stomps and impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Impact 3.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\stomps and impacts\\XAM Impact 3.wav",
+   "original_rel": "fx\\stomps and impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Impact 4.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\stomps and impacts\\XAM Impact 4.wav",
+   "original_rel": "fx\\stomps and impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Impact 5.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\stomps and impacts\\XAM Impact 5.wav",
+   "original_rel": "fx\\stomps and impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Impact sweep 1.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\stomps and impacts\\XAM Impact sweep 1.wav",
+   "original_rel": "fx\\stomps and impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Impact sweep 2.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\stomps and impacts\\XAM Impact sweep 2.wav",
+   "original_rel": "fx\\stomps and impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Stomp 1.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\stomps and impacts\\XAM Stomp 1.wav",
+   "original_rel": "fx\\stomps and impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Stomp 2.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\stomps and impacts\\XAM Stomp 2.wav",
+   "original_rel": "fx\\stomps and impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Stomp 3.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\stomps and impacts\\XAM Stomp 3.wav",
+   "original_rel": "fx\\stomps and impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Transition 2.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\transition\\XAM Transition 2.wav",
+   "original_rel": "fx\\transition",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Transition 3.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\transition\\XAM Transition 3.wav",
+   "original_rel": "fx\\transition",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Transition 4.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\transition\\XAM Transition 4.wav",
+   "original_rel": "fx\\transition",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Transition 5.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\transition\\XAM Transition 5.wav",
+   "original_rel": "fx\\transition",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM Transition 6.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\transition\\XAM Transition 6.wav",
+   "original_rel": "fx\\transition",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "XAM transition 1.wav",
+   "source_pack": "XAM Sample Pack Vol.3",
+   "original": "fx\\transition\\XAM transition 1.wav",
+   "original_rel": "fx\\transition",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_01.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_01.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_02.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_02.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_03.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_03.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_04.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_04.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_05.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_05.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_06.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_06.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_07.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_07.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_08.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_08.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_09.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_09.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_10.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_10.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_11.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_11.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_12.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_12.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_13.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_13.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_14.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_14.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_15.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_15.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_16.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_16.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_17.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_17.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_18.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_18.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_19.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_19.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Downlifter_20.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Downlifters\\SRHS_Downlifter_20.wav",
+   "original_rel": "SRHS_FX\\SRHS_Downlifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_01.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_01.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_02.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_02.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_03.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_03.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_04.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_04.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_05.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_05.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_06.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_06.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_07.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_07.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_08.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_08.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_09.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_09.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_10.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_10.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_11.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_11.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_12.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_12.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_13.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_13.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_14.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_14.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_15.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_15.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_16.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_16.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_17.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_17.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_18.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_18.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_19.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_19.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_20.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_20.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_21.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_21.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Impact_22.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Impacts\\SRHS_Impact_22.wav",
+   "original_rel": "SRHS_FX\\SRHS_Impacts",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_01.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_01.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_02.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_02.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_03.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_03.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_04.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_04.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_05.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_05.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_06.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_06.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_07.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_07.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_08.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_08.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_09.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_09.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_10.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_10.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_11.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_11.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_12.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_12.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_13.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_13.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_14.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_14.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_15.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_15.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_16.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_16.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_17.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_17.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_18.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_18.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_19.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_19.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Misc_Fx_20.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Misc_Fx\\SRHS_Misc_Fx_20.wav",
+   "original_rel": "SRHS_FX\\SRHS_Misc_Fx",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_01.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_01.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_02.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_02.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_03.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_03.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_04.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_04.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_05.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_05.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_06.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_06.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_07.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_07.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_08.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_08.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_09.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_09.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_10.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_10.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_11.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_11.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_12.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_12.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_13.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_13.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_14.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_14.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_15.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_15.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_16.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_16.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_17.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_17.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_18.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_18.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_19.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_19.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_20.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_20.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  },
+  {
+   "file": "SRHS_Uplifter_21.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_FX\\SRHS_Uplifters\\SRHS_Uplifter_21.wav",
+   "original_rel": "SRHS_FX\\SRHS_Uplifters",
+   "subcategory": "sfx_cinematic"
+  }
+ ]
+}

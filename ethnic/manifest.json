@@ -1,0 +1,1568 @@
+{
+ "generated_by": "ingest_sakura.py",
+ "entries": [
+  {
+   "file": "SRHS_110_A#_Koto_Loop_15.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_110_A#_Koto_Loop_15.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_110_A_Koto_Loop_04.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_110_A_Koto_Loop_04.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_110_A_Koto_Loop_05.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_110_A_Koto_Loop_05.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_110_B_Koto_Loop_17.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_110_B_Koto_Loop_17.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_110_D#_Koto_Loop_02.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_110_D#_Koto_Loop_02.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_110_D_Koto_Loop_01.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_110_D_Koto_Loop_01.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_110_E_Koto_Loop_18.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_110_E_Koto_Loop_18.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_110_G#_Koto_Loop_16.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_110_G#_Koto_Loop_16.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_A#_Koto_Loop_06.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_A#_Koto_Loop_06.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_A#_Koto_Loop_07.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_A#_Koto_Loop_07.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_A#_Koto_Loop_08.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_A#_Koto_Loop_08.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_A#_Koto_Loop_23.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_A#_Koto_Loop_23.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_A_Koto_Loop_10.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_A_Koto_Loop_10.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_A_Koto_Loop_24.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_A_Koto_Loop_24.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_C#_Koto_Loop_19.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_C#_Koto_Loop_19.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_C_Koto_Loop_13.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_C_Koto_Loop_13.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_C_Koto_Loop_14.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_C_Koto_Loop_14.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_C_Koto_Loop_22.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_C_Koto_Loop_22.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_D#_Koto_Loop_21.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_D#_Koto_Loop_21.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_D_Koto_Loop_09.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_D_Koto_Loop_09.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_D_Koto_Loop_11.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_D_Koto_Loop_11.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_D_Koto_Loop_12.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_D_Koto_Loop_12.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_F_Koto_Loop_03.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_F_Koto_Loop_03.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "SRHS_120_G_Koto_Loop_20.wav",
+   "source_pack": "Singomakers Sakura House",
+   "original": "SRHS_Music_Loops\\SRHS_120_G_Koto_Loop_20.wav",
+   "original_rel": "SRHS_Music_Loops",
+   "subcategory": "ethnic_plucked"
+  },
+  {
+   "file": "BP3_(1)_Bending_Frame_Drum_85_BPM.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_(1)_Bending_Frame_Drum_85_BPM.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_(1)_Tabla_92_BPM.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_(1)_Tabla_92_BPM.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_(2)_China_Drum130_BPM.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_(2)_China_Drum130_BPM.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_(2)_Indian_Tam_Stick_85_BPM.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_(2)_Indian_Tam_Stick_85_BPM.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_(2)_Low_Djembe_120_BPM.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_(2)_Low_Djembe_120_BPM.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_(3)_Singing_Bowls.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_(3)_Singing_Bowls.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_(4)_Mini_China_Drum_160_BPM.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_(4)_Mini_China_Drum_160_BPM.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_(5)_Mini_China_Drum_Hitz_160_BPM.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_(5)_Mini_China_Drum_Hitz_160_BPM.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Bending_Frame_Drum_85_BPM_01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Bending_Frame_Drum_85_BPM_01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_CHINA_DRUM _01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_CHINA_DRUM _01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_CHINA_DRUM_02.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_CHINA_DRUM_02.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_China_Drum130_BPM.dup1_01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_China_Drum130_BPM.dup1_01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_DJEMBE_01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_DJEMBE_01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Indian_Tam_Stick_85_BPM_04.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Indian_Tam_Stick_85_BPM_04.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Low_Djembe_120_BPM_01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Low_Djembe_120_BPM_01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing Bowls_85_Full Loop_1.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing Bowls_85_Full Loop_1.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing Bowls_85_Full Loop_2.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing Bowls_85_Full Loop_2.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing Bowls_85_Loop_1.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing Bowls_85_Loop_1.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing Bowls_85_Loop_2.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing Bowls_85_Loop_2.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing Bowls_85_Loop_3.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing Bowls_85_Loop_3.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing Bowls_85_Organic Full_.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing Bowls_85_Organic Full_.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing Bowls_85_Q_Loop_1.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing Bowls_85_Q_Loop_1.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing Bowls_85_Q_Loop_2.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing Bowls_85_Q_Loop_2.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing Bowls_85_Q_Loop_3.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing Bowls_85_Q_Loop_3.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing_Bowls_02.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing_Bowls_02.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing_Bowls_BPM_85_(1)_Front_.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing_Bowls_BPM_85_(1)_Front_.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing_Bowls_BPM_85_(2)_Full_Lenth.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing_Bowls_BPM_85_(2)_Full_Lenth.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Singing_Bowls_BPM_85_(3)_End_.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Singing_Bowls_BPM_85_(3)_End_.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Tabla_92_BPM_01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Tabla_92_BPM_01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "BP3_Tabla_Extended_92_BPM_01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "BP3_Tabla_Extended_92_BPM_01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _Afro_Djembe_90_Loop_4-4_05.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _Afro_Djembe_90_Loop_4-4_05.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _IndPerc_Tabla_90_Loop_4-4_11.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _IndPerc_Tabla_90_Loop_4-4_11.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_02.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_02.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_03.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_03.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_06.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_06.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_08.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_08.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_09.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_09.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_10.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_10.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_13.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_13.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_15.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _IndPerc_Tabla_D_90_Loop_4-4_15.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL _IndPerc_Tabla_FX_90_Loop_4-4_13.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL _IndPerc_Tabla_FX_90_Loop_4-4_13.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_80_Loop_4-4_10.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_80_Loop_4-4_10.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_C_80_Loop_4-4_11.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_C_80_Loop_4-4_11.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_C_80_Loop_4-4_12.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_C_80_Loop_4-4_12.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_C_80_Loop_4-4_15.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_C_80_Loop_4-4_15.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_03.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_03.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_05.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_05.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_06.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_06.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_08.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_08.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_10.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_10.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_11.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_11.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_12.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_12.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_14.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_E_100_Loop_4-4_14.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_FX_105_Loop_4-4_09.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_FX_105_Loop_4-4_09.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_FX_80_Loop_4-4_12.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_FX_80_Loop_4-4_12.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_03.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_03.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_04.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_04.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_05.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_05.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_06.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_06.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_07.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_07.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_10.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_F_105_Loop_4-4_10.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_02.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_02.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_03.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_03.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_05.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_05.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_06.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_06.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_07.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_07.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_08.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_08.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_10.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_10.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_14.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_G_110_Loop_4-4_14.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_Mute_100_Loop_4-4_02.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_Mute_100_Loop_4-4_02.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_Mute_100_Loop_4-4_15.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_Mute_100_Loop_4-4_15.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_Muted_105_Loop_4-4_02.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_Muted_105_Loop_4-4_02.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_Muted_105_Loop_4-4_05.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_Muted_105_Loop_4-4_05.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_Muted_105_Loop_4-4_12.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_Muted_105_Loop_4-4_12.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_Muted_110_4-4_15.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_Muted_110_4-4_15.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_IndPerc_Tabla_Muted_110_Loop_4-4_09.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_IndPerc_Tabla_Muted_110_Loop_4-4_09.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_Tabla_C_80_Loop_4-4_01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_Tabla_C_80_Loop_4-4_01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_Tabla_C_80_Loop_4-4_02.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_Tabla_C_80_Loop_4-4_02.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_Tabla_C_80_Loop_4-4_03.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_Tabla_C_80_Loop_4-4_03.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_Tabla_C_80_Loop_4-4_04.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_Tabla_C_80_Loop_4-4_04.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_Tabla_C_80_Loop_4-4_06.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_Tabla_C_80_Loop_4-4_06.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "KVFL_Tabla_C_80_Loop_4-4_08.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "KVFL_Tabla_C_80_Loop_4-4_08.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "SRHS_110_A#_Kalimba_Loop_02.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "SRHS_110_A#_Kalimba_Loop_02.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "SRHS_110_E_Kalimba_Loop_03.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "SRHS_110_E_Kalimba_Loop_03.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "SRHS_120_E_Kalimba_Loop_01.wav",
+   "subcategory": "ethnic_world",
+   "source_pack": "ondisk-harvest",
+   "original": "SRHS_120_E_Kalimba_Loop_01.wav",
+   "original_rel": "ethnic_world",
+   "license": "Royalty-free (on-disk pack)",
+   "duration_s": null
+  },
+  {
+   "file": "GHA_Kit_04_Em_128_Break_Lead_Sitar.wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "GHA_Kit_04_Em_128_Break_Lead_Sitar.wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 110 (1).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 110 (1).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 110 (2).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 110 (2).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 110 (3).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 110 (3).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 110 (4).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 110 (4).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 110 (5).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 110 (5).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 140 (1).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 140 (1).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 140 (2).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 140 (2).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 140 (3).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 140 (3).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 140 (4).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 140 (4).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 140 (5).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 140 (5).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 150 (1).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 150 (1).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 150 (10).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 150 (10).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 150 (2).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 150 (2).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 150 (3).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 150 (3).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 150 (4).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 150 (4).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 150 (5).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 150 (5).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 150 (6).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 150 (6).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 150 (7).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 150 (7).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 150 (8).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 150 (8).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 150 (9).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 150 (9).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 90 (1).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 90 (1).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 90 (2).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 90 (2).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 90 (3).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 90 (3).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 90 (4).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 90 (4).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Sitar Loop D - 90 (5).wav",
+   "subcategory": "sitar",
+   "source_pack": "sync",
+   "original": "Sitar Loop D - 90 (5).wav",
+   "original_rel": "sitar",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW WW Bansuri.wav",
+   "subcategory": "bansuri",
+   "source_pack": "sync",
+   "original": "ESW WW Bansuri.wav",
+   "original_rel": "bansuri",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Kit 05 - WIND Bansuri Lead.wav",
+   "subcategory": "bansuri",
+   "source_pack": "sync",
+   "original": "ESWSPH Kit 05 - WIND Bansuri Lead.wav",
+   "original_rel": "bansuri",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Dholak 01.wav",
+   "subcategory": "dhol",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Dholak 01.wav",
+   "original_rel": "dhol",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Dholak 02.wav",
+   "subcategory": "dhol",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Dholak 02.wav",
+   "original_rel": "dhol",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Dholak 03.wav",
+   "subcategory": "dhol",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Dholak 03.wav",
+   "original_rel": "dhol",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Dholak 04 Flam.wav",
+   "subcategory": "dhol",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Dholak 04 Flam.wav",
+   "original_rel": "dhol",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSL Perc Ethnic Snare 03.wav",
+   "subcategory": "ethnic",
+   "source_pack": "sync",
+   "original": "ESWSL Perc Ethnic Snare 03.wav",
+   "original_rel": "ethnic",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW ESW Koto 03.wav",
+   "subcategory": "koto",
+   "source_pack": "sync",
+   "original": "ESW ESW Koto 03.wav",
+   "original_rel": "koto",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW GT Koto 01.wav",
+   "subcategory": "koto",
+   "source_pack": "sync",
+   "original": "ESW GT Koto 01.wav",
+   "original_rel": "koto",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW GT Koto 02.wav",
+   "subcategory": "koto",
+   "source_pack": "sync",
+   "original": "ESW GT Koto 02.wav",
+   "original_rel": "koto",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW GT Koto Scrape.wav",
+   "subcategory": "koto",
+   "source_pack": "sync",
+   "original": "ESW GT Koto Scrape.wav",
+   "original_rel": "koto",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW Koto Clean C.wav",
+   "subcategory": "koto",
+   "source_pack": "sync",
+   "original": "ESW Koto Clean C.wav",
+   "original_rel": "koto",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW PL Digital Koto.wav",
+   "subcategory": "koto",
+   "source_pack": "sync",
+   "original": "ESW PL Digital Koto.wav",
+   "original_rel": "koto",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW Pulse Perc - Tabla 01.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESW Pulse Perc - Tabla 01.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW Pulse Perc - Tabla 01_1.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESW Pulse Perc - Tabla 01_1.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW Pulse Perc - Tabla 01_2.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESW Pulse Perc - Tabla 01_2.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW Pulse Perc - Tabla 02.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESW Pulse Perc - Tabla 02.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW Pulse Perc - Tabla 02_1.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESW Pulse Perc - Tabla 02_1.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW Pulse Perc - Tabla 02_2.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESW Pulse Perc - Tabla 02_2.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESW Pulse Perc - Tabla 03.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESW Pulse Perc - Tabla 03.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWHV Perc - Tabla Hybrid 01.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESWHV Perc - Tabla Hybrid 01.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Tabla 00.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Tabla 00.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Tabla 01.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Tabla 01.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Tabla 02.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Tabla 02.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Tabla 03.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Tabla 03.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Tabla 04.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Tabla 04.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Tabla 05.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Tabla 05.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Tabla 06.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Tabla 06.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Tabla 08.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Tabla 08.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Tabla Flam 01.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Tabla Flam 01.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Tabla Bollybounce 3.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "Tabla Bollybounce 3.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "Tabla Bollybounce 3_1.wav",
+   "subcategory": "tabla",
+   "source_pack": "sync",
+   "original": "Tabla Bollybounce 3_1.wav",
+   "original_rel": "tabla",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Taiko Drum 01.wav",
+   "subcategory": "taiko",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Taiko Drum 01.wav",
+   "original_rel": "taiko",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Taiko Drum 02.wav",
+   "subcategory": "taiko",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Taiko Drum 02.wav",
+   "original_rel": "taiko",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Taiko Drum 03.wav",
+   "subcategory": "taiko",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Taiko Drum 03.wav",
+   "original_rel": "taiko",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Taiko Drum 04.wav",
+   "subcategory": "taiko",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Taiko Drum 04.wav",
+   "original_rel": "taiko",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Taiko Drum 05.wav",
+   "subcategory": "taiko",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Taiko Drum 05.wav",
+   "original_rel": "taiko",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Taiko Drum 06.wav",
+   "subcategory": "taiko",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Taiko Drum 06.wav",
+   "original_rel": "taiko",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Taiko Drum 07 Rev.wav",
+   "subcategory": "taiko",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Taiko Drum 07 Rev.wav",
+   "original_rel": "taiko",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "ESWSPH Perc - Taiko Drum 08.wav",
+   "subcategory": "taiko",
+   "source_pack": "sync",
+   "original": "ESWSPH Perc - Taiko Drum 08.wav",
+   "original_rel": "taiko",
+   "license": "see source",
+   "duration_s": null
+  },
+  {
+   "file": "XAM Guitar 9 (ethnic).wav",
+   "subcategory": "ethnic",
+   "source_pack": "sync",
+   "original": "XAM Guitar 9 (ethnic).wav",
+   "original_rel": "ethnic",
+   "license": "see source",
+   "duration_s": null
+  }
+ ]
+}

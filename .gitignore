@@ -1,0 +1,43 @@
+# 素材库音频（体积巨大，不入版本库；每池的 manifest.json 例外）
+bass/*
+!bass/manifest.json
+drum/*
+!drum/manifest.json
+guita/*
+!guita/manifest.json
+cowbell/*
+!cowbell/manifest.json
+synth/*
+!synth/manifest.json
+sfx/*
+!sfx/manifest.json
+animal/*
+!animal/manifest.json
+acapella/*
+!acapella/manifest.json
+keys/*
+!keys/manifest.json
+strings/*
+!strings/manifest.json
+brass/*
+!brass/manifest.json
+woodwind/*
+!woodwind/manifest.json
+ethnic/*
+!ethnic/manifest.json
+
+# 垃圾桶/归档区：只跟踪其政策 README
+archived/*
+!archived/README.md
+
+# 生成物与工具目录
+manifest_index.json
+.subdivide_trash/
+.workbuddy/
+musickit-fix-20260817/
+remix/output/
+remix/.pytest_cache/
+
+# Python
+__pycache__/
+*.pyc

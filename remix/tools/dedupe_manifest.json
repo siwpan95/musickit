@@ -1,0 +1,455 @@
+{
+ "time": "2026-08-13T16:53:02",
+ "dry_run": false,
+ "stats": {
+  "cowbell": {
+   "files": 174,
+   "unique_kept": 114,
+   "dup_to_move": 60,
+   "groups": 114
+  },
+  "synth": {
+   "files": 50,
+   "unique_kept": 23,
+   "dup_to_move": 27,
+   "groups": 23
+  }
+ },
+ "moves": [
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (7).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (7).mp3",
+   "sig": "18f02eaba24d7c94"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (109).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (109).mp3",
+   "sig": "18f02eaba24d7c94"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (115).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (115).mp3",
+   "sig": "18f02eaba24d7c94"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (5).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (5).wav",
+   "sig": "c0e26eb45d740c24"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (10).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (10).mp3",
+   "sig": "073169db2ebe3134"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (113).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (113).mp3",
+   "sig": "073169db2ebe3134"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (118).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (118).mp3",
+   "sig": "073169db2ebe3134"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (100).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (100).mp3",
+   "sig": "2c163fc4850ebfe3"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (101).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (101).mp3",
+   "sig": "cd0504ce610e21dc"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (102).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (102).mp3",
+   "sig": "b34f16d7cbb2d522"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (103).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (103).mp3",
+   "sig": "b77d0ebcf80b5e7e"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (104).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (104).mp3",
+   "sig": "5b925a6e518e7087"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (105).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (105).mp3",
+   "sig": "0604b311334a18e2"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (106).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (106).mp3",
+   "sig": "ca1900adcd555736"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (107).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (107).mp3",
+   "sig": "e7b807d4f4b86003"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (50).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (50).mp3",
+   "sig": "c61ca48f1ffc36e1"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (108).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (108).mp3",
+   "sig": "c61ca48f1ffc36e1"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (114).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (114).mp3",
+   "sig": "c61ca48f1ffc36e1"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (119).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (119).mp3",
+   "sig": "1124d1559de0b3d5"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (110).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (110).mp3",
+   "sig": "78ef40561d6d25a3"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (8).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (8).mp3",
+   "sig": "a45613e51231ec36"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (111).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (111).mp3",
+   "sig": "a45613e51231ec36"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (116).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (116).mp3",
+   "sig": "a45613e51231ec36"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (9).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (9).mp3",
+   "sig": "1852fb46edd533b7"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (112).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (112).mp3",
+   "sig": "1852fb46edd533b7"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (117).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (117).mp3",
+   "sig": "1852fb46edd533b7"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (13).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (13).mp3",
+   "sig": "8dbfb3091d10c1d5"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (120).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (120).mp3",
+   "sig": "8dbfb3091d10c1d5"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (121).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (121).mp3",
+   "sig": "8dbfb3091d10c1d5"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (122).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (122).mp3",
+   "sig": "3f8f60e6512372ff"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (16).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (16).mp3",
+   "sig": "2650aea321dae1c3"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (123).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (123).mp3",
+   "sig": "2650aea321dae1c3"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (124).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (124).mp3",
+   "sig": "2650aea321dae1c3"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (125).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (125).mp3",
+   "sig": "c6e4c755b233f2a9"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (126).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (126).mp3",
+   "sig": "69ed0dbe08764699"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (127).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (127).mp3",
+   "sig": "f8f53eaa42218eb6"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (128).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (128).mp3",
+   "sig": "720e71ad56b1090c"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (129).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (129).mp3",
+   "sig": "5e838fc638bb8df4"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (130).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (130).mp3",
+   "sig": "41b6841a3e04e884"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (131).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (131).mp3",
+   "sig": "10679587db17e1d2"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (132).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (132).mp3",
+   "sig": "ebd968a1fbf73bdb"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (133).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (133).mp3",
+   "sig": "32a84d5cb0bc7d75"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (134).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (134).mp3",
+   "sig": "052d2bb90517bea1"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (135).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (135).mp3",
+   "sig": "1c84be5333aeb4dd"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (136).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (136).mp3",
+   "sig": "d78a9076b7d3a883"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (30).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (30).mp3",
+   "sig": "5d18893d5dc4cf33"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (137).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (137).mp3",
+   "sig": "5d18893d5dc4cf33"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (138).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (138).mp3",
+   "sig": "5d18893d5dc4cf33"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (139).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (139).mp3",
+   "sig": "96a8339ec7273637"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (90).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (90).mp3",
+   "sig": "187e4af1bd4ab2bc"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (91).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (91).mp3",
+   "sig": "89119db42442db3e"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (92).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (92).mp3",
+   "sig": "11da58c4f10c0dd9"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (93).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (93).mp3",
+   "sig": "3a52c391e4f88bd4"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (94).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (94).mp3",
+   "sig": "acc865960bf2e23f"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (38).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (38).mp3",
+   "sig": "4d2083e814b73107"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (95).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (95).mp3",
+   "sig": "4d2083e814b73107"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (96).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (96).mp3",
+   "sig": "4d2083e814b73107"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (97).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (97).mp3",
+   "sig": "3f4ed7e349c43b2c"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (98).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (98).mp3",
+   "sig": "590f1894a3a011b7"
+  },
+  {
+   "src": "G:\\musickit\\cowbell\\cowbell (99).mp3",
+   "dst": "G:\\musickit\\archived\\dedupe_cowbell\\cowbell (99).mp3",
+   "sig": "4ef1c9ce904a0c84"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (6).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (6).wav",
+   "sig": "176df62633414eff"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (11).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (11).wav",
+   "sig": "176df62633414eff"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (16).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (16).wav",
+   "sig": "176df62633414eff"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (21).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (21).wav",
+   "sig": "176df62633414eff"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (26).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (26).wav",
+   "sig": "176df62633414eff"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (31).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (31).wav",
+   "sig": "176df62633414eff"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (36).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (36).wav",
+   "sig": "176df62633414eff"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (41).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (41).wav",
+   "sig": "176df62633414eff"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (46).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (46).wav",
+   "sig": "176df62633414eff"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (8).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (8).wav",
+   "sig": "487de7255ee1ca1d"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (13).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (13).wav",
+   "sig": "487de7255ee1ca1d"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (18).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (18).wav",
+   "sig": "487de7255ee1ca1d"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (23).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (23).wav",
+   "sig": "487de7255ee1ca1d"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (28).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (28).wav",
+   "sig": "487de7255ee1ca1d"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (33).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (33).wav",
+   "sig": "487de7255ee1ca1d"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (38).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (38).wav",
+   "sig": "487de7255ee1ca1d"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (43).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (43).wav",
+   "sig": "487de7255ee1ca1d"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (48).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (48).wav",
+   "sig": "487de7255ee1ca1d"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (9).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (9).wav",
+   "sig": "d205acce24375c00"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (14).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (14).wav",
+   "sig": "d205acce24375c00"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (19).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (19).wav",
+   "sig": "d205acce24375c00"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (24).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (24).wav",
+   "sig": "d205acce24375c00"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (29).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (29).wav",
+   "sig": "d205acce24375c00"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (34).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (34).wav",
+   "sig": "d205acce24375c00"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (39).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (39).wav",
+   "sig": "d205acce24375c00"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (44).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (44).wav",
+   "sig": "d205acce24375c00"
+  },
+  {
+   "src": "G:\\musickit\\synth\\synth (49).wav",
+   "dst": "G:\\musickit\\archived\\dedupe_synth\\synth (49).wav",
+   "sig": "d205acce24375c00"
+  }
+ ]
+}
