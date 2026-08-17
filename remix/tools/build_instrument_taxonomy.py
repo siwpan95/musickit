@@ -3,7 +3,7 @@
 """
 构建 musickit 规范乐器分类体系（instrument_taxonomy.json）。
 
-数据来源：G:\\tools\\music\\styles\\*.json（63 个风格池，242 个不同乐器词）。
+数据来源：G:\\musickit\\music\\styles\\*.json（63 个风格池，242 个不同乐器词）。
 目标：把这 242 个“自由文本”乐器词归并为一套规范类目（canonical_class），
 每类精确映射到 musickit 现有池（bass/drum/guita/cowbell/synth/acapella/animal/sfx）
 + 子类别 + 是否有样本（available）。
@@ -24,7 +24,7 @@ import json
 import os
 from collections import Counter, OrderedDict
 
-MUSIC_STYLES = r"G:\tools\music\styles"
+MUSIC_STYLES = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "music", "styles")
 OUT = r"G:\musickit\instrument_taxonomy.json"
 
 # ---------------------------------------------------------------------------
@@ -80,16 +80,16 @@ CLASSES = OrderedDict([
     ("sfx_glitch",    {"pool": "sfx", "subcategory": "glitch",    "available": True, "mixer_role": "sfx", "fallback": None, "note": "故障音"}),
     ("sfx_cinematic", {"pool": "sfx", "subcategory": "cinematic", "available": True, "mixer_role": "sfx", "fallback": None, "note": "激光/采样/电影/田野录音"}),
 
-    # ---- 无样本家族（available=false，桥接器跳过并报告缺口）----
-    ("keys_piano",   {"pool": None, "subcategory": "piano",    "available": False, "mixer_role": "synth", "fallback": "synth", "note": "钢琴/电钢/Rhodes（musickit 无样本）"}),
-    ("organ",        {"pool": None, "subcategory": "organ",    "available": False, "mixer_role": "synth", "fallback": "synth", "note": "风琴/管风琴（无样本）"}),
-    ("accordion",     {"pool": None, "subcategory": "accordion", "available": False, "mixer_role": "synth", "fallback": "synth", "note": "手风琴（无样本）"}),
-    ("harp",          {"pool": None, "subcategory": "harp",     "available": False, "mixer_role": "synth", "fallback": "synth", "note": "竖琴/水晶碗（无样本）"}),
-    ("strings",       {"pool": None, "subcategory": "strings",  "available": False, "mixer_role": "synth", "fallback": "synth", "note": "弦乐/小提琴/大提琴（无样本）"}),
-    ("brass",         {"pool": None, "subcategory": "brass",    "available": False, "mixer_role": "synth", "fallback": "synth", "note": "铜管/小号/长号/萨克斯（无样本）"}),
-    ("woodwind",      {"pool": None, "subcategory": "woodwind", "available": False, "mixer_role": "synth", "fallback": "synth", "note": "长笛/笛箫/笙/唢呐/木管（无样本）"}),
-    ("ethnic_plucked",{"pool": None, "subcategory": "ethnic_plucked", "available": False, "mixer_role": "guita", "fallback": "guita", "note": "三味线/琵琶/古筝/西塔琴等民族拨弦（无样本）"}),
-    ("ethnic_bowed",  {"pool": None, "subcategory": "ethnic_bowed",  "available": False, "mixer_role": "guita", "fallback": "guita", "note": "马头琴/奚琴等民族拉弦（无样本）"}),
+    # ---- 2026-08 起已补齐样本的家族（available=true，直接映射到新池）----
+    ("keys_piano",   {"pool": "keys", "subcategory": "piano",    "available": True, "mixer_role": "keys", "fallback": "synth", "note": "钢琴/电钢/Rhodes（已补齐）"}),
+    ("organ",        {"pool": "keys", "subcategory": "organ",    "available": True, "mixer_role": "keys", "fallback": "synth", "note": "风琴/管风琴（已补齐）"}),
+    ("accordion",    {"pool": "keys", "subcategory": "accordion", "available": True, "mixer_role": "keys", "fallback": "synth", "note": "手风琴（已补齐）"}),
+    ("harp",         {"pool": "keys", "subcategory": "harp",     "available": True, "mixer_role": "keys", "fallback": "synth", "note": "竖琴/水晶碗（已补齐）"}),
+    ("strings",      {"pool": "strings", "subcategory": "strings",  "available": True, "mixer_role": "strings", "fallback": "synth", "note": "弦乐/小提琴/大提琴（已补齐）"}),
+    ("brass",        {"pool": "brass", "subcategory": "brass",    "available": True, "mixer_role": "brass", "fallback": "synth", "note": "铜管/小号/长号/萨克斯（已补齐）"}),
+    ("woodwind",     {"pool": "woodwind", "subcategory": "woodwind", "available": True, "mixer_role": "woodwind", "fallback": "synth", "note": "长笛/笛箫/笙/唢呐/木管（已补齐）"}),
+    ("ethnic_plucked", {"pool": "ethnic", "subcategory": "ethnic_plucked", "available": True, "mixer_role": "ethnic", "fallback": "guita", "note": "三味线/琵琶/古筝/西塔琴等民族拨弦（已补齐）"}),
+    ("ethnic_bowed", {"pool": "ethnic", "subcategory": "ethnic_bowed", "available": True, "mixer_role": "ethnic", "fallback": "guita", "note": "马头琴/奚琴等民族拉弦（已补齐）"}),
 ])
 
 # ---------------------------------------------------------------------------
@@ -140,8 +140,8 @@ RULES = [
                        "环境音", "磁带 loop", "环境采样", "采样切片", "fx 音效", "fx", "音效", "采样"]),
 
     ("keys_piano",   ["钢琴", "原声钢琴", "电钢", "电钢琴", "踏板电钢", "键盘", "keys", "montuno", "rhodes"]),
-    ("organ",        ["风琴", "管风琴", "教堂管风琴"]),
     ("accordion",    ["手风琴"]),
+    ("organ",        ["管风琴", "教堂管风琴", "风琴"]),
     ("harp",         ["竖琴", "harp", "水晶碗"]),
     ("strings",      ["弦乐", "弦乐采样", "弦乐切片", "弦乐四重奏", "小提琴", "大提琴", "管弦", "string quartet"]),
     ("brass",        ["铜管", "小号", "长号", "法国号", "萨克斯", "铜管 stab", "bagpipe"]),
@@ -211,7 +211,7 @@ def main():
     out = {
         "version": 1,
         "description": "musickit 规范乐器分类体系：由 G:\\tools\\music 的 63 风格池 242 乐器词归并而成",
-        "pools": ["bass", "drum", "guita", "cowbell", "synth", "acapella", "animal", "sfx"],
+        "pools": ["bass", "drum", "guita", "cowbell", "synth", "acapella", "animal", "sfx", "keys", "strings", "brass", "woodwind", "ethnic"],
         "canonical_classes": classes_out,
         "word_map": word_map,
         "stats": {

@@ -1,0 +1,18 @@
+{
+  "key": "dnb",
+  "label": "鼓打贝斯 Drum & Bass",
+  "english": "Drum & Bass / DnB",
+  "bpm": "160-180 BPM",
+  "subgenres": [
+    {"name": "Liquid DnB", "bpm": "170-175 BPM"},
+    {"name": "Neurofunk", "bpm": "172-178 BPM"},
+    {"name": "Jump Up", "bpm": "174-180 BPM"},
+    {"name": "Jungle", "bpm": "160-170 BPM"},
+    {"name": "Breakcore"}
+  ],
+  "instruments": ["碎拍鼓组", "重低音贝斯", "合成器", "人声采样", "弦乐 pad", "FX 音效"],
+  "scales": ["小调", "多利亚", "五声", "弗里几亚"],
+  "moods": ["高速", "紧张", "能量", "冲刺", "暗黑", "沉浸"],
+  "elements": ["碎拍 breakbeat", "sub-bass 低频", "快速军鼓", "反向混响", "琶音"],
+  "scenes": ["极限运动", "游戏 Boss 战", "赛车", "夜店高潮", "高能剪辑"]
+}

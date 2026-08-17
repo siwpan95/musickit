@@ -1,0 +1,18 @@
+{
+  "key": "salsa",
+  "label": "萨尔萨 Salsa",
+  "english": "Salsa",
+  "bpm": "150-250 BPM",
+  "subgenres": [
+    {"name": "Salsa Dura", "bpm": "160-250 BPM"},
+    {"name": "Salsa Romántica", "bpm": "150-200 BPM"},
+    {"name": "Cuban Salsa", "bpm": "150-220 BPM"},
+    {"name": "Salsa Choke", "bpm": "160-240 BPM"},
+    {"name": "Timba", "bpm": "170-250 BPM"}
+  ],
+  "instruments": ["钢琴 montuno", "conga 鼓", "小号", "长号", "低音提琴", "打击乐"],
+  "scales": ["小调", "多利亚", "混合利底亚", "五声"],
+  "moods": ["火热", "舞动", "激情", "都市", "欢快", "拉丁"],
+  "elements": ["montuno 循环", "复杂打击", "铜管爆发", "呼叫应答", "clave 节奏"],
+  "scenes": ["拉丁舞会", "夜店热场", "舞蹈比赛", "派对", "节庆游行"]
+}

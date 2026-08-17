@@ -1,0 +1,18 @@
+{
+  "key": "mathrock",
+  "label": "数学摇滚 Math Rock",
+  "english": "Math Rock",
+  "bpm": "120-200 BPM",
+  "subgenres": [
+    {"name": "Emo Math Rock", "bpm": "130-180 BPM"},
+    {"name": "Post-Rock Math", "bpm": "90-150 BPM"},
+    {"name": "Midwest Emo", "bpm": "120-160 BPM"},
+    {"name": "Technical Math", "bpm": "160-200 BPM"},
+    {"name": "J-Alt (Japanese Math)"}
+  ],
+  "instruments": ["轻失真吉他", "贝斯", "鼓组", "拍手", "原声吉他", "合成点缀"],
+  "scales": ["大调", "小调", "多利亚", "混合利底亚", "五声"],
+  "moods": ["复杂", "跳跃", "清澈", "沉思", "青春", "精密"],
+  "elements": ["奇数拍号", "交错节奏", "轻拍吉他", "旋律对位", "突然转拍"],
+  "scenes": ["独立现场", "青春剧", "滑板短片", "游戏解谜", "咖啡馆背景"]
+}

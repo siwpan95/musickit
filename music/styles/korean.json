@@ -1,0 +1,18 @@
+{
+  "key": "korean",
+  "label": "韩风（韩国传统）Korean",
+  "english": "Korean Traditional",
+  "bpm": "70-140 BPM",
+  "subgenres": [
+    {"name": "国乐"},
+    {"name": "盘索里 Pansori"},
+    {"name": "散调 Sanjo"},
+    {"name": "韩式 Future Bass"},
+    {"name": "韩式 R&B 器乐"}
+  ],
+  "instruments": ["伽倻琴 Gayageum", "奚琴 Haegeum", "大笒 Daegeum", "长鼓 Janggu", "玄琴 Geomungo"],
+  "scales": ["平调", "界面调", "五声音阶", "青调"],
+  "moods": ["哀婉", "清雅", "节奏感", "现代", "温柔", "怅惘"],
+  "elements": ["原声+电子融合", "留白", "鼓点律动", "滑音吟唱感", "干净混音"],
+  "scenes": ["韩剧 OST", "韩式短视频", "韩式游戏", "传统演出", "城市夜景"]
+}

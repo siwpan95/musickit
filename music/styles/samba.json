@@ -1,0 +1,18 @@
+{
+  "key": "samba",
+  "label": "桑巴 Samba",
+  "english": "Samba",
+  "bpm": "90-130 BPM",
+  "subgenres": [
+    {"name": "Samba Enredo", "bpm": "110-130 BPM"},
+    {"name": "Samba de Janeiro", "bpm": "100-125 BPM"},
+    {"name": "Bossa Samba", "bpm": "100-120 BPM"},
+    {"name": "Pagode", "bpm": "90-115 BPM"},
+    {"name": "Samba Reggae", "bpm": "95-120 BPM"}
+  ],
+  "instruments": ["铃鼓", "响葫芦", "surdo 大鼓", "长笛", "吉他", "铜管"],
+  "scales": ["大调", "小调", "混合利底亚", "五声"],
+  "moods": ["热烈", "欢庆", "奔放", "舞动", "狂欢", "阳光"],
+  "elements": ["复合节奏", "击掌律动", "carnival 能量", "呼叫应答", "连绵打击"],
+  "scenes": ["狂欢节", "舞蹈表演", "派对热场", "体育赛事", "夏日户外"]
+}

@@ -1,0 +1,17 @@
+{
+  "key": "glitch",
+  "label": "故障音乐 Glitch",
+  "english": "Glitch",
+  "bpm": "90-150 BPM",
+  "subgenres": [
+    {"name": "Microsound"},
+    {"name": "IDM Glitch"},
+    {"name": "Glitch Hop"},
+    {"name": "Clicks & Cuts"}
+  ],
+  "instruments": ["模块合成器", "破碎采样", "数字失真", "比特压缩", "电路弯折", "鼓机"],
+  "scales": ["无调性", "半音阶", "不规则节拍"],
+  "moods": ["机械", "冷峻", "凌乱", "未来", "不安", "精密"],
+  "elements": ["切碎切片", "错拍跳变", "数位噪声", "突然静默", "高频闪烁"],
+  "scenes": ["科技广告", "赛博空间", "实验短片", "游戏 UI", "数据可视化"]
+}

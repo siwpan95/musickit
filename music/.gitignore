@@ -1,0 +1,21 @@
+# Python 运行缓存
+__pycache__/
+*.py[cod]
+
+# 生成/导出产物（可由脚本随时重建，默认名带时间戳）
+music_prompts*.txt
+music_prompts*.json
+music_prompts*.csv
+
+# 第三方字体软件（字由网）写入的目录（非本项目内容，勿纳入版本库）
+hellofont/
+ZhouZiSongTi/
+
+# 注意：优设标题黑.ttf（项目 GUI 字体，中文简体标题黑体）是项目文件，
+# 位于项目根目录、应纳入版本库跟踪，不受上面的 ZhouZiSongTi/ 目录规则影响。
+# 桥接器混音输出与校验产物
+prompt_mixes/
+prompt_mixes_json/
+demo_test.csv
+demo_test.json
+license_audit.json

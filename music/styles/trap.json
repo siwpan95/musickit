@@ -1,0 +1,18 @@
+{
+  "key": "trap",
+  "label": "陷阱说唱 Trap",
+  "english": "Trap",
+  "bpm": "130-170 BPM",
+  "subgenres": [
+    {"name": "Southern Trap", "bpm": "130-150 BPM"},
+    {"name": "Hyperpop Trap", "bpm": "140-170 BPM"},
+    {"name": "Emo Trap", "bpm": "130-160 BPM"},
+    {"name": "Drill", "bpm": "135-150 BPM"},
+    {"name": "Phonk Trap"}
+  ],
+  "instruments": ["808 滑音贝斯", "踩镲连击", "军鼓", "合成 lead", "人声 Auto-Tune", "管弦采样"],
+  "scales": ["小调", "小调五声", "布鲁斯", "弗里几亚"],
+  "moods": ["暗黑", "凶猛", "街头", "阴郁", "能量", "叛逆"],
+  "elements": ["808 滑音", "hi-hat 滚奏", "硬军鼓", "半拍切分", "Auto-Tune 人声"],
+  "scenes": ["地下派对", "街舞", "游戏高燃", "潮流短片", "运动集锦"]
+}

@@ -1,0 +1,18 @@
+{
+  "key": "vaporwave",
+  "label": "蒸汽波 Vaporwave",
+  "english": "Vaporwave",
+  "bpm": "60-100 BPM",
+  "subgenres": [
+    {"name": "Mallsoft", "bpm": "70-90 BPM"},
+    {"name": "Future Funk", "bpm": "100-120 BPM"},
+    {"name": "Chillwave", "bpm": "70-100 BPM"},
+    {"name": "Hardvapor", "bpm": "100-140 BPM"},
+    {"name": "Slo-Fi Vapor"}
+  ],
+  "instruments": ["减速采样", "合成 Pad", "颤音人声", "马林巴", "电钢", "芯片音色"],
+  "scales": ["大调", "五声", "小调", "全音阶"],
+  "moods": ["怀旧", "迷幻", "舒缓", "梦幻", "慵懒", "空灵"],
+  "elements": ["降速采样", "镶边混响", "日本都市感", "广告采样", "失真磁带"],
+  "scenes": ["复古咖啡馆", "深夜独处", "购物广场氛围", "赛博怀旧短片", "ASMR 视频"]
+}

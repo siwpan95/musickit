@@ -1,0 +1,17 @@
+{
+  "key": "future_garage",
+  "label": "未来车库 Future Garage",
+  "english": "Future Garage",
+  "bpm": "130-140 BPM",
+  "subgenres": [
+    {"name": "UK Garage", "bpm": "130-138 BPM"},
+    {"name": "Wonky", "bpm": "132-140 BPM"},
+    {"name": "Post-Dubstep", "bpm": "130-140 BPM"},
+    {"name": "Liquid Garage", "bpm": "134-142 BPM"}
+  ],
+  "instruments": ["切碎人声切片", "反拍鼓", "低音 Bass", "闪烁合成", "弦乐采样", "空灵 Pad"],
+  "scales": ["小调 Minor", "多利亚 Dorian", "无调性"],
+  "moods": ["空灵", "忧郁", "漂浮", "朦胧", "治愈", "夜色"],
+  "elements": ["碎拍切分", "宽广延迟", "留白空间", "温暖低频", "细腻高频"],
+  "scenes": ["深夜独处", "城市雨夜", "艺术装置", "短片配乐", "游戏氛围"]
+}

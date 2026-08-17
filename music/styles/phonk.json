@@ -1,0 +1,24 @@
+{
+  "key": "phonk",
+  "label": "Phonk 孟菲斯说唱",
+  "english": "Phonk",
+  "bpm": "130-170 BPM",
+  "subgenres": [
+    {"name": "Memphis Phonk", "bpm": "130-150 BPM"},
+    {"name": "Drift Phonk", "bpm": "150-170 BPM"},
+    {"name": "Texas Phonk", "bpm": "130-145 BPM"},
+    {"name": "Funk Phonk", "bpm": "100-120 BPM"},
+    {"name": "Horror Phonk", "bpm": "120-140 BPM"},
+    {"name": "Ambient Phonk", "bpm": "70-90 BPM"},
+    {"name": "Cloud Phonk", "bpm": "130-150 BPM"},
+    {"name": "Hyperphonk", "bpm": "160-180 BPM"},
+    {"name": "Brazilian Phonk", "bpm": "130-150 BPM"},
+    {"name": "轻冯"},
+    {"name": "重冯"}
+  ],
+  "instruments": ["牛铃 Cowbell", "808 Bass", "失真采样", "Slide Guitar", "Memphis 人声切片", "黑胶噪点 Vinyl Crackle"],
+  "scales": ["小调 Minor", "弗里几亚 Phrygian", "多利亚 Dorian", "半音阶滑行"],
+  "moods": ["暗黑", "慵懒", "迷幻", "狂躁", "赛博", "街头", "阴郁"],
+  "elements": ["Lo-fi 低保真", "磁带失真", "慢速拖拍", "重低音下潜", "采样切片", "复古嘶嘶声"],
+  "scenes": ["赛车漂移视频", "短视频卡点", "深夜驾驶", "TikTok/抖音BGM", "街头穿搭"]
+}

@@ -1,0 +1,19 @@
+{
+  "key": "folk",
+  "label": "民谣 Folk",
+  "english": "Folk",
+  "bpm": "70-140 BPM",
+  "subgenres": [
+    {"name": "Contemporary Folk", "bpm": "90-130 BPM"},
+    {"name": "Folk Rock", "bpm": "100-150 BPM"},
+    {"name": "Indie Folk", "bpm": "90-140 BPM"},
+    {"name": "Celtic Folk", "bpm": "90-150 BPM"},
+    {"name": "Folk Punk", "bpm": "130-180 BPM"},
+    {"name": "World Folk", "bpm": "80-140 BPM"}
+  ],
+  "instruments": ["原声吉他", "小提琴", "长笛", "口琴", "竖琴", "人声"],
+  "scales": ["大调", "五声", "多利亚", "小调"],
+  "moods": ["质朴", "温暖", "叙事", "乡愁", "自然", "宁静"],
+  "elements": ["木吉他扫弦", "多声部和声", "叙事感", "原声乐", "民乐色彩"],
+  "scenes": ["篝火晚会", "田园纪录片", "独立现场", "旅行 Vlog", "民谣专场"]
+}

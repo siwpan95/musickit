@@ -1,0 +1,18 @@
+{
+  "key": "darksynth",
+  "label": "暗潮合成器 Darksynth",
+  "english": "Darksynth",
+  "bpm": "100-118 BPM",
+  "subgenres": [
+    {"name": "Outrun", "bpm": "100-115 BPM"},
+    {"name": "Horror Synth", "bpm": "90-110 BPM"},
+    {"name": "Cyberpunk Synth", "bpm": "100-120 BPM"},
+    {"name": "Carpenter Style", "bpm": "95-115 BPM"},
+    {"name": "Arcade Darksynth"}
+  ],
+  "instruments": ["模拟合成器", "重贝斯", "鼓机", "铜管 stab", "合唱 Pad", "FX 音效"],
+  "scales": ["小调", "弗里几亚", "小调五声", "多利亚"],
+  "moods": ["黑暗", "恐怖", "复古未来", "紧张", "凶险", "赛博"],
+  "elements": ["模拟锯齿波", "低频冲击", "电影氛围", "霓虹质感", "滤波扫频"],
+  "scenes": ["恐怖游戏", "赛博朋克片", "霓虹夜景", "动作预告", "复古街机"]
+}

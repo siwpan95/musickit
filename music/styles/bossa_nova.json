@@ -1,0 +1,18 @@
+{
+  "key": "bossa_nova",
+  "label": "波萨诺瓦 Bossa Nova",
+  "english": "Bossa Nova",
+  "bpm": "100-140 BPM",
+  "subgenres": [
+    {"name": "Classic Bossa", "bpm": "110-130 BPM"},
+    {"name": "Bossa-Jazz", "bpm": "120-140 BPM"},
+    {"name": "Bossa Nova Pop", "bpm": "100-120 BPM"},
+    {"name": "Sambalanço", "bpm": "110-135 BPM"},
+    {"name": "Bossa Folk"}
+  ],
+  "instruments": ["尼龙弦吉他", "钢琴", "低音提琴", "打击乐", "长笛", "柔和人声"],
+  "scales": ["大调七和弦", "小调", "五声", "变化音阶"],
+  "moods": ["慵懒", "温柔", "浪漫", "海岸", "悠然", "优雅"],
+  "elements": ["柔和切分", "七和弦铺陈", "轻拍吉他", "呼吸感", "热带气息"],
+  "scenes": ["咖啡馆", "海滩日落", "情侣约会", "纪录片配乐", "电梯背景"]
+}

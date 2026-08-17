@@ -1,0 +1,18 @@
+{
+  "key": "blues",
+  "label": "蓝调 Blues",
+  "english": "Blues",
+  "bpm": "70-120 BPM",
+  "subgenres": [
+    {"name": "Delta Blues"},
+    {"name": "Chicago Blues"},
+    {"name": "Blues Rock"},
+    {"name": "Electric Blues", "bpm": "70-120 BPM"},
+    {"name": "Jump Blues"}
+  ],
+  "instruments": ["滑音吉他 Slide", "口琴 Harmonica", "钢琴", "贝斯", "鼓", "节奏吉他"],
+  "scales": ["蓝调音阶", "小调五声", "混合利底亚"],
+  "moods": ["忧郁", "沧桑", "倾诉", "慵懒", "治愈", "粗粝"],
+  "elements": ["弯音 Bend", "滑音", "即兴 Solo", "12 小节结构", "呼应对答"],
+  "scenes": ["公路", "酒吧", "深夜", "蓝调电影", "篝火"]
+}

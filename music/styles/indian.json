@@ -1,0 +1,18 @@
+{
+  "key": "indian",
+  "label": "印度风 Indian",
+  "english": "Indian",
+  "bpm": "自由 / 80-160 BPM",
+  "subgenres": [
+    {"name": "印度古典"},
+    {"name": "拉格 Raga"},
+    {"name": "宝莱坞器乐"},
+    {"name": "印度 Fusion"},
+    {"name": "Bhangra"}
+  ],
+  "instruments": ["西塔琴 Sitar", "塔布拉鼓 Tabla", "萨罗德琴 Sarod", "手鼓", "印度长笛 Bansuri", "手风琴"],
+  "scales": ["拉格音阶 Thaat", "微分音", "五声", "Bhupali"],
+  "moods": ["神秘", "律动", "冥想", "热烈", "异域", "虔诚"],
+  "elements": ["循环节奏 Tala", "滑音", "持续音 Drone", "即兴展开", "手鼓对话"],
+  "scenes": ["瑜伽", "异域短片", "冥想", "世界音乐节", "宝莱坞风剪辑"]
+}

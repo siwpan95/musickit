@@ -1,0 +1,18 @@
+{
+  "key": "disco",
+  "label": "迪斯科 Disco",
+  "english": "Disco / Nu-Disco",
+  "bpm": "110-130 BPM",
+  "subgenres": [
+    {"name": "Classic Disco", "bpm": "115-130 BPM"},
+    {"name": "Nu-Disco", "bpm": "110-125 BPM"},
+    {"name": "French House", "bpm": "115-125 BPM"},
+    {"name": "Disco-Funk"},
+    {"name": "Space Disco"}
+  ],
+  "instruments": ["四四拍底鼓", "贝斯线", "铜管", "弦乐", "电钢琴", "和声人声"],
+  "scales": ["大调", "小调", "七和弦", "五声"],
+  "moods": ["欢快", "热舞", "复古", "闪耀", "自由", "派对"],
+  "elements": ["四四拍律动", "切分贝斯", "铜管 stabs", "弦乐颤音", "放克吉他"],
+  "scenes": ["舞厅派对", "复古主题", "时尚秀场", "婚礼热场", "年代剧"]
+}

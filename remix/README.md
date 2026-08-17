@@ -65,7 +65,16 @@ python main.py --remix --count 5 --bars 8 --bpm 140 --format mp3
 
 # 固定种子可复现
 python main.py --remix --seed 42 --bars 16 --out output
+
+# 发布安全模式：仅使用授权层级 free/pack 的素材（restricted/unknown 一律剔除）
+python main.py --remix --release-safe
 ```
+
+**选音规则（2026-08-17 起）**：
+- 骨架层（drum/bass/guita）**保底挑选 >=1 小节的 loop/stem**（manifest 时长优先，
+  未知时长则整曲 stem 命名优先 + ffprobe 抽样探测），混音时强制循环层，
+  杜绝 one-shot 被抽成唯一鼓轨导致整曲失去律动；
+- `--release-safe`：按各池 manifest 的 `license_tier` 过滤，只留 free/pack。
 
 素材根目录可用环境变量 `MUSICKIT_ROOT` 覆盖（默认 remix 的上级目录）。
 
@@ -92,6 +101,9 @@ python main.py --remix --seed 42 --bars 16 --out output
 | 动态压缩 | 压缩动态范围 |
 | 高通/低通 | 滤波截止频率可调 |
 | phonk beat 混音 | loop 切片 + 小节编排 + 内容去重，输出固定小节数（`--bars`/`--bpm`） |
+| 骨架保底选音 | drum/bass/guita 强制选取 >=1 小节 loop/stem 并强制循环层 |
+| 发布安全模式 | --release-safe 仅用 free/pack 授权素材（license_tier 过滤） |
+| 防覆盖命名 | 输出文件名同秒冲突自动递增（_1/_2） |
 
 ## 项目结构
 
@@ -105,14 +117,15 @@ remix/
 │   └── main_window.py      # tkinter 主界面（仅音频混音）
 ├── utils/
 │   └── progress_reporter.py# 线程安全进度报告
-└── tests/                  # pytest 测试套件
+└── tests/                  # pytest 测试套件（含 main.py 选音逻辑 / --release-safe 覆盖）
 ```
 
 ## 测试
 
 ```bash
 pip install pytest
-pytest tests/ -v
+pytest tests/ -q              # 全量
+pytest tests/ -q -m smoke     # 快速冒烟档（纯逻辑用例，无 ffmpeg 编解码）
 ```
 
 > 注：涉及 GUI 的进度报告测试在缺少 tkinter / Tcl 环境时会自动跳过（skip），
@@ -120,9 +133,9 @@ pytest tests/ -v
 
 ---
 
-## 提示词驱动混音（来自 G:\tools\music）
+## 提示词驱动混音（来自 G:\musickit\music，已整合进本项目）
 
-本引擎可被 **G:\tools\music\prompt_driven_remix.py** 以「提示词」驱动：
+本引擎可被 **G:\musickit\music\prompt_driven_remix.py** 以「提示词」驱动：
 `music_prompt_generator` 生成的结构化提示词（乐器 / BPM / 情绪）经该桥接器映射为本引擎的
 `run_remix(tracks, bpm, structure)`，从而用真实素材产出混音。
 
@@ -135,4 +148,4 @@ pytest tests/ -v
 - `moods` / `subgenre` → 曲式模板（`classic_drop` / `ambient_ghost` / `loop_stack`）
 
 运行桥接器需 `F:\Python314`（pydub + numpy + audioop-lts），并把 `MUSICKIT_ROOT`
-指向 `G:\musickit`（桥接器已默认设置）。详见 `G:\tools\music\prompt_driven_remix.py`。
+指向 `G:\musickit`（桥接器已默认设置）。详见 `G:\musickit\music\prompt_driven_remix.py`。

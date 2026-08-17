@@ -1,0 +1,18 @@
+{
+  "key": "hyperpop",
+  "label": "超流行 Hyperpop",
+  "english": "Hyperpop / Glitchcore",
+  "bpm": "100-180 BPM",
+  "subgenres": [
+    {"name": "PC Music", "bpm": "100-130 BPM"},
+    {"name": "Glitchcore", "bpm": "130-180 BPM"},
+    {"name": "Bubblegum Bass", "bpm": "100-140 BPM"},
+    {"name": "Digicore", "bpm": "120-160 BPM"},
+    {"name": "Hyperpop Rap"}
+  ],
+  "instruments": ["失真合成器", "人声 Auto-Tune", "芯片音色", "808 贝斯", "故障 FX", "高音主旋"],
+  "scales": ["大调", "小调", "五声", "半音阶"],
+  "moods": ["极致", "俏皮", "炫目", "反讽", "迷幻", "亢奋"],
+  "elements": ["极高音调", "失真处理", "变速节拍", "人声变调", "噪音纹理"],
+  "scenes": ["短视频热梗", "虚拟偶像", "游戏 SDK", "潮流穿搭", "网络亚文化"]
+}

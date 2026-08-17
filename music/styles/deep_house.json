@@ -1,0 +1,17 @@
+{
+  "key": "deep_house",
+  "label": "深浩室 Deep House",
+  "english": "Deep House",
+  "bpm": "120-125 BPM",
+  "subgenres": [
+    {"name": "Soulful House", "bpm": "118-124 BPM"},
+    {"name": "Garage House", "bpm": "122-126 BPM"},
+    {"name": "Afro House", "bpm": "120-124 BPM"},
+    {"name": "Melodic Deep", "bpm": "120-125 BPM"}
+  ],
+  "instruments": ["深情人声采样", "电钢琴 Rhodes", "低音 Bass", "碎拍打击", "合成 Pad", "黑胶噪点"],
+  "scales": ["小调 Minor", "多利亚 Dorian", "混合调式"],
+  "moods": ["慵懒", "温暖", "律动", "迷离", "性感", "治愈"],
+  "elements": ["柔和滤波", "空间混响", "放克切分", "暖模拟", "深夜氛围"],
+  "scenes": ["海滩酒吧", "深夜 Lounge", "时尚派对", "咖啡馆", "城市夜景"]
+}

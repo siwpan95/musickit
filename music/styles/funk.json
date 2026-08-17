@@ -1,0 +1,18 @@
+{
+  "key": "funk",
+  "label": "放克 / 疯克 Funk",
+  "english": "Funk",
+  "bpm": "95-120 BPM",
+  "subgenres": [
+    {"name": "Classic Funk", "bpm": "100-115 BPM"},
+    {"name": "P-Funk", "bpm": "105-120 BPM"},
+    {"name": "Funk Rock"},
+    {"name": "Disco Funk"},
+    {"name": "G-Funk", "bpm": "90-100 BPM"}
+  ],
+  "instruments": [" slap 贝斯", "节奏吉他", "铜管", "鼓组", "风琴", "合成器"],
+  "scales": ["小调", "混合利底亚", "布鲁斯音阶", "九和弦"],
+  "moods": ["律动", "欢快", "热烈", "街头", "派对", "复古"],
+  "elements": ["强切分节奏", "贝斯 groove", "铜管 stabs", "对话式编曲", "滑音"],
+  "scenes": ["派对热场", "街舞 battle", "复古 disco", "综艺背景", "运动集锦"]
+}

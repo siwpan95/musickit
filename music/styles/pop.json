@@ -1,0 +1,18 @@
+{
+  "key": "pop",
+  "label": "流行 Pop",
+  "english": "Pop",
+  "bpm": "90-130 BPM",
+  "subgenres": [
+    {"name": "Dance Pop", "bpm": "110-130 BPM"},
+    {"name": "Synth-Pop", "bpm": "100-120 BPM"},
+    {"name": "K-Pop", "bpm": "100-130 BPM"},
+    {"name": "City Pop", "bpm": "100-120 BPM"},
+    {"name": "Indie Pop", "bpm": "90-120 BPM"}
+  ],
+  "instruments": ["合成器", "电钢", "鼓机", "吉他", "人声和声", "贝斯"],
+  "scales": ["大调", "小调", "五声", "多利亚"],
+  "moods": ["欢快", "明亮", "元气", "青春", "治愈", "时尚"],
+  "elements": ["副歌 hook", "强旋律线", "干净混音", "节拍律动", "记忆点"],
+  "scenes": ["短视频 BGM", "商业广告", "偶像舞台", "综艺节目", "旅行 Vlog"]
+}

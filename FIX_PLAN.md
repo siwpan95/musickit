@@ -185,3 +185,47 @@ Phase 4 治理收尾（依赖以上全部）
 - 采样包授权：入库前人工确认 license，写入 manifest 可溯源（CC0 优先）
 - 全部移动操作可回溯：`archived` 垃圾桶 + manifest，无任何删除动作
 - Phase 3 改动 `main.py` 选音/混音逻辑，改前先跑通现有 77 个测试作为基线
+
+
+---
+
+## 2026-08-17 修复（v3 · 深度评估整改，按 P0→P2 依次完成）
+
+> 依据：2026-08-17《深度评估报告》（G:\musickit\深度评估_20260817.md / 补丁包 FIX_LOG.md）。
+> 交付方式：会话沙箱禁止原地改写，全部改动以「补丁包 + apply_patch.ps1 一键应用」落地；
+> 应用后本表状态全部转 ✅。镜像环境全量验证：remix pytest 108 passed、桥接器 12 passed、
+> smoke 档 16 用例、端到端混音（CLI 直驱 + 提示词桥接）实测通过。
+
+### P0 · 产出质量与合规
+
+| # | 修复项 | 落地位置 | 说明 |
+|---|--------|---------|------|
+| P0-1 | 骨架保底选音 | `remix/main.py`（`pick_loop_candidate` / `_pick_random_tracks`） | drum/bass/guita 强制选取 ≥1 小节 loop/stem（manifest 时长优先，未知时长 stem 命名优先 + ffprobe 抽样探测，上限 60 次），混音时强制 ROLE_LOOP；杜绝 one-shot 当唯一鼓轨 |
+| P0-2 | 旋律层隔离单音采样 | `tools/music/prompt_driven_remix.py`（`_loop_preferring`） | 旋律层选音三级偏好：loop/BPM 显式素材 > 非单音采样 > 全量回退 |
+| P0-3 | 授权治理 + release-safe | `remix/tools/tag_license_tiers.py`（标注 + 备份）、`remix/tools/audit_licenses.py`、`main.py`/桥接器 `--release-safe` | 22,175 条 manifest 条目标注 license_tier（free 1,672 / pack 8,561 / restricted 1,078 / unknown 22,175 中的其余）；发布模式只放行 free/pack |
+| P0-4 | git init | 两项目 `main` 分支基线提交（musickit 1add106 / tools-music cdbcac4）+ 根 .gitignore | 素材音频不入库，仅 manifest.json；修复后由 apply 脚本提交 |
+
+### P1 · 数据、测试与文档
+
+| # | 修复项 | 落地位置 | 说明 |
+|---|--------|---------|------|
+| P1-5 | animal 池人声包迁出 | `remix/tools/move_animal_vocal_packs.py` | 3 个真人声包（Loopmasters Vocals With Attitude / Producer Loops Ethnic Pop Vocals / Stivenz Beats Vocal Chops，共 313 文件）→ acapella/vocal_chops/；只移动不删除，记录 archived/moved_vocal_packs_20260817.json |
+| P1-6 | 补测试 | `remix/tests/test_main_selection.py`（10 用例）、`tools/music/tests/test_bridge.py`（12 用例） | 覆盖选音保底/release-safe/命名防覆盖/映射/骨架/gaps/BPM 钳制 |
+| P1-7 | 文档同步 | 根 README（13 池/110.9GB/tier 表）、remix README、tools/music README、本文档 | TEST_REPORT.md 由 apply 脚本重跑 test_suite.py 刷新 |
+| P1-8 | 数据修复 | `instrument_taxonomy.json`（word_map 重复键去重；手风琴 organ→accordion，含 style_count 重算）、`build_instrument_taxonomy.py`（与现网对齐，重生成零 diff）、sfx 空 license（由 tag 工具补）、`validate_styles.py` 死条件清理。注：`styles/phonk.json` 的「轻冯/重冯」经用户澄清为**有意的风格分类**（冯=phonk），原重命名方案已撤销 | |
+| P1-9 | 输出命名防覆盖 | `remix/utils/__init__.py`（`make_unique_path`） | 同秒冲突自动 `_1/_2` 递增 |
+
+### P2 · 扩展性
+
+| # | 修复项 | 落地位置 | 说明 |
+|---|--------|---------|------|
+| P2 | choose_structure 规则外置 | `tools/music/structure_moods.json` + 桥接器读取 | 关键词表出代码，改词表零代码改动 |
+| P2 | 测试快速档 | `remix/pytest.ini`（smoke 标记）+ 3 个测试文件打标 | `pytest -m smoke` 16 用例，无 ffmpeg 依赖 |
+| 整合 | tools/music 并入 musickit | G:\\tools\\music → G:\\musickit\\music（用户建议：单一仓库消除跨项目风险）；桥接器/分类生成器的硬编码路径全部改为仓库相对；旧 git 历史备份至 archived/tools-music-git-backup | |
+| 查重 | 乐器池内容查重 | 新工具 emix/tools/dedupe_scan.py（manifest sha256 + 大小/首尾签名 + 组内全量哈希复核），产出 dedupe_report JSON；移动方案沿用 archived 只移不删政策（下轮执行） | |
+
+### 遗留（下次迭代）
+
+- 调性/音高匹配（melodic 层选同一调式的 loop）；
+- bridge 按 taxonomy subcategory 精确选子池（当前 loop 偏好已覆盖主要风险）；
+- 单音采样池（woodwind/keys 等）的正式「采样 vs loop」标记字段。

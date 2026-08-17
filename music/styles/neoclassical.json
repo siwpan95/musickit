@@ -1,0 +1,17 @@
+{
+  "key": "neoclassical",
+  "label": "新古典 Neoclassical",
+  "english": "Neoclassical",
+  "bpm": "60-110 BPM",
+  "subgenres": [
+    {"name": "Modern Classical", "bpm": "70-100 BPM"},
+    {"name": "Contemporary Piano", "bpm": "60-90 BPM"},
+    {"name": "Cinematic Neoclassical", "bpm": "60-110 BPM"},
+    {"name": "Post-Classical", "bpm": "80-100 BPM"}
+  ],
+  "instruments": ["钢琴 Piano", "弦乐四重奏 String Quartet", "大提琴 Cello", "木管 Woodwinds", "竖琴 Harp", "合成弦乐"],
+  "scales": ["大调 Major", "小调 Minor", "和声小调", "自然调式"],
+  "moods": ["优雅", "内省", "宁静", "宏大", "抒情", "希望"],
+  "elements": ["细腻动态", "房间混响", "钢琴泛音", "弦乐长音铺陈", "极简织体"],
+  "scenes": ["艺术电影", "美术馆", "现代舞", "婚礼", "阅读时光", "品牌短片"]
+}

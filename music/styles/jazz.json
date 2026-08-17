@@ -1,0 +1,19 @@
+{
+  "key": "jazz",
+  "label": "爵士 Jazz",
+  "english": "Jazz",
+  "bpm": "90-200 BPM",
+  "subgenres": [
+    {"name": "Bebop", "bpm": "140-200 BPM"},
+    {"name": "Swing", "bpm": "100-160 BPM"},
+    {"name": "Cool Jazz", "bpm": "90-140 BPM"},
+    {"name": "Hard Bop", "bpm": "120-180 BPM"},
+    {"name": "Free Jazz", "bpm": "90-200 BPM"},
+    {"name": "Dixieland", "bpm": "100-160 BPM"}
+  ],
+  "instruments": ["萨克斯", "小号", "钢琴", "低音提琴", "鼓刷", "单簧管"],
+  "scales": ["大调七和弦", "多利亚", "混合利底亚", "变化音阶", "布鲁斯"],
+  "moods": ["即兴", "优雅", "慵懒", "自由", "灵动", "都市"],
+  "elements": ["即兴独奏", "摇摆节奏", "复杂和声", "切分律动", "呼应式编曲"],
+  "scenes": ["高端酒吧", "爵士现场", "都市夜景", "影视配乐", "时尚短片"]
+}

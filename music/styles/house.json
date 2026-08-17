@@ -1,0 +1,18 @@
+{
+  "key": "house",
+  "label": "浩室 House",
+  "english": "House",
+  "bpm": "115-130 BPM",
+  "subgenres": [
+    {"name": "Deep House", "bpm": "115-125 BPM"},
+    {"name": "Tropical House", "bpm": "100-115 BPM"},
+    {"name": "Future House", "bpm": "120-128 BPM"},
+    {"name": "Tech House", "bpm": "122-130 BPM"},
+    {"name": "Progressive House", "bpm": "124-130 BPM"}
+  ],
+  "instruments": ["四四拍鼓机", "合成器 lead", "采样人声", "贝斯", "钢琴", "踏板电钢"],
+  "scales": ["大调", "小调", "多利亚", "五声"],
+  "moods": ["律动", "明亮", "愉悦", "舞动", "清新", "度假"],
+  "elements": ["四四拍底鼓", "off-beat 踩镲", "律动贝斯线", "宽 Pad", "人声切片"],
+  "scenes": ["夜店舞池", "海滩派对", "时尚秀场", "运动健身", "Vlog BGM"]
+}

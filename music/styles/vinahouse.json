@@ -1,0 +1,19 @@
+{
+  "key": "vinahouse",
+  "label": "越南鼓 EDM / Vina House",
+  "english": "Vina House EDM",
+  "bpm": "126-145 BPM",
+  "subgenres": [
+    {"name": "Vina House", "bpm": "135-145 BPM"},
+    {"name": "Electro House", "bpm": "126-132 BPM"},
+    {"name": "LakHouse", "bpm": "128-140 BPM"},
+    {"name": "Hard House", "bpm": "145-155 BPM"},
+    {"name": "EA7", "bpm": "130-145 BPM"},
+    {"name": "迷幻重低音"}
+  ],
+  "instruments": ["越南鼓音色", "强劲 Kick", "碎拍 Hi-hat", "Bass Drop", "四四拍 Four-on-the-floor", "Lead 旋律"],
+  "scales": ["大调明亮", "小调动感", "五声旋律线", "中东音阶点缀"],
+  "moods": ["欢快", "炸裂", "律动", "上头", "派对", "亢奋"],
+  "elements": ["重鼓点", "密集碎拍", "Drop 轰炸", "强低音压迫", "卡点节奏", "能量渐起 Build-up"],
+  "scenes": ["夜店蹦迪", "车载重低音", "广场舞", "直播间暖场", "健身卡点"]
+}

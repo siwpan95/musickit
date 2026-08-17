@@ -1,0 +1,18 @@
+{
+  "key": "shoegaze",
+  "label": "自赏派 Shoegaze",
+  "english": "Shoegaze",
+  "bpm": "90-150 BPM",
+  "subgenres": [
+    {"name": "Dream Pop", "bpm": "100-140 BPM"},
+    {"name": "Noise Pop", "bpm": "110-150 BPM"},
+    {"name": "Dreamgaze", "bpm": "95-130 BPM"},
+    {"name": "Blackgaze", "bpm": "100-160 BPM"},
+    {"name": "Slowcore", "bpm": "70-110 BPM"}
+  ],
+  "instruments": ["失真吉他", "混响墙", "贝斯", "鼓组", "合成 Pad", "气声人声"],
+  "scales": ["大调", "小调", "五声", "多利亚"],
+  "moods": ["朦胧", "梦幻", "迷离", "疏离", "漂浮", "温柔"],
+  "elements": ["音墙", "极致混响", "无法辨识人声", "轻盈旋律", "噪声纹理"],
+  "scenes": ["深夜独处", "文艺短片", "梦境序列", "咖啡馆背景", "独立现场"]
+}

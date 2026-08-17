@@ -1,0 +1,18 @@
+{
+  "key": "cinematic",
+  "label": "影视 / 游戏配乐 Cinematic",
+  "english": "Cinematic / Film & Game Score",
+  "bpm": "60-140 BPM",
+  "subgenres": [
+    {"name": "Epic Orchestral", "bpm": "80-140 BPM"},
+    {"name": "Hybrid Trailer", "bpm": "90-130 BPM"},
+    {"name": "Ambient Score"},
+    {"name": "Emotional Piano", "bpm": "60-90 BPM"},
+    {"name": "Anime / Game OST"}
+  ],
+  "instruments": ["管弦乐团", "合唱", "钢琴", "合成器", "打击乐", "民族乐器"],
+  "scales": ["小调", "大调", "弗里几亚", "五声", "全音阶"],
+  "moods": ["史诗", "悲壮", "紧张", "希望", "宏大", "温情"],
+  "elements": ["管弦铺陈", "节奏递增", "人声合唱", "冲击打击", "情感旋律"],
+  "scenes": ["电影预告", "游戏 Boss 战", "纪录片", "颁奖典礼", "国风动画"]
+}

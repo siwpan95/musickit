@@ -1,0 +1,19 @@
+{
+  "key": "wagakki",
+  "label": "日本和风 / 邦乐",
+  "english": "Japanese Wagakki",
+  "bpm": "60-160 BPM",
+  "subgenres": [
+    {"name": "邦乐"},
+    {"name": "祭典太鼓"},
+    {"name": "三曲合奏（尺八·筝·三味线）"},
+    {"name": "和风电子 Future Bass"},
+    {"name": "动漫和风BGM"},
+    {"name": "时代剧配乐"}
+  ],
+  "instruments": ["三味线 Shamisen", "尺八 Shakuhachi", "太鼓 Taiko", "筝/十三弦古筝 Koto", "萨摩琵琶", "篠笛 Shinobue", "胡弓 Kokyū", "箜篌 Kugo"],
+  "scales": ["都节音阶 In Scale", "律音阶 Ritsu", "五声平调", "阴音阶"],
+  "moods": ["侘寂", "苍凉", "壮丽", "祭典热闹", "幽玄", "物哀"],
+  "elements": ["太鼓群奏", "余韵混响", "干净原声", "电子Pad铺底（和风电子）", "留白意境"],
+  "scenes": ["动漫OP/ED", "时代剧", "和风游戏", "祭典游行", "樱花季短片"]
+}

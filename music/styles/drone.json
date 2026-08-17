@@ -1,0 +1,17 @@
+{
+  "key": "drone",
+  "label": "无人机 Drone",
+  "english": "Drone",
+  "bpm": "自由速度 / 无节拍",
+  "subgenres": [
+    {"name": "Dark Drone"},
+    {"name": "Ambient Drone"},
+    {"name": "Noise Drone"},
+    {"name": "Cinematic Drone"}
+  ],
+  "instruments": ["合成 Pad", "磁带 Loop", "教堂管风琴", "电吉他长音", "模块合成器", "田野录音"],
+  "scales": ["无调性", "五声音阶", "微分音"],
+  "moods": ["冥思", "空旷", "压抑", "神秘", "悬浮", "永恒"],
+  "elements": ["持续音墙", "缓慢滤波扫频", "空间混响", "失真层叠", "极微动态变化"],
+  "scenes": ["装置艺术", "瑜伽冥想", "科幻氛围", "长镜头", "深海意象"]
+}

@@ -1,0 +1,18 @@
+{
+  "key": "cumbia",
+  "label": "昆比亚 Cumbia",
+  "english": "Cumbia",
+  "bpm": "90-130 BPM",
+  "subgenres": [
+    {"name": "Colombian Cumbia", "bpm": "100-120 BPM"},
+    {"name": "Cumbia Sonidera", "bpm": "95-125 BPM"},
+    {"name": "Cumbia Villera", "bpm": "100-130 BPM"},
+    {"name": "Cumbia Andina", "bpm": "90-115 BPM"},
+    {"name": "Electro Cumbia", "bpm": "110-135 BPM"}
+  ],
+  "instruments": ["手鼓", "guacharaca 刮器", "手风琴", "贝斯", "长笛", "合成器"],
+  "scales": ["小调", "大调", "多利亚", "五声"],
+  "moods": ["律动", "欢庆", "怀旧", "舞动", "乡土", "热烈"],
+  "elements": ["4/4 循环", "刮奏节奏", "手风琴旋律", "低音脉动", "呼叫应答"],
+  "scenes": ["拉美节庆", "社区派对", "舞蹈集会", "纪录片配乐", "街头庆典"]
+}

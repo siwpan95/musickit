@@ -1,0 +1,17 @@
+{
+  "key": "dubstep",
+  "label": "回响贝斯 Dubstep",
+  "english": "Dubstep",
+  "bpm": "138-145 BPM",
+  "subgenres": [
+    {"name": "Brostep", "bpm": "140-145 BPM"},
+    {"name": "Riddim", "bpm": "140-150 BPM"},
+    {"name": "Melodic Dubstep", "bpm": "140-145 BPM"},
+    {"name": "Future Garage"}
+  ],
+  "instruments": ["wobble 贝斯", "重低音", "鼓机", "合成 lead", "人声切片", "FX 音效"],
+  "scales": ["小调", "小调五声", "弗里几亚", "多利亚"],
+  "moods": ["凶猛", "撕裂", "暗黑", "冲击", "科幻", "狂暴"],
+  "elements": ["half-time 节拍", "wobble 贝斯", "低频 drop", "空间混响", "滤波扫频"],
+  "scenes": ["电音节", "游戏战斗", "极限运动", "科幻预告", "高能混剪"]
+}

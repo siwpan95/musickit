@@ -1,0 +1,18 @@
+{
+  "key": "afrobeat",
+  "label": "非洲节拍 Afrobeat",
+  "english": "Afrobeat",
+  "bpm": "100-130 BPM",
+  "subgenres": [
+    {"name": "Classic Afrobeat", "bpm": "110-130 BPM"},
+    {"name": "Afrobeats (Pop)", "bpm": "100-115 BPM"},
+    {"name": "Highlife", "bpm": "100-120 BPM"},
+    {"name": "Afro-Funk", "bpm": "105-125 BPM"},
+    {"name": "Juju"}
+  ],
+  "instruments": ["非洲鼓", "康加鼓", "铜管", "萨克斯", "吉他", "贝斯", "人声合唱"],
+  "scales": ["小调五声", "多利亚", "混合利底亚", "布鲁斯"],
+  "moods": ["律动", "热舞", "奔放", "鼓舞", "部落", "欢庆"],
+  "elements": ["交叉节奏", "长段即兴", "铜管呼应", "呼叫应答", "连绵鼓点"],
+  "scenes": ["非洲节庆", "派对热场", "舞蹈表演", "纪录片配乐", "夏日户外"]
+}

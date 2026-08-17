@@ -1,0 +1,18 @@
+{
+  "key": "arabic",
+  "label": "中东 / 阿拉伯 Arabic",
+  "english": "Arabic / Middle Eastern",
+  "bpm": "90-160 BPM",
+  "subgenres": [
+    {"name": "阿拉伯古典"},
+    {"name": "土耳其"},
+    {"name": "波斯"},
+    {"name": "中东电子"},
+    {"name": "贝都因民乐"}
+  ],
+  "instruments": ["乌德琴 Oud", "卡农 Qanun", "手鼓 Dumbek", "唢呐 Zurna", "手风琴", "奈伊笛 Ney"],
+  "scales": ["木卡姆 Maqam", "匈牙利小调音阶", "微分音 Hijaz", "五声"],
+  "moods": ["神秘", "华丽", "热情", "苍凉", "庆典", "妖娆"],
+  "elements": ["微分音装饰", "即兴 Taqsim", "循环节奏", "颤音", "手鼓层"],
+  "scenes": ["异域舞蹈", "沙漠影像", "世界音乐节", "肚皮舞", "丝路短片"]
+}

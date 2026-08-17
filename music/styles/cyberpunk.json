@@ -1,0 +1,18 @@
+{
+  "key": "cyberpunk",
+  "label": "赛博朋克 Cyberpunk",
+  "english": "Cyberpunk",
+  "bpm": "80-140 BPM",
+  "subgenres": [
+    {"name": "Darksynth", "bpm": "100-118 BPM"},
+    {"name": "Cyberpunk Ambient", "bpm": "70-90 BPM"},
+    {"name": "Industrial Cyberpunk"},
+    {"name": "Retro-futuristic"},
+    {"name": "反乌托邦电子"}
+  ],
+  "instruments": ["合成器 Synth", "故障音 Glitch", "芯片音", "失真人声切片", "模拟 Bass", "激光音效"],
+  "scales": ["小调 Minor", "弗里几亚 Phrygian", "半音阶", "多利亚 Dorian"],
+  "moods": ["压抑", "霓虹", "疏离", "反乌托邦", "迷幻", "冷峻"],
+  "elements": ["8-bit 芯片质感", "厚重混响", "雨声/城市噪点", "低频脉冲", "失真饱和", "宽立体声"],
+  "scenes": ["赛博游戏", "科幻影视", "霓虹城市夜景", "黑客剪辑", "元宇宙短片"]
+}

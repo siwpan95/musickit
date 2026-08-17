@@ -1,0 +1,138 @@
+纯音乐风格提示词生成结果
+共 5 条 · 生成时间（本地）：请于文件属性查看
+================================================================
+【#1】
+风格：凯尔特 Celtic
+子流派：Celtic Fusion
+乐器：风笛 Bagpipe、锡哨 Tin Whistle、宝思兰鼓 Bodhrán、小提琴 Fiddle
+调式：五声
+情绪：欢快、悠远
+细节：原声编配、自然混响
+场景：奇幻游戏
+速度：94 BPM
+提示词：为奇幻游戏而作的一首纯音乐：凯尔特 Celtic（Celtic Fusion），以风笛 Bagpipe、锡哨 Tin Whistle、宝思兰鼓 Bodhrán、小提琴 Fiddle编织，五声调式，欢快、悠远的情绪，94 BPM，点缀原声编配、自然混响
+EN：[Style] Celtic / Celtic Fusion | [Instruments] 风笛 Bagpipe, 锡哨 Tin Whistle, 宝思兰鼓 Bodhrán, 小提琴 Fiddle | [Scale] 五声 | [Mood] 欢快, 悠远 | [Tempo] 94 BPM | [Scene] 奇幻游戏 | [Format] Instrumental
+----------------------------------------------------------------
+【#2】
+风格：古典管弦乐 Orchestral
+子流派：电影配乐
+乐器：法国号、长笛
+调式：全音阶
+情绪：庄严、神圣
+细节：对位法、弦乐群
+场景：游戏史诗
+速度：122 BPM
+提示词：为游戏史诗而作的一首纯音乐：古典管弦乐 Orchestral（电影配乐），以法国号、长笛编织，全音阶调式，庄严、神圣的情绪，122 BPM，点缀对位法、弦乐群
+EN：[Style] Orchestral / Classical / 电影配乐 | [Instruments] 法国号, 长笛 | [Scale] 全音阶 | [Mood] 庄严, 神圣 | [Tempo] 122 BPM | [Scene] 游戏史诗 | [Format] Instrumental
+----------------------------------------------------------------
+【#3】
+风格：中国民族乐器（器乐独奏/重奏）
+子流派：吹打乐
+乐器：箫、唢呐、巴乌、马头琴
+调式：五声音阶
+情绪：苍凉、欢腾
+细节：原声录音质感、无电子处理
+场景：文化纪录片
+速度：79 BPM
+提示词：一首纯音乐，中国民族乐器（器乐独奏/重奏）风格，吹打乐取向，以箫、唢呐、巴乌、马头琴为主奏，采用五声音阶，情绪苍凉、欢腾，速度79 BPM，融入原声录音质感、无电子处理，适合文化纪录片
+EN：[Style] Chinese Traditional Instruments / 吹打乐 | [Instruments] 箫, 唢呐, 巴乌, 马头琴 | [Scale] 五声音阶 | [Mood] 苍凉, 欢腾 | [Tempo] 79 BPM | [Scene] 文化纪录片 | [Format] Instrumental
+----------------------------------------------------------------
+【#4】
+风格：昆比亚 Cumbia
+子流派：Electro Cumbia
+乐器：贝斯、合成器、长笛
+调式：多利亚
+情绪：热烈、律动
+细节：手风琴旋律、刮奏节奏
+场景：拉美节庆
+速度：122 BPM
+提示词：为拉美节庆而作的一首纯音乐：昆比亚 Cumbia（Electro Cumbia），以贝斯、合成器、长笛编织，多利亚调式，热烈、律动的情绪，122 BPM，点缀手风琴旋律、刮奏节奏
+EN：[Style] Cumbia / Electro Cumbia | [Instruments] 贝斯, 合成器, 长笛 | [Scale] 多利亚 | [Mood] 热烈, 律动 | [Tempo] 122 BPM | [Scene] 拉美节庆 | [Format] Instrumental
+----------------------------------------------------------------
+【#5】
+风格：昆比亚 Cumbia
+子流派：Electro Cumbia
+乐器：合成器、guacharaca 刮器、手鼓、手风琴
+调式：小调
+情绪：怀旧、欢庆
+细节：刮奏节奏、呼叫应答
+场景：舞蹈集会
+速度：113 BPM
+提示词：【昆比亚 Cumbia】 · Electro Cumbia · 主奏：合成器、guacharaca 刮器、手鼓、手风琴 · 调式：小调 · 情绪：怀旧、欢庆 · 113 BPM · 细节：刮奏节奏、呼叫应答 · 场景：舞蹈集会
+EN：[Style] Cumbia / Electro Cumbia | [Instruments] 合成器, guacharaca 刮器, 手鼓, 手风琴 | [Scale] 小调 | [Mood] 怀旧, 欢庆 | [Tempo] 113 BPM | [Scene] 舞蹈集会 | [Format] Instrumental
+纯音乐风格提示词生成结果
+共 5 条 · 生成时间（本地）：请于文件属性查看
+================================================================
+【#1】
+风格：后摇 / 器乐摇滚 Post-rock
+子流派：Instrumental Rock
+乐器：弦乐四重奏、钢琴、失真吉他
+调式：大调抒情
+情绪：伤感
+细节：动态对比、留白
+场景：影视高潮
+速度：85 BPM
+提示词：【后摇 / 器乐摇滚 Post-rock】 · Instrumental Rock · 主奏：弦乐四重奏、钢琴、失真吉他 · 调式：大调抒情 · 情绪：伤感 · 85 BPM · 细节：动态对比、留白 · 场景：影视高潮
+EN：[Style] Post-rock / Instrumental Rock | [Instruments] 弦乐四重奏, 钢琴, 失真吉他 | [Scale] 大调抒情 | [Mood] 伤感 | [Tempo] 85 BPM | [Scene] 影视高潮 | [Format] Instrumental
+----------------------------------------------------------------
+【#2】
+风格：金属乐 Metal
+子流派：Thrash Metal
+乐器：失真吉他、尖啸人声、贝斯
+调式：弗里几亚
+情绪：狂暴、凶猛
+细节：双踩鼓、低音墙
+场景：金属现场
+速度：193 BPM
+提示词：为金属现场而作的一首纯音乐：金属乐 Metal（Thrash Metal），以失真吉他、尖啸人声、贝斯编织，弗里几亚调式，狂暴、凶猛的情绪，193 BPM，点缀双踩鼓、低音墙
+EN：[Style] Metal / Thrash Metal | [Instruments] 失真吉他, 尖啸人声, 贝斯 | [Scale] 弗里几亚 | [Mood] 狂暴, 凶猛 | [Tempo] 193 BPM | [Scene] 金属现场 | [Format] Instrumental
+----------------------------------------------------------------
+【#3】
+风格：哥特摇滚 Goth Rock
+子流派：Goth Rock
+乐器：贝斯、失真吉他、管风琴、合成器
+调式：多利亚
+情绪：悲美、冷峻
+细节：氛围铺陈、哥特氛围
+场景：游戏地下城
+速度：109 BPM
+提示词：【哥特摇滚 Goth Rock】 · Goth Rock · 主奏：贝斯、失真吉他、管风琴、合成器 · 调式：多利亚 · 情绪：悲美、冷峻 · 109 BPM · 细节：氛围铺陈、哥特氛围 · 场景：游戏地下城
+EN：[Style] Goth Rock / Goth Rock | [Instruments] 贝斯, 失真吉他, 管风琴, 合成器 | [Scale] 多利亚 | [Mood] 悲美, 冷峻 | [Tempo] 109 BPM | [Scene] 游戏地下城 | [Format] Instrumental
+----------------------------------------------------------------
+【#4】
+风格：迷幻舞曲 Trance
+子流派：Progressive Trance
+乐器：人声切片、Pad、贝斯
+调式：大调
+情绪：能量
+细节：滚动 bassline、混响空间
+场景：音乐节
+速度：133 BPM
+提示词：【迷幻舞曲 Trance】 · Progressive Trance · 主奏：人声切片、Pad、贝斯 · 调式：大调 · 情绪：能量 · 133 BPM · 细节：滚动 bassline、混响空间 · 场景：音乐节
+EN：[Style] Trance / Progressive Trance | [Instruments] 人声切片, Pad, 贝斯 | [Scale] 大调 | [Mood] 能量 | [Tempo] 133 BPM | [Scene] 音乐节 | [Format] Instrumental
+----------------------------------------------------------------
+【#5】
+风格：后摇 / 器乐摇滚 Post-rock
+子流派：Slowcore
+乐器：鼓组、环境吉他、弦乐四重奏、钢琴
+调式：小调
+情绪：希望
+细节：噪音墙
+场景：旅行 Vlog
+速度：84 BPM
+提示词：【后摇 / 器乐摇滚 Post-rock】 · Slowcore · 主奏：鼓组、环境吉他、弦乐四重奏、钢琴 · 调式：小调 · 情绪：希望 · 84 BPM · 细节：噪音墙 · 场景：旅行 Vlog
+EN：[Style] Post-rock / Slowcore | [Instruments] 鼓组, 环境吉他, 弦乐四重奏, 钢琴 | [Scale] 小调 | [Mood] 希望 | [Tempo] 84 BPM | [Scene] 旅行 Vlog | [Format] Instrumental
+纯音乐风格提示词生成结果
+共 1 条 · 生成时间（本地）：请于文件属性查看
+================================================================
+【#1】  融合:synthwave
+风格：深浩室 Deep House × 合成波 / 蒸汽波 Synthwave
+子流派：Afro House
+乐器：合成 Pad、碎拍打击、低音 Bass、电钢琴 Rhodes、弦乐垫
+调式：小调 Minor
+情绪：迷离、律动、怀旧
+细节：深夜氛围、磁带温暖感
+场景：Vlog BGM
+速度：123 BPM
+提示词：【深浩室 Deep House × 合成波 / 蒸汽波 Synthwave】 · Afro House · 主奏：合成 Pad、碎拍打击、低音 Bass、电钢琴 Rhodes、弦乐垫 · 调式：小调 Minor · 情绪：迷离、律动、怀旧 · 123 BPM · 细节：深夜氛围、磁带温暖感 · 场景：Vlog BGM
+EN：[Style] Deep House × Synthwave / Vaporwave / Afro House | [Instruments] 合成 Pad, 碎拍打击, 低音 Bass, 电钢琴 Rhodes, 弦乐垫 | [Scale] 小调 Minor | [Mood] 迷离, 律动, 怀旧 | [Tempo] 123 BPM | [Scene] Vlog BGM | [Format] Instrumental

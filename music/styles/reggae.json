@@ -1,0 +1,18 @@
+{
+  "key": "reggae",
+  "label": "雷鬼 Reggae",
+  "english": "Reggae",
+  "bpm": "60-100 BPM",
+  "subgenres": [
+    {"name": "Roots Reggae", "bpm": "70-90 BPM"},
+    {"name": "Dub", "bpm": "60-90 BPM"},
+    {"name": "Dancehall", "bpm": "80-110 BPM"},
+    {"name": "Ska", "bpm": "120-160 BPM"},
+    {"name": "Rocksteady", "bpm": "70-100 BPM"}
+  ],
+  "instruments": ["雷鬼吉他 skank", "贝斯", "鼓组", "风琴", "小号", "人声"],
+  "scales": ["小调", "多利亚", "混合利底亚", "五声"],
+  "moods": ["律动", "放松", "抗议", "阳光", "和平", "慵懒"],
+  "elements": ["反拍吉他", "重低音", "混响空间", "offbeat 节奏", "呼叫应答"],
+  "scenes": ["海滩派对", "放松短片", "纪录片配乐", "街头文化", "夏日户外"]
+}

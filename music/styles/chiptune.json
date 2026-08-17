@@ -1,0 +1,18 @@
+{
+  "key": "chiptune",
+  "label": "芯片音乐 Chiptune",
+  "english": "Chiptune / 8-bit",
+  "bpm": "120-180 BPM",
+  "subgenres": [
+    {"name": "Chiptune", "bpm": "120-180 BPM"},
+    {"name": "8-bit"},
+    {"name": "Bitpop"},
+    {"name": "Demoscene"},
+    {"name": "Gamewave"}
+  ],
+  "instruments": ["方波 Square", "三角波 Triangle", "脉冲波 Pulse", "噪声通道 Noise", "模拟芯片"],
+  "scales": ["大调", "小调", "五声音阶", "多利亚"],
+  "moods": ["复古", "活泼", "像素", "怀旧", "紧张", "欢脱"],
+  "elements": ["8-bit 音色", "方波旋律", "循环乐句", "复古游戏感", "快速琶音"],
+  "scenes": ["像素游戏", "复古游戏 BGM", "怀旧短片", "独立游戏", "街机"]
+}

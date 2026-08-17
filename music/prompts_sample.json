@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "style": "故障音乐 Glitch",
+    "subgenre": "Microsound",
+    "instruments": "破碎采样、鼓机、电路弯折、数字失真",
+    "scale": "无调性",
+    "moods": "未来",
+    "elements": "突然静默、高频闪烁",
+    "scene": "实验短片",
+    "bpm": "138 BPM",
+    "prompt": "一首纯音乐，故障音乐 Glitch风格，Microsound取向，以破碎采样、鼓机、电路弯折、数字失真为主奏，采用无调性，情绪未来，速度138 BPM，融入突然静默、高频闪烁，适合实验短片",
+    "english": "",
+    "fusion": false,
+    "fusion_with": ""
+  },
+  {
+    "id": 2,
+    "style": "民谣 Folk",
+    "subgenre": "Folk Rock",
+    "instruments": "口琴、人声、小提琴、长笛",
+    "scale": "多利亚",
+    "moods": "乡愁",
+    "elements": "民乐色彩",
+    "scene": "民谣专场",
+    "bpm": "116 BPM",
+    "prompt": "一首纯音乐，民谣 Folk风格，Folk Rock取向，以口琴、人声、小提琴、长笛为主奏，采用多利亚，情绪乡愁，速度116 BPM，融入民乐色彩，适合民谣专场",
+    "english": "",
+    "fusion": false,
+    "fusion_with": ""
+  },
+  {
+    "id": 3,
+    "style": "后摇 / 器乐摇滚 Post-rock",
+    "subgenre": "Slowcore",
+    "instruments": "失真吉他、钢琴、鼓组",
+    "scale": "大调抒情",
+    "moods": "苍茫",
+    "elements": "留白、渐强 Build-up",
+    "scene": "毕业季",
+    "bpm": "67 BPM",
+    "prompt": "【后摇 / 器乐摇滚 Post-rock】 · Slowcore · 主奏：失真吉他、钢琴、鼓组 · 调式：大调抒情 · 情绪：苍茫 · 67 BPM · 细节：留白、渐强 Build-up · 场景：毕业季",
+    "english": "",
+    "fusion": false,
+    "fusion_with": ""
+  }
+]

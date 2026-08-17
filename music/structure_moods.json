@@ -1,0 +1,10 @@
+{
+  "_comment": "情绪/流派关键词 → 曲式模板（按 order 顺序首中即停；改词表无需改代码）。",
+  "order": ["ambient_ghost", "classic_drop", "loop_stack"],
+  "ambient_ghost": ["ambient", "幽灵", "氛围", "ghost", "chill", "暗黑", "慢",
+                    "sad", "drone", "darksynth", "postrock", "neoclassical"],
+  "classic_drop": ["phonk", "trap", "dubstep", "dnb", "drill", "暗黑", "aggressive",
+                   "energy", "漂移", "重", "hypertrap"],
+  "loop_stack": ["lofi", "lo-fi", "chill", "minimal", "ambient"],
+  "default": "classic_drop"
+}

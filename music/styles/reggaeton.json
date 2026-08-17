@@ -1,0 +1,18 @@
+{
+  "key": "reggaeton",
+  "label": "雷盖顿 Reggaeton",
+  "english": "Reggaeton",
+  "bpm": "85-100 BPM",
+  "subgenres": [
+    {"name": "Dembow", "bpm": "90-100 BPM"},
+    {"name": "Latin Trap", "bpm": "70-90 BPM"},
+    {"name": "Reggae en Español", "bpm": "85-95 BPM"},
+    {"name": "Pop Reggaeton", "bpm": "90-100 BPM"},
+    {"name": "Perreo"}
+  ],
+  "instruments": ["dembow 节奏", "808 贝斯", "合成 lead", "拉丁打击", "雷鬼吉他", "人声 Auto-Tune"],
+  "scales": ["小调", "雷鬼节奏", "多利亚", "弗里几亚"],
+  "moods": ["热辣", "街头", "派对", "性感", "律动", "都市"],
+  "elements": ["dembow riddim", "切分 hi-hat", "西语唱腔", "808 低频", "call-response"],
+  "scenes": ["拉丁派对", "夜店热场", "舞蹈挑战", "度假旅拍", "潮流短片"]
+}

@@ -1,0 +1,18 @@
+{
+  "key": "synthwave",
+  "label": "合成波 / 蒸汽波 Synthwave",
+  "english": "Synthwave / Vaporwave",
+  "bpm": "70-118 BPM",
+  "subgenres": [
+    {"name": "Synthwave", "bpm": "80-118 BPM"},
+    {"name": "Vaporwave", "bpm": "70-90 BPM"},
+    {"name": "Outrun", "bpm": "100-118 BPM"},
+    {"name": "Chillwave", "bpm": "80-100 BPM"},
+    {"name": "Retrowave"}
+  ],
+  "instruments": ["模拟合成器", "鼓机", "电钢琴", "滑音吉他", "弦乐垫", "FM 钟声"],
+  "scales": ["大调明亮", "小调", "多利亚 Dorian", "五声"],
+  "moods": ["怀旧", "梦幻", "复古", "慵懒", "空灵", "愉悦"],
+  "elements": ["磁带温暖感", "宽立体声 Pad", "霓虹混响拖尾", "颤音", "复古滤波"],
+  "scenes": ["80年代复古", "公路片", "泳池派对", "Vlog BGM", "落日驾驶"]
+}

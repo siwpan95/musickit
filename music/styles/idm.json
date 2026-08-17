@@ -1,0 +1,18 @@
+{
+  "key": "idm",
+  "label": "智能舞曲 IDM",
+  "english": "Intelligent Dance Music / IDM",
+  "bpm": "80-160 BPM",
+  "subgenres": [
+    {"name": "Braindance", "bpm": "90-140 BPM"},
+    {"name": "Glitch", "bpm": "90-150 BPM"},
+    {"name": "Wonky", "bpm": "80-120 BPM"},
+    {"name": "Ambient IDM", "bpm": "70-110 BPM"},
+    {"name": "Breakcore"}
+  ],
+  "instruments": ["碎拍编程", "合成器", "采样切片", "原声钢琴", "细碎打击", "电路板 FX"],
+  "scales": ["小调", "多利亚", "不规则拍号", "五声", "全音阶"],
+  "moods": ["迷离", "实验", "冷静", "细腻", "疏离", "未来"],
+  "elements": ["复杂节拍", "非标准拍号", "颗粒质感", "微采样", "空间混响"],
+  "scenes": ["深夜聆听", "实验短片", "科技品牌", "游戏氛围", "艺术装置"]
+}

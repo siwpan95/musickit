@@ -1,0 +1,18 @@
+{
+  "key": "postpunk",
+  "label": "后朋克 Post-Punk",
+  "english": "Post-Punk",
+  "bpm": "100-160 BPM",
+  "subgenres": [
+    {"name": "Post-Punk Revival", "bpm": "120-150 BPM"},
+    {"name": "Cold Wave", "bpm": "100-140 BPM"},
+    {"name": "No Wave", "bpm": "110-160 BPM"},
+    {"name": "Dance-Punk", "bpm": "130-170 BPM"},
+    {"name": "Gothic Post-Punk", "bpm": "100-140 BPM"}
+  ],
+  "instruments": ["贝斯线条", "吉他", "鼓机", "合成器", "冷峻人声", "小号"],
+  "scales": ["小调", "多利亚", "弗里几亚", "五声"],
+  "moods": ["冷峻", "克制", "都市", "疏离", "律动", "暗潮"],
+  "elements": ["贝斯主导", "断奏吉他", "机械鼓机", "极简编曲", "冷色和声"],
+  "scenes": ["独立现场", "都市夜景", "时尚秀场", "影视冷调", "游戏潜行"]
+}

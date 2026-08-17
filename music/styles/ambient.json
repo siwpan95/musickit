@@ -1,0 +1,18 @@
+{
+  "key": "ambient",
+  "label": "氛围 / 新世纪 Ambient",
+  "english": "Ambient / New Age",
+  "bpm": "自由节奏 / 60 BPM 以下",
+  "subgenres": [
+    {"name": "Ambient"},
+    {"name": "New Age"},
+    {"name": "Dark Ambient"},
+    {"name": "Space Ambient"},
+    {"name": "Drone"}
+  ],
+  "instruments": ["钢琴", "合成器 Pad", "环境采样", "竖琴", "钟声", "水晶碗"],
+  "scales": ["五声音阶", "全音阶", "无调性", "大调开阔"],
+  "moods": ["宁静", "空灵", "治愈", "神秘", "开阔", "安眠"],
+  "elements": ["长混响", "无节拍/自由节奏", "渐变层次", "白噪点环境", "缓慢铺陈"],
+  "scenes": ["冥想", "瑜伽", "睡眠", "太空影像", "SPA 馆"]
+}

@@ -1,0 +1,18 @@
+{
+  "key": "techno",
+  "label": "铁克诺 Techno",
+  "english": "Techno",
+  "bpm": "120-150 BPM",
+  "subgenres": [
+    {"name": "Detroit Techno", "bpm": "125-135 BPM"},
+    {"name": "Minimal Techno", "bpm": "125-130 BPM"},
+    {"name": "Acid Techno", "bpm": "130-145 BPM"},
+    {"name": "Industrial Techno", "bpm": "130-150 BPM"},
+    {"name": "Tech House", "bpm": "122-130 BPM"}
+  ],
+  "instruments": ["鼓机", "合成器", "采样", "贝斯", "FX 音效", "acid 303"],
+  "scales": ["小调", "多利亚", "弗里几亚", "五声"],
+  "moods": ["机械", "冷峻", "律动", "未来", "暗黑", "循环"],
+  "elements": ["四四拍底鼓", "工业质感", "滚动 bass", "极简层次", "滤波扫频"],
+  "scenes": ["地下俱乐部", "仓库派对", "时尚秀场", "游戏潜行", "深夜驾驶"]
+}

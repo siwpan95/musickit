@@ -1,0 +1,18 @@
+{
+  "key": "soul",
+  "label": "灵魂乐 Soul",
+  "english": "Soul",
+  "bpm": "70-120 BPM",
+  "subgenres": [
+    {"name": "Southern Soul", "bpm": "90-120 BPM"},
+    {"name": "Blue-Eyed Soul", "bpm": "80-110 BPM"},
+    {"name": "Northern Soul", "bpm": "120-150 BPM"},
+    {"name": "Gospel Soul"},
+    {"name": "Neo-Soul", "bpm": "70-95 BPM"}
+  ],
+  "instruments": ["铜管", "风琴", "鼓组", "贝斯", "钢琴", "人声合唱"],
+  "scales": ["小调", "大调", "混合利底亚", "布鲁斯"],
+  "moods": ["深情", "温暖", "鼓舞", "律动", "真挚", "怀旧"],
+  "elements": ["呼喊式人声", "切分律动", "铜管呼应", "福音和声", "现场即兴"],
+  "scenes": ["婚礼现场", "年代剧", "颁奖典礼", "深夜电台", "情感短片"]
+}

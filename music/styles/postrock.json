@@ -1,0 +1,18 @@
+{
+  "key": "postrock",
+  "label": "后摇 / 器乐摇滚 Post-rock",
+  "english": "Post-rock",
+  "bpm": "60-140 BPM",
+  "subgenres": [
+    {"name": "Post-rock"},
+    {"name": "Math Rock"},
+    {"name": "Cinematic Rock"},
+    {"name": "Instrumental Rock"},
+    {"name": "Slowcore"}
+  ],
+  "instruments": ["失真吉他", "弦乐四重奏", "钢琴", "鼓组", "贝斯", "环境吉他"],
+  "scales": ["小调", "大调抒情", "五声音阶", "多利亚"],
+  "moods": ["史诗", "伤感", "渐进爆发", "希望", "苍茫", "内省"],
+  "elements": ["渐强 Build-up", "动态对比", "噪音墙", "环境吉他织体", "留白"],
+  "scenes": ["影视高潮", "旅行 Vlog", "独立电影", "毕业季", "黄昏独白"]
+}

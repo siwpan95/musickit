@@ -1,0 +1,19 @@
+{
+  "key": "latin",
+  "label": "拉丁 Latin",
+  "english": "Latin",
+  "bpm": "90-250 BPM",
+  "subgenres": [
+    {"name": "Reggaeton", "bpm": "90-100 BPM"},
+    {"name": "Salsa", "bpm": "150-250 BPM"},
+    {"name": "Bachata"},
+    {"name": "Bossa Nova", "bpm": "120-140 BPM"},
+    {"name": "Samba", "bpm": "110-130 BPM"},
+    {"name": "Cumbia"}
+  ],
+  "instruments": ["康加鼓 Conga", "沙锤 Shaker", "钢琴", "小号", "吉他", "长笛", "邦戈鼓 Bongo"],
+  "scales": ["小调", "大调", "多利亚", "五声"],
+  "moods": ["热情", "欢快", "律动", "性感", "热烈", "阳光"],
+  "elements": ["打击乐群", "切分节奏", "铜管呼应", "舞曲律动", "钢琴 Montuno"],
+  "scenes": ["派对", "海滩", "舞蹈", "节日", "夜市"]
+}

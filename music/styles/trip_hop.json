@@ -1,0 +1,17 @@
+{
+  "key": "trip_hop",
+  "label": "神游舞曲 Trip Hop",
+  "english": "Trip Hop",
+  "bpm": "70-95 BPM",
+  "subgenres": [
+    {"name": "Downtempo", "bpm": "70-90 BPM"},
+    {"name": "Bristol Sound", "bpm": "75-90 BPM"},
+    {"name": "Psychill", "bpm": "70-85 BPM"},
+    {"name": "Beatless", "bpm": "自由速度"}
+  ],
+  "instruments": ["慵懒鼓机", "采样唱片噪音", "低音 Bass", "电钢琴 Rhodes", "电影采样", "弦乐"],
+  "scales": ["小调 Minor", "多利亚 Dorian", "弗里几亚 Phrygian"],
+  "moods": ["迷离", "慵懒", "朦胧", "忧郁", "电影感", "漂浮"],
+  "elements": ["缓慢碎拍", "空间混响", "电影采样切片", "暖模拟", "暗色氛围"],
+  "scenes": ["深夜独处", "雨夜咖啡", "电影配乐", "艺术短片", "城市夜行"]
+}

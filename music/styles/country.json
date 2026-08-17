@@ -1,0 +1,19 @@
+{
+  "key": "country",
+  "label": "乡村 Country",
+  "english": "Country",
+  "bpm": "80-140 BPM",
+  "subgenres": [
+    {"name": "Country Pop", "bpm": "100-130 BPM"},
+    {"name": "Honky Tonk", "bpm": "110-150 BPM"},
+    {"name": "Bluegrass", "bpm": "100-160 BPM"},
+    {"name": "Americana", "bpm": "90-130 BPM"},
+    {"name": "Outlaw Country", "bpm": "90-140 BPM"},
+    {"name": "Alt-Country", "bpm": "100-150 BPM"}
+  ],
+  "instruments": ["原声吉他", "班卓琴", "小提琴 fiddle", "钢吉他", "口琴", "曼陀林"],
+  "scales": ["大调", "混合利底亚", "多利亚", "五声"],
+  "moods": ["质朴", "乡愁", "故事性", "温暖", "自由", "田园"],
+  "elements": ["叙事歌词", "滑音吉他", "乡村和声", "拨弦节奏", "口琴点缀"],
+  "scenes": ["乡村公路", "田园纪录片", "咖啡馆现场", "西部片", "民俗节庆"]
+}

@@ -1,0 +1,18 @@
+{
+  "key": "merengue",
+  "label": "梅伦格 Merengue",
+  "english": "Merengue",
+  "bpm": "120-160 BPM",
+  "subgenres": [
+    {"name": "Dominican Merengue", "bpm": "120-150 BPM"},
+    {"name": "Merengue Tipico", "bpm": "125-155 BPM"},
+    {"name": "Merengue Urbano", "bpm": "130-160 BPM"},
+    {"name": "Merengue de Orquesta", "bpm": "120-145 BPM"},
+    {"name": "Pambiche", "bpm": "115-140 BPM"}
+  ],
+  "instruments": ["手风琴", " tambora 鼓", "guira 刮响器", "贝斯", "萨克斯", "键盘"],
+  "scales": ["大调", "小调", "多利亚", "混合利底亚"],
+  "moods": ["欢快", "舞动", "节庆", "明亮", "奔放", "街头"],
+  "elements": ["2/4 快拍", "guira 刮奏", "手风琴旋律", "轻快律动", "呼叫应答"],
+  "scenes": ["婚礼派对", "拉丁节庆", "舞蹈教学", "街头狂欢", "夏日派对"]
+}

@@ -1,0 +1,18 @@
+{
+  "key": "trance",
+  "label": "迷幻舞曲 Trance",
+  "english": "Trance",
+  "bpm": "125-150 BPM",
+  "subgenres": [
+    {"name": "Progressive Trance", "bpm": "125-135 BPM"},
+    {"name": "Uplifting Trance", "bpm": "135-145 BPM"},
+    {"name": "Psytrance", "bpm": "140-150 BPM"},
+    {"name": "Vocal Trance", "bpm": "130-140 BPM"},
+    {"name": "Tech Trance", "bpm": "135-145 BPM"}
+  ],
+  "instruments": ["合成 lead", "钢琴", "鼓机", "贝斯", "Pad", "人声切片"],
+  "scales": ["大调", "小调", "五声", "多利亚"],
+  "moods": ["飞翔", "空灵", "能量", "梦幻", "释放", "宏大"],
+  "elements": ["滚动 bassline", "breakdown 爆发", "高亢旋律", "混响空间", "渐进结构"],
+  "scenes": ["音乐节", "夜店高潮", "跑步健身", "游戏冲刺", "高能剪辑"]
+}

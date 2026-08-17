@@ -1,0 +1,18 @@
+{
+  "key": "goth",
+  "label": "哥特摇滚 Goth Rock",
+  "english": "Goth Rock",
+  "bpm": "90-150 BPM",
+  "subgenres": [
+    {"name": "Goth Rock", "bpm": "100-140 BPM"},
+    {"name": "Darkwave", "bpm": "90-130 BPM"},
+    {"name": "Ethereal Wave", "bpm": "85-120 BPM"},
+    {"name": "Deathrock", "bpm": "120-160 BPM"},
+    {"name": "Goth Metal", "bpm": "90-150 BPM"}
+  ],
+  "instruments": ["失真吉他", "贝斯", "鼓机", "合成器", "管风琴", "低吟人声"],
+  "scales": ["小调", "弗里几亚", "多利亚", "和声小调"],
+  "moods": ["阴暗", "神秘", "悲美", "冷峻", "戏剧", "压抑"],
+  "elements": ["混响吉他", "低音脉动", "氛围铺陈", "戏剧化人声", "哥特氛围"],
+  "scenes": ["暗黑俱乐部", "影视惊悚", "哥特聚会", "游戏地下城", "独立短片"]
+}

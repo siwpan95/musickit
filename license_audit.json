@@ -1,0 +1,174 @@
+{
+  "pools": {
+    "bass": {
+      "entries": 909,
+      "tier": {
+        "free": 265,
+        "restricted": 359,
+        "pack": 284,
+        "unknown": 1
+      },
+      "license": {
+        "Royalty-free (MusicRadar SampleRadar)": 265,
+        "Demucs 分离自 CS 游戏音乐（粉丝提取，商用前需确认授权）": 102,
+        "Royalty-free (commercial sample pack; verify EULA, do not redistribute)": 284,
+        "Demucs 分离自商业歌曲（仅个人练习/研究，勿发布成品）": 257,
+        "来源未记录（--release-safe 将剔除）": 1
+      }
+    },
+    "drum": {
+      "entries": 4188,
+      "tier": {
+        "free": 467,
+        "restricted": 359,
+        "pack": 3361,
+        "unknown": 1
+      },
+      "license": {
+        "Royalty-free (MusicRadar SampleRadar)": 467,
+        "Demucs 分离自 CS 游戏音乐（粉丝提取，商用前需确认授权）": 102,
+        "Royalty-free (commercial sample pack; verify EULA, do not redistribute)": 3361,
+        "Demucs 分离自商业歌曲（仅个人练习/研究，勿发布成品）": 257,
+        "来源未记录（--release-safe 将剔除）": 1
+      }
+    },
+    "guita": {
+      "entries": 1961,
+      "tier": {
+        "free": 235,
+        "unknown": 744,
+        "restricted": 360,
+        "pack": 622
+      },
+      "license": {
+        "Royalty-free (MusicRadar SampleRadar)": 235,
+        "unknown": 5,
+        "Demucs 分离自 CS 游戏音乐（粉丝提取，商用前需确认授权）": 102,
+        "Royalty-free (commercial sample pack; verify EULA, do not redistribute)": 622,
+        "Demucs 分离自商业歌曲（仅个人练习/研究，勿发布成品）": 258,
+        "来源未记录（--release-safe 将剔除）": 739
+      }
+    },
+    "cowbell": {
+      "entries": 114,
+      "tier": {
+        "free": 114
+      },
+      "license": {
+        "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)": 114
+      }
+    },
+    "synth": {
+      "entries": 810,
+      "tier": {
+        "free": 399,
+        "pack": 252,
+        "unknown": 159
+      },
+      "license": {
+        "Royalty-free (MusicRadar SampleRadar)": 399,
+        "Royalty-free (commercial sample pack; verify EULA, do not redistribute)": 252,
+        "来源未记录（--release-safe 将剔除）": 159
+      }
+    },
+    "acapella": {
+      "entries": 3293,
+      "tier": {
+        "pack": 3293
+      },
+      "license": {
+        "Coollider Acapellas Vol.1-42（商业包；EULA 允许音乐制作使用，勿转售样本；含知名原唱歌曲，对外发布请自行评估原曲权利）": 2933,
+        "see source": 47,
+        "Royalty-free (commercial sample pack; verify EULA, do not redistribute)": 213,
+        "Verify license (producer-base freebie; confirm before commercial use)": 100
+      }
+    },
+    "animal": {
+      "entries": 140,
+      "tier": {
+        "free": 54,
+        "pack": 36,
+        "unknown": 50
+      },
+      "license": {
+        "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)": 54,
+        "Royalty-free (commercial sample pack; verify EULA, do not redistribute)": 36,
+        "来源未记录（--release-safe 将剔除）": 50
+      }
+    },
+    "sfx": {
+      "entries": 557,
+      "tier": {
+        "free": 138,
+        "pack": 419
+      },
+      "license": {
+        "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)": 138,
+        "Royalty-free (commercial sample pack; verify EULA, do not redistribute)": 419
+      }
+    },
+    "keys": {
+      "entries": 3054,
+      "tier": {
+        "pack": 356,
+        "unknown": 2698
+      },
+      "license": {
+        "Royalty-free (commercial sample pack; verify EULA, do not redistribute)": 356,
+        "Royalty-free (on-disk pack)": 3,
+        "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）": 2695
+      }
+    },
+    "strings": {
+      "entries": 2913,
+      "tier": {
+        "unknown": 2913
+      },
+      "license": {
+        "Royalty-free (on-disk pack)": 1,
+        "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）": 2912
+      }
+    },
+    "brass": {
+      "entries": 240,
+      "tier": {
+        "pack": 6,
+        "unknown": 234
+      },
+      "license": {
+        "Royalty-free (commercial sample pack; verify EULA, do not redistribute)": 6,
+        "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）": 234
+      }
+    },
+    "woodwind": {
+      "entries": 15128,
+      "tier": {
+        "pack": 8,
+        "unknown": 15120
+      },
+      "license": {
+        "Royalty-free (commercial sample pack; verify EULA, do not redistribute)": 8,
+        "Royalty-free (on-disk pack)": 17,
+        "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）": 15103
+      }
+    },
+    "ethnic": {
+      "entries": 179,
+      "tier": {
+        "pack": 24,
+        "unknown": 155
+      },
+      "license": {
+        "Royalty-free (commercial sample pack; verify EULA, do not redistribute)": 24,
+        "Royalty-free (on-disk pack)": 88,
+        "来源未记录（--release-safe 将剔除）": 67
+      }
+    }
+  },
+  "total_tier": {
+    "free": 1672,
+    "restricted": 1078,
+    "pack": 8661,
+    "unknown": 22075
+  }
+}

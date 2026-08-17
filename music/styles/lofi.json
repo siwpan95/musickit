@@ -1,0 +1,18 @@
+{
+  "key": "lofi",
+  "label": "Lo-fi / 蒸汽嘻哈 Lo-fi",
+  "english": "Lo-fi Hip Hop",
+  "bpm": "70-90 BPM",
+  "subgenres": [
+    {"name": "Lo-fi Hip Hop", "bpm": "70-90 BPM"},
+    {"name": "Chillhop", "bpm": "75-85 BPM"},
+    {"name": "Jazzhop"},
+    {"name": "Bedroom Pop"},
+    {"name": "Lo-fi House"}
+  ],
+  "instruments": ["钢琴", "黑胶采样", "爵士鼓", "电钢琴 Rhodes", "环境音", "弦乐切片"],
+  "scales": ["大七和弦", "小调", "多利亚", "五声"],
+  "moods": ["治愈", "慵懒", "安静", "学习", "雨夜", "怀旧"],
+  "elements": ["磁带嘶嘶", "采样切片", "摇摆节拍", "室内环境音", "轻微跑调"],
+  "scenes": ["学习专注", "咖啡馆", "雨夜", "深夜电台", "手账 Vlog"]
+}

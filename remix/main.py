@@ -19,6 +19,7 @@ import argparse
 import json
 import os
 import random
+import re
 import sys
 
 # 确保脚本所在目录在 sys.path，便于 import core / gui / utils
@@ -42,6 +43,8 @@ _BUNDLED_FFPROBE = os.path.join(_BIN_DIR, "ffprobe.exe" if sys.platform == "win3
 
 pydub.AudioSegment.converter = _BUNDLED_FFMPEG
 pydub.AudioSegment.ffprobe = _BUNDLED_FFPROBE
+
+from core.loop_slicer import bar_ms, duration_ms  # noqa: E402
 
 
 # =========================================================================
@@ -103,6 +106,13 @@ _PHONK_SKELETON = ["drum", "bass", "guita"]
 # 随机模式只用短素材池；acapella 为整首人声（数分钟），不进随机 one-shot
 _RANDOM_POOLS = ["bass", "drum", "guita", "cowbell", "synth", "animal", "sfx"]
 
+# 骨架层（必须提供连续律动的层）：选音时保底挑选 >=1 小节的 loop 素材，
+# 混音时强制 ROLE_LOOP，杜绝 one-shot 被降级为稀疏点缀导致整曲无鼓/无贝斯律动。
+_SKELETON_CATS = {"drum", "bass", "guita"}
+
+# --release-safe 允许的授权层级：free/pack 可用于对外发布；restricted/unknown 仅个人使用。
+_RELEASE_SAFE_TIERS = {"free", "pack"}
+
 
 def _collect_category_files(category_dir: str) -> list[str]:
     """收集某类素材目录下的所有音频文件（含子类子目录，递归）。"""
@@ -117,23 +127,124 @@ def _collect_category_files(category_dir: str) -> list[str]:
     return files
 
 
-def _pick_random_tracks(count: int, seed: int | None) -> list[tuple[str, str]]:
+def _load_pool_manifests(root: str) -> dict[str, dict[str, dict]]:
+    """加载各素材池 manifest.json，返回 {category: {basename: entry}}。"""
+    out: dict[str, dict[str, dict]] = {}
+    for cat in _SOURCE_CATEGORIES:
+        mp = os.path.join(root, cat, "manifest.json")
+        try:
+            with open(mp, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            if not isinstance(data, dict):
+                continue
+            for e in data.get("entries", []):
+                if isinstance(e, dict) and e.get("file"):
+                    out.setdefault(cat, {})[e["file"]] = e
+        except Exception:
+            pass
+    return out
+
+
+def _filter_release_safe(
+    files: list[str],
+    cat: str,
+    entries: dict[str, dict[str, dict]],
+    dropped: list[tuple[str, int]],
+) -> list[str]:
+    """--release-safe 过滤：只保留 license_tier 为 free/pack 的素材。
+
+    manifest 无记录或 tier 缺失/unknown/restricted 的文件一律剔除，
+    剔除数量追加到 dropped（[(类别, 剔除数)]）。
+    """
+    pool = entries.get(cat, {})
+    kept: list[str] = []
+    for path in files:
+        e = pool.get(os.path.basename(path))
+        tier = (e or {}).get("license_tier")
+        if tier in _RELEASE_SAFE_TIERS:
+            kept.append(path)
+    n = len(files) - len(kept)
+    if n:
+        dropped.append((cat, n))
+    return kept
+
+
+def pick_loop_candidate(
+    files: list[str],
+    bpm: int,
+    rng: random.Random,
+    entries: dict[str, dict] | None = None,
+    max_probe: int = 60,
+) -> str | None:
+    """从候选列表挑一条 >=1 小节（可循环）的素材（骨架层保底）。
+
+    1) manifest 已知时长 >= 0.9 小节：直接命中（零成本）；
+    2) 未知时长：优先探测整曲 stem 命名（bass (N).wav 等），再随机抽样，
+       用 ffprobe 探测时长，上限 max_probe 次；
+    3) 全部不足时回退已探测的最长文件（宁要短 loop 也不要静音）。
+
+    桥接器（prompt_driven_remix.py）复用同一选音口径。
+    """
+    if not files:
+        return None
+    min_ms = int(bar_ms(bpm) * 0.9)
+    if entries:
+        known = [f for f in files
+                 if ((entries.get(os.path.basename(f)) or {}).get("duration_s") or 0)
+                 >= min_ms / 1000.0]
+        if known:
+            return rng.choice(known)
+    stems = [f for f in files
+             if re.match(r"^(bass|drum|guita) \(\d+\)\.(wav|mp3|flac|aiff|aif)$",
+                        os.path.basename(f), re.I)]
+    rest = [f for f in files if f not in stems]
+    rng.shuffle(rest)
+    best = None
+    best_dur = 0
+    for path in (stems + rest)[:max_probe]:
+        try:
+            dur = duration_ms(path)
+        except Exception:
+            continue
+        if dur > best_dur:
+            best, best_dur = path, dur
+        if dur >= min_ms:
+            return path
+    return best
+
+
+def _pick_random_tracks(
+    count: int,
+    seed: int | None,
+    bpm: int,
+    entries: dict[str, dict[str, dict]] | None = None,
+    release_safe: bool = False,
+) -> list[tuple[str, str]]:
     """按 phonk 风格随机挑选音轨。
 
     Returns:
         [(category, path), ...] 列表，长度 = count。
-        优先保证 phonk 骨架 drum / bass / guita 各至少 1 条，
+        优先保证 phonk 骨架 drum / bass / guita 各至少 1 条
+        （骨架层用 pick_loop_candidate 保底选 >=1 小节 loop），
         其次尽量补入牛铃(cowbell)与 synth/采样这两类 phonk 标志层，
         剩余数量从全部素材随机补足（允许同类重复）。
     """
     rng = random.Random(seed)
+    entries = entries or {}
 
     by_cat: dict[str, list[str]] = {}
     all_files: list[str] = []
+    dropped: list[tuple[str, int]] = []
     for cat in _RANDOM_POOLS:
         files = _collect_category_files(os.path.join(_MUSICKIT_ROOT, cat))
+        if release_safe:
+            files = _filter_release_safe(files, cat, entries, dropped)
         by_cat[cat] = files
         all_files.extend(files)
+
+    if release_safe and dropped:
+        print("[remix] --release-safe：已剔除受限/未知授权素材 "
+              + "、".join(f"{c} {n}" for c, n in dropped), file=sys.stderr)
 
     if not all_files:
         raise FileNotFoundError(
@@ -143,11 +254,14 @@ def _pick_random_tracks(count: int, seed: int | None) -> list[tuple[str, str]]:
 
     chosen: list[tuple[str, str]] = []
 
-    # 1) 优先凑出 phonk 最小骨架（drum + bass + guita 各 1 条）
+    # 1) 优先凑出 phonk 最小骨架（drum + bass + guita 各 1 条）：保底 >=1 小节 loop
     for cat in _PHONK_SKELETON:
         files = by_cat[cat]
-        if files:
-            chosen.append((cat, rng.choice(files)))
+        if not files:
+            continue
+        path = pick_loop_candidate(files, bpm, rng, entries.get(cat))
+        if path:
+            chosen.append((cat, path))
 
     # 2) 尽量补入 phonk 标志层：牛铃 + synth/采样 + 人声(动物叫) + SFX（各最多 1 条，避免喧宾夺主）
     for cat in ("cowbell", "synth", "animal", "sfx"):
@@ -234,6 +348,7 @@ def run_remix(
     bpm: int | None = None,
     structure: str | None = None,
     tracks: list[tuple[str, str]] | None = None,
+    release_safe: bool = False,
 ) -> str:
     """执行一次 phonk 风格 loop 化混音（F1/F2/F3-v2：切 loop + 变速对齐 + 曲式模板编排）。
 
@@ -254,7 +369,7 @@ def run_remix(
         ROLE_ACCENT,
         ROLE_LOOP,
     )
-    from utils import generate_output_name
+    from utils import make_unique_path
 
     count = max(1, min(count, 8))
     rng = random.Random(seed)
@@ -271,16 +386,11 @@ def run_remix(
     desc = st.get("description", "")
     print(f"[remix] 曲式模板：{st_name}" + (f"（{desc}）" if desc else ""))
 
-    # 从各目录 manifest 读取 source 信息（BPM 提示 / 来源溯源）
-    _cat_manifest = {}
-    for cat in _SOURCE_CATEGORIES:
-        mp = os.path.join(_MUSICKIT_ROOT, cat, "manifest.json")
-        try:
-            with open(mp, "r", encoding="utf-8") as f:
-                for e in json.load(f).get("entries", []):
-                    _cat_manifest[e["file"]] = e
-        except Exception:
-            pass
+    # 从各目录 manifest 读取 source 信息（BPM 提示 / 来源溯源 / 授权层级过滤）
+    entries_by_cat = _load_pool_manifests(_MUSICKIT_ROOT)
+    _cat_manifest: dict[str, dict] = {}
+    for pool in entries_by_cat.values():
+        _cat_manifest.update(pool)
 
     if tracks:
         # 手动指定音轨：(category, path) 列表，过滤掉不存在的文件
@@ -290,9 +400,19 @@ def run_remix(
                 chosen.append((cat, path))
         if not chosen:
             raise FileNotFoundError("手动指定的音轨文件均不存在，请重新选择。")
+        if release_safe:
+            before = len(chosen)
+            chosen = [
+                (cat, path) for cat, path in chosen
+                if (entries_by_cat.get(cat, {}).get(os.path.basename(path)) or {}).get("license_tier")
+                in _RELEASE_SAFE_TIERS
+            ]
+            if len(chosen) < before:
+                print(f"[remix] --release-safe：剔除 {before - len(chosen)} 条受限/未知授权音轨",
+                      file=sys.stderr)
         tracks = chosen
     else:
-        tracks = _pick_random_tracks(count, seed)
+        tracks = _pick_random_tracks(count, seed, bpm, entries_by_cat, release_safe)
 
     # F6：内容指纹去重（同采样只保留一份，跨 mp3/wav 格式）
     fps: dict[str, str] = {}
@@ -345,8 +465,12 @@ def run_remix(
                                search_start_sec=0.0, search_max_sec=120.0)
         bar = bar_ms(bpm)
         # 短素材（one-shot / 不足 1 小节）→ 点缀层；否则循环层。
+        # 骨架层（drum/bass/guita）强制循环层：选音时已保底 >=1 小节 loop，
+        # 防止慢速 BPM 下 2~3s 短 loop 被判成点缀、整曲失去律动骨架。
         # sfx（riser/impact）强制点缀，且每 4 小节点缀一次（riser 密集会吵）
-        if cat == "sfx":
+        if cat in _SKELETON_CATS:
+            role = ROLE_LOOP
+        elif cat == "sfx":
             role = ROLE_ACCENT
         else:
             role = ROLE_ACCENT if len(seg) < bar else ROLE_LOOP
@@ -405,7 +529,8 @@ def run_remix(
 
     if out_dir is None:
         out_dir = os.path.join(_PROJECT_ROOT, "output")
-    output_path = os.path.join(out_dir, generate_output_name("phonk_remix", "", fmt))
+    # 同秒冲突自动递增（_1/_2），杜绝两次快速运行互相覆盖
+    output_path = make_unique_path(out_dir, "phonk_remix", "", fmt)
     AudioLoader.export(mix, output_path, fmt=fmt)
 
     print(f"[remix] 混音完成（{len(mix) / 1000:.1f}s，{bpm}BPM x {bars} 小节），"
@@ -449,12 +574,16 @@ def main():
         "--format", type=str, default="wav", choices=["wav", "mp3", "ogg", "flac"],
         help="输出格式（默认 wav）",
     )
+    parser.add_argument(
+        "--release-safe", action="store_true",
+        help="发布安全模式：仅使用授权层级为 free/pack 的素材（restricted/unknown 一律剔除）",
+    )
     args = parser.parse_args()
 
     if args.remix:
         run_remix(count=args.count, seed=args.seed, out_dir=args.out,
                   fmt=args.format, bars=args.bars, bpm=args.bpm,
-                  structure=args.structure)
+                  structure=args.structure, release_safe=args.release_safe)
         return
 
     # 默认启动图形界面

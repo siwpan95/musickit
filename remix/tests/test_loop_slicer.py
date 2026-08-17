@@ -32,6 +32,7 @@ def write_wav(seg: AudioSegment, path: str) -> str:
     return path
 
 
+@pytest.mark.smoke
 def test_bar_ms():
     assert loop_slicer.bar_ms(60, 1) == 4000   # 60BPM 1 小节 = 4s
     assert loop_slicer.bar_ms(120, 2) == 4000  # 120BPM 2 小节 = 4s
@@ -141,6 +142,7 @@ def test_load_slice_tempo_stretch(tmp_path):
     assert 900 <= len(fast) <= 1100  # 2 倍速 → 时长减半
 
 
+@pytest.mark.smoke
 def test_parse_bpm_hint():
     assert loop_slicer.parse_bpm_hint(r"G:\x\EBM\102bpm\EBM_Beat_102-01.wav") == 102
     assert loop_slicer.parse_bpm_hint(r"G:\x\DH_BeatA-124-01.wav") == 124

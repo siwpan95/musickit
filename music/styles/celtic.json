@@ -1,0 +1,18 @@
+{
+  "key": "celtic",
+  "label": "凯尔特 Celtic",
+  "english": "Celtic",
+  "bpm": "90-150 BPM",
+  "subgenres": [
+    {"name": "Celtic Folk"},
+    {"name": "Irish Traditional"},
+    {"name": "Celtic Fusion"},
+    {"name": "Medieval"},
+    {"name": "凯尔特女声器乐"}
+  ],
+  "instruments": ["风笛 Bagpipe", "竖琴 Harp", "小提琴 Fiddle", "锡哨 Tin Whistle", "宝思兰鼓 Bodhrán"],
+  "scales": ["大调", "多利亚 Dorian", "混合利底亚", "五声"],
+  "moods": ["苍凉", "悠远", "欢快", "史诗", "乡愁", "神秘"],
+  "elements": ["原声编配", "舞曲节奏", "多声部", "自然混响", "拨奏"],
+  "scenes": ["奇幻游戏", "中世纪影视", "旅途", "纪录片", "森林短片"]
+}

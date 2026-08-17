@@ -1,0 +1,10 @@
+@echo off
+chcp 65001 >nul
+:: 与 执行.bat 内容一致的备份说明文本（可直接另存为 .bat 使用）
+:: 优先用 PATH 中的 python；找不到再回退到内置的绝对路径
+:: 脚本路径用 %~dp0 指向本文件同目录，避免硬编码目录导致运行失败
+set "PY="
+where python >nul 2>nul && set "PY=python"
+if not defined PY set "PY=C:\Users\Administrator\.workbuddy\binaries\python\versions\3.14.3\python.exe"
+"%PY%" "%~dp0music_prompt_generator.py" -n 5 -e --export txt
+pause

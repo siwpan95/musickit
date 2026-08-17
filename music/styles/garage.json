@@ -1,0 +1,18 @@
+{
+  "key": "garage",
+  "label": "车库舞曲 Garage",
+  "english": "Garage / UK Garage",
+  "bpm": "120-140 BPM",
+  "subgenres": [
+    {"name": "UK Garage", "bpm": "130-140 BPM"},
+    {"name": "Future Garage", "bpm": "130-145 BPM"},
+    {"name": "2-Step Garage", "bpm": "130-140 BPM"},
+    {"name": "Breakbeat Garage", "bpm": "125-140 BPM"},
+    {"name": "Speed Garage", "bpm": "135-150 BPM"}
+  ],
+  "instruments": ["切分鼓组", "贝斯", "人声 chop", "合成器", "弦乐采样", "FX"],
+  "scales": ["小调", "多利亚", "五声", "弗里几亚"],
+  "moods": ["跳跃", "都市", "律动", "阴暗", "舞动", "弹性"],
+  "elements": ["切分鼓点", "wobble 贝斯", "人声切片", "空旷混响", "摇摆感"],
+  "scenes": ["夜店舞池", "都市夜景", "游戏街区", "时尚短片", "Vlog BGM"]
+}

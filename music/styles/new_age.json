@@ -1,0 +1,17 @@
+{
+  "key": "new_age",
+  "label": "新世纪 New Age",
+  "english": "New Age",
+  "bpm": "50-90 BPM",
+  "subgenres": [
+    {"name": "Meditation", "bpm": "50-70 BPM"},
+    {"name": "Healing", "bpm": "55-75 BPM"},
+    {"name": "Nature Soundscape", "bpm": "自由速度"},
+    {"name": "Celtic New Age", "bpm": "60-85 BPM"}
+  ],
+  "instruments": ["钢琴 Piano", "长笛 Flute", "竖琴 Harp", "合成 Pad", "原声吉他", "水晶碗"],
+  "scales": ["大调 Major", "五声音阶", "利底亚 Lydian"],
+  "moods": ["平和", "治愈", "空灵", "温暖", "希望", "宁静"],
+  "elements": ["广阔混响", "自然声景", "柔和织体", "长音铺陈", "极简旋律"],
+  "scenes": ["瑜伽冥想", "SPA", "自然纪录片", "睡眠辅助", "灵性空间"]
+}

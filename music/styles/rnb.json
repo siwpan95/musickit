@@ -1,0 +1,18 @@
+{
+  "key": "rnb",
+  "label": "R&B / 节奏布鲁斯 R&B",
+  "english": "R&B / Rhythm and Blues",
+  "bpm": "60-110 BPM",
+  "subgenres": [
+    {"name": "Contemporary R&B", "bpm": "70-100 BPM"},
+    {"name": "Neo-Soul", "bpm": "70-95 BPM"},
+    {"name": "PBR&B", "bpm": "60-90 BPM"},
+    {"name": "Motown Soul"},
+    {"name": "Quiet Storm"}
+  ],
+  "instruments": ["电钢 Rhodes", "合成贝斯", "鼓机", "人声和声", "弦乐", "吉他"],
+  "scales": ["小调", "大七和弦", "九和弦", "五声"],
+  "moods": ["性感", "慵懒", "深情", "丝滑", "浪漫", "都市"],
+  "elements": ["切分律动", "丰富和声层", "气声唱腔", "柔和混响", "808 贝斯"],
+  "scenes": ["夜店慢摇", "情侣约会", "都市夜景", "杂志 BGM", "时尚短片"]
+}

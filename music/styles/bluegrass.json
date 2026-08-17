@@ -1,0 +1,18 @@
+{
+  "key": "bluegrass",
+  "label": "蓝草 Bluegrass",
+  "english": "Bluegrass",
+  "bpm": "90-160 BPM",
+  "subgenres": [
+    {"name": "Traditional Bluegrass", "bpm": "100-140 BPM"},
+    {"name": "Progressive Bluegrass", "bpm": "110-160 BPM"},
+    {"name": "Gospel Bluegrass"},
+    {"name": "Old-Time", "bpm": "90-130 BPM"},
+    {"name": "Americana"}
+  ],
+  "instruments": ["班卓琴", "曼陀林", "小提琴 fiddle", "原声吉他", "直立贝斯", "多部和声"],
+  "scales": ["大调", "混合利底亚", "多利亚", "五声"],
+  "moods": ["质朴", "欢快", "乡愁", "奔放", "田园", "诉说"],
+  "elements": ["高速拨弦", "即兴 break", "高腔唱法", "紧密和声", "乡村气息"],
+  "scenes": ["乡村民谣", "公路片", "田园纪录片", "民俗节庆", "咖啡馆现场"]
+}

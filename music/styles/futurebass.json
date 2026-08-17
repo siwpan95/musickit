@@ -1,0 +1,17 @@
+{
+  "key": "futurebass",
+  "label": "未来贝斯 Future Bass",
+  "english": "Future Bass",
+  "bpm": "140-160 BPM（half-time 律动）",
+  "subgenres": [
+    {"name": "Future Bass", "bpm": "140-160 BPM（half-time）"},
+    {"name": "Melodic Bass"},
+    {"name": "Kawaii Future Bass"},
+    {"name": "Pop Bass"}
+  ],
+  "instruments": ["合成主音", "人声 Chop", "钢琴", "808", "弦乐垫", "明亮 Lead"],
+  "scales": ["大调明亮", "五声音阶", "小调抒情"],
+  "moods": ["闪耀", "活力", "浪漫", "上扬", "梦幻", "甜美"],
+  "elements": ["对位 Bass", "闪失真 Shimmer", "宽和弦", "飙高 Drop", "人声切片"],
+  "scenes": ["动漫燃向", "游戏", "庆典", "Vlog 高光", "电竞"]
+}

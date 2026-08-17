@@ -1,0 +1,19 @@
+{
+  "key": "metal",
+  "label": "金属乐 Metal",
+  "english": "Metal",
+  "bpm": "90-200 BPM",
+  "subgenres": [
+    {"name": "Death Metal", "bpm": "120-200 BPM"},
+    {"name": "Black Metal", "bpm": "120-180 BPM"},
+    {"name": "Doom Metal", "bpm": "60-110 BPM"},
+    {"name": "Power Metal", "bpm": "130-180 BPM"},
+    {"name": "Metalcore", "bpm": "140-200 BPM"},
+    {"name": "Thrash Metal", "bpm": "140-220 BPM"}
+  ],
+  "instruments": ["失真吉他", "贝斯", "双踩鼓", "尖啸人声", "合成器", "管弦采样"],
+  "scales": ["小调", "弗里几亚", "和声小调", "多利亚"],
+  "moods": ["凶猛", "史诗", "黑暗", "能量", "压抑", "狂暴"],
+  "elements": ["失真 riff", "双踩鼓", "扫弦", "低音墙", "戏剧张力"],
+  "scenes": ["游戏战斗", "极限运动", "影视高潮", "金属现场", "暗黑预告"]
+}

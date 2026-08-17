@@ -1,0 +1,18 @@
+{
+  "key": "jazzfusion",
+  "label": "融合爵士 Jazz Fusion",
+  "english": "Jazz Fusion",
+  "bpm": "90-160 BPM",
+  "subgenres": [
+    {"name": "Funk Fusion", "bpm": "100-130 BPM"},
+    {"name": "Smooth Jazz", "bpm": "90-110 BPM"},
+    {"name": "Jazz Rock", "bpm": "110-150 BPM"},
+    {"name": "Latin Fusion", "bpm": "100-140 BPM"},
+    {"name": "Electronic Fusion", "bpm": "100-160 BPM"}
+  ],
+  "instruments": ["电钢 Rhodes", "萨克斯", "贝斯", "鼓组", "合成器", "吉他"],
+  "scales": ["多利亚", "混合利底亚", "小调", "大调七和弦", "变化音阶"],
+  "moods": ["复杂", "丝滑", "即兴", "精致", "律动", "都市"],
+  "elements": ["复杂和声", "即兴独奏", "切分律动", "复合节拍", "爵士吉他"],
+  "scenes": ["高端酒吧", "咖啡馆现场", "都市夜景", "影视配乐", "时尚短片"]
+}

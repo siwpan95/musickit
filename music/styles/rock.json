@@ -1,0 +1,18 @@
+{
+  "key": "rock",
+  "label": "摇滚 Rock",
+  "english": "Rock",
+  "bpm": "90-160 BPM",
+  "subgenres": [
+    {"name": "Classic Rock", "bpm": "100-140 BPM"},
+    {"name": "Alternative Rock", "bpm": "110-150 BPM"},
+    {"name": "Punk Rock", "bpm": "150-200 BPM"},
+    {"name": "Grunge", "bpm": "90-130 BPM"},
+    {"name": "Indie Rock", "bpm": "110-150 BPM"}
+  ],
+  "instruments": ["电吉他失真", "贝斯", "鼓组", "人声", "键盘", "原声吉他"],
+  "scales": ["小调五声", "自然小调", "混合利底亚", "布鲁斯"],
+  "moods": ["热血", "反叛", "自由", "激昂", "怀旧", "愤怒"],
+  "elements": ["强力和弦", "吉他 riff", "鼓点驱动", "失真音色", "现场能量"],
+  "scenes": ["Live 现场", "公路旅行", "运动燃向", "影视高潮", "游戏战斗"]
+}

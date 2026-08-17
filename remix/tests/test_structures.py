@@ -9,6 +9,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import main  # noqa: E402
 
+pytestmark = pytest.mark.smoke
+
 
 def _load():
     p = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),

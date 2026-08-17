@@ -1,0 +1,17 @@
+{
+  "key": "minimal",
+  "label": "极简 Minimal Techno",
+  "english": "Minimal Techno",
+  "bpm": "120-130 BPM",
+  "subgenres": [
+    {"name": "Microhouse", "bpm": "120-126 BPM"},
+    {"name": "Detroit Minimal", "bpm": "124-130 BPM"},
+    {"name": "Dub Minimal", "bpm": "120-128 BPM"},
+    {"name": "Hypnotic Minimal", "bpm": "126-130 BPM"}
+  ],
+  "instruments": ["底鼓 Kick", "闭镲 Hi-hat", "低音 Bass", "细碎打击 Percussion", "唱片噪音", "滤波合成"],
+  "scales": ["小调 Minor", "无调性", "五声"],
+  "moods": ["冷静", "催眠", "克制", "律动", "工业", "深邃"],
+  "elements": ["极简编曲", "空间延迟", "缓慢滤波", "留白", "细微层叠"],
+  "scenes": ["地下俱乐部", "时装秀", "深夜驾驶", "展览现场", "冥想律动"]
+}
