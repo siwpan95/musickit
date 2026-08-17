@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""一次性数据修补（在补丁包 apply 时由 apply_patch.ps1 调用）：
+r"""一次性数据修补（在补丁包 apply 时由 apply_patch.ps1 调用）：
 
-1. styles/phonk.json：修正「轻冯/重冯」误字 → 轻/重 Phonk（补 BPM 区间）
-2. tools/music/validate_styles.py：清理死条件表达式
+1. validate_styles.py：清理死条件表达式
+
+（注：styles/phonk.json 的「轻冯/重冯」是用户确认的有意风格分类（冯=phonk），
+此前的重命名方案已按用户澄清撤销。）
 """
-import json
 import os
 import sys
 
 MUSIC_DIR = os.path.dirname(os.path.abspath(__file__))
-
 
 
 def fix_validate_styles() -> None:
@@ -41,5 +41,5 @@ def fix_validate_styles() -> None:
 
 
 if __name__ == "__main__":
-    fix_phonk()
+    # 注：phonk.json 的「轻冯/重冯」为有意的风格分类（冯=phonk），不做修改
     fix_validate_styles()
