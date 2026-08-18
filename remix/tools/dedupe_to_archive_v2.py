@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-r"""按 dedupe_report 把冗余副本移入 archived（只移不删，全程可回溯）。
+r"""按 dedupe_report（纯内容判定）把冗余副本移入 archived（只移不删，全程可回溯）。\n\n原则：重名 ≠ 重复——移动计划只来自内容级查重报告；manifest 条目按\n(subcategory, 文件名) 精确移除，同名不同内容的条目绝不被误删。
 
 规则（与项目 archived 政策一致）：
   - 每个重复组在每个池内保留 1 份（按 rel 路径排序的最小者，即编号最小/字典序最前），
@@ -23,6 +23,13 @@ from datetime import datetime
 
 POOLS = ["bass", "drum", "guita", "cowbell", "synth", "acapella",
          "animal", "sfx", "keys", "strings", "brass", "woodwind", "ethnic"]
+
+
+def entry_identity(rel: str) -> tuple[str, str]:
+    """报告相对路径 -> (subcategory, 文件名)。重名不同子目录 = 不同身份。"""
+    parts = rel.split("/")
+    sub = "/".join(parts[1:-1]) if len(parts) > 2 else "(root)"
+    return sub, parts[-1]
 
 
 def plan(report: dict) -> list[dict]:
@@ -86,11 +93,15 @@ def main():
             records.append({"pool": pool, "rel": rel, "error": "目标已存在"})
             continue
         shutil.move(src, dst)
-        moved_by_pool[pool].add(os.path.basename(rel))
+        # 条目身份 = (subcategory, 文件名)：重名不等于同一文件，绝不按裸文件名删条目
+        parts = rel.split("/")
+        sub = "/".join(parts[1:-1]) if len(parts) > 2 else "(root)"
+        moved_by_pool[pool].add((sub, parts[-1]))
         records.append({"pool": pool, "rel": rel, "moved_to": dst})
 
-    # 同步各池 manifest（移除已移动条目）
-    for pool, names in moved_by_pool.items():
+    # 同步各池 manifest（按 (subcategory, 文件名) 精确移除已移动条目；
+    # 同名但不同子目录/不同内容的条目绝不被误删）
+    for pool, keys in moved_by_pool.items():
         mp = os.path.join(args.root, pool, "manifest.json")
         if not os.path.isfile(mp):
             continue
@@ -98,7 +109,8 @@ def main():
             data = json.load(f)
         before = len(data.get("entries", []))
         data["entries"] = [e for e in data.get("entries", [])
-                           if not isinstance(e, dict) or e.get("file") not in names]
+                           if not isinstance(e, dict)
+                           or ((e.get("subcategory") or "(root)"), e.get("file")) not in keys]
         with open(mp, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"  [manifest] {pool}: {before} -> {len(data['entries'])} 条")

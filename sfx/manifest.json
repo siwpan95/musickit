@@ -8,7 +8,7 @@
       "original_rel": "mixkit_sfx/1146_Intro_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 6.08,
-      "sha256": "5fc9b9bedd8669bbe0bbc18e75be24905820a8d71db4f8a39560f409e75d67ab",
+      "sha256": "69c806711c31a2b2d472bcb2405e0366a27c611326e85915c06b3535d1745d00",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -20,7 +20,7 @@
       "original_rel": "mixkit_sfx/1168_Woosh_wind.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.1,
-      "sha256": "00b3d717fb074ebe881ba09af8d51e81039b1947d3b6f27ab00af68ec2525f7b",
+      "sha256": "fe2db04c3a38605b6e262e64a73d126fcea37a06454e8c0bf4602f19331d55a0",
       "subcategory": "sfx_noise",
       "license_tier": "free",
       "content_kind": "loop"
@@ -32,7 +32,7 @@
       "original_rel": "mixkit_sfx/1279_Fast_thunder_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.41,
-      "sha256": "971abf98939c3abae7323ddbd477d8bd0268655e142b373a8a9df739b313a4e9",
+      "sha256": "2c69a1056c2db21f1e6c81b76ddd698e7d34f236fb9791f3ef6ae5eae5dffd61",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -44,7 +44,7 @@
       "original_rel": "mixkit_sfx/1287_Cinematic_laser_gun_thunder.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.96,
-      "sha256": "1816c079d0401fc87c4a9e8bff5a85ce8c264fffbdb5906db71bc770eab2c96d",
+      "sha256": "b402b5af80b3712833eb910425567d2013730d4f9afd83ff6e1b222a95336a52",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -56,7 +56,7 @@
       "original_rel": "mixkit_sfx/1465_Vacuum_swoosh_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.87,
-      "sha256": "9f45ac92dd60625a7f54e838f3b86f9c518553d5f75a53531932351fcf733038",
+      "sha256": "481634e9c13e79ee8860d7c48eca412db48766b467c533244123c9a47cb8e6f1",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -68,7 +68,7 @@
       "original_rel": "mixkit_sfx/1474_Transition_windy_swoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.31,
-      "sha256": "854d46d8a079c49a1b61efb668f57b21a3d0743a2afc26fab9ac3f6dec4b5d55",
+      "sha256": "166890b10ef15c1a6e1ae5bbc6feef94c49c0a6a8f80cfc439c5236415f2d1b0",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -80,7 +80,7 @@
       "original_rel": "mixkit_sfx/1485_Metal_hit_woosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.35,
-      "sha256": "caad50bf5822a92259c8109eff0c1b3f37310b2584c0ce11eba7305746c84618",
+      "sha256": "46c8dd96213b4559c77598baeafc09c496ba1c4202ed1287161a3102968f03c1",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -92,7 +92,7 @@
       "original_rel": "mixkit_sfx/1486_Cinematic_tunnel_reverb_woosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.34,
-      "sha256": "3a03f5e1f645229d6452cf0a869b560df80427212ff510beb9f90bf8b086108f",
+      "sha256": "3804a57b2eb5fd718eba2d50d496073a7eaf51b63074b84eb1f67bf6472ca0d8",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -104,7 +104,7 @@
       "original_rel": "mixkit_sfx/1489_Air_woosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.32,
-      "sha256": "e220f90d8eafeb54a02216855d79331cdd5267f4bf2177a75edbae5e4a3aa6a9",
+      "sha256": "c502d51f86a7e06c0f171038515d39caf0240d105cd9a9e6feb2f349efdd1add",
       "subcategory": "sfx_noise",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -116,7 +116,7 @@
       "original_rel": "mixkit_sfx/1490_Fast_whoosh_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.56,
-      "sha256": "170b544a24813a0d31da69f62af6d08c82e3708410b541ec1c77e3a469ecd4a6",
+      "sha256": "71ef7f6f6fca1534f83726d02e0e3f83019486d8d634645cef8bb084cf1a67a9",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -128,7 +128,7 @@
       "original_rel": "mixkit_sfx/1491_Arrow_whoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.28,
-      "sha256": "df14bc14dfab6e85edf61bd881609f9024846b8b8b8c51cf90ae77fa5d68ff92",
+      "sha256": "ee91abeb6fb777356e96b8515548a302998d4e82d09b1bcb62bf892fe79f22a8",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -140,7 +140,7 @@
       "original_rel": "mixkit_sfx/1492_Cinematic_whoosh_fast_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.18,
-      "sha256": "e0e0e65c5c92923a150c4a647eb17c1dfec69871906a86c876f5f9462f9b2cbb",
+      "sha256": "4199be896bef3d0c1cdc2f7729eed5be6b402e6efa2abb4e443cb1a16fb6b6a9",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -152,7 +152,7 @@
       "original_rel": "mixkit_sfx/1493_Swirling_whoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.98,
-      "sha256": "cb8d616de8e9c132c575dfbf86bbe3588728c88085f597f24929dcbb34c0ad04",
+      "sha256": "1082fdea42e2799e88764b2cabdd02178735a5ec8cfc25d2205e0bf3dcfd0b46",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -164,7 +164,7 @@
       "original_rel": "mixkit_sfx/1520_Metallic_impact_with_whip.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.06,
-      "sha256": "18e0f131fb39a2ba787d2f8f057b8c70c397db4035d9286a7e5fad2e876c1a6b",
+      "sha256": "aa88009588b0dfe45a1e71b690e98d2086f4a2f38c1debbe4795740025dcc7b8",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -176,7 +176,7 @@
       "original_rel": "mixkit_sfx/1521_Whip_metallic_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.43,
-      "sha256": "400645503863ca9b57fe71264f842fb84fb344165ef72ae91983433869bc4562",
+      "sha256": "52e81e7319d84bb9ba26810bf56b69406f9c2982db8705bbac0ad0a2541c47bd",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -188,7 +188,7 @@
       "original_rel": "mixkit_sfx/163_Slow_sweeping_swoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.33,
-      "sha256": "2026925a425a39423d15327420601b3ae48f7ad652638778731b2b8ca53ec7fb",
+      "sha256": "2fff5b6dca30581c66e1c6cc3a3cd144fa11e20ac58ea1905764d653ccca1180",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -200,7 +200,7 @@
       "original_rel": "mixkit_sfx/164_Fast_sweeping_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.54,
-      "sha256": "98f5e32f6de7c5450acfb77c7a76405a056c0c416ff912c6c9af251bb6b992b9",
+      "sha256": "32fb5512aaae6a3938af759dd47253053359e8b08d4cbdc00183eba1b779d6f4",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -212,7 +212,7 @@
       "original_rel": "mixkit_sfx/165_Sweeping_the_sidewalk.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 12.7,
-      "sha256": "ef5d8d13dd340aeb95c2abe056d3a74f5194b8a6faa3ccb19dc5e06d2bd5a999",
+      "sha256": "1efb61dd1c2c778d679d45fe197d61d2a37f26d22cfb7363b41e25db62865c33",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -224,7 +224,7 @@
       "original_rel": "mixkit_sfx/166_Fast_small_sweep_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.6,
-      "sha256": "645f20dd74eb7eb1e52e616692909de6b86f5bcc54c48e465929c763b53f6258",
+      "sha256": "49a10168db0d3f325cf6e4c0cf394f804b6e6b576d869805d040932cb7a9f426",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -236,7 +236,7 @@
       "original_rel": "mixkit_sfx/167_Long_sweeping_air_swoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.61,
-      "sha256": "b111a9f13c15fa756ddc880a14544e18281dd1b48bc89912507ab5682f339f45",
+      "sha256": "e3cd83ed50ee2ab44aef36f81118ac37f4c3cf9e116c80883537f2f3fb474e41",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -248,7 +248,7 @@
       "original_rel": "mixkit_sfx/1686_Underground_explosion_impact_echo.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.2,
-      "sha256": "193760c0405b3d0f1147aafe2d656d27012acec2da1b5642161784a6c7637df5",
+      "sha256": "525fa5c7160247ca824bf1ea887b37c4b51d8ea402c5e070db48a415b7a4ab41",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -260,7 +260,7 @@
       "original_rel": "mixkit_sfx/1687_Dramatic_metal_explosion_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.25,
-      "sha256": "becb8a9f30dba3ecbda3da9a0365ef1ce58f631b45bd9f47a1efe477240018b7",
+      "sha256": "06cf343688bf0a07a34fdd36bcba7b744932d3ff4c0694b0b7aafbec0d610fd2",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -272,7 +272,7 @@
       "original_rel": "mixkit_sfx/168_Fast_air_sweep_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.65,
-      "sha256": "11da4eae46dbe9d5c337e0ddb0369c367c6cc4b3b10a9f5500084d766716e988",
+      "sha256": "218f8b5db31f552080ed2a3a5e97cfe26b152a72dc542df8f50a349887e595d9",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -284,7 +284,7 @@
       "original_rel": "mixkit_sfx/1692_Pixel_chiptune_explosion.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.41,
-      "sha256": "a9e9ee67866d4d33f51650a19e1c6b599dac0b37902a9e9298bf95a110b1b46b",
+      "sha256": "b7c531b823a04bec40acfb305118eec9241684be47b0de05fc369fd05c8833ff",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -296,7 +296,7 @@
       "original_rel": "mixkit_sfx/1695_Whoosh_transition_explosion_echo.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 9.99,
-      "sha256": "1ffc4ae0824ad9ba622c4d0ccdb08f33aae1bd873d63171e8ec90e70820ca4fa",
+      "sha256": "51610e7e2f986638b8d65a53041ef291d597dc5bb3bcacf8c0628fb8486abb3b",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -308,7 +308,7 @@
       "original_rel": "mixkit_sfx/169_Futuristic_sweep_pass_by.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.85,
-      "sha256": "58b07ec4241678953f05e95ade6be841f76eeadad5402570d608883c7c856046",
+      "sha256": "f26065cc2397bb882c322aed6e66fa89e9b0695051ada404eebddf21b9f967dd",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -320,7 +320,7 @@
       "original_rel": "mixkit_sfx/170_Futuristic_ship_sweep_pass_by.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.17,
-      "sha256": "c9ffd7c3c8f84e98af40f45e7f00cdbe3f792c3deb0a9d3519c9848781681fcd",
+      "sha256": "b5c3199253c0b113750b77b5f608b9c50d361eee36951359888bb45cc919a786",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -332,7 +332,7 @@
       "original_rel": "mixkit_sfx/1714_Fast_rocket_whoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.06,
-      "sha256": "40f311a78ed93cbd7fb42a23ff8316c37a58d1fcad74531d501de6869d22e81f",
+      "sha256": "ea7e469a42b314de1488d40dbdc4278528f6f6fee39bf701aed884df19b21a36",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -344,7 +344,7 @@
       "original_rel": "mixkit_sfx/171_Futuristic_robotic_fast_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.78,
-      "sha256": "b9d4681fd874b1f7650d4f44ce59400f77e397e8cbca2bc8213485425e426e7a",
+      "sha256": "7aa0fd4273435c7f9005387741d4ad3c6dd684e82a20311ecb1af0b7848af97a",
       "subcategory": "sfx_glitch",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -356,7 +356,7 @@
       "original_rel": "mixkit_sfx/1721_Rocket_landing_whoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 9.29,
-      "sha256": "59316a69b2fa0de36c898d2e3c83017c9c8e5668a91e048222bd854bbf321bf4",
+      "sha256": "16c2ddd3a05a24978beaad9a2fdc65cb8e52c927c041e68ceb0809234b9a1dac",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -368,7 +368,7 @@
       "original_rel": "mixkit_sfx/172_Sweeping_glass_debris.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.67,
-      "sha256": "aee521a46d6666688a07f1f8b0feda009ee8681705111f57fb88ad91d04943fe",
+      "sha256": "e40e1443dbf18b31221b4bc4e23d7715038bfcbd96d37769d7eca4252f981612",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -380,7 +380,7 @@
       "original_rel": "mixkit_sfx/174_Fast_sweep_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.44,
-      "sha256": "35e115d3adeff00afac9988b98448258cebe216e945e02d472e2397c0590b547",
+      "sha256": "7d008cf3b9fb7c120c8ff65b21cd6e630d4f53e7381c49e74a120838c5de0719",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -392,7 +392,7 @@
       "original_rel": "mixkit_sfx/175_Short_transition_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.31,
-      "sha256": "b601d0e700d5f555ff62b53d020d550c8768f2691190d5a900ca8b58457f614c",
+      "sha256": "2d47d91601826d5a8e6a5a3b2d1674782792462e23edb29f428cd3d00a39dcf9",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -404,7 +404,7 @@
       "original_rel": "mixkit_sfx/2150_Impact_of_a_blow.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.36,
-      "sha256": "0d772db5047ed531006680b80811b4136c8124f356901eb10993d7e252e106ec",
+      "sha256": "59f794797ae135936babeaa1da73d7fdf08dfd7fee7572962a0c852ab0a6d785",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -416,7 +416,7 @@
       "original_rel": "mixkit_sfx/2159_Meat_hit_sound.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.3,
-      "sha256": "90719ffc157c98cf18f7b062da72e353be57c48d87fcc1f18b50bf02959d9023",
+      "sha256": "ab537d545216640fe97b5a818b636a4d82b04f10be02c1c074cd6fcc3dd4b84d",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -428,7 +428,7 @@
       "original_rel": "mixkit_sfx/2168_Sword_cutting_and_killing.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.38,
-      "sha256": "9c77774f131fe53c199b43a8d0af06c7b422687fa39176af512dffd657cda166",
+      "sha256": "00114438930fb85238ba5e18d8736aad35f7db47e5c8a4ddf336c6e4257e9631",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -440,7 +440,7 @@
       "original_rel": "mixkit_sfx/2177_Metal_grill_quick_hit.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.21,
-      "sha256": "88473a472ac1c87cc634da773ad09a15c1aa90b1c4ae6460dafbbfc0d4ed520f",
+      "sha256": "404992406d8a19a0d35bf36e4ccda6f8dcf8d67b52b04876d621c0a1a136a88d",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -452,7 +452,7 @@
       "original_rel": "mixkit_sfx/2180_Exciting_fast_hit.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.17,
-      "sha256": "1a09e37825cf2e3cd3cdaf29ab329c1683b16892b1c55939fea9620460ca3ee5",
+      "sha256": "61b96e4e56d2a3a5f433e7eb26412481c5f977106d46c9b671965d79b9cbea89",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -464,7 +464,7 @@
       "original_rel": "mixkit_sfx/2181_Microphone_hit.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.85,
-      "sha256": "d89f1b1b86aaf0c7359f23ab978563c75dea13d3ee2aca0ec7ea6ca3e74a876c",
+      "sha256": "7a98199d749753d700a6e4b0bece442fdc309dc0886b28f971fb38f876b23d4e",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -476,7 +476,7 @@
       "original_rel": "mixkit_sfx/2182_Wood_hard_hit.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.19,
-      "sha256": "52b48cbe0461efa47f57e5b367886666b9bfcbe547e52e93f7f23f717cf40bbf",
+      "sha256": "227445f3b1e3742cffea1468408850e042b47a8bfb7a8cc2ffd94e5eb92a9ad7",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -488,7 +488,7 @@
       "original_rel": "mixkit_sfx/2183_Glass_hitting_a_metal.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.15,
-      "sha256": "cfa96f5fb8444f722f0224a03f4191cf976aadc74766dc620d12a2539d4cf770",
+      "sha256": "81d9a0afdadff65506ea55cb3b77ad077870519b430a4a93ff8ace24bd4c2be3",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -500,7 +500,7 @@
       "original_rel": "mixkit_sfx/2186_Blast_hit_with_echo.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.04,
-      "sha256": "a25ddd5e16d8b3c28a8b2ee0ebda263519c20b33043ab3fef236a592eb3eb973",
+      "sha256": "b64e9558276b3666772e437e2530ceee973e350438d7eb3a997eaf7a45ee9010",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -512,7 +512,7 @@
       "original_rel": "mixkit_sfx/2187_Low_explosion_indoors.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.27,
-      "sha256": "820121bca7739a677ed091fabd788f18d18616f1a2f151902b660c9e41b3f9ab",
+      "sha256": "40ae780696469d3f668d48bde617f8ac8857b7f99983a1956544906d62f4f77a",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -524,7 +524,7 @@
       "original_rel": "mixkit_sfx/2198_Strong_punches_to_the_body.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.77,
-      "sha256": "06eaf39cf5dd57cccf290f1dd3fa4fd7cb594f3448582be8373445aaf36a6cad",
+      "sha256": "9fea450a7f60b3c1952a66697cb540ac2a3021145b3f4ae484f0af9c633dd5eb",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -536,7 +536,7 @@
       "original_rel": "mixkit_sfx/2199_Body_cutting_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.07,
-      "sha256": "4e09a5a34b7b4b313919196f3f563c9d8b7c0a978f5286e4da43c7b62575e26e",
+      "sha256": "649c0d003b257ddee022971adc6d3987cb231bdb088cfd08bfa5586b55acc547",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -548,7 +548,7 @@
       "original_rel": "mixkit_sfx/2289_Warfare_horn.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.66,
-      "sha256": "0da887bfac3cf2702fa613d79e5b058c9ec6dbe09d96bf3b6c0dc685beee8aad",
+      "sha256": "bd3f03ef37e5e491e4e223ffd384e948679bc9c896c3bfddca043a77309758a7",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -560,7 +560,7 @@
       "original_rel": "mixkit_sfx/2290_Epic_orchestra_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.65,
-      "sha256": "6c314b30788fdcd9b44819abbb90dd45fb079d84b1eaf1393a4721b0f6fcc1a6",
+      "sha256": "12873f5d66368ebd0a36428d70aa21f573a5df45bc542a9be8165ad0da3902e9",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -572,7 +572,7 @@
       "original_rel": "mixkit_sfx/2291_Eerie_trailer_horn_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.13,
-      "sha256": "f434cd3bc3d8c1058d347b05120bef1d6811522047249c9c70d0c488f57e3533",
+      "sha256": "4b541dae36e14a081db8a56dc5b766327fc6a2dba278e1c47e8a7991ba523f41",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -584,7 +584,7 @@
       "original_rel": "mixkit_sfx/2295_Pulsating_bass_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 6.41,
-      "sha256": "2be233ce0395c44d0d7a36e1e8b3ed8c436ef8522b4c3f51c4f4b2eab73208f1",
+      "sha256": "af65ae7ca1569c261774e6a511c12fb09d9ecb21b52f0f53ed231773cef89bc8",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -596,7 +596,7 @@
       "original_rel": "mixkit_sfx/2297_Bass_rumble_hum.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 6.44,
-      "sha256": "1a25d8eaa8e4998f7a180b85649620ae3d2dcde7b805f3d8a889b78ff9ec5ed1",
+      "sha256": "93c2ce155418c91c1c59d33ac5e1b32bd836c5d53a77f2c4d1dd60fc786aaab4",
       "subcategory": "sfx_noise",
       "license_tier": "free",
       "content_kind": "loop"
@@ -608,7 +608,7 @@
       "original_rel": "mixkit_sfx/2350_Magic_sparkle_whoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.51,
-      "sha256": "949048b337daa413edc1da7b43b50a60fee31507652bbf3f6b0ca6f7a9291d47",
+      "sha256": "8aeaaec3466435d148a53abfba3aec418a32fdbfb9fb13c11bf3114d90dab040",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -620,7 +620,7 @@
       "original_rel": "mixkit_sfx/2408_Storm_coming_whoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.86,
-      "sha256": "80e5952f8fbf976dded4f2b5efcbb6118aedec71d755523e8c626915fb3c6963",
+      "sha256": "e66690a51ad2862cd21ec02cbd7443d0d97e8650186763e3e96d31e9af358f0d",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -632,7 +632,7 @@
       "original_rel": "mixkit_sfx/2412_Storm_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 11.24,
-      "sha256": "243f19b9529920112130dff1c30bb08fb140382de856d9cc2d1528277cf2ed74",
+      "sha256": "3345ebd6fe5c45029a6996c4906f65f55db57bd5d08b5c1e9b2c9d2b467ed246",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -644,7 +644,7 @@
       "original_rel": "mixkit_sfx/255_Fantasy_game_sweep_notification.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.14,
-      "sha256": "61c411a8467da51073b9533ec832f1587402d01162bc9a77c0e9db99f7e888cb",
+      "sha256": "94cda07e1402948e0a47448e275b3e449d692f652cab30965cdf4cb5739e7097",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -656,7 +656,7 @@
       "original_rel": "mixkit_sfx/257_Magic_sweep_game_trophy.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.97,
-      "sha256": "f126b77b45825959a9251b5661c040051cca09e1fcfe0884eb995609b4e5f8d0",
+      "sha256": "2627e4695e5aa61e68de99ab42eb182941d36d8d3f99af9fb04b17c4987222a2",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -668,7 +668,7 @@
       "original_rel": "mixkit_sfx/2586_Magical_light_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.81,
-      "sha256": "1334b7083941fa4700ae3d856e5c549333c834a974d2a44faeaffd503109d810",
+      "sha256": "e1c791cfabda439548cb82598529bc1e9d63b9318ae77162e486b7e9e88c79b1",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -680,7 +680,7 @@
       "original_rel": "mixkit_sfx/2589_Shot_light_energy_flowing.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.65,
-      "sha256": "a9bec4d9a5570da9277f6bc9382fe48489829208cbaed31966b9e2420affc6a4",
+      "sha256": "4b40051b7ac58befa1b1f1de8baead89096d911c65295e0033513933829c147c",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -692,7 +692,7 @@
       "original_rel": "mixkit_sfx/2596_Electric_whoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.47,
-      "sha256": "b793da27ca0cdd698d6c30f17490826122b52b108baa031f41b093c7180c9546",
+      "sha256": "2ef8599eb2c9b4561aa7c00fb497474b7282555f4119650467d8a4e81faf81bc",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -704,7 +704,7 @@
       "original_rel": "mixkit_sfx/2599_Heavy_electric_shockwave_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.21,
-      "sha256": "f39e86b4b3339332400e218b8b249ddab1044bbed11383a6d0802a739d282217",
+      "sha256": "d09ee4b24cbaaf41b5cd8865dccfdbf758fd999db87fce008976b7a194589204",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -716,7 +716,7 @@
       "original_rel": "mixkit_sfx/2600_Electricity_static_power_up.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.65,
-      "sha256": "cec4b9aac68c09ce21685ca3bd01645f4eafb760574baf707bce025d9475802a",
+      "sha256": "067ed6abe7c0e4e4b934312872185672ff065ded0b4b883e74a81cc755b4327f",
       "subcategory": "sfx_noise",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -728,7 +728,7 @@
       "original_rel": "mixkit_sfx/2608_Air_zoom_vacuum.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.35,
-      "sha256": "2e3c58db536221b5dd8f6b92417ddf586e0af18d6991b47d3dd679a8faeff5f2",
+      "sha256": "a1e8d4757b84e29da2ff0e80f5e52cea5516b478787298ada842374f865b9411",
       "subcategory": "sfx_noise",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -740,7 +740,7 @@
       "original_rel": "mixkit_sfx/2615_Mighty_mysterious_swoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.06,
-      "sha256": "a4352becb22e465a31c66caf4056620bc712895a4ab46806d78a6b170bd62cef",
+      "sha256": "e61ab40574ac3a110fe49dfee3febf8cb3518e0cf64b1b85d7489a2662b8ff33",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -752,7 +752,7 @@
       "original_rel": "mixkit_sfx/2623_Ghostly_whoosh_passing.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.11,
-      "sha256": "53b9aff230689797415a1d63f242c0f74785a766d246502f9bd4b5e7ccfd58c8",
+      "sha256": "e60f196d3f708f609dfeed190d2a527580df0702b9a65b97ea0555e6dc2aee46",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -764,7 +764,7 @@
       "original_rel": "mixkit_sfx/2628_Relaxing_harp_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.14,
-      "sha256": "9af09554d4a30ad9ae446904ba10dbf615f8717c7b9a8e9501ca1c72b185f23d",
+      "sha256": "85d936768c6c0cd37ddaf364959ed7e7b19de860defe59d1ca22a54b7901cb1b",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -776,7 +776,7 @@
       "original_rel": "mixkit_sfx/2629_Magic_astral_sweep_effect.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.36,
-      "sha256": "61d6cbdf18f3e304fa7c3c47ca6c88434f6677300bbd308cd1e601eb91f3b176",
+      "sha256": "e3caeb7c57b703f1ad07a85f76f5bebb027f5071a8873812d518aa31e99a9b05",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -788,7 +788,7 @@
       "original_rel": "mixkit_sfx/2630_Terror_sweep_of_darkness.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.93,
-      "sha256": "4ffa9386dfa6edf455c41150dec18f5b2ef0224f89297bd253b083586f9efe82",
+      "sha256": "b59eec86ece4d1c9246d7b4fdfdd408bafa0d0bbf142f4a19379fa90a2a7ffcb",
       "subcategory": "sfx_glitch",
       "license_tier": "free",
       "content_kind": "loop"
@@ -800,7 +800,7 @@
       "original_rel": "mixkit_sfx/2631_Digital_sweep_effect.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.43,
-      "sha256": "4a54f62ee155115a440453fa87ceb62206db8b79b1770ced6b358555526f54a7",
+      "sha256": "91e7eb76efe248f2ebb2bcef869ec7a5afb3716c71738bf69633b72b7f0aaeaf",
       "subcategory": "sfx_glitch",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -812,7 +812,7 @@
       "original_rel": "mixkit_sfx/2632_Whoosh_wind_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.78,
-      "sha256": "64d90ced93a11e029c01013ed6ff2c6e07b508cd8ba3b80d2d3a2f5c19464cb9",
+      "sha256": "5e949eae869aeca015dff27f58f344f750043f54c6ade58eca3ad8fbac6a98d6",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -824,7 +824,7 @@
       "original_rel": "mixkit_sfx/2633_Sweeping_sparkle_presentation_intro.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.03,
-      "sha256": "4f437e63ef61df561912953a7b576d301183461a8db39f45bd6053c04d327806",
+      "sha256": "79a29dfa0d6eb5cabe25d1a3759ff887e7b1b5833a586258f206153cab728b96",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -836,7 +836,7 @@
       "original_rel": "mixkit_sfx/2634_Futuristic_transition_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.07,
-      "sha256": "0f2427677961b1eede1f36a5fa6479d386bcc434aa52d8f6dbfda2352b415b50",
+      "sha256": "97702792023253c524b97c214dc55b6aad17b5ebcc0cb2527cf9c39d5733e427",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -848,7 +848,7 @@
       "original_rel": "mixkit_sfx/2635_Futuristic_cinematic_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.12,
-      "sha256": "93241209cec9757b48be058eae1a171da704edaa4cd100e42abe5fc0b2e35500",
+      "sha256": "92d1aa16b1b8ea54d210c29c46dba246a3409f8eaf54523a25377d0d16de82c6",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -860,7 +860,7 @@
       "original_rel": "mixkit_sfx/2636_Futuristic_metal_transition_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.77,
-      "sha256": "fa6b7afe32dd6b213e7ffed4d0b2ae187d844eb6bcf5e22f7157dfe4cf599005",
+      "sha256": "de099ba3429a81f3f69e74b30eb97bd2dcff04fb00aba4ce61bc23615fb32a04",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -872,7 +872,7 @@
       "original_rel": "mixkit_sfx/2637_Fast_air_transition_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.38,
-      "sha256": "cdf41598a9c8bdb32d0a352f7ba6e17e5aa8e514739ce2124dd3f24b45ddf883",
+      "sha256": "ed04ea441917b9c327f168077839b1a1dd9890fde7aba3ca62bbd5b9f3f29967",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -884,7 +884,7 @@
       "original_rel": "mixkit_sfx/2638_Magic_transition_sweep_presentation.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.96,
-      "sha256": "bd420938ccd4875535de2f995b3065d4b631c55a7ed1cd66a72c50e58db9e339",
+      "sha256": "400cca9d332906fadd54d3d2ee95fc8e8465932c551c16e0e688dd1972c73ba5",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -896,7 +896,7 @@
       "original_rel": "mixkit_sfx/2639_Quick_metal_transition_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.09,
-      "sha256": "bf0cb105da89ee62bfde7ced9dc3dc7b3d1f11bd2572d51016c25fbefb3e4daa",
+      "sha256": "b280fbac71b855add867721a2246399bc7e3b2c14e402f482992816c32023dc6",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -908,7 +908,7 @@
       "original_rel": "mixkit_sfx/263_Gore_video_game_blood_splash.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.67,
-      "sha256": "dc025af74ba9004622888f880e7f29b37aa821d266404d291ac2ecb43d075248",
+      "sha256": "e05a781f653507c3bc3696c80af70fde5ca2be798f38da879beddf55356fc8b5",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -920,7 +920,7 @@
       "original_rel": "mixkit_sfx/2650_Engine_slow_spinning_whoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.19,
-      "sha256": "baf93e8493a9bc5c0ef2a900dde97dbba0488528eaddc9cb4e3c8219a5dea693",
+      "sha256": "2fadea22a0665a6815883b90ee93816ec4f74da246dc76089758fa86c9894270",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -932,7 +932,7 @@
       "original_rel": "mixkit_sfx/2651_Flickering_insect_whoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.52,
-      "sha256": "5ea806b306425f9e547d53153ff1bb5dd6e3a12278599b71b3485f17ece4614e",
+      "sha256": "fdc74f1d0cae71ffbfe07f2fe102f3f043eb41251abe4167cfa600568bc5ea2d",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -944,7 +944,7 @@
       "original_rel": "mixkit_sfx/2654_Cartoon_blow_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.71,
-      "sha256": "4231a19039d11f0849bb41ba276f5d6246c60ed44d14a84a8cf4c0641240a55b",
+      "sha256": "99bf755452d29ff450def9cae61e63a9cc758d9e29460cfd513e1a22b64b55d7",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -956,7 +956,7 @@
       "original_rel": "mixkit_sfx/2655_Fast_impact_blow.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.66,
-      "sha256": "aacba0416332f47b80bf512d2878948ab3326a356813bd3511fc771f1adfd0a8",
+      "sha256": "29cdceb57cbe068aacb7c6be64d8299fd2035935dad4381ce2bc3d5dcb960b40",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -968,7 +968,7 @@
       "original_rel": "mixkit_sfx/2719_Cinematic_riser_helicopter_engine.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 12.99,
-      "sha256": "ad3a4297593e9af97d493fc98f729435dac8a2e23b4140d08338af170a49f6f9",
+      "sha256": "8b23a8a5dad3aedcdb57f3b065c7c5b258f787c53a2cbe6c493e2687f427ef51",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -980,7 +980,7 @@
       "original_rel": "mixkit_sfx/2774_Axe_hits_to_a_plate.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.16,
-      "sha256": "9746a0c13d7b42e0b15a03121976400abeaa09cad8a00e9df5939e74077a6cd5",
+      "sha256": "e3aafef7929170705db06a48b57e794d6283f18e0ba11be2ff510a108504495e",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -992,7 +992,7 @@
       "original_rel": "mixkit_sfx/2775_Hitting_metal_armor.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.67,
-      "sha256": "0808ad9ed0d909aabb3bbc2265ef8f1a6e73a31a7fc61adb31501fcf23e1f739",
+      "sha256": "6806a543954b315d0bfffca2724a796a899f91e8a9962be31fc7d314e6344112",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1004,7 +1004,7 @@
       "original_rel": "mixkit_sfx/2777_Masive_explosion_in_battle.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 7.04,
-      "sha256": "57fff806c4204d735097e448cb134a1234fe9067743cda781d76e6822138c808",
+      "sha256": "860ab2b7a1046b263e8b9cde0022878fe0570c9178684ecaebffbf535f7406de",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1016,7 +1016,7 @@
       "original_rel": "mixkit_sfx/2778_8-bit_game_shots.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.61,
-      "sha256": "7e29748d98c00fb0c8ab1038c4baf912e47afe58720e1c7953b46f49cdf1a19b",
+      "sha256": "79b64430e4d73f06f31c1fe91af89a64f205f5e635178efe149533cade1640e9",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1028,7 +1028,7 @@
       "original_rel": "mixkit_sfx/2779_8-bit_explosion_gun.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.66,
-      "sha256": "0eaf8ccf24599fb0c9e877a47a9cecefef3f85688765c49d892b677809f2e3b3",
+      "sha256": "77d84f83af9cabb586a58322b873b7cb1f7ef9fb89a4092edb986f6d3e5d0ed5",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1040,7 +1040,7 @@
       "original_rel": "mixkit_sfx/2780_Drums_of_war_call.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.99,
-      "sha256": "bede258a41e66630fd8cc8048a46faac57c32675229f365b53cc8226c9b68ab4",
+      "sha256": "8904e817e1f851cb0d2da76dac9c4ec066aa63441bcc4c44a4b9a2df80fd7e7f",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1052,7 +1052,7 @@
       "original_rel": "mixkit_sfx/2782_Epic_impact_afar_explosion.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.54,
-      "sha256": "bec1e488af02eea7248e305cf169890b646d4c3e892ebfc171ac19c120615338",
+      "sha256": "32c8c64d02970c8d58fbf800efbf6237b9049841fb29893830bbe0321b9bfb6f",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1064,7 +1064,7 @@
       "original_rel": "mixkit_sfx/2784_Drums_of_war.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.66,
-      "sha256": "a28bde5b1fdecc9622f6dea115b514462f22fd2c96d95e6476248589b8a102d7",
+      "sha256": "d48464286cbcf3a9cd627a4b69debfa0ac53022c36d42e5929e805af3f814c06",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1076,7 +1076,7 @@
       "original_rel": "mixkit_sfx/2800_Bomb_explosion_in_battle.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.92,
-      "sha256": "c4788f4fc2a9b236c638e031a5c4869d18407cf85ab342e16febf722bbd11f58",
+      "sha256": "3fd15be336d7ad442905b3881930027bcddf40eee5dccfd9b8db04b847b961e6",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1088,7 +1088,7 @@
       "original_rel": "mixkit_sfx/2804_Bomb_drop_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.78,
-      "sha256": "c8706cd7feca22679fe2e6cae61bc47cd74031847ce3df9fd18210713aeabe6b",
+      "sha256": "a1777e8e446e76771cb80abe5377b5c15a4841c1d8c9523bd53ac26cd3af59ab",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1100,7 +1100,7 @@
       "original_rel": "mixkit_sfx/2805_Bomb_drop_exploding.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.63,
-      "sha256": "5bd9a8fbe31231d12cd8b830d945bf5239c7ab1e1b440f0fb535f7771833571c",
+      "sha256": "98a44932e980f9c3c2aa6ce89c849150d548f013ffe52c02afa1ebc35564b4f1",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1112,7 +1112,7 @@
       "original_rel": "mixkit_sfx/2806_Bomb_drop_cold_water_explosion.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 6.56,
-      "sha256": "e58b260ad18f79cb5f6972f802a6bf9de203dfb0b6f58e81a17810c3e6b14007",
+      "sha256": "37870d59e6f6d94094fc99e1ebd151cbd95ab8c7eec67f9eb11fce90731b2282",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1124,7 +1124,7 @@
       "original_rel": "mixkit_sfx/2807_Vide_game_time_bomb_explosion.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 6.44,
-      "sha256": "c3b88932eabab14ca75cbc7c39e4577c2caa093a67049636b2d61f40744a235a",
+      "sha256": "8c23a652f7973560a8a548686018a36a92a9492d61299a91c81987de0319b177",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1136,7 +1136,7 @@
       "original_rel": "mixkit_sfx/2900_Movie_logo_intro_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 7.83,
-      "sha256": "423d761ad8b4d37ebf26c937aa4090b750483abd845a60f7265c54722bc56cdc",
+      "sha256": "3dec5faa0d825878603878ddb2ed4b886abc00648dbd340445269c7c658aa744",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1148,7 +1148,7 @@
       "original_rel": "mixkit_sfx/2901_Epic_movie_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.49,
-      "sha256": "44ddc490446326fea4aa622a3c20e0d14bd5b1a0cfe1ff86a37359833865c46b",
+      "sha256": "876b01e2a918679df42d37953692a9105b5e07d8d1d6302dbcfcafc23f23282d",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1160,7 +1160,7 @@
       "original_rel": "mixkit_sfx/2902_Movie_impact_intro_presentation.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.69,
-      "sha256": "06bc075e070d3a141ac6004f6220061a6e115bedd94b105e643efeba7a42fced",
+      "sha256": "c6fd930a390579864ae2bdc453d4011341dace876306e3ecd9cff9d0d2d00266",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1172,7 +1172,7 @@
       "original_rel": "mixkit_sfx/2903_Movie_whoosh_impact_presentation.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.92,
-      "sha256": "93b5edf609d51409f5cec7991ccd96825c7a426d400ff3c0fb951001fb0c522a",
+      "sha256": "548d5f33d2a7c2739b6cfd768ae6a2bb155ed310f171c85d5cf0f61b171eb1d6",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1184,7 +1184,7 @@
       "original_rel": "mixkit_sfx/2907_Epic_blockbuster_movie_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.77,
-      "sha256": "6060488ef1612a96eeb0af946dc5ee99e8ae5e53d3a52517765125fae32888d1",
+      "sha256": "462271ed36458e7187eecdfeed3f02c011a3dad2579469358c15364a77daac07",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1196,7 +1196,7 @@
       "original_rel": "mixkit_sfx/2908_Movie_trailer_epic_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.94,
-      "sha256": "914bdad506516105f04e748662dff97ad69d942fca8f198ddefeb380ffcce48f",
+      "sha256": "9af833b0bd97332441bbef6a0f566c3909ecc319b8d8b34f10b3a9d126547c51",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1208,7 +1208,7 @@
       "original_rel": "mixkit_sfx/2909_Cool_impact_movie_trailer.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.03,
-      "sha256": "8961c4d885e684a414582682ca1306fb923c68038d072f7e05d4aa7c2d3a82bb",
+      "sha256": "f4a24d7390186eff065db7d771e1376f7dcd7a9cafbdd7b7fc39cd0c4de66606",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1220,7 +1220,7 @@
       "original_rel": "mixkit_sfx/2915_Blockbuster_suspense_movie_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.44,
-      "sha256": "8540edcb06859804cec8723c824218fe3bc24804c07704878b2104c3429ecdd5",
+      "sha256": "a31b93878ef5d033e656f83687d5b23d0a4426d9804dd14f9117a6ac6ab36e73",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1232,7 +1232,7 @@
       "original_rel": "mixkit_sfx/2917_Suspence_cinematic_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 9.94,
-      "sha256": "686dcb7d18b296aebf026c01fc647a97d00d40d603e81a6fc53f567ff4f2266c",
+      "sha256": "3c7bc52af23e20a1582a384cb4c42256f9fde2d3aa3fa3214bbbcfefa09ff1c5",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1244,7 +1244,7 @@
       "original_rel": "mixkit_sfx/2918_Epic_movie_trailer_whoosh_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.05,
-      "sha256": "b0201710e5601ecbf8cddd802695d462d4f0af6a681f4c877a5a187d3b966edd",
+      "sha256": "0acde9b0929346ee624ca4f30d5184114caa33ab934eabf0ca07a10f08622806",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1256,7 +1256,7 @@
       "original_rel": "mixkit_sfx/2919_Movie_trailer_whoosh_hit.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.91,
-      "sha256": "e796438940c95f362c0a8c38d2892e5779885366501ed2da283886f820fc0ff7",
+      "sha256": "7f270979a7bd680286356b6a77e0a7c4a3592214317603cd9caaca3a3e82491e",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1268,7 +1268,7 @@
       "original_rel": "mixkit_sfx/2937_Bone_breaking_with_echo.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.34,
-      "sha256": "da10ae51ba51b0dc59972f9a34f5aa49900f42293ccfb3e898b1b875fa5df015",
+      "sha256": "cfcfe3a75ae4bed8b82fda7dfa2537b8437ab1020d52882cee9612c5918ae924",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1280,7 +1280,7 @@
       "original_rel": "mixkit_sfx/3005_Explainer_video_pops_whoosh_light_pop.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.15,
-      "sha256": "3bea34f085f9f0d6e5d88d9f103ea2fdb3cb6a7b03387bc463992288a2f0e635",
+      "sha256": "bb9770607d7d7498b0bad86538de15631599438e7e03c6d49c19c13e5d3b8edf",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1292,7 +1292,7 @@
       "original_rel": "mixkit_sfx/3024_Meteor_whoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.07,
-      "sha256": "5e0359f41f7e0acc8dd5ea706258666a9bfe3be6dec0052d8f420c3d2bae2ae0",
+      "sha256": "ebe28e087a9e8ef4cfc34e894f7f8857613bbfe777dd14ddfeb244c4ad505d50",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1304,7 +1304,7 @@
       "original_rel": "mixkit_sfx/3057_Apocalyptic_stomp_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.54,
-      "sha256": "141631d94253641cda7caad8277f035199948622608320c6d5295f4fb7f88f85",
+      "sha256": "3aa26c5038ed0881a3be6fc5b8f5480f0963731e25ef072f6d712567e6be3976",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1316,7 +1316,7 @@
       "original_rel": "mixkit_sfx/3089_Television_news_report_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.67,
-      "sha256": "d0ae66850905ab49155d5f9bf36790524f9acfe72922924fca56b82a90a07fd5",
+      "sha256": "3549800748acb62ebd5d2da9316797066d573acab6744a664c3cfacfec6ef162",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1328,7 +1328,7 @@
       "original_rel": "mixkit_sfx/3111_Warfare_horn_trailer_hit.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 6.96,
-      "sha256": "8f4eea59e1a21a49e4a6c3fdcf740792d33266a8946adbf1783f18f113ceab46",
+      "sha256": "9e43d12337be1d0a68ed9074818a54138e581325f3828f46242a306ee84ab7c4",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1340,7 +1340,7 @@
       "original_rel": "mixkit_sfx/3112_Horn_suspense_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.76,
-      "sha256": "ccaaca75e3fe651750f7228a9f12b371e5d4b2a63d29ea8979d3fe30bdf49b63",
+      "sha256": "a74f72b968f2ac9943aaf8502d4fa3fc14ff2d1fc2f5321973b906eb8ed38c48",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1352,7 +1352,7 @@
       "original_rel": "mixkit_sfx/3114_Fast_sci_fi_transition_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.42,
-      "sha256": "ef15c3a724bf0844bf80133d71691ee81b4eaa4a52d1ca817d82eb040cc41ec8",
+      "sha256": "9323577c42bea502508fb7f0187341aec97b1622e17b5fc25174161cb695ea39",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1364,7 +1364,7 @@
       "original_rel": "mixkit_sfx/3115_Fast_transitions_swoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.17,
-      "sha256": "3ac9a8f64b0092cc2d452fed701b8e708859dadf7a99c0c276ce027f4bd11b18",
+      "sha256": "084fe806cfe39afe3203253873cfaecbc51362dd93e1200509e6c3ab44963204",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1376,7 +1376,7 @@
       "original_rel": "mixkit_sfx/3120_Technology_transition_slide.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.47,
-      "sha256": "81a0a68acdf594e5cf22c2fb2309bbc45e9c99f6a6cf87b1f43f9323b8e6ba8a",
+      "sha256": "78049484fac55a8fbd4ee4983e7c4542fc17b7c36cdf72e9f186a0096b77d68a",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1388,7 +1388,7 @@
       "original_rel": "mixkit_sfx/3121_Technology_alert_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.42,
-      "sha256": "6e5600929db4c4fa9fac6d11f4893052d09de66cefebe908362a4526657ba76a",
+      "sha256": "41052c1a748cd1e61c066ab1d69d82f8fe8f295d4638145a11dc12c008caaaa9",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1400,7 +1400,7 @@
       "original_rel": "mixkit_sfx/3131_Short_impact_static.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 7.23,
-      "sha256": "be8aa34262c56d6d704a1585681fad85ba947a878e26ca7e49acd541241ab24d",
+      "sha256": "5da6a6cda247ea08cb1d1279c2e6a0b6ef7e44289c3397cb000bf9ca6f49762a",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1412,7 +1412,7 @@
       "original_rel": "mixkit_sfx/3146_Mechanical_brush_transition.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.93,
-      "sha256": "f05b399f1046dd31b021dfabacbc7c7906594d7c951052f0d29a70922603b7a9",
+      "sha256": "3bbe24dd09cdd221175511e8d96266b657d3bdaae8a4719c8ad49b3542648cfe",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1424,7 +1424,7 @@
       "original_rel": "mixkit_sfx/3153_Robot_death.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.37,
-      "sha256": "1480e0613e1415998ebaa16baf537515de4d896a024aa72523abf89b958e40fb",
+      "sha256": "b8ec4b7c9189454cf889986171b68b26f7fea1453c802ba5758971887a339838",
       "subcategory": "sfx_glitch",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1436,7 +1436,7 @@
       "original_rel": "mixkit_sfx/3161_Transition_flying_swoosh.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.77,
-      "sha256": "b483c4a03fbefa458d93ad54314fef17351f26f21b283c45f1bef3bab216d820",
+      "sha256": "94a11a67ba7be3fadc93d78786dc687059c25198fa8793465ce559174c5434a7",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1448,7 +1448,7 @@
       "original_rel": "mixkit_sfx/498_Deep_heartbeat_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.55,
-      "sha256": "2d48a469ad6313d4ac221c630e371f9b68492188e9f17d258df648f15519468f",
+      "sha256": "95d87aa016e0a4d39b798cbbffe4c23e42c3fca22585a8f765a5ec49d4c9d1da",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1460,7 +1460,7 @@
       "original_rel": "mixkit_sfx/561_Cinematic_horror_trailer_long_sweep.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.39,
-      "sha256": "8f0a956716b0e58f89e0bbe68e3570301f0d6be90e1783b4a1eca39f5b2ba031",
+      "sha256": "8679e2b95aa67f849920d21523752d4fa2a1499a39752760a01dc8c3ec3ecd76",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1472,7 +1472,7 @@
       "original_rel": "mixkit_sfx/645_Cinematic_synth_riser.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 8.82,
-      "sha256": "68c665cd3fb2b7fdf2b0180d13a9398e8c399c9185e74f75ad4d155d3f27412d",
+      "sha256": "e505b65288e8b5ac4f6adc8883e934b65e46e3ab9e0d6208c505736b8788c806",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1484,7 +1484,7 @@
       "original_rel": "mixkit_sfx/670_Metallic_sweep_suspense.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.11,
-      "sha256": "8ed29cfa328f73b2a151c3b0dad7f4b185003c10812c3bb98572dad053144d1b",
+      "sha256": "7a2f154a6c34f5d03166d97c2ac871c0b0face717d054d16224e6c15bfb89344",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1496,7 +1496,7 @@
       "original_rel": "mixkit_sfx/772_Quick_zoom_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.59,
-      "sha256": "bf1d8055cd140e3a1473336e3feabbdff213924456bb50b0d93ae1aa821218a8",
+      "sha256": "ca2ba1104ccd7705bb71bb2159b04ff402093e975c6511c9d4ff53aff50b9b78",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1508,7 +1508,7 @@
       "original_rel": "mixkit_sfx/773_Horror_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.78,
-      "sha256": "d9f9e469f03f5b18199d0e624e7e01b64b5b4b03ff0a01cf6113f5a244e62816",
+      "sha256": "52f563732746e371f0d0004978326f372f9ca2a3009b65405114c92d748a5133",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1520,7 +1520,7 @@
       "original_rel": "mixkit_sfx/774_Space_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.87,
-      "sha256": "12da2cc7fb6b7c4c6f7b5f73efcabcd81d95d3cef971c7592ca598213d196ce8",
+      "sha256": "a67f77bfeb79d593a287fc5d17d5cc991d7173d6b9424e8f479e8cb625fc48ef",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1532,7 +1532,7 @@
       "original_rel": "mixkit_sfx/778_Tunnel_impact_echo.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.29,
-      "sha256": "27718fa5d01aa22c26861a7bdb13413b62629bc32c005c8e64d03a35fbfe5a07",
+      "sha256": "01a043c1072e4b541f17a261c7fda63d9dd0cb33ca6f13cd55a248d97bdc1d4b",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1544,7 +1544,7 @@
       "original_rel": "mixkit_sfx/780_Cinematic_impact_echo.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.91,
-      "sha256": "96e57b53c8904816430989bc0c6af325e6d92204edfdb4e27366b286d4823f84",
+      "sha256": "3a7ae38aeecadd77a312e51407d77327c36e513e5f260c28482c774209b8709d",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1556,7 +1556,7 @@
       "original_rel": "mixkit_sfx/781_Cinematic_impact_waves.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 6.54,
-      "sha256": "615a96d11ab700e7af14f3c4dc38ab89bf34e2351098cc7be4bcc9a18834cef6",
+      "sha256": "60e684ce4f2dbb5e21e62e76cd5454567521b09d8b49eddd3d4e7052f91e0fd0",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1568,7 +1568,7 @@
       "original_rel": "mixkit_sfx/782_Laser_gun_impact_destruction.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.98,
-      "sha256": "d05d6df08ac268e14d75cb15d6641bfa8060702a4ec402233d9bca5d3c34b579",
+      "sha256": "006c77afd45d9886b05b40c2f51b9bd72d962d891068a1ca20429fbe70d5ec53",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1580,7 +1580,7 @@
       "original_rel": "mixkit_sfx/783_Submarine_metal_impact.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.47,
-      "sha256": "9482a661f5045abcbcc36e85d64ee98f02d14d06bfec9a0372793f7ef6542d69",
+      "sha256": "17772b3723df0b9c1943b0553ca7112ee5bfdc2c02508d61d8091191680f4382",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1592,7 +1592,7 @@
       "original_rel": "mixkit_sfx/784_Reverse_cinematic_impact_trailer.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 9.88,
-      "sha256": "77b27f07fcb99903c6d1eb9653283f86d8b2e1baa024be3d5afed89992940c03",
+      "sha256": "44f7fa5762c7a2e91addc4a7f672a552afd4e7138ff15fe2eea31e052eb6f440",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"
@@ -1604,7 +1604,7 @@
       "original_rel": "mixkit_sfx/787_Cinematic_whoosh_stutter.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.95,
-      "sha256": "669acdc005a53c0d5393b89b4ecbb49641cf802a3663f1da778f0fbfc81bbc4b",
+      "sha256": "3935508bf6598fd46cba2a433511c8bb91aefb552eda217dd3246dbd051d9701",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1616,7 +1616,7 @@
       "original_rel": "mixkit_sfx/790_Cinematic_trailer_riser.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.65,
-      "sha256": "b4c54a617ec754236bcd3910c39f1d80e7b34b5498c6db84c6c06cacb667d159",
+      "sha256": "a70b72c82ef6f6c0dd1542659814faaaeb9a7d0d25a4b6a2e6cba8bd9ade3392",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1628,7 +1628,7 @@
       "original_rel": "mixkit_sfx/833_Metal_hammer_hit.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.23,
-      "sha256": "02058080a5e093bdbb3d18488c145522dfc7389200758bf285bc7ed6bf911ca8",
+      "sha256": "79d26636c5431d9d81707c996a62aadf19757e2d3a9a8aef854cc18e3f0c8e51",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1640,7 +1640,7 @@
       "original_rel": "mixkit_sfx/868_Fairy_teleport.wav",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.61,
-      "sha256": "50732ae5c8fccc4f012cd1516595d028b1925fa630b1d69315b1a1051fc2e4bd",
+      "sha256": "ff5cfa48bd56b881c219c90ae794941c1e9c37803ae29b57937aa119a043ae6f",
       "subcategory": "sfx_noise",
       "license_tier": "free",
       "content_kind": "one_shot"
@@ -1652,7 +1652,7 @@
       "original_rel": "mixkit_sfx/1144_Short_space_stutter_intro_riser.mp3",
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 6.22,
-      "sha256": "8b6821aab469ef7ed006aa8a19153acb6487d3a07476d01ddfe78348fd422e41",
+      "sha256": "cb2ce1860d6aab74c9ceed96e0dd774f0cc28cbb92c80c166ce22f93cfd476ea",
       "subcategory": "sfx_cinematic",
       "license_tier": "free",
       "content_kind": "loop"

@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-r"""乐器池内容查重扫描（只读：不移动、不删除、不修改任何素材）。
+r"""乐器池内容查重扫描 v2（只读：不移动、不删除、不修改任何素材）。
 
-口径（与项目评估报告一致，并做全量复核）：
-  1) manifest 已记录 sha256 的条目：直接用 (size, sha256) 分组（零读取）；
-  2) 其余文件：按「文件大小 + 头 8KB + 尾 8KB」的 SHA-256 粗分组；
-  3) 粗分组内成员 >=2 时，组内做全文件 SHA-256 复核（防止签名误报）；
-  4) 最终按 (size, sha256_full) 分组，成员 >=2 即为重复。
-
-产出：
-  - stdout：每池重复数 / 冗余字节 / 跨池重复组汇总
-  - --out JSON：重复组明细（组号 -> [{"pool", "rel_path", "size"}]）
+原则：**重名 ≠ 重复，元数据 ≠ 内容**。判定重复唯一依据是文件内容：
+  1) 对每个文件计算「大小 + 头 8KB + 尾 8KB」SHA-256 作为候选签名（不信任任何
+     manifest 字段；manifest 里的 sha256 仅用于交叉核对报告，不参与判重）；
+  2) 候选签名相同的组（>=2 成员）**逐文件全量 SHA-256 复核**后重新分组；
+  3) 只有「大小 + 全量 SHA-256」完全一致才记为重复；
+  4) 复核过程中顺带核对 manifest sha256 与文件实际内容是否一致（stale hash 报告）。
 
 用法：
-  python dedupe_scan.py --root G:\musickit --out G:\musickit\dedupe_report_20260817.json
+  python dedupe_scan.py --root G:\musickit --out G:\musickit\dedupe_report_20260818.json
 """
 import argparse
 import hashlib
@@ -29,6 +26,7 @@ HEAD_TAIL = 8192
 
 
 def quick_sig(path: str, size: int) -> str:
+    """候选签名 = 大小 + 头 8KB + 尾 8KB（小文件全读）。"""
     h = hashlib.sha256()
     h.update(str(size).encode())
     with open(path, "rb") as f:
@@ -42,16 +40,16 @@ def quick_sig(path: str, size: int) -> str:
     return h.hexdigest()
 
 
-def full_sig(path: str, size: int) -> str:
+def full_sha(path: str) -> str:
+    """文件内容的完整 SHA-256（不含大小前缀）。"""
     h = hashlib.sha256()
-    h.update(str(size).encode())
     with open(path, "rb") as f:
         for chunk in iter(lambda: f.read(1024 * 1024), b""):
             h.update(chunk)
     return h.hexdigest()
 
 
-def collect(root: str, pool: str) -> list[dict]:
+def collect(root: str, pool: str) -> list:
     pool_dir = os.path.join(root, pool)
     if not os.path.isdir(pool_dir):
         return []
@@ -78,12 +76,12 @@ def collect(root: str, pool: str) -> list[dict]:
             except OSError:
                 continue
             out.append({"pool": pool, "path": path, "rel": rel,
-                        "size": size, "sha": manifest.get(n)})
+                        "size": size, "manifest_sha": manifest.get(n)})
     return out
 
 
 def main():
-    p = argparse.ArgumentParser(description="乐器池内容查重（只读）")
+    p = argparse.ArgumentParser(description="乐器池内容查重 v2（纯内容判定，只读）")
     p.add_argument("--root", default=r"G:\musickit")
     p.add_argument("--pools", default=None, help="逗号分隔池名（默认全部 13 池）")
     p.add_argument("--out", default=None, help="重复组明细 JSON 输出路径")
@@ -95,40 +93,43 @@ def main():
         pool_entries = collect(args.root, pool)
         print(f"[scan] {pool}: {len(pool_entries)} 个音频文件")
         entries.extend(pool_entries)
-    print(f"[scan] 合计 {len(entries)} 个文件，开始分组…")
+    print(f"[scan] 合计 {len(entries)} 个文件")
 
-    full_groups: dict[tuple[int, str], list[dict]] = defaultdict(list)
-    quick_groups: dict[tuple[int, str], list[dict]] = defaultdict(list)
+    # 阶段 1：候选签名（不信任任何 manifest 字段）
+    quick_groups = defaultdict(list)
     for e in entries:
-        if e["sha"]:
-            full_groups[(e["size"], e["sha"])].append(e)
-        else:
-            quick_groups[(e["size"], quick_sig(e["path"], e["size"]))].append(e)
+        quick_groups[(e["size"], quick_sig(e["path"], e["size"]))].append(e)
 
-    # 粗分组复核：组内全量哈希
+    # 阶段 2：候选组（>=2）逐文件全量复核；单成员组直接视为唯一
+    full_groups = defaultdict(list)
+    stale = []
     checked = 0
-    for (size, _q), group in list(quick_groups.items()):
-        if len(group) >= 2:
-            for e in group:
-                full_groups[(size, full_sig(e["path"], size))].append(e)
-                checked += 1
-        else:
-            full_groups[(size, "quick-unique")].append(group[0])
-    print(f"[scan] 全量哈希复核 {checked} 个文件")
+    for (size, _q), group in quick_groups.items():
+        if len(group) < 2:
+            # 单成员 = 唯一内容，直接跳过（绝不用共享哨兵键，避免同尺寸不同内容误撞组）
+            continue
+        for e in group:
+            sha = full_sha(e["path"])
+            checked += 1
+            if e["manifest_sha"] and e["manifest_sha"] != sha:
+                stale.append({"pool": e["pool"], "rel": e["rel"],
+                              "manifest_sha256": e["manifest_sha"],
+                              "actual_sha256": sha})
+            full_groups[(size, sha)].append(e)
+    print(f"[scan] 候选组全量复核 {checked} 个文件")
 
     dup_groups = {k: v for k, v in full_groups.items() if len(v) >= 2}
 
-    per_pool = defaultdict(lambda: [0, 0])   # pool -> [重复文件数, 冗余字节]
+    per_pool = defaultdict(lambda: [0, 0])
     cross = 0
     for (_size, _sha), group in dup_groups.items():
-        pools_in = {e["pool"] for e in group}
-        if len(pools_in) > 1:
+        if len({e["pool"] for e in group}) > 1:
             cross += 1
         for e in group:
             per_pool[e["pool"]][0] += 1
             per_pool[e["pool"]][1] += e["size"]
 
-    print("\n每池重复统计（重复文件数 / 冗余字节 = 每个重复组只保留 1 份可回收的空间）：")
+    print("\n每池重复统计（重复文件数 / 全组仅留 1 份可回收的冗余字节）：")
     for pool in pools:
         n, wasted = per_pool[pool]
         print(f"  {pool:<10} {n:>6} 个重复文件  {wasted / 1e6:>10.1f} MB 冗余")
@@ -136,16 +137,21 @@ def main():
     total_wasted = sum(v[1] for v in per_pool.values())
     print(f"  {'合计':<10} {total_n:>6} 个重复文件  {total_wasted / 1e9:>10.2f} GB 冗余")
     print(f"  重复组数：{len(dup_groups)}（其中跨池 {cross} 组）")
+    print(f"  manifest sha256 与实际内容不一致（stale）：{len(stale)} 个文件")
 
     if args.out:
         out = {
+            "method": "纯内容判定：大小+首尾8KB候选签名 -> 候选组全量SHA-256复核；"
+                      "manifest sha256 仅交叉核对，不参与判重（重名!=重复）",
             "root": args.root,
             "pools": pools,
             "total_files": len(entries),
+            "full_hashed_files": checked,
             "duplicate_groups": len(dup_groups),
             "cross_pool_groups": cross,
             "duplicate_files": total_n,
             "wasted_bytes": total_wasted,
+            "stale_manifest_hashes": stale,
             "groups": [
                 {"size": size, "sha256": sha,
                  "members": [{"pool": e["pool"], "rel": e["rel"], "size": e["size"]}
