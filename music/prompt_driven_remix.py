@@ -118,6 +118,7 @@ def map_instrument(inst: str) -> dict | None:
                 "pool": meta.get("pool"),
                 "available": meta.get("available", False),
                 "mixer_role": meta.get("mixer_role", meta.get("pool")),
+                "prefer_subdirs": meta.get("prefer_subdirs") or [],
             }
     return None
 
@@ -177,21 +178,43 @@ _NOTE_HINT_RE = re.compile(r"(^|[^a-z0-9])([a-g](?:#|b)?\d)([^a-z0-9]|$)", re.I)
 _MELODIC_ROLES = {"guita", "synth", "keys", "strings", "brass", "woodwind", "ethnic"}
 
 
-def _loop_preferring(files: list[str]) -> list[str]:
-    """旋律层选音偏好：loop/BPM 显式素材 > 非单音采样 > 全量回退。
+def _loop_preferring(files: list[str],
+                     entries: dict[str, dict] | None = None) -> list[str]:
+    """旋律层选音偏好（三级回退）：loop/BPM 显式素材 > content_kind=loop >
+    非单音采样 > 全量。
 
     单音采样（如 "EHn_susDyn_1-127_D3 - Group 1.wav"、"Basic Piano C2"）当 loop
     循环会产生随机音高、与其它层不协和；此函数把风险从「随机命中」降为「最后回退」。
+    entries 为池 manifest 条目（{basename: entry}），提供 content_kind 形态判定。
     """
     if not files:
         return files
     tier1 = [f for f in files if _LOOP_HINT_RE.search(f) or _BPM_HINT_RE.search(f)]
     if tier1:
         return tier1
-    tier2 = [f for f in files if not _NOTE_HINT_RE.search(os.path.basename(f))]
-    if tier2:
-        return tier2
+    if entries:
+        tier2 = [f for f in files
+                 if (entries.get(os.path.basename(f)) or {}).get("content_kind") == "loop"]
+        if tier2:
+            return tier2
+    tier3 = [f for f in files if not _NOTE_HINT_RE.search(os.path.basename(f))]
+    if tier3:
+        return tier3
     return files
+
+
+def _prefer_subdirs(files: list[str], pool: str, subs: list[str]) -> list[str]:
+    """优先返回位于 taxonomy prefer_subdirs 子目录中的文件；无命中则全量回退。
+
+    例如 woodwind 类目 prefer ["woodwind", "recorder"]：优先取爬虫入库的成品曲
+    子目录，避开 15k 个管弦单音采样；keys_piano 优先 piano/ 子目录。
+    """
+    if not files or not subs:
+        return files
+    pool_dir = os.path.join(MUSICKIT_ROOT, pool)
+    out = [f for f in files
+           if os.path.relpath(f, pool_dir).split(os.sep)[0] in subs]
+    return out or files
 
 
 def _pool_entries() -> dict[str, dict[str, dict]]:
@@ -246,9 +269,11 @@ def prompt_to_mix_params(data: dict, rng: random.Random,
             files = collect_for_pool(m["pool"])
             if release_safe:
                 files = _m_filter_release_safe(files, m["pool"], entries, [])
-            # 旋律层优先 loop 类素材；鼓/贝斯在抽取时按引擎口径保底 >=1 小节
+            # 先按 taxonomy prefer_subdirs 收窄到对应子目录（如 808 贝斯 → 808_bass/），
+            # 旋律层再优先 loop 类素材；鼓/贝斯在抽取时按引擎口径保底 >=1 小节
+            files = _prefer_subdirs(files, m["pool"], m.get("prefer_subdirs") or [])
             if role in _MELODIC_ROLES:
-                files = _loop_preferring(files)
+                files = _loop_preferring(files, entries.get(m["pool"]))
             if not files:
                 gaps.append(f"{inst} [空池 {m['pool']}]")
                 continue

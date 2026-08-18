@@ -151,6 +151,48 @@ def test_prompt_to_mix_params_bpm_clamp(tax, no_io, monkeypatch):
     assert pdr.prompt_to_mix_params(data2, random.Random(1))["bpm"] == 70
 
 
+@pytest.fixture
+def fix_classes_with_subs():
+    cls = dict(FIX_CLASSES)
+    cls["woodwind"] = {"pool": "woodwind", "available": True,
+                       "mixer_role": "woodwind", "prefer_subdirs": ["woodwind"]}
+    cls["keys_piano"] = {"pool": "keys", "available": True,
+                         "mixer_role": "keys", "prefer_subdirs": ["piano"]}
+    return cls
+
+
+def test_map_instrument_returns_prefer_subdirs(tax, monkeypatch):
+    cls = dict(FIX_CLASSES)
+    cls["woodwind"] = {"pool": "woodwind", "available": True,
+                       "mixer_role": "woodwind", "prefer_subdirs": ["woodwind"]}
+    monkeypatch.setattr(pdr, "_CLASSES", cls)
+    m = pdr.map_instrument("巴乌")
+    assert m["prefer_subdirs"] == ["woodwind"]
+
+
+def test_prefer_subdirs(monkeypatch, tmp_path):
+    monkeypatch.setattr(pdr, "MUSICKIT_ROOT", str(tmp_path))
+    (tmp_path / "woodwind" / "flute").mkdir(parents=True)
+    (tmp_path / "woodwind" / "woodwind").mkdir()
+    flute_file = str(tmp_path / "woodwind" / "flute" / "note_D3.wav")
+    piece_file = str(tmp_path / "woodwind" / "woodwind" / "full_piece.mp3")
+    out = pdr._prefer_subdirs([flute_file, piece_file], "woodwind", ["woodwind"])
+    assert out == [piece_file]
+    # 无命中 → 全量回退
+    out2 = pdr._prefer_subdirs([flute_file], "woodwind", ["missing_dir"])
+    assert out2 == [flute_file]
+
+
+def test_loop_preferring_content_kind():
+    files = ["a.wav", "b.wav", "c.wav"]
+    entries = {"a.wav": {"content_kind": "single_note"},
+               "b.wav": {"content_kind": "loop"},
+               "c.wav": {"content_kind": "one_shot"}}
+    assert pdr._loop_preferring(files, entries) == ["b.wav"]
+    # 无 entries → 回退旧行为（非单音优先，此时全保留）
+    assert len(pdr._loop_preferring(files, None)) == 3
+
+
 def test_loop_preferring():
     files = ["EHn_susDyn_1-127_D3 - Group 1.wav", "SRHS_110_A_Koto_Loop_04.wav",
              "plain_hit.wav"]

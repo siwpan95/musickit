@@ -252,6 +252,13 @@ def generate(profile: Optional[StyleProfile] = None,
     }
 
 
+def _scale_phrase(scale):
+    """调式短语：scale 本身已含「调式/音阶/调」时不再追加，避免「清乐调式调式」。"""
+    if scale.endswith(("调式", "音阶", "调")):
+        return f"，{scale}"
+    return f"，{scale}调式"
+
+
 def _build_sentence(label, sub_name, insts, scale, moods, bpm, elements, scene):
     """按多套模板组装提示词，动态省略空字段，避免语病。
 
@@ -288,7 +295,7 @@ def _build_sentence(label, sub_name, insts, scale, moods, bpm, elements, scene):
         + f"{label}"
         + (f"（{sub_name}）" if sub_name else "")
         + (f"，以{'、'.join(insts)}编织" if insts else "")
-        + (f"，{scale}调式" if scale else "")
+        + (_scale_phrase(scale) if scale else "")
         + (f"，{'、'.join(moods)}的情绪" if moods else "")
         + (f"，{bpm}" if bpm else "")
         + (f"，点缀{'、'.join(elements)}" if elements else "")

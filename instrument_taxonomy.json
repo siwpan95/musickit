@@ -30,7 +30,10 @@
         "808 滑音贝斯",
         "808 贝斯"
       ],
-      "style_count": 5
+      "style_count": 5,
+      "prefer_subdirs": [
+        "808_bass"
+      ]
     },
     "sub_bass": {
       "pool": "bass",
@@ -46,7 +49,10 @@
         "重低音贝斯",
         "重贝斯"
       ],
-      "style_count": 5
+      "style_count": 5,
+      "prefer_subdirs": [
+        "sub_bass"
+      ]
     },
     "upright_bass": {
       "pool": "bass",
@@ -59,7 +65,11 @@
         "低音提琴",
         "直立贝斯"
       ],
-      "style_count": 4
+      "style_count": 4,
+      "prefer_subdirs": [
+        "bass_guitar",
+        "bass_misc"
+      ]
     },
     "bass_guitar": {
       "pool": "bass",
@@ -77,7 +87,11 @@
         "贝斯线",
         "贝斯线条"
       ],
-      "style_count": 27
+      "style_count": 27,
+      "prefer_subdirs": [
+        "bass_guitar",
+        "bass_misc"
+      ]
     },
     "hihat": {
       "pool": "drum",
@@ -91,7 +105,10 @@
         "踩镲连击",
         "闭镲 Hi-hat"
       ],
-      "style_count": 3
+      "style_count": 3,
+      "prefer_subdirs": [
+        "hihat"
+      ]
     },
     "drum_machine": {
       "pool": "drum",
@@ -107,7 +124,11 @@
         "慵懒鼓机",
         "鼓机"
       ],
-      "style_count": 14
+      "style_count": 14,
+      "prefer_subdirs": [
+        "drum_machine",
+        "drums_acoustic"
+      ]
     },
     "drums_acoustic": {
       "pool": "drum",
@@ -145,7 +166,11 @@
         "鼓刷",
         "鼓组"
       ],
-      "style_count": 35
+      "style_count": 35,
+      "prefer_subdirs": [
+        "drums_acoustic",
+        "drum_misc"
+      ]
     },
     "percussion": {
       "pool": "drum",
@@ -169,7 +194,10 @@
         "细碎打击 Percussion",
         "马林巴"
       ],
-      "style_count": 15
+      "style_count": 15,
+      "prefer_subdirs": [
+        "percussion"
+      ]
     },
     "guitar_slide": {
       "pool": "guita",
@@ -183,7 +211,10 @@
         "滑音吉他",
         "滑音吉他 Slide"
       ],
-      "style_count": 3
+      "style_count": 3,
+      "prefer_subdirs": [
+        "guitar_slide"
+      ]
     },
     "guitar_distorted": {
       "pool": "guita",
@@ -199,7 +230,10 @@
         "雷鬼吉他",
         "雷鬼吉他 skank"
       ],
-      "style_count": 8
+      "style_count": 8,
+      "prefer_subdirs": [
+        "guitar_distorted"
+      ]
     },
     "guitar_rhythm": {
       "pool": "guita",
@@ -211,7 +245,10 @@
       "words": [
         "节奏吉他"
       ],
-      "style_count": 2
+      "style_count": 2,
+      "prefer_subdirs": [
+        "guitar_rhythm"
+      ]
     },
     "guitar_acoustic": {
       "pool": "guita",
@@ -226,7 +263,10 @@
         "环境吉他",
         "钢吉他"
       ],
-      "style_count": 9
+      "style_count": 9,
+      "prefer_subdirs": [
+        "guitar_acoustic"
+      ]
     },
     "guitar_electric": {
       "pool": "guita",
@@ -238,7 +278,10 @@
       "words": [
         "电吉他长音"
       ],
-      "style_count": 1
+      "style_count": 1,
+      "prefer_subdirs": [
+        "guitar_electric"
+      ]
     },
     "guitar_misc": {
       "pool": "guita",
@@ -250,7 +293,11 @@
       "words": [
         "吉他"
       ],
-      "style_count": 7
+      "style_count": 7,
+      "prefer_subdirs": [
+        "guitar",
+        "guita_misc"
+      ]
     },
     "cowbell": {
       "pool": "cowbell",
@@ -262,7 +309,8 @@
       "words": [
         "牛铃 Cowbell"
       ],
-      "style_count": 1
+      "style_count": 1,
+      "prefer_subdirs": []
     },
     "synth_chip": {
       "pool": "synth",
@@ -276,7 +324,11 @@
         "芯片音",
         "芯片音色"
       ],
-      "style_count": 4
+      "style_count": 4,
+      "prefer_subdirs": [
+        "synth_misc",
+        "synth"
+      ]
     },
     "synth_analog": {
       "pool": "synth",
@@ -291,7 +343,10 @@
         "模拟合成器",
         "滤波合成"
       ],
-      "style_count": 6
+      "style_count": 6,
+      "prefer_subdirs": [
+        "synth_analog"
+      ]
     },
     "synth_lead": {
       "pool": "synth",
@@ -310,7 +365,10 @@
         "闪烁合成",
         "高音主旋"
       ],
-      "style_count": 11
+      "style_count": 11,
+      "prefer_subdirs": [
+        "synth_lead"
+      ]
     },
     "synth_fm": {
       "pool": "synth",
@@ -327,7 +385,10 @@
         "脉冲波 Pulse",
         "钟声"
       ],
-      "style_count": 7
+      "style_count": 7,
+      "prefer_subdirs": [
+        "synth_fm"
+      ]
     },
     "synth_pad": {
       "pool": "synth",
@@ -346,7 +407,11 @@
         "混响墙",
         "空灵 Pad"
       ],
-      "style_count": 13
+      "style_count": 13,
+      "prefer_subdirs": [
+        "synth_pad",
+        "pad"
+      ]
     },
     "synth_misc": {
       "pool": "synth",
@@ -361,7 +426,12 @@
         "合成弦乐",
         "合成点缀"
       ],
-      "style_count": 15
+      "style_count": 15,
+      "prefer_subdirs": [
+        "synth_misc",
+        "synth",
+        "pad"
+      ]
     },
     "vocal_tuned": {
       "pool": "acapella",
@@ -373,7 +443,11 @@
       "words": [
         "人声 Auto-Tune"
       ],
-      "style_count": 3
+      "style_count": 3,
+      "prefer_subdirs": [
+        "vocal_tuned",
+        "vocal_full"
+      ]
     },
     "vocal_choir": {
       "pool": "acapella",
@@ -388,7 +462,11 @@
         "和声人声",
         "多部和声"
       ],
-      "style_count": 5
+      "style_count": 5,
+      "prefer_subdirs": [
+        "vocal_choir",
+        "vocal_full"
+      ]
     },
     "vocal_chop": {
       "pool": "acapella",
@@ -405,7 +483,11 @@
         "切碎人声切片",
         "失真人声切片"
       ],
-      "style_count": 7
+      "style_count": 7,
+      "prefer_subdirs": [
+        "vocal_chop",
+        "vocal_chops"
+      ]
     },
     "vocal_full": {
       "pool": "acapella",
@@ -427,7 +509,11 @@
         "采样人声",
         "颤音人声"
       ],
-      "style_count": 14
+      "style_count": 14,
+      "prefer_subdirs": [
+        "vocal_full",
+        "vocal"
+      ]
     },
     "sfx_noise": {
       "pool": "sfx",
@@ -448,7 +534,10 @@
         "黑胶噪点 Vinyl Crackle",
         "黑胶采样"
       ],
-      "style_count": 10
+      "style_count": 10,
+      "prefer_subdirs": [
+        "sfx_noise"
+      ]
     },
     "sfx_glitch": {
       "pool": "sfx",
@@ -461,7 +550,10 @@
         "故障 FX",
         "故障音 Glitch"
       ],
-      "style_count": 2
+      "style_count": 2,
+      "prefer_subdirs": [
+        "sfx_glitch"
+      ]
     },
     "sfx_cinematic": {
       "pool": "sfx",
@@ -487,7 +579,10 @@
         "采样",
         "采样切片"
       ],
-      "style_count": 20
+      "style_count": 20,
+      "prefer_subdirs": [
+        "sfx_cinematic"
+      ]
     },
     "keys_piano": {
       "pool": "keys",
@@ -508,7 +603,12 @@
         "钢琴 montuno",
         "键盘"
       ],
-      "style_count": 29
+      "style_count": 29,
+      "prefer_subdirs": [
+        "piano",
+        "keys_piano",
+        "keys"
+      ]
     },
     "organ": {
       "pool": "keys",
@@ -522,7 +622,10 @@
         "管风琴",
         "风琴"
       ],
-      "style_count": 5
+      "style_count": 5,
+      "prefer_subdirs": [
+        "organ"
+      ]
     },
     "accordion": {
       "pool": "keys",
@@ -534,7 +637,10 @@
       "words": [
         "手风琴"
       ],
-      "style_count": 4
+      "style_count": 4,
+      "prefer_subdirs": [
+        "accordion"
+      ]
     },
     "harp": {
       "pool": "keys",
@@ -548,7 +654,10 @@
         "竖琴",
         "竖琴 Harp"
       ],
-      "style_count": 8
+      "style_count": 8,
+      "prefer_subdirs": [
+        "harp"
+      ]
     },
     "strings": {
       "pool": "strings",
@@ -569,7 +678,13 @@
         "弦乐四重奏 String Quartet",
         "管弦乐团"
       ],
-      "style_count": 14
+      "style_count": 14,
+      "prefer_subdirs": [
+        "strings",
+        "bowed",
+        "violin",
+        "cello"
+      ]
     },
     "brass": {
       "pool": "brass",
@@ -587,7 +702,13 @@
         "长号",
         "风笛 Bagpipe"
       ],
-      "style_count": 18
+      "style_count": 18,
+      "prefer_subdirs": [
+        "brass",
+        "horn",
+        "trumpet",
+        "trombone"
+      ]
     },
     "woodwind": {
       "pool": "woodwind",
@@ -619,7 +740,11 @@
         "长笛",
         "长笛 Flute"
       ],
-      "style_count": 34
+      "style_count": 34,
+      "prefer_subdirs": [
+        "woodwind",
+        "recorder"
+      ]
     },
     "ethnic_plucked": {
       "pool": "ethnic",
@@ -649,7 +774,12 @@
         "西塔琴 Sitar",
         "阮"
       ],
-      "style_count": 25
+      "style_count": 25,
+      "prefer_subdirs": [
+        "ethnic_plucked",
+        "koto",
+        "sitar"
+      ]
     },
     "ethnic_bowed": {
       "pool": "ethnic",
@@ -664,7 +794,11 @@
         "胡弓 Kokyū",
         "马头琴"
       ],
-      "style_count": 5
+      "style_count": 5,
+      "prefer_subdirs": [
+        "ethnic_bowed",
+        "ethnic"
+      ]
     }
   },
   "word_map": {

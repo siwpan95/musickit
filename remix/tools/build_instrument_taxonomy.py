@@ -37,6 +37,32 @@ OUT = r"G:\musickit\instrument_taxonomy.json"
 #   fallback    : available=false 时的建议回退池（桥接器默认不用，仅作提示）
 #   note        : 说明
 # ---------------------------------------------------------------------------
+# 每类目优先抽取的子目录（与 instrument_taxonomy.json 的 prefer_subdirs 一致；
+# 目录名与 G:\\musickit\\<pool>\\ 下的真实目录核对）。桥接器按此字段先子目录、后整池。
+PREFER_SUBDIRS = {
+    "808_bass": ["808_bass"], "sub_bass": ["sub_bass"],
+    "upright_bass": ["bass_guitar", "bass_misc"], "bass_guitar": ["bass_guitar", "bass_misc"],
+    "hihat": ["hihat"], "drum_machine": ["drum_machine", "drums_acoustic"],
+    "drums_acoustic": ["drums_acoustic", "drum_misc"], "percussion": ["percussion"],
+    "guitar_slide": ["guitar_slide"], "guitar_distorted": ["guitar_distorted"],
+    "guitar_rhythm": ["guitar_rhythm"], "guitar_acoustic": ["guitar_acoustic"],
+    "guitar_electric": ["guitar_electric"], "guitar_misc": ["guitar", "guita_misc"],
+    "cowbell": [],
+    "synth_chip": ["synth_misc", "synth"], "synth_analog": ["synth_analog"],
+    "synth_lead": ["synth_lead"], "synth_fm": ["synth_fm"],
+    "synth_pad": ["synth_pad", "pad"], "synth_misc": ["synth_misc", "synth", "pad"],
+    "vocal_tuned": ["vocal_tuned", "vocal_full"], "vocal_choir": ["vocal_choir", "vocal_full"],
+    "vocal_chop": ["vocal_chop", "vocal_chops"], "vocal_full": ["vocal_full", "vocal"],
+    "sfx_noise": ["sfx_noise"], "sfx_glitch": ["sfx_glitch"], "sfx_cinematic": ["sfx_cinematic"],
+    "keys_piano": ["piano", "keys_piano", "keys"], "organ": ["organ"],
+    "accordion": ["accordion"], "harp": ["harp"],
+    "strings": ["strings", "bowed", "violin", "cello"],
+    "brass": ["brass", "horn", "trumpet", "trombone"],
+    "woodwind": ["woodwind", "recorder"],
+    "ethnic_plucked": ["ethnic_plucked", "koto", "sitar"],
+    "ethnic_bowed": ["ethnic_bowed", "ethnic"],
+}
+
 CLASSES = OrderedDict([
     # ---- BASS ----
     ("808_bass",     {"pool": "bass",    "subcategory": "808",     "available": True,  "mixer_role": "bass",    "fallback": None, "note": "808 贝斯"}),
@@ -206,6 +232,7 @@ def main():
         m = dict(meta)
         m["words"] = sorted(cls_words[cls])
         m["style_count"] = cls_counts[cls]
+        m["prefer_subdirs"] = PREFER_SUBDIRS.get(cls, [])
         classes_out[cls] = m
 
     out = {

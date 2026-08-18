@@ -8,7 +8,8 @@
       "original_rel": "one shots\\Brazz",
       "subcategory": "brass",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "XAM Brazz 2.wav",
@@ -17,7 +18,8 @@
       "original_rel": "one shots\\Brazz",
       "subcategory": "brass",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "XAM Brazz 3.wav",
@@ -26,7 +28,8 @@
       "original_rel": "one shots\\Brazz",
       "subcategory": "brass",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "XAM Brazz 4.wav",
@@ -35,7 +38,8 @@
       "original_rel": "one shots\\Brazz",
       "subcategory": "brass",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "XAM Brazz 5.wav",
@@ -44,7 +48,8 @@
       "original_rel": "one shots\\Brazz",
       "subcategory": "brass",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "XAM Brazz 6.wav",
@@ -53,7 +58,8 @@
       "original_rel": "one shots\\Brazz",
       "subcategory": "brass",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "F#_Hornet1.wav",
@@ -63,7 +69,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "F#_Hornet2.wav",
@@ -73,7 +80,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 10_100bpm_C#m .wav",
@@ -83,7 +91,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 11_100bpm_Am .wav",
@@ -93,7 +102,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 12_100bpm_Gm .wav",
@@ -103,7 +113,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 13_100bpm_Ebm .wav",
@@ -113,7 +124,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 14_100bpm_C#m .wav",
@@ -123,7 +135,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 15_100bpm_Dm .wav",
@@ -133,7 +146,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 16_100bpm_Abm .wav",
@@ -143,7 +157,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 17_100bpm_Dmaj .wav",
@@ -153,7 +168,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 18_100bpm_Emaj .wav",
@@ -163,7 +179,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 19_100bpm_Emin .wav",
@@ -173,7 +190,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 1_100bpm_Em .wav",
@@ -183,7 +201,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 20_100bpm_Emin .wav",
@@ -193,7 +212,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 2_100bpm_C#m .wav",
@@ -203,7 +223,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 3_100bpm_Dm .wav",
@@ -213,7 +234,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 4_100bpm_Ebm .wav",
@@ -223,7 +245,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 5_100bpm_Abm .wav",
@@ -233,7 +256,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 6_100bpm_Bm .wav",
@@ -243,7 +267,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 7_100bpm_Cmaj .wav",
@@ -253,7 +278,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 8_100bpm_Abm .wav",
@@ -263,7 +289,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horn Loop_ 9_100bpm_Emaj .wav",
@@ -273,7 +300,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Horns_ 10_C5.wav",
@@ -283,7 +311,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "single_note"
     },
     {
       "file": "GS_FS 2_Horns_ 11_Emaj 9b.wav",
@@ -293,7 +322,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 12_Am.wav",
@@ -303,7 +333,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 13_Dm9.wav",
@@ -313,7 +344,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 14_Em7.wav",
@@ -323,7 +355,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 15_F#m7 9.wav",
@@ -333,7 +366,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 16_Cm #13.wav",
@@ -343,7 +377,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 17_Fmaj7.wav",
@@ -353,7 +388,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 18_Dmaj7.wav",
@@ -363,7 +399,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 19_Emaj.wav",
@@ -373,7 +410,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 1_Cm9.wav",
@@ -383,7 +421,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 20_Ebmaj7.wav",
@@ -393,7 +432,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 2_Cm7_9 _11.wav",
@@ -403,7 +443,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 3_Am sus2 13.wav",
@@ -413,7 +454,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 4_Cmaj #11.wav",
@@ -423,7 +465,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 5_Dsus5.wav",
@@ -433,7 +476,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 6_Dsus2.wav",
@@ -443,7 +487,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 7_Fmaj7.wav",
@@ -453,7 +498,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 8_Fm6.wav",
@@ -463,7 +509,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Horns_ 9_Cmaj 6.wav",
@@ -473,7 +520,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Song Kit 02_ 3_C#m_80bpm_Horns.wav",
@@ -483,7 +531,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Song Kit 02_ 4_C#m_80bpm_Horns Staccato.wav",
@@ -493,7 +542,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Song Kit 02_ 9_C#m_80bpm_Horns.wav",
@@ -503,7 +553,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Song Kit 03_ 12_G#m_120bpm_Horns Staccato.wav",
@@ -513,7 +564,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Song Kit 03_ 5_G#m_120bpm_Horns.wav",
@@ -523,7 +575,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "GS_FS 2_Song Kit 04_ 2_Dmaj_120bpm_Horns.wav",
@@ -533,7 +586,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "Kit 01_Horn.wav",
@@ -543,7 +597,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "Kit 02_Horn.wav",
@@ -553,7 +608,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "Kit 03_Horn.wav",
@@ -563,7 +619,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "Kit 04_Horn.wav",
@@ -573,7 +630,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "Kit 05_Horn.wav",
@@ -583,7 +641,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "Kit 07_Horn.wav",
@@ -593,7 +652,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "Kit 08_Horn.wav",
@@ -603,7 +663,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "Kit 09_Horn.wav",
@@ -613,7 +674,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "GS_FS 2_Song Kit 01_ 2_F#m_120bpm_Tuba&Horns.wav",
@@ -623,7 +685,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "cartoon_trombone_sound_effect_royalty-free_music.mp3",
@@ -633,7 +696,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "failure_trumpet_royalty-free_music.mp3",
@@ -643,7 +707,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_blow_royalty-free_music.mp3",
@@ -653,7 +718,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_crescendo_2_royalty-free_music.mp3",
@@ -663,7 +729,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_fanfare_12_royalty-free_music.mp3",
@@ -673,7 +740,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_fanfare_5_royalty-free_music.mp3",
@@ -683,7 +751,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_fanfare_royalty-free_music.mp3",
@@ -693,7 +762,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_grave_royalty-free_music.mp3",
@@ -703,7 +773,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_metal_2_royalty-free_music.mp3",
@@ -713,7 +784,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_percussion_3_royalty-free_music.mp3",
@@ -723,7 +795,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_signal_2_royalty-free_music.mp3",
@@ -733,7 +806,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_signal_3_royalty-free_music.mp3",
@@ -743,7 +817,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_signal_6_royalty-free_music.mp3",
@@ -753,7 +828,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_staccato_royalty-free_music.mp3",
@@ -763,7 +839,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_tremolo_royalty-free_music.mp3",
@@ -773,7 +850,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "horn_royalty-free_music.mp3",
@@ -783,7 +861,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "orchestra_triumphant_trumpets.wav",
@@ -793,7 +872,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "orchestra_trumpets_ending.wav",
@@ -803,7 +883,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "party_trumpet.wav",
@@ -813,7 +894,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "party_trumpet_horn_isolated.wav",
@@ -823,7 +905,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "sad_trumpet_royalty-free_music.mp3",
@@ -833,7 +916,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "sad_trumpet_royalty-free_music_1.mp3",
@@ -843,7 +927,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "tada_fanfare_a_royalty-free_music.mp3",
@@ -853,7 +938,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "threatening_orchestra_trumpets.wav",
@@ -863,7 +949,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trombone_slides.wav",
@@ -873,7 +960,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_blasts_sound_music_royalty-free_music.mp3",
@@ -883,7 +971,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_call_royalty-free_music.mp3",
@@ -893,7 +982,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_chorus_royalty-free_music.mp3",
@@ -903,7 +993,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_fanfare.wav",
@@ -913,7 +1004,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_movement_grab_trumpet.wav",
@@ -923,7 +1015,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_note.wav",
@@ -933,7 +1026,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_piano_viola_royalty-free_music.mp3",
@@ -943,7 +1037,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_royalty-free_music.mp3",
@@ -953,7 +1048,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_royalty-free_music_1.mp3",
@@ -963,7 +1059,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_royalty-free_music_2.mp3",
@@ -973,7 +1070,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpets_and_strings_off_beat.wav",
@@ -983,7 +1081,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "tuba_royalty-free_music.mp3",
@@ -993,7 +1092,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "winning_trumpet.wav",
@@ -1003,7 +1103,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Flugel Horn.wav",
@@ -1013,7 +1114,8 @@
       "original_rel": "flugelhorn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR French Horn 01.wav",
@@ -1023,7 +1125,8 @@
       "original_rel": "frenchhorn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR French Horn 01a.wav",
@@ -1033,7 +1136,8 @@
       "original_rel": "frenchhorn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR French Horn 02.wav",
@@ -1043,7 +1147,8 @@
       "original_rel": "frenchhorn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR French Horn 03.wav",
@@ -1053,7 +1158,8 @@
       "original_rel": "frenchhorn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR French Horn 04.wav",
@@ -1063,7 +1169,8 @@
       "original_rel": "frenchhorn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - BR French Horn 01.wav",
@@ -1073,7 +1180,8 @@
       "original_rel": "frenchhorn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "CODA Kit 06 - BR Dusty Horns - Outro.wav",
@@ -1083,7 +1191,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Mid Horn.wav",
@@ -1093,7 +1202,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Saw Horns.wav",
@@ -1103,7 +1213,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Brass Mid Horn 01.wav",
@@ -1113,7 +1224,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Growl - Thorns.wav",
@@ -1123,7 +1235,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Growl - Thorns_1.wav",
@@ -1133,7 +1246,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Growl - Thorns_2.wav",
@@ -1143,7 +1257,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Growl - Thorns_3.wav",
@@ -1153,7 +1268,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW LD Agro Horn.wav",
@@ -1163,7 +1279,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW PL Thorny.wav",
@@ -1173,7 +1290,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Horn 01.wav",
@@ -1183,7 +1301,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Horn 01_1.wav",
@@ -1193,7 +1312,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Horn 01_2.wav",
@@ -1203,7 +1323,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Horn 01_3.wav",
@@ -1213,7 +1334,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESWHV Kit 01 - BR Horns.wav",
@@ -1223,7 +1345,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESWHV Kit 01 - Intro Horns.wav",
@@ -1233,7 +1356,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "CODA Kit 01 - LD Filthy Sax CODA - Drop.wav",
@@ -1243,7 +1367,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "CODA Kit 04 -WW Sax Kenny G - Drop.wav",
@@ -1253,7 +1378,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Saxaphone.wav",
@@ -1263,7 +1389,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Saxaphone_1.wav",
@@ -1273,7 +1400,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Saxaphone_2.wav",
@@ -1283,7 +1411,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Saxaphone_3.wav",
@@ -1293,7 +1422,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - WW Chill Sax .wav",
@@ -1303,7 +1433,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Toy Sax 02 C.wav",
@@ -1313,7 +1444,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Toy Sax Noise C.wav",
@@ -1323,7 +1455,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Bamboo Sax.wav",
@@ -1333,7 +1466,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Chill Sax .wav",
@@ -1343,7 +1477,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Clar Sax.wav",
@@ -1353,7 +1488,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax 03.wav",
@@ -1363,7 +1499,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax 04.wav",
@@ -1373,7 +1510,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax Alto.wav",
@@ -1383,7 +1521,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax C3.wav",
@@ -1393,7 +1532,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "single_note"
     },
     {
       "file": "ESW WW Sax Double.wav",
@@ -1403,7 +1543,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax Double_1.wav",
@@ -1413,7 +1554,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax KennyG.wav",
@@ -1423,7 +1565,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax Long.wav",
@@ -1433,7 +1576,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax Processed.wav",
@@ -1443,7 +1587,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax Short.wav",
@@ -1453,7 +1598,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax Smoothe.wav",
@@ -1463,7 +1609,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax Stac 01.wav",
@@ -1473,7 +1620,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax Stac 01_1.wav",
@@ -1483,7 +1631,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax Stac 02.wav",
@@ -1493,7 +1642,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax Vib High.wav",
@@ -1503,7 +1653,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW Sax Vib Low.wav",
@@ -1513,7 +1664,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW WW SaxTenor.wav",
@@ -1523,7 +1675,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESWHV Kit 06 - CHRD Sax Future Bass.wav",
@@ -1533,7 +1686,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESWHV Kit 07 - LD Saxy Time Serum.wav",
@@ -1543,7 +1697,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trombone 01.wav",
@@ -1553,7 +1708,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trombone 02.wav",
@@ -1563,7 +1719,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trombone 03.wav",
@@ -1573,7 +1730,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trombone Big C4.wav",
@@ -1583,7 +1741,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "single_note"
     },
     {
       "file": "ESW BR Trombone Clean 01.wav",
@@ -1593,7 +1752,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trombone Clean 02.wav",
@@ -1603,7 +1763,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trombone Low 01.wav",
@@ -1613,7 +1774,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trombone Monster.wav",
@@ -1623,7 +1785,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trombone Short.wav",
@@ -1633,7 +1796,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - BR Trombone 01.wav",
@@ -1643,7 +1807,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - BR Trombone Clean.wav",
@@ -1653,7 +1818,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Trombone.wav",
@@ -1663,7 +1829,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Trombone_1.wav",
@@ -1673,7 +1840,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Trombone_2.wav",
@@ -1683,7 +1851,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "Trombone Big C2.wav",
@@ -1693,7 +1862,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "single_note"
     },
     {
       "file": "Trombone Solo C3.wav",
@@ -1703,7 +1873,8 @@
       "original_rel": "trombone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "single_note"
     },
     {
       "file": "ESW BR Mariacha Trumpet High.wav",
@@ -1713,7 +1884,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trumpet 01.wav",
@@ -1723,7 +1895,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trumpet Dope.wav",
@@ -1733,7 +1906,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trumpet High.wav",
@@ -1743,7 +1917,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trumpet Low.wav",
@@ -1753,7 +1928,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trumpet Messy.wav",
@@ -1763,7 +1939,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trumpet Small.wav",
@@ -1773,7 +1950,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trumpeter 01.wav",
@@ -1783,7 +1961,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trumpeter 02.wav",
@@ -1793,7 +1972,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Trumpeter 03.wav",
@@ -1803,7 +1983,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - BR Trumpeter 02.wav",
@@ -1813,7 +1994,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - BR Trumpeter 03.wav",
@@ -1823,7 +2005,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW Real - Trumpeter 01.wav",
@@ -1833,7 +2016,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "Trumpet C1.wav",
@@ -1843,7 +2027,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "single_note"
     },
     {
       "file": "Trumpet Stab C4.wav",
@@ -1853,7 +2038,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "single_note"
     },
     {
       "file": "Trumpets Mexican C5.wav",
@@ -1863,7 +2049,8 @@
       "original_rel": "trumpet",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "single_note"
     },
     {
       "file": "Bright Tuba C2.wav",
@@ -1873,7 +2060,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "single_note"
     },
     {
       "file": "Bright Tuba C5.wav",
@@ -1883,7 +2071,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "single_note"
     },
     {
       "file": "CODA Kit 03 - BR Tuba Saws Serum - Build.wav",
@@ -1893,7 +2082,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "CODA Kit 03 - BR Tuba Saws Serum - Verse.wav",
@@ -1903,7 +2093,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "CODA Kit 04 - BR Tuba High Low Serum - Build.wav",
@@ -1913,7 +2104,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Tuba 01.wav",
@@ -1923,7 +2115,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Tuba 02.wav",
@@ -1933,7 +2126,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Tuba 03.wav",
@@ -1943,7 +2137,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Tuba 04.wav",
@@ -1953,7 +2148,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Tuba High.wav",
@@ -1963,7 +2159,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "ESW BR Tuba.wav",
@@ -1973,7 +2170,8 @@
       "original_rel": "tuba",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "cartoon_trombone_sound_effect_royalty-free_music_1.mp3",
@@ -1983,7 +2181,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "failure_trumpet_royalty-free_music_1.mp3",
@@ -1993,7 +2192,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_blow_royalty-free_music_1.mp3",
@@ -2003,7 +2203,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_crescendo_2_royalty-free_music_1.mp3",
@@ -2013,7 +2214,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_fanfare_12_royalty-free_music_1.mp3",
@@ -2023,7 +2225,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_fanfare_5_royalty-free_music_1.mp3",
@@ -2033,7 +2236,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_fanfare_royalty-free_music_1.mp3",
@@ -2043,7 +2247,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_grave_royalty-free_music_1.mp3",
@@ -2053,7 +2258,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_metal_2_royalty-free_music_1.mp3",
@@ -2063,7 +2269,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_percussion_3_royalty-free_music_1.mp3",
@@ -2073,7 +2280,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_signal_2_royalty-free_music_1.mp3",
@@ -2083,7 +2291,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_signal_3_royalty-free_music_1.mp3",
@@ -2093,7 +2302,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_signal_6_royalty-free_music_1.mp3",
@@ -2103,7 +2313,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_staccato_royalty-free_music_1.mp3",
@@ -2113,7 +2324,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "french_horn_tremolo_royalty-free_music_1.mp3",
@@ -2123,7 +2335,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "horn_royalty-free_music_1.mp3",
@@ -2133,7 +2346,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "orchestra_triumphant_trumpets_1.wav",
@@ -2143,7 +2357,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "orchestra_trumpets_ending_1.wav",
@@ -2153,7 +2368,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "party_trumpet_1.wav",
@@ -2163,7 +2379,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "party_trumpet_horn_isolated_1.wav",
@@ -2173,7 +2390,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "sad_trumpet_royalty-free_music_1_1.mp3",
@@ -2183,7 +2401,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "sad_trumpet_royalty-free_music_2.mp3",
@@ -2193,7 +2412,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "tada_fanfare_a_royalty-free_music_1.mp3",
@@ -2203,7 +2423,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "threatening_orchestra_trumpets_1.wav",
@@ -2213,7 +2434,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trombone_slides_1.wav",
@@ -2223,7 +2445,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_blasts_sound_music_royalty-free_music_1.mp3",
@@ -2233,7 +2456,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_call_royalty-free_music_1.mp3",
@@ -2243,7 +2467,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_chorus_royalty-free_music_1.mp3",
@@ -2253,7 +2478,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_fanfare_1.wav",
@@ -2263,7 +2489,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_movement_grab_trumpet_1.wav",
@@ -2273,7 +2500,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_note_1.wav",
@@ -2283,7 +2511,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_piano_viola_royalty-free_music_1.mp3",
@@ -2293,7 +2522,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_royalty-free_music_1_1.mp3",
@@ -2303,7 +2533,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_royalty-free_music_2_1.mp3",
@@ -2313,7 +2544,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpet_royalty-free_music_3.mp3",
@@ -2323,7 +2555,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "trumpets_and_strings_off_beat_1.wav",
@@ -2333,7 +2566,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "tuba_royalty-free_music_1.mp3",
@@ -2343,7 +2577,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "winning_trumpet_1.wav",
@@ -2353,7 +2588,8 @@
       "original_rel": "brass",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "29 - Mousse T - Horny.wav",
@@ -2363,7 +2599,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "FPV_Online_Kit_Drop_Horns_Bm_105BPM.wav",
@@ -2373,7 +2610,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "FPV_Online_Kit_Drop_Horns_Bm_105BPM_Dry.wav",
@@ -2383,7 +2621,8 @@
       "original_rel": "horn",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "loop"
     },
     {
       "file": "Sax.wav",
@@ -2393,7 +2632,8 @@
       "original_rel": "saxophone",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     }
   ]
 }

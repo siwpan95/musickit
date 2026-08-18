@@ -355,7 +355,7 @@ def run_remix(
     - 每轨素材：整曲(>=4 小节)按能量峰切 1~2 小节 loop；短素材整段使用
     - F3-v2：源 BPM 已知（manifest 路径提示）或可估计（自相关）→ atempo 对齐目标 BPM
     - 编排：曲式模板（--structure，默认随机），不足 min_bars 自动全铺平
-    - 混音：分轨 RMS 归一 → overlay 叠加 → 峰值归一 -1 dBFS
+    - 混音：分轨 RMS 归一 → overlay 叠加 → 峰值归一 -1.5 dBFS（留编码过冲余量）
     - 输出：默认 32 小节（约 55s@140BPM）
     """
     from core.audio_loader import AudioLoader
@@ -524,8 +524,8 @@ def run_remix(
     fade_out = int(st.get("fade_out_bars", 0)) if sections else 0
     mix = build_arrangement(materials, bpm, bars, fade_out_bars=fade_out)
 
-    # 峰值归一化到 -1 dBFS
-    mix = mix.apply_gain(-1.0 - mix.max_dBFS)
+    # 峰值归一化到 -1.5 dBFS（为 mp3/有损编码的过冲留 0.5dB 余量）
+    mix = mix.apply_gain(-1.5 - mix.max_dBFS)
 
     if out_dir is None:
         out_dir = os.path.join(_PROJECT_ROOT, "output")

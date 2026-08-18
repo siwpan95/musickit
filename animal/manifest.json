@@ -9,7 +9,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.6,
       "sha256": "29356e90005c9d9e077642b19efcf0968a070a60dc742ab314498cd8904dc65e",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (2).wav",
@@ -19,7 +20,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.8,
       "sha256": "0e1b37819b9560e9fd897980518af2efc48db6550d88af54bd1df6fd8aae1f6d",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (3).wav",
@@ -29,7 +31,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.92,
       "sha256": "874760a0af4b535885671ca85cf4dc76523e346a7d11d068dda0a954b2bb7536",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (4).wav",
@@ -39,7 +42,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.17,
       "sha256": "dae23c1111a2ad2341ec7677cfa3cee2105a881457f7d9748881d5da0be0a9ad",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (5).wav",
@@ -49,7 +53,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.54,
       "sha256": "660c831fc6c83c74c548eb82acd9f69bc5c028ccfdafc9e3fc75b5840ad0bcc9",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (6).wav",
@@ -59,7 +64,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.0,
       "sha256": "48940eeca1a6f63f109e9f11dce19ed962579a5bb613d8d3c4d519bb8a8f697f",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (7).wav",
@@ -69,7 +75,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.43,
       "sha256": "93e4ff0f42ce6b837fbaae70c2239fafa7dab90aa3cd1283ae593c0cf249c003",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (8).wav",
@@ -79,7 +86,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.87,
       "sha256": "188b2d0cd2b88ce0fd0a87bc7c4e5aad6853079fab4946a7760ba80a38408bff",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (9).wav",
@@ -89,7 +97,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.55,
       "sha256": "8b473deb26b6538513996b2811b021214b229a949cad38c965e2e84667aa6c7a",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (10).wav",
@@ -99,7 +108,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.9,
       "sha256": "e6eb3c503cd24f627b988dca9a1e8354232fb4dbff1c2e2eecaba3b853b16d3a",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (11).wav",
@@ -109,7 +119,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.78,
       "sha256": "82afc792164ae8c566534f822e474a342bfd6de92154d7914094b567b44bf9f2",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (12).wav",
@@ -119,7 +130,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 7.98,
       "sha256": "4daa34fe37979c2bfa0c9af2db6701cee3e4b2ce6aac13899ad9974034ca8379",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (13).wav",
@@ -129,7 +141,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 6.87,
       "sha256": "faf2e52815806a7c977b2758cd935f8d1808e17341a79c85385b2c5e23f4a052",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (14).wav",
@@ -139,7 +152,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 4.32,
       "sha256": "37adfd63a9208559fb81d6c0b3f82c263245d6e7392408cd6e95c1873132d35c",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (15).wav",
@@ -149,7 +163,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.08,
       "sha256": "973eb8f811498705de70a46a54f9f12f1fcb6bfaa0578908a7ea20f921a760f5",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (16).wav",
@@ -159,7 +174,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.74,
       "sha256": "56771e9ddc24a1afa072f711ee0419598bfb94b1fd512832a647163b831b22d1",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (17).wav",
@@ -169,7 +185,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 7.84,
       "sha256": "e6b66283c46ab800e306e7de7d0f1d3036a2b2e86548c28c2370be63dc3784d3",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (18).wav",
@@ -179,7 +196,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.64,
       "sha256": "2edec1fd8008fd039f65bfdec23d450d55d9e9e172e1ccb3f758b770a5cb3053",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (19).wav",
@@ -189,7 +207,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.1,
       "sha256": "8233f38a9958fe28f5d63e12a4a942ad22af27f5d3b2bf7492b280c1d2f1ec7c",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (20).wav",
@@ -199,7 +218,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.0,
       "sha256": "62abaa77e9d3c9315622a370430056dbaae87562cce3a49488707cdbb0d994c5",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (21).wav",
@@ -209,7 +229,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.54,
       "sha256": "a0a8401c6a855576a9d1babc3964b3178bd4d44c7ed7889fe7f0c6d9fcf89a48",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (22).wav",
@@ -219,7 +240,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.46,
       "sha256": "1c1b761beca1b9b7dc39605a204e6ccd681083efb7a7d45b177c355f3f0a430f",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (23).wav",
@@ -229,7 +251,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.93,
       "sha256": "414b5f19daeeb629ff2babe7661f5bcf1986ddace63e0abf4bba5a9d46aacb57",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (24).wav",
@@ -239,7 +262,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.59,
       "sha256": "cf5c4ee9a573257ddb0d42f4f4ed87ab9af685755355341750464d544a3f616a",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (25).wav",
@@ -249,7 +273,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 9.18,
       "sha256": "bfbec760b152aeed5b825d8eabc8943d8c074d80562a63ed8fb3fd6d9ada807b",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (26).wav",
@@ -259,7 +284,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.8,
       "sha256": "309178b9df3ab4a11481c2a40ff70342990815ef036c07b213d9cd7034af0394",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (27).wav",
@@ -269,7 +295,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.0,
       "sha256": "03cc6adf840c49fefcd493db3e011e07d0aa80abd78452ddca0cfef9cc5c8d1f",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (28).wav",
@@ -279,7 +306,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.81,
       "sha256": "22ca2fe6543ad3bc6823b1631f6d0939f37a36de9194e72ad50160ac73189f2f",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (29).wav",
@@ -289,7 +317,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 11.13,
       "sha256": "6bb9d13119db90dfad80c300e557d97c00a08a83642ca0e045333d7bff6cea5c",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (30).wav",
@@ -299,7 +328,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.31,
       "sha256": "8603accad7e13d414479fb58b2b6c4ada5229c915b3f0be9f408ee46252c4b7a",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (31).wav",
@@ -309,7 +339,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.64,
       "sha256": "173a98497623e4d041cde0fb9498ae7d1556d839785a641338dcb3c96ceac0d4",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (32).wav",
@@ -319,7 +350,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.37,
       "sha256": "acfd99611877f2bc84dd3304a7b285a7a7f510b31e72621604c5733017ba8264",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (33).wav",
@@ -329,7 +361,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.09,
       "sha256": "9c77b7f0728d924d19441c2c54f99b01a66035983db4c40b690c65efc9ac436e",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (34).wav",
@@ -339,7 +372,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.39,
       "sha256": "9f24681cbcc75d143533ee750fd0d092f77064114aea8f4f46c483f56dfc7311",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (35).wav",
@@ -349,7 +383,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 5.35,
       "sha256": "878bb0e964ceb61b5a82676752ec10e2e3ff2fa98987dc256b00493d1ae26abd",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (36).wav",
@@ -359,7 +394,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.71,
       "sha256": "61a92de4dbee51f98211ed149dc7caf09a28ec2f75c8a0c5ca1c0c8361b44378",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (37).wav",
@@ -369,7 +405,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 9.95,
       "sha256": "c33c4bd3142e5307b8f35f163bc9af8d7a7aaa1e6dad2efe0adc94591024241c",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (38).wav",
@@ -379,7 +416,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.49,
       "sha256": "c5966a869b7c940912a81525acae666840fc7142340c252adcae1854dcd10468",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (39).wav",
@@ -389,7 +427,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.25,
       "sha256": "1f957738d23bc9e47b8d5a0ff7ff6760f3457e1bdfe820f5faf9ee528a0c2bb8",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (40).wav",
@@ -399,7 +438,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.03,
       "sha256": "d963f0806cbfabdbe74fed3c2eb5bf90ed94b263ec83c047d83eb73b553ca308",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (41).wav",
@@ -409,7 +449,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.96,
       "sha256": "e0c0717ac3d135c26036b5a4c2b42da88463b4daddb104d18d76391f5e49bcac",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (42).wav",
@@ -419,7 +460,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 12.57,
       "sha256": "79e78c3ab1f9569b185f0b86b4b0e255f6437a5fb95da55e36b932672380249c",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (43).wav",
@@ -429,7 +471,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.85,
       "sha256": "95525d70be70fe8ceb0063fe6465fa585a68036ebf02958a566f2a64150f6cc1",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (44).wav",
@@ -439,7 +482,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 12.72,
       "sha256": "4905e8be40eb70380d4a1b0de66a0d599026eaff90041696fbe37c5cd6cf69c2",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (45).wav",
@@ -449,7 +493,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.81,
       "sha256": "21ee5ce08128fbcc19b40415396159ea8f618031867a0b581bbbd3fe5f226453",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (46).wav",
@@ -459,7 +504,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.54,
       "sha256": "1eb8e716d86d76062dd319d85a3c3ea756a587577140d84426e9bf601684886a",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (47).wav",
@@ -469,7 +515,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.7,
       "sha256": "a1d0a04214181e5fc704b8702bb17e1938b062f6d25975302d1ff0202e8027b8",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (48).wav",
@@ -479,7 +526,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.62,
       "sha256": "c4c57d5617973362c6f326ccd2176a717d3d8f2a99b3c43db2a0bed4ab013034",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (49).wav",
@@ -489,7 +537,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.09,
       "sha256": "7528f21ce6cb72a0175e4229130640b02926038533e0cb325dd11ba6dd071036",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (50).wav",
@@ -499,7 +548,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 2.08,
       "sha256": "8b495d4aff969c4e62516c65aa696783758c7bc054f8968f554d46abc0085536",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (51).wav",
@@ -509,7 +559,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.76,
       "sha256": "cd7a909516b839c08668b1fe0cabf9136dcb7cec5bc5c0fda8e595f3e64ea1f0",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (52).wav",
@@ -519,7 +570,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 0.49,
       "sha256": "270422c7eded0d238ea900042cafa0d3dbf99a9da47ae9f33f36ed72d07c8179",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (53).wav",
@@ -529,7 +581,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 1.49,
       "sha256": "2a18891eab2b952e12c2a3874011dbbd055c9df71ca4d1ae4cabfb8901b9a7ad",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "one_shot"
     },
     {
       "file": "vocal (54).wav",
@@ -539,7 +592,8 @@
       "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
       "duration_s": 3.2,
       "sha256": "a14fdca5afaf65c4dd594ac78ac95ddb9adbd13ac8f8d7dd7db87de4ae9a5d2f",
-      "license_tier": "free"
+      "license_tier": "free",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (105).wav",
@@ -547,7 +601,8 @@
       "original": "FL_SSB_01_Vocal_Loop_Chop_Feel_It_80_C.wav",
       "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (106).wav",
@@ -555,7 +610,8 @@
       "original": "FL_SSB_02_Vocal_Loop_Chop_Baby_80_F.wav",
       "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (107).wav",
@@ -563,7 +619,8 @@
       "original": "FL_SSB_03_Vocal_Loop_Chop_Can_t_Stay_80_E.wav",
       "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (108).wav",
@@ -571,7 +628,8 @@
       "original": "FL_SSB_04_Vocal_Loop_Chop_Everyday_80_C#.wav",
       "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (109).wav",
@@ -579,7 +637,8 @@
       "original": "FL_SSB_05_Vocal_Loop_Chop_My_Body_80_F.wav",
       "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (110).wav",
@@ -587,7 +646,8 @@
       "original": "FL_SSB_06_Vocal_Loop_Chop_I_Wanna_80_C.wav",
       "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (111).wav",
@@ -595,7 +655,8 @@
       "original": "FL_SSB_07_Vocal_Loop_Chop_Oh_80_E.wav",
       "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (112).wav",
@@ -603,7 +664,8 @@
       "original": "FL_SSB_08_Vocal_Loop_Chop_Uuh_80_F#.wav",
       "original_rel": "Function Loops Sunlight – Soulful Beats WAV/FL_SSB_Vocal_Chop_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (113).wav",
@@ -611,7 +673,8 @@
       "original": "vox-Gotham.wav",
       "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/2-California (90 bpm)/Dry",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (114).wav",
@@ -619,7 +682,8 @@
       "original": "vox-Gotham.wav",
       "original_rel": "Kryptic Samples California Vol 1 WAV MIDI/2-California (90 bpm)/Wet",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "loop"
     },
     {
       "file": "vocal (115).wav",
@@ -627,7 +691,8 @@
       "original": "HI3_Decatur_Voxchop.wav",
       "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (116).wav",
@@ -635,7 +700,8 @@
       "original": "HI3_Strange_Vocal_01.wav",
       "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (117).wav",
@@ -643,7 +709,8 @@
       "original": "HI3_Strange_Vocal_02.wav",
       "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_SOUND_&_FX/HI3_FX",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (118).wav",
@@ -651,7 +718,8 @@
       "original": "HI3_130_Gmin_Vocal.wav",
       "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_130_Gmin_RAVENOUS",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (119).wav",
@@ -659,7 +727,8 @@
       "original": "HI3_85_A#_Strange_Vocal_Chop.wav",
       "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_85_A#_DECATUR",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (120).wav",
@@ -667,7 +736,8 @@
       "original": "HI3_90_Emin_HomelessVocalLayer.wav",
       "original_rel": "Loopmasters Hip Hop Instrumentals Vol 3 MULTiFORMAT/HI3_WAV_LPS/HI3_90_Emin_ESTUARY",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (334).wav",
@@ -675,7 +745,8 @@
       "original": "SRHS_110_A_Vocal_Loop_04.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (335).wav",
@@ -683,7 +754,8 @@
       "original": "SRHS_110_D#_Vocal_Loop_01.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (336).wav",
@@ -691,7 +763,8 @@
       "original": "SRHS_110_D_Vocal_Loop_03.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (337).wav",
@@ -699,7 +772,8 @@
       "original": "SRHS_120_A#_Vocal_Loop_02.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (338).wav",
@@ -707,7 +781,8 @@
       "original": "SRHS_120_A#_Vocal_Loop_05.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (339).wav",
@@ -715,7 +790,8 @@
       "original": "SRHS_120_A#_Vocal_Loop_10.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (340).wav",
@@ -723,7 +799,8 @@
       "original": "SRHS_120_A#_Vocal_Loop_16.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (341).wav",
@@ -731,7 +808,8 @@
       "original": "SRHS_120_A#_Vocal_Loop_18.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (342).wav",
@@ -739,7 +817,8 @@
       "original": "SRHS_120_A_Vocal_Loop_19.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (343).wav",
@@ -747,7 +826,8 @@
       "original": "SRHS_120_A_Vocal_Loop_20.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (344).wav",
@@ -755,7 +835,8 @@
       "original": "SRHS_120_B_Vocal_Loop_15.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (345).wav",
@@ -763,7 +844,8 @@
       "original": "SRHS_120_C#_Vocal_Loop_17.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (346).wav",
@@ -771,7 +853,8 @@
       "original": "SRHS_120_C_Vocal_Loop_11.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (347).wav",
@@ -779,7 +862,8 @@
       "original": "SRHS_120_C_Vocal_Loop_12.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (348).wav",
@@ -787,7 +871,8 @@
       "original": "SRHS_120_E_Vocal_Loop_09.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (349).wav",
@@ -795,7 +880,8 @@
       "original": "SRHS_120_E_Vocal_Loop_13.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (350).wav",
@@ -803,7 +889,8 @@
       "original": "SRHS_120_F#_Vocal_Loop_06.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (351).wav",
@@ -811,7 +898,8 @@
       "original": "SRHS_120_F_Vocal_Loop_07.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (352).wav",
@@ -819,7 +907,8 @@
       "original": "SRHS_120_F_Vocal_Loop_08.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (353).wav",
@@ -827,7 +916,8 @@
       "original": "SRHS_120_G#_Vocal_Loop_14.wav",
       "original_rel": "Singomakers Sakura House/SRHS_Vocal_Loops",
       "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "license_tier": "pack"
+      "license_tier": "pack",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (100).wav",
@@ -837,7 +927,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (101).wav",
@@ -847,7 +938,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (102).wav",
@@ -857,7 +949,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (103).wav",
@@ -867,7 +960,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (104).wav",
@@ -877,7 +971,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (55).wav",
@@ -887,7 +982,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (56).wav",
@@ -897,7 +993,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (57).wav",
@@ -907,7 +1004,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (58).wav",
@@ -917,7 +1015,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (59).wav",
@@ -927,7 +1026,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (60).wav",
@@ -937,7 +1037,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (61).wav",
@@ -947,7 +1048,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (62).wav",
@@ -957,7 +1059,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (63).wav",
@@ -967,7 +1070,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (64).wav",
@@ -977,7 +1081,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (65).wav",
@@ -987,7 +1092,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (66).wav",
@@ -997,7 +1103,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (67).wav",
@@ -1007,7 +1114,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (68).wav",
@@ -1017,7 +1125,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (69).wav",
@@ -1027,7 +1136,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (70).wav",
@@ -1037,7 +1147,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (71).wav",
@@ -1047,7 +1158,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (72).wav",
@@ -1057,7 +1169,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (73).wav",
@@ -1067,7 +1180,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (74).wav",
@@ -1077,7 +1191,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (75).wav",
@@ -1087,7 +1202,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (76).wav",
@@ -1097,7 +1213,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (77).wav",
@@ -1107,7 +1224,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (78).wav",
@@ -1117,7 +1235,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (79).wav",
@@ -1127,7 +1246,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (80).wav",
@@ -1137,7 +1257,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (81).wav",
@@ -1147,7 +1268,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (82).wav",
@@ -1157,7 +1279,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (83).wav",
@@ -1167,7 +1290,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (84).wav",
@@ -1177,7 +1301,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (85).wav",
@@ -1187,7 +1312,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (86).wav",
@@ -1197,7 +1323,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (87).wav",
@@ -1207,7 +1334,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (88).wav",
@@ -1217,7 +1345,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (89).wav",
@@ -1227,7 +1356,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (90).wav",
@@ -1237,7 +1367,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (91).wav",
@@ -1247,7 +1378,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (92).wav",
@@ -1257,7 +1389,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (93).wav",
@@ -1267,7 +1400,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (94).wav",
@@ -1277,7 +1411,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (95).wav",
@@ -1287,7 +1422,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (96).wav",
@@ -1297,7 +1433,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (97).wav",
@@ -1307,7 +1444,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (98).wav",
@@ -1317,7 +1455,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     },
     {
       "file": "vocal (99).wav",
@@ -1327,7 +1466,8 @@
       "original_rel": "(root)",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
-      "license_tier": "unknown"
+      "license_tier": "unknown",
+      "content_kind": "unknown"
     }
   ]
 }
