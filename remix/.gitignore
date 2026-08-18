@@ -1,6 +1,10 @@
 # 混音输出目录
 output/
 
+# 外部工具二进制（体积约 164MB，不入库；说明见 remix/bin/README.md）
+ffmpeg.exe
+ffprobe.exe
+
 # Python
 __pycache__/
 *.py[cod]
