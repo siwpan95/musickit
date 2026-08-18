@@ -5290,36 +5290,6 @@
       "content_kind": "unknown"
     },
     {
-      "file": "synth (601).wav",
-      "source_pack": "Sakura",
-      "original": "SRHS_110_A#_Synth_Loop_03.wav",
-      "original_rel": "Singomakers Sakura House/SRHS_Music_Loops",
-      "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "subcategory": "synth_misc",
-      "license_tier": "pack",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "synth (602).wav",
-      "source_pack": "Sakura",
-      "original": "SRHS_120_A_Synth_Loop_02.wav",
-      "original_rel": "Singomakers Sakura House/SRHS_Music_Loops",
-      "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "subcategory": "synth_misc",
-      "license_tier": "pack",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "synth (603).wav",
-      "source_pack": "Sakura",
-      "original": "SRHS_120_F#_Synth_Loop_01.wav",
-      "original_rel": "Singomakers Sakura House/SRHS_Music_Loops",
-      "license": "Royalty-free (commercial sample pack; verify EULA, do not redistribute)",
-      "subcategory": "synth_misc",
-      "license_tier": "pack",
-      "content_kind": "unknown"
-    },
-    {
       "file": "XAM Melody 1 (140).wav",
       "source_pack": "XAM Sample Pack Vol.3",
       "original": "melodies\\XAM Melody 1 (140).wav",
@@ -7314,17 +7284,6 @@
       "subcategory": "pad",
       "source_pack": "sync",
       "original": "13 - ii_padrinos_-_thats_how_good_your_love_is.mp3",
-      "original_rel": "pad",
-      "license": "来源未记录（--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "13 - ii_padrinos_-_thats_how_good_your_love_is_1.mp3",
-      "subcategory": "pad",
-      "source_pack": "sync",
-      "original": "13 - ii_padrinos_-_thats_how_good_your_love_is_1.mp3",
       "original_rel": "pad",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,

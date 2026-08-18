@@ -1650,17 +1650,6 @@
       "content_kind": "unknown"
     },
     {
-      "file": "ESW Pulse Perc - Tabla 01_1.wav",
-      "subcategory": "tabla",
-      "source_pack": "sync",
-      "original": "ESW Pulse Perc - Tabla 01_1.wav",
-      "original_rel": "tabla",
-      "license": "来源未记录（--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
       "file": "ESW Pulse Perc - Tabla 01_2.wav",
       "subcategory": "tabla",
       "source_pack": "sync",
@@ -1676,17 +1665,6 @@
       "subcategory": "tabla",
       "source_pack": "sync",
       "original": "ESW Pulse Perc - Tabla 02.wav",
-      "original_rel": "tabla",
-      "license": "来源未记录（--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "ESW Pulse Perc - Tabla 02_1.wav",
-      "subcategory": "tabla",
-      "source_pack": "sync",
-      "original": "ESW Pulse Perc - Tabla 02_1.wav",
       "original_rel": "tabla",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,
@@ -1830,17 +1808,6 @@
       "subcategory": "tabla",
       "source_pack": "sync",
       "original": "Tabla Bollybounce 3.wav",
-      "original_rel": "tabla",
-      "license": "来源未记录（--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "Tabla Bollybounce 3_1.wav",
-      "subcategory": "tabla",
-      "source_pack": "sync",
-      "original": "Tabla Bollybounce 3_1.wav",
       "original_rel": "tabla",
       "license": "来源未记录（--release-safe 将剔除）",
       "duration_s": null,

@@ -1641,39 +1641,6 @@
       "content_kind": "unknown"
     },
     {
-      "file": "ESW Real - Cello_1.wav",
-      "subcategory": "cello",
-      "source_pack": "sync",
-      "original": "ESW Real - Cello_1.wav",
-      "original_rel": "cello",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "ESW Real - Cello_2.wav",
-      "subcategory": "cello",
-      "source_pack": "sync",
-      "original": "ESW Real - Cello_2.wav",
-      "original_rel": "cello",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "ESW Real - Cello_3.wav",
-      "subcategory": "cello",
-      "source_pack": "sync",
-      "original": "ESW Real - Cello_3.wav",
-      "original_rel": "cello",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
       "file": "ESW Real - ST Cello Solo.wav",
       "subcategory": "cello",
       "source_pack": "sync",
@@ -1872,43 +1839,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "Spic Cello C4_1.wav",
-      "subcategory": "cello",
-      "source_pack": "sync",
-      "original": "Spic Cello C4_1.wav",
-      "original_rel": "cello",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "Spic Cello C4_2.wav",
-      "subcategory": "cello",
-      "source_pack": "sync",
-      "original": "Spic Cello C4_2.wav",
-      "original_rel": "cello",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "._Aubit - StringEnsemble C2.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "._Aubit - StringEnsemble C2.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "._Aubit - StringEnsemble C3.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "._Aubit - StringEnsemble C3.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -1931,39 +1865,6 @@
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "._Freeze Strings Low [2018-12-29 235445].wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "._Freeze Strings [2018-12-29 223722].wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "._Freeze Strings [2018-12-29 223722].wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "._Freeze Strings [2018-12-29 235422].wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "._Freeze Strings [2018-12-29 235422].wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "._Freeze StringsLow [2018-12-29 223734].wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "._Freeze StringsLow [2018-12-29 223734].wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -2070,39 +1971,6 @@
       "content_kind": "unknown"
     },
     {
-      "file": "ESW Real - Pizzo String_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "ESW Real - Pizzo String_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "ESW Real - Pizzo String_2.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "ESW Real - Pizzo String_2.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "ESW Real - Pizzo String_3.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "ESW Real - Pizzo String_3.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
       "file": "ESW Real - String Electric Stac.wav",
       "subcategory": "strings",
       "source_pack": "sync",
@@ -2118,39 +1986,6 @@
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "ESW Real - String Quartet.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "ESW Real - String Quartet_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "ESW Real - String Quartet_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "ESW Real - String Quartet_2.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "ESW Real - String Quartet_2.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "ESW Real - String Quartet_3.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "ESW Real - String Quartet_3.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -2477,17 +2312,6 @@
       "content_kind": "unknown"
     },
     {
-      "file": "SMORES Kit 02 - VO Vox String Serum - Verse.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "SMORES Kit 02 - VO Vox String Serum - Verse.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
       "file": "String Ens C Stack.wav",
       "subcategory": "strings",
       "source_pack": "sync",
@@ -2497,39 +2321,6 @@
       "duration_s": null,
       "license_tier": "unknown",
       "content_kind": "unknown"
-    },
-    {
-      "file": "String Ens C Stack_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "String Ens C Stack_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "String Ens C Stack_2.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "String Ens C Stack_2.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "._Aubit - Violin Sustain C4.wav",
-      "subcategory": "violin",
-      "source_pack": "sync",
-      "original": "._Aubit - Violin Sustain C4.wav",
-      "original_rel": "violin",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
     },
     {
       "file": "Aubit - Violin Sustain C4.wav",
@@ -2580,39 +2371,6 @@
       "subcategory": "violin",
       "source_pack": "sync",
       "original": "ESW Real - Violin.wav",
-      "original_rel": "violin",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "ESW Real - Violin_1.wav",
-      "subcategory": "violin",
-      "source_pack": "sync",
-      "original": "ESW Real - Violin_1.wav",
-      "original_rel": "violin",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "ESW Real - Violin_2.wav",
-      "subcategory": "violin",
-      "source_pack": "sync",
-      "original": "ESW Real - Violin_2.wav",
-      "original_rel": "violin",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "ESW Real - Violin_3.wav",
-      "subcategory": "violin",
-      "source_pack": "sync",
-      "original": "ESW Real - Violin_3.wav",
       "original_rel": "violin",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -2807,87 +2565,10 @@
       "content_kind": "unknown"
     },
     {
-      "file": "cello-c2_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "cello-c2_royalty-free_music_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "cello_ensemble_trio_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "cello_ensemble_trio_royalty-free_music_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "cello_royalty-free_music_1_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "cello_royalty-free_music_1_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "cello_royalty-free_music_2.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "cello_royalty-free_music_2.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "classical_violin_music_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "classical_violin_music_royalty-free_music_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "dark_melancholic_cello_solo_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "dark_melancholic_cello_solo_royalty-free_music_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
       "file": "double_bass_drum_amp_cymbal_choke_hit.wav",
       "subcategory": "bowed",
       "source_pack": "sync",
       "original": "double_bass_drum_amp_cymbal_choke_hit.wav",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "double_bass_flutter_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "double_bass_flutter_royalty-free_music_1.mp3",
       "original_rel": "bowed",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -2998,116 +2679,6 @@
       "subcategory": "bowed",
       "source_pack": "sync",
       "original": "double_bass_sequence_royalty-free_music.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "drama_cue_-_synth_and_cello_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "drama_cue_-_synth_and_cello_royalty-free_music_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "processed_cello_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "processed_cello_royalty-free_music_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "riverfront_night_cello_e5_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "riverfront_night_cello_e5_royalty-free_music_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "scary_violin_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "scary_violin_royalty-free_music_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "snare_piano_cello_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "snare_piano_cello_royalty-free_music_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "spirit_cello_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "spirit_cello_royalty-free_music_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "trumpet_piano_viola_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "trumpet_piano_viola_royalty-free_music_1.mp3",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "violin_hopeful_1.wav",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "violin_hopeful_1.wav",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "violin_scale_26333_1.wav",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "violin_scale_26333_1.wav",
-      "original_rel": "bowed",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "warm_inspirational_cinematic_violin_cue_royalty-free_music_1.mp3",
-      "subcategory": "bowed",
-      "source_pack": "sync",
-      "original": "warm_inspirational_cinematic_violin_cue_royalty-free_music_1.mp3",
       "original_rel": "bowed",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -14005,32 +13576,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_A1 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_A1 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_A2 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_A2 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_A2 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_A2 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -14049,32 +13598,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_C1 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_C1 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_C2 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_C2 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_C2 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_C2 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -14093,32 +13620,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_C3 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_C3 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_E1 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_E1 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_E1 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_E1 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -14137,32 +13642,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_E2 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_E2 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_E3 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_E3 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_E3 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_E3 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -14181,17 +13664,6 @@
       "content_kind": "single_note"
     },
     {
-      "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_G1 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_G1 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_G2 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
@@ -14203,32 +13675,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_G2 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_G2 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_G3 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_G3 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_G3 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "BST_ExpD_Vc_Aleat._Cl_Trem_100-127_G3 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -18295,32 +17745,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "firstchairs_bass_ports_rep1_91-91_A0 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_A0 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "firstchairs_bass_ports_rep1_91-91_A1 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "firstchairs_bass_ports_rep1_91-91_A1 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "firstchairs_bass_ports_rep1_91-91_A1 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_A1 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -18339,32 +17767,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "firstchairs_bass_ports_rep1_91-91_B0 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_B0 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "firstchairs_bass_ports_rep1_91-91_B1 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "firstchairs_bass_ports_rep1_91-91_B1 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "firstchairs_bass_ports_rep1_91-91_B1 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_B1 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -18383,32 +17789,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "firstchairs_bass_ports_rep1_91-91_C0 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_C0 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "firstchairs_bass_ports_rep1_91-91_C1 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "firstchairs_bass_ports_rep1_91-91_C1 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "firstchairs_bass_ports_rep1_91-91_C1 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_C1 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -18427,32 +17811,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "firstchairs_bass_ports_rep1_91-91_C2 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_C2 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "firstchairs_bass_ports_rep1_91-91_D0 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "firstchairs_bass_ports_rep1_91-91_D0 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "firstchairs_bass_ports_rep1_91-91_D0 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_D0 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -18471,32 +17833,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "firstchairs_bass_ports_rep1_91-91_D1 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_D1 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "firstchairs_bass_ports_rep1_91-91_D2 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "firstchairs_bass_ports_rep1_91-91_D2 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "firstchairs_bass_ports_rep1_91-91_D2 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_D2 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -18515,32 +17855,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "firstchairs_bass_ports_rep1_91-91_E0 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_E0 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "firstchairs_bass_ports_rep1_91-91_E1 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "firstchairs_bass_ports_rep1_91-91_E1 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "firstchairs_bass_ports_rep1_91-91_E1 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_E1 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -18559,32 +17877,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "firstchairs_bass_ports_rep1_91-91_E2 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_E2 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "firstchairs_bass_ports_rep1_91-91_F0 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "firstchairs_bass_ports_rep1_91-91_F0 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "firstchairs_bass_ports_rep1_91-91_F0 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_F0 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -18603,32 +17899,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "firstchairs_bass_ports_rep1_91-91_F1 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_F1 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "firstchairs_bass_ports_rep1_91-91_F2 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "firstchairs_bass_ports_rep1_91-91_F2 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "firstchairs_bass_ports_rep1_91-91_F2 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_F2 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -18658,32 +17932,10 @@
       "content_kind": "single_note"
     },
     {
-      "file": "firstchairs_bass_ports_rep1_91-91_G1 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_G1 - AB_1.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
       "file": "firstchairs_bass_ports_rep1_91-91_G2 - AB.wav",
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "firstchairs_bass_ports_rep1_91-91_G2 - AB.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "single_note"
-    },
-    {
-      "file": "firstchairs_bass_ports_rep1_91-91_G2 - AB_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "firstchairs_bass_ports_rep1_91-91_G2 - AB_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
@@ -31917,17 +31169,6 @@
       "subcategory": "strings",
       "source_pack": "sync",
       "original": "29 - 4_strings-take_me_away.wav",
-      "original_rel": "strings",
-      "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
-      "duration_s": null,
-      "license_tier": "unknown",
-      "content_kind": "unknown"
-    },
-    {
-      "file": "29 - 4_strings-take_me_away_1.wav",
-      "subcategory": "strings",
-      "source_pack": "sync",
-      "original": "29 - 4_strings-take_me_away_1.wav",
       "original_rel": "strings",
       "license": "来源未记录（疑似本地乐器音色库单音采样，--release-safe 将剔除）",
       "duration_s": null,
