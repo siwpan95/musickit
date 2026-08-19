@@ -207,10 +207,10 @@ TRACKS = [
 ]
 
 if __name__ == "__main__":
-    only = sys.argv[1] if len(sys.argv) > 1 else None
-    styles = [st for st in STYLES if only is None or st["slug"] == only]
+    slugs = sys.argv[1:] or None
+    styles = [st for st in STYLES if slugs is None or st["slug"] in slugs]
     if not styles:
-        print("unknown style:", only); sys.exit(1)
+        print("unknown style(s):", slugs); sys.exit(1)
     manifest = [dict(slug=st["slug"], name=st["name"], zh=st["zh"], folder=st["folder"],
                      color=st["color"], tagline=st["tagline"], about=st["about"],
                      refs=st["refs"], sig=st["sig"], target_lufs=st["target_lufs"],
@@ -231,10 +231,21 @@ if __name__ == "__main__":
             entry["stems"] = stem_names
             m["tracks"].append(entry)
             print(f"  [{st['slug']:>12s}] {entry['dur']:6.1f}s  estLUFS={entry['lufs']:6.1f}  -> {entry['out']}")
-    json.dump({"styles": manifest}, open(os.path.join(OUTDIR, "styles_manifest.json"), "w"),
+    # incremental merge: keep previously rendered styles that this run did not touch
+    merged = {}
+    try:
+        with open(os.path.join(OUTDIR, "styles_manifest.json"), encoding="utf-8") as f:
+            for s in json.load(f).get("styles", []):
+                merged[s["slug"]] = s
+    except Exception:
+        pass
+    for m in manifest:
+        merged[m["slug"]] = m
+    final = [merged[s["slug"]] for s in STYLES if s["slug"] in merged]
+    json.dump({"styles": final}, open(os.path.join(OUTDIR, "styles_manifest.json"), "w"),
               ensure_ascii=False, indent=2)
     # backward-compat: album_manifest.json keeps the Burbidge entries (old format)
-    burb = next((m for m in manifest if m["slug"] == "burbidge"), None)
+    burb = next((m for m in final if m["slug"] == "burbidge"), None)
     if burb:
         json.dump(burb["tracks"], open(os.path.join(OUTDIR, "album_manifest.json"), "w"),
                   ensure_ascii=False, indent=2)

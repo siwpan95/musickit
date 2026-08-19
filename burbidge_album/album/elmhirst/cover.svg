@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e0c0f"/>
+      <stop offset="1" stop-color="#07060a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.32" r="0.7">
+      <stop offset="0" stop-color="#e85d75" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#e85d75" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <rect width="800" height="800" fill="url(#glow)"/>
+  <g fill="none" stroke="#e85d75" stroke-opacity="0.55">
+    <circle cx="400" cy="295" r="150"/>
+    <circle cx="400" cy="295" r="110"/>
+    <circle cx="400" cy="295" r="70"/>
+  </g>
+  <text x="400" y="295" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="#f3e2bd" font-style="italic">After Midnight</text>
+  <text x="400" y="545" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="30" letter-spacing="6" fill="#e85d75">TOM ELMHIRST</text>
+  <text x="400" y="585" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" letter-spacing="2" fill="#b9ab92">汤姆·埃尔姆赫斯特</text>
+  <text x="400" y="620" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="2" fill="#9c8e74">MIX ENGINEER SERIES · musickit STEMS</text>
+  <text x="400" y="700" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#8a7d66" font-style="italic">pristine · huge clean vocals · deep control</text>
+</svg>

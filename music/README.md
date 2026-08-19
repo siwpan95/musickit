@@ -223,9 +223,10 @@ G:\musickit\burbidge_album 的「固定风格」专辑管线（同一组 stems �
 已抽为共享模块 **burbidge_album/mixer_styles.py**。随机风格管线（本工具 + remix 引擎）
 可把这 10 位混音师的「调音台签名」挂到任意一条随机混音上：
 
-- 10 位混音师：burbidge / ghenea / clearmountain / marroquin / pensado / blake /
-  lordalge / schmitt / mikedean / stent（每位签名与逐总线参数见
-  burbidge_album/album/ALBUM_NOTES.md）；
+- 24 位混音师：burbidge / ghenea / clearmountain / marroquin / pensado / blake /
+  lordalge / schmitt / mikedean / stent / wallace / maserati / joshua / ali /
+  elmhirst / scheps / moulder / guzauski / albini / everett / elevado / shebib /
+  power / zhoutianche（每位签名与逐总线参数见 burbidge_album/album/ALBUM_NOTES.md）；
 - 分轨总线着色：鼓组（drum/cowbell）、贝斯（bass）、铺垫（synth/keys/strings/brass/
   woodwind/ethnic）、主奏与人声（guita/vocal）分别经过对应混音师的
   EQ/压缩/饱和/混响/宽度链；
@@ -238,7 +239,7 @@ G:\musickit\burbidge_album 的「固定风格」专辑管线（同一组 stems �
     # 每条随机提示词各配一位随机混音师（--seed 可复现）
     python prompt_driven_remix.py -n 3 --fusion --mixer-style random --seed 42 --report out.json
 
-    # 同一提示词 × 10 位混音师（A/B 对比，10 位依次替换）
+    # 同一提示词 × 24 位混音师（A/B 对比，24 位依次替换）
     python prompt_driven_remix.py --prompt-json prompts.json --mixer-style burbidge
 
     # remix 引擎直连（不经过提示词桥接器）

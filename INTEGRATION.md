@@ -10,14 +10,13 @@ G:\musickit 下有两套互补的音乐制作管线，现已通过共享模块
 | 目录 | music/ + remix/ | burbidge_album/ |
 | 入口 | music/prompt_driven_remix.py（桥接器）→ remix/main.py::run_remix | burbidge_album/build_album.py |
 | 随机性 | 65 个流派风格池随机生成提示词（music/styles/），乐器经 instrument_taxonomy.json（242 词 → 37 类目）映射到素材池，随机选音 + 曲式模板 | 固定 6 首曲目、固定 stems 与编曲（seed 固定可复现） |
-| 混音 | 分轨 RMS 归一 + 曲式编排 + 峰值归一（无调音台签名） | 10 位混音师签名链（EQ/压缩/饱和/混响/宽度/母带） |
+| 混音 | 分轨 RMS 归一 + 曲式编排 + 峰值归一（无调音台签名） | 24 位混音师签名链（EQ/压缩/饱和/混响/宽度/母带） |
 | 运行环境 | F:\Python314（pydub + audioop-lts + numpy/scipy/soundfile） | PATH python 3.13 或 F:\Python314（numpy/scipy/soundfile） |
 
 ## 整合点：mixer_styles.py
 
-- burbidge_album/mixer_styles.py：10 位混音师风格注册表 + bus_chain/master_chain/
-  style_irs/resolve_style（burbidge/ghenea/clearmountain/marroquin/pensado/blake/
-  lordalge/schmitt/mikedean/stent，另支持 random）。只依赖 numpy/scipy（经 dsp.py）。
+- burbidge_album/mixer_styles.py：24 位混音师风格注册表 + bus_chain/master_chain/
+  style_irs/resolve_style（burbidge/ghenea/clearmountain/marroquin/pensado/blake/lordalge/schmitt/mikedean/stent/wallace/maserati/joshua/ali/elmhirst/scheps/moulder/guzauski/albini/everett/elevado/shebib/power/zhoutianche，另支持 random）。只依赖 numpy/scipy（经 dsp.py）。
 - burbidge_album/build_album.py：固定风格专辑构建器，改为从共享模块导入
   （重构后输出与重构前逐位一致，已验证）。
 - remix/main.py：run_remix(..., mixer_style=None) 与 --mixer-style 参数。
@@ -36,11 +35,11 @@ G:\musickit 下有两套互补的音乐制作管线，现已通过共享模块
     # 每条随机提示词随机配一位混音师
     F:/Python314/python.exe music/prompt_driven_remix.py -n 3 --fusion --mixer-style random --seed 42
 
-    # 同一提示词 × 10 位混音师（A/B 对比）
+    # 同一提示词 × 24 位混音师（A/B 对比）
     F:/Python314/python.exe music/music_prompt_generator.py -n 1 -c phonk --seed 7 --export json -o p.json
     F:/Python314/python.exe music/prompt_driven_remix.py --prompt-json p.json --mixer-style burbidge
     F:/Python314/python.exe music/prompt_driven_remix.py --prompt-json p.json --mixer-style ghenea
-    ...（10 位依次替换）
+    ...（24 位依次替换）
 
     # remix 引擎直连
     F:/Python314/python.exe remix/main.py --remix --mixer-style blake --seed 1
@@ -61,4 +60,4 @@ G:\musickit 下有两套互补的音乐制作管线，现已通过共享模块
 - music/prompt_mixes/showcase/：同一条 phonk 提示词 × 10 位混音师
   （report_<slug>.json 记录每位映射）。
 - music/prompt_mixes/random_demo/：3 条融合提示词 × 随机混音师（report.json）。
-- burbidge_album/album/<slug>/：固定专辑各风格成品 + 试听页。
+- burbidge_album/album/<slug>/：固定专辑各风格成品 + 试听页（24 位混音师）。
