@@ -305,10 +305,38 @@ def write_hub():
     open(OUT_HTML, "w", encoding="utf-8").write(page)
     print("wrote", OUT_HTML)
 
+def write_channels():
+    """L1 频道目录: 把 24 位混音师风格输出为频道元数据 JSON(Mubert 频道形态对齐)。"""
+    data = load_data()
+    channels = []
+    for st in data:
+        channels.append({
+            "slug": st["slug"],
+            "name": st["name"],
+            "zh": st["zh"],
+            "color": st["color"],
+            "tagline": st["tagline"],
+            "about": st["about"],
+            "refs": st["refs"],
+            "target_lufs": st["target_lufs"],
+            "page": st["folder"] + "/index.html",
+            "cover": st["folder"] + "/cover.svg",
+            "sig": st["sig"],
+            "impl": st["impl"],
+            "tracks": [{"num": t["num"], "title": t["title"], "tempo": t["tempo"],
+                        "key": t["key"], "dur": t["dur"], "lufs": t["lufs"],
+                        "out": t["out"]} for t in st["tracks"]],
+        })
+    with open(os.path.join(ALBUM, "channels.json"), "w", encoding="utf-8") as f:
+        json.dump({"channels": channels}, f, ensure_ascii=False, indent=2)
+    print("wrote", os.path.join(ALBUM, "channels.json"))
+
+
 if __name__ == "__main__":
     write_markdown()
     open(OUT_COVER, "w", encoding="utf-8").write(series_cover())
     print("wrote", OUT_COVER)
     write_style_pages()
     write_hub()
+    write_channels()
     print("docs done")

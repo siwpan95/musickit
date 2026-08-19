@@ -1,0 +1,2162 @@
+{
+  "channels": [
+    {
+      "slug": "burbidge",
+      "name": "Craig Burbidge",
+      "zh": "克雷格·伯比奇",
+      "color": "#d9a441",
+      "tagline": "warm console · vocal-forward · lush plate",
+      "about": "Late-80s/90s LA R&B, soul, gospel and pop (Barry White, Brian McKnight, Take 6, Vanessa Williams, David Tao 陶喆, 张惠妹, 王力宏, 五月天). Signature: vocal-forward, warm SSL/Neve console body, deep punchy bottom, lush plate on lead + gospel-style backgrounds, smooth opto-style lead compression, glue bus compression, wide polished stereo.",
+      "refs": [
+        "Barry White",
+        "Brian McKnight",
+        "Take 6",
+        "Vanessa Williams",
+        "David Tao",
+        "张惠妹",
+        "王力宏",
+        "五月天"
+      ],
+      "target_lufs": -13.0,
+      "page": "burbidge/index.html",
+      "cover": "burbidge/cover.svg",
+      "sig": {
+        "drums": "Punchy, controlled, centered (SSL drum bus)",
+        "bass": "Deep Barry-White bottom, tight 6:1",
+        "pad": "Warm, slightly recessed harmony bed",
+        "lead": "THE vocal stand-in: front, intimate, lush plate",
+        "bg": "Wide gospel-style backgrounds behind the lead",
+        "master": "Warm glue, polished width, musical dynamics"
+      },
+      "impl": {
+        "drums": "HPF 35 Hz · lowshelf +1.0 dB @ 120 Hz · peak +1.5 dB @ 4000 Hz · comp -20 dB 4:1 (5/120 ms, k3, +2 dB) · sat drive 1.2 mix 0.12 · room reverb 10% · -5 dB",
+        "bass": "HPF 30 Hz · lowshelf +2.0 dB @ 90 Hz · peak +2.0 dB @ 80 Hz · comp -24 dB 6:1 (3/200 ms, k2, +1 dB) · sat drive 1.5 mix 0.22 · -7 dB",
+        "pad": "HPF 40 Hz · lowshelf -1.0 dB @ 250 Hz · peak +1.0 dB @ 2500 Hz · comp -22 dB 2.5:1 (15/250 ms, k3, +1 dB) · med reverb 18% · M/S +0.30 · -11 dB",
+        "lead": "HPF 50 Hz · lowshelf +1.0 dB @ 200 Hz · peak +2.0 dB @ 3800 Hz · comp -16 dB 2:1 (20/300 ms, k4, +1.5 dB) · long reverb 30% · M/S +0.15 · pan +0.08 · -3 dB",
+        "bg": "HPF 80 Hz · LPF 9000 Hz · comp -24 dB 2:1 (20/300 ms, k3, +0 dB) · long reverb 35% · M/S +0.60 · -15 dB",
+        "master": "HPF 30 Hz · lowshelf +0.5 dB @ 60 Hz · peak +1.5 dB @ 12000 Hz · comp -18 dB 2:1 (10/200 ms, k2, +1.5 dB) · sat drive 1.1 mix 0.08 · M/S +0.10 · target -13 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -27.0,
+          "out": "burbidge\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.3,
+          "out": "burbidge\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -21.2,
+          "out": "burbidge\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -19.3,
+          "out": "burbidge\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -19.3,
+          "out": "burbidge\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -23.3,
+          "out": "burbidge\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "ghenea",
+      "name": "Serban Ghenea",
+      "zh": "塞尔班·吉尼亚",
+      "color": "#7fd4ff",
+      "tagline": "hyper-clean · bright air · loud but polite",
+      "about": "The most-played mixer in modern pop (Taylor Swift, Ariana Grande, The Weeknd, Bruno Mars, Dua Lipa). Signature: hyper-clean separation between elements, punchy-but-polite dynamics, crisp top-end air, loud without sounding crushed.",
+      "refs": [
+        "Taylor Swift",
+        "Ariana Grande",
+        "The Weeknd",
+        "Bruno Mars",
+        "Dua Lipa"
+      ],
+      "target_lufs": -9.0,
+      "page": "ghenea/index.html",
+      "cover": "ghenea/cover.svg",
+      "sig": {
+        "drums": "Punchy but polite, crisp attack",
+        "bass": "Tight, controlled, clean low end",
+        "pad": "Tucked well behind the vocal lane",
+        "lead": "Hyper-clean, bright, sits perfectly on top",
+        "bg": "Wide but out of the way",
+        "master": "Transparent glue, bright air, loud yet un-crushed"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +0.5 dB @ 100 Hz · peak +2.0 dB @ 2500 Hz · peak +1.5 dB @ 8000 Hz · comp -16 dB 3:1 (4/100 ms, k2, +1 dB) · sat drive 1.05 mix 0.02 · room reverb 6% · -5 dB",
+        "bass": "HPF 35 Hz · lowshelf +1.5 dB @ 80 Hz · peak +1.0 dB @ 120 Hz · peak -1.0 dB @ 200 Hz · comp -20 dB 4:1 (4/150 ms, k2, +1 dB) · -8 dB",
+        "pad": "HPF 60 Hz · lowshelf -2.0 dB @ 200 Hz · peak +1.0 dB @ 3000 Hz · comp -24 dB 3:1 (10/200 ms, k2, +0.5 dB) · med reverb 12% · M/S +0.40 · -13 dB",
+        "lead": "HPF 80 Hz · lowshelf -0.5 dB @ 150 Hz · peak +2.5 dB @ 3000 Hz · peak +2.0 dB @ 8000 Hz · comp -14 dB 2:1 (15/120 ms, k2, +2 dB) · med reverb 12% · M/S +0.10 · -3 dB",
+        "bg": "HPF 100 Hz · LPF 11000 Hz · comp -26 dB 2:1 (15/200 ms, k2, +0 dB) · med reverb 20% · M/S +0.50 · -16 dB",
+        "master": "HPF 25 Hz · lowshelf +0.5 dB @ 50 Hz · peak +0.5 dB @ 2000 Hz · peak +2.0 dB @ 12000 Hz · comp -14 dB 1.5:1 (8/100 ms, k1, +1.5 dB) · sat drive 1.03 mix 0.02 · M/S +0.15 · target -9 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -24.3,
+          "out": "ghenea\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.7,
+          "out": "ghenea\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -21.0,
+          "out": "ghenea\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -19.7,
+          "out": "ghenea\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -18.7,
+          "out": "ghenea\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -21.4,
+          "out": "ghenea\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "clearmountain",
+      "name": "Bob Clearmountain",
+      "zh": "鲍勃·克利尔芒廷",
+      "color": "#d98e5f",
+      "tagline": "big room · dynamic drums · classic rock",
+      "about": "Classic rock royalty (Bruce Springsteen, The Rolling Stones, INXS, Bryan Adams, Roxy Music). Signature: big natural room ambience, dynamic punchy drums, the sound of a band playing in a great room rather than a polished product.",
+      "refs": [
+        "Bruce Springsteen",
+        "The Rolling Stones",
+        "INXS",
+        "Bryan Adams",
+        "Roxy Music"
+      ],
+      "target_lufs": -14.0,
+      "page": "clearmountain/index.html",
+      "cover": "clearmountain/cover.svg",
+      "sig": {
+        "drums": "Big, dynamic, roomy",
+        "bass": "Round, natural, supportive",
+        "pad": "Open, airy, unhyped",
+        "lead": "Natural, sits in the band rather than on it",
+        "bg": "Ambient width from the room",
+        "master": "Gentle glue, real dynamics, classic rock sheen"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +2.0 dB @ 100 Hz · peak +1.0 dB @ 3000 Hz · comp -18 dB 3:1 (8/150 ms, k2, +1 dB) · sat drive 1.15 mix 0.1 · room reverb 35% · -4 dB",
+        "bass": "HPF 40 Hz · lowshelf +1.0 dB @ 90 Hz · peak +1.0 dB @ 160 Hz · comp -22 dB 3:1 (6/180 ms, k2, +0.5 dB) · sat drive 1.3 mix 0.15 · -8 dB",
+        "pad": "HPF 50 Hz · lowshelf -1.0 dB @ 250 Hz · comp -24 dB 2:1 (20/300 ms, k2, +0 dB) · med reverb 15% · M/S +0.20 · -12 dB",
+        "lead": "HPF 70 Hz · lowshelf +0.5 dB @ 180 Hz · peak +1.5 dB @ 2500 Hz · comp -16 dB 2:1 (25/250 ms, k3, +1 dB) · room reverb 20% · M/S +0.10 · -4 dB",
+        "bg": "HPF 90 Hz · LPF 10000 Hz · comp -24 dB 2:1 (20/300 ms, k2, +0 dB) · med reverb 25% · M/S +0.40 · -15 dB",
+        "master": "HPF 28 Hz · lowshelf +1.0 dB @ 60 Hz · peak +1.0 dB @ 10000 Hz · comp -16 dB 1.5:1 (15/250 ms, k2, +1 dB) · sat drive 1.08 mix 0.05 · M/S +0.05 · target -14 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -26.6,
+          "out": "clearmountain\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.4,
+          "out": "clearmountain\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -22.3,
+          "out": "clearmountain\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -18.8,
+          "out": "clearmountain\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -19.4,
+          "out": "clearmountain\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -20.5,
+          "out": "clearmountain\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "marroquin",
+      "name": "Manny Marroquin",
+      "zh": "曼尼·马罗奎因",
+      "color": "#ff6a9c",
+      "tagline": "deep 808 lows · hard kick · modern loudness",
+      "about": "Modern hip-hop and R&B (Kendrick Lamar, Post Malone, Kanye West, Rihanna, Alicia Keys). Signature: massive deep lows, hard-hitting kick, clean intimate vocals, modern loudness that stays musical.",
+      "refs": [
+        "Kendrick Lamar",
+        "Post Malone",
+        "Kanye West",
+        "Rihanna",
+        "Alicia Keys"
+      ],
+      "target_lufs": -10.0,
+      "page": "marroquin/index.html",
+      "cover": "marroquin/cover.svg",
+      "sig": {
+        "drums": "Huge kick, modern punch",
+        "bass": "808-grade depth, bass-forward",
+        "pad": "Thin-walled so the lows stay clear",
+        "lead": "Clean, intimate, slightly wet",
+        "bg": "Deep, wide bed",
+        "master": "Massive lows, controlled loudness"
+      },
+      "impl": {
+        "drums": "HPF 28 Hz · lowshelf +2.5 dB @ 90 Hz · peak +2.0 dB @ 5000 Hz · comp -18 dB 4:1 (3/90 ms, k2, +2 dB) · sat drive 1.25 mix 0.15 · room reverb 8% · -4 dB",
+        "bass": "HPF 25 Hz · lowshelf +3.0 dB @ 60 Hz · peak +1.5 dB @ 100 Hz · comp -22 dB 5:1 (2/120 ms, k2, +1 dB) · sat drive 1.6 mix 0.25 · -6 dB",
+        "pad": "HPF 50 Hz · lowshelf -2.0 dB @ 200 Hz · peak +0.5 dB @ 2000 Hz · comp -24 dB 3:1 (12/220 ms, k2, +0.5 dB) · med reverb 15% · M/S +0.35 · -13 dB",
+        "lead": "HPF 70 Hz · lowshelf +0.5 dB @ 160 Hz · peak +2.0 dB @ 3200 Hz · comp -15 dB 2.5:1 (18/180 ms, k3, +2 dB) · long reverb 22% · M/S +0.12 · -3 dB",
+        "bg": "HPF 100 Hz · LPF 9500 Hz · comp -26 dB 2:1 (18/250 ms, k2, +0 dB) · long reverb 30% · M/S +0.55 · -16 dB",
+        "master": "HPF 25 Hz · lowshelf +1.5 dB @ 45 Hz · peak +1.0 dB @ 15000 Hz · comp -15 dB 2:1 (6/150 ms, k2, +2 dB) · sat drive 1.12 mix 0.1 · M/S +0.12 · target -10 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -26.4,
+          "out": "marroquin\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.1,
+          "out": "marroquin\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -18.8,
+          "out": "marroquin\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -18.7,
+          "out": "marroquin\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -20.1,
+          "out": "marroquin\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -20.1,
+          "out": "marroquin\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "pensado",
+      "name": "Dave Pensado",
+      "zh": "戴夫·潘萨多",
+      "color": "#ffc04d",
+      "tagline": "big lows · crispy highs · exciting",
+      "about": "Hitmaker and educator ('Pensado's Place'); credits include Christina Aguilera, Kelly Rowland, Beyoncé. Signature: BIG bottom, crispy sparkling highs, a smiley curve that sounds exciting on any system.",
+      "refs": [
+        "Christina Aguilera",
+        "Kelly Rowland",
+        "Beyoncé",
+        "Justin Timberlake"
+      ],
+      "target_lufs": -10.0,
+      "page": "pensado/index.html",
+      "cover": "pensado/cover.svg",
+      "sig": {
+        "drums": "Big and snappy",
+        "bass": "Sub-heavy, rumbling",
+        "pad": "Balanced, sparkly",
+        "lead": "Bright, crispy, exciting",
+        "bg": "Wide and shimmery",
+        "master": "Big lows + crispy highs, exciting loudness"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +2.0 dB @ 110 Hz · peak +2.5 dB @ 6000 Hz · comp -17 dB 3.5:1 (5/110 ms, k2, +1.5 dB) · sat drive 1.3 mix 0.15 · room reverb 10% · -5 dB",
+        "bass": "HPF 28 Hz · lowshelf +3.0 dB @ 70 Hz · peak +1.5 dB @ 90 Hz · comp -22 dB 5:1 (3/140 ms, k2, +1 dB) · sat drive 1.5 mix 0.2 · -7 dB",
+        "pad": "HPF 55 Hz · lowshelf -1.5 dB @ 220 Hz · peak +1.5 dB @ 2800 Hz · comp -23 dB 2.5:1 (14/240 ms, k2, +0.5 dB) · med reverb 15% · M/S +0.35 · -12 dB",
+        "lead": "HPF 75 Hz · lowshelf +0.5 dB @ 170 Hz · peak +2.5 dB @ 3500 Hz · peak +2.5 dB @ 8000 Hz · comp -15 dB 2:1 (18/150 ms, k3, +2 dB) · long reverb 25% · M/S +0.12 · -3 dB",
+        "bg": "HPF 100 Hz · LPF 10500 Hz · comp -25 dB 2:1 (18/260 ms, k2, +0 dB) · long reverb 30% · M/S +0.55 · -15 dB",
+        "master": "HPF 28 Hz · lowshelf +1.5 dB @ 55 Hz · peak +1.0 dB @ 3000 Hz · peak +2.0 dB @ 14000 Hz · comp -15 dB 1.8:1 (7/130 ms, k2, +2 dB) · sat drive 1.15 mix 0.1 · M/S +0.15 · target -10 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -29.0,
+          "out": "pensado\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.3,
+          "out": "pensado\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -20.4,
+          "out": "pensado\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -19.5,
+          "out": "pensado\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -20.4,
+          "out": "pensado\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -22.3,
+          "out": "pensado\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "blake",
+      "name": "Tchad Blake",
+      "zh": "查德·布莱克",
+      "color": "#9db36a",
+      "tagline": "gritty · squashed · quirky mono width",
+      "about": "The anti-polish mix master — engineer for Tom Waits and Peter Gabriel, mixer for Arctic Monkeys, The Black Keys, Sheryl Crow. Signature: gritty saturation, squashed dynamics, quirky narrow/mono-ish width, lo-fi character with attitude.",
+      "refs": [
+        "Tom Waits",
+        "Peter Gabriel",
+        "Arctic Monkeys",
+        "The Black Keys",
+        "Sheryl Crow"
+      ],
+      "target_lufs": -12.0,
+      "page": "blake/index.html",
+      "cover": "blake/cover.svg",
+      "sig": {
+        "drums": "Squashed, gritty, explosive",
+        "bass": "Furry, driven, midrangey",
+        "pad": "Dark, murky texture",
+        "lead": "Lo-fi, gritty, in-your-face",
+        "bg": "Narrow, dark backdrop",
+        "master": "Narrow-ish mono glue, pleasing grit, no polish"
+      },
+      "impl": {
+        "drums": "HPF 40 Hz · lowshelf +1.0 dB @ 90 Hz · peak +2.0 dB @ 2000 Hz · comp -14 dB 5:1 (3/80 ms, k2, +1 dB) · sat drive 2 mix 0.5 · room reverb 15% · M/S -0.15 · -5 dB",
+        "bass": "HPF 35 Hz · lowshelf +2.0 dB @ 80 Hz · comp -18 dB 5:1 (2/100 ms, k2, +0.5 dB) · sat drive 2.2 mix 0.45 · -7 dB",
+        "pad": "HPF 70 Hz · LPF 7000 Hz · comp -22 dB 3:1 (10/200 ms, k2, +0 dB) · sat drive 1.6 mix 0.3 · M/S -0.10 · -11 dB",
+        "lead": "HPF 90 Hz · peak +2.0 dB @ 1800 Hz · comp -12 dB 3:1 (12/140 ms, k3, +1 dB) · sat drive 2 mix 0.4 · room reverb 18% · M/S -0.10 · -3 dB",
+        "bg": "HPF 110 Hz · LPF 6500 Hz · comp -24 dB 2.5:1 (15/220 ms, k2, +0 dB) · sat drive 1.5 mix 0.25 · M/S -0.05 · -15 dB",
+        "master": "HPF 35 Hz · LPF 16000 Hz · lowshelf +1.0 dB @ 70 Hz · peak +1.5 dB @ 2500 Hz · comp -13 dB 2.5:1 (5/90 ms, k2, +1.5 dB) · sat drive 1.5 mix 0.25 · M/S -0.15 · target -12 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -25.2,
+          "out": "blake\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -16.9,
+          "out": "blake\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -22.0,
+          "out": "blake\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -18.7,
+          "out": "blake\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -17.9,
+          "out": "blake\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -19.8,
+          "out": "blake\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "lordalge",
+      "name": "Chris Lord-Alge",
+      "zh": "克里斯·洛德-阿尔吉",
+      "color": "#5f8dff",
+      "tagline": "loud · punchy · radio bright",
+      "about": "Radio rock and pop (Green Day, Muse, My Chemical Romance, Avril Lavigne, Bon Jovi). Signature: loud, punchy, bright — every element maximized for radio impact without turning to mush.",
+      "refs": [
+        "Green Day",
+        "Muse",
+        "My Chemical Romance",
+        "Avril Lavigne",
+        "Bon Jovi"
+      ],
+      "target_lufs": -9.0,
+      "page": "lordalge/index.html",
+      "cover": "lordalge/cover.svg",
+      "sig": {
+        "drums": "Huge, hard-hitting",
+        "bass": "Firm, defined low end",
+        "pad": "Supportive, slightly compressed",
+        "lead": "Loud, bright, radio-forward",
+        "bg": "Wide, glossy",
+        "master": "Loud, punchy, bright — radio ready"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +2.5 dB @ 110 Hz · peak +2.0 dB @ 3000 Hz · peak +1.5 dB @ 8000 Hz · comp -16 dB 4:1 (4/90 ms, k2, +2.5 dB) · sat drive 1.3 mix 0.18 · room reverb 20% · -4 dB",
+        "bass": "HPF 32 Hz · lowshelf +2.0 dB @ 85 Hz · peak +1.0 dB @ 150 Hz · comp -20 dB 4:1 (4/130 ms, k2, +1 dB) · sat drive 1.4 mix 0.18 · -7 dB",
+        "pad": "HPF 55 Hz · lowshelf -1.5 dB @ 240 Hz · peak +1.0 dB @ 2600 Hz · comp -23 dB 2.5:1 (12/220 ms, k2, +0.5 dB) · med reverb 15% · M/S +0.30 · -12 dB",
+        "lead": "HPF 75 Hz · lowshelf +1.0 dB @ 170 Hz · peak +2.5 dB @ 3000 Hz · comp -14 dB 2.5:1 (15/130 ms, k3, +2 dB) · med reverb 18% · M/S +0.10 · -3 dB",
+        "bg": "HPF 100 Hz · LPF 10000 Hz · comp -25 dB 2:1 (15/240 ms, k2, +0 dB) · med reverb 25% · M/S +0.50 · -15 dB",
+        "master": "HPF 28 Hz · lowshelf +1.5 dB @ 55 Hz · peak +1.0 dB @ 2500 Hz · peak +1.5 dB @ 12000 Hz · comp -14 dB 2:1 (6/120 ms, k2, +2.5 dB) · sat drive 1.15 mix 0.12 · M/S +0.12 · target -9 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -27.1,
+          "out": "lordalge\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -23.5,
+          "out": "lordalge\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -20.8,
+          "out": "lordalge\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -19.6,
+          "out": "lordalge\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -20.6,
+          "out": "lordalge\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -21.7,
+          "out": "lordalge\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "schmitt",
+      "name": "Al Schmitt",
+      "zh": "阿尔·施密特",
+      "color": "#e0d2b0",
+      "tagline": "natural · transparent · dynamic",
+      "about": "23-time Grammy winner, the conscience of natural sound (Frank Sinatra, Steely Dan, Diana Krall, Henry Mancini, Toto). Signature: the microphone does the work and the mixer stays out of the way — pure tone, real dynamics, no hype.",
+      "refs": [
+        "Frank Sinatra",
+        "Steely Dan",
+        "Diana Krall",
+        "Henry Mancini",
+        "Toto"
+      ],
+      "target_lufs": -16.0,
+      "page": "schmitt/index.html",
+      "cover": "schmitt/cover.svg",
+      "sig": {
+        "drums": "Natural, open, unhyped",
+        "bass": "Round and acoustic-sounding",
+        "pad": "Airy, transparent",
+        "lead": "Pure tone, no hype",
+        "bg": "Gentle, natural depth",
+        "master": "Transparent, dynamic, audiophile headroom"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +0.5 dB @ 90 Hz · comp -20 dB 2:1 (10/200 ms, k2, +0.5 dB) · room reverb 25% · -6 dB",
+        "bass": "HPF 35 Hz · lowshelf +1.0 dB @ 80 Hz · comp -22 dB 2.5:1 (8/220 ms, k2, +0 dB) · -8 dB",
+        "pad": "HPF 45 Hz · lowshelf -1.0 dB @ 220 Hz · comp -26 dB 1.5:1 (25/400 ms, k2, +0 dB) · med reverb 10% · M/S +0.15 · -13 dB",
+        "lead": "HPF 60 Hz · lowshelf +0.5 dB @ 180 Hz · peak +1.0 dB @ 2800 Hz · comp -18 dB 1.5:1 (30/350 ms, k2, +0.5 dB) · room reverb 15% · M/S +0.05 · -4 dB",
+        "bg": "HPF 80 Hz · LPF 11000 Hz · comp -26 dB 1.5:1 (25/400 ms, k2, +0 dB) · med reverb 15% · M/S +0.25 · -16 dB",
+        "master": "HPF 30 Hz · lowshelf +0.5 dB @ 60 Hz · peak +0.5 dB @ 10000 Hz · comp -18 dB 1.5:1 (20/350 ms, k2, +0.5 dB) · M/S +0.05 · target -16 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -25.9,
+          "out": "schmitt\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.0,
+          "out": "schmitt\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -21.9,
+          "out": "schmitt\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -17.9,
+          "out": "schmitt\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -20.0,
+          "out": "schmitt\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -19.4,
+          "out": "schmitt\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "mikedean",
+      "name": "Mike Dean",
+      "zh": "迈克·迪恩",
+      "color": "#b06aff",
+      "tagline": "saturated · spacey · huge stereo",
+      "about": "Synth-driven psychedelia and modern hip-hop (Kanye West, Travis Scott, The Weeknd, Beyoncé). Signature: heavy saturation everywhere, enormous wide stereo, long spacey reverbs, a wall of sound with detail.",
+      "refs": [
+        "Kanye West",
+        "Travis Scott",
+        "The Weeknd",
+        "Beyoncé"
+      ],
+      "target_lufs": -10.0,
+      "page": "mikedean/index.html",
+      "cover": "mikedean/cover.svg",
+      "sig": {
+        "drums": "Saturated, smeared, huge",
+        "bass": "Distorted depth, synth-heavy",
+        "pad": "Washed in space, wide",
+        "lead": "Psychedelic, drenched in long verb",
+        "bg": "Enormous ambient width",
+        "master": "Heavy saturation, huge stereo, spacey loudness"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +1.5 dB @ 100 Hz · peak +2.0 dB @ 2500 Hz · comp -16 dB 3.5:1 (5/110 ms, k2, +1.5 dB) · sat drive 1.8 mix 0.35 · room reverb 15% · -5 dB",
+        "bass": "HPF 28 Hz · lowshelf +2.5 dB @ 70 Hz · peak +1.0 dB @ 90 Hz · comp -20 dB 4:1 (3/140 ms, k2, +1 dB) · sat drive 1.8 mix 0.3 · -6 dB",
+        "pad": "HPF 50 Hz · lowshelf -1.0 dB @ 200 Hz · peak +1.5 dB @ 3500 Hz · comp -22 dB 2.5:1 (15/240 ms, k2, +0.5 dB) · sat drive 1.4 mix 0.2 · long reverb 35% · M/S +0.50 · -11 dB",
+        "lead": "HPF 70 Hz · lowshelf +0.5 dB @ 160 Hz · peak +2.0 dB @ 3200 Hz · comp -14 dB 2.5:1 (18/160 ms, k3, +2 dB) · sat drive 1.5 mix 0.25 · long reverb 40% · M/S +0.25 · -3 dB",
+        "bg": "HPF 95 Hz · LPF 10000 Hz · comp -24 dB 2:1 (18/260 ms, k2, +0 dB) · long reverb 45% · M/S +0.70 · -15 dB",
+        "master": "HPF 26 Hz · lowshelf +1.0 dB @ 50 Hz · peak +1.5 dB @ 2500 Hz · peak +2.0 dB @ 13000 Hz · comp -14 dB 2:1 (8/140 ms, k2, +2 dB) · sat drive 1.3 mix 0.2 · M/S +0.20 · target -10 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -24.9,
+          "out": "mikedean\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -20.3,
+          "out": "mikedean\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -16.9,
+          "out": "mikedean\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -16.7,
+          "out": "mikedean\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -19.2,
+          "out": "mikedean\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -19.7,
+          "out": "mikedean\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "stent",
+      "name": "Spike Stent",
+      "zh": "斯派克·斯坦特",
+      "color": "#4dd9c0",
+      "tagline": "dark · edgy · tense mids",
+      "about": "Alt/electronic edginess (Björk, Depeche Mode, Muse, Massive Attack, Madonna, No Doubt). Signature: dark overall tone with aggressive presence mids, tense and punchy, big alternative width.",
+      "refs": [
+        "Björk",
+        "Depeche Mode",
+        "Muse",
+        "Massive Attack",
+        "Madonna",
+        "No Doubt"
+      ],
+      "target_lufs": -10.0,
+      "page": "stent/index.html",
+      "cover": "stent/cover.svg",
+      "sig": {
+        "drums": "Aggressive, edgy, punchy",
+        "bass": "Dark with midrange bite",
+        "pad": "Tense, middy, textured",
+        "lead": "Edgy, forward, slightly dark",
+        "bg": "Big alternative width",
+        "master": "Dark, aggressive, controlled loudness"
+      },
+      "impl": {
+        "drums": "HPF 32 Hz · lowshelf +1.5 dB @ 100 Hz · peak +2.5 dB @ 1800 Hz · peak +2.0 dB @ 6000 Hz · comp -15 dB 4:1 (4/100 ms, k2, +2 dB) · sat drive 1.4 mix 0.2 · room reverb 12% · -5 dB",
+        "bass": "HPF 30 Hz · lowshelf +2.0 dB @ 80 Hz · peak +1.0 dB @ 250 Hz · comp -19 dB 4:1 (3/130 ms, k2, +1 dB) · sat drive 1.5 mix 0.22 · -7 dB",
+        "pad": "HPF 55 Hz · lowshelf -2.0 dB @ 250 Hz · peak +2.0 dB @ 3000 Hz · comp -22 dB 3:1 (10/200 ms, k2, +0.5 dB) · med reverb 18% · M/S +0.40 · -12 dB",
+        "lead": "HPF 80 Hz · lowshelf +0.5 dB @ 200 Hz · peak +2.5 dB @ 2500 Hz · peak +2.0 dB @ 7000 Hz · comp -14 dB 2.5:1 (16/140 ms, k3, +2 dB) · long reverb 25% · M/S +0.15 · -3 dB",
+        "bg": "HPF 100 Hz · LPF 9000 Hz · comp -25 dB 2:1 (16/240 ms, k2, +0 dB) · long reverb 30% · M/S +0.60 · -15 dB",
+        "master": "HPF 28 Hz · lowshelf +1.0 dB @ 55 Hz · peak +1.5 dB @ 2000 Hz · peak +1.5 dB @ 9000 Hz · comp -14 dB 2:1 (6/120 ms, k2, +2 dB) · sat drive 1.18 mix 0.12 · M/S +0.15 · target -10 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -26.2,
+          "out": "stent\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.8,
+          "out": "stent\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -16.8,
+          "out": "stent\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -17.5,
+          "out": "stent\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -19.1,
+          "out": "stent\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -18.7,
+          "out": "stent\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "wallace",
+      "name": "Andy Wallace",
+      "zh": "安迪·华莱士",
+      "color": "#ff6a3d",
+      "tagline": "massive drums · dense but clear · arena loud",
+      "about": "Rock and metal giant (Nirvana Nevermind, Rage Against The Machine, Linkin Park, Foo Fighters). Signature: massive punchy drums in a big room, dense layered mixes that stay clear, aggressive yet musical loudness.",
+      "refs": [
+        "Nirvana",
+        "Rage Against The Machine",
+        "Linkin Park",
+        "Foo Fighters",
+        "System of a Down"
+      ],
+      "target_lufs": -9.0,
+      "page": "wallace/index.html",
+      "cover": "wallace/cover.svg",
+      "sig": {
+        "drums": "Massive, roomy, hard-hitting",
+        "bass": "Firm foundation under the guitars",
+        "pad": "Dense but carved out",
+        "lead": "Loud, aggressive, always intelligible",
+        "bg": "Thick layers behind the wall",
+        "master": "Dense, clear, arena loudness"
+      },
+      "impl": {
+        "drums": "HPF 28 Hz · lowshelf +2.5 dB @ 90 Hz · peak +1.5 dB @ 3000 Hz · peak +2.0 dB @ 7000 Hz · comp -14 dB 4:1 (3/90 ms, k2, +2.5 dB) · sat drive 1.3 mix 0.18 · room reverb 30% · -4 dB",
+        "bass": "HPF 30 Hz · lowshelf +2.0 dB @ 85 Hz · peak +1.0 dB @ 160 Hz · comp -18 dB 4:1 (3/110 ms, k2, +1.5 dB) · sat drive 1.4 mix 0.2 · -7 dB",
+        "pad": "HPF 50 Hz · lowshelf -1.5 dB @ 240 Hz · peak +1.0 dB @ 2600 Hz · comp -22 dB 3:1 (10/200 ms, k2, +0.5 dB) · med reverb 15% · M/S +0.25 · -12 dB",
+        "lead": "HPF 75 Hz · lowshelf +1.0 dB @ 170 Hz · peak +2.0 dB @ 2800 Hz · comp -13 dB 2.5:1 (15/120 ms, k3, +2.5 dB) · med reverb 15% · M/S +0.08 · -3 dB",
+        "bg": "HPF 95 Hz · LPF 9500 Hz · comp -24 dB 2:1 (15/240 ms, k2, +0 dB) · med reverb 22% · M/S +0.45 · -15 dB",
+        "master": "HPF 28 Hz · lowshelf +1.5 dB @ 55 Hz · peak +1.0 dB @ 2500 Hz · peak +1.5 dB @ 11000 Hz · comp -13 dB 2:1 (5/110 ms, k2, +3 dB) · sat drive 1.18 mix 0.12 · M/S +0.10 · target -9 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -29.5,
+          "out": "wallace\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.4,
+          "out": "wallace\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -19.2,
+          "out": "wallace\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -16.6,
+          "out": "wallace\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -19.0,
+          "out": "wallace\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -20.3,
+          "out": "wallace\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "maserati",
+      "name": "Tony Maserati",
+      "zh": "托尼·马塞拉蒂",
+      "color": "#f5c518",
+      "tagline": "glossy · huge vocals · radio smooth",
+      "about": "Pop and R&B polish (Beyoncé, Alicia Keys, Mariah Carey, Usher, Jason Mraz). Signature: glossy radio-ready sheen, huge smooth vocals, wide polished stereo, effortless commercial balance.",
+      "refs": [
+        "Beyoncé",
+        "Alicia Keys",
+        "Mariah Carey",
+        "Usher",
+        "Jason Mraz"
+      ],
+      "target_lufs": -10.0,
+      "page": "maserati/index.html",
+      "cover": "maserati/cover.svg",
+      "sig": {
+        "drums": "Tight, glossy, radio punch",
+        "bass": "Smooth, solid, supportive",
+        "pad": "Silky bed under the vocal",
+        "lead": "HUGE vocal, front and glossy",
+        "bg": "Wide sparkling dressing",
+        "master": "Glossy, wide, radio smooth"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +1.5 dB @ 100 Hz · peak +2.0 dB @ 4000 Hz · comp -16 dB 3.5:1 (5/110 ms, k2, +2 dB) · sat drive 1.2 mix 0.1 · room reverb 8% · -5 dB",
+        "bass": "HPF 32 Hz · lowshelf +2.0 dB @ 80 Hz · peak +1.0 dB @ 100 Hz · comp -21 dB 4:1 (4/150 ms, k2, +1 dB) · sat drive 1.4 mix 0.18 · -7 dB",
+        "pad": "HPF 55 Hz · lowshelf -1.5 dB @ 220 Hz · peak +1.5 dB @ 3000 Hz · comp -23 dB 2.5:1 (12/220 ms, k2, +0.5 dB) · med reverb 16% · M/S +0.35 · -12 dB",
+        "lead": "HPF 70 Hz · lowshelf +0.5 dB @ 160 Hz · peak +2.5 dB @ 3200 Hz · peak +1.5 dB @ 9000 Hz · comp -14 dB 2.5:1 (18/150 ms, k3, +2.5 dB) · long reverb 25% · M/S +0.12 · pan +0.05 · -3 dB",
+        "bg": "HPF 95 Hz · LPF 10000 Hz · comp -25 dB 2:1 (16/240 ms, k2, +0 dB) · long reverb 28% · M/S +0.50 · -15 dB",
+        "master": "HPF 26 Hz · lowshelf +1.0 dB @ 55 Hz · peak +1.0 dB @ 2500 Hz · peak +2.0 dB @ 12000 Hz · comp -14 dB 2:1 (6/120 ms, k2, +2.5 dB) · sat drive 1.1 mix 0.08 · M/S +0.12 · target -10 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -25.3,
+          "out": "maserati\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -22.1,
+          "out": "maserati\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -20.2,
+          "out": "maserati\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -19.9,
+          "out": "maserati\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -19.1,
+          "out": "maserati\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -22.1,
+          "out": "maserati\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "joshua",
+      "name": "Jaycen Joshua",
+      "zh": "杰森·约书亚",
+      "color": "#00e5a0",
+      "tagline": "huge clean lows · wide 808 · bright loud",
+      "about": "Modern hip-hop and R&B (Rihanna, Beyoncé, Busta Rhymes, Justin Timberlake). Signature: enormous but clean low end, wide stereo 808s, bright top, modern loudness that never turns to mush.",
+      "refs": [
+        "Rihanna",
+        "Beyoncé",
+        "Busta Rhymes",
+        "Justin Timberlake"
+      ],
+      "target_lufs": -9.0,
+      "page": "joshua/index.html",
+      "cover": "joshua/cover.svg",
+      "sig": {
+        "drums": "Hard-hitting, tight, modern",
+        "bass": "Enormous clean 808 depth",
+        "pad": "Carved to leave the lows open",
+        "lead": "Bright, up-front, expensive",
+        "bg": "Deep wide bed",
+        "master": "Huge lows, bright, modern loud"
+      },
+      "impl": {
+        "drums": "HPF 26 Hz · lowshelf +3.0 dB @ 85 Hz · peak +2.5 dB @ 5000 Hz · comp -16 dB 4:1 (3/85 ms, k2, +2.5 dB) · sat drive 1.25 mix 0.15 · room reverb 6% · -4 dB",
+        "bass": "HPF 22 Hz · lowshelf +4.0 dB @ 55 Hz · peak +2.0 dB @ 90 Hz · comp -20 dB 5:1 (2/100 ms, k2, +1.5 dB) · sat drive 1.5 mix 0.25 · -5 dB",
+        "pad": "HPF 50 Hz · lowshelf -2.5 dB @ 200 Hz · peak +1.0 dB @ 2200 Hz · comp -24 dB 3:1 (10/200 ms, k2, +0.5 dB) · med reverb 14% · M/S +0.40 · -13 dB",
+        "lead": "HPF 75 Hz · lowshelf -0.5 dB @ 150 Hz · peak +2.5 dB @ 3000 Hz · peak +2.0 dB @ 9000 Hz · comp -13 dB 2.5:1 (14/110 ms, k3, +2.5 dB) · med reverb 15% · M/S +0.12 · -3 dB",
+        "bg": "HPF 95 Hz · LPF 9500 Hz · comp -26 dB 2:1 (14/220 ms, k2, +0 dB) · long reverb 26% · M/S +0.55 · -16 dB",
+        "master": "HPF 22 Hz · lowshelf +2.0 dB @ 40 Hz · peak +0.5 dB @ 2500 Hz · peak +2.5 dB @ 14000 Hz · comp -13 dB 2:1 (5/100 ms, k2, +3 dB) · sat drive 1.12 mix 0.1 · M/S +0.14 · target -9 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -25.3,
+          "out": "joshua\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -22.5,
+          "out": "joshua\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -21.1,
+          "out": "joshua\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -20.3,
+          "out": "joshua\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -18.7,
+          "out": "joshua\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -21.9,
+          "out": "joshua\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "ali",
+      "name": "MixedByAli",
+      "zh": "阿里",
+      "color": "#8fa3c7",
+      "tagline": "dark · deep · atmospheric soul",
+      "about": "TDE in-house engineer (Kendrick Lamar, SZA, Schoolboy Q, Baby Keem). Signature: dark deep atmospheres, organic human feel, huge but controlled low end, mixes that breathe rather than blast.",
+      "refs": [
+        "Kendrick Lamar",
+        "SZA",
+        "Schoolboy Q",
+        "Baby Keem",
+        "Mac Miller"
+      ],
+      "target_lufs": -11.0,
+      "page": "ali/index.html",
+      "cover": "ali/cover.svg",
+      "sig": {
+        "drums": "Deep, organic, in the pocket",
+        "bass": "Dark, huge, controlled",
+        "pad": "Atmospheric smoke",
+        "lead": "Human, close, honest",
+        "bg": "Deep ambient shadows",
+        "master": "Dark, deep, breathing dynamics"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +1.0 dB @ 100 Hz · peak +1.5 dB @ 2500 Hz · comp -16 dB 3:1 (6/110 ms, k2, +1.5 dB) · sat drive 1.3 mix 0.2 · room reverb 12% · -5 dB",
+        "bass": "HPF 28 Hz · lowshelf +2.5 dB @ 70 Hz · peak +1.0 dB @ 100 Hz · comp -20 dB 4:1 (4/130 ms, k2, +1 dB) · sat drive 1.5 mix 0.25 · -6 dB",
+        "pad": "HPF 55 Hz · lowshelf -1.5 dB @ 240 Hz · peak +0.5 dB @ 2000 Hz · comp -23 dB 2.5:1 (14/230 ms, k2, +0 dB) · sat drive 1.2 mix 0.15 · long reverb 22% · M/S +0.45 · -12 dB",
+        "lead": "HPF 80 Hz · lowshelf +0.5 dB @ 180 Hz · peak +2.0 dB @ 2600 Hz · comp -14 dB 2:1 (18/160 ms, k3, +1.5 dB) · long reverb 30% · M/S +0.10 · -3 dB",
+        "bg": "HPF 90 Hz · LPF 8000 Hz · comp -25 dB 2:1 (18/250 ms, k2, +0 dB) · long reverb 35% · M/S +0.50 · -16 dB",
+        "master": "HPF 30 Hz · lowshelf +1.5 dB @ 60 Hz · peak +1.0 dB @ 1800 Hz · peak +1.0 dB @ 8000 Hz · comp -15 dB 2:1 (8/150 ms, k2, +2 dB) · sat drive 1.2 mix 0.15 · M/S +0.12 · target -11 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -24.9,
+          "out": "ali\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -23.0,
+          "out": "ali\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -19.1,
+          "out": "ali\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -18.4,
+          "out": "ali\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -21.2,
+          "out": "ali\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -21.0,
+          "out": "ali\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "elmhirst",
+      "name": "Tom Elmhirst",
+      "zh": "汤姆·埃尔姆赫斯特",
+      "color": "#e85d75",
+      "tagline": "pristine · huge clean vocals · deep control",
+      "about": "Modern pop and soul mastery (Adele, David Bowie Blackstar, Amy Winehouse, Lorde, Dua Lipa). Signature: pristine clarity, enormous clean vocals, deep controlled low end, mixes that sound effortless and expensive.",
+      "refs": [
+        "Adele",
+        "David Bowie",
+        "Amy Winehouse",
+        "Lorde",
+        "Dua Lipa"
+      ],
+      "target_lufs": -10.0,
+      "page": "elmhirst/index.html",
+      "cover": "elmhirst/cover.svg",
+      "sig": {
+        "drums": "Tight, clean, tasteful",
+        "bass": "Deep, controlled, clean",
+        "pad": "Polished harmonic support",
+        "lead": "Enormous clean vocal, intimate",
+        "bg": "Wide, elegant, unobtrusive",
+        "master": "Pristine, deep, effortless polish"
+      },
+      "impl": {
+        "drums": "HPF 28 Hz · lowshelf +2.0 dB @ 95 Hz · peak +2.0 dB @ 3500 Hz · comp -15 dB 3.5:1 (4/95 ms, k2, +2 dB) · sat drive 1.15 mix 0.08 · room reverb 7% · -5 dB",
+        "bass": "HPF 30 Hz · lowshelf +2.5 dB @ 75 Hz · peak +1.5 dB @ 110 Hz · comp -20 dB 4:1 (3/130 ms, k2, +1 dB) · sat drive 1.3 mix 0.15 · -7 dB",
+        "pad": "HPF 55 Hz · lowshelf -2.0 dB @ 220 Hz · peak +1.0 dB @ 2800 Hz · comp -24 dB 3:1 (12/210 ms, k2, +0.5 dB) · med reverb 15% · M/S +0.35 · -13 dB",
+        "lead": "HPF 70 Hz · lowshelf +0.5 dB @ 150 Hz · peak +2.5 dB @ 3000 Hz · peak +1.5 dB @ 8500 Hz · comp -13 dB 2:1 (20/140 ms, k3, +2.5 dB) · long reverb 22% · M/S +0.08 · pan +0.04 · -3 dB",
+        "bg": "HPF 95 Hz · LPF 10500 Hz · comp -25 dB 2:1 (16/230 ms, k2, +0 dB) · long reverb 26% · M/S +0.50 · -16 dB",
+        "master": "HPF 26 Hz · lowshelf +1.0 dB @ 50 Hz · peak +0.5 dB @ 2000 Hz · peak +1.5 dB @ 12000 Hz · comp -14 dB 1.8:1 (7/110 ms, k2, +2.5 dB) · sat drive 1.08 mix 0.06 · M/S +0.12 · target -10 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -25.0,
+          "out": "elmhirst\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -22.4,
+          "out": "elmhirst\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -21.0,
+          "out": "elmhirst\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -18.5,
+          "out": "elmhirst\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -18.4,
+          "out": "elmhirst\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -21.8,
+          "out": "elmhirst\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "scheps",
+      "name": "Andrew Scheps",
+      "zh": "安德鲁·谢普斯",
+      "color": "#ff4d4d",
+      "tagline": "punchy · natural · loud but breathing",
+      "about": "Rock and beyond (Red Hot Chili Peppers, Green Day, Metallica, Adele 21, Biffy Clyro). Signature: punchy natural drums, forward guitars, loud mixes that keep dynamics and never sound squashed.",
+      "refs": [
+        "Red Hot Chili Peppers",
+        "Green Day",
+        "Metallica",
+        "Adele",
+        "Biffy Clyro"
+      ],
+      "target_lufs": -11.0,
+      "page": "scheps/index.html",
+      "cover": "scheps/cover.svg",
+      "sig": {
+        "drums": "Punchy, natural, present",
+        "bass": "Supportive, defined",
+        "pad": "Open and unhyped",
+        "lead": "Forward, energetic, clear",
+        "bg": "Natural depth",
+        "master": "Loud but breathing, honest punch"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +2.0 dB @ 95 Hz · peak +1.5 dB @ 2800 Hz · comp -16 dB 3:1 (6/120 ms, k2, +1.5 dB) · sat drive 1.2 mix 0.12 · room reverb 15% · -5 dB",
+        "bass": "HPF 35 Hz · lowshelf +1.5 dB @ 85 Hz · peak +1.0 dB @ 140 Hz · comp -21 dB 3.5:1 (5/160 ms, k2, +0.5 dB) · sat drive 1.3 mix 0.15 · -8 dB",
+        "pad": "HPF 50 Hz · lowshelf -1.0 dB @ 240 Hz · peak +0.5 dB @ 2500 Hz · comp -24 dB 2.5:1 (14/240 ms, k2, +0.5 dB) · med reverb 12% · M/S +0.25 · -12 dB",
+        "lead": "HPF 70 Hz · lowshelf +1.0 dB @ 170 Hz · peak +2.0 dB @ 3000 Hz · comp -14 dB 2.5:1 (18/160 ms, k3, +2 dB) · med reverb 12% · M/S +0.08 · -3 dB",
+        "bg": "HPF 90 Hz · LPF 10000 Hz · comp -24 dB 2:1 (18/260 ms, k2, +0 dB) · med reverb 20% · M/S +0.40 · -15 dB",
+        "master": "HPF 28 Hz · lowshelf +1.0 dB @ 55 Hz · peak +1.0 dB @ 2500 Hz · peak +1.0 dB @ 10000 Hz · comp -15 dB 1.8:1 (8/130 ms, k2, +2 dB) · sat drive 1.1 mix 0.08 · M/S +0.08 · target -11 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -25.7,
+          "out": "scheps\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -24.0,
+          "out": "scheps\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -23.4,
+          "out": "scheps\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -20.8,
+          "out": "scheps\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -21.5,
+          "out": "scheps\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -22.7,
+          "out": "scheps\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "moulder",
+      "name": "Alan Moulder",
+      "zh": "艾伦·莫尔德",
+      "color": "#7c4dff",
+      "tagline": "wall of sound · dense reverb · layered",
+      "about": "Shoegaze and alternative legend (My Bloody Valentine, Smashing Pumpkins, Nine Inch Nails, The Killers, Arctic Monkeys). Signature: immense walls of layered guitars, dense lush reverb, huge stereo wash with detail.",
+      "refs": [
+        "My Bloody Valentine",
+        "Smashing Pumpkins",
+        "Nine Inch Nails",
+        "The Killers",
+        "Arctic Monkeys"
+      ],
+      "target_lufs": -10.0,
+      "page": "moulder/index.html",
+      "cover": "moulder/cover.svg",
+      "sig": {
+        "drums": "Big, buried in the wash yet punchy",
+        "bass": "Thick, rumbling under the wall",
+        "pad": "Drenched in long space",
+        "lead": "Soaring through the haze",
+        "bg": "Infinite reverb clouds",
+        "master": "Wall of sound, huge and dense"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +1.5 dB @ 100 Hz · peak +2.0 dB @ 2500 Hz · comp -15 dB 3.5:1 (5/100 ms, k2, +2 dB) · sat drive 1.4 mix 0.2 · room reverb 25% · -4 dB",
+        "bass": "HPF 32 Hz · lowshelf +2.0 dB @ 80 Hz · peak +1.0 dB @ 200 Hz · comp -20 dB 4:1 (4/140 ms, k2, +1 dB) · sat drive 1.4 mix 0.2 · -7 dB",
+        "pad": "HPF 50 Hz · lowshelf -1.0 dB @ 220 Hz · peak +1.5 dB @ 3200 Hz · comp -22 dB 2.5:1 (15/240 ms, k2, +0 dB) · sat drive 1.3 mix 0.2 · long reverb 40% · M/S +0.60 · -10 dB",
+        "lead": "HPF 75 Hz · lowshelf +0.5 dB @ 160 Hz · peak +2.0 dB @ 2800 Hz · comp -14 dB 2.5:1 (18/150 ms, k3, +2 dB) · sat drive 1.4 mix 0.25 · long reverb 45% · M/S +0.20 · -3 dB",
+        "bg": "HPF 90 Hz · LPF 9000 Hz · comp -24 dB 2:1 (18/260 ms, k2, +0 dB) · long reverb 50% · M/S +0.70 · -14 dB",
+        "master": "HPF 28 Hz · lowshelf +1.0 dB @ 55 Hz · peak +1.5 dB @ 2000 Hz · peak +1.5 dB @ 9000 Hz · comp -14 dB 2:1 (7/130 ms, k2, +2 dB) · sat drive 1.25 mix 0.15 · M/S +0.20 · target -10 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -27.6,
+          "out": "moulder\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.3,
+          "out": "moulder\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -16.8,
+          "out": "moulder\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -18.5,
+          "out": "moulder\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -19.1,
+          "out": "moulder\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -20.6,
+          "out": "moulder\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "guzauski",
+      "name": "Mick Guzauski",
+      "zh": "米克·古佐斯基",
+      "color": "#67c6dd",
+      "tagline": "clean · musical · effortless polish",
+      "about": "Polished R&B, disco and pop (Daft Punk Random Access Memories, Pharrell, Jamiroquai, Michael Jackson mixes). Signature: clean balanced sound, musical EQ choices, effortless polish where nothing fights for attention.",
+      "refs": [
+        "Daft Punk",
+        "Pharrell Williams",
+        "Jamiroquai",
+        "Michael Jackson"
+      ],
+      "target_lufs": -12.0,
+      "page": "guzauski/index.html",
+      "cover": "guzauski/cover.svg",
+      "sig": {
+        "drums": "Tight, clean, danceable",
+        "bass": "Round, musical, groovy",
+        "pad": "Balanced harmonic sheen",
+        "lead": "Clear, smooth, musical",
+        "bg": "Elegant supporting depth",
+        "master": "Clean, balanced, effortless"
+      },
+      "impl": {
+        "drums": "HPF 32 Hz · lowshelf +1.5 dB @ 100 Hz · peak +1.5 dB @ 4000 Hz · comp -17 dB 3:1 (6/120 ms, k2, +1.5 dB) · sat drive 1.15 mix 0.08 · room reverb 10% · -5 dB",
+        "bass": "HPF 33 Hz · lowshelf +2.0 dB @ 85 Hz · peak +1.0 dB @ 110 Hz · comp -22 dB 3.5:1 (5/170 ms, k2, +1 dB) · sat drive 1.3 mix 0.15 · -7 dB",
+        "pad": "HPF 50 Hz · lowshelf -1.0 dB @ 230 Hz · peak +1.0 dB @ 2600 Hz · comp -23 dB 2.5:1 (15/240 ms, k2, +0.5 dB) · med reverb 14% · M/S +0.30 · -12 dB",
+        "lead": "HPF 70 Hz · lowshelf +0.5 dB @ 170 Hz · peak +2.0 dB @ 3200 Hz · comp -15 dB 2:1 (20/180 ms, k3, +2 dB) · long reverb 20% · M/S +0.10 · -3 dB",
+        "bg": "HPF 90 Hz · LPF 10000 Hz · comp -25 dB 2:1 (18/250 ms, k2, +0 dB) · long reverb 24% · M/S +0.45 · -15 dB",
+        "master": "HPF 28 Hz · lowshelf +0.5 dB @ 55 Hz · peak +0.5 dB @ 2500 Hz · peak +1.0 dB @ 11000 Hz · comp -16 dB 1.8:1 (10/160 ms, k2, +1.5 dB) · sat drive 1.08 mix 0.06 · M/S +0.10 · target -12 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -27.2,
+          "out": "guzauski\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -23.3,
+          "out": "guzauski\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -21.7,
+          "out": "guzauski\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -19.5,
+          "out": "guzauski\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -19.8,
+          "out": "guzauski\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -20.9,
+          "out": "guzauski\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "albini",
+      "name": "Steve Albini",
+      "zh": "史蒂夫·阿尔比尼",
+      "color": "#b8b8b8",
+      "tagline": "raw · room-honest · zero hype",
+      "about": "The anti-production conscience (Nirvana In Utero, Pixies Surfer Rosa, Shellac, PJ Harvey). Signature: the band in the room as it actually sounds — natural dynamics, honest midrange, roomy drums, zero hype.",
+      "refs": [
+        "Nirvana",
+        "Pixies",
+        "Shellac",
+        "PJ Harvey",
+        "The Breeders"
+      ],
+      "target_lufs": -15.0,
+      "page": "albini/index.html",
+      "cover": "albini/cover.svg",
+      "sig": {
+        "drums": "Room-honest, dynamic, present",
+        "bass": "Growly, natural, unpolished",
+        "pad": "Sparse, unadorned",
+        "lead": "Direct, human, no hype",
+        "bg": "Natural ambience only",
+        "master": "Transparent, dynamic, raw truth"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +1.0 dB @ 90 Hz · peak +1.0 dB @ 2000 Hz · comp -18 dB 2.5:1 (8/160 ms, k2, +0.5 dB) · sat drive 1.15 mix 0.15 · room reverb 35% · -5 dB",
+        "bass": "HPF 40 Hz · lowshelf +1.0 dB @ 80 Hz · peak +1.0 dB @ 300 Hz · comp -22 dB 2.5:1 (6/200 ms, k2, +0 dB) · sat drive 1.3 mix 0.2 · -7 dB",
+        "pad": "HPF 60 Hz · lowshelf -1.0 dB @ 250 Hz · comp -26 dB 1.5:1 (25/380 ms, k2, +0 dB) · room reverb 15% · M/S +0.15 · -12 dB",
+        "lead": "HPF 65 Hz · lowshelf +0.5 dB @ 180 Hz · peak +1.5 dB @ 2500 Hz · comp -16 dB 2:1 (25/280 ms, k3, +0.5 dB) · room reverb 25% · M/S +0.05 · -4 dB",
+        "bg": "HPF 85 Hz · LPF 11000 Hz · comp -26 dB 1.5:1 (25/380 ms, k2, +0 dB) · room reverb 20% · M/S +0.30 · -15 dB",
+        "master": "HPF 30 Hz · lowshelf +0.5 dB @ 60 Hz · peak +1.0 dB @ 3000 Hz · comp -18 dB 1.5:1 (18/320 ms, k2, +0.5 dB) · sat drive 1.1 mix 0.08 · M/S +0.05 · target -15 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -27.0,
+          "out": "albini\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.8,
+          "out": "albini\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -19.7,
+          "out": "albini\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -18.8,
+          "out": "albini\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -19.3,
+          "out": "albini\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -19.0,
+          "out": "albini\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "everett",
+      "name": "Shawn Everett",
+      "zh": "肖恩·埃弗里特",
+      "color": "#ff7ab8",
+      "tagline": "colorful · quirky · wide experiments",
+      "about": "Experimental pop colorist (Alabama Shakes Sound & Color, Kacey Musgraves Golden Hour, The War on Drugs, Brittany Howard). Signature: colorful creative textures, quirky panning and distortion, wide adventurous stereo.",
+      "refs": [
+        "Alabama Shakes",
+        "Kacey Musgraves",
+        "The War on Drugs",
+        "Brittany Howard"
+      ],
+      "target_lufs": -11.0,
+      "page": "everett/index.html",
+      "cover": "everett/cover.svg",
+      "sig": {
+        "drums": "Characterful, colored, alive",
+        "bass": "Round with creative character",
+        "pad": "Playful, colored, wide",
+        "lead": "Quirky, bright, adventurous",
+        "bg": "Wide psychedelic dressing",
+        "master": "Colorful, wide, experimental gloss"
+      },
+      "impl": {
+        "drums": "HPF 32 Hz · lowshelf +1.5 dB @ 100 Hz · peak +2.0 dB @ 3500 Hz · peak +1.5 dB @ 8000 Hz · comp -16 dB 3:1 (5/110 ms, k2, +1.5 dB) · sat drive 1.35 mix 0.25 · room reverb 20% · -5 dB",
+        "bass": "HPF 35 Hz · lowshelf +1.5 dB @ 85 Hz · peak +1.0 dB @ 150 Hz · comp -21 dB 3.5:1 (5/160 ms, k2, +0.5 dB) · sat drive 1.4 mix 0.2 · -7 dB",
+        "pad": "HPF 55 Hz · lowshelf -1.0 dB @ 230 Hz · peak +1.5 dB @ 3000 Hz · comp -23 dB 2.5:1 (14/230 ms, k2, +0.5 dB) · sat drive 1.25 mix 0.15 · long reverb 25% · M/S +0.55 · -12 dB",
+        "lead": "HPF 75 Hz · lowshelf +0.5 dB @ 170 Hz · peak +2.5 dB @ 3000 Hz · comp -14 dB 2:1 (16/150 ms, k3, +2 dB) · long reverb 28% · M/S +0.18 · pan +0.10 · -3 dB",
+        "bg": "HPF 95 Hz · LPF 10500 Hz · comp -25 dB 2:1 (16/240 ms, k2, +0 dB) · long reverb 30% · M/S +0.65 · -15 dB",
+        "master": "HPF 28 Hz · lowshelf +1.0 dB @ 55 Hz · peak +1.5 dB @ 2500 Hz · peak +2.0 dB @ 11000 Hz · comp -14 dB 1.8:1 (7/130 ms, k2, +2 dB) · sat drive 1.2 mix 0.12 · M/S +0.18 · target -11 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -25.8,
+          "out": "everett\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.5,
+          "out": "everett\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -20.9,
+          "out": "everett\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -18.7,
+          "out": "everett\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -19.5,
+          "out": "everett\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -22.9,
+          "out": "everett\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "elevado",
+      "name": "Russell Elevado",
+      "zh": "拉塞尔·埃莱瓦多",
+      "color": "#c9804d",
+      "tagline": "warm analog · tape soul · live feel",
+      "about": "Analog soul revivalist (D'Angelo Voodoo, Erykah Badu Mama's Gun, Common Like Water for Chocolate). Signature: warm tape saturation, raw live-band feel, deep organic bass, mixes that breathe like a room of musicians.",
+      "refs": [
+        "D'Angelo",
+        "Erykah Badu",
+        "Common",
+        "The Roots",
+        "Alicia Keys"
+      ],
+      "target_lufs": -13.0,
+      "page": "elevado/index.html",
+      "cover": "elevado/cover.svg",
+      "sig": {
+        "drums": "Loose, live, breathing",
+        "bass": "Deep, warm, organic",
+        "pad": "Analog haze, warm",
+        "lead": "Raw, soulful, close",
+        "bg": "Tape-warm ambience",
+        "master": "Warm analog glue, live dynamics"
+      },
+      "impl": {
+        "drums": "HPF 28 Hz · lowshelf +1.5 dB @ 90 Hz · peak +1.0 dB @ 2200 Hz · comp -18 dB 2.5:1 (7/150 ms, k2, +1 dB) · sat drive 1.5 mix 0.3 · room reverb 20% · -5 dB",
+        "bass": "HPF 30 Hz · lowshelf +2.5 dB @ 75 Hz · peak +1.0 dB @ 90 Hz · comp -21 dB 3.5:1 (4/150 ms, k2, +0.5 dB) · sat drive 1.6 mix 0.3 · -6 dB",
+        "pad": "HPF 50 Hz · lowshelf -1.0 dB @ 240 Hz · peak +0.5 dB @ 2400 Hz · comp -24 dB 2:1 (18/260 ms, k2, +0.5 dB) · sat drive 1.2 mix 0.2 · long reverb 20% · M/S +0.25 · -12 dB",
+        "lead": "HPF 65 Hz · lowshelf +1.0 dB @ 180 Hz · peak +1.5 dB @ 2800 Hz · comp -15 dB 2:1 (22/200 ms, k3, +1.5 dB) · long reverb 22% · M/S +0.08 · -3 dB",
+        "bg": "HPF 85 Hz · LPF 9500 Hz · comp -25 dB 2:1 (20/280 ms, k2, +0 dB) · long reverb 25% · M/S +0.40 · -15 dB",
+        "master": "HPF 30 Hz · lowshelf +1.5 dB @ 55 Hz · peak +0.5 dB @ 2500 Hz · peak +1.0 dB @ 10000 Hz · comp -17 dB 1.8:1 (12/200 ms, k2, +1.5 dB) · sat drive 1.3 mix 0.15 · M/S +0.08 · target -13 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -25.8,
+          "out": "elevado\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.2,
+          "out": "elevado\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -19.6,
+          "out": "elevado\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -19.0,
+          "out": "elevado\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -20.7,
+          "out": "elevado\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -21.2,
+          "out": "elevado\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "shebib",
+      "name": "Noah '40' Shebib",
+      "zh": "诺阿·40·谢比布",
+      "color": "#4d6b7c",
+      "tagline": "dark · sparse · underwater mood",
+      "about": "Drake's sonic architect (OVO). Signature: dark sparse arrangements, underwater low end, moody minimalism, space and silence as instruments.",
+      "refs": [
+        "Drake",
+        "PARTYNEXTDOOR",
+        "The Weeknd",
+        "OVO Sound"
+      ],
+      "target_lufs": -11.0,
+      "page": "shebib/index.html",
+      "cover": "shebib/cover.svg",
+      "sig": {
+        "drums": "Sparse, dark, muffled punch",
+        "bass": "Underwater, filtered, deep",
+        "pad": "Murky atmosphere, minimal",
+        "lead": "Close, moody, half-lit",
+        "bg": "Dark filtered shadows",
+        "master": "Dark, sparse, moody depth"
+      },
+      "impl": {
+        "drums": "HPF 35 Hz · LPF 12000 Hz · lowshelf +0.5 dB @ 110 Hz · peak +1.5 dB @ 2500 Hz · comp -16 dB 3:1 (6/110 ms, k2, +1 dB) · sat drive 1.25 mix 0.2 · room reverb 6% · -6 dB",
+        "bass": "HPF 25 Hz · LPF 5000 Hz · lowshelf +3.5 dB @ 60 Hz · comp -20 dB 4:1 (3/120 ms, k2, +1 dB) · sat drive 1.5 mix 0.3 · -6 dB",
+        "pad": "HPF 60 Hz · LPF 7500 Hz · lowshelf -1.5 dB @ 230 Hz · comp -24 dB 2.5:1 (16/240 ms, k2, +0.5 dB) · sat drive 1.2 mix 0.15 · long reverb 30% · M/S +0.50 · -12 dB",
+        "lead": "HPF 85 Hz · LPF 11000 Hz · lowshelf +0.5 dB @ 190 Hz · peak +1.5 dB @ 2600 Hz · comp -14 dB 2:1 (18/150 ms, k3, +1.5 dB) · long reverb 35% · M/S +0.06 · -3 dB",
+        "bg": "HPF 100 Hz · LPF 6500 Hz · comp -26 dB 2:1 (20/280 ms, k2, +0 dB) · long reverb 40% · M/S +0.55 · -16 dB",
+        "master": "HPF 32 Hz · LPF 15000 Hz · lowshelf +2.0 dB @ 55 Hz · peak +0.5 dB @ 2500 Hz · comp -16 dB 2:1 (10/170 ms, k2, +1.5 dB) · sat drive 1.25 mix 0.18 · M/S +0.15 · target -11 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -22.0,
+          "out": "shebib\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -18.9,
+          "out": "shebib\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -19.9,
+          "out": "shebib\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -17.7,
+          "out": "shebib\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -18.1,
+          "out": "shebib\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -19.9,
+          "out": "shebib\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "power",
+      "name": "Bob Power",
+      "zh": "鲍勃·鲍尔",
+      "color": "#a5755a",
+      "tagline": "warm · organic · deep NYC soul",
+      "about": "NYC hip-hop and soul pioneer (A Tribe Called Quest, The Roots, Erykah Badu, D'Angelo, De La Soul). Signature: warm organic textures, deep round bass, honest midrange, grooves that feel hand-made.",
+      "refs": [
+        "A Tribe Called Quest",
+        "The Roots",
+        "Erykah Badu",
+        "D'Angelo",
+        "De La Soul"
+      ],
+      "target_lufs": -12.0,
+      "page": "power/index.html",
+      "cover": "power/cover.svg",
+      "sig": {
+        "drums": "Warm, organic, in the groove",
+        "bass": "Deep, round, soulful",
+        "pad": "Warm harmonic quilt",
+        "lead": "Honest, close, warm",
+        "bg": "Earthy ambience",
+        "master": "Warm glue, organic groove"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +1.5 dB @ 95 Hz · peak +1.0 dB @ 2600 Hz · comp -17 dB 3:1 (6/120 ms, k2, +1 dB) · sat drive 1.4 mix 0.25 · room reverb 12% · -5 dB",
+        "bass": "HPF 30 Hz · lowshelf +2.5 dB @ 80 Hz · peak +1.5 dB @ 95 Hz · comp -21 dB 4:1 (4/140 ms, k2, +0.5 dB) · sat drive 1.5 mix 0.28 · -6 dB",
+        "pad": "HPF 50 Hz · lowshelf -1.0 dB @ 240 Hz · peak +0.5 dB @ 2200 Hz · comp -24 dB 2:1 (18/260 ms, k2, +0.5 dB) · sat drive 1.2 mix 0.18 · med reverb 15% · M/S +0.25 · -12 dB",
+        "lead": "HPF 65 Hz · lowshelf +1.0 dB @ 180 Hz · peak +1.5 dB @ 2700 Hz · comp -15 dB 2:1 (22/200 ms, k3, +1.5 dB) · med reverb 15% · M/S +0.08 · -3 dB",
+        "bg": "HPF 85 Hz · LPF 9500 Hz · comp -25 dB 2:1 (20/280 ms, k2, +0 dB) · med reverb 20% · M/S +0.40 · -15 dB",
+        "master": "HPF 30 Hz · lowshelf +1.5 dB @ 55 Hz · peak +0.5 dB @ 2000 Hz · peak +1.0 dB @ 10000 Hz · comp -16 dB 1.8:1 (10/190 ms, k2, +1.5 dB) · sat drive 1.25 mix 0.14 · M/S +0.08 · target -12 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -24.6,
+          "out": "power\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -22.5,
+          "out": "power\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -20.6,
+          "out": "power\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -17.7,
+          "out": "power\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -18.8,
+          "out": "power\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -21.1,
+          "out": "power\\06 After Hours.wav"
+        }
+      ]
+    },
+    {
+      "slug": "zhoutianche",
+      "name": "Tianche Zhou",
+      "zh": "周天澈",
+      "color": "#8fc1a9",
+      "tagline": "清晰 · 精致 · 人声为核心",
+      "about": "华语流行混音与母带代表（Studio21A 创始人，合作鹿晗、张艺兴、林俊杰、刘若英等）。Signature: 清晰干净的层次，精致的高频质感，人声永远处于最核心最舒服的位置，兼顾响度与耐听度。",
+      "refs": [
+        "鹿晗",
+        "张艺兴",
+        "林俊杰",
+        "刘若英",
+        "华语流行"
+      ],
+      "target_lufs": -11.0,
+      "page": "zhoutianche/index.html",
+      "cover": "zhoutianche/cover.svg",
+      "sig": {
+        "drums": "干净、克制、有弹性",
+        "bass": "清晰扎实的低频支撑",
+        "pad": "细腻的铺底，不抢人声",
+        "lead": "人声永远是主角，透亮",
+        "bg": "精致的氛围层次",
+        "master": "清晰、精致、耐听的响度"
+      },
+      "impl": {
+        "drums": "HPF 30 Hz · lowshelf +1.0 dB @ 100 Hz · peak +1.5 dB @ 3800 Hz · comp -17 dB 3:1 (6/120 ms, k2, +1.5 dB) · sat drive 1.15 mix 0.08 · room reverb 8% · -5 dB",
+        "bass": "HPF 33 Hz · lowshelf +1.5 dB @ 85 Hz · peak +1.0 dB @ 120 Hz · comp -22 dB 3.5:1 (5/160 ms, k2, +1 dB) · sat drive 1.25 mix 0.12 · -7 dB",
+        "pad": "HPF 52 Hz · lowshelf -1.5 dB @ 230 Hz · peak +1.0 dB @ 2800 Hz · comp -23 dB 2.5:1 (14/230 ms, k2, +0.5 dB) · med reverb 15% · M/S +0.30 · -12 dB",
+        "lead": "HPF 70 Hz · lowshelf +0.5 dB @ 165 Hz · peak +2.5 dB @ 3000 Hz · peak +1.5 dB @ 8000 Hz · comp -14 dB 2:1 (18/150 ms, k3, +2.5 dB) · long reverb 22% · M/S +0.08 · pan +0.03 · -3 dB",
+        "bg": "HPF 92 Hz · LPF 10200 Hz · comp -25 dB 2:1 (16/240 ms, k2, +0 dB) · long reverb 25% · M/S +0.45 · -15 dB",
+        "master": "HPF 27 Hz · lowshelf +0.5 dB @ 52 Hz · peak +0.5 dB @ 2500 Hz · peak +1.5 dB @ 11500 Hz · comp -15 dB 1.8:1 (8/130 ms, k2, +2 dB) · sat drive 1.08 mix 0.05 · M/S +0.10 · target -11 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -25.6,
+          "out": "zhoutianche\\01 Midnight Velvet.wav"
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.7,
+          "out": "zhoutianche\\02 Slow Car.wav"
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -21.7,
+          "out": "zhoutianche\\03 Neon Rain.wav"
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -19.2,
+          "out": "zhoutianche\\04 Gravity.wav"
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -21.0,
+          "out": "zhoutianche\\05 Sunset Boulevard.wav"
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -22.6,
+          "out": "zhoutianche\\06 After Hours.wav"
+        }
+      ]
+    }
+  ]
+}
