@@ -215,6 +215,38 @@ python prompt_driven_remix.py -c phonk --release-safe
 > 本项目已整合进 `G:\\musickit\\music`（单一仓库，消除跨项目路径风险）。\n> 运行桥接器需 `F:\Python314`（pydub + numpy + audioop-lts），与 musickit 混音引擎一致。
 > 映射规则（乐器词→素材池、BPM 钳制、情绪→曲式模板）详见 `prompt_driven_remix.py` 顶部注释。
 
+---
+
+## 混音师风格着色（固定风格 × 随机风格整合）
+
+G:\musickit\burbidge_album 的「固定风格」专辑管线（同一组 stems × 10 位混音师签名链）
+已抽为共享模块 **burbidge_album/mixer_styles.py**。随机风格管线（本工具 + remix 引擎）
+可把这 10 位混音师的「调音台签名」挂到任意一条随机混音上：
+
+- 10 位混音师：burbidge / ghenea / clearmountain / marroquin / pensado / blake /
+  lordalge / schmitt / mikedean / stent（每位签名与逐总线参数见
+  burbidge_album/album/ALBUM_NOTES.md）；
+- 分轨总线着色：鼓组（drum/cowbell）、贝斯（bass）、铺垫（synth/keys/strings/brass/
+  woodwind/ethnic）、主奏与人声（guita/vocal）分别经过对应混音师的
+  EQ/压缩/饱和/混响/宽度链；
+- 母带：风格母带链（glue 压缩、M/S 宽度、饱和、目标 LUFS、砖墙限幅，峰值 -1.5 dBFS
+  为 mp3 等有损编码留余量）。
+
+    # 固定某位混音师（如 Mike Dean 的饱和太空感）
+    python prompt_driven_remix.py -c phonk --mixer-style mikedean
+
+    # 每条随机提示词各配一位随机混音师（--seed 可复现）
+    python prompt_driven_remix.py -n 3 --fusion --mixer-style random --seed 42 --report out.json
+
+    # 同一提示词 × 10 位混音师（A/B 对比，10 位依次替换）
+    python prompt_driven_remix.py --prompt-json prompts.json --mixer-style burbidge
+
+    # remix 引擎直连（不经过提示词桥接器）
+    python remix/main.py --remix --mixer-style blake --seed 1
+
+不传 --mixer-style 时行为与之前完全一致（原 phonk 处理链）。
+随机混音所用混音师记录在 --report 的 mixer_style 字段。
+
 ## 测试
 
 ```bash

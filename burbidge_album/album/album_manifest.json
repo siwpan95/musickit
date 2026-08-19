@@ -1,0 +1,104 @@
+[
+  {
+    "num": 1,
+    "title": "Midnight Velvet",
+    "tempo": 88,
+    "key": "B",
+    "dur": 152.7,
+    "lufs": -27.0,
+    "out": "burbidge\\01 Midnight Velvet.wav",
+    "stems": {
+      "drum": "drum (3480).wav",
+      "bass": "XAM Bladerunner Reese.wav",
+      "pad": "EBH_Synth_Loop_16_Bm_126.wav",
+      "lead": "PPC_Synths_80_Yumm_Bmin_GH.wav",
+      "bg": "ESW Trap Flutes 26 - Gyspy 05 - 160 BPM B Min.wav",
+      "sfx": "SRHS_Impact_20.wav"
+    }
+  },
+  {
+    "num": 2,
+    "title": "Slow Car",
+    "tempo": 90,
+    "key": "D",
+    "dur": 149.3,
+    "lufs": -21.3,
+    "out": "burbidge\\02 Slow Car.wav",
+    "stems": {
+      "drum": "SRHS_110_Full_Drum_Loop_23.wav",
+      "bass": "bass (375).wav",
+      "pad": "GS_FS 2_Piano Loop_ 8_70bpm_Dmaj .wav",
+      "lead": "ESW I Had You 01 - Guitar Chords - 90 BPM D Minor.wav",
+      "bg": "Ghosthack Vocal Demo Kit 5 - STRINGS.wav",
+      "sfx": "SRHS_Impact_18.wav"
+    }
+  },
+  {
+    "num": 3,
+    "title": "Neon Rain",
+    "tempo": 100,
+    "key": "E",
+    "dur": 144.0,
+    "lufs": -21.2,
+    "out": "burbidge\\03 Neon Rain.wav",
+    "stems": {
+      "drum": "drum (1898).wav",
+      "bass": "bass (98).wav",
+      "pad": "ESWX Kit 5 - Brass Stabs - 100 BPM E Maj.wav",
+      "lead": "ESWX Kit 5 - Dustry Mallets - 100 BPM E Maj.wav",
+      "bg": "ESW PL Thorny.wav",
+      "sfx": "SRHS_Impact_07.wav"
+    }
+  },
+  {
+    "num": 4,
+    "title": "Gravity",
+    "tempo": 105,
+    "key": "A",
+    "dur": 137.1,
+    "lufs": -19.3,
+    "out": "burbidge\\04 Gravity.wav",
+    "stems": {
+      "drum": "drum (1168).wav",
+      "bass": "bass (106).wav",
+      "pad": "FPV_Try_Kit_Arp_Am_105BPM.wav",
+      "lead": "FPV_Try_Kit_Adlibs_Am_105BPM_Dry.wav",
+      "bg": "bww3_altoflute_portl_rep1_31-31_A3 - AB.wav",
+      "sfx": "XAM Riser 1.wav"
+    }
+  },
+  {
+    "num": 5,
+    "title": "Sunset Boulevard",
+    "tempo": 110,
+    "key": "A",
+    "dur": 130.9,
+    "lufs": -19.3,
+    "out": "burbidge\\05 Sunset Boulevard.wav",
+    "stems": {
+      "drum": "drum (1413).wav",
+      "bass": "synth (70).wav",
+      "pad": "FPV_Keep_Balance_Kit_Guitar_Ambience_Fm_105BPM.wav",
+      "lead": "FPV_Online_Kit_Ambience_Bm_105BPM.wav",
+      "bg": "110bpm_vl1_meastrills_slow_103-103_A2 - AB.wav",
+      "sfx": "SRHS_Impact_13.wav"
+    }
+  },
+  {
+    "num": 6,
+    "title": "After Hours",
+    "tempo": 120,
+    "key": "C",
+    "dur": 128.0,
+    "lufs": -23.3,
+    "out": "burbidge\\06 After Hours.wav",
+    "stems": {
+      "drum": "SRHS_Clap_04.wav",
+      "bass": "XAM Clean Reese.wav",
+      "pad": "FBHA_C_126_Piano_Loop_10.wav",
+      "lead": "Acoustic Guitar-110 bpm-Cmaj-25.wav",
+      "bg": "GS_FS 2_Flute Loop_ 7_100bpm_Cm.wav",
+      "sfx": "XAM Transition 5.wav"
+    }
+  }
+]

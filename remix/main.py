@@ -22,6 +22,8 @@ import random
 import re
 import sys
 
+import numpy as np
+
 # 确保脚本所在目录在 sys.path，便于 import core / gui / utils
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if _SCRIPT_DIR not in sys.path:
@@ -112,6 +114,61 @@ _SKELETON_CATS = {"drum", "bass", "guita"}
 
 # --release-safe 允许的授权层级：free/pack 可用于对外发布；restricted/unknown 仅个人使用。
 _RELEASE_SAFE_TIERS = {"free", "pack"}
+
+
+# =========================================================================
+# 混音师风格接入（与 burbidge_album/mixer_styles.py 共享固定风格链）
+# 固定风格（专辑端 10 位混音师）与随机风格（本引擎）的整合点：
+#   --mixer-style <slug|random> 可选启用；不启用时行为与之前完全一致。
+# =========================================================================
+_MIXER_ROLE_TO_BUS = {
+    "drum": "drums", "cowbell": "drums",
+    "bass": "bass",
+    "synth": "pad", "keys": "pad", "strings": "pad",
+    "brass": "pad", "woodwind": "pad", "ethnic": "pad",
+    "guita": "lead", "vocal": "lead",
+    # sfx / animal / other：不挂总线着色，保持冲击力
+}
+
+
+def _load_mixer_style(name, rng):
+    """加载混音师风格（burbidge_album/mixer_styles.py）。
+
+    Returns:
+        (style_dict, irs_dict, ms_module)；风格不可用时 (None, None, None)。
+    """
+    try:
+        bp = os.path.join(_MUSICKIT_ROOT, "burbidge_album")
+        if bp not in sys.path:
+            sys.path.insert(0, bp)
+        import mixer_styles as ms
+    except Exception as e:
+        print(f"[remix] 混音师风格不可用（{e}），本次跳过风格着色", file=sys.stderr)
+        return None, None, None
+    try:
+        st = ms.resolve_style(name, rng)
+    except KeyError as e:
+        raise SystemExit(str(e))
+    return st, ms.style_irs(st["reverb"]), ms
+
+
+def _seg_to_np(seg):
+    seg = seg.set_frame_rate(44100).set_channels(2).set_sample_width(2)
+    arr = np.frombuffer(seg.raw_data, dtype=np.int16).astype(np.float32) / 32768.0
+    return arr.reshape(-1, 2)
+
+
+def _np_to_seg(x):
+    pcm = (np.clip(x, -1.0, 1.0) * 32767.0).astype(np.int16)
+    return AudioSegment(pcm.tobytes(), frame_rate=44100, sample_width=2, channels=2)
+
+
+def _style_segment(seg, style, irs, bus_key, ms):
+    """把一条素材切片的音色替换为该风格对应总线链（不应用总线电平级，
+    保留混音引擎自身的角色水位平衡）。"""
+    x = _seg_to_np(seg)
+    y = ms.bus_chain(x, style[bus_key], irs, apply_level=False)
+    return _np_to_seg(y)
 
 
 def _collect_category_files(category_dir: str) -> list[str]:
@@ -349,6 +406,7 @@ def run_remix(
     structure: str | None = None,
     tracks: list[tuple[str, str]] | None = None,
     release_safe: bool = False,
+    mixer_style: str | None = None,
 ) -> str:
     """执行一次 phonk 风格 loop 化混音（F1/F2/F3-v2：切 loop + 变速对齐 + 曲式模板编排）。
 
@@ -373,6 +431,11 @@ def run_remix(
 
     count = max(1, min(count, 8))
     rng = random.Random(seed)
+    style = style_irs = ms_mod = None
+    if mixer_style:
+        style, style_irs, ms_mod = _load_mixer_style(mixer_style, rng)
+        if style:
+            print(f"[remix] 混音师风格：{style['name']}（{style['slug']}）— {style['tagline']}")
     if bpm is None:
         bpm = rng.randint(110, 151)
 
@@ -475,7 +538,7 @@ def run_remix(
         else:
             role = ROLE_ACCENT if len(seg) < bar else ROLE_LOOP
         target = ROLE_GAIN.get(cat, -15.0)
-        m = {"role": role, "seg": seg, "gain_db": target - seg.dBFS}
+        m = {"role": role, "cat": cat, "seg": seg, "gain_db": target - seg.dBFS}
         if cat == "sfx":
             m["accent_every"] = 4
         if cat in sections:
@@ -521,11 +584,29 @@ def run_remix(
                 pass  # B 变体失败则退化为单素材循环
         materials.append(m)
 
+    # 混音师风格：分轨总线着色（角色 -> 专辑总线映射，跳过电平级，保留引擎编排平衡）
+    if style:
+        for m in materials:
+            bus_key = _MIXER_ROLE_TO_BUS.get(m.get("cat", ""))
+            if not bus_key:
+                continue
+            m["seg"] = _style_segment(m["seg"], style, style_irs, bus_key, ms_mod)
+            if m.get("seg_b") is not None:
+                m["seg_b"] = _style_segment(m["seg_b"], style, style_irs, bus_key, ms_mod)
+
     fade_out = int(st.get("fade_out_bars", 0)) if sections else 0
     mix = build_arrangement(materials, bpm, bars, fade_out_bars=fade_out)
 
-    # 峰值归一化到 -1.5 dBFS（为 mp3/有损编码的过冲留 0.5dB 余量）
-    mix = mix.apply_gain(-1.5 - mix.max_dBFS)
+    # 混音师风格：母带链（EQ/glue/宽度/饱和/响度目标），峰值按 -1.5 dBFS 留编码余量；
+    # 未启用风格时保持原峰值归一化行为
+    if style:
+        x = _seg_to_np(mix)
+        x, _ = ms_mod.master_chain(x, style["master"], ceiling_db=-1.5)
+        mix = _np_to_seg(x)
+        print(f"[remix] 已应用母带风格链（{style['slug']}，目标 {style['target_lufs']} LUFS）")
+    else:
+        # 峰值归一化到 -1.5 dBFS（为 mp3/有损编码的过冲留 0.5dB 余量）
+        mix = mix.apply_gain(-1.5 - mix.max_dBFS)
 
     if out_dir is None:
         out_dir = os.path.join(_PROJECT_ROOT, "output")
@@ -578,12 +659,18 @@ def main():
         "--release-safe", action="store_true",
         help="发布安全模式：仅使用授权层级为 free/pack 的素材（restricted/unknown 一律剔除）",
     )
+    parser.add_argument(
+        "--mixer-style", type=str, default=None,
+        help="混音师风格着色（burbidge/ghenea/clearmountain/marroquin/pensado/blake/"
+             "lordalge/schmitt/mikedean/stent/random；默认不启用，保持原 phonk 处理链）",
+    )
     args = parser.parse_args()
 
     if args.remix:
         run_remix(count=args.count, seed=args.seed, out_dir=args.out,
                   fmt=args.format, bars=args.bars, bpm=args.bpm,
-                  structure=args.structure, release_safe=args.release_safe)
+                  structure=args.structure, release_safe=args.release_safe,
+                  mixer_style=args.mixer_style)
         return
 
     # 默认启动图形界面

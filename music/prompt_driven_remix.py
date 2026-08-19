@@ -380,6 +380,18 @@ def load_prompts_from_json(path: str) -> list[dict]:
     return [_normalize_prompt(e) for e in raw]
 
 
+def _random_mixer_slug(rng: random.Random) -> str | None:
+    """从 burbidge_album/mixer_styles.py 的共享风格注册表随机取一位混音师。"""
+    try:
+        bp = os.path.join(MUSICKIT_ROOT, "burbidge_album")
+        if bp not in sys.path:
+            sys.path.insert(0, bp)
+        import mixer_styles as ms
+        return rng.choice(ms.SLUGS)
+    except Exception:
+        return None
+
+
 def generate_prompts(n: int, category: str | None, fusion: bool,
                      seed: int | None) -> list[dict]:
     profile = None
@@ -426,6 +438,9 @@ def main():
                    help="输出格式（默认 wav）")
     p.add_argument("--dry-run", action="store_true",
                    help="只打印提示词->混音参数映射，不真正混音")
+    p.add_argument("--mixer-style", type=str, default=None,
+                   help="混音师风格着色（burbidge/ghenea/clearmountain/marroquin/pensado/"
+                        "blake/lordalge/schmitt/mikedean/stent/random；默认不启用）")
     p.add_argument("--release-safe", action="store_true",
                    help="发布安全模式：仅用授权层级为 free/pack 的素材（restricted/unknown 剔除）")
     p.add_argument("--report", type=str, default=None,
@@ -452,6 +467,12 @@ def main():
                                   release_safe=args.release_safe)
         if args.structure:
             mp["structure"] = args.structure
+        mixer_slug = args.mixer_style
+        if mixer_slug == "random":
+            mixer_slug = _random_mixer_slug(rng)
+        mp["mixer_style"] = mixer_slug
+        if mixer_slug:
+            print(f"  mixer-style = {mixer_slug}")
         label = data.get("label", "")
         print(f"\n【#{i}】{label} ｜ {data.get('subgenre','')}")
         print(f"  提示词：{data.get('sentence','')}")
@@ -475,6 +496,7 @@ def main():
             structure=mp["structure"],
             tracks=mp["tracks"],
             release_safe=args.release_safe,
+            mixer_style=mixer_slug,
         )
         results.append({"prompt": data, "mapping": mp, "output": out})
         print(f"  ✅ 混音已保存：{out}")
@@ -484,6 +506,7 @@ def main():
             "label": r["prompt"].get("label"),
             "bpm": r["mapping"]["bpm"],
             "structure": r["mapping"]["structure"],
+            "mixer_style": r["mapping"].get("mixer_style"),
             "tracks": [list(t) for t in r["mapping"]["tracks"]],
             "gaps": r["mapping"].get("gaps", []),
             "output": r["output"],

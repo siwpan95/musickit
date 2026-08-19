@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#151210"/>
+      <stop offset="1" stop-color="#07060a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.32" r="0.7">
+      <stop offset="0" stop-color="#d9a441" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#d9a441" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <rect width="800" height="800" fill="url(#glow)"/>
+  <g fill="none" stroke="#d9a441" stroke-opacity="0.45">
+    <circle cx="400" cy="285" r="150"/>
+    <circle cx="400" cy="285" r="110"/>
+    <circle cx="400" cy="285" r="70"/>
+  </g>
+  <text x="400" y="285" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#f3e2bd" font-style="italic">After Midnight</text>
+  <text x="400" y="470" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="8" fill="#d9a441">THE MIX ENGINEER SERIES</text>
+  <text x="400" y="510" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" letter-spacing="3" fill="#9c8e74">SIX TRACKS × 10 MIXERS · SAME STEMS · TEN PHILOSOPHIES</text>
+  <g><circle cx="80" cy="660" r="10" fill="#d9a441" fill-opacity="0.85"/><circle cx="150" cy="660" r="10" fill="#7fd4ff" fill-opacity="0.85"/><circle cx="220" cy="660" r="10" fill="#d98e5f" fill-opacity="0.85"/><circle cx="290" cy="660" r="10" fill="#ff6a9c" fill-opacity="0.85"/><circle cx="360" cy="660" r="10" fill="#ffc04d" fill-opacity="0.85"/><circle cx="430" cy="660" r="10" fill="#9db36a" fill-opacity="0.85"/><circle cx="500" cy="660" r="10" fill="#5f8dff" fill-opacity="0.85"/><circle cx="570" cy="660" r="10" fill="#e0d2b0" fill-opacity="0.85"/><circle cx="640" cy="660" r="10" fill="#b06aff" fill-opacity="0.85"/><circle cx="710" cy="660" r="10" fill="#4dd9c0" fill-opacity="0.85"/></g>
+  <text x="400" y="715" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#7a6e58" font-style="italic">one arrangement, 10 consoles of character</text>
+</svg>

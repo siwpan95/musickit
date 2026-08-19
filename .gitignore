@@ -41,3 +41,7 @@ remix/.pytest_cache/
 # Python
 __pycache__/
 *.pyc
+
+# 专辑管线（burbidge_album）：只入代码与文档，成品音频/缓存可随时重生成
+burbidge_album/**/*.wav
+burbidge_album/_stretch_cache/

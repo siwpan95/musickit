@@ -1,0 +1,144 @@
+{
+  "styles": [
+    {
+      "slug": "burbidge",
+      "name": "Craig Burbidge",
+      "zh": "克雷格·伯比奇",
+      "folder": "burbidge",
+      "color": "#d9a441",
+      "tagline": "warm console · vocal-forward · lush plate",
+      "about": "Late-80s/90s LA R&B, soul, gospel and pop (Barry White, Brian McKnight, Take 6, Vanessa Williams, David Tao 陶喆, 张惠妹, 王力宏, 五月天). Signature: vocal-forward, warm SSL/Neve console body, deep punchy bottom, lush plate on lead + gospel-style backgrounds, smooth opto-style lead compression, glue bus compression, wide polished stereo.",
+      "refs": [
+        "Barry White",
+        "Brian McKnight",
+        "Take 6",
+        "Vanessa Williams",
+        "David Tao",
+        "张惠妹",
+        "王力宏",
+        "五月天"
+      ],
+      "sig": {
+        "drums": "Punchy, controlled, centered (SSL drum bus)",
+        "bass": "Deep Barry-White bottom, tight 6:1",
+        "pad": "Warm, slightly recessed harmony bed",
+        "lead": "THE vocal stand-in: front, intimate, lush plate",
+        "bg": "Wide gospel-style backgrounds behind the lead",
+        "master": "Warm glue, polished width, musical dynamics"
+      },
+      "target_lufs": -13.0,
+      "impl": {
+        "drums": "HPF 35 Hz · lowshelf +1.0 dB @ 120 Hz · peak +1.5 dB @ 4000 Hz · comp -20 dB 4:1 (5/120 ms, k3, +2 dB) · sat drive 1.2 mix 0.12 · room reverb 10% · -5 dB",
+        "bass": "HPF 30 Hz · lowshelf +2.0 dB @ 90 Hz · peak +2.0 dB @ 80 Hz · comp -24 dB 6:1 (3/200 ms, k2, +1 dB) · sat drive 1.5 mix 0.22 · -7 dB",
+        "pad": "HPF 40 Hz · lowshelf -1.0 dB @ 250 Hz · peak +1.0 dB @ 2500 Hz · comp -22 dB 2.5:1 (15/250 ms, k3, +1 dB) · med reverb 18% · M/S +0.30 · -11 dB",
+        "lead": "HPF 50 Hz · lowshelf +1.0 dB @ 200 Hz · peak +2.0 dB @ 3800 Hz · comp -16 dB 2:1 (20/300 ms, k4, +1.5 dB) · long reverb 30% · M/S +0.15 · pan +0.08 · -3 dB",
+        "bg": "HPF 80 Hz · LPF 9000 Hz · comp -24 dB 2:1 (20/300 ms, k3, +0 dB) · long reverb 35% · M/S +0.60 · -15 dB",
+        "master": "HPF 30 Hz · lowshelf +0.5 dB @ 60 Hz · peak +1.5 dB @ 12000 Hz · comp -18 dB 2:1 (10/200 ms, k2, +1.5 dB) · sat drive 1.1 mix 0.08 · M/S +0.10 · target -13 LUFS · limiter rel 80 ms"
+      },
+      "tracks": [
+        {
+          "num": 1,
+          "title": "Midnight Velvet",
+          "tempo": 88,
+          "key": "B",
+          "dur": 152.7,
+          "lufs": -27.0,
+          "out": "burbidge\\01 Midnight Velvet.wav",
+          "stems": {
+            "drum": "drum (3480).wav",
+            "bass": "XAM Bladerunner Reese.wav",
+            "pad": "EBH_Synth_Loop_16_Bm_126.wav",
+            "lead": "PPC_Synths_80_Yumm_Bmin_GH.wav",
+            "bg": "ESW Trap Flutes 26 - Gyspy 05 - 160 BPM B Min.wav",
+            "sfx": "SRHS_Impact_20.wav"
+          }
+        },
+        {
+          "num": 2,
+          "title": "Slow Car",
+          "tempo": 90,
+          "key": "D",
+          "dur": 149.3,
+          "lufs": -21.3,
+          "out": "burbidge\\02 Slow Car.wav",
+          "stems": {
+            "drum": "SRHS_110_Full_Drum_Loop_23.wav",
+            "bass": "bass (375).wav",
+            "pad": "GS_FS 2_Piano Loop_ 8_70bpm_Dmaj .wav",
+            "lead": "ESW I Had You 01 - Guitar Chords - 90 BPM D Minor.wav",
+            "bg": "Ghosthack Vocal Demo Kit 5 - STRINGS.wav",
+            "sfx": "SRHS_Impact_18.wav"
+          }
+        },
+        {
+          "num": 3,
+          "title": "Neon Rain",
+          "tempo": 100,
+          "key": "E",
+          "dur": 144.0,
+          "lufs": -21.2,
+          "out": "burbidge\\03 Neon Rain.wav",
+          "stems": {
+            "drum": "drum (1898).wav",
+            "bass": "bass (98).wav",
+            "pad": "ESWX Kit 5 - Brass Stabs - 100 BPM E Maj.wav",
+            "lead": "ESWX Kit 5 - Dustry Mallets - 100 BPM E Maj.wav",
+            "bg": "ESW PL Thorny.wav",
+            "sfx": "SRHS_Impact_07.wav"
+          }
+        },
+        {
+          "num": 4,
+          "title": "Gravity",
+          "tempo": 105,
+          "key": "A",
+          "dur": 137.1,
+          "lufs": -19.3,
+          "out": "burbidge\\04 Gravity.wav",
+          "stems": {
+            "drum": "drum (1168).wav",
+            "bass": "bass (106).wav",
+            "pad": "FPV_Try_Kit_Arp_Am_105BPM.wav",
+            "lead": "FPV_Try_Kit_Adlibs_Am_105BPM_Dry.wav",
+            "bg": "bww3_altoflute_portl_rep1_31-31_A3 - AB.wav",
+            "sfx": "XAM Riser 1.wav"
+          }
+        },
+        {
+          "num": 5,
+          "title": "Sunset Boulevard",
+          "tempo": 110,
+          "key": "A",
+          "dur": 130.9,
+          "lufs": -19.3,
+          "out": "burbidge\\05 Sunset Boulevard.wav",
+          "stems": {
+            "drum": "drum (1413).wav",
+            "bass": "synth (70).wav",
+            "pad": "FPV_Keep_Balance_Kit_Guitar_Ambience_Fm_105BPM.wav",
+            "lead": "FPV_Online_Kit_Ambience_Bm_105BPM.wav",
+            "bg": "110bpm_vl1_meastrills_slow_103-103_A2 - AB.wav",
+            "sfx": "SRHS_Impact_13.wav"
+          }
+        },
+        {
+          "num": 6,
+          "title": "After Hours",
+          "tempo": 120,
+          "key": "C",
+          "dur": 128.0,
+          "lufs": -23.3,
+          "out": "burbidge\\06 After Hours.wav",
+          "stems": {
+            "drum": "SRHS_Clap_04.wav",
+            "bass": "XAM Clean Reese.wav",
+            "pad": "FBHA_C_126_Piano_Loop_10.wav",
+            "lead": "Acoustic Guitar-110 bpm-Cmaj-25.wav",
+            "bg": "GS_FS 2_Flute Loop_ 7_100bpm_Cm.wav",
+            "sfx": "XAM Transition 5.wav"
+          }
+        }
+      ]
+    }
+  ]
+}
