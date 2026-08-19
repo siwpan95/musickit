@@ -18,10 +18,14 @@ musickit/
 ├── woodwind/      # 木管/笛箫（大量单音采样；旋律层选音优先 loop，见下）
 ├── ethnic/        # 民族乐器（拨弦/拉弦/打击）
 ├── archived/      # 🗑️ 垃圾桶/归档区：只进不出（见 archived/README.md）
+├── music/         # 风格提示词生成器（65 流派风格池）+ 提示词→混音桥接器
+├── burbidge_album/# 固定风格专辑管线：同一 stems × 24 位混音师签名链（mixer_styles.py）
 ├── remix/         # 混音应用（main.py + core/gui/utils/tools/tests + 内置 ffmpeg）
+│                   # tools/ 含混音师电台 mixer_radio.py 与本地流服务 mixer_stream.py
 ├── instrument_taxonomy.json   # 规范乐器分类体系：242 乐器词 → 37 类目 → 13 池
 ├── manifest_index.json        # 总索引（自动化每 6h 重建，不入版本库）
-└── README.md / EVALUATION_REPORT.md / FIX_PLAN.md / MUBERT_*.md
+└── README.md / INTEGRATION.md / EVALUATION_REPORT.md / FIX_PLAN.md /
+    MUBERT_RESEARCH.md / MUBERT_METHODOLOGY.md / MUBERT_COMPARISON.md
 ```
 
 ## 素材授权（license_tier，写入各池 manifest.json）
@@ -46,10 +50,11 @@ python main.py --remix                                          # 默认 3 轨�
 python main.py --remix --count 5 --bars 64 --bpm 140 --format wav
 python main.py --remix --structure classic_drop --seed 42 --out output
 python main.py --remix --release-safe                           # 发布安全模式（仅 free/pack 素材）
+python main.py --remix --mixer-style wallace                    # 混音师风格着色（24 位，见下）
 
 usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm BPM]
                [--structure STRUCTURE] [--out OUT] [--format {wav,mp3,ogg,flac}]
-               [--release-safe]
+               [--release-safe] [--mixer-style {24位混音师slug|random}]
 ```
 
 **选音规则（2026-08-17 起）**：
@@ -63,8 +68,8 @@ usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm
 - 输出文件名同秒冲突自动递增（`_1/_2`），不会覆盖旧产物；
 - `MUSICKIT_ROOT` 环境变量可覆盖素材根目录。
 
-测试：`python -m pytest tests -q`（**108 passed**）；快速档 `python -m pytest tests -q -m smoke`
-（16 个纯逻辑用例）。Python 3.13+ 需 `audioop-lts`（requirements.txt 已含）。
+测试：`python -m pytest tests -q`（**112 passed, 1 skipped**）；快速档 `python -m pytest tests -q -m smoke`
+（16 个纯逻辑用例）。Python 3.13+ 需 `audioop-lts`；混音师风格链需 `scipy` + `soundfile`（均已在 requirements.txt）。
 
 ## 提示词驱动混音（来自 G:\musickit\music，同仓整合）
 
@@ -78,7 +83,34 @@ usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm
 - 曲式模板选择规则外置在 `structure_moods.json`（改词表无需改代码）；
 - 支持 `--release-safe`（与引擎同口径过滤）。
 
-## 采样源（与 license_tier 对应）\n\n| 源 | 内容 | tier |\n|----|------|------|\n| `G:\\radio_music_stems` | 商业歌曲 Demucs 分离 stem（bass/drum/guita 编号 1~258） | restricted |\n| `G:\\csmusic_stems` | CS 游戏音乐粉丝提取 stem（编号 >=726，自动化并入） | restricted |\n| `G:\\BaiduNetdiskDownload` | 商业采样包（Black Octopus/XAM/Singomakers/Loopmasters 等） | pack |\n| Mixkit / MusicRadar SampleRadar | 免费可商用素材 | free |\n\n## archived 定位（固化）
+## 固定风格专辑与混音师频道（burbidge_album）
+
+burbidge_album/ 是固定风格管线：同一组 stems × **24 位混音师签名链**（burbidge /
+ghenea / clearmountain / marroquin / pensado / blake / lordalge / schmitt / mikedean /
+stent / wallace / maserati / joshua / ali / elmhirst / scheps / moulder / guzauski /
+albini / everett / elevado / shebib / power / zhoutianche），每位经共享模块
+mixer_styles.py 参数化（逐总线 EQ/压缩/饱和/混响/宽度 + 风格母带），两条管线共用：
+
+- 专辑：python burbidge_album/build_album.py（全量）或 ... wallace maserati（增量）
+  → album/<slug>/ 成品 + 试听页；album/channels.json 为 24 频道目录；
+- 随机混音接入：python main.py --remix --mixer-style joshua
+  或 python music/prompt_driven_remix.py --mixer-style random；
+- 频道形态（类 Mubert）：python remix/tools/mixer_radio.py --channel wallace --count 3
+  （本地电台，输出 m3u8）；python remix/tools/mixer_stream.py --port 8010
+  （本地无限流：/api/channels /api/stream/<slug> /api/track/<slug>）。
+
+设计与 Mubert 的异同及频道可行性详见 MUBERT_COMPARISON.md，整合总览见 INTEGRATION.md。
+
+## 采样源（与 license_tier 对应）
+
+| 源 | 内容 | tier |
+|----|------|------|
+| `G:\radio_music_stems` | 商业歌曲 Demucs 分离 stem（bass/drum/guita 编号 1~258） | restricted |
+| `G:\csmusic_stems` | CS 游戏音乐粉丝提取 stem（编号 >=726，自动化并入） | restricted |
+| `G:\BaiduNetdiskDownload` | 商业采样包（Black Octopus/XAM/Singomakers/Loopmasters 等） | pack |
+| Mixkit / MusicRadar SampleRadar | 免费可商用素材 | free |
+
+## archived 定位（固化）
 
 `archived/` 是项目的**垃圾桶/归档区**：只进不出、不参与混音、移动而非删除
 （记录在 `dedupe_manifest.json` / `moved_vocal_packs_*.json` / `manifest_backup_*/`）。
@@ -86,5 +118,6 @@ usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm
 
 ## 版本控制
 
-`git`（主分支 `main`）：素材音频不入库（仅各池 `manifest.json`），
-代码 / 文档 / manifest / 内置 ffmpeg 全部跟踪；修复历史见提交记录与 `FIX_PLAN.md`。
+`git`（gitee 仓库 `siwpan/music` 分支 `musickit`，本地同步工作区 `G:\music\_gitee_push\music`）：
+素材音频不入库（仅各池 `manifest.json`），代码 / 文档 / manifest 全部跟踪；
+成品 wav/mp3、_stretch_cache/、prompt_mixes/、remix/output/ 由 .gitignore 排除。

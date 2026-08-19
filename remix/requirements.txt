@@ -1,3 +1,6 @@
 pydub>=0.25.1
 audioop-lts>=0.2.2
 numpy>=1.24.0
+# 混音师风格链（--mixer-style / burbidge_album 共享模块 mixer_styles.py -> dsp.py）：
+scipy>=1.10.0
+soundfile>=0.12.0

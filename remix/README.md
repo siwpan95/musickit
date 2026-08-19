@@ -22,6 +22,10 @@ pydub 只是 ffmpeg 的封装，**没有 ffmpeg 程序本工具无法运行**。
   `requirements.txt`，但务必确认安装成功）。若缺少会报
   `ModuleNotFoundError: No module named 'audioop'`。
 
+### 3. scipy / soundfile（混音师风格链）
+--mixer-style 与 burbidge_album 共享链依赖 scipy（信号处理）与 soundfile（音频读写），
+已写入 requirements.txt。现役环境 F:\Python314 已装齐（scipy 1.18 / soundfile 0.14）。
+
 ## 安装
 
 ```bash
@@ -70,6 +74,18 @@ python main.py --remix --seed 42 --bars 16 --out output
 python main.py --remix --release-safe
 ```
 
+**混音师风格着色（--mixer-style，可选；不传时行为不变）**：
+
+    python main.py --remix --mixer-style mikedean            # 固定某位混音师签名
+    python main.py --remix --mixer-style random --seed 42    # 随机一位（可复现）
+
+- 24 位混音师：burbidge / ghenea / clearmountain / marroquin / pensado / blake /
+  lordalge / schmitt / mikedean / stent / wallace / maserati / joshua / ali / elmhirst /
+  scheps / moulder / guzauski / albini / everett / elevado / shebib / power / zhoutianche
+  （每位签名与逐总线参数见 burbidge_album/album/ALBUM_NOTES.md）；
+- 共享注册表：burbidge_album/mixer_styles.py（与固定风格专辑管线同源）；
+- 效果：鼓/贝斯/铺垫/主奏人声分轨过对应总线链，母带走风格链（峰值 -1.5 dBFS 留编码余量）。
+
 **选音规则（2026-08-17 起）**：
 - 骨架层（drum/bass/guita）**保底挑选 >=1 小节的 loop/stem**（manifest 时长优先，
   未知时长则整曲 stem 命名优先 + ffprobe 抽样探测），混音时强制循环层，
@@ -88,6 +104,16 @@ python main.py --remix --release-safe
 其它 synth / 采样。最小可用骨架为 3 轨（鼓 + 贝斯 + 旋律），
 典型完整制作约 4~6 轨。本工具默认随机选 3 条，可用 `--count` 调整。
 
+## 混音师频道（类 Mubert 频道形态，详见 MUBERT_COMPARISON.md L1~L3）
+
+    python tools/mixer_radio.py --channel wallace --count 3     # 本地混音师电台 -> <slug>_radio.m3u8
+    python tools/mixer_stream.py --port 8010                    # 本地无限流服务（浏览器即播）
+
+- tools/mixer_radio.py：固定混音师签名 × 随机流派提示词，连续产出 + m3u8 播放列表 + radio_report.json；
+- tools/mixer_stream.py：频道主页（24 卡片）、/api/channels、/api/stream/<slug>（连续 MP3 无限流）、
+  /api/track/<slug>?seed=N、/api/playlist/<slug>，仅标准库实现；
+- 频道目录：burbidge_album/album/channels.json（generate_album_docs.py 自动生成）。
+
 ## 功能列表
 
 | 功能 | 说明 |
@@ -104,17 +130,27 @@ python main.py --remix --release-safe
 | 骨架保底选音 | drum/bass/guita 强制选取 >=1 小节 loop/stem 并强制循环层 |
 | 发布安全模式 | --release-safe 仅用 free/pack 授权素材（license_tier 过滤） |
 | 防覆盖命名 | 输出文件名同秒冲突自动递增（_1/_2） |
+| 混音师风格着色 | --mixer-style：24 位混音师分轨总线链 + 风格母带（共享 burbidge_album/mixer_styles.py） |
+| 混音师电台 | tools/mixer_radio.py：固定签名 × 随机流派连续产出（m3u8 + 报告） |
+| 混音师流服务 | tools/mixer_stream.py：本地无限流（/api/channels /api/stream/<slug> /api/track/<slug>） |
 
 ## 项目结构
 
 ```
 remix/
-├── main.py                 # 程序入口 + 依赖检查 + 随机混音 CLI
+├── main.py                 # 程序入口 + 依赖检查 + 随机混音 CLI（--mixer-style 混音师风格）
 ├── core/
 │   ├── audio_loader.py     # 加载 / 参数统一 / 导出
-│   └── audio_mixer.py      # 混音引擎（纯业务逻辑，零 GUI 依赖）
+│   ├── audio_mixer.py      # 混音引擎（纯业务逻辑，零 GUI 依赖）
+│   └── loop_slicer.py      # BPM 网格切片 / 曲式编排 / 内容判重
 ├── gui/
 │   └── main_window.py      # tkinter 主界面（仅音频混音）
+├── templates/
+│   └── structures.json     # 曲式模板库（classic_drop / ambient_ghost / loop_stack）
+├── tools/
+│   ├── mixer_radio.py      # 本地混音师电台（MUBERT_COMPARISON.md L2）
+│   ├── mixer_stream.py     # 本地混音师无限流服务（L3）
+│   └── ...                 # 采样入库/审计/查重等治理脚本
 ├── utils/
 │   └── progress_reporter.py# 线程安全进度报告
 └── tests/                  # pytest 测试套件（含 main.py 选音逻辑 / --release-safe 覆盖）
@@ -147,5 +183,7 @@ pytest tests/ -q -m smoke     # 快速冒烟档（纯逻辑用例，无 ffmpeg �
 - `bpm` → 混音目标速度
 - `moods` / `subgenre` → 曲式模板（`classic_drop` / `ambient_ghost` / `loop_stack`）
 
-运行桥接器需 `F:\Python314`（pydub + numpy + audioop-lts），并把 `MUSICKIT_ROOT`
-指向 `G:\musickit`（桥接器已默认设置）。详见 `G:\musickit\music\prompt_driven_remix.py`。
+运行桥接器需 `F:\Python314`（pydub + numpy + audioop-lts + scipy + soundfile），并把
+`MUSICKIT_ROOT` 指向 `G:\musickit`（桥接器已默认设置）。详见 `G:\musickit\music\prompt_driven_remix.py`。
+桥接器同样支持 `--mixer-style`（slug 或 random，random 时每条提示词配一位随机混音师，
+所用混音师写入 --report 的 mixer_style 字段）。
