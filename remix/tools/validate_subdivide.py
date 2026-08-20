@@ -2,7 +2,7 @@
 at <pool>/<subcategory>/<file>, every disk audio file is manifested, and there are
 no duplicate basenames within a pool."""
 import os, json
-ROOT = r"G:\musickit"
+ROOT = r"G:\music\musickit"
 A = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aac", ".aiff", ".aif", ".wma", ".alac")
 POOLS = ["bass", "drum", "guita", "synth", "acapella", "sfx", "keys"]
 

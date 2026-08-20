@@ -1,9 +1,9 @@
 """Phase 5：把 G:\\csmusic_stems（CS 游戏音乐 Demucs 分离库，持续增⻓）增量并入 musickit 物料。
 
 对每首「完成」的歌曲（bass/drums/other/vocals 四轨齐全 且 无 htdemucs 临时目录）：
-  - bass.wav   → G:\\musickit\\bass\\bass (N).wav
-  - drums.wav  → G:\\musickit\\drum\\drum (N).wav
-  - other.wav  → G:\\musickit\\guita\\guita (N).wav      # guita = other 轨当吉他，项目约定
+  - bass.wav   → G:\\music\\musickit\\bass\\bass (N).wav
+  - drums.wav  → G:\\music\\musickit\\drum\\drum (N).wav
+  - other.wav  → G:\\music\\musickit\\guita\\guita (N).wav      # guita = other 轨当吉他，项目约定
   （vocals.wav 不并入：musickit/animal 为动物叫声 one-shot，非歌曲人声）
   - 三轨共享同一编号 N（与 radio stem 约定一致，便于 stems_song_map 关联同一首歌）
   - 各目录 manifest.json 追加条目（source_pack="csmusic"，original=歌曲目录名）
@@ -22,13 +22,13 @@ import shutil
 import wave
 from datetime import datetime
 
-ROOT = r"G:\musickit"
-CS = r"G:\csmusic_stems"
+ROOT = r"G:\music\musickit"
+CS = r"G:\music\csmusic_stems"
 PROGRESS = os.path.join(ROOT, "remix", "tools", "csmusic_ingest_progress.json")
 CATS = {
-    "bass": r"G:\musickit\bass",
-    "drum": r"G:\musickit\drum",
-    "guita": r"G:\musickit\guita",
+    "bass": r"G:\music\musickit\bass",
+    "drum": r"G:\music\musickit\drum",
+    "guita": r"G:\music\musickit\guita",
 }
 CS_STEM = {"bass": "bass.wav", "drum": "drums.wav", "guita": "other.wav"}
 # 与 subdivide_manifests.py 对 csmusic 物料的子类落位保持一致

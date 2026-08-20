@@ -3,7 +3,7 @@
 Strip the prefix so file is just the basename. Idempotent and safe for
 acapella's legitimately nested paths (norm_rel still resolves correctly)."""
 import os, json
-ROOT = r"G:\musickit"
+ROOT = r"G:\music\musickit"
 POOLS = ["bass", "drum", "guita", "synth", "acapella", "sfx", "keys"]
 fixed = 0
 for p in POOLS:

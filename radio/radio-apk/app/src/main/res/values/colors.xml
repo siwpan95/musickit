@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- vaporwave 渐变主色，呼应控制面板 -->
+    <color name="primary">#FF6F61</color>
+    <color name="primary_dark">#C2185B</color>
+    <color name="accent">#00E5FF</color>
+    <color name="bg_dark">#0F0F1E</color>
+    <color name="bg_light">#FFFFFF</color>
+    <color name="text_dark">#1A1A2E</color>
+    <color name="text_light">#F5F5F7</color>
+</resources>

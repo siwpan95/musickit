@@ -3,7 +3,7 @@
 r"""扫描各素材池 manifest 的 license / license_tier 分布（数据治理巡检）。
 
 输出：stdout 汇总表 +（可选）license_audit.json 全量明细。
-用法：python audit_licenses.py --root G:\musickit [--out license_audit.json]
+用法：python audit_licenses.py --root G:\music\musickit [--out license_audit.json]
 """
 import argparse
 import json
@@ -16,7 +16,7 @@ POOLS = ["bass", "drum", "guita", "cowbell", "synth", "acapella",
 
 def main():
     p = argparse.ArgumentParser(description="授权治理巡检")
-    p.add_argument("--root", default=r"G:\musickit", help="musickit 根目录")
+    p.add_argument("--root", default=r"G:\music\musickit", help="musickit 根目录")
     p.add_argument("--out", default=None, help="明细输出路径（可选）")
     args = p.parse_args()
 

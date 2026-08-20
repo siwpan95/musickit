@@ -18,7 +18,7 @@ import shutil
 import collections
 import argparse
 
-ROOT = r"G:\musickit"
+ROOT = r"G:\music\musickit"
 AUDIO_EXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aac")
 
 # 仅细分这些池；cowbell / animal 无 taxonomy 子类，保持扁平

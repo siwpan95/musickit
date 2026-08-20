@@ -1,4 +1,4 @@
-# G:\musickit 修复计划（v2）
+# G:\music\musickit 修复计划（v2）
 
 > 依据：2026-08-13《musickit 项目评估报告》+ 用户裁定（含 16:43 补充）
 > 原则：**先规划后执行**；所有素材移动只 move 不 delete；每阶段有 dry-run 与验收标准
@@ -10,12 +10,12 @@
 
 | 时间 | 变更 | 状态 |
 |------|------|------|
-| 2026-08-13 16:43 | `G:\musickit\.pass` → `G:\musickit\archived`（用户指示："垃圾桶"，类似 archived） | ✅ 已完成，40 个文件完好 |
+| 2026-08-13 16:43 | `G:\music\musickit\.pass` → `G:\music\musickit\archived`（用户指示："垃圾桶"，类似 archived） | ✅ 已完成，40 个文件完好 |
 | 2026-08-13 16:51 | **Phase 1 去重执行**：cowbell 174→114（移 60）、synth 50→23（移 27），共 87 个副本移入 `archived/dedupe_cowbell/`、`archived/dedupe_synth/`，0 失败；archived 自身 40 文件未动（用户指示）；remix CLI 冒烟通过（seed 42）；移动记录 `remix/tools/dedupe_manifest.json` | ✅ 已完成 |
 | 2026-08-13 17:22 | **Phase 2 执行**：下载 4 个 MusicRadar SampleRadar 免费包（EBM/Deep House/Funk Keys/90s Hip-Hop，共 567MB，royalty-free）；审计 1249 音频→620 候选；归一化入库 **199 个真实采样**（synth (51)~ 起，44.1k 立体声 16bit、峰值-3dBFS、去重）；23 个机生成占位全部移入 `archived/synth_placeholder/`；synth 目录现 100% 真实采样；频谱集中度 0.13~0.46 vs 旧占位 0.35~0.80；remix 冒烟通过（seed 99）；脚本：`remix/tools/audit_pack.py` + `ingest_synth.py`；需邮箱结账源指南：`archived/downloads/MANUAL_DOWNLOAD_GUIDE.md` | ✅ 已完成 |
 | 2026-08-13 17:53 | **Phase 2 扩展·剩余素材分类入库**：downloads 中 synth 之外的音频（bass/beat/鼓点等）按类别全量入库——`ingest_categories.py`（drum 100ms~16s、bass 0.3~12s、synth 0.3~8s；路由：drum 关键词→drum/，bass/808→bass/，其余→synth/；sha256 去重+跳过已入库 199）→ **drum +467、bass +164、synth +301，共 932 个**。目录现况：bass 422 / drum 725 / synth 500 / guita 259 / cowbell 114。三个目录 manifest 齐全；remix 冒烟通过（seed 7，选到新入库 drum (399)/bass (233) 等） | ✅ 已完成 |
 | 2026-08-13 18:17 | **Phase 3 功能修复（按严重度）**：F1 loop 化 beat（新增 `core/loop_slicer.py`：BPM 网格、能量峰定位切片、ffmpeg 只解码切片；整曲→1~2 小节 loop，短音→循环/点缀；实测输出 27.4s@140BPM 4.8MB，旧版为 3~14.6 分钟 30~154MB）；F2 时长可控（`--bars` 默认 16、`--bpm` 默认随机 110~150，实测 8 小节→16.3s）；F3 v1 完成（只切不拉伸，v2 atempo 留待）；F4 内存（8kHz 包络扫描+切片式载入，整曲不再进内存，跑一次 12.8s）；F5 路径解耦（`MUSICKIT_ROOT` 环境变量）；F6 内容去重（时长+前 0.5s 哈希指纹，选音时剔除重复采样）；F7 文档（MIGRATED.txt/README 更新）。测试 77→**86 passed**；冒烟 seed 42/1 通过 | ✅ 已完成 |
-| 2026-08-13 18:35 | **F3-v2 + 输出加长 + Phase 4**：F3-v2 变速对齐（`estimate_bpm` 自相关估速 + `load_slice` atempo 拉伸 + `parse_bpm_hint` 从 manifest 路径提示取源 BPM，比率钳制 0.85~1.18）；默认输出 16→**32 小节（≈55s@140BPM）**，>12 小节自动段落编排（intro 鼓+旋律 → +bass → drop +牛铃/synth → outro 2 小节淡出），回答"20 多秒太短"；Phase 4 总索引（`tools/build_manifest_index.py` → `G:\musickit\manifest_index.json`：5 目录 manifest 合并 + **775 个 stem 全部反查到歌名**）+ archived 定位固化（根 `README.md` + `archived/README.md` 政策：只进不出/不参与混音/移动可回溯）。测试 **88 passed / 2 skipped**；实测 32 小节 54.9s wav 混音通过 | ✅ 已完成 |
+| 2026-08-13 18:35 | **F3-v2 + 输出加长 + Phase 4**：F3-v2 变速对齐（`estimate_bpm` 自相关估速 + `load_slice` atempo 拉伸 + `parse_bpm_hint` 从 manifest 路径提示取源 BPM，比率钳制 0.85~1.18）；默认输出 16→**32 小节（≈55s@140BPM）**，>12 小节自动段落编排（intro 鼓+旋律 → +bass → drop +牛铃/synth → outro 2 小节淡出），回答"20 多秒太短"；Phase 4 总索引（`tools/build_manifest_index.py` → `G:\music\musickit\manifest_index.json`：5 目录 manifest 合并 + **775 个 stem 全部反查到歌名**）+ archived 定位固化（根 `README.md` + `archived/README.md` 政策：只进不出/不参与混音/移动可回溯）。测试 **88 passed / 2 skipped**；实测 32 小节 54.9s wav 混音通过 | ✅ 已完成 |
 | 2026-08-13 18:42 | **A/B 段落变化（防单调）+ 索引定时刷新**：`best_loop_start`/`prepare_material` 支持搜索区间（A=曲首 0~120s，B=中段 60~240s，同曲不同段落各切一片；短素材 B=同类另一文件）；`build_arrangement` 支持 `seg_b` + `variant_every_bars`（旋律层 guita/synth 每 4 小节 A/B 交替，drum/bass 每 8 小节，块内循环对齐小节网格）；>12 小节才启用。同 seed 前后输出哈希不同 → 变体生效。测试 **91 passed / 1 skipped**。自动化：`automation-1786617582786`「musickit 总索引定时刷新」每日 02:30 重跑 build_manifest_index.py | ✅ 已完成 |
 
 **`archived`（原 .pass）定位**：项目的**垃圾桶/归档区**——所有冗余副本、机生成占位音频、过期素材一律移入此处，只进不出（可手动找回），不参与混音。remix 代码不引用它，改名无副作用（已 grep 确认无代码引用）。
@@ -51,7 +51,7 @@
 
 ### 1.2 执行步骤
 
-1. 写 `tools/dedupe_to_archive.py`（放在 `G:\musickit\remix\tools\`，随项目走）：
+1. 写 `tools/dedupe_to_archive.py`（放在 `G:\music\musickit\remix\tools\`，随项目走）：
    - `--dry-run` 默认开启：只打印计划移动清单 + 统计，不动文件
    - `--apply`：按计划执行 `shutil.move`，每步写 `dedupe_manifest.json`（`原路径 → 新路径 → 签名`）
    - 对 archived 自身的去重单独 `--target archived` 模式
@@ -84,7 +84,7 @@
 
 ### 2.2 入库流程
 
-1. **下载**：包下载到 `G:\musickit\archived\downloads\`（暂存，不入 synth）
+1. **下载**：包下载到 `G:\music\musickit\archived\downloads\`（暂存，不入 synth）
 2. **审计**（脚本 `tools/audit_pack.py`）：ffprobe 全量扫描 → 过滤（格式可解码 / 时长 0.3~8s / 非静音 / 采样率≥44.1k）→ 输出候选清单
 3. **归一化入库**（脚本 `tools/ingest_synth.py`）：
    - 统一转 44.1kHz / 立体声 / 16bit wav（用 remix 内置 ffmpeg）
@@ -191,7 +191,7 @@ Phase 4 治理收尾（依赖以上全部）
 
 ## 2026-08-17 修复（v3 · 深度评估整改，按 P0→P2 依次完成）
 
-> 依据：2026-08-17《深度评估报告》（G:\musickit\深度评估_20260817.md / 补丁包 FIX_LOG.md）。
+> 依据：2026-08-17《深度评估报告》（G:\music\musickit\深度评估_20260817.md / 补丁包 FIX_LOG.md）。
 > 交付方式：会话沙箱禁止原地改写，全部改动以「补丁包 + apply_patch.ps1 一键应用」落地；
 > 应用后本表状态全部转 ✅。镜像环境全量验证：remix pytest 108 passed、桥接器 12 passed、
 > smoke 档 16 用例、端到端混音（CLI 直驱 + 提示词桥接）实测通过。
@@ -221,7 +221,7 @@ Phase 4 治理收尾（依赖以上全部）
 |---|--------|---------|------|
 | P2 | choose_structure 规则外置 | `tools/music/structure_moods.json` + 桥接器读取 | 关键词表出代码，改词表零代码改动 |
 | P2 | 测试快速档 | `remix/pytest.ini`（smoke 标记）+ 3 个测试文件打标 | `pytest -m smoke` 16 用例，无 ffmpeg 依赖 |
-| 整合 | tools/music 并入 musickit | G:\\tools\\music → G:\\musickit\\music（用户建议：单一仓库消除跨项目风险）；桥接器/分类生成器的硬编码路径全部改为仓库相对；旧 git 历史备份至 archived/tools-music-git-backup | |
+| 整合 | tools/music 并入 musickit | G:\\tools\\music → G:\\music\\musickit\\music（用户建议：单一仓库消除跨项目风险）；桥接器/分类生成器的硬编码路径全部改为仓库相对；旧 git 历史备份至 archived/tools-music-git-backup | |
 | 查重 | 乐器池内容查重 | 新工具 emix/tools/dedupe_scan.py（manifest sha256 + 大小/首尾签名 + 组内全量哈希复核），产出 dedupe_report JSON；移动方案沿用 archived 只移不删政策（下轮执行） | |
 
 ### 遗留（下次迭代）

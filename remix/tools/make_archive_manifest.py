@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Generate archive manifest (JSON + Markdown) for G:\BaiduNetdiskDownload.
 
-Records what was ingested into G:\musickit pools and where every downloaded
+Records what was ingested into G:\music\musickit pools and where every downloaded
 item was archived, so future sessions can check before re-downloading.
 """
 import os
@@ -10,9 +10,9 @@ import datetime
 import collections
 
 BAIDU = r"G:\BaiduNetdiskDownload"
-YASUOBAO = r"G:\yasuobao"
+YASUOBAO = r"G:\music\yasuobao"
 ARCHIVED = r"G:\BaiduNetdiskDownload\archived"
-MUSICKIT = r"G:\musickit"
+MUSICKIT = r"G:\music\musickit"
 
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aiff", ".aif")
 

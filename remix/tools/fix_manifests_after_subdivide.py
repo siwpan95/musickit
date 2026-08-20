@@ -22,7 +22,7 @@ import json
 import argparse
 import importlib.util
 
-ROOT = r"G:\musickit"
+ROOT = r"G:\music\musickit"
 SUBDIVIDE_POOLS = ["bass", "drum", "guita", "synth", "acapella", "sfx"]
 AEXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aac")
 

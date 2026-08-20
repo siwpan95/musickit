@@ -2,7 +2,7 @@
 
 The sfx crawler (dl_keyword.py) saves per-keyword folders under sfx/sounds/.
 This script maps each folder name to a (pool, subcategory) and copies the audio
-files into G:\\musickit\\<pool>\\<subcategory>\\ (de-duping collisions), so the
+files into G:\\music\\musickit\\<pool>\\<subcategory>\\ (de-duping collisions), so the
 generic sync_manifests_to_disk.py can then manifest them.
 
 Routing is keyword-based: a folder name containing any KEYWORD map key is routed
@@ -11,7 +11,7 @@ to that key's (pool, sub). Unknown folders are reported and skipped.
 import os, shutil, sys
 
 CRAWL_ROOT = r"G:\tools\sfx\sounds"
-MUSICKIT = r"G:\musickit"
+MUSICKIT = r"G:\music\musickit"
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac")
 
 # instrument keyword -> (pool, subcategory)

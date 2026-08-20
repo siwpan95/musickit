@@ -7,9 +7,9 @@ r"""重算 manifest sha256 戳（只读源文件，--apply 时备份后改写 ma
 定位文件、全量哈希后重写 sha256 字段。
 
 用法：
-  python refresh_manifest_hashes.py --root G:\musickit            # dry-run（仅统计）
-  python refresh_manifest_hashes.py --root G:\musickit --apply    # 备份并重写
-  python refresh_manifest_hashes.py --root G:\musickit --all --apply  # 全库补写（约 33k 文件，耗时）
+  python refresh_manifest_hashes.py --root G:\music\musickit            # dry-run（仅统计）
+  python refresh_manifest_hashes.py --root G:\music\musickit --apply    # 备份并重写
+  python refresh_manifest_hashes.py --root G:\music\musickit --all --apply  # 全库补写（约 33k 文件，耗时）
 """
 import argparse
 import hashlib
@@ -32,7 +32,7 @@ def full_sha(path: str) -> str:
 
 def main():
     p = argparse.ArgumentParser(description="重算 manifest sha256 戳")
-    p.add_argument("--root", default=r"G:\musickit")
+    p.add_argument("--root", default=r"G:\music\musickit")
     p.add_argument("--apply", action="store_true", help="备份后原地改写 manifest")
     p.add_argument("--all", action="store_true",
                    help="为全部条目录入 sha256（默认仅修正已有记录者）")

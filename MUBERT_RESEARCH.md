@@ -1,4 +1,4 @@
-# Mubert 调研报告 —— 对 G:\musickit 的潜在帮助分析
+# Mubert 调研报告 —— 对 G:\music\musickit 的潜在帮助分析
 
 > 调研日期：2026-08-13（联网检索 mubert.com 官方站、API 文档、第三方评测 chatgate/ProductCool/Musicseed 等）
 > 目的：评估 Mubert（AI 生成音乐平台）能否帮助当前 phonk 混音项目

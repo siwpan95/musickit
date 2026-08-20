@@ -13,7 +13,7 @@ import os
 import sys
 import collections
 
-MUSICKIT = r"G:\musickit"
+MUSICKIT = r"G:\music\musickit"
 POOLS = ["bass", "drum", "guita", "cowbell", "synth", "acapella", "animal",
          "sfx", "keys", "strings", "brass", "woodwind", "ethnic"]
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aiff", ".aif")
@@ -44,7 +44,7 @@ def main():
         for p in to_delete[:8]:
             print("  would delete:", p.replace(MUSICKIT, ""))
     elif lst:
-        with open(r"G:\tools\kontakt_transcode\alldup_del.txt", "w", encoding="utf-8") as f:
+        with open(r"G:\notpython\kontakt_transcode\alldup_del.txt", "w", encoding="utf-8") as f:
             f.write("\n".join(to_delete))
         print("list written to G:\\tools\\kontakt_transcode\\alldup_del.txt")
 

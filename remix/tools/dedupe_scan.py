@@ -10,7 +10,7 @@ r"""乐器池内容查重扫描 v2（只读：不移动、不删除、不修改�
   4) 复核过程中顺带核对 manifest sha256 与文件实际内容是否一致（stale hash 报告）。
 
 用法：
-  python dedupe_scan.py --root G:\musickit --out G:\musickit\dedupe_report_20260818.json
+  python dedupe_scan.py --root G:\music\musickit --out G:\music\musickit\dedupe_report_20260818.json
 """
 import argparse
 import hashlib
@@ -82,7 +82,7 @@ def collect(root: str, pool: str) -> list:
 
 def main():
     p = argparse.ArgumentParser(description="乐器池内容查重 v2（纯内容判定，只读）")
-    p.add_argument("--root", default=r"G:\musickit")
+    p.add_argument("--root", default=r"G:\music\musickit")
     p.add_argument("--pools", default=None, help="逗号分隔池名（默认全部 13 池）")
     p.add_argument("--out", default=None, help="重复组明细 JSON 输出路径")
     args = p.parse_args()

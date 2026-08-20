@@ -11,8 +11,8 @@ r"""P1-5：把 animal 池中误入的真人声包移回 acapella 池（vocal_cho
   - Stivenz Beats Vocal Chops
 
 用法：
-  python move_animal_vocal_packs.py --root G:\musickit            # dry-run
-  python move_animal_vocal_packs.py --root G:\musickit --apply    # 执行移动 + 双 manifest 更新
+  python move_animal_vocal_packs.py --root G:\music\musickit            # dry-run
+  python move_animal_vocal_packs.py --root G:\music\musickit --apply    # 执行移动 + 双 manifest 更新
 """
 import argparse
 import json
@@ -54,7 +54,7 @@ def plan_moves(root: str) -> list[dict]:
 
 def main():
     p = argparse.ArgumentParser(description="animal 池人声包迁回 acapella")
-    p.add_argument("--root", default=r"G:\musickit", help="musickit 根目录")
+    p.add_argument("--root", default=r"G:\music\musickit", help="musickit 根目录")
     p.add_argument("--apply", action="store_true", help="执行移动与 manifest 更新")
     args = p.parse_args()
 

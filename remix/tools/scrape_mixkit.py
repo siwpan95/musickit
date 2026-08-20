@@ -14,7 +14,7 @@ import time
 import urllib.request
 import urllib.parse
 
-DOWNLOADS = r"G:\musickit\archived\downloads"
+DOWNLOADS = r"G:\music\musickit\archived\downloads"
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 
 # 类别 → 去向子目录（vocal 层 / sfx 层）

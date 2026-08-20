@@ -17,8 +17,8 @@ tier 语义（引擎 --release-safe 只放行 free/pack）：
   6) 其余 → unknown
 
 用法：
-  python tag_license_tiers.py --root G:\musickit            # dry-run：只打印计划分布
-  python tag_license_tiers.py --root G:\musickit --apply    # 备份并原地改写 manifest
+  python tag_license_tiers.py --root G:\music\musickit            # dry-run：只打印计划分布
+  python tag_license_tiers.py --root G:\music\musickit --apply    # 备份并原地改写 manifest
 """
 import argparse
 import json
@@ -117,7 +117,7 @@ def process_pool(root: str, pool: str, apply: bool) -> Counter:
 
 def main():
     p = argparse.ArgumentParser(description="license_tier 标注与 license 补全")
-    p.add_argument("--root", default=r"G:\musickit", help="musickit 根目录")
+    p.add_argument("--root", default=r"G:\music\musickit", help="musickit 根目录")
     p.add_argument("--apply", action="store_true",
                    help="备份（archived/manifest_backup_20260817/）并原地改写 manifest")
     args = p.parse_args()

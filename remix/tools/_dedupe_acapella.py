@@ -13,7 +13,7 @@ import os
 import sys
 import collections
 
-POOL = r"G:\musickit\acapella"
+POOL = r"G:\music\musickit\acapella"
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aiff", ".aif")
 
 # keep-priority: a path is "preferred" if it is NOT under acapella\<acapella>

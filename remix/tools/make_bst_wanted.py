@@ -9,14 +9,14 @@ Rules (all must match):
      (filenames embed ranges like 64-127; identical prefixes differing only in
      the range -> keep one, prefer the louder/higher one)
 
-Output: G:/tools/kontakt_transcode/bst_wanted.txt (7z @listfile format)
+Output: G:/notpython/kontakt_transcode/bst_wanted.txt (7z @listfile format)
 """
 import collections
 import os
 import re
 
-LISTING = r"G:/tools/kontakt_transcode/bst_listing.txt"
-OUT = r"G:/tools/kontakt_transcode/bst_wanted.txt"
+LISTING = r"G:/notpython/kontakt_transcode/bst_listing.txt"
+OUT = r"G:/notpython/kontakt_transcode/bst_wanted.txt"
 
 # articulation-dir blacklist: legato-family / transitions / releases / loops
 BAD_ART = ("legato", "portamento", "release", "releases", "looped", "loop",

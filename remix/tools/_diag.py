@@ -1,5 +1,5 @@
 import os, json
-ROOT = r"G:\musickit"
+ROOT = r"G:\music\musickit"
 POOLS = ["bass", "drum", "guita", "synth", "acapella", "sfx"]
 AEXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aac")
 for p in POOLS:
@@ -35,5 +35,5 @@ for p in POOLS:
     if dup:
         print(f"  >>> DUPLICATES(root+sub) count={len(dup)} e.g. {dup[:3]}")
 print("\n--- drum (150).wav specific ---")
-for loc in [r"G:\musickit\drum\drum (150).wav", r"G:\musickit\drum\drum_misc\drum (150).wav"]:
+for loc in [r"G:\music\musickit\drum\drum (150).wav", r"G:\music\musickit\drum\drum_misc\drum (150).wav"]:
     print(f"  {'EXISTS' if os.path.exists(loc) else 'absent '}: {loc}")

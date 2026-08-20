@@ -9,7 +9,7 @@ matching by RELATIVE PATH so acapella's nested-path entries aren't double-counte
 Append-only: existing entries (with metadata) are preserved; only missing files added.
 """
 import os, json
-ROOT = r"G:\musickit"
+ROOT = r"G:\music\musickit"
 A = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aac", ".aiff", ".aif")
 POOLS = ["bass", "drum", "guita", "synth", "acapella", "sfx", "keys"]
 

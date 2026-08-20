@@ -177,8 +177,8 @@ python demo_validator.py
 
 ## 提示词驱动混音（连接 musickit）
 
-本工具生成的风格提示词，可直接作为 **G:\musickit\remix** 混音引擎的「混音驱动」：
-提示词里的 `instruments / bpm / moods` 经 `G:\musickit\instrument_taxonomy.json` 规范分类体系
+本工具生成的风格提示词，可直接作为 **G:\music\musickit\remix** 混音引擎的「混音驱动」：
+提示词里的 `instruments / bpm / moods` 经 `G:\music\musickit\instrument_taxonomy.json` 规范分类体系
 （242 乐器词 → 37 类目）映射成混音引擎的素材选择、速度与曲式模板；
 真人 acapella 池（Coollider Acapellas）按 `vocal` 角色接入，自动在合适小节进入。
 动物叫声独立为 **animal 池**，不再冒充人声；musickit 无样本的乐器（钢琴/弦乐/铜管/民族…）
@@ -191,7 +191,7 @@ python demo_validator.py
 python prompt_driven_remix.py -c phonk
 
 # 批量 3 条不同风格，各驱动一段混音
-python prompt_driven_remix.py -n 3 --out G:/musickit/music/prompt_mixes
+python prompt_driven_remix.py -n 3 --out G:/music/musickit/music/prompt_mixes
 
 # 先导出提示词 JSON，再喂给桥接器（两工具解耦协作）
 python music_prompt_generator.py -n 5 --export json -o prompts.json
@@ -212,14 +212,14 @@ python prompt_driven_remix.py -c phonk --release-safe
   避免单音采样被当 loop 循环产生随机音高；
 - 曲式模板选择规则外置在 `structure_moods.json`（同目录），改词表无需改代码。
 
-> 本项目已整合进 `G:\\musickit\\music`（单一仓库，消除跨项目路径风险）。\n> 运行桥接器需 `F:\Python314`（pydub + numpy + audioop-lts），与 musickit 混音引擎一致。
+> 本项目已整合进 `G:\\music\\musickit\\music`（单一仓库，消除跨项目路径风险）。\n> 运行桥接器需 `F:\Python314`（pydub + numpy + audioop-lts），与 musickit 混音引擎一致。
 > 映射规则（乐器词→素材池、BPM 钳制、情绪→曲式模板）详见 `prompt_driven_remix.py` 顶部注释。
 
 ---
 
 ## 混音师风格着色（固定风格 × 随机风格整合）
 
-G:\musickit\burbidge_album 的「固定风格」专辑管线（同一组 stems × 10 位混音师签名链）
+G:\music\musickit\burbidge_album 的「固定风格」专辑管线（同一组 stems × 10 位混音师签名链）
 已抽为共享模块 **burbidge_album/mixer_styles.py**。随机风格管线（本工具 + remix 引擎）
 可把这 10 位混音师的「调音台签名」挂到任意一条随机混音上：
 

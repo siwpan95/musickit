@@ -28,7 +28,7 @@ RULES = [
     ("ethnic", "ethnic_world", re.compile(r"singing bowl|\btabla\b|\bdjembe\b|\bgong\b|\bkoto\b|\bsitar\b|\berhu\b|\bguzheng\b|china drum|\btaiko\b|shakuhachi|didgeridoo|\bkalimba\b|pan flute|\braga\b|santoor|balalaika|\boud\b|bouzouki|charango")),
 ]
 
-MUSICKIT = r"G:\musickit"
+MUSICKIT = r"G:\music\musickit"
 
 
 def classify(norm):

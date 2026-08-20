@@ -9,7 +9,7 @@ Affected pools: keys, strings (new), woodwind, ethnic.
 """
 import json, os
 
-MUSICKIT = r"G:\musickit"
+MUSICKIT = r"G:\music\musickit"
 POOLS = ["keys", "strings", "woodwind", "ethnic"]
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac")
 

@@ -14,7 +14,7 @@ import argparse
 import os
 import json
 
-ROOT = r"G:\musickit"
+ROOT = r"G:\music\musickit"
 POOLS = ["bass", "drum", "guita", "synth", "acapella", "sfx"]
 AUDIO_EXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aac")
 

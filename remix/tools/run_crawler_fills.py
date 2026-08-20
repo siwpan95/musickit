@@ -14,7 +14,7 @@ SFX = r"G:\tools\sfx"
 # venv pip-seeding was broken in this sandbox; use the managed base python
 # (an isolated runtime) which now has playwright + chromium installed.
 VENV_PY = r"C:\Users\13122\.workbuddy\binaries\python\versions\3.13.12\python.exe"
-MUSICKIT = r"G:\musickit"
+MUSICKIT = r"G:\music\musickit"
 
 # (keyword, count) — the taxonomy gaps not covered by on-disk harvest
 DEFAULT_TARGETS = [
@@ -57,11 +57,11 @@ def main():
             print(f"ERR {kw}: {e}")
 
     print("\n===== ingest crawler output into musickit =====")
-    subprocess.run([VENV_PY, os.path.join(r"G:\musickit\remix\tools", "ingest_crawler_output.py")],
-                   cwd=r"G:\musickit\remix\tools")
+    subprocess.run([VENV_PY, os.path.join(r"G:\music\musickit\remix\tools", "ingest_crawler_output.py")],
+                   cwd=r"G:\music\musickit\remix\tools")
     print("\n===== sync manifests to disk =====")
-    subprocess.run([VENV_PY, os.path.join(r"G:\musickit\remix\tools", "sync_manifests_to_disk.py")],
-                   cwd=r"G:\musickit\remix\tools")
+    subprocess.run([VENV_PY, os.path.join(r"G:\music\musickit\remix\tools", "sync_manifests_to_disk.py")],
+                   cwd=r"G:\music\musickit\remix\tools")
     print("\nALL DONE. Next: rebuild manifest_index.py (run build_manifest_index.py).")
 
 

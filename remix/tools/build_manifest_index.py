@@ -7,7 +7,7 @@
    逐曲扫描每首歌曲目录，记录 4 种 stem（bass/drums/other/vocals）的
    存在性、尺寸与签名，并标注「进行中」状态（含 htdemucs 临时目录或
    stem 不足 4 个的目录）。仅索引，不合并、不改动物料。
-4. 输出 G:\\musickit\\manifest_index.json
+4. 输出 G:\\music\\musickit\\manifest_index.json
 用法: python build_manifest_index.py
 """
 import hashlib
@@ -16,9 +16,9 @@ import os
 import struct
 from datetime import datetime
 
-ROOT = r"G:\musickit"
-STEMS = r"G:\radio_music_stems"
-CS_STEMS = r"G:\csmusic_stems"
+ROOT = r"G:\music\musickit"
+STEMS = r"G:\music\radio_music_stems"
+CS_STEMS = r"G:\music\csmusic_stems"
 CATEGORIES = [
     "bass", "drum", "guita", "cowbell", "synth", "animal", "sfx", "acapella",
     # 新增：37 类目补齐

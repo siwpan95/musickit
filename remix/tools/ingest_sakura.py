@@ -16,7 +16,7 @@ import shutil
 import argparse
 
 SRC = r"G:\BaiduNetdiskDownload\1\Sakura\Singomakers Sakura House"
-ROOT = r"G:\musickit"
+ROOT = r"G:\music\musickit"
 AUDIO_EXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aac")
 SRC_PACK = "Singomakers Sakura House"
 

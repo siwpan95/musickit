@@ -2,7 +2,7 @@
 把 candidates.json 中的候选采样转成 44.1kHz / 立体声 / 16bit wav：
   - 首尾静音修剪（-45dB 阈值，留 50ms padding）
   - 峰值归一化到 -3 dBFS
-  - 按 synth (N).wav 从 51 起续号写入 G:\\musickit\\synth\\
+  - 按 synth (N).wav 从 51 起续号写入 G:\\music\\musickit\\synth\\
   - 内容哈希去重（同内容不重复入库）
   - 写入 synth/manifest.json（编号 → 来源包 → 原文件名 → 授权 → 时长）
 用法: python ingest_synth.py [--limit N] [--dry-run]
@@ -16,13 +16,13 @@ import sys
 from datetime import datetime
 
 # pydub 需要 ffmpeg 在 PATH
-_BIN = r"G:\musickit\remix\bin"
+_BIN = r"G:\music\musickit\remix\bin"
 os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
 from pydub import AudioSegment  # noqa: E402
 from pydub.silence import detect_leading_silence  # noqa: E402
 
-SYNTH_DIR = r"G:\musickit\synth"
-DOWNLOADS = r"G:\musickit\archived\downloads"
+SYNTH_DIR = r"G:\music\musickit\synth"
+DOWNLOADS = r"G:\music\musickit\archived\downloads"
 MANIFEST_PATH = os.path.join(SYNTH_DIR, "manifest.json")
 START_NUM = 51          # 从 51 起续号（1~50 为旧占位，将被移入 archived）
 MAX_FILES = 200         # 入库上限

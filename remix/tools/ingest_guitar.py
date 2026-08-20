@@ -1,8 +1,8 @@
 """Phase 4.5：真吉他采样入库（补 guita 层的真实吉他音轨）。
 
 从 candidates.json 中筛出吉他相关文件（guitar/gtr/riff/chug/wah/fuzz，
-排除 bass），归一化后以 guita (N).wav 从现有最大编号+1 续写入 G:\\musickit\\guita\\，
-manifest 写入/合并 G:\\musickit\\guita\\manifest.json。
+排除 bass），归一化后以 guita (N).wav 从现有最大编号+1 续写入 G:\\music\\musickit\\guita\\，
+manifest 写入/合并 G:\\music\\musickit\\guita\\manifest.json。
 用法: python ingest_guitar.py [--limit N] [--dry-run]
 """
 import argparse
@@ -13,13 +13,13 @@ import re
 import sys
 from datetime import datetime
 
-_BIN = r"G:\musickit\remix\bin"
+_BIN = r"G:\music\musickit\remix\bin"
 os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
 from pydub import AudioSegment  # noqa: E402
 from pydub.silence import detect_leading_silence  # noqa: E402
 
-GUITA_DIR = r"G:\musickit\guita"
-DOWNLOADS = r"G:\musickit\archived\downloads"
+GUITA_DIR = r"G:\music\musickit\guita"
+DOWNLOADS = r"G:\music\musickit\archived\downloads"
 MANIFEST_PATH = os.path.join(GUITA_DIR, "manifest.json")
 GTR_PAT = re.compile(r"(guitar|gtr|riff|chug|wah|fuzz|guit)", re.I)
 BASS_PAT = re.compile(r"bass", re.I)

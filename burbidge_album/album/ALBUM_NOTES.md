@@ -2,7 +2,7 @@
 
 **Compiled & mixed with musickit stems**  
 
-Six instrumental R&B/soul tracks assembled from the G:\musickit sample library. **The same six tracks, the same stems, the same arrangement** are mixed through 24 different mixing engineers' signature chains — from Craig Burbidge's vocal-forward warmth to Al Schmitt's natural transparency and Mike Dean's saturated psychedelia — so the styles can be A/B-compared directly. Each chain is a parameterization of the zero-dependency DSP toolkit in dsp.py (biquad EQ, feed-forward compression, tanh saturation, convolution plate/room reverb, M/S width, brickwall limiting).
+Six instrumental R&B/soul tracks assembled from the G:\music\musickit sample library. **The same six tracks, the same stems, the same arrangement** are mixed through 24 different mixing engineers' signature chains — from Craig Burbidge's vocal-forward warmth to Al Schmitt's natural transparency and Mike Dean's saturated psychedelia — so the styles can be A/B-compared directly. Each chain is a parameterization of the zero-dependency DSP toolkit in dsp.py (biquad EQ, feed-forward compression, tanh saturation, convolution plate/room reverb, M/S width, brickwall limiting).
 
 
 ## The 24 mixers at a glance

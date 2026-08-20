@@ -12,15 +12,15 @@ import re
 import sys
 from datetime import datetime
 
-_BIN = r"G:\musickit\remix\bin"
+_BIN = r"G:\music\musickit\remix\bin"
 os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
 from pydub import AudioSegment  # noqa: E402
 from pydub.silence import detect_leading_silence  # noqa: E402
 
-DOWNLOADS = r"G:\musickit\archived\downloads"
+DOWNLOADS = r"G:\music\musickit\archived\downloads"
 TARGETS = {
-    "mixkit_animals": {"dir": r"G:\musickit\animal", "prefix": "animal"},
-    "mixkit_sfx": {"dir": r"G:\musickit\sfx", "prefix": "sfx"},
+    "mixkit_animals": {"dir": r"G:\music\musickit\animal", "prefix": "animal"},
+    "mixkit_sfx": {"dir": r"G:\music\musickit\sfx", "prefix": "sfx"},
 }
 LICENSE = "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)"
 SILENCE_THRESH = -45.0

@@ -11,7 +11,7 @@ import json, os
 
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aiff", ".aif")
 POOL = "acapella"
-pdir = f"G:/musickit/{POOL}"
+pdir = f"G:/music/musickit/{POOL}"
 mp = os.path.join(pdir, "manifest.json")
 data = json.load(open(mp, encoding="utf-8"))
 entries = data.get("entries", [])

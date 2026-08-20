@@ -14,8 +14,8 @@ import subprocess
 import sys
 from datetime import datetime
 
-DOWNLOADS = r"G:\musickit\archived\downloads"
-FFPROBE = r"G:\musickit\remix\bin\ffprobe.exe"
+DOWNLOADS = r"G:\music\musickit\archived\downloads"
+FFPROBE = r"G:\music\musickit\remix\bin\ffprobe.exe"
 AUDIO_EXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aiff", ".aif")
 INCLUDE = re.compile(r"(synth|syn\b|lead|key|chord|pad|stab|bass|organ|piano|pluck|arp|melody|wave|glass|operator|guitar|gtr|riff|chug|wah|fuzz)", re.I)
 EXCLUDE = re.compile(r"(beat|drum|kick|snare|hat|tom|cym|perc|fx|sfx|vocal|voice|shaker|clap|fill|riser|impact|noise|foley)", re.I)

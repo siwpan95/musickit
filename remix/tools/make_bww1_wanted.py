@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """Build per-container selective-unpack lists for Berlin Woodwinds nkx monoliths.
 
-Input : G:/tools/kontakt_transcode/bww1_lists/<container>.txt  (NkxTool list output)
-Output: G:/tools/kontakt_transcode/bww1_wanted/<container>.txt  (@filelist for NkxTool unpack)
+Input : G:/notpython/kontakt_transcode/bww1_lists/<container>.txt  (NkxTool list output)
+Output: G:/notpython/kontakt_transcode/bww1_wanted/<container>.txt  (@filelist for NkxTool unpack)
 
 Rules:  " - AB.ncw" mic only; articulation dir not legato/runs/transition;
         round robin rep1 only (or no rep marker).
@@ -12,8 +12,8 @@ import glob
 import os
 import re
 
-SRC = r"G:/tools/kontakt_transcode/bww1_lists"
-DST = r"G:/tools/kontakt_transcode/bww1_wanted"
+SRC = r"G:/notpython/kontakt_transcode/bww1_lists"
+DST = r"G:/notpython/kontakt_transcode/bww1_wanted"
 
 BAD_ART = ("legato", "runs", "transition", "release", "looped", "loop", "portamento")
 KEEP_HINTS = ("stacc", "marcato", "trill", "sus", "repetition", "pizzicato",

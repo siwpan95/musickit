@@ -2,7 +2,7 @@
 
 判定：内容签名相同（文件大小 + 首尾各 64KB 的 SHA-256）。
 保留：每个签名组中编号最小的文件（如 "cowbell (1).mp3" 组内保留，"(109)/(115)/(7)" 移走）。
-目标：G:\\musickit\\archived\\dedupe_<来源目录>\\  —— 只 move 不 delete，全程写 manifest。
+目标：G:\\music\\musickit\\archived\\dedupe_<来源目录>\\  —— 只 move 不 delete，全程写 manifest。
 
 用法：
     python dedupe_to_archive.py            # dry-run（默认），只打印计划
@@ -18,7 +18,7 @@ import struct
 import sys
 from datetime import datetime
 
-ROOT = r"G:\musickit"
+ROOT = r"G:\music\musickit"
 ARCHIVE = os.path.join(ROOT, "archived")
 SOURCES = {
     "cowbell": "dedupe_cowbell",

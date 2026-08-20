@@ -1,4 +1,4 @@
-"""Coollider Acapellas Vols.1-42 入库 → G:\\musickit\\acapella\\
+"""Coollider Acapellas Vols.1-42 入库 → G:\\music\\musickit\\acapella\\
 
 把已解压的 42 卷真人 acapella 按原始卷结构原样拷入新建的 acapella 池，
 不做重编码（保持人声保真）。逐文件：
@@ -19,8 +19,8 @@ import sys
 from datetime import datetime
 
 SRC_ROOT = r"G:\BaiduNetdiskDownload\Coollider Acapellas Vols.1-42\Acapellas\Coollider Acapellas Vols.1-42"
-DEST = r"G:\musickit\acapella"
-FFPROBE = r"G:\musickit\remix\bin\ffprobe.exe"
+DEST = r"G:\music\musickit\acapella"
+FFPROBE = r"G:\music\musickit\remix\bin\ffprobe.exe"
 MANIFEST = os.path.join(DEST, "manifest.json")
 SOURCE_PACK = "coollider_acapellas"
 LICENSE = ("Coollider Acapellas Vols.1-42 (commercial sample pack; license unknown — "

@@ -1,4 +1,4 @@
-# G:\musickit 项目评估报告
+# G:\music\musickit 项目评估报告
 
 > 评估日期：2026-08-13
 > 评估方式：本地实测（ffprobe 参数探测 / SHA-256 哈希判重 / Goertzel 频谱分析 / 源码审查 / pytest 实跑）
@@ -8,7 +8,7 @@
 
 ## 一、项目定位与血缘
 
-`G:\musickit` 是一个 **phonk 风格随机混音项目**，由两部分组成：
+`G:\music\musickit` 是一个 **phonk 风格随机混音项目**，由两部分组成：
 
 | 部分 | 内容 | 来源 |
 |------|------|------|
@@ -34,7 +34,7 @@
 
 ### 2.1 bass / drum / guita —— 真实，但"粒度"用错了
 
-**实锤证据**：抽 30 个文件与 `G:\radio_music_stems` 做哈希比对，**100% 命中**——
+**实锤证据**：抽 30 个文件与 `G:\music\radio_music_stems` 做哈希比对，**100% 命中**——
 
 - `bass (10).wav` = `Chinese Football - 电动少女\bass.wav`
 - `drum (100).wav` = `Billie Eilish - bury a friend\drums.wav`
@@ -104,7 +104,7 @@
 ### P0-1 用真实采样替换 synth（本期主题 · 用户裁定：下载免费采样包）
 
 1. **主路线（用户指定）：下载免费采样包**——Cymatics 免费包 / Splice 免费下载 / freesound.org（CC0 最稳）等，下载前逐包核查授权条款；候选清单与入库流程见《修复计划》Phase 2。
-2. **备选补充：从 `G:\radio_music_stems` 的 other 轨切 loop**——零新增版权、贴合 phonk 采样美学，作为免费包数量不足时的补充。
+2. **备选补充：从 `G:\music\radio_music_stems` 的 other 轨切 loop**——零新增版权、贴合 phonk 采样美学，作为免费包数量不足时的补充。
 3. **不推荐**：继续用振荡器合成音色冒充"采样"（用户已明确要真实采样）；bloodmusic 自带的 18 站音效爬虫在自家评估报告中被标注为合规隐患，勿直接沿用。
 
 ### P0-2 `archived`（原 `.pass`）= 项目垃圾桶/归档区（用户裁定，已改名）

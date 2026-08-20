@@ -1,6 +1,6 @@
 # musickit 双管线整合 — 固定风格 × 随机风格
 
-G:\musickit 下有两套互补的音乐制作管线，现已通过共享模块
+G:\music\musickit 下有两套互补的音乐制作管线，现已通过共享模块
 **burbidge_album/mixer_styles.py** 打通：随机风格决定「玩什么」，固定风格决定「谁来混」。
 
 ## 两条管线

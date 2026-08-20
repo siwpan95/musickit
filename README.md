@@ -1,4 +1,4 @@
-# G:\musickit — phonk 混音项目（真实采样 + 本地混音引擎）
+# G:\music\musickit — phonk 混音项目（真实采样 + 本地混音引擎）
 
 ## 目录结构
 
@@ -71,9 +71,9 @@ usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm
 测试：`python -m pytest tests -q`（**112 passed, 1 skipped**）；快速档 `python -m pytest tests -q -m smoke`
 （16 个纯逻辑用例）。Python 3.13+ 需 `audioop-lts`；混音师风格链需 `scipy` + `soundfile`（均已在 requirements.txt）。
 
-## 提示词驱动混音（来自 G:\musickit\music，同仓整合）
+## 提示词驱动混音（来自 G:\music\musickit\music，同仓整合）
 
-`G:\musickit\music\prompt_driven_remix.py` 把风格提示词经
+`G:\music\musickit\music\prompt_driven_remix.py` 把风格提示词经
 `instrument_taxonomy.json`（242 词 → 37 类目）映射为本引擎调用：
 
 - 乐器词 → 池 + 角色：鼓/贝斯角色与引擎同口径**保底 ≥1 小节 loop**；
@@ -105,8 +105,8 @@ mixer_styles.py 参数化（逐总线 EQ/压缩/饱和/混响/宽度 + 风格母
 
 | 源 | 内容 | tier |
 |----|------|------|
-| `G:\radio_music_stems` | 商业歌曲 Demucs 分离 stem（bass/drum/guita 编号 1~258） | restricted |
-| `G:\csmusic_stems` | CS 游戏音乐粉丝提取 stem（编号 >=726，自动化并入） | restricted |
+| `G:\music\radio_music_stems` | 商业歌曲 Demucs 分离 stem（bass/drum/guita 编号 1~258） | restricted |
+| `G:\music\csmusic_stems` | CS 游戏音乐粉丝提取 stem（编号 >=726，自动化并入） | restricted |
 | `G:\BaiduNetdiskDownload` | 商业采样包（Black Octopus/XAM/Singomakers/Loopmasters 等） | pack |
 | Mixkit / MusicRadar SampleRadar | 免费可商用素材 | free |
 

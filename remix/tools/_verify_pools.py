@@ -1,5 +1,5 @@
 import os, json, collections
-BASE = r"G:\musickit"
+BASE = r"G:\music\musickit"
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aiff", ".aif")
 AEXT_NODOT = tuple(e[1:] for e in AEXT)
 POOLS = ["bass", "drum", "guita", "cowbell", "synth", "acapella", "animal", "sfx",

@@ -1,9 +1,9 @@
 """Phase 2 扩展：把 downloads 里剩余音频按类别全部入库。
 
 分类路由（按文件名/路径关键词，注意先用鼓类匹配，避免 "bassdrum" 误入 bass）：
-  drum/beat → G:\\musickit\\drum\\     （编号从现有最大+1 续）
-  bass      → G:\\musickit\\bass\\     （同上）
-  synth/keys/其他 → G:\\musickit\\synth\\（同上，含 fx/未匹配，作纹理层）
+  drum/beat → G:\\music\\musickit\\drum\\     （编号从现有最大+1 续）
+  bass      → G:\\music\\musickit\\bass\\     （同上）
+  synth/keys/其他 → G:\\music\\musickit\\synth\\（同上，含 fx/未匹配，作纹理层）
 
 处理：44.1kHz 立体声 16bit、首尾静音修剪、峰值归一 -3dBFS、sha256 去重、
       时长过滤（bass/synth 0.3~8s，drum 0.3~16s，容纳 4 小节慢速 loop）。
@@ -19,31 +19,31 @@ import re
 import sys
 from datetime import datetime
 
-_BIN = r"G:\musickit\remix\bin"
+_BIN = r"G:\music\musickit\remix\bin"
 os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
 from pydub import AudioSegment  # noqa: E402
 from pydub.silence import detect_leading_silence  # noqa: E402
 
-DOWNLOADS = r"G:\musickit\archived\downloads"
+DOWNLOADS = r"G:\music\musickit\archived\downloads"
 AUDIO_EXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aiff")
 SILENCE_THRESH = -45.0
 TARGET_PEAK = -3.0
 
 CATS = {
     "drum": {
-        "dir": r"G:\musickit\drum",
+        "dir": r"G:\music\musickit\drum",
         "pat": re.compile(r"(beat|drum|kick|snare|hat|tom|cym|perc|clap|shaker)", re.I),
         "max_ms": 16000,
         "min_ms": 100,   # 鼓 one-shot（kick/hat）常短于 300ms
     },
     "bass": {
-        "dir": r"G:\musickit\bass",
+        "dir": r"G:\music\musickit\bass",
         "pat": re.compile(r"(bass|808)", re.I),
         "max_ms": 12000,  # 4 小节慢速 bass loop
         "min_ms": 300,
     },
     "synth": {
-        "dir": r"G:\musickit\synth",
+        "dir": r"G:\music\musickit\synth",
         "pat": re.compile(r"__never__"),
         "max_ms": 8000,
         "min_ms": 300,

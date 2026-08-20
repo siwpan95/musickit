@@ -10,7 +10,7 @@ per-pool manifests stay consistent with disk before rebuilding manifest_index.
 """
 import json, os
 
-MUSICKIT = r"G:\musickit"
+MUSICKIT = r"G:\music\musickit"
 POOLS = ["bass", "drum", "guita", "cowbell", "synth", "acapella",
          "animal", "sfx", "keys", "strings", "brass", "woodwind", "ethnic"]
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aiff", ".aif")
