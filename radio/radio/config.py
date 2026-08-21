@@ -7,6 +7,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 媒体目录：把本地歌曲丢进这里
 MUSIC_DIR = os.path.join(BASE_DIR, "music")
 
+# ---------- 公网穿透 ----------
+# ngrok 静态域名：免费版可在 dashboard（https://dashboard.ngrok.com/domains）
+# 领取 1 个固定域名（形如 xxx.ngrok-free.app）。设置后 --expose ngrok 固定使用该域名，
+# 公网地址不再每次随机；留空 = 每次启动随机域名。
+NGROK_STATIC_DOMAIN = ""
+
 # 流媒体服务监听
 HOST = "0.0.0.0"          # 0.0.0.0 = 监听所有网卡，局域网 / 公网均可访问
 HTTP_PORT = 8000          # 控制面板 + 收听端口

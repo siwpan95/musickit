@@ -71,6 +71,8 @@ python G:\music\musickit\radio\run.py --expose lhr   # 同上但用 localhost.ru
 > 先在 github.com 免费注册，再到 ngrok 登录页点 "Continue with GitHub"，登录后到
 > dashboard.ngrok.com/get-started/your-authtoken 复制令牌，执行
 > `ngrok config add-authtoken <令牌>`）。
+> ngrok 免费版注意：浏览器首次访问会显示 ngrok 中转确认页（点 Visit Site 即可，播放器/curl 不受影响）；
+> 可在 dashboard 免费领取 1 个静态域名，填入 `radio/config.py` 的 `NGROK_STATIC_DOMAIN`，公网地址即固定不变。
 > `--expose lhr` 走 localhost.run 免账号 SSH 隧道（Windows 自带 OpenSSH），注意部分网络（含国内运营商）
 > 到其 AWS 边缘的数据面不通，只作备用。
 > Ctrl+C 停止时自动清理穿透子进程。高级用法（named tunnel 自定义域名 / 多隧道 failover）仍用 `bash expose.sh`。

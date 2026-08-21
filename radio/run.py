@@ -276,8 +276,12 @@ def start_tunnel(port, mode="quick"):
         log_file = os.path.join(_PROJECT_DIR, "ngrok.log")
 
         def _spawn_ngrok():
+            cmd = [bin_, "http", str(port), "--log=stdout"]
+            domain = getattr(config, "NGROK_STATIC_DOMAIN", "").strip()
+            if domain:
+                cmd += ["--domain", domain]
             return subprocess.Popen(
-                [bin_, "http", str(port), "--log=stdout"],
+                cmd,
                 stdout=open(log_file, "w"), stderr=subprocess.STDOUT,
             )
 
