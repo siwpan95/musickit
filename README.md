@@ -45,12 +45,12 @@ musickit/
 ## 混音（remix）
 
 ```bash
-cd remix
-python main.py --remix                                          # 默认 3 轨骨架、32 小节、BPM 随机
-python main.py --remix --count 5 --bars 64 --bpm 140 --format wav
-python main.py --remix --structure classic_drop --seed 42 --out output
-python main.py --remix --release-safe                           # 发布安全模式（仅 free/pack 素材）
-python main.py --remix --mixer-style wallace                    # 混音师风格着色（24 位，见下）
+（cd remix）
+python G:\music\musickit\remix\main.py --remix                                          # 默认 3 轨骨架、32 小节、BPM 随机
+python G:\music\musickit\remix\main.py --remix --count 5 --bars 64 --bpm 140 --format wav
+python G:\music\musickit\remix\main.py --remix --structure classic_drop --seed 42 --out output
+python G:\music\musickit\remix\main.py --remix --release-safe                           # 发布安全模式（仅 free/pack 素材）
+python G:\music\musickit\remix\main.py --remix --mixer-style wallace                    # 混音师风格着色（24 位，见下）
 
 usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm BPM]
                [--structure STRUCTURE] [--out OUT] [--format {wav,mp3,ogg,flac}]

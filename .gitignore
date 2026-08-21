@@ -41,3 +41,12 @@ remix/.pytest_cache/
 # Python
 __pycache__/
 *.pyc
+
+# burbidge_album 生成输出（24 混音师专辑成品 / 拉伸缓存 / 测试片段）
+burbidge_album/album/
+burbidge_album/_stretch_cache/
+burbidge_album/test_clip.wav
+
+# remix 根目录的外部参考音频（外部歌曲，不入库）
+remix/*.flac
+remix/*.mp3
