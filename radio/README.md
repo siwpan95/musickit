@@ -53,7 +53,8 @@ pip install -r requirements.txt
 # 3. 启动（项目已并入 G:\music\musickit，电台位于 radio/ 子目录）
 python G:\music\musickit\radio\run.py                # 只起本地服务
 python G:\music\musickit\radio\run.py --expose       # 起服务 + 自动 cloudflared 公网穿透（trycloudflare 临时域名）
-python G:\music\musickit\radio\run.py --expose ngrok # 同上但用 ngrok（failover 备选）
+python G:\music\musickit\radio\run.py --expose ngrok # 同上但用 ngrok（需先配置 authtoken）
+python G:\music\musickit\radio\run.py --expose lhr   # 同上但用 localhost.run（免账号 SSH 隧道，部分网络不可用）
 ```
 
 打开浏览器：
@@ -66,6 +67,12 @@ python G:\music\musickit\radio\run.py --expose ngrok # 同上但用 ngrok（fail
 > 穿透带守护：持续解析地址（不再 30 秒放弃）、验证可用后才标注 ✓、隧道进程意外退出自动重新拉起并重新获取地址；
 > 若本机运营商 DNS 解析不了 trycloudflare 随机域名（常见污染/负缓存），会自动换域名重试并在后台补验，
 > 提示可 `ipconfig /flushdns` 或换公共 DNS（1.1.1.1 / 223.5.5.5）。
+> `--expose ngrok` 需先配置 authtoken（注册若被谷歌 reCAPTCHA 拦下，可用 **GitHub 账号登录 ngrok** 绕过：
+> 先在 github.com 免费注册，再到 ngrok 登录页点 "Continue with GitHub"，登录后到
+> dashboard.ngrok.com/get-started/your-authtoken 复制令牌，执行
+> `ngrok config add-authtoken <令牌>`）。
+> `--expose lhr` 走 localhost.run 免账号 SSH 隧道（Windows 自带 OpenSSH），注意部分网络（含国内运营商）
+> 到其 AWS 边缘的数据面不通，只作备用。
 > Ctrl+C 停止时自动清理穿透子进程。高级用法（named tunnel 自定义域名 / 多隧道 failover）仍用 `bash expose.sh`。
 > 没装 `waitress` 也能跑，会退回 Flask 开发服务器；多听众并发建议装上。
 

@@ -3,7 +3,8 @@
 用法：
     python run.py              # 只起本地服务
     python run.py --expose     # 起服务 + 自动 cloudflared quick tunnel（公网收听）
-    python run.py --expose ngrok   # 同上但用 ngrok（failover 备选）
+    python run.py --expose ngrok   # 同上但用 ngrok（需先配置 authtoken）
+    python run.py --expose lhr     # 同上但用 localhost.run（免账号 SSH 隧道，备用）
 
 高级穿透（named tunnel 自定义域名 / 多隧道 failover）仍用：
     bash expose.sh [quick|named <域名>|ngrok]
@@ -45,6 +46,16 @@ def _find_ngrok():
     """定位 ngrok 二进制。"""
     for cand in (os.path.join(CF_DIR, "ngrok-v3-stable-windows-amd64", "ngrok.exe"),
                  shutil.which("ngrok")):
+        if cand and os.path.isfile(cand):
+            return cand
+    return None
+
+
+def _find_ssh():
+    """定位 OpenSSH 客户端（localhost.run 免账号隧道用）。"""
+    sysroot = os.environ.get("SystemRoot") or r"C:\Windows"
+    for cand in (os.path.join(sysroot, "System32", "OpenSSH", "ssh.exe"),
+                 shutil.which("ssh")):
         if cand and os.path.isfile(cand):
             return cand
     return None
@@ -177,6 +188,85 @@ def start_tunnel(port, mode="quick"):
             except OSError:
                 pass
     atexit.register(_cleanup)
+
+    if mode == "lhr":
+        # localhost.run：SSH 反向隧道，免账号免密钥（匿名即用）
+        ssh_bin = _find_ssh()
+        if not ssh_bin:
+            print("   [!] 未找到 OpenSSH 客户端（ssh.exe），跳过 localhost.run 隧道", flush=True)
+            print("       可改用：--expose（cloudflared）或 --expose ngrok", flush=True)
+            return None
+        log_file = os.path.join(_PROJECT_DIR, "lhr.log")
+
+        def _spawn_lhr():
+            return subprocess.Popen(
+                [ssh_bin,
+                 "-o", "StrictHostKeyChecking=accept-new",
+                 "-o", "UserKnownHostsFile=NUL",
+                 "-o", "ConnectTimeout=10",
+                 "-o", "ServerAliveInterval=30",
+                 "-o", "ServerAliveCountMax=3",
+                 "-R", f"80:localhost:{port}", "nokey@localhost.run"],
+                stdin=subprocess.DEVNULL,
+                stdout=open(log_file, "w"), stderr=subprocess.STDOUT,
+            )
+
+        def _watch_lhr():
+            pat = re.compile(r"https://[a-z0-9]+\.lhr\.life")
+            proc = _spawn_lhr()
+            holder["proc"] = proc
+            got = False
+            pending = ""
+            pending_tries = 0
+            while not _stop.is_set():
+                if proc.poll() is not None:
+                    if got:
+                        print("   [!] localhost.run 隧道断开，重新建立…", flush=True)
+                        got = False
+                        pending = ""
+                    else:
+                        print("   [!] ssh 隧道未成功建立，3 秒后重试…", flush=True)
+                    time.sleep(3)
+                    proc = _spawn_lhr()
+                    holder["proc"] = proc
+                    continue
+                try:
+                    with open(log_file, encoding="utf-8", errors="replace") as f:
+                        content = f.read()
+                except Exception:
+                    content = ""
+                if not got:
+                    urls = pat.findall(content)
+                    u = urls[-1] if urls else ""
+                    if u:
+                        ok, note = _verify_public_url(u)
+                        _write_public_url(u)
+                        print(f"   🌐 公网地址：{u}/stream  （面板自动显示）", flush=True)
+                        got = True
+                        if not ok:
+                            if note == "dns":
+                                print("   [!] 本机暂时解析不了该域名；正在后台验证隧道可用性…", flush=True)
+                            else:
+                                print("   [!] 隧道刚建立，边缘尚未就绪；正在后台验证隧道可用性…", flush=True)
+                            pending = u
+                            pending_tries = 0
+                elif pending:
+                    pending_tries += 1
+                    if pending_tries <= 15:
+                        if _verify_public_url_doh(pending, tries=1, interval=1):
+                            print("   ✓ 隧道已验证可用（公共 DNS 直连 200）", flush=True)
+                            pending = ""
+                    else:
+                        pending = ""
+                time.sleep(2)
+            if holder.get("proc") and holder["proc"].poll() is None:
+                try:
+                    holder["proc"].terminate()
+                except Exception:
+                    pass
+
+        threading.Thread(target=_watch_lhr, daemon=True).start()
+        return holder
 
     if mode == "ngrok":
         bin_ = _find_ngrok()
@@ -367,7 +457,7 @@ def main():
     expose_mode = "quick"
     if expose:
         i = args.index("--expose")
-        if i + 1 < len(args) and args[i + 1] in ("quick", "ngrok"):
+        if i + 1 < len(args) and args[i + 1] in ("quick", "ngrok", "lhr"):
             expose_mode = args[i + 1]
 
     print(f"\n📻 {config.STATION_NAME} 启动中…")
