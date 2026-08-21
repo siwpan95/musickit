@@ -88,21 +88,28 @@ cf_quick() {
     "$CF_BIN" tunnel --url "http://localhost:$PORT" --no-autoupdate > cloudflared.log 2>&1 &
     local pid=$!
     local url=""
-    for i in $(seq 1 30); do
-      url=$(grep -o 'https://[a-z0-9.-]*\.trycloudflare\.com' cloudflared.log 2>/dev/null | head -1)
-      [ -n "$url" ] && break
-      sleep 1
+    local got=""
+    # 持续解析：只要进程活着就一直等域名（不再 30s 放弃，服务端波动时会晚到）
+    while kill -0 "$pid" 2>/dev/null; do
+      url=$(grep -o 'https://[a-z0-9.-]*\.trycloudflare\.com' cloudflared.log 2>/dev/null | tail -1)
+      if [ -n "$url" ] && [ "$url" != "$got" ]; then
+        # 验证真实可用（边缘就绪可能滞后）；本机运营商 DNS 解析不了时也不隐藏地址
+        if curl -sf -o /dev/null --max-time 10 "$url/api/status"; then
+          got="$url"
+          write_url "$url"
+          echo "   [cloudflared] ✓ 隧道已建立并验证可用： $url"
+        elif [ -z "$got" ]; then
+          got="$url"
+          write_url "$url"
+          echo "   [cloudflared] 隧道已建立（本机未能直连验证，稍后自动生效）： $url"
+          echo "   [cloudflared] 若本机解析不了域名，可 ipconfig /flushdns 或换公共 DNS（1.1.1.1 / 223.5.5.5）"
+        fi
+      fi
+      sleep 2
     done
-    if [ -n "$url" ]; then
-      write_url "$url"
-      echo "   [cloudflared] 隧道已建立，Ctrl+C 停止（退出后自动清理公网地址）"
-      wait "$pid" 2>/dev/null
-    else
-      echo "   [cloudflared] 30s 内未拿到域名，日志末尾："; tail -3 cloudflared.log 2>/dev/null
-    fi
-    # 进程退出（网络抖动/被 kill）→ 等 3s 重启，重新解析新域名
-    echo "   [cloudflared] 隧道退出，3s 后自动重启 ..."
+    # 进程退出（网络抖动/被 kill）→ 清理地址，3s 后重启拿新域名（域名每次随机）
     rm -f "$PUBLIC_URL_FILE"
+    echo "   [cloudflared] 隧道退出，3s 后自动重启 ..."
     sleep 3
   done
 }

@@ -63,7 +63,10 @@ python G:\music\musickit\radio\run.py --expose ngrok # 同上但用 ngrok（fail
 - HLS 原生收听：<http://localhost:8000/hls/live.m3u8>（Safari / iPhone / Android 播放在线广播 App 直接打开，支持多码率自适应）
 
 > `--expose` 会自动启动 cloudflared quick tunnel，公网地址写回面板（面板自动显示可复制分享）。
-> Ctrl+C 停止时自动清理穿透子进程。高级用法（named tunnel 自定义域名 / 多隧道 failover / 守护重启）仍用 `bash expose.sh`。
+> 穿透带守护：持续解析地址（不再 30 秒放弃）、验证可用后才标注 ✓、隧道进程意外退出自动重新拉起并重新获取地址；
+> 若本机运营商 DNS 解析不了 trycloudflare 随机域名（常见污染/负缓存），会自动换域名重试并在后台补验，
+> 提示可 `ipconfig /flushdns` 或换公共 DNS（1.1.1.1 / 223.5.5.5）。
+> Ctrl+C 停止时自动清理穿透子进程。高级用法（named tunnel 自定义域名 / 多隧道 failover）仍用 `bash expose.sh`。
 > 没装 `waitress` 也能跑，会退回 Flask 开发服务器；多听众并发建议装上。
 
 ---
