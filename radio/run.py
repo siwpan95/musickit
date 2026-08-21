@@ -279,7 +279,10 @@ def start_tunnel(port, mode="quick"):
             cmd = [bin_, "http", str(port), "--log=stdout"]
             domain = getattr(config, "NGROK_STATIC_DOMAIN", "").strip()
             if domain:
-                cmd += ["--domain", domain]
+                # 本版本 ngrok（v3.39+）用 --url 指定端点域名
+                if not domain.startswith(("http://", "https://")):
+                    domain = "https://" + domain
+                cmd += ["--url", domain]
             return subprocess.Popen(
                 cmd,
                 stdout=open(log_file, "w"), stderr=subprocess.STDOUT,

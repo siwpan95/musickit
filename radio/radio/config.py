@@ -9,9 +9,12 @@ MUSIC_DIR = os.path.join(BASE_DIR, "music")
 
 # ---------- 公网穿透 ----------
 # ngrok 静态域名：免费版可在 dashboard（https://dashboard.ngrok.com/domains）
-# 领取 1 个固定域名（形如 xxx.ngrok-free.app）。设置后 --expose ngrok 固定使用该域名，
-# 公网地址不再每次随机；留空 = 每次启动随机域名。
-NGROK_STATIC_DOMAIN = ""
+# 领取 1 个固定域名（形如 xxx.ngrok-free.app / xxx.ngrok-free.dev）。
+# 设置后 --expose ngrok 固定使用该域名，公网地址不再每次随机；留空 = 每次启动随机域名。
+# 建议用环境变量设置（个人域名不入版本库）：
+#     setx NGROK_STATIC_DOMAIN "你的域名.ngrok-free.dev"
+# 也可以直接改这里（本文件会随仓库同步，域名是公开信息，无泄密风险）。
+NGROK_STATIC_DOMAIN = os.environ.get("NGROK_STATIC_DOMAIN", "").strip()
 
 # 流媒体服务监听
 HOST = "0.0.0.0"          # 0.0.0.0 = 监听所有网卡，局域网 / 公网均可访问
