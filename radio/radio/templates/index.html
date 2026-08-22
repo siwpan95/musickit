@@ -371,9 +371,13 @@
     // D4 多源：每行或逗号分隔一个 URL
     const urls = raw.split(/[\n,]/).map(s=>s.trim()).filter(Boolean);
     const body = urls.length > 1 ? {urls} : {url: urls[0]};
-    await fetch('/api/relay',{method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify(body)});
+    try {
+      const r = await fetch('/api/relay',{method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(body)});
+      const j = await r.json();
+      if(j && j.ok === false){ alert(j.error || '转播启动失败（' + r.status + '）'); }
+    } catch(e){ alert('转播请求失败：' + e); }
     refresh();
   }
   async function startMusickit(){
@@ -757,6 +761,7 @@
         ' · 运行 ' + upStr +
         (h.relay_sources > 1 ? ' · 转播源 '+h.relay_sources : '') +
         (h.public_url ? ' · 隧道已通' : ' · 无隧道') +
+        (h.ffmpeg === false ? ' · ⚠️ 缺 ffmpeg（HLS/转码/录音不可用，MP3 直转仍可用）' : '') +
         (h.disk && h.disk.free_gb != null ? ' · 磁盘剩 '+h.disk.free_gb+'GB' : '');
       const hs = h.hls || {};
       // ABR：把各档就绪情况一并显示，未出片的档标 ✗ 便于一眼看出哪档掉了

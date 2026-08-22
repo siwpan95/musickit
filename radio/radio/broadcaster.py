@@ -231,6 +231,9 @@ class Broadcaster:
             meta = src.wait_current(1.0)
             if meta is None:
                 continue   # 源被停止 / 模式切换，让 _run 重新分派
+            with st.lock:
+                if st.mode != "musickit":
+                    return   # 等待期间已切到转播/歌单：不设标题不播音
             path = meta["file"]
             if not os.path.isfile(path):
                 continue
@@ -297,6 +300,16 @@ class Broadcaster:
             if transcoder.ffmpeg_available():
                 gen = transcoder.chain(transcoder.jingle_prefix(), gen)
         else:
+            if not transcoder.ffmpeg_available():
+                # 无 ffmpeg 时直连：非 MP3 源在浏览器会无声，面板给出明确提示
+                _r, ctype = transcoder.peek_http_headers(url)
+                if _r is not None:
+                    try:
+                        _r.close()
+                    except Exception:
+                        pass
+                if ctype and "mpeg" not in ctype:
+                    st.set_title(st.current_title + "（源非 MP3 且本机无 ffmpeg，浏览器可能无声）")
             gen = self._relay_passthrough(url)
 
         try:
@@ -324,18 +337,20 @@ class Broadcaster:
                     time.sleep(2.0)
 
     def _relay_passthrough(self, url):
-        """直连分支：原样代理远程 MP3 流（带节奏 + 失败 failover）。"""
-        import requests
+        """直连分支：原样代理远程 MP3 流（带节奏 + 失败 failover）。
+
+        纯标准库（urllib）实现：不依赖 requests，新机器克隆仓库即用。"""
         bps = config.DEFAULT_BITRATE * 1000 / 8
         try:
-            r = requests.get(url, stream=True, timeout=10)
+            resp = transcoder.http_open(url, timeout=12)
             with self.station.lock:
-                self.station._relay_failures = 0
-            for chunk in r.iter_content(chunk_size=config.CHUNK_SIZE):
+                self.station._relay_failures = 0   # 连上了，清零失败计数
+            while True:
+                chunk = resp.read(config.CHUNK_SIZE)
                 if self.station.mode != "relay":
                     break
                 if not chunk:
-                    continue
+                    break
                 yield chunk
                 time.sleep(len(chunk) / bps)
         except Exception:

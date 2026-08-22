@@ -612,7 +612,30 @@ def api_health():
         "public_url": pub,
         "disk": disk,
         "hls": hls.status(),
+        # 转播/切片能力诊断：新机器克隆仓库常见缺失（ffmpeg 二进制、可选 requests）
+        "ffmpeg": transcoder.ffmpeg_available(),
+        "ffmpeg_path": config.FFMPEG,
+        "deps": {
+            "requests": _has_requests(),
+            "waitress": _has_waitress(),
+        },
     })
+
+
+def _has_requests():
+    try:
+        import requests  # noqa: F401
+        return True
+    except Exception:
+        return False
+
+
+def _has_waitress():
+    try:
+        import waitress  # noqa: F401
+        return True
+    except Exception:
+        return False
 
 
 @app.route("/api/listeners")

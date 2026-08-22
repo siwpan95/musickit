@@ -84,18 +84,20 @@ def _relay_transcoded(station, url, bitrate):
 
 
 def _relay_passthrough(station, url):
-    """直连分支：原样代理远程 MP3 流（保留原有节奏控制与失败回退）。"""
-    import requests  # 仅转播时需要
+    """直连分支：原样代理远程 MP3 流（保留原有节奏控制与失败回退）。
+
+    纯标准库（urllib）实现：不依赖 requests。"""
     bytes_per_sec = config.DEFAULT_BITRATE * 1000 / 8
     try:
-        r = requests.get(url, stream=True, timeout=10)
+        r = transcoder.http_open(url, timeout=12)
         with station.lock:
             station._relay_failures = 0   # 连上了，清零失败计数
-        for chunk in r.iter_content(chunk_size=config.CHUNK_SIZE):
+        while True:
+            chunk = r.read(config.CHUNK_SIZE)
             if station.mode != "relay":
                 break
             if not chunk:
-                continue
+                break
             yield chunk
             time.sleep(len(chunk) / bytes_per_sec)
     except Exception:

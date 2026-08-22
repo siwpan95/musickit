@@ -136,10 +136,13 @@ def login_required(view):
 
 
 def api_login_required(view):
-    """装饰器：保护 API 路由。未登录返回 401 JSON。"""
+    """装饰器：保护 API 路由。未登录返回 401 JSON。
+
+    无密码模式（未配置 .station_password）下视为已登录：本地/局域网信任模型，
+    否则换新电脑后面板所有控制按钮（转播/切歌/点歌…）会静默 401 失效。"""
     @functools.wraps(view)
     def wrapper(*a, **kw):
-        if session.get("logged_in"):
+        if session.get("logged_in") or not is_configured():
             return view(*a, **kw)
         return jsonify({"ok": False, "error": "请先登录"}), 401
     return wrapper

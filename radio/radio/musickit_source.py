@@ -91,6 +91,7 @@ class MusickitSource:
 
     # ---------- 渲染线程 ----------
     def _run(self):
+        fails = 0
         while not self._stop.is_set():
             with self.lock:
                 channel = self.channel
@@ -99,8 +100,24 @@ class MusickitSource:
             meta = self._render_one(channel, bars)
             self.rendering = False
             if meta is None:
+                fails += 1
+                if fails >= 5:
+                    # 连续失败：多半是缺引擎依赖（pydub/scipy/soundfile）或缺素材池。
+                    # 不再热循环重试，回退到本地歌单并给出明确提示。
+                    with self.lock:
+                        self.last_error = ("连续渲染失败，已放弃重试：检查 Python 是否装有 "
+                                           "pydub/numpy/scipy/soundfile/audioop-lts 及素材池")
+                    if self.station is not None:
+                        try:
+                            self.station.stop_musickit()
+                            self.station.set_title("musickit 随机渲染不可用（缺引擎依赖或素材池），已回退本地歌单")
+                            self.station.record_history(self.station.current_title)
+                        except Exception:
+                            pass
+                    return
                 time.sleep(5.0)   # 失败退避，避免热循环
                 continue
+            fails = 0
             with self.lock:
                 self.rendered_count += 1
                 self.last_render_at = time.time()

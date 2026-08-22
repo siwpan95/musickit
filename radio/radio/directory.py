@@ -4,7 +4,9 @@
 接口文档：https://api.radio-browser.info/
 注意：官方要求带上可识别的 User-Agent。
 """
-import requests
+import json
+import urllib.parse
+import urllib.request
 
 # 多个镜像，按顺序尝试，提高可用性
 _BASES = [
@@ -16,7 +18,9 @@ _UA = {"User-Agent": "MyPythonRadio/1.0 (github.com/yourname)"}
 
 
 def search(query, limit=20):
-    """按关键词搜索电台，返回精简列表；任何异常都返回 []（不阻断主程序）。"""
+    """按关键词搜索电台，返回精简列表；任何异常都返回 []（不阻断主程序）。
+
+    纯标准库（urllib）实现，不依赖 requests。"""
     if not query:
         return []
     params = {
@@ -26,14 +30,12 @@ def search(query, limit=20):
         "order": "votes",         # 按投票数排序，质量更高
         "reverse": "true",
     }
+    qs = urllib.parse.urlencode(params)
     for base in _BASES:
         try:
-            r = requests.get(
-                f"{base}/stations/search",
-                params=params, headers=_UA, timeout=10,
-            )
-            r.raise_for_status()
-            data = r.json()
+            req = urllib.request.Request(f"{base}/stations/search?{qs}", headers=_UA)
+            with urllib.request.urlopen(req, timeout=10) as r:
+                data = json.loads(r.read())
             break
         except Exception:
             data = None

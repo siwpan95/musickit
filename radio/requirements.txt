@@ -2,7 +2,8 @@
 Flask>=3.0
 # 生产级并发服务器（多听众同时收听），不装也能跑（会退回 Flask 开发服务器）
 waitress>=3.0
-# 在线转播功能需要
+# 可选：在线歌词（LRCLIB）与 Discord/Telegram 社群同步需要；
+# 转播（relay）已改为纯标准库实现，不装 requests 也能转播 MP3 源
 requests>=2.31
 # 本地标签 + 内嵌封面读取（C1，纯 mutagen，离线）；原 requirements 漏写，已补
 mutagen>=1.47
