@@ -32,22 +32,10 @@ API_DEFS = [
     {"method": "POST",   "path": "/api/repeat",                "tag": "控制",   "desc": "单曲循环开关", "auth": True},
     {"method": "POST",   "path": "/api/volume",                "tag": "控制",   "desc": "设置音量 (0-100)", "auth": True},
     {"method": "POST",   "path": "/api/rescan",                "tag": "控制",   "desc": "重新扫描歌单", "auth": True},
-    {"method": "POST",   "path": "/api/relay",                 "tag": "控制",   "desc": "开始在线转播", "auth": True},
-    {"method": "POST",   "path": "/api/relay/stop",            "tag": "控制",   "desc": "停止转播", "auth": True},
     {"method": "POST",   "path": "/api/record",                "tag": "控制",   "desc": "录音开关", "auth": True},
     {"method": "POST",   "path": "/api/request",               "tag": "控制",   "desc": "点歌（模糊匹配）", "auth": False},
     {"method": "POST",   "path": "/api/request/clear",         "tag": "控制",   "desc": "清空点歌队列", "auth": True},
     {"method": "POST",   "path": "/api/announce",              "tag": "控制",   "desc": "立即分享到 Discord/Telegram", "auth": True},
-    # ── 全球电台 ──
-    {"method": "GET",    "path": "/api/browse",                "tag": "电台",   "desc": "搜索全球电台（Radio-Browser.info）", "auth": False},
-    {"method": "GET",    "path": "/api/favorites",             "tag": "电台",   "desc": "已收藏电台列表", "auth": False},
-    {"method": "POST",   "path": "/api/favorites",             "tag": "电台",   "desc": "收藏电台", "auth": True},
-    # ── 电台预设 ──
-    {"method": "GET",    "path": "/api/presets",               "tag": "预设",   "desc": "电台预设列表", "auth": False},
-    {"method": "POST",   "path": "/api/presets/switch",        "tag": "预设",   "desc": "切换电台预设", "auth": True},
-    {"method": "POST",   "path": "/api/presets/add",           "tag": "预设",   "desc": "添加电台预设", "auth": True},
-    {"method": "PUT",    "path": "/api/presets/<preset_id>",   "tag": "预设",   "desc": "更新电台预设", "auth": True},
-    {"method": "DELETE", "path": "/api/presets/<preset_id>",   "tag": "预设",   "desc": "删除电台预设", "auth": True},
     # ── 认证 ──
     {"method": "POST",   "path": "/login",                     "tag": "认证",   "desc": "用户登录（Cookie Session）", "auth": False},
     {"method": "GET",    "path": "/logout",                    "tag": "认证",   "desc": "用户登出", "auth": False},

@@ -1,11 +1,10 @@
 """D2 共享广播缓冲：一个全局生产者读源 → 多听众 queue 订阅分发。
 
 取代"每听众独立读文件"模型：
-- 广播者单线程读源（playlist 文件 / relay 流），按 ICY_METAINT 读 chunk + 比特率节流
+- 广播者单线程读源（playlist 文件 / musickit 渲染件），按 ICY_METAINT 读 chunk + 比特率节流
 - 每个听众连接订阅一个 queue.Queue，广播者把 chunk 推给所有 queue
 - 慢客户端背压：queue 满（maxsize=64）丢最旧块，听众跳秒不断流
-- relay 模式广播者顺便 tee 录音（relay chunk 已是 MP3，干净）
-- playlist 录音仍走 mount_stream per-listener（转码保证干净 MP3），广播者不插手
+- 录音走 mount_stream per-listener（转码保证干净 MP3），广播者不插手
 
 收益：N 个听众 = 1 次磁盘读（原来 N 次），磁盘 IO 不随听众数线性增长。
 """
@@ -93,17 +92,6 @@ class Broadcaster:
                 except queue.Full:
                     pass
 
-    def _record_tee(self, chunk):
-        """relay 模式录音：relay chunk 已是 MP3，追加到录音文件安全。
-        playlist 录音走 mount_stream per-listener（转码），广播者不插手。"""
-        st = self.station
-        if st.mode == "relay" and st.recording and st.recording_path:
-            try:
-                with open(st.recording_path, "ab") as f:
-                    f.write(chunk)
-            except Exception:
-                pass
-
     # ---------- 主循环 ----------
     def _run(self):
         st = self.station
@@ -111,9 +99,7 @@ class Broadcaster:
             try:
                 with st.lock:
                     mode = st.mode
-                if mode == "relay":
-                    self._run_relay()
-                elif mode == "musickit":
+                if mode == "musickit":
                     self._run_musickit()
                 else:
                     self._run_playlist()
@@ -128,7 +114,7 @@ class Broadcaster:
         while not self._stop:
             with st.lock:
                 if st.mode != "playlist":
-                    return   # 切到 relay，让 _run 重选源
+                    return   # 音源切换，让 _run 重选源
                 if st.paused:
                     path = None
                 else:
@@ -164,7 +150,7 @@ class Broadcaster:
                 try:
                     for chunk in gen:
                         if st.mode != "playlist":
-                            return   # 切 relay
+                            return   # 音源切换
                         if st.next_event.is_set():
                             st._advance()
                             break
@@ -192,7 +178,7 @@ class Broadcaster:
                 with f:
                     while not self._stop:
                         if st.mode != "playlist":
-                            return   # 切 relay
+                            return   # 音源切换
                         if st.next_event.is_set():
                             st._advance()
                             break
@@ -281,87 +267,4 @@ class Broadcaster:
                     if bps > 0:
                         time.sleep(len(data) / bps)
 
-    # ---------- relay 源 ----------
-    def _run_relay(self):
-        st = self.station
-        url = st.current_relay_url()
-        if not url:
-            time.sleep(1.0)
-            return
 
-        use_transcode = False
-        if config.TRANSCODE_RELAY and transcoder.ffmpeg_available():
-            codec = transcoder.probe_remote_codec(url)
-            if codec is None or codec.lower() != "mp3":
-                use_transcode = True
-
-        if use_transcode:
-            gen = transcoder.transcode(url, config.TRANSCODE_BITRATE)
-            if transcoder.ffmpeg_available():
-                gen = transcoder.chain(transcoder.jingle_prefix(), gen)
-        else:
-            if not transcoder.ffmpeg_available():
-                # 无 ffmpeg 时直连：非 MP3 源在浏览器会无声，面板给出明确提示
-                _r, ctype = transcoder.peek_http_headers(url)
-                if _r is not None:
-                    try:
-                        _r.close()
-                    except Exception:
-                        pass
-                if ctype and "mpeg" not in ctype:
-                    st.set_title(st.current_title + "（源非 MP3 且本机无 ffmpeg，浏览器可能无声）")
-            gen = self._relay_passthrough(url)
-
-        try:
-            for chunk in gen:
-                if st.mode != "relay":
-                    return
-                if st.next_event.is_set():
-                    return   # stop_relay 触发，让 _run 切 playlist
-                if self.has_subscribers():
-                    self._push(chunk)
-                self._record_tee(chunk)
-        except Exception:
-            # 转码分支失败：计数 + failover
-            if use_transcode and st.mode == "relay":
-                with st.lock:
-                    st._relay_failures += 1
-                    fails = st._relay_failures
-                if fails >= 3:
-                    if st.advance_relay_url():
-                        return   # 切下一源，_run 重进 _run_relay
-                    st.set_title("全部转播源中断，已自动回退到本地歌单")
-                    st.record_history(st.current_title)
-                    st.stop_relay()
-                else:
-                    time.sleep(2.0)
-
-    def _relay_passthrough(self, url):
-        """直连分支：原样代理远程 MP3 流（带节奏 + 失败 failover）。
-
-        纯标准库（urllib）实现：不依赖 requests，新机器克隆仓库即用。"""
-        bps = config.DEFAULT_BITRATE * 1000 / 8
-        try:
-            resp = transcoder.http_open(url, timeout=12)
-            with self.station.lock:
-                self.station._relay_failures = 0   # 连上了，清零失败计数
-            while True:
-                chunk = resp.read(config.CHUNK_SIZE)
-                if self.station.mode != "relay":
-                    break
-                if not chunk:
-                    break
-                yield chunk
-                time.sleep(len(chunk) / bps)
-        except Exception:
-            with self.station.lock:
-                self.station._relay_failures += 1
-                fails = self.station._relay_failures
-            if fails >= 3:
-                if self.station.advance_relay_url():
-                    return   # 切下一源
-                self.station.set_title("全部转播源中断，已自动回退到本地歌单")
-                self.station.record_history(self.station.current_title)
-                self.station.stop_relay()
-            else:
-                time.sleep(2.0)

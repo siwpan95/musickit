@@ -63,7 +63,7 @@ def variant_playlist(kbps):
 
 
 def _cmd():
-    port = getattr(config, "PORT", 8000)
+    port = getattr(config, "HTTP_PORT", 8000)
     # 源用 /stream/<mount>（per-listener 转码 MP3，保证格式正确）。TRANSCODE_MOUNTS=(64,320)，
     # 取最高码率挂载点保证音质；128 不是挂载点会 404。
     mounts = getattr(config, "TRANSCODE_MOUNTS", (320,))

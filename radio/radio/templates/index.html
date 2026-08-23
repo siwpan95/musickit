@@ -149,17 +149,6 @@
   .empty { color: var(--text-dim); font-size: 13px; padding: 10px 4px; }
   a { color: var(--accent); }
 
-  .presets { display:flex; gap:10px; flex-wrap:wrap; }
-  .preset {
-    display:flex; flex-direction:column; align-items:flex-start; gap:2px;
-    border:1px solid var(--panel-border); border-radius:14px; padding:12px 16px;
-    background: color-mix(in srgb, var(--accent) 8%, transparent); color:var(--text);
-    cursor:pointer; font-size:14px; font-weight:600;
-    transition: transform .15s ease, box-shadow .2s ease;
-  }
-  .preset small { font-size:11px; font-weight:400; color:var(--text-dim); }
-  .preset:hover { transform: translateY(-2px); box-shadow:0 0 20px var(--glow); }
-
   /* 歌词（C2） */
   .lyrics { max-height: 260px; overflow: auto; margin-top: 6px;
     -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
@@ -212,7 +201,6 @@
         <button class="btn" id="shuffleBtn" onclick="toggleShuffle()">🔀 随机</button>
         <button class="btn" onclick="postApi('/api/rescan')">🔄 刷新歌单</button>
       </div>
-      <button class="btn" id="favBtn" style="display:none;margin-top:12px;width:100%;" onclick="favCurrent(event)">★ 收藏当前电台到预设</button>
       <button class="btn" id="recBtn" style="margin-top:12px;width:100%;" onclick="toggleRecord()">🔴 开始录音</button>
       <div class="share" id="shareBox" style="display:none;margin-top:14px;">
         <div class="section-title" style="margin:0 0 8px;">🌐 公网分享地址</div>
@@ -264,17 +252,9 @@
       <div class="lyrics" id="lyrics"><div class="empty">（暂无歌词）</div></div>
     </div>
 
-    <!-- 右：转播 + 歌单 -->
+    <!-- 右：音源 + 歌单（转播功能已剥离，见 Node.js 版 private-radio-stations） -->
     <div class="card">
-      <div class="section-title">在线转播（relay）</div>
-      <textarea class="relay-input" id="relayUrl" rows="2" style="resize:vertical;min-height:42px;" placeholder="http://某个网络电台/stream&#10;可填多行（每行一个源，D4 多源 failover：当前源断自动切下一个，全断才回退本地）"></textarea>
-      <div class="relay-row">
-        <button class="btn primary" onclick="startRelay()">▶ 开始转播</button>
-        <button class="btn" onclick="postApi('/api/relay/stop')">■ 停止</button>
-      </div>
-      <div class="hint">把别的网络电台转播进来（需要 requests）。停止后自动切回本地歌单。</div>
-
-      <div class="section-title" style="margin-top:22px;">🎲 musickit 随机渲染（代替本地歌单）</div>
+      <div class="section-title">🎲 musickit 随机渲染（代替本地歌单）</div>
       <div class="hint">由 musickit 引擎实时渲染随机混音：随机混音师签名 × 随机流派 × 随机 stems。首曲约 15~30 秒渲染后开播，期间电台静音等待。</div>
       <div class="relay-row">
         <input class="relay-input" id="mkChannel" placeholder="混音师 slug（random = 每曲随机）">
@@ -297,28 +277,6 @@
       <ul class="playlist" id="reqList"><li class="empty">暂无点歌</li></ul>
     </div>
 
-    <!-- 精选电台（预设一键转播） -->
-    <div class="card wide" style="margin-top:20px;">
-      <div class="section-title">⭐ 精选电台（一键转播）</div>
-      <div class="presets" id="presets"></div>
-      <div class="hint">精选直连流（MP3 / http），点一下即经本电台转播出去；停止转播会自动回到本地歌单。</div>
-    </div>
-
-    <!-- 浏览全球网络电台（Radio-Browser.info） -->
-    <div class="card wide" style="margin-top:20px;">
-      <div class="section-title">🌍 浏览全球网络电台</div>
-      <div class="relay-row">
-        <input class="relay-input" id="browseQ" placeholder="搜索电台，如 Jazz / 华语 / BBC / lo-fi">
-        <button class="btn primary" onclick="browseRadio()">🔍 搜索</button>
-      </div>
-      <label style="display:flex;align-items:center;gap:6px;margin-top:10px;font-size:12px;color:var(--text-dim);cursor:pointer;">
-        <input type="checkbox" id="mp3only" onchange="renderBrowse()"> 只看 MP3（ESP32 友好直链）
-      </label>
-      <div class="hint">点“转播”经本电台转发；“复制直链”拿干净 URL，可直接粘进 ESP32 草图或其他播放器。<br>
-        注意：<code>mms://</code> 是 legacy 协议，本纯 Python 服务无法转播（需 ffmpeg 转封装）；ESP32 请选 http(s) 的 MP3 流（带 <b>ESP32✓</b> 标）。</div>
-      <ul class="playlist" id="browseList"><li class="empty">输入关键词，搜全球真实电台</li></ul>
-    </div>
-
     <!-- 最近播放历史 -->
     <div class="card wide" style="margin-top:20px;">
       <div class="section-title">🕒 最近播放</div>
@@ -329,7 +287,6 @@
 
 <script>
   const $ = id => document.getElementById(id);
-  const PRESETS = {{ presets | tojson }};
   let currentStatus = null;
 
   // 主题：跟随系统 + 记忆
@@ -364,21 +321,6 @@
   async function toggleShuffle(){
     const r = await (await fetch('/api/shuffle',{method:'POST'})).json();
     refresh(r);
-  }
-  async function startRelay(){
-    const raw = $('relayUrl').value.trim();
-    if(!raw) return;
-    // D4 多源：每行或逗号分隔一个 URL
-    const urls = raw.split(/[\n,]/).map(s=>s.trim()).filter(Boolean);
-    const body = urls.length > 1 ? {urls} : {url: urls[0]};
-    try {
-      const r = await fetch('/api/relay',{method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify(body)});
-      const j = await r.json();
-      if(j && j.ok === false){ alert(j.error || '转播启动失败（' + r.status + '）'); }
-    } catch(e){ alert('转播请求失败：' + e); }
-    refresh();
   }
   async function startMusickit(){
     const body = {
@@ -527,97 +469,7 @@
   window.addEventListener('resize', sizeCanvas);
   drawViz();
 
-  // ---- 全球电台浏览 ----
-  let _browse = [];
-  async function browseRadio(){
-    const q = $('browseQ').value.trim();
-    if(!q) return;
-    const ul = $('browseList');
-    ul.innerHTML = '<li class="empty">搜索中…</li>';
-    let data;
-    try { data = await (await fetch('/api/browse?q=' + encodeURIComponent(q))).json(); }
-    catch(e){ ul.innerHTML = '<li class="empty">搜索失败（网络问题）</li>'; return; }
-    _browse = data.stations || [];
-    renderBrowse();
-  }
-  function isEsp32Ok(s){ return (s.codec||'').toUpperCase()==='MP3' && /^https?:\/\//i.test(s.url||''); }
-  function renderBrowse(){
-    const ul = $('browseList');
-    if(!_browse.length){ ul.innerHTML = '<li class="empty">输入关键词搜全球真实电台</li>'; return; }
-    const onlyMp3 = $('mp3only') && $('mp3only').checked;
-    const list = onlyMp3 ? _browse.filter(isEsp32Ok) : _browse;
-    if(!list.length){ ul.innerHTML = '<li class="empty">当前筛选下没有 MP3 直链，取消勾选看看全部</li>'; return; }
-    ul.innerHTML = list.map((s)=>{
-      const badge = isEsp32Ok(s) ? '<span class="badge ok">ESP32✓</span>' : '';
-      const meta = [s.country, s.codec, s.bitrate ? s.bitrate+'k' : '', s.tags].filter(Boolean).join(' · ');
-      const u = esc(s.url||'');
-      return `<li><span class="dot"></span><div style="flex:1;min-width:0;overflow:hidden;">
-        <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(s.name)} ${badge}</div>
-        <div style="font-size:12px;opacity:.7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(meta)}</div>
-        <div style="font-size:11px;opacity:.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:monospace;">${u}</div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:6px;flex:0 0 auto;">
-        <button class="btn" style="padding:6px 12px;" onclick='relayStation(${JSON.stringify(s.url||'')}, ${JSON.stringify(s.name||'')})'>▶ 转播</button>
-        <button class="btn" style="padding:6px 12px;font-size:12px;" onclick='copyUrl(${JSON.stringify(s.url||'')})'>⧉ 复制直链</button>
-        <button class="btn" style="padding:6px 12px;font-size:12px;" onclick='addPreset(${JSON.stringify(s.url||'')}, ${JSON.stringify(s.name||'')}, ${JSON.stringify(s.tags||'')}, event)'>★ 收藏</button>
-      </div></li>`;
-    }).join('');
-  }
-  function relayStation(url, name){
-    if(!url) return;
-    fetch('/api/relay', {method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({url, name})});
-    refresh();
-  }
-  async function copyUrl(url){
-    if(!url) return;
-    try { await navigator.clipboard.writeText(url); }
-    catch(e){
-      const t = document.createElement('textarea'); t.value = url;
-      document.body.appendChild(t); t.select();
-      try { document.execCommand('copy'); } catch(_){}
-      t.remove();
-    }
-  }
   function esc(t){ return (t||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
-
-  function renderPresets(){
-    const box = $('presets');
-    if(!PRESETS || !PRESETS.length){
-      box.innerHTML = '<div class="empty">暂无预设，编辑项目根目录的 presets.json 添加</div>';
-      return;
-    }
-    box.innerHTML = PRESETS.map(p=>{
-      const icon = esc(p.icon || '📻');
-      const name = esc(p.name || '未命名电台');
-      const desc = esc(p.desc || '');
-      return `<button class="preset" onclick='relayStation(${JSON.stringify(p.url||'')}, ${JSON.stringify(p.name||'')})'>${icon} ${name}<small>${desc}</small></button>`;
-    }).join('');
-  }
-  renderPresets();
-
-  async function addPreset(url, name, desc, ev){
-    if(!url) return;
-    const btn = ev && ev.currentTarget;
-    const old = btn ? btn.innerHTML : null;
-    try {
-      const r = await fetch('/api/presets', {method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({url, name:name||url, desc:desc||''})});
-      const j = await r.json();
-      if(btn){
-        btn.innerHTML = (j.ok && j.dup) ? '✓ 已收藏' : '✓ 已加入';
-        setTimeout(()=>{ if(btn) btn.innerHTML = old; }, 1400);
-      }
-      if(j.ok && !j.dup){ PRESETS.push({name:name||url, url, desc:desc||''}); renderPresets(); }
-    } catch(e){
-      if(btn && old) btn.innerHTML = old;
-    }
-  }
-  function favCurrent(ev){
-    const url = (currentStatus && currentStatus.relay_url) || '';
-    const name = (currentStatus && currentStatus.current_title) || url;
-    addPreset(url, name, '', ev);
-  }
 
   async function toggleRecord(){
     const recording = currentStatus && currentStatus.recording;
@@ -678,7 +530,7 @@
     const s = currentStatus;
     if(!s) return;
     // 同一曲且已有歌词则只刷新高亮，不重新拉取
-    const key = (s.mode === 'relay' ? 'relay:' : 'pl:') + (s.current_title || '');
+    const key = 'pl:' + (s.current_title || '');
     if(key !== _lyricKey){
       _lyricKey = key;
       _lyricLines = [];
@@ -686,9 +538,7 @@
       box.innerHTML = '<div class="empty">加载中…</div>';
       $('lyricBadge').style.display = 'none';
       try {
-        const r = s.mode === 'relay'
-          ? await (await fetch('/api/lyrics')).json()
-          : await (await fetch('/api/lyrics')).json();
+        const r = await (await fetch('/api/lyrics')).json();
         renderLyrics(r);
       } catch(e){ box.innerHTML = '<div class="empty">歌词加载失败</div>'; }
     }
@@ -756,10 +606,9 @@
       const upStr = upMin >= 60 ? Math.floor(upMin/60)+'h'+(upMin%60)+'m' : upMin+'m';
       $('healthInfo').textContent =
         (h.recording ? '🔴 录音中 · ' : '') +
-        '模式 ' + (h.mode==='relay'?'转播':'歌单') +
+        '模式 ' + (h.mode==='musickit'?'随机渲染':'歌单') +
         ' · 听众 ' + h.listeners +
         ' · 运行 ' + upStr +
-        (h.relay_sources > 1 ? ' · 转播源 '+h.relay_sources : '') +
         (h.public_url ? ' · 隧道已通' : ' · 无隧道') +
         (h.ffmpeg === false ? ' · ⚠️ 缺 ffmpeg（HLS/转码/录音不可用，MP3 直转仍可用）' : '') +
         (h.disk && h.disk.free_gb != null ? ' · 磁盘剩 '+h.disk.free_gb+'GB' : '');
@@ -796,7 +645,7 @@
       if(!s.enabled){
         $('schedUpcoming').textContent = '已关闭';
       } else if(up.length){
-        $('schedUpcoming').innerHTML = '下一条：<b>' + (up[0].name||up[0].action) + '</b> · ' + up[0].fires_at + (up[0].action==='playlist_dir'?' → '+up[0].dir:up[0].action==='relay'?' → 转播':'');
+        $('schedUpcoming').innerHTML = '下一条：<b>' + (up[0].name||up[0].action) + '</b> · ' + up[0].fires_at + (up[0].action==='playlist_dir'?' → '+up[0].dir:'');
       } else {
         $('schedUpcoming').textContent = '无排程（编辑 schedule.json 添加）';
       }
@@ -851,13 +700,11 @@
     currentStatus = s;
 
     $('nowTitle').textContent = s.current_title || '—';
-    $('nowSub').textContent = s.mode === 'relay'
-      ? '转播源：' + (s.relay_url || '—')
-      : s.mode === 'musickit'
-        ? 'musickit 随机渲染 · 频道 ' + ((s.musickit && s.musickit.channel) || '—')
-        : (s.paused ? '已暂停' : '本地歌单播放中');
+    $('nowSub').textContent = s.mode === 'musickit'
+      ? 'musickit 随机渲染 · 频道 ' + ((s.musickit && s.musickit.channel) || '—')
+      : (s.paused ? '已暂停' : '本地歌单播放中');
     $('listeners').textContent = s.listeners;
-    $('mode').textContent = s.mode === 'relay' ? '转播' : s.mode === 'musickit' ? '随机渲染' : '歌单';
+    $('mode').textContent = s.mode === 'musickit' ? '随机渲染' : '歌单';
     $('state').textContent = s.paused ? '已暂停' : '播放中';
     if(s.musickit){
       const m = s.musickit;
@@ -869,7 +716,6 @@
 
     $('pauseBtn').textContent = s.paused ? '▶ 继续' : '⏸ 暂停';
     $('shuffleBtn').classList.toggle('on', !!s.shuffle);
-    $('favBtn').style.display = (s.mode === 'relay' && s.relay_url) ? 'block' : 'none';
     $('recBtn').textContent = s.recording ? '⏹ 停止录音' : '🔴 开始录音';
     $('recBtn').classList.toggle('on', !!s.recording);
     $('recState').textContent = s.recording ? '录制中' : '关';

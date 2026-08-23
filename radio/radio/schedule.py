@@ -6,8 +6,8 @@
     "name": "工作日白天",
     "time": "09:00",            // HH:MM（24h）
     "weekdays": [1,2,3,4,5],    // 1=周一 ... 7=周日；省略=每天
-    "action": "playlist_dir",   // playlist_dir | relay | shuffle
-    "dir": "music/light"        // playlist_dir: 歌单子目录；relay: url；shuffle: 无需参数
+    "action": "playlist_dir",   // playlist_dir | shuffle（relay 已于 2026-08-23 剥离）
+    "dir": "music/light"        // playlist_dir: 歌单子目录；shuffle: 无需参数
   },
   {
     "name": "周末摇滚夜",
@@ -15,13 +15,6 @@
     "weekdays": [6,7],
     "action": "playlist_dir",
     "dir": "music/rock"
-  },
-  {
-    "name": "深夜转播 Nightwave",
-    "time": "23:00",
-    "action": "relay",
-    "url": "https://plaza.one/mp3",
-    "name": "Nightwave Plaza"
   }
 ]
 
@@ -106,14 +99,8 @@ def _execute(station, item):
                 if not os.path.isabs(d):
                     d = os.path.join(_PROJECT_DIR, d)
                 station.set_playlist_dir(d)
-        elif action == "relay":
-            url = item.get("url", "")
-            if url:
-                station.set_relay(url, item.get("name"))
         elif action == "shuffle":
             station.toggle_shuffle()
-        elif action == "stop_relay":
-            station.stop_relay()
         else:
             return
         # 记录到播放历史

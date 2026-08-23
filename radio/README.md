@@ -1,8 +1,12 @@
 # 📻 我的Python电台
 
-一个用 **纯 Python + Flask** 搭建的轻量级网络电台。把本地歌曲变成一条
-24/7 的音频流，任何设备（手机 / 电脑 / 播放器）都能收听，还能在网页上
-实时控制播放、看 “正在播放”、甚至转播别的网络电台。
+一个用 **纯 Python + Flask** 搭建的轻量级网络电台。把本地歌曲（或 musickit
+随机渲染的混音）变成一条 24/7 的音频流，任何设备（手机 / 电脑 / 播放器）都能收听，
+还能在网页上实时控制播放、看 “正在播放”。
+
+> 转播（relay）功能已于 2026-08-23 剥离并移交 Node.js 版
+> （D:\private-radio-stations-2.0，gitee siwpan/private-radio-stations 分支 3.0）；
+> 全套存档见该仓库 archived 分支的 python-radio-relay-20260823/。
 
 > 设计取舍：相比 Icecast + libshout 或 Cycast（需要 Cython 编译 / 独立服务），
 > 本方案**零外部服务、纯 Python 即可运行**，一个人也能轻松维护和二次开发。
@@ -18,13 +22,10 @@
   渲染好的 MP3 经广播者照常推流（ICY/HLS/多码率/录音全兼容）
 - 🏷️ **ICY 元数据**：播放器（VLC / Winamp / PotPlayer）能显示 “正在播放”
 - 🎛️ **Premium 控制面板**：玻璃拟态 + vaporwave 渐变 + 合成波网格 + 辉光微交互（明暗主题）
-- 💿 **实时可视化**：音频驱动的中心旋转唱片 + 放射状频谱（Web Audio `AnalyserNode`，本地/转播都生效）
-- ⭐ **精选电台预设**：Nightwave Plaza、Groove Salad 等直连流，一键转播（改 `presets.json` 即可增删，刷新页面生效）；转播中或浏览结果里点 **★ 收藏** 可一键写入 `presets.json`
-- 🌐 **在线转播（relay）**：把别的网络电台转播进来，随时切回本地歌单
-- 🌍 **浏览全球网络电台**：搜索 Radio-Browser.info 数万真实电台，一键转播；每条带**直链复制**与 **ESP32✓** 标识（MP3/http 流），可勾选“只看 MP3”方便 ESP32 取直链
+- 💿 **实时可视化**：音频驱动的中心旋转唱片 + 放射状频谱（Web Audio `AnalyserNode`）
 - 🌗 **明暗主题**：控制面板跟随系统并记忆偏好
 - ⚡ **节奏自适应**：按文件比特率（MP3 帧头嗅探）控制推流速度，客户端不卡顿
-- 🔁 **转码固定 MP3（B1）**：转播 AAC/OGG 等非 MP3 流时自动经 ffmpeg 转成固定码率 MP3，浏览器 / 老客户端 / ESP32 都能播（从根因解决“无声”）
+- 🔁 **转码固定 MP3（B1）**：挂载点/录音统一经 ffmpeg 转成固定码率 MP3，浏览器 / 老客户端都能播
 - 🎚️ **多码率挂载点（B3）**：`/stream/64`、`/stream/320` 额外挂载点，手机省流量 / WiFi 高音质
 - 📺 **HLS 直播切片（D1）**：自动把广播切成 HLS，Safari / iOS / Android 原生播放器直接打开 `http://localhost:8000/hls/live.m3u8` 即可收听（无需 VLC/插件）；支持**音频 ABR 多码率自适应**（默认 128k / 64k 两档，播放器按网速自动切换），AAC-LC 编码原生兼容
 - 🔔 **开场台标音（B4）**：新听众连入先放一段 jingle，可替换 `jingle.mp3`（文件不存在则跳过）
@@ -32,9 +33,8 @@
 - 🏷️ **本地标签 + 内嵌封面（C1）**：自动读取 ID3/FLAC/M4A/OGG 的标题/歌手/专辑，抽出 APIC 内嵌封面显示在「正在播放」（纯 mutagen，离线）
 - 📱 **PWA 可安装（C4）**：`manifest.webmanifest` + service worker + 图标，可「添加到主屏幕」当 App 用，离线也能打开壳
 - 🎙️ **播客 RSS（C5）**：`/rss` 把 `recordings/` 里的录音作为播客订阅源发出去，播客 App 可订阅回听
-- 🎤 **歌词显示（C2）**：本地同名 `.lrc` 优先（离线），缺失时走 LRCLIB 在线查询（零密钥）；面板/扩展里按播放进度同步高亮滚动
+- 🎤 **歌词显示（C2）**：本地同名 `.lrc` 优先（离线），缺失时走 LRCLIB 在线查询（零密钥）；面板里按播放进度同步高亮滚动
 - 🔗 **社群同步（C3）**：当前曲一键发布到 Discord webhook / Telegram 频道；凭据存 `integrations.json`，GET 接口只返回布尔状态不泄露密钥
-- 🧩 **浏览器扩展（Edge/Chrome）**：MV3 扩展把控制面板装进工具栏，正在播放 + 歌词同步 + 控制 + 社群发布，见 [`extension/README.md`](extension/README.md)
 
 ---
 
@@ -90,7 +90,7 @@ radio/
   config.py       全局配置（端口 / 台名 / 比特率 / 功能开关）
   mp3info.py      MP3 帧头比特率嗅探（纯 Python）
   station.py      电台状态机：歌单管理 + 播放控制（线程安全）
-  streamer.py     流生成器：歌单流 / 在线转播流 + ICY 元数据 + 多码率 / 录音
+  streamer.py     流生成器：歌单流（歌单/musickit 渲染件）+ ICY 元数据 + 多码率 / 录音
   hls.py          HLS 直播切片（D1）：ABR 主/变播放列表生成 + ffmpeg 调用
   transcoder.py   ffmpeg 转码基础设施（B 层：转码 / 挂载点 / jingle / 录音）
   metadata.py     本地标签 + 内嵌封面读取（C1，纯 mutagen）
@@ -105,22 +105,19 @@ run.py            启动入口（waitress / Flask 自动降级）
 requirements.txt  依赖
 music/            歌曲目录（传统歌单模式用；默认已由 musickit 随机渲染代替）
 render_cache/     musickit 随机渲染缓存（F 层，自动创建/清理，保留最近 20 首）
-presets.json      精选电台预设（可编辑：name / url / desc / icon）
 integrations.json 社群同步凭据（C3：discord_webhook / telegram_token / telegram_chat_id / enabled）
 expose.sh         外网穿透一键脚本（自动确认服务 + 选 ngrok / cloudflared，并把公网地址回写面板）
 jingle.mp3        开场台标音（占位音，可替换成你自己的；文件删除则跳过）
 recordings/       录音输出目录（B2 边播边录；C5 播客 RSS 源）
-extension/        Edge/Chrome MV3 浏览器扩展（popup + options + background，见 extension/README.md）
-experiments/      原始的 9 份探索稿（1.py~9.txt）备份，记录演进思路
 ffmpeg/          项目自带 ffmpeg 7.1 + ffprobe（转码 / 切片依赖，不依赖全局 PATH）
 hls/             HLS 切片输出目录（live.m3u8 主播放列表 + v_128k/v_64k 变播放列表 + seg_*.ts）
 hls_ffmpeg.log   ffmpeg 切片进程 stderr（排查切片问题）
 ```
 
-> `experiments/` 里是整合前的零散尝试：
-> `1.py` Icecast+libshout 推流 · `2.py` FFmpeg 推流 · `3/8.py` 控制 API ·
-> `4/5.py` Flask 歌单流 · `6.py` 麦克风直播 · `7.py` ICY 头 · `9.txt` 本地+网络电台调研。
-> 现在它们都被收敛进上面这套统一程序里了。
+> 整合前的零散尝试（`1.py` Icecast+libshout 推流 · `2.py` FFmpeg 推流 · `3/8.py` 控制 API ·
+> `4/5.py` Flask 歌单流 · `6.py` 麦克风直播 · `7.py` ICY 头 · `9.txt` 本地+网络电台调研）
+> 已于 2026-08-23 移入统一归档区（gitee siwpan/private-radio-stations 的 archived 分支，
+> `python-radio-experiments/`）。
 
 ---
 
@@ -135,9 +132,6 @@ hls_ffmpeg.log   ffmpeg 切片进程 stderr（排查切片问题）
 | POST | `/api/pause`     | 暂停 / 继续 |
 | POST | `/api/shuffle`   | 切换随机播放 |
 | POST | `/api/rescan`    | 重新扫描歌单 |
-| POST | `/api/relay`     | 开始转播 `{"url":"...","name":"..."}`（name 可选，用于 ICY 显示）|
-| POST | `/api/relay/stop`| 停止转播 |
-| GET  | `/api/browse`    | 搜索全球电台 `?q=关键词&limit=20`（Radio-Browser.info）|
 | GET  | `/stream/<k>`    | 多码率挂载点，`k` ∈ {64, 320}（转码到该码率 MP3）|
 | POST | `/api/record`    | 录音开关 `{"action":"start"｜"stop"}`（开启后广播录成 MP3）|
 | GET  | `/api/meta`      | 当前/指定本地曲目标签 `?path=`（C1，title/artist/album）|
@@ -196,19 +190,10 @@ hls_ffmpeg.log   ffmpeg 切片进程 stderr（排查切片问题）
 
 ---
 
-## 🧩 浏览器扩展（Edge / Chrome）
+## 🧩 浏览器扩展
 
-`extension/` 目录是一个 **Manifest V3** 扩展，把控制面板装进浏览器工具栏：
-正在播放（封面/标签）+ 歌词同步高亮 + 播放控制 + 一键发布到 Discord/Telegram。
-**同一套代码 Edge 与 Chrome 通吃**（都是 Chromium 内核，MV3 完全一致），无需分别打包。
-
-加载步骤（详见 [`extension/README.md`](extension/README.md)）：
-
-- **Edge**：`edge://extensions` → 开发人员模式 → 加载解压缩的扩展 → 选 `extension/` 目录
-- **Chrome**：`chrome://extensions` → 开发者模式 → 加载已解压的扩展程序 → 选 `extension/` 目录
-
-加载后右键图标 → 选项，填服务器地址（默认 `http://localhost:8000`）+ Discord/Telegram 凭据即可。
-后端已对 `/api/*` 开放 CORS（`Access-Control-Allow-Origin: *`），扩展 popup 可直接跨域 fetch。
+原 `extension/`（转播控制为核心的 MV3 扩展）已随转播功能剥离归档；
+替代品见 Node.js 版项目（`D:\private-radio-stations-2.0\extension`，对齐其 3.0 API）。
 
 ---
 
@@ -217,7 +202,5 @@ hls_ffmpeg.log   ffmpeg 切片进程 stderr（排查切片问题）
 - 每个听众独立读取音频文件（非共享广播缓冲），人数多时磁盘 IO 略高；
   可加一个共享环形缓冲升级为“真广播”。
 - 暂停是“挂起连接”，客户端缓冲耗尽后会自然停；恢复了接着播。
-- 转播模式下切换需要听众刷新 / 重连（因协议结构不同）。
-- 麦克风直播源（`live.py` 思路，来自 `experiments/6.py`）需要本机 ffmpeg，默认未启用。
-- `mms://` 直播地址是 legacy 协议，纯 Python 服务无法转播（需 ffmpeg 转封装）；ESP32 等嵌入式设备请选 **http(s) 的 MP3 直链**（浏览结果里带 `ESP32✓` 标）。
+- 麦克风直播源（`live.py` 思路，见归档区 python-radio-experiments/6.py）需要本机 ffmpeg，默认未启用。
 - HLS 自适应在**切片边界**才切换码率，弱网时最多滞后一个切片（2 s）才降档；quick-tunnel 刚启动可能有几秒 `530`（“origin not ready” 暖机），重试即恢复。

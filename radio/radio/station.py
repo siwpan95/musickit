@@ -42,12 +42,9 @@ class RadioStation:
         self.volume = 80      # 输出音量（百分比，0-100）
         self.next_event = threading.Event()
 
-        self.mode = config.DEFAULT_SOURCE    # 'playlist' | 'relay' | 'musickit'
+        self.mode = config.DEFAULT_SOURCE    # 'playlist' | 'musickit'
         # F 层：musickit 随机渲染源（代替本地 music/ 歌单）
         self.musickit = musickit_source.MusickitSource(self)
-        self.relay_urls = []      # D4 多源 failover：转播源列表
-        self.relay_index = 0      # 当前使用的源索引（失败自动切下一个）
-        self.relay_url = ""       # 兼容属性：当前正在用的源 URL（= relay_urls[relay_index]）
 
         self.current_title = ""
         self.listeners = 0
@@ -59,9 +56,8 @@ class RadioStation:
         self.track_start = time.time()   # C2 同步歌词：当前曲开始时刻
         self._pause_elapsed = 0.0        # 暂停时冻结的已播秒数
 
-        self.history = collections.deque(maxlen=50)   # 最近播放（本地+转播）
+        self.history = collections.deque(maxlen=50)   # 最近播放
         self.requests = []                            # 点歌队列（歌单内曲名）
-        self._relay_failures = 0                      # 转播连续失败计数（用于自动回退）
 
         self.recording = False                        # B2 是否正在录音
         self.recording_path = ""                      # B2 当前录音文件绝对路径
@@ -163,57 +159,11 @@ class RadioStation:
                 self.requests.insert(0, idx)
         return True
 
-    def set_relay(self, url, name=None):
-        """开始转播。url 可以是单个字符串或字符串列表（D4 多源 failover）。"""
-        urls = url if isinstance(url, (list, tuple)) else [url]
-        urls = [u for u in urls if u]
-        if not urls:
-            return
-        with self.lock:
-            self.mode = "relay"
-            self.relay_urls = urls
-            self.relay_index = 0
-            self.relay_url = urls[0]   # 兼容现有读取
-            self._relay_failures = 0
-            self.current_title = name or f"转播：{urls[0]}"
-            self.record_history(self.current_title)
-        self.notify_track(None, self.current_title, "relay")
-
-    def current_relay_url(self):
-        """当前正在使用的转播源 URL（多源 failover 时按索引取）。"""
-        with self.lock:
-            if not self.relay_urls:
-                return ""
-            idx = min(self.relay_index, len(self.relay_urls) - 1)
-            return self.relay_urls[idx]
-
-    def advance_relay_url(self):
-        """当前源失败时切到下一个；成功切到返回 True，已是最后一个返回 False。"""
-        with self.lock:
-            if self.relay_index + 1 < len(self.relay_urls):
-                self.relay_index += 1
-                self.relay_url = self.relay_urls[self.relay_index]
-                self._relay_failures = 0
-                self.current_title = f"转播（源{self.relay_index + 1}/{len(self.relay_urls)}）：{self.relay_url}"
-                self.record_history(self.current_title)
-                return True
-            return False
-
-    def stop_relay(self):
-        with self.lock:
-            self.mode = config.DEFAULT_SOURCE
-            self.relay_url = ""
-            self.relay_urls = []
-            self.relay_index = 0
-            self.next_event.set()   # 触发切回默认音源
-
     # ---------- F 层：musickit 随机渲染源 ----------
     def start_musickit(self, channel=None, bars=None):
         """切到 musickit 随机渲染源：启动预渲染线程，广播者等第一首渲染完即开播。"""
         with self.lock:
             self.mode = "musickit"
-            self.relay_url = ""
-            self.relay_urls = []
             self.musickit.start(channel=channel, bars=bars)
             if not self.current_title or self.current_title.startswith("（"):
                 self.current_title = "随机渲染准备中（首曲约 15~30 秒）…"
@@ -370,9 +320,6 @@ class RadioStation:
                 "listeners": self.listeners,
                 "playlist_size": len(self.playlist),
                 "musickit": self.musickit.status(),
-                "relay_url": self.relay_url,
-                "relay_urls": list(self.relay_urls),
-                "relay_index": self.relay_index,
                 "history": list(self.history),
                 "requests": list(self.requests),
                 "playlist": [os.path.basename(p) for p in self.playlist],

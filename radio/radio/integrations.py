@@ -119,9 +119,6 @@ def _derive_artist(path, title, mode):
             return metadata.get_meta(path).get("artist")
         except Exception:
             return None
-    if mode == "relay" and title and " - " in title:
-        artist, _ = title.split(" - ", 1)
-        return artist
     return None
 
 

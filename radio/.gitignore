@@ -30,3 +30,5 @@ radio-apk/local.properties
 # ---------- Python ----------
 __pycache__/
 *.py[cod]
+# 本地虚拟环境
+.venv/

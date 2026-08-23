@@ -14,15 +14,11 @@
   POST /api/play            继续播放 [需登录]
   POST /api/shuffle         随机播放开关 [需登录]
   POST /api/rescan          重新扫描歌单 [需登录]
-  POST /api/relay           开始转播某个网络电台 URL [需登录]
-  POST /api/relay/stop      停止转播 [需登录]
   POST /api/musickit        musickit 随机渲染源 开始/停止/参数 [需登录]
   GET  /api/upload/progress/<task_id>  上传进度
   POST /api/upload          上传音乐文件 [需登录]
   GET  /api/files           列出音乐文件 [需登录]
   DELETE /api/files/<name>  删除音乐文件 [需登录]
-  GET  /api/presets         电台预设列表
-  POST /api/presets/switch  切换电台预设 [需登录]
 """
 import json
 import os
@@ -33,9 +29,8 @@ from flask import Flask, Response, request, jsonify, render_template, send_file,
 
 from . import config
 from .station import RadioStation
-from .streamer import playlist_stream, relay_stream, mount_stream
+from .streamer import playlist_stream, mount_stream
 from .mp3info import probe_audio
-from .directory import search as rb_search
 from . import transcoder
 from . import metadata
 from . import lyrics
@@ -46,7 +41,6 @@ from . import schedule
 from . import stats
 from . import auth
 from . import uploads
-from . import presets
 from . import api_docs
 
 station = RadioStation()
@@ -58,9 +52,6 @@ auth.register_routes(app)
 
 # ── 上传模块注册 ──
 uploads.register_routes(app)
-
-# ── 电台预设模块注册 ──
-presets.register_routes(app)
 
 # ── API 文档模块注册 ──
 app.register_blueprint(api_docs.docs_bp)
@@ -90,23 +81,6 @@ try:
 except Exception:
     pass
 
-_PRESETS_PATH = os.path.join(
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "presets.json"
-)
-
-def load_presets():
-    """读取 presets.json 里的精选电台预设（每项 {name,url,desc?,icon?}）。
-    文件缺失或格式错误时返回 []，不阻断主程序。每次请求都读，改完刷新页面即生效。"""
-    try:
-        with open(_PRESETS_PATH, encoding="utf-8") as f:
-            data = json.load(f)
-    except Exception:
-        return []
-    if not isinstance(data, list):
-        return []
-    return [p for p in data if isinstance(p, dict) and p.get("url")]
-
-
 _PUBLIC_URL_PATH = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public_url.txt"
 )
@@ -126,7 +100,7 @@ def read_public_url():
 def _make_stream_response(gen, metaint, force_mp3=False, br=None):
     # Content-Type 必须和真实格式一致，否则浏览器/播放器解码失败 → 没声音
     ctype = "audio/mpeg"
-    if not force_mp3 and station.mode != "relay":
+    if not force_mp3:
         p = station.current_path()
         if p:
             ctype = probe_audio(p)["ctype"]
@@ -166,7 +140,6 @@ def index():
         "index.html",
         station=station.station_name,
         genre=station.genre,
-        presets=load_presets(),
         public_url=read_public_url(),
         logged_in=session.get("logged_in", False),
     )
@@ -178,12 +151,7 @@ def stream():
     wants_meta = request.headers.get("Icy-MetaData", "").strip() == "1"
     recording = station.recording
 
-    if station.mode == "relay":
-        # 转播路径始终输出 MP3（转码或已是 mp3），force_mp3 保证 Content-Type 正确
-        # D2：订阅广播者（relay 录音由广播者 tee）
-        return _make_stream_response(relay_stream(station, 0, _broadcaster), 0, force_mp3=True)
-
-    # 歌单模式
+    # 本地音源模式（歌单 / musickit 随机渲染）
     if recording:
         # 录音时强制转码成固定 MP3，保证录制文件干净（不再带 ICY 元数据）
         # 录音走 per-listener mount_stream（转码 + tee），不共享广播者
@@ -273,89 +241,10 @@ def api_repeat():
     return jsonify({"ok": True, "repeat": rp})
 
 
-@app.route("/api/relay", methods=["POST"])
-@auth.api_login_required
-def api_relay():
-    if request.is_json:
-        body = request.json or {}
-        url = body.get("url")
-        urls = body.get("urls")   # D4 多源 failover
-        name = body.get("name")
-    else:
-        url = request.form.get("url")
-        urls = None
-        name = request.form.get("name")
-    # D4 多源：urls 列表优先，其次单 url
-    target = urls if urls else url
-    if not target:
-        return jsonify({"ok": False, "error": "缺少 url 或 urls"}), 400
-    station.set_relay(target, name)
-    return jsonify({"ok": True, "url": station.current_relay_url(),
-                    "sources": len(station.relay_urls)})
-
-
-@app.route("/api/browse")
-def api_browse():
-    """搜索 Radio-Browser.info 全球电台目录。"""
-    q = request.args.get("q", "").strip()
-    if not q:
-        return jsonify({"ok": True, "stations": []})
-    stations = rb_search(q)
-    return jsonify({"ok": True, "stations": stations})
-
-
 @app.route("/api/public-url")
 def api_public_url():
     """返回 expose.sh 写回的公网穿透地址（没有则返回 {"url": null}）。"""
     return jsonify({"url": read_public_url()})
-
-
-@app.route("/api/favorites", methods=["POST"])
-@auth.api_login_required
-def api_add_favorite():
-    """把当前转播 / 浏览到的电台收藏到 presets.json（去重 + 原子写）。"""
-    if request.is_json:
-        body = request.json or {}
-    else:
-        body = request.form or {}
-    url = (body.get("url") or "").strip()
-    name = (body.get("name") or "").strip() or url
-    desc = (body.get("desc") or "").strip()
-    icon = (body.get("icon") or "").strip()
-    if not url:
-        return jsonify({"ok": False, "error": "缺少 url"}), 400
-    try:
-        try:
-            with open(_PRESETS_PATH, encoding="utf-8") as f:
-                data = json.load(f)
-        except Exception:
-            data = []
-        if not isinstance(data, list):
-            data = []
-        # 按 url 去重
-        if any((p.get("url") or "").strip() == url for p in data if isinstance(p, dict)):
-            return jsonify({"ok": True, "dup": True, "count": len(data)})
-        entry = {"name": name, "url": url}
-        if desc:
-            entry["desc"] = desc
-        if icon:
-            entry["icon"] = icon
-        data.append(entry)
-        # 原子写：先写临时文件再替换，避免写到一半崩溃损坏
-        tmp = _PRESETS_PATH + ".tmp"
-        with open(tmp, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        os.replace(tmp, _PRESETS_PATH)
-    except Exception as e:
-        return jsonify({"ok": False, "error": str(e)}), 500
-    return jsonify({"ok": True, "count": len(data)})
-
-
-@app.route("/api/relay/stop", methods=["POST"])
-@auth.api_login_required
-def api_relay_stop():
-    station.stop_relay()
-    return jsonify({"ok": True})
 
 
 @app.route("/api/musickit", methods=["POST"])
@@ -418,7 +307,7 @@ def api_request():
 def api_meta():
     """返回当前/指定本地歌曲的标签。?path= 可选；缺省取正在播放的本地文件。"""
     path = request.args.get("path") or station.current_path()
-    if not path or station.mode == "relay":
+    if not path:
         return jsonify({})
     return jsonify(metadata.get_meta(path))
 
@@ -427,7 +316,7 @@ def api_meta():
 def api_cover():
     """返回当前/指定本地歌曲的封面：本地内嵌优先，无则查 iTunes（E3，零密钥）。"""
     path = request.args.get("path") or station.current_path()
-    if not path or station.mode == "relay":
+    if not path:
         return ("", 404)
     cov = metadata.get_cover_smart(path)
     if not cov:
@@ -439,15 +328,9 @@ def api_cover():
 @app.route("/api/lyrics")
 def api_lyrics():
     """C2 歌词：本地 LRC 优先，失败回退 LRCLIB（keyless）。
-    ?path= 指定文件；缺省取当前曲。relay 模式尝试用标题解析 'Artist - Title'。"""
+    ?path= 指定文件；缺省取当前曲。"""
     path = request.args.get("path") or station.current_path()
-    if not path or station.mode == "relay":
-        t = station.current_title or ""
-        artist, title = "", t
-        if " - " in t:
-            artist, title = t.split(" - ", 1)
-        if title:
-            return jsonify(lyrics.get_lyrics(title=title.strip(), artist=artist.strip()))
+    if not path:
         return jsonify({})
     meta = metadata.get_meta(path)
     return jsonify(lyrics.get_lyrics(
@@ -575,14 +458,6 @@ def api_request_clear():
     return jsonify({"ok": True})
 
 
-# ── 收藏电台（旧的 /api/presets 重定向为 /api/favorites） ──
-
-@app.route("/api/favorites", methods=["GET"])
-def api_list_favorites():
-    """列出已收藏的电台。"""
-    return jsonify({"ok": True, "favorites": load_presets()})
-
-
 # ---------- D4：网络监控（健康检查 + 听众日志）----------
 
 @app.route("/api/health")
@@ -608,11 +483,10 @@ def api_health():
         "uptime": s["uptime"],
         "playlist_size": s["playlist_size"],
         "recording": s["recording"],
-        "relay_sources": len(s.get("relay_urls", [])),
         "public_url": pub,
         "disk": disk,
         "hls": hls.status(),
-        # 转播/切片能力诊断：新机器克隆仓库常见缺失（ffmpeg 二进制、可选 requests）
+        # 切片能力诊断：新机器克隆仓库常见缺失（ffmpeg 二进制）
         "ffmpeg": transcoder.ffmpeg_available(),
         "ffmpeg_path": config.FFMPEG,
         "deps": {

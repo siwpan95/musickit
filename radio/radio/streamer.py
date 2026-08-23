@@ -1,10 +1,12 @@
-"""流生成器：把歌单变成持续不断的音频流。
+"""流生成器：把本地音源变成持续不断的音频流。
 
-- playlist_stream：本地歌单流，支持 ICY 元数据（让播放器显示 “正在播放”）。
-- relay_stream：转播另一个网络电台（代理其 HTTP 音频流）。
+- playlist_stream：本地歌单流（歌单 / musickit 随机渲染共用），支持 ICY 元数据
+  （让播放器显示 “正在播放”）。
 
 节奏控制：根据文件比特率（MP3 帧头嗅探）计算每秒应发送的字节数，
 让客户端平滑缓冲，而不是一瞬间灌满。
+（转播 relay 功能已于 2026-08-23 剥离，见 private-radio-stations 仓库的
+legacy-python/relay-archive-20260823）
 """
 import queue
 import time
@@ -55,66 +57,6 @@ def playlist_stream(station, metaint=0, broadcaster=None):
         broadcaster.unsubscribe(q)
 
 
-def relay_stream(station, metaint=0, broadcaster=None):
-    """D2 共享广播：订阅广播者 queue（relay 始终 metaint=0，不插 ICY 元数据）。
-    录音由广播者侧 tee（relay chunk 已是 MP3）；多源 failover 由广播者处理。"""
-    if broadcaster is None:
-        return
-    q = broadcaster.subscribe()
-    try:
-        while True:
-            try:
-                chunk = q.get(timeout=30)
-            except queue.Empty:
-                continue
-            yield chunk
-    except GeneratorExit:
-        pass
-    finally:
-        broadcaster.unsubscribe(q)
-            # 否则（passthrough 自己已处理）回到顶部重试
-
-
-def _relay_transcoded(station, url, bitrate):
-    """转码分支：ffmpeg 把远程流转成固定 MP3。模式切走即停。"""
-    for chunk in transcoder.transcode(url, bitrate):
-        if station.mode != "relay":
-            break
-        yield chunk
-
-
-def _relay_passthrough(station, url):
-    """直连分支：原样代理远程 MP3 流（保留原有节奏控制与失败回退）。
-
-    纯标准库（urllib）实现：不依赖 requests。"""
-    bytes_per_sec = config.DEFAULT_BITRATE * 1000 / 8
-    try:
-        r = transcoder.http_open(url, timeout=12)
-        with station.lock:
-            station._relay_failures = 0   # 连上了，清零失败计数
-        while True:
-            chunk = r.read(config.CHUNK_SIZE)
-            if station.mode != "relay":
-                break
-            if not chunk:
-                break
-            yield chunk
-            time.sleep(len(chunk) / bytes_per_sec)
-    except Exception:
-        with station.lock:
-            station._relay_failures += 1
-            fails = station._relay_failures
-        if fails >= 3:
-            # D4 多源 failover：先切下一个源，全断才回退本地
-            if station.advance_relay_url():
-                return   # 结束本生成器，relay_stream 顶部取新源继续
-            station.set_title("全部转播源中断，已自动回退到本地歌单")
-            station.record_history(station.current_title)
-            station.stop_relay()
-        else:
-            time.sleep(2.0)
-
-
 def _pace(gen, bitrate, prebuffer=1.0, max_drift=5.0):
     """按目标码率节流，让挂载点表现得像真正的直播流。
 
@@ -151,9 +93,7 @@ def mount_stream(station, bitrate, record_path=None):
     while True:
         with station.lock:
             mode = station.mode
-        if mode == "relay":
-            gen = _relay_transcoded(station, station.relay_url, bitrate)
-        elif mode == "musickit":
+        if mode == "musickit":
             gen = _musickit_transcoded(station, bitrate)
         else:
             gen = _playlist_transcoded(station, bitrate)

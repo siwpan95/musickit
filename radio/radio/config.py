@@ -36,8 +36,8 @@ ICY_METAINT = 8192
 # 推流块大小（客户端不要元数据时）
 CHUNK_SIZE = 4096
 
-# 是否启用 “在线转播” 功能（需要 requests 库）
-ENABLE_RELAY = True
+# 注：在线转播（relay）功能已于 2026-08-23 剥离，移交 Node.js 版
+# （D:\private-radio-stations-2.0）；存档见 private-radio-stations 仓库 legacy-python/relay-archive-20260823
 
 # 直播源（麦克风）需要本机有 ffmpeg，默认关闭
 ENABLE_MIC = False
@@ -61,7 +61,6 @@ def _bundled_bin(name):
 FFMPEG = _bundled_bin("ffmpeg")
 FFPROBE = _bundled_bin("ffprobe")
 
-TRANSCODE_RELAY = True        # 转播非 MP3 流（AAC/OGG 等）时自动转码成固定 MP3
 TRANSCODE_BITRATE = 128       # 转码目标码率（kbps）—— 同时解决“老客户端/ESP32 无声”
 TRANSCODE_MOUNTS = (64, 320)  # 多码率挂载点（额外 /stream/<bitrate>：手机省流量 / WiFi 高音质）
 
