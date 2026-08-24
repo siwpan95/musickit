@@ -60,7 +60,7 @@ python G:\music\musickit\radio\run.py --expose lhr   # 同上但用 localhost.ru
 打开浏览器：
 
 - 控制面板：<http://localhost:8000/>
-- 直接收听：<http://localhost:8000/stream>（VLC 打开这个地址）
+- 直接收听：<http://localhost:8000/stream>（VLC 打开这个地址；需要 `.mp3` 扩展名的播放器/硬件用 <http://localhost:8000/stream.mp3>）
 - HLS 原生收听：<http://localhost:8000/hls/live.m3u8>（Safari / iPhone / Android 播放在线广播 App 直接打开，支持多码率自适应）
 
 > `--expose` 会自动启动 cloudflared quick tunnel，公网地址写回面板（面板自动显示可复制分享）。
@@ -126,7 +126,7 @@ hls_ffmpeg.log   ffmpeg 切片进程 stderr（排查切片问题）
 | 方法 | 路径 | 说明 |
 |------|------|------|
 | GET  | `/`              | 控制面板网页 |
-| GET  | `/stream`        | 音频流（支持 `Icy-MetaData: 1` 元数据）|
+| GET  | `/stream`        | 音频流（支持 `Icy-MetaData: 1` 元数据）；别名 `/stream.mp3` 供按扩展名识别音频的播放器/硬件使用 |
 | GET  | `/api/status`    | 当前状态 JSON |
 | POST | `/api/next`      | 下一首 |
 | POST | `/api/pause`     | 暂停 / 继续 |
