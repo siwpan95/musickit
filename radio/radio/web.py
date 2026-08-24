@@ -146,7 +146,9 @@ def index():
 
 
 @app.route("/stream")
+@app.route("/stream.mp3")
 def stream():
+    """主音频流。别名 /stream.mp3 供按扩展名识别音频的播放器/硬件使用。"""
     # 客户端声明支持 ICY 元数据，且当前是歌单模式（且未录音），才插入元数据
     wants_meta = request.headers.get("Icy-MetaData", "").strip() == "1"
     recording = station.recording
