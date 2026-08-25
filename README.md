@@ -121,3 +121,11 @@ mixer_styles.py 参数化（逐总线 EQ/压缩/饱和/混响/宽度 + 风格母
 `git`（gitee 仓库 `siwpan/music` 分支 `musickit`，本地同步工作区 `G:\music\_gitee_push\music`）：
 素材音频不入库（仅各池 `manifest.json`），代码 / 文档 / manifest 全部跟踪；
 成品 wav/mp3、_stretch_cache/、prompt_mixes/、remix/output/ 由 .gitignore 排除。
+
+
+---
+
+## 仓库索引标注（2026-08-25 · siwpan 统一治理）
+
+> musickit + 电台融合实验（RADIO_MERGE.md）；本地 G:\music\musickit。
+> 本标注为发布面统一追加，不改变原有内容。
