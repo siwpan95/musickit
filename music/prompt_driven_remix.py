@@ -445,7 +445,33 @@ def main():
                    help="发布安全模式：仅用授权层级为 free/pack 的素材（restricted/unknown 剔除）")
     p.add_argument("--report", type=str, default=None,
                    help="把 提示词->输出文件 的对照写进该 JSON")
+    # S3 声明式入口：风格池插件清单（style_plugin 协议）
+    p.add_argument("--list-styles", action="store_true",
+                   help="列出风格池插件清单（声明式入口，不混音）")
     args = p.parse_args()
+
+    if args.list_styles:
+        from style_plugin import StyleRegistry
+        reg = StyleRegistry()
+        reg.load_all()
+        for d in reg.dump():
+            print("  %-22s v%s  %-12s %s  (%d 子类)" % (d["key"], d["version"], d["bpm"], d["label"], d["subgenres"]))
+        print("共 %d 个风格插件" % len(reg))
+        return 0
+
+    # S3：-c 风格 key 校验（fail-loud：未知 key 当场点名并给建议）
+    if args.category:
+        from style_plugin import StyleRegistry
+        reg = StyleRegistry()
+        reg.load_all()
+        if not reg.has(args.category):
+            import difflib
+            guess = difflib.get_close_matches(args.category, reg.keys, n=3)
+            print("[style_plugin] 未知风格 key '%s'，可用（前 5）：%s ..." % (args.category, ", ".join(reg.keys[:5])),
+                  file=sys.stderr)
+            if guess:
+                print("[style_plugin] 你是指：%s？" % ", ".join(guess), file=sys.stderr)
+            return 2
 
     # 取提示词
     if args.prompt_json:
@@ -526,4 +552,4 @@ if __name__ == "__main__":
         sys.stderr.reconfigure(encoding="utf-8")
     except Exception:
         pass
-    main()
+    sys.exit(main())
