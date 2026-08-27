@@ -50,3 +50,8 @@ burbidge_album/test_clip.wav
 # remix 根目录的外部参考音频（外部歌曲，不入库）
 remix/*.flac
 remix/*.mp3
+
+# 打包输出（PyInstaller / Inno Setup）
+dist/
+build/
+installer/
