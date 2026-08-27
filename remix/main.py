@@ -664,13 +664,52 @@ def main():
         help="混音师风格着色（burbidge/ghenea/clearmountain/marroquin/pensado/blake/"
              "lordalge/schmitt/mikedean/stent/random；默认不启用，保持原 phonk 处理链）",
     )
+    parser.add_argument("--tasks", action="store_true", help="审计任务事件日志（<输出目录>/pipeline.log）")
+    parser.add_argument("--limit", type=int, default=100, help="--tasks 显示条数")
+    parser.add_argument("--json", action="store_true", help="--tasks JSON 输出")
     args = parser.parse_args()
 
+    if args.tasks:
+        from pipelog import PipelineLog
+        _out = args.out or os.path.join(_PROJECT_ROOT, "output")
+        _log_path = os.path.join(_out, "pipeline.log")
+        if not os.path.isfile(_log_path):
+            print(f"[tasks] 无任务日志: {_log_path}")
+            return
+        _entries = PipelineLog(_log_path).read(limit=args.limit)
+        if args.json:
+            print(json.dumps(_entries, ensure_ascii=False, indent=2))
+            return
+        print(f"任务日志 {_log_path}（最近 {len(_entries)} 条）：")
+        for _e in _entries:
+            _extra = " ".join(f"{k}={v}" for k, v in _e.items()
+                              if k not in ("seq", "ts", "type", "stage", "run_id"))
+            print(f"  #{_e['seq']} {_e['ts']} [{_e['type']}] {_extra}")
+        _runs = sorted({_e.get("run_id") for _e in _entries if _e.get("run_id")})
+        _errs = [_e for _e in _entries if _e["type"] == "stage_error"]
+        print(f"  涉及运行 {len(_runs)} 次，阶段错误 {len(_errs)} 条")
+        return
+
     if args.remix:
-        run_remix(count=args.count, seed=args.seed, out_dir=args.out,
-                  fmt=args.format, bars=args.bars, bpm=args.bpm,
-                  structure=args.structure, release_safe=args.release_safe,
-                  mixer_style=args.mixer_style)
+        # ── 任务事件日志（日志即事实源，<输出目录>/pipeline.log） ──
+        from pipelog import PipelineLog
+        _out_dir = args.out or os.path.join(_PROJECT_ROOT, "output")
+        tasklog = PipelineLog(os.path.join(_out_dir, "pipeline.log"))
+        run_id = PipelineLog.new_run_id()
+        tasklog.append("run_start", run_id=run_id, count=args.count, seed=args.seed,
+                       bars=args.bars, bpm=args.bpm, structure=args.structure,
+                       release_safe=args.release_safe, mixer_style=args.mixer_style)
+        try:
+            result = run_remix(count=args.count, seed=args.seed, out_dir=args.out,
+                               fmt=args.format, bars=args.bars, bpm=args.bpm,
+                               structure=args.structure, release_safe=args.release_safe,
+                               mixer_style=args.mixer_style)
+        except Exception as _exc:
+            tasklog.append("stage_error", stage="remix", run_id=run_id, error=str(_exc)[:300])
+            tasklog.append("run_end", run_id=run_id, ok=False, errors=1)
+            raise
+        tasklog.append("stage_done", stage="remix", run_id=run_id, output=str(result))
+        tasklog.append("run_end", run_id=run_id, ok=True, errors=0)
         return
 
     # 默认启动图形界面
