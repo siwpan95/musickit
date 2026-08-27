@@ -1,4 +1,4 @@
-﻿# G:\repos\musickit — phonk 混音项目（真实采样 + 本地混音引擎）
+# G:\repos\musickit — phonk 混音项目（真实采样 + 本地混音引擎）
 
 > 端口登记（2026-08-24）：mixer 流服务 **8010**（remix/tools）已登记于 `G:\docs\md\allin主工作区\端口分配表.md`；remix 任务日志审计 `python remix/main.py --tasks --out <目录>`。
 
@@ -120,14 +120,15 @@ mixer_styles.py 参数化（逐总线 EQ/压缩/饱和/混响/宽度 + 风格母
 
 ## 版本控制
 
-`git`（gitee 仓库 `siwpan/musickit` 分支 `master`，本地同步工作区 `G:\local\music-gitee-push`）：
+`git`（gitee 仓库 `siwpan/musickit` 分支 `master`，本地同步工作区 `G:\repos\musickit`）：
 素材音频不入库（仅各池 `manifest.json`），代码 / 文档 / manifest 全部跟踪；
 成品 wav/mp3、_stretch_cache/、prompt_mixes/、remix/output/ 由 .gitignore 排除。
 
 
 ---
 
-## 仓库索引标注（2026-08-25 · siwpan 统一治理）
+## 仓库索引标注（2026-08-27 · siwpan 统一治理）
 
-> musickit + 电台融合实验（RADIO_MERGE.md）；本地 G:\repos\musickit。
+> musickit（phonk 混音项目，独立仓 siwpan/musickit）；本地对应 G:\repos\musickit。
+> 电台融合实验记录见 RADIO_MERGE.md（历史）；提示词生成器为独立仓 siwpan/music-prompt-generator。
 > 本标注为发布面统一追加，不改变原有内容。
