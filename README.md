@@ -1,133 +1,133 @@
-# G:\music\musickit — phonk 混音项目（真实采样 + 本地混音引擎）
+﻿# G:\repos\musickit 鈥?phonk 娣烽煶椤圭洰锛堢湡瀹為噰鏍?+ 鏈湴娣烽煶寮曟搸锛?
 
-> 端口登记（2026-08-24）：mixer 流服务 **8010**（remix/tools）已登记于 `G:\docs\md\allin主工作区\端口分配表.md`；remix 任务日志审计 `python remix/main.py --tasks --out <目录>`。
+> 绔彛鐧昏锛?026-08-24锛夛細mixer 娴佹湇鍔?**8010**锛坮emix/tools锛夊凡鐧昏浜?`G:\docs\md\allin涓诲伐浣滃尯\绔彛鍒嗛厤琛?md`锛況emix 浠诲姟鏃ュ織瀹¤ `python remix/main.py --tasks --out <鐩綍>`銆?
 
-## 目录结构
+## 鐩綍缁撴瀯
 
 ```
 musickit/
-├── bass/          # 贝斯：整曲 stem（radio/csmusic）+ 免费包 loop/one-shot（sub_bass/808 等子类）
-├── drum/          # 鼓：整曲 stem + 打击 one-shot/loop（drums_acoustic/percussion/hihat 等子类）
-├── guita/         # 旋律轨：Demucs other 轨（有意当吉他轨，项目约定）+ 真吉他 loop 包
-├── cowbell/       # 牛铃 one-shot（Mixkit）
-├── synth/         # 合成器 loop/one-shot（SampleRadar 等，100% 真实采样）
-├── acapella/      # 真人声池（Coollider Acapellas Vol.1-42 + vocal_chops 人声切片包）
-├── animal/        # 动物叫声 one-shot（随机混音的人声切片替代层，不再混入人声包）
-├── sfx/           # riser/impact/过渡音效（Mixkit + 采样包）
-├── keys/          # 钢琴/风琴/手风琴/竖琴/钟琴（含 loop 与单音采样，单音仅作回退）
-├── strings/       # 弦乐（bowed 等）
-├── brass/         # 铜管/萨克斯
-├── woodwind/      # 木管/笛箫（大量单音采样；旋律层选音优先 loop，见下）
-├── ethnic/        # 民族乐器（拨弦/拉弦/打击）
-├── archived/      # 🗑️ 垃圾桶/归档区：只进不出（见 archived/README.md）
-├── music/         # 风格提示词生成器（65 流派风格池）+ 提示词→混音桥接器
-├── burbidge_album/# 固定风格专辑管线：同一 stems × 24 位混音师签名链（mixer_styles.py）
-├── remix/         # 混音应用（main.py + core/gui/utils/tools/tests + 内置 ffmpeg）
-│                   # tools/ 含混音师电台 mixer_radio.py 与本地流服务 mixer_stream.py
-├── instrument_taxonomy.json   # 规范乐器分类体系：242 乐器词 → 37 类目 → 13 池
-├── manifest_index.json        # 总索引（自动化每 6h 重建，不入版本库）
-└── README.md / INTEGRATION.md / EVALUATION_REPORT.md / FIX_PLAN.md /
+鈹溾攢鈹€ bass/          # 璐濇柉锛氭暣鏇?stem锛坮adio/csmusic锛? 鍏嶈垂鍖?loop/one-shot锛坰ub_bass/808 绛夊瓙绫伙級
+鈹溾攢鈹€ drum/          # 榧擄細鏁存洸 stem + 鎵撳嚮 one-shot/loop锛坉rums_acoustic/percussion/hihat 绛夊瓙绫伙級
+鈹溾攢鈹€ guita/         # 鏃嬪緥杞細Demucs other 杞紙鏈夋剰褰撳悏浠栬建锛岄」鐩害瀹氾級+ 鐪熷悏浠?loop 鍖?
+鈹溾攢鈹€ cowbell/       # 鐗涢搩 one-shot锛圡ixkit锛?
+鈹溾攢鈹€ synth/         # 鍚堟垚鍣?loop/one-shot锛圫ampleRadar 绛夛紝100% 鐪熷疄閲囨牱锛?
+鈹溾攢鈹€ acapella/      # 鐪熶汉澹版睜锛圕oollider Acapellas Vol.1-42 + vocal_chops 浜哄０鍒囩墖鍖咃級
+鈹溾攢鈹€ animal/        # 鍔ㄧ墿鍙０ one-shot锛堥殢鏈烘贩闊崇殑浜哄０鍒囩墖鏇夸唬灞傦紝涓嶅啀娣峰叆浜哄０鍖咃級
+鈹溾攢鈹€ sfx/           # riser/impact/杩囨浮闊虫晥锛圡ixkit + 閲囨牱鍖咃級
+鈹溾攢鈹€ keys/          # 閽㈢惔/椋庣惔/鎵嬮鐞?绔栫惔/閽熺惔锛堝惈 loop 涓庡崟闊抽噰鏍凤紝鍗曢煶浠呬綔鍥為€€锛?
+鈹溾攢鈹€ strings/       # 寮︿箰锛坆owed 绛夛級
+鈹溾攢鈹€ brass/         # 閾滅/钀ㄥ厠鏂?
+鈹溾攢鈹€ woodwind/      # 鏈ㄧ/绗涚锛堝ぇ閲忓崟闊抽噰鏍凤紱鏃嬪緥灞傞€夐煶浼樺厛 loop锛岃涓嬶級
+鈹溾攢鈹€ ethnic/        # 姘戞棌涔愬櫒锛堟嫧寮?鎷夊鸡/鎵撳嚮锛?
+鈹溾攢鈹€ archived/      # 馃棏锔?鍨冨溇妗?褰掓。鍖猴細鍙繘涓嶅嚭锛堣 archived/README.md锛?
+鈹溾攢鈹€ music/         # 椋庢牸鎻愮ず璇嶇敓鎴愬櫒锛?5 娴佹淳椋庢牸姹狅級+ 鎻愮ず璇嶁啋娣烽煶妗ユ帴鍣?
+鈹溾攢鈹€ burbidge_album/# 鍥哄畾椋庢牸涓撹緫绠＄嚎锛氬悓涓€ stems 脳 24 浣嶆贩闊冲笀绛惧悕閾撅紙mixer_styles.py锛?
+鈹溾攢鈹€ remix/         # 娣烽煶搴旂敤锛坢ain.py + core/gui/utils/tools/tests + 鍐呯疆 ffmpeg锛?
+鈹?                  # tools/ 鍚贩闊冲笀鐢靛彴 mixer_radio.py 涓庢湰鍦版祦鏈嶅姟 mixer_stream.py
+鈹溾攢鈹€ instrument_taxonomy.json   # 瑙勮寖涔愬櫒鍒嗙被浣撶郴锛?42 涔愬櫒璇?鈫?37 绫荤洰 鈫?13 姹?
+鈹溾攢鈹€ manifest_index.json        # 鎬荤储寮曪紙鑷姩鍖栨瘡 6h 閲嶅缓锛屼笉鍏ョ増鏈簱锛?
+鈹斺攢鈹€ README.md / INTEGRATION.md / EVALUATION_REPORT.md / FIX_PLAN.md /
     MUBERT_RESEARCH.md / MUBERT_METHODOLOGY.md / MUBERT_COMPARISON.md
 ```
 
-## 素材授权（license_tier，写入各池 manifest.json）
+## 绱犳潗鎺堟潈锛坙icense_tier锛屽啓鍏ュ悇姹?manifest.json锛?
 
-| tier | 含义 | 混音默认 | --release-safe |
+| tier | 鍚箟 | 娣烽煶榛樿 | --release-safe |
 |------|------|---------|----------------|
-| `free` | 可免费商用（Mixkit、MusicRadar SampleRadar） | ✅ 用 | ✅ 用 |
-| `pack` | 商业采样包（EULA 允许音乐制作与发布成品；样本勿转售） | ✅ 用 | ✅ 用 |
-| `restricted` | 商业歌曲 Demucs stem / 粉丝提取游戏音乐（仅个人练习与研究） | ✅ 用（个人用途） | ❌ 剔除 |
-| `unknown` | 来源未记录 | ✅ 用（个人用途） | ❌ 剔除 |
+| `free` | 鍙厤璐瑰晢鐢紙Mixkit銆丮usicRadar SampleRadar锛?| 鉁?鐢?| 鉁?鐢?|
+| `pack` | 鍟嗕笟閲囨牱鍖咃紙EULA 鍏佽闊充箰鍒朵綔涓庡彂甯冩垚鍝侊紱鏍锋湰鍕胯浆鍞級 | 鉁?鐢?| 鉁?鐢?|
+| `restricted` | 鍟嗕笟姝屾洸 Demucs stem / 绮変笣鎻愬彇娓告垙闊充箰锛堜粎涓汉缁冧範涓庣爺绌讹級 | 鉁?鐢紙涓汉鐢ㄩ€旓級 | 鉂?鍓旈櫎 |
+| `unknown` | 鏉ユ簮鏈褰?| 鉁?鐢紙涓汉鐢ㄩ€旓級 | 鉂?鍓旈櫎 |
 
-- 授权治理脚本：`remix/tools/tag_license_tiers.py`（标注 tier + 补全 license，备份在
-  `archived/manifest_backup_20260817/`）、`remix/tools/audit_licenses.py`（巡检分布）。
-- **发布前请用 `--release-safe` 跑一次**：它只从 free/pack 素材选音，
-  彻底避开商业歌曲 stem 与来源不明素材。
+- 鎺堟潈娌荤悊鑴氭湰锛歚remix/tools/tag_license_tiers.py`锛堟爣娉?tier + 琛ュ叏 license锛屽浠藉湪
+  `archived/manifest_backup_20260817/`锛夈€乣remix/tools/audit_licenses.py`锛堝贰妫€鍒嗗竷锛夈€?
+- **鍙戝竷鍓嶈鐢?`--release-safe` 璺戜竴娆?*锛氬畠鍙粠 free/pack 绱犳潗閫夐煶锛?
+  褰诲簳閬垮紑鍟嗕笟姝屾洸 stem 涓庢潵婧愪笉鏄庣礌鏉愩€?
 
-## 混音（remix）
+## 娣烽煶锛坮emix锛?
 
 ```bash
-（cd remix）
-python G:\music\musickit\remix\main.py --remix                                          # 默认 3 轨骨架、32 小节、BPM 随机
-python G:\music\musickit\remix\main.py --remix --count 5 --bars 64 --bpm 140 --format wav
-python G:\music\musickit\remix\main.py --remix --structure classic_drop --seed 42 --out output
-python G:\music\musickit\remix\main.py --remix --release-safe                           # 发布安全模式（仅 free/pack 素材）
-python G:\music\musickit\remix\main.py --remix --mixer-style wallace                    # 混音师风格着色（24 位，见下）
+锛坈d remix锛?
+python G:\repos\musickit\remix\main.py --remix                                          # 榛樿 3 杞ㄩ鏋躲€?2 灏忚妭銆丅PM 闅忔満
+python G:\repos\musickit\remix\main.py --remix --count 5 --bars 64 --bpm 140 --format wav
+python G:\repos\musickit\remix\main.py --remix --structure classic_drop --seed 42 --out output
+python G:\repos\musickit\remix\main.py --remix --release-safe                           # 鍙戝竷瀹夊叏妯″紡锛堜粎 free/pack 绱犳潗锛?
+python G:\repos\musickit\remix\main.py --remix --mixer-style wallace                    # 娣烽煶甯堥鏍肩潃鑹诧紙24 浣嶏紝瑙佷笅锛?
 
 usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm BPM]
                [--structure STRUCTURE] [--out OUT] [--format {wav,mp3,ogg,flac}]
-               [--release-safe] [--mixer-style {24位混音师slug|random}]
+               [--release-safe] [--mixer-style {24浣嶆贩闊冲笀slug|random}]
 ```
 
-**选音规则（2026-08-17 起）**：
+**閫夐煶瑙勫垯锛?026-08-17 璧凤級**锛?
 
-- 骨架层（drum/bass/guita）**保底挑选 ≥1 小节的 loop/stem**（manifest 时长优先，
-  未知时长则 stem 命名优先 + ffprobe 抽样探测），混音时强制循环层——
-  杜绝 one-shot 被抽成唯一鼓轨导致整曲失去律动；
-- 牛铃/synth/animal/sfx 为点缀层（各最多 1 条）；输出 >12 小节时按曲式模板编排
-  intro→drop→outro，A/B 变体防单调；
-- 整曲 stem → 能量峰定位切 1~2 小节 loop；源 BPM 已知或可估计时 atempo 对齐（钳制 0.85~1.18）；
-- 输出文件名同秒冲突自动递增（`_1/_2`），不会覆盖旧产物；
-- `MUSICKIT_ROOT` 环境变量可覆盖素材根目录。
+- 楠ㄦ灦灞傦紙drum/bass/guita锛?*淇濆簳鎸戦€?鈮? 灏忚妭鐨?loop/stem**锛坢anifest 鏃堕暱浼樺厛锛?
+  鏈煡鏃堕暱鍒?stem 鍛藉悕浼樺厛 + ffprobe 鎶芥牱鎺㈡祴锛夛紝娣烽煶鏃跺己鍒跺惊鐜眰鈥斺€?
+  鏉滅粷 one-shot 琚娊鎴愬敮涓€榧撹建瀵艰嚧鏁存洸澶卞幓寰嬪姩锛?
+- 鐗涢搩/synth/animal/sfx 涓虹偣缂€灞傦紙鍚勬渶澶?1 鏉★級锛涜緭鍑?>12 灏忚妭鏃舵寜鏇插紡妯℃澘缂栨帓
+  intro鈫抎rop鈫抩utro锛孉/B 鍙樹綋闃插崟璋冿紱
+- 鏁存洸 stem 鈫?鑳介噺宄板畾浣嶅垏 1~2 灏忚妭 loop锛涙簮 BPM 宸茬煡鎴栧彲浼拌鏃?atempo 瀵归綈锛堥挸鍒?0.85~1.18锛夛紱
+- 杈撳嚭鏂囦欢鍚嶅悓绉掑啿绐佽嚜鍔ㄩ€掑锛坄_1/_2`锛夛紝涓嶄細瑕嗙洊鏃т骇鐗╋紱
+- `MUSICKIT_ROOT` 鐜鍙橀噺鍙鐩栫礌鏉愭牴鐩綍銆?
 
-测试：`python -m pytest tests -q`（**112 passed, 1 skipped**）；快速档 `python -m pytest tests -q -m smoke`
-（16 个纯逻辑用例）。Python 3.13+ 需 `audioop-lts`；混音师风格链需 `scipy` + `soundfile`（均已在 requirements.txt）。
+娴嬭瘯锛歚python -m pytest tests -q`锛?*112 passed, 1 skipped**锛夛紱蹇€熸。 `python -m pytest tests -q -m smoke`
+锛?6 涓函閫昏緫鐢ㄤ緥锛夈€侾ython 3.13+ 闇€ `audioop-lts`锛涙贩闊冲笀椋庢牸閾鹃渶 `scipy` + `soundfile`锛堝潎宸插湪 requirements.txt锛夈€?
 
-## 提示词驱动混音（来自 G:\music\musickit\music，同仓整合）
+## 鎻愮ず璇嶉┍鍔ㄦ贩闊筹紙鏉ヨ嚜 G:\repos\musickit\music锛屽悓浠撴暣鍚堬級
 
-`G:\music\musickit\music\prompt_driven_remix.py` 把风格提示词经
-`instrument_taxonomy.json`（242 词 → 37 类目）映射为本引擎调用：
+`G:\repos\musickit\music\prompt_driven_remix.py` 鎶婇鏍兼彁绀鸿瘝缁?
+`instrument_taxonomy.json`锛?42 璇?鈫?37 绫荤洰锛夋槧灏勪负鏈紩鎿庤皟鐢細
 
-- 乐器词 → 池 + 角色：鼓/贝斯角色与引擎同口径**保底 ≥1 小节 loop**；
-  旋律层（keys/strings/brass/woodwind/ethnic/guita/synth）**优先 loop/BPM 显式素材**、
-  排除单音采样（如 "EHn_susDyn_..._D3"），最后才全量回退；
-- 无样本/无匹配的乐器记入 `gaps`，绝不假映射；
-- 曲式模板选择规则外置在 `structure_moods.json`（改词表无需改代码）；
-- 支持 `--release-safe`（与引擎同口径过滤）。
+- 涔愬櫒璇?鈫?姹?+ 瑙掕壊锛氶紦/璐濇柉瑙掕壊涓庡紩鎿庡悓鍙ｅ緞**淇濆簳 鈮? 灏忚妭 loop**锛?
+  鏃嬪緥灞傦紙keys/strings/brass/woodwind/ethnic/guita/synth锛?*浼樺厛 loop/BPM 鏄惧紡绱犳潗**銆?
+  鎺掗櫎鍗曢煶閲囨牱锛堝 "EHn_susDyn_..._D3"锛夛紝鏈€鍚庢墠鍏ㄩ噺鍥為€€锛?
+- 鏃犳牱鏈?鏃犲尮閰嶇殑涔愬櫒璁板叆 `gaps`锛岀粷涓嶅亣鏄犲皠锛?
+- 鏇插紡妯℃澘閫夋嫨瑙勫垯澶栫疆鍦?`structure_moods.json`锛堟敼璇嶈〃鏃犻渶鏀逛唬鐮侊級锛?
+- 鏀寔 `--release-safe`锛堜笌寮曟搸鍚屽彛寰勮繃婊わ級銆?
 
-## 固定风格专辑与混音师频道（burbidge_album）
+## 鍥哄畾椋庢牸涓撹緫涓庢贩闊冲笀棰戦亾锛坆urbidge_album锛?
 
-burbidge_album/ 是固定风格管线：同一组 stems × **24 位混音师签名链**（burbidge /
+burbidge_album/ 鏄浐瀹氶鏍肩绾匡細鍚屼竴缁?stems 脳 **24 浣嶆贩闊冲笀绛惧悕閾?*锛坆urbidge /
 ghenea / clearmountain / marroquin / pensado / blake / lordalge / schmitt / mikedean /
 stent / wallace / maserati / joshua / ali / elmhirst / scheps / moulder / guzauski /
-albini / everett / elevado / shebib / power / zhoutianche），每位经共享模块
-mixer_styles.py 参数化（逐总线 EQ/压缩/饱和/混响/宽度 + 风格母带），两条管线共用：
+albini / everett / elevado / shebib / power / zhoutianche锛夛紝姣忎綅缁忓叡浜ā鍧?
+mixer_styles.py 鍙傛暟鍖栵紙閫愭€荤嚎 EQ/鍘嬬缉/楗卞拰/娣峰搷/瀹藉害 + 椋庢牸姣嶅甫锛夛紝涓ゆ潯绠＄嚎鍏辩敤锛?
 
-- 专辑：python burbidge_album/build_album.py（全量）或 ... wallace maserati（增量）
-  → album/<slug>/ 成品 + 试听页；album/channels.json 为 24 频道目录；
-- 随机混音接入：python main.py --remix --mixer-style joshua
-  或 python music/prompt_driven_remix.py --mixer-style random；
-- 频道形态（类 Mubert）：python remix/tools/mixer_radio.py --channel wallace --count 3
-  （本地电台，输出 m3u8）；python remix/tools/mixer_stream.py --port 8010
-  （本地无限流：/api/channels /api/stream/<slug> /api/track/<slug>）。
+- 涓撹緫锛歱ython burbidge_album/build_album.py锛堝叏閲忥級鎴?... wallace maserati锛堝閲忥級
+  鈫?album/<slug>/ 鎴愬搧 + 璇曞惉椤碉紱album/channels.json 涓?24 棰戦亾鐩綍锛?
+- 闅忔満娣烽煶鎺ュ叆锛歱ython main.py --remix --mixer-style joshua
+  鎴?python music/prompt_driven_remix.py --mixer-style random锛?
+- 棰戦亾褰㈡€侊紙绫?Mubert锛夛細python remix/tools/mixer_radio.py --channel wallace --count 3
+  锛堟湰鍦扮數鍙帮紝杈撳嚭 m3u8锛夛紱python remix/tools/mixer_stream.py --port 8010
+  锛堟湰鍦版棤闄愭祦锛?api/channels /api/stream/<slug> /api/track/<slug>锛夈€?
 
-设计与 Mubert 的异同及频道可行性详见 MUBERT_COMPARISON.md，整合总览见 INTEGRATION.md。
+璁捐涓?Mubert 鐨勫紓鍚屽強棰戦亾鍙鎬ц瑙?MUBERT_COMPARISON.md锛屾暣鍚堟€昏瑙?INTEGRATION.md銆?
 
-## 采样源（与 license_tier 对应）
+## 閲囨牱婧愶紙涓?license_tier 瀵瑰簲锛?
 
-| 源 | 内容 | tier |
+| 婧?| 鍐呭 | tier |
 |----|------|------|
-| `G:\music\radio_music_stems` | 商业歌曲 Demucs 分离 stem（bass/drum/guita 编号 1~258） | restricted |
-| `G:\music\csmusic_stems` | CS 游戏音乐粉丝提取 stem（编号 >=726，自动化并入） | restricted |
-| `G:\BaiduNetdiskDownload` | 商业采样包（Black Octopus/XAM/Singomakers/Loopmasters 等） | pack |
-| Mixkit / MusicRadar SampleRadar | 免费可商用素材 | free |
+| `G:\assets\radio_music_stems` | 鍟嗕笟姝屾洸 Demucs 鍒嗙 stem锛坆ass/drum/guita 缂栧彿 1~258锛?| restricted |
+| `G:\assets\csmusic_stems` | CS 娓告垙闊充箰绮変笣鎻愬彇 stem锛堢紪鍙?>=726锛岃嚜鍔ㄥ寲骞跺叆锛?| restricted |
+| `G:\BaiduNetdiskDownload` | 鍟嗕笟閲囨牱鍖咃紙Black Octopus/XAM/Singomakers/Loopmasters 绛夛級 | pack |
+| Mixkit / MusicRadar SampleRadar | 鍏嶈垂鍙晢鐢ㄧ礌鏉?| free |
 
-## archived 定位（固化）
+## archived 瀹氫綅锛堝浐鍖栵級
 
-`archived/` 是项目的**垃圾桶/归档区**：只进不出、不参与混音、移动而非删除
-（记录在 `dedupe_manifest.json` / `moved_vocal_packs_*.json` / `manifest_backup_*/`）。
-详见 `archived/README.md`。
+`archived/` 鏄」鐩殑**鍨冨溇妗?褰掓。鍖?*锛氬彧杩涗笉鍑恒€佷笉鍙備笌娣烽煶銆佺Щ鍔ㄨ€岄潪鍒犻櫎
+锛堣褰曞湪 `dedupe_manifest.json` / `moved_vocal_packs_*.json` / `manifest_backup_*/`锛夈€?
+璇﹁ `archived/README.md`銆?
 
-## 版本控制
+## 鐗堟湰鎺у埗
 
-`git`（gitee 仓库 `siwpan/music` 分支 `musickit`，本地同步工作区 `G:\music\_gitee_push\music`）：
-素材音频不入库（仅各池 `manifest.json`），代码 / 文档 / manifest 全部跟踪；
-成品 wav/mp3、_stretch_cache/、prompt_mixes/、remix/output/ 由 .gitignore 排除。
+`git`锛坓itee 浠撳簱 `siwpan/music` 鍒嗘敮 `musickit`锛屾湰鍦板悓姝ュ伐浣滃尯 `G:\local\music-gitee-push`锛夛細
+绱犳潗闊抽涓嶅叆搴擄紙浠呭悇姹?`manifest.json`锛夛紝浠ｇ爜 / 鏂囨。 / manifest 鍏ㄩ儴璺熻釜锛?
+鎴愬搧 wav/mp3銆乢stretch_cache/銆乸rompt_mixes/銆乺emix/output/ 鐢?.gitignore 鎺掗櫎銆?
 
 
 ---
 
-## 仓库索引标注（2026-08-25 · siwpan 统一治理）
+## 浠撳簱绱㈠紩鏍囨敞锛?026-08-25 路 siwpan 缁熶竴娌荤悊锛?
 
-> musickit + 电台融合实验（RADIO_MERGE.md）；本地 G:\music\musickit。
-> 本标注为发布面统一追加，不改变原有内容。
+> musickit + 鐢靛彴铻嶅悎瀹為獙锛圧ADIO_MERGE.md锛夛紱鏈湴 G:\repos\musickit銆?
+> 鏈爣娉ㄤ负鍙戝竷闈㈢粺涓€杩藉姞锛屼笉鏀瑰彉鍘熸湁鍐呭銆?
