@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<full-backup-content>
-    <!-- 备份服务器地址配置，卸载重装后保留 -->
-    <include domain="sharedpref" path="radio_apk_prefs.xml" />
-</full-backup-content>
