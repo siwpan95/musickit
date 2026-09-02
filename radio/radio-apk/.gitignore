@@ -1,0 +1,9 @@
+# Build output goes here (gitignore typical Android artifacts)
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/

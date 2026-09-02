@@ -1,5 +1,13 @@
 # 📻 radio 并入 musickit —— 合并说明
 
+> **2026-09-02 还原记录**：radio/ 曾于 2026-08-27（93db08f）被整体移出，理由
+> 「电台已迁 private-radio-stations 架构化线」。事后核查：Node 线（apps/audio）
+> 是**转播版 Relay Only**（只转播外部流、无 musickit 音源，本地歌单/排程等已移除），
+> 并未接任 radio 的**直播端**（musickit 随机渲染 → 推流）。判定把「电台」整体当冗余，
+> 漏拆了「转播 vs 直播」两个功能面——直播端无接任者，管线输出真空。
+> 现从历史 `93db08f~1` 还原 radio/（纯代码，py_compile 19/19 通过）；
+> 与 private-radio-stations apps/audio（转播）并存，非冗余。
+
 原 `G:\music\radio` 已整体并入 `G:\music\musickit\radio\`（2026-08-20）。
 
 ## 音源变化

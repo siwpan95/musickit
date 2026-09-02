@@ -24,6 +24,9 @@ musickit/
 ├── burbidge_album/# 固定风格专辑管线：同一 stems × 24 位混音师签名链（mixer_styles.py）
 ├── remix/         # 混音应用（main.py + core/gui/utils/tools/tests + 内置 ffmpeg）
 │                   # tools/ 含混音师电台 mixer_radio.py 与本地流服务 mixer_stream.py
+├── radio/         # 📻 电台输出端（管线终点）：纯 Python+Flask 24/7 推流，
+│                   # 默认音源=musickit 随机渲染；2026-09-02 从历史 93db08f~1 还原，
+│                   # 与 private-radio-stations apps/audio（Node 转播版）并存
 ├── instrument_taxonomy.json   # 规范乐器分类体系：242 乐器词 → 37 类目 → 13 池
 ├── manifest_index.json        # 总索引（自动化每 6h 重建，不入版本库）
 └── README.md / INTEGRATION.md / EVALUATION_REPORT.md / FIX_PLAN.md /
@@ -130,5 +133,7 @@ mixer_styles.py 参数化（逐总线 EQ/压缩/饱和/混响/宽度 + 风格母
 ## 仓库索引标注（2026-08-27 · siwpan 统一治理）
 
 > musickit（phonk 混音项目，独立仓 siwpan/musickit）；本地对应 G:\repos\musickit。
-> 电台融合实验记录见 RADIO_MERGE.md（历史）；提示词生成器为独立仓 siwpan/music-prompt-generator。
+> 电台融合实验记录见 RADIO_MERGE.md；提示词生成器为独立仓 siwpan/music-prompt-generator。
+> **2026-09-02**：radio/ 直播端已从历史还原（93db08f~1）——此前被误判冗余移除；它与
+> private-radio-stations apps/audio（Node **转播版**）功能面不同（直播 vs 转播），非冗余，并存。
 > 本标注为发布面统一追加，不改变原有内容。

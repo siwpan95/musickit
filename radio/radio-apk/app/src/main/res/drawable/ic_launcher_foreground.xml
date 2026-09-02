@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 自适应图标前景：唱片样式（呼应控制面板中心旋转唱片） -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 唱片外圈 -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M54,18 A36,36 0 1,1 53.99,18 Z" />
+    <!-- 唱片纹路（三道圈） -->
+    <path android:strokeColor="#00E5FF" android:strokeWidth="1.2" android:fillColor="#00000000"
+        android:pathData="M54,28 A26,26 0 1,1 53.99,28 Z" />
+    <path android:strokeColor="#FF6F61" android:strokeWidth="1.2" android:fillColor="#00000000"
+        android:pathData="M54,34 A20,20 0 1,1 53.99,34 Z" />
+    <path android:strokeColor="#00E5FF" android:strokeWidth="1" android:fillColor="#00000000"
+        android:pathData="M54,42 A12,12 0 1,1 53.99,42 Z" />
+    <!-- 中心标签 -->
+    <path android:fillColor="#FF6F61"
+        android:pathData="M54,48 A6,6 0 1,1 53.99,48 Z" />
+    <!-- 中心孔 -->
+    <path android:fillColor="#0F0F1E"
+        android:pathData="M54,52 A2,2 0 1,1 53.99,52 Z" />
+</vector>
