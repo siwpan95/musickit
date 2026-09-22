@@ -246,6 +246,8 @@ class AudioLoader:
         output_path: str,
         fmt: str | None = None,
         bitrate: str | None = None,
+        codec: str | None = None,
+        parameters: list[str] | None = None,
     ) -> str:
         """导出音频到文件。
 
@@ -254,6 +256,10 @@ class AudioLoader:
             output_path: 目标路径。
             fmt: 格式（"wav"/"mp3"/"ogg"/"flac"）。为 None 时从后缀推断。
             bitrate: 码率（仅对 mp3/ogg 等有效），如 "192k"。
+            codec: 显式编码器（如 "pcm_s24le"）。注意：pydub 内部无法真正持有
+                24-bit PCM（`set_sample_width(3)` 会被静默升为 32-bit），
+                要导出真 24-bit WAV 必须显式指定编码器以走 ffmpeg 路径。
+            parameters: 追加到 ffmpeg 命令末尾的原始参数。
 
         Returns:
             实际输出路径。
@@ -269,6 +275,10 @@ class AudioLoader:
         export_kw = {"format": fmt}
         if bitrate and fmt in ("mp3", "ogg", "aac"):
             export_kw["bitrate"] = bitrate
+        if codec:
+            export_kw["codec"] = codec
+        if parameters:
+            export_kw["parameters"] = parameters
 
         segment.export(output_path, **export_kw)
         return output_path

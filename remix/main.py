@@ -46,6 +46,26 @@ _BUNDLED_FFPROBE = os.path.join(_BIN_DIR, "ffprobe.exe" if sys.platform == "win3
 pydub.AudioSegment.converter = _BUNDLED_FFMPEG
 pydub.AudioSegment.ffprobe = _BUNDLED_FFPROBE
 
+# =========================================================================
+# 发布级交付规格（2026-09-17 起生效，面向网易云音乐）
+#   平台要求：码率 > 320 kbps、采样率 > 44.1 kHz、单文件 < 200 MB。
+#   有损编码上限就是 mp3 320 kbps，永远达不到「> 320 kbps」，
+#   因此对外交付一律走无损（默认 WAV）。
+#   默认交付：WAV / 48 kHz / 24 bit / 立体声 = 2304 kbps；120s ≈ 34.6 MB。
+# =========================================================================
+DELIVERY_SPEC = {
+    "sample_rate": 48000,
+    "bit_depth": 24,
+    "channels": 2,
+    "max_size_mb": 200,
+}
+LOSSLESS_FORMATS = {"wav", "flac"}
+# 有损兜底：仍导出时给到该格式的上限码率（mp3/ogg/aac 最高 320k）
+LOSSY_BITRATE = {"mp3": "320k", "ogg": "320k", "aac": "320k"}
+
+# 引擎版本：影响声音的实现变更必须递增（会记入每首的 recipe.engine，便于漂移归因）
+REMIX_VERSION = "2.1.0"
+
 from core.loop_slicer import bar_ms, duration_ms  # noqa: E402
 
 
@@ -169,6 +189,51 @@ def _style_segment(seg, style, irs, bus_key, ms):
     x = _seg_to_np(seg)
     y = ms.bus_chain(x, style[bus_key], irs, apply_level=False)
     return _np_to_seg(y)
+
+
+def _apply_delivery_spec(segment, fmt: str,
+                         sample_rate: int | None = None,
+                         bit_depth: int | None = None,
+                         channels: int | None = None):
+    """把混合好的段落规格化到「发布级交付格式」。
+
+    无损（wav/flac）用 48 kHz / 24 bit；有损（mp3/ogg/aac）用 48 kHz / 16 bit
+    + 上限码率。返回 ``(segment, spec)``，``spec`` 含 sample_rate / bit_depth /
+    channels / codec / kbps。
+
+    ⚠️ pydub 的 ``set_sample_width(3)`` 会被静默升成 32-bit（实测），所以 24-bit
+    只能靠导出时显式指定 ``pcm_s24le`` 编码器实现，不能直接靠 set_sample_width。
+    """
+    fmt = (fmt or "wav").lower()
+    sr = int(sample_rate or DELIVERY_SPEC["sample_rate"])
+    ch = int(channels or DELIVERY_SPEC["channels"])
+    lossless = fmt in LOSSLESS_FORMATS
+    depth = int(bit_depth or DELIVERY_SPEC["bit_depth"]) if lossless else 16
+
+    codec = None
+    parameters = None
+    if fmt == "wav":
+        codec = {16: "pcm_s16le", 24: "pcm_s24le", 32: "pcm_s32le"}.get(depth, "pcm_s24le")
+    elif fmt == "flac":
+        # FLAC 位深由输入采样格式决定：>=24bit 时把 ffmpeg 输入抬到 s32
+        # （FLAC 编码器最高支持到 24/32bit 样本）
+        parameters = ["-sample_fmt", "s32"] if depth >= 24 else None
+
+    if not lossless or depth != 16:
+        # 有损固定 16bit；无损 24/32bit 由 ffmpeg 编码器决定最终位深
+        segment = segment.set_channels(ch)
+    else:
+        segment = segment.set_channels(ch).set_sample_width(2)
+    segment = segment.set_frame_rate(sr)
+
+    return segment, {
+        "sample_rate": sr,
+        "bit_depth": depth,
+        "channels": ch,
+        "codec": codec,
+        "parameters": parameters,
+        "kbps": round(sr * depth * ch / 1000.0, 1),
+    }
 
 
 def _collect_category_files(category_dir: str) -> list[str]:
@@ -360,6 +425,131 @@ def _load_structures() -> dict:
         }
 
 
+def _sha256_file(path: str) -> str | None:
+    """文件 sha256（失败返回 None，不抛异常）。"""
+    try:
+        import hashlib
+
+        h = hashlib.sha256()
+        with open(path, "rb") as fh:
+            for chunk in iter(lambda: fh.read(1 << 20), b""):
+                h.update(chunk)
+        return h.hexdigest()
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def engine_fingerprint() -> dict:
+    """引擎指纹：任何一处实现漂移都能被日后比对发现（复现失败时先看这里）。"""
+    return {
+        "remix_version": REMIX_VERSION,
+        "main_py_sha256": _sha256_file(os.path.abspath(__file__)),
+        "structures_json_sha256": _sha256_file(
+            os.path.join(_PROJECT_ROOT, "templates", "structures.json")),
+        "mixer_styles_py_sha256": _sha256_file(
+            os.path.join(_MUSICKIT_ROOT, "burbidge_album", "mixer_styles.py")),
+    }
+
+
+def _rel_to_root(path: str | None) -> str | None:
+    """把绝对路径转成相对 MUSICKIT_ROOT 的 posix 风格相对路径（便于跨机复现）。"""
+    if not path:
+        return None
+    try:
+        return os.path.relpath(os.path.abspath(path), _MUSICKIT_ROOT).replace("\\", "/")
+    except Exception:  # noqa: BLE001
+        return path
+
+
+def _curve_digest(curve) -> dict | None:
+    """逐小节增益曲线太长，落库时存摘要（sha1 + 极值 + 长度）即可精确比对。"""
+    if not curve:
+        return None
+    import hashlib
+
+    vals = [round(float(v), 4) for v in curve]
+    return {
+        "n": len(vals),
+        "sha1": hashlib.sha1(",".join(f"{v:.4f}" for v in vals).encode()).hexdigest()[:16],
+        "min": min(vals),
+        "max": max(vals),
+    }
+
+
+def build_recipe(*, seed, count, bpm, bars, st_name, st, sections, fade_out_bars,
+                 tracks, materials, role_gain, variant_every, style,
+                 release_safe, mixer_style, peak_dbfs) -> dict:
+    """把「这次到底用了什么」完整落库，供日后精确复现与漂移诊断。
+
+    背景：2026-09-17 重渲历史产物时，早期 genre 流水线的条目虽存了 seed/tracks，
+    仍无法复现（与原型包络相关仅 0.09）——配方没记全，事后无从归因。
+    自本版起每次渲染都持久化：输入参数 + 实际选曲 + 编排（段落/增益/变体/曲线摘要）
+    + 混音师链 + 引擎指纹。
+    """
+    rec_tracks = []
+    for m in materials:
+        item = {
+            "cat": m.get("cat"),
+            "role": m.get("role"),
+            "rel": _rel_to_root(m.get("path")),
+            "gain_db": (None if m.get("gain_db") is None
+                        else round(float(m["gain_db"]), 3)),
+        }
+        if m.get("start_bar") is not None:
+            item["start_bar"], item["end_bar"] = m.get("start_bar"), m.get("end_bar")
+        if m.get("accent_every"):
+            item["accent_every"] = m.get("accent_every")
+        if m.get("variant_every_bars"):
+            item["variant_every_bars"] = m.get("variant_every_bars")
+        if m.get("seg_b") is not None:
+            item["has_variant_b"] = True
+        if m.get("gain_curve"):
+            item["gain_curve"] = _curve_digest(m.get("gain_curve"))
+        rec_tracks.append(item)
+
+    mixer_rec = None
+    if style:
+        mixer_rec = {
+            "slug": style.get("slug"), "name": style.get("name"),
+            "target_lufs": style.get("target_lufs"),
+            "buses": sorted({_MIXER_ROLE_TO_BUS[m["cat"]]
+                             for m in materials if _MIXER_ROLE_TO_BUS.get(m.get("cat"))}),
+        }
+
+    return {
+        "engine": engine_fingerprint(),
+        "inputs": {
+            "count": count, "seed": seed, "bpm": bpm, "bars": bars,
+            "structure": st_name, "release_safe": bool(release_safe),
+            "mixer_style": mixer_style,
+            "tracks_arg": sorted(_rel_to_root(p) or "" for _c, p in (tracks or [])) or None,
+        },
+        "structure": {
+            "name": st_name,
+            "template": st,
+            "sections": {k: list(v) for k, v in (sections or {}).items()},
+            "fade_out_bars": fade_out_bars,
+        },
+        "tracks": rec_tracks,
+        "constants": {"role_gain": role_gain, "variant_every": variant_every},
+        "mixer": mixer_rec,
+        "output": {"peak_dbfs": None if peak_dbfs is None else round(float(peak_dbfs), 3)},
+        "recipe_version": 1,
+    }
+
+
+def recipe_digest(recipe: dict) -> str | None:
+    """配方摘要（只覆盖影响声音的部分，忽略引擎指纹与输出路径），用于快速比对。"""
+    import hashlib
+
+    if not recipe:
+        return None
+    core = {k: recipe.get(k) for k in
+            ("inputs", "structure", "tracks", "constants", "mixer", "recipe_version")}
+    return hashlib.sha256(
+        json.dumps(core, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+
+
 def _resolve_sections(structure: dict, bars: int) -> tuple[dict, int]:
     """按模板与总小节数计算各层 (start_bar, end_bar) 与结尾淡出小节数。"""
     if bars < structure.get("min_bars", 13):
@@ -407,6 +597,10 @@ def run_remix(
     tracks: list[tuple[str, str]] | None = None,
     release_safe: bool = False,
     mixer_style: str | None = None,
+    sample_rate: int | None = None,
+    bit_depth: int | None = None,
+    bitrate: str | None = None,
+    recipe_out: dict | None = None,
 ) -> str:
     """执行一次 phonk 风格 loop 化混音（F1/F2/F3-v2：切 loop + 变速对齐 + 曲式模板编排）。
 
@@ -538,7 +732,9 @@ def run_remix(
         else:
             role = ROLE_ACCENT if len(seg) < bar else ROLE_LOOP
         target = ROLE_GAIN.get(cat, -15.0)
-        m = {"role": role, "cat": cat, "seg": seg, "gain_db": target - seg.dBFS}
+        # path 一并存下：配方落库要靠它记录「实际用了哪条素材」（build_recipe 用）
+        m = {"role": role, "cat": cat, "seg": seg, "path": path,
+             "gain_db": target - seg.dBFS}
         if cat == "sfx":
             m["accent_every"] = 4
         if cat in sections:
@@ -608,11 +804,41 @@ def run_remix(
         # 峰值归一化到 -1.5 dBFS（为 mp3/有损编码的过冲留 0.5dB 余量）
         mix = mix.apply_gain(-1.5 - mix.max_dBFS)
 
+    # ---------------------------------------------------------------------
+    # 编排配方落库：把本次实际使用的选曲/编排/风格/引擎指纹完整记录，
+    # 供日后精确复现与实现漂移归因（详见 build_recipe_docstring）。
+    # ---------------------------------------------------------------------
+    if recipe_out is not None:
+        recipe_out.clear()
+        recipe_out.update(build_recipe(
+            seed=seed, count=count, bpm=bpm, bars=bars, st_name=st_name, st=st,
+            sections=sections, fade_out_bars=fade_out, tracks=tracks,
+            materials=materials, role_gain=ROLE_GAIN, variant_every=VARIANT_EVERY,
+            style=style, release_safe=release_safe, mixer_style=mixer_style,
+            peak_dbfs=mix.max_dBFS,
+        ))
+        recipe_out["recipe_digest"] = recipe_digest(recipe_out)
+
+    # 交付规格：无损 48k/24bit（默认），有损 48k/16bit + 上限码率
+    mix, spec = _apply_delivery_spec(mix, fmt, sample_rate, bit_depth)
+    _bitrate = bitrate or LOSSY_BITRATE.get((fmt or "").lower())
     if out_dir is None:
         out_dir = os.path.join(_PROJECT_ROOT, "output")
     # 同秒冲突自动递增（_1/_2），杜绝两次快速运行互相覆盖
     output_path = make_unique_path(out_dir, "phonk_remix", "", fmt)
-    AudioLoader.export(mix, output_path, fmt=fmt)
+    AudioLoader.export(mix, output_path, fmt=fmt, bitrate=_bitrate,
+                       codec=spec["codec"], parameters=spec["parameters"])
+
+    print(f"[remix] 交付规格：{fmt.upper()} {spec['sample_rate']}Hz / {spec['bit_depth']}bit / "
+          f"{spec['channels']}ch ≈ {spec['kbps']:.0f} kbps"
+          + (f"（码率 {_bitrate}）" if _bitrate else ""))
+    if recipe_out is not None:
+        recipe_out["output"].update({
+            "path": output_path, "fmt": fmt,
+            "sample_rate": spec["sample_rate"], "bit_depth": spec["bit_depth"],
+            "codec": spec["codec"],
+            "duration_ms": int(duration_ms(output_path)),
+        })
 
     print(f"[remix] 混音完成（{len(mix) / 1000:.1f}s，{bpm}BPM x {bars} 小节），"
           f"已保存至：\n  {output_path}")

@@ -55,3 +55,15 @@ remix/*.mp3
 dist/
 build/
 installer/
+# 临时探针/干跑产物（2026-09-22 治理：本批已归档 G:\archive\musickit-scraps-20260922）
+/_inv*
+/_scan*
+/_merge*
+/_docs_scan.json
+/_*_out.txt
+/_*_log.txt
+/_merged_memory.md
+/remix/_dry*.txt
+/remix/_env_probe*
+/remix/_hourly_*.txt
+/remix/_run*.txt
