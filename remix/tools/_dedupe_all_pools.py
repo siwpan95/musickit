@@ -15,6 +15,10 @@ import collections
 from pathlib import Path
 
 _MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+# 2026-09-23 去本地化：删除清单改由 环境变量 DEDUPE_DEL_LIST → <工作区>/notpython/kontakt_transcode/ 推导
+# （原 G:\tools\kontakt_transcode 已失效；工作区 = 仓根的上两级）
+_DUP_LIST = Path(os.environ.get("DEDUPE_DEL_LIST")
+                 or (_MK_ROOT.parent.parent / "notpython" / "kontakt_transcode" / "alldup_del.txt"))
 
 MUSICKIT = str(_MK_ROOT)
 POOLS = ["bass", "drum", "guita", "cowbell", "synth", "acapella", "animal",
@@ -47,9 +51,10 @@ def main():
         for p in to_delete[:8]:
             print("  would delete:", p.replace(MUSICKIT, ""))
     elif lst:
-        with open(r"G:\notpython\kontakt_transcode\alldup_del.txt", "w", encoding="utf-8") as f:
+        _DUP_LIST.parent.mkdir(parents=True, exist_ok=True)
+        with open(_DUP_LIST, "w", encoding="utf-8") as f:
             f.write("\n".join(to_delete))
-        print("list written to G:\\tools\\kontakt_transcode\\alldup_del.txt")
+        print(f"list written to {_DUP_LIST}")
 
 
 if __name__ == "__main__":
