@@ -300,21 +300,21 @@ pytest tests/ -q -m smoke     # 快速冒烟档（纯逻辑用例，无 ffmpeg �
 
 ---
 
-## 提示词驱动混音（来自 G:\music\musickit\music，已整合进本项目）
+## 提示词驱动混音（来自 `<仓库根>/music/`，已整合进本项目）
 
-本引擎可被 **G:\music\musickit\music\prompt_driven_remix.py** 以「提示词」驱动：
+本引擎可被 **`<仓库根>/music/prompt_driven_remix.py`** 以「提示词」驱动：
 `music_prompt_generator` 生成的结构化提示词（乐器 / BPM / 情绪）经该桥接器映射为本引擎的
 `run_remix(tracks, bpm, structure)`，从而用真实素材产出混音。
 
-- 提示词里的 `instruments` → 经 `G:\music\musickit\instrument_taxonomy.json` 规范分类体系映射
+- 提示词里的 `instruments` → 经 `<仓库根>/instrument_taxonomy.json` 规范分类体系映射
   （music 工具 242 个乐器词 → 37 个规范类目 → musickit 池），**避免把不同乐器家族压进粗池**。
-  - 真人 **acapella 池**（`G:\music\musickit\acapella`，Coollider Acapellas）按 `vocal` 角色接入；
-  - 动物叫声已独立为 **animal 池**（`G:\music\musickit\animal`），不再冒充人声；
+  - 真人 **acapella 池**（`<仓库根>/acapella`，Coollider Acapellas）按 `vocal` 角色接入；
+  - 动物叫声已独立为 **animal 池**（`<仓库根>/animal`），不再冒充人声；
   - 钢琴/弦乐/铜管/笛箫/民族乐器等 musickit 无样本的类目会被跳过并记入 `gaps`，绝不假映射。
 - `bpm` → 混音目标速度
 - `moods` / `subgenre` → 曲式模板（`classic_drop` / `ambient_ghost` / `loop_stack`）
 
 运行桥接器需 `F:\Python314`（pydub + numpy + audioop-lts + scipy + soundfile），并把
-`MUSICKIT_ROOT` 指向 `G:\music\musickit`（桥接器已默认设置）。详见 `G:\music\musickit\music\prompt_driven_remix.py`。
+`MUSICKIT_ROOT` 指向 `<仓库根>`（桥接器已默认设置）。详见 `<仓库根>/music/prompt_driven_remix.py`。
 桥接器同样支持 `--mixer-style`（slug 或 random，random 时每条提示词配一位随机混音师，
 所用混音师写入 --report 的 mixer_style 字段）。

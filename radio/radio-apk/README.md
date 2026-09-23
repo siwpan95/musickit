@@ -1,6 +1,6 @@
-# 📻 Radio APK — 把 G:\music\radio 套壳成安卓应用
+# 📻 Radio APK — 把 `radio/` 电台套壳成安卓应用
 
-把 `G:\music\radio`（Flask 网络电台 + 网页控制面板）套壳成一个原生 Android APK。
+把 `radio/`（Flask 网络电台 + 网页控制面板）套壳成一个原生 Android APK。
 **后端代码一行不改**，APK 只是个高级浏览器，加载控制面板网页。
 
 ---
@@ -37,15 +37,15 @@ radio-apk/
 ## 🚀 构建 APK
 
 ### 前置
-- 已装 Android Studio 2026.1.2（在 `D:\andriod\`）
+- 已装 Android Studio 2026.1.2（在 `<Android Studio>\`）
 - 首次打开会自动下载 Android SDK + Gradle 8.10.2（约 2~3 GB，挂代理或国内镜像更快）
 
 ### 步骤
 1. 启动 Android Studio：
    ```
-   D:\andriod\bin\studio64.exe
+   <Android Studio>\bin\studio64.exe
    ```
-2. **Open** → 选 `C:\Users\13122\WorkBuddy\2026-07-18-21-01-31\radio-apk` 目录
+2. **Open** → 选本目录（`<仓库根>/radio/radio-apk`）
 3. 等 "Gradle Sync" 完成（首次会下载 SDK + Gradle + 依赖，10~30 分钟）
 4. 顶部菜单 **Build → Build Bundle(s)/APK(s) → Build APK(s)**
 5. 构建完成点通知栏 "locate" 链接，APK 在：
@@ -55,7 +55,7 @@ radio-apk/
 
 ### 命令行构建（可选，SDK 装好后）
 ```bash
-cd C:\Users\13122\WorkBuddy\2026-07-18-21-01-31\radio-apk
+cd radio/radio-apk                # 在仓库根执行，本目录即 radio-apk 工程
 ./gradlew assembleDebug
 # 产物同上
 ```

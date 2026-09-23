@@ -25,8 +25,8 @@
 ## 运行
 
 ```bash
-python G:\music\musickit\radio\run.py            # 默认即随机渲染，首曲约 15~30 秒渲染后开播
-python G:\music\musickit\radio\run.py --expose   # + cloudflared 公网穿透
+python radio/run.py            # 默认即随机渲染，首曲约 15~30 秒渲染后开播（在仓库根执行）
+python radio/run.py --expose   # + cloudflared 公网穿透
 ```
 
 引擎依赖（F:/Python314 已装）：pydub numpy scipy soundfile audioop-lts。

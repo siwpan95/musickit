@@ -5,7 +5,7 @@
 还能在网页上实时控制播放、看 “正在播放”。
 
 > 转播（relay）功能已于 2026-08-23 剥离并移交 Node.js 版
-> （D:\private-radio-stations-2.0，gitee siwpan/private-radio-stations 分支 3.0）；
+> （`private-radio-stations` 仓库，gitee siwpan/private-radio-stations 分支 3.0）；
 > 全套存档见该仓库 archived 分支的 python-radio-relay-20260823/。
 
 > 设计取舍：相比 Icecast + libshout 或 Cycast（需要 Cython 编译 / 独立服务），
@@ -17,7 +17,7 @@
 ## ✨ 功能
 
 - 🎵 **本地歌单流**：自动扫描 `music/` 目录，循环播放（支持 mp3/ogg/flac/wav）
-- 🎲 **musickit 随机渲染源（F 层）**：默认音源。由 `G:\music\musickit` 引擎实时渲染随机混音
+- 🎲 **musickit 随机渲染源（F 层）**：默认音源。由 `<仓库根>` 引擎实时渲染随机混音
   （随机混音师签名 × 随机流派提示词 × 随机 stems）代替本地 music/ 歌单，
   渲染好的 MP3 经广播者照常推流（ICY/HLS/多码率/录音全兼容）
 - 🏷️ **ICY 元数据**：播放器（VLC / Winamp / PotPlayer）能显示 “正在播放”
@@ -50,11 +50,11 @@ pip install -r requirements.txt
 #    a. musickit 随机渲染：由 musickit 引擎实时渲染随机混音（见下方 F 层），默认开启
 #    b. 传统歌单：把歌曲丢进 music/ 目录（mp3/ogg/flac/wav），面板里切回歌单模式
 
-# 3. 启动（项目已并入 G:\music\musickit，电台位于 radio/ 子目录）
-python G:\music\musickit\radio\run.py                # 只起本地服务
-python G:\music\musickit\radio\run.py --expose       # 起服务 + 自动 cloudflared 公网穿透（trycloudflare 临时域名）
-python G:\music\musickit\radio\run.py --expose ngrok # 同上但用 ngrok（需先配置 authtoken）
-python G:\music\musickit\radio\run.py --expose lhr   # 同上但用 localhost.run（免账号 SSH 隧道，部分网络不可用）
+# 3. 启动（项目已并入 musickit 仓库，电台位于 radio/ 子目录；以下命令在仓库根执行）
+python radio/run.py                # 只起本地服务
+python radio/run.py --expose       # 起服务 + 自动 cloudflared 公网穿透（trycloudflare 临时域名）
+python radio/run.py --expose ngrok # 同上但用 ngrok（需先配置 authtoken）
+python radio/run.py --expose lhr   # 同上但用 localhost.run（免账号 SSH 隧道，部分网络不可用）
 ```
 
 打开浏览器：
@@ -193,7 +193,7 @@ hls_ffmpeg.log   ffmpeg 切片进程 stderr（排查切片问题）
 ## 🧩 浏览器扩展
 
 原 `extension/`（转播控制为核心的 MV3 扩展）已随转播功能剥离归档；
-替代品见 Node.js 版项目（`D:\private-radio-stations-2.0\extension`，对齐其 3.0 API）。
+替代品见 Node.js 版项目（`private-radio-stations` 仓库 `3.0` 分支的 `extension/`，对齐其 3.0 API）。
 
 ---
 
