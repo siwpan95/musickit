@@ -6,7 +6,7 @@ ethnic, keys, guita}; drum/bass/sfx/vocal are deliberately NOT mapped, so they
 are skipped (those pools are already ample). Nested .zip files inside a source
 directory are also processed.
 
-Files are copied into G:\\music\\musickit\\<pool>\\<instrument>\\ . Per-pool manifests
+Files are copied into <MUSICKIT_ROOT>\\<pool>\\<instrument>\\ . Per-pool manifests
 are NOT written here -- run sync_manifests_to_disk.py afterwards.
 
 Usage:

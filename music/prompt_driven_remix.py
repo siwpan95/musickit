@@ -3,8 +3,8 @@
 """
 提示词驱动混音桥接器
 ================================
-把 G:\\music\\musickit\\music（纯音乐风格提示词生成器）的结构化输出，
-作为 G:\\music\\musickit\\remix（phonk 混音引擎）的「混音驱动」。
+把 <MUSICKIT_ROOT>\\music（纯音乐风格提示词生成器）的结构化输出，
+作为 <MUSICKIT_ROOT>\\remix（phonk 混音引擎）的「混音驱动」。
 
 连接点：
   music_prompt_generator.generate()  ->  结构化提示词字典
@@ -16,7 +16,7 @@
             ▼
   真实音频混音文件（WAV/MP3）
 
-映射规则（由 G:\\music\\musickit\\instrument_taxonomy.json 驱动，消除“混用”）：
+映射规则（由 <MUSICKIT_ROOT>\\instrument_taxonomy.json 驱动，消除“混用”）：
   - instruments[]  ->  每个乐器词经规范分类体系归并到 37 个类目，再精确映射到
                        musickit 池（bass/drum/guita/cowbell/synth/acapella/sfx）。
                        真人 acapella 池以 *vocal* 角色接入曲式模板的 vocal 层；
@@ -26,9 +26,9 @@
   - moods/subgenre ->  曲式模板（classic_drop / ambient_ghost / loop_stack）
 
 真人声接入说明：
-  G:\\music\\musickit\\acapella 是「Coollider Acapellas Vols.1-42」解压后填充的
+  <MUSICKIT_ROOT>\\acapella 是「Coollider Acapellas Vols.1-42」解压后填充的
   真人整首人声池（分层目录 vol1..vol42），按 musickit 混音引擎的 *vocal* 角色接入。
-  文件收集为递归（穿透 vol 子目录）。动物叫声已独立为 G:\\music\\musickit\\animal 池，
+  文件收集为递归（穿透 vol 子目录）。动物叫声已独立为 <MUSICKIT_ROOT>\\animal 池，
   不再冒充人声。
 
 用法：

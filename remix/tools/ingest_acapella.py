@@ -1,4 +1,4 @@
-"""Coollider Acapellas Vols.1-42 入库 → G:\\music\\musickit\\acapella\\
+"""Coollider Acapellas Vols.1-42 入库 → <MUSICKIT_ROOT>\\acapella\\
 
 把已解压的 42 卷真人 acapella 按原始卷结构原样拷入新建的 acapella 池，
 不做重编码（保持人声保真）。逐文件：

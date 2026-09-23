@@ -1,8 +1,8 @@
 """Phase 4.5：真吉他采样入库（补 guita 层的真实吉他音轨）。
 
 从 candidates.json 中筛出吉他相关文件（guitar/gtr/riff/chug/wah/fuzz，
-排除 bass），归一化后以 guita (N).wav 从现有最大编号+1 续写入 G:\\music\\musickit\\guita\\，
-manifest 写入/合并 G:\\music\\musickit\\guita\\manifest.json。
+排除 bass），归一化后以 guita (N).wav 从现有最大编号+1 续写入 <MUSICKIT_ROOT>\\guita\\，
+manifest 写入/合并 <MUSICKIT_ROOT>\\guita\\manifest.json。
 用法: python ingest_guitar.py [--limit N] [--dry-run]
 """
 import argparse

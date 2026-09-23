@@ -3,7 +3,7 @@
 """
 构建 musickit 规范乐器分类体系（instrument_taxonomy.json）。
 
-数据来源：G:\\music\\musickit\\music\\styles\\*.json（63 个风格池，242 个不同乐器词）。
+数据来源：<MUSICKIT_ROOT>\\music\\styles\\*.json（63 个风格池，242 个不同乐器词）。
 目标：把这 242 个“自由文本”乐器词归并为一套规范类目（canonical_class），
 每类精确映射到 musickit 现有池（bass/drum/guita/cowbell/synth/acapella/animal/sfx）
 + 子类别 + 是否有样本（available）。
@@ -15,7 +15,7 @@
     “vocal” 角色接入（structures.json 已有 vocal 层）。
   - 动物叫声池（animal）不再冒充人声；它只在随机混音里当 one-shot 替代层。
 
-输出：G:\\music\\musickit\\instrument_taxonomy.json
+输出：<MUSICKIT_ROOT>\\instrument_taxonomy.json
 用法：python build_instrument_taxonomy.py
 """
 
@@ -41,7 +41,7 @@ OUT = str(_MK_ROOT / "instrument_taxonomy.json")
 #   note        : 说明
 # ---------------------------------------------------------------------------
 # 每类目优先抽取的子目录（与 instrument_taxonomy.json 的 prefer_subdirs 一致；
-# 目录名与 G:\\music\\musickit\\<pool>\\ 下的真实目录核对）。桥接器按此字段先子目录、后整池。
+# 目录名与 <MUSICKIT_ROOT>\\<pool>\\ 下的真实目录核对）。桥接器按此字段先子目录、后整池。
 PREFER_SUBDIRS = {
     "808_bass": ["808_bass"], "sub_bass": ["sub_bass"],
     "upright_bass": ["bass_guitar", "bass_misc"], "bass_guitar": ["bass_guitar", "bass_misc"],
@@ -240,7 +240,7 @@ def main():
 
     out = {
         "version": 1,
-        "description": "musickit 规范乐器分类体系：由 G:\\tools\\music 的 63 风格池 242 乐器词归并而成",
+        "description": "musickit 规范乐器分类体系：由 <MUSICKIT_ROOT>\\music 的 63 风格池 242 乐器词归并而成",
         "pools": ["bass", "drum", "guita", "cowbell", "synth", "acapella", "animal", "sfx", "keys", "strings", "brass", "woodwind", "ethnic"],
         "canonical_classes": classes_out,
         "word_map": word_map,

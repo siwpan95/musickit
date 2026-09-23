@@ -1,13 +1,13 @@
 """Phase 4：构建 musickit 总索引 manifest_index.json。
 
 1. 合并各素材目录的 manifest.json（bass/drum/guita/cowbell/synth/animal/sfx/acapella）
-2. 把 bass/drum/guita 的匿名编号 stem 反查歌名：与 G:\\radio_music_stems
+2. 把 bass/drum/guita 的匿名编号 stem 反查歌名：与 <STEMS_ROOT>（默认 <工作区>\\assets\\radio_music_stems）
    各歌曲目录下的 bass.wav/drums.wav/other.wav 做「大小+前 8KB 哈希」匹配
-3. 索引级纳入 G:\\csmusic_stems（CS 游戏音乐分离库，持续增⻓中）：
+3. 索引级纳入 <CSMUSIC_STEMS_ROOT>（默认 <工作区>\\csmusic_stems）（CS 游戏音乐分离库，持续增⻓中）：
    逐曲扫描每首歌曲目录，记录 4 种 stem（bass/drums/other/vocals）的
    存在性、尺寸与签名，并标注「进行中」状态（含 htdemucs 临时目录或
    stem 不足 4 个的目录）。仅索引，不合并、不改动物料。
-4. 输出 G:\\music\\musickit\\manifest_index.json
+4. 输出 <MUSICKIT_ROOT>\\manifest_index.json
 用法: python build_manifest_index.py
 """
 import hashlib
@@ -43,7 +43,7 @@ def quick_sig(path, head=8192):
 
 
 def build_csmusic_block(merged_songs=None):
-    """索引级纳入 G:\\csmusic_stems：逐曲列出 stem，标注「进行中」与「已并入物料」状态。仅索引不改动物料。"""
+    """索引级纳入 <CSMUSIC_STEMS_ROOT>（默认 <工作区>\\csmusic_stems）：逐曲列出 stem，标注「进行中」与「已并入物料」状态。仅索引不改动物料。"""
     merged_songs = set(merged_songs or set())
     block = {
         "dir": CS_STEMS,

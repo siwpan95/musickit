@@ -1,9 +1,9 @@
-"""Phase 5：把 G:\\csmusic_stems（CS 游戏音乐 Demucs 分离库，持续增⻓）增量并入 musickit 物料。
+"""Phase 5：把 <CSMUSIC_STEMS_ROOT>（默认 <工作区>\\csmusic_stems）（CS 游戏音乐 Demucs 分离库，持续增⻓）增量并入 musickit 物料。
 
 对每首「完成」的歌曲（bass/drums/other/vocals 四轨齐全 且 无 htdemucs 临时目录）：
-  - bass.wav   → G:\\music\\musickit\\bass\\bass (N).wav
-  - drums.wav  → G:\\music\\musickit\\drum\\drum (N).wav
-  - other.wav  → G:\\music\\musickit\\guita\\guita (N).wav      # guita = other 轨当吉他，项目约定
+  - bass.wav   → <MUSICKIT_ROOT>\\bass\\bass (N).wav
+  - drums.wav  → <MUSICKIT_ROOT>\\drum\\drum (N).wav
+  - other.wav  → <MUSICKIT_ROOT>\\guita\\guita (N).wav      # guita = other 轨当吉他，项目约定
   （vocals.wav 不并入：musickit/animal 为动物叫声 one-shot，非歌曲人声）
   - 三轨共享同一编号 N（与 radio stem 约定一致，便于 stems_song_map 关联同一首歌）
   - 各目录 manifest.json 追加条目（source_pack="csmusic"，original=歌曲目录名）

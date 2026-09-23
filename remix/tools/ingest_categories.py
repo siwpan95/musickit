@@ -1,9 +1,9 @@
 """Phase 2 扩展：把 downloads 里剩余音频按类别全部入库。
 
 分类路由（按文件名/路径关键词，注意先用鼓类匹配，避免 "bassdrum" 误入 bass）：
-  drum/beat → G:\\music\\musickit\\drum\\     （编号从现有最大+1 续）
-  bass      → G:\\music\\musickit\\bass\\     （同上）
-  synth/keys/其他 → G:\\music\\musickit\\synth\\（同上，含 fx/未匹配，作纹理层）
+  drum/beat → <MUSICKIT_ROOT>\\drum\\     （编号从现有最大+1 续）
+  bass      → <MUSICKIT_ROOT>\\bass\\     （同上）
+  synth/keys/其他 → <MUSICKIT_ROOT>\\synth\\（同上，含 fx/未匹配，作纹理层）
 
 处理：44.1kHz 立体声 16bit、首尾静音修剪、峰值归一 -3dBFS、sha256 去重、
       时长过滤（bass/synth 0.3~8s，drum 0.3~16s，容纳 4 小节慢速 loop）。

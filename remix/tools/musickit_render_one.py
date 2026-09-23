@@ -4,7 +4,7 @@
 
 把「随机渲染」封装成一个进程：渲染一首随机混音（随机混音师签名 +
 随机流派提示词 + 随机 stems），把结果写到 --out 目录，并向 stdout
-输出一行 JSON 元数据，方便调用方（如 G:\\music\\musickit\\radio 电台的
+输出一行 JSON 元数据，方便调用方（如 <MUSICKIT_ROOT>\\radio 电台的
 musickit_source）直接消费。
 
 用法：

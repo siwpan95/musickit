@@ -2,7 +2,7 @@
 把 candidates.json 中的候选采样转成 44.1kHz / 立体声 / 16bit wav：
   - 首尾静音修剪（-45dB 阈值，留 50ms padding）
   - 峰值归一化到 -3 dBFS
-  - 按 synth (N).wav 从 51 起续号写入 G:\\music\\musickit\\synth\\
+  - 按 synth (N).wav 从 51 起续号写入 <MUSICKIT_ROOT>\\synth\\
   - 内容哈希去重（同内容不重复入库）
   - 写入 synth/manifest.json（编号 → 来源包 → 原文件名 → 授权 → 时长）
 用法: python ingest_synth.py [--limit N] [--dry-run]

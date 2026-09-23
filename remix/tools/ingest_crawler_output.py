@@ -1,8 +1,8 @@
-"""Route crawler downloads (G:\\tools\\sfx\\sounds\\<keyword>\\*) into musickit pools.
+"""Route crawler downloads (<工作区>\\repos\\sfx-download\\sounds\\<keyword>\\*) into musickit pools.
 
 The sfx crawler (dl_keyword.py) saves per-keyword folders under sfx/sounds/.
 This script maps each folder name to a (pool, subcategory) and copies the audio
-files into G:\\music\\musickit\\<pool>\\<subcategory>\\ (de-duping collisions), so the
+files into <MUSICKIT_ROOT>\\<pool>\\<subcategory>\\ (de-duping collisions), so the
 generic sync_manifests_to_disk.py can then manifest them.
 
 Routing is keyword-based: a folder name containing any KEYWORD map key is routed
