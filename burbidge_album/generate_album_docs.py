@@ -123,7 +123,7 @@ def write_markdown():
     lines = []
     lines.append(f"# After Midnight — The Mix Engineer Series ({len(data)} Mixers × 6 Tracks)\n")
     lines.append(f"**{ARTIST}**  \n")
-    lines.append("Six instrumental R&B/soul tracks assembled from the G:\\musickit sample library. "
+    lines.append("Six instrumental R&B/soul tracks assembled from the musickit sample library. "
                  "**The same six tracks, the same stems, the same arrangement** are mixed through "
                  f"{len(data)} different mixing engineers' signature chains — from Craig Burbidge's "
                  "vocal-forward warmth to Al Schmitt's natural transparency and Mike Dean's saturated "
@@ -297,7 +297,7 @@ def write_hub():
   </header>
   <div class="grid">{''.join(cards)}</div>
   <footer>
-    Instrumental R&amp;B/soul assembled from the G:\\musickit sample library.<br>
+    Instrumental R&amp;B/soul assembled from the musickit sample library.<br>
     Full documentation (references, chain tables, stem lists): <a href="ALBUM_NOTES.md">ALBUM_NOTES.md</a>.<br>
     Generated with <code>build_album.py</code> + <code>generate_album_docs.py</code>.
   </footer>

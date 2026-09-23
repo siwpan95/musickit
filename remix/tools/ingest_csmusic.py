@@ -1,4 +1,4 @@
-"""Phase 5：把 <CSMUSIC_STEMS_ROOT>（默认 <工作区>\\csmusic_stems）（CS 游戏音乐 Demucs 分离库，持续增⻓）增量并入 musickit 物料。
+"""Phase 5：把 <CSMUSIC_STEMS_ROOT>（默认 <工作区>\\assets\\csmusic_stems）（CS 游戏音乐 Demucs 分离库，持续增⻓）增量并入 musickit 物料。
 
 对每首「完成」的歌曲（bass/drums/other/vocals 四轨齐全 且 无 htdemucs 临时目录）：
   - bass.wav   → <MUSICKIT_ROOT>\\bass\\bass (N).wav
@@ -26,7 +26,8 @@ from pathlib import Path
 _MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
 
 ROOT = str(_MK_ROOT)
-CS = r"G:\music\csmusic_stems"
+# 2026-09-23 去本地化：原 G:\music\csmusic_stems 已失效，stem 库现为 <工作区>\assets\csmusic_stems
+CS = str(Path(os.environ.get("CSMUSIC_STEMS_ROOT") or (_MK_ROOT.parent.parent / "assets" / "csmusic_stems")))
 PROGRESS = os.path.join(ROOT, "remix", "tools", "csmusic_ingest_progress.json")
 CATS = {
     "bass": str(_MK_ROOT / "bass"),

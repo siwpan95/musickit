@@ -20,8 +20,10 @@ from pathlib import Path
 _MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
 
 ROOT = str(_MK_ROOT)
-STEMS = r"G:\music\radio_music_stems"
-CS_STEMS = r"G:\music\csmusic_stems"
+# 2026-09-23 去本地化：stem 库已归位到 <工作区>\assets\*（原 G:\music\* 已失效）
+_WORKSPACE = _MK_ROOT.parent.parent                       # …\<盘>\
+STEMS = str(Path(os.environ.get("STEMS_ROOT") or (_WORKSPACE / "assets" / "radio_music_stems")))
+CS_STEMS = str(Path(os.environ.get("CSMUSIC_STEMS_ROOT") or (_WORKSPACE / "assets" / "csmusic_stems")))
 CATEGORIES = [
     "bass", "drum", "guita", "cowbell", "synth", "animal", "sfx", "acapella",
     # 新增：37 类目补齐

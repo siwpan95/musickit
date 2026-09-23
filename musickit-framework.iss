@@ -28,7 +28,12 @@ UninstallDisplayName={#MyAppName}
 Name: "chinesesimp"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "G:\_job\framework_stage\framework\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+; 2026-09-23 去本地化：源目录不再写死（原 G:\_job\framework_stage 已失效）。
+; 由 build_framework.py 用 /DStageDir=<暂存目录> 传入；未传时回落到 iss 同级的 framework_stage。
+#ifndef StageDir
+  #define StageDir AddBackslash(SourcePath) + "framework_stage"
+#endif
+Source: "{#StageDir}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{group}\musickit 环境诊断"; Filename: "{app}\doctor.bat"; WorkingDir: "{app}"

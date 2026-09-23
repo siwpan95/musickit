@@ -1,6 +1,6 @@
 """Phase 6：把 XAM Sample Pack Vol.3 按 taxonomy 子类 COPY 进 musickit。
 
-源: G:\\BaiduNetdiskDownload\\XAM.Sample.Pack3\\XAM Sample Pack Vol.3
+源: 环境变量 XAM_SRC 指定的解包目录（例：<下载根>\\XAM.Sample.Pack3\\XAM Sample Pack Vol.3）
 目标: <MUSICKIT_ROOT>\\<pool>\\<sub>\\
 
 采用 COPY 模式（保留原始素材包，不移动）。按文件名/子目录路由到对应子类，

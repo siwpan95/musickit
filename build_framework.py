@@ -4,18 +4,19 @@
 框架包 = 提示词/混音/电台 三段编排代码（不含采样库 13 池、不含 ffmpeg 二进制、不含渲染产物）。
 产物：installer/musickit-framework-setup-1.0.0.exe
 """
+import os
 import shutil
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
-import os
 
 sys.stdout.reconfigure(encoding="utf-8")
 MUSICKIT = Path(__file__).resolve().parent
 # 2026-09-23 去本地化：外部编排层与构建暂存目录不再写死
 _AUDIO_PIPELINE_DEFAULT = MUSICKIT.parent / "audio-pipeline"      # 同级仓 repos/audio-pipeline
 AUDIO_PIPELINE = Path(os.environ.get("AUDIO_PIPELINE_ROOT") or _AUDIO_PIPELINE_DEFAULT)
-STAGE = Path(os.environ.get("MUSICKIT_STAGE") or (tempfile.gettempdir() / "musickit-framework-stage"))
+STAGE = Path(os.environ.get("MUSICKIT_STAGE") or (Path(tempfile.gettempdir()) / "musickit-framework-stage"))
 FRAMEWORK = STAGE / "framework"
 # ISCC：环境变量 ISCC_BIN 优先，其次常见安装位置；都找不到时由 _require_iscc() 报错
 _ISCC_CANDIDATES = [
@@ -101,7 +102,8 @@ def stage_framework():
 
 
 def build_installer():
-    r = subprocess.run([str(ISCC), str(MUSICKIT / "musickit-framework.iss")],
+    # 2026-09-23 去本地化：把暂存目录用 ISCC 预处理宏传入，iss 里不再写死构建路径
+    r = subprocess.run([str(ISCC), f"/DStageDir={FRAMEWORK}", str(MUSICKIT / "musickit-framework.iss")],
                        capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=900)
     print(r.stdout[-400:] if r.returncode else "[inno] 编译成功")
     if r.returncode:
