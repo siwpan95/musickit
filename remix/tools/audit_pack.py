@@ -13,9 +13,11 @@ import re
 import subprocess
 import sys
 from datetime import datetime
+from pathlib import Path
 
-DOWNLOADS = r"G:\music\musickit\archived\downloads"
-FFPROBE = r"G:\music\musickit\remix\bin\ffprobe.exe"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+DOWNLOADS = str(_MK_ROOT / "archived" / "downloads")
+FFPROBE = str(_MK_ROOT / "remix" / "bin" / "ffprobe.exe")
 AUDIO_EXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aiff", ".aif")
 INCLUDE = re.compile(r"(synth|syn\b|lead|key|chord|pad|stab|bass|organ|piano|pluck|arp|melody|wave|glass|operator|guitar|gtr|riff|chug|wah|fuzz)", re.I)
 EXCLUDE = re.compile(r"(beat|drum|kick|snare|hat|tom|cym|perc|fx|sfx|vocal|voice|shaker|clap|fill|riser|impact|noise|foley)", re.I)

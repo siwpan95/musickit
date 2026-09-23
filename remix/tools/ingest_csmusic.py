@@ -21,14 +21,17 @@ import re
 import shutil
 import wave
 from datetime import datetime
+from pathlib import Path
 
-ROOT = r"G:\music\musickit"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+ROOT = str(_MK_ROOT)
 CS = r"G:\music\csmusic_stems"
 PROGRESS = os.path.join(ROOT, "remix", "tools", "csmusic_ingest_progress.json")
 CATS = {
-    "bass": r"G:\music\musickit\bass",
-    "drum": r"G:\music\musickit\drum",
-    "guita": r"G:\music\musickit\guita",
+    "bass": str(_MK_ROOT / "bass"),
+    "drum": str(_MK_ROOT / "drum"),
+    "guita": str(_MK_ROOT / "guita"),
 }
 CS_STEM = {"bass": "bass.wav", "drum": "drums.wav", "guita": "other.wav"}
 # 与 subdivide_manifests.py 对 csmusic 物料的子类落位保持一致

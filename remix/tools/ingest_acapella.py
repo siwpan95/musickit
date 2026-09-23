@@ -17,10 +17,13 @@ import os
 import subprocess
 import sys
 from datetime import datetime
+from pathlib import Path
 
-SRC_ROOT = r"G:\BaiduNetdiskDownload\Coollider Acapellas Vols.1-42\Acapellas\Coollider Acapellas Vols.1-42"
-DEST = r"G:\music\musickit\acapella"
-FFPROBE = r"G:\music\musickit\remix\bin\ffprobe.exe"
+# 2026-09-23 去本地化：源包目录改由环境变量 ACAPELLA_SRC 指定（原百度网盘路径为本机专有）
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])
+SRC_ROOT = os.environ.get("ACAPELLA_SRC", "")
+DEST = str(_MK_ROOT / "acapella")
+FFPROBE = str(_MK_ROOT / "remix" / "bin" / "ffprobe.exe")
 MANIFEST = os.path.join(DEST, "manifest.json")
 SOURCE_PACK = "coollider_acapellas"
 LICENSE = ("Coollider Acapellas Vols.1-42 (commercial sample pack; license unknown — "

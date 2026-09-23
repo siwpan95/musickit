@@ -10,8 +10,8 @@ r"""按 dedupe_report（纯内容判定）把冗余副本移入 archived（只�
   - 默认 dry-run（只打印计划），加 --apply 才执行。
 
 用法：
-  python dedupe_to_archive_v2.py --report G:\music\musickit\dedupe_report_20260817.json \
-      --root G:\music\musickit                 # dry-run
+  python dedupe_to_archive_v2.py --report <MUSICKIT_ROOT>\dedupe_report_20260817.json \
+      --root <MUSICKIT_ROOT>                 # dry-run
   python dedupe_to_archive_v2.py ... --apply
 """
 import argparse
@@ -50,7 +50,7 @@ def plan(report: dict) -> list[dict]:
 def main():
     p = argparse.ArgumentParser(description="按查重报告移动冗余副本进 archived")
     p.add_argument("--report", required=True, help="dedupe_scan.py 产出的报告 JSON")
-    p.add_argument("--root", default=r"G:\music\musickit")
+    p.add_argument("--root", default=r"<MUSICKIT_ROOT>")
     p.add_argument("--apply", action="store_true", help="执行移动（默认 dry-run）")
     args = p.parse_args()
 

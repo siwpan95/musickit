@@ -23,9 +23,12 @@ import glob
 import json
 import os
 from collections import Counter, OrderedDict
+from pathlib import Path
+
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
 
 MUSIC_STYLES = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "music", "styles")
-OUT = r"G:\music\musickit\instrument_taxonomy.json"
+OUT = str(_MK_ROOT / "instrument_taxonomy.json")
 
 # ---------------------------------------------------------------------------
 # 规范类目元数据

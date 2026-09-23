@@ -6,7 +6,7 @@ r"""manifest sha256 戳专项校验（只读）。
 报告有多少记录与实际内容不符（stale）。原则：元数据 ≠ 内容——查重绝不使用这些戳，
 本工具只是把戳错误量化出来供数据治理。
 
-用法：python verify_manifest_hashes.py --root G:\music\musickit [--out stale_manifest_hashes.json]
+用法：python verify_manifest_hashes.py --root <MUSICKIT_ROOT> [--out stale_manifest_hashes.json]
 """
 import argparse
 import hashlib
@@ -28,7 +28,7 @@ def full_sha(path: str) -> str:
 
 def main():
     p = argparse.ArgumentParser(description="manifest sha256 戳校验（只读）")
-    p.add_argument("--root", default=r"G:\music\musickit")
+    p.add_argument("--root", default=r"<MUSICKIT_ROOT>")
     p.add_argument("--out", default=None)
     args = p.parse_args()
 

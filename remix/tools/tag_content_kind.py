@@ -10,8 +10,8 @@ r"""给 13 池 manifest 条目标注 content_kind（素材形态），供桥接�
   unknown     — 无任何特征（保持现状）
 
 用法：
-  python tag_content_kind.py --root G:\music\musickit            # dry-run
-  python tag_content_kind.py --root G:\music\musickit --apply    # 备份后原地改写 manifest
+  python tag_content_kind.py --root <MUSICKIT_ROOT>            # dry-run
+  python tag_content_kind.py --root <MUSICKIT_ROOT> --apply    # 备份后原地改写 manifest
 """
 import argparse
 import json
@@ -73,7 +73,7 @@ def process_pool(root: str, pool: str, apply: bool) -> Counter:
 
 def main():
     p = argparse.ArgumentParser(description="content_kind 素材形态标注")
-    p.add_argument("--root", default=r"G:\music\musickit", help="musickit 根目录")
+    p.add_argument("--root", default=r"<MUSICKIT_ROOT>", help="musickit 根目录")
     p.add_argument("--apply", action="store_true", help="备份后原地改写 manifest")
     args = p.parse_args()
 

@@ -3,7 +3,10 @@
 Strip the prefix so file is just the basename. Idempotent and safe for
 acapella's legitimately nested paths (norm_rel still resolves correctly)."""
 import os, json
-ROOT = r"G:\music\musickit"
+from pathlib import Path
+
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+ROOT = str(_MK_ROOT)
 POOLS = ["bass", "drum", "guita", "synth", "acapella", "sfx", "keys"]
 fixed = 0
 for p in POOLS:
@@ -19,3 +22,4 @@ for p in POOLS:
             fixed += 1
     json.dump(d, open(mp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"stripped redundant prefix from {fixed} entries")
+

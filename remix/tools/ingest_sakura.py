@@ -14,9 +14,12 @@ import os
 import json
 import shutil
 import argparse
+from pathlib import Path
 
-SRC = r"G:\BaiduNetdiskDownload\1\Sakura\Singomakers Sakura House"
-ROOT = r"G:\music\musickit"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+SRC = os.environ.get("SAKURA_SRC", "")   # 2026-09-23 去本地化
+ROOT = str(_MK_ROOT)
 AUDIO_EXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aac")
 SRC_PACK = "Singomakers Sakura House"
 

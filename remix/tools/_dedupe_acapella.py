@@ -12,8 +12,11 @@ Usage:
 import os
 import sys
 import collections
+from pathlib import Path
 
-POOL = r"G:\music\musickit\acapella"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+POOL = str(_MK_ROOT / "acapella")
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aiff", ".aif")
 
 # keep-priority: a path is "preferred" if it is NOT under acapella\<acapella>

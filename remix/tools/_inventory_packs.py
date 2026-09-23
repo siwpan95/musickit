@@ -6,7 +6,7 @@ filename (still-compressed packs). For archives we read the listing only
 """
 import os, sys, zipfile
 
-BASE = r"G:\BaiduNetdiskDownload"
+BASE = os.environ.get("BAIDU_DOWNLOAD_ROOT", "")   # 2026-09-23 去本地化（原百度网盘下载目录为本机专有）
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aiff", ".aif")
 AEXT_NODOT = tuple(e[1:] for e in AEXT)  # ("wav","mp3",...) for extension-after-dot compare
 

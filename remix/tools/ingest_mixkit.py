@@ -12,15 +12,18 @@ import re
 import sys
 from datetime import datetime
 
-_BIN = r"G:\music\musickit\remix\bin"
+_BIN = str(_MK_ROOT / "remix" / "bin")
 os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
 from pydub import AudioSegment  # noqa: E402
 from pydub.silence import detect_leading_silence  # noqa: E402
+from pathlib import Path
 
-DOWNLOADS = r"G:\music\musickit\archived\downloads"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+DOWNLOADS = str(_MK_ROOT / "archived" / "downloads")
 TARGETS = {
-    "mixkit_animals": {"dir": r"G:\music\musickit\animal", "prefix": "animal"},
-    "mixkit_sfx": {"dir": r"G:\music\musickit\sfx", "prefix": "sfx"},
+    "mixkit_animals": {"dir": str(_MK_ROOT / "animal"), "prefix": "animal"},
+    "mixkit_sfx": {"dir": str(_MK_ROOT / "sfx"), "prefix": "sfx"},
 }
 LICENSE = "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)"
 SILENCE_THRESH = -45.0

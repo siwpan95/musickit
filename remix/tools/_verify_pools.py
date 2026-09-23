@@ -1,5 +1,8 @@
 import os, json, collections
-BASE = r"G:\music\musickit"
+from pathlib import Path
+
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+BASE = str(_MK_ROOT)
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aiff", ".aif")
 AEXT_NODOT = tuple(e[1:] for e in AEXT)
 POOLS = ["bass", "drum", "guita", "cowbell", "synth", "acapella", "animal", "sfx",
@@ -32,3 +35,4 @@ for p in POOLS:
     tot_d += disk[p]; tot_m += man[p] if man[p] >= 0 else 0
 print(f"{'TOTAL':10s} {tot_d:7d} {tot_m:9d}")
 print("OK" if all(disk[p] == man[p] for p in POOLS) else "HAS MISMATCH")
+

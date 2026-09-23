@@ -9,9 +9,12 @@ Routing is keyword-based: a folder name containing any KEYWORD map key is routed
 to that key's (pool, sub). Unknown folders are reported and skipped.
 """
 import os, shutil, sys
+from pathlib import Path
 
-CRAWL_ROOT = r"G:\tools\sfx\sounds"
-MUSICKIT = r"G:\music\musickit"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+CRAWL_ROOT = str(_MK_ROOT.parent / "sfx-download" / "sounds")   # 2026-09-23 去本地化
+MUSICKIT = str(_MK_ROOT)
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac")
 
 # instrument keyword -> (pool, subcategory)

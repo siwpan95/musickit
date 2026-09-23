@@ -9,8 +9,11 @@ Run this after any bulk file addition (harvest or crawler ingest) so the
 per-pool manifests stay consistent with disk before rebuilding manifest_index.
 """
 import json, os
+from pathlib import Path
 
-MUSICKIT = r"G:\music\musickit"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+MUSICKIT = str(_MK_ROOT)
 POOLS = ["bass", "drum", "guita", "cowbell", "synth", "acapella",
          "animal", "sfx", "keys", "strings", "brass", "woodwind", "ethnic"]
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aiff", ".aif")

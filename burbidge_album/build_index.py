@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-# Build a real-file index of G:/music/musickit by scanning the ACTUAL tree,
+# Build a real-file index of the musickit repo by scanning the ACTUAL tree,
 # and recover BPM/key/subcategory for each file via manifest_index.json (matched by filename).
 import os, re, json, collections
+from pathlib import Path
 
-BASE = "G:/music/musickit"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[1])   # 2026-09-23 去本地化
+BASE = str(_MK_ROOT)
 MANIFEST = os.path.join(BASE, "manifest_index.json")
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "index.json")
 

@@ -19,31 +19,34 @@ import re
 import sys
 from datetime import datetime
 
-_BIN = r"G:\music\musickit\remix\bin"
+_BIN = str(_MK_ROOT / "remix" / "bin")
 os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
 from pydub import AudioSegment  # noqa: E402
 from pydub.silence import detect_leading_silence  # noqa: E402
+from pathlib import Path
 
-DOWNLOADS = r"G:\music\musickit\archived\downloads"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+DOWNLOADS = str(_MK_ROOT / "archived" / "downloads")
 AUDIO_EXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aiff")
 SILENCE_THRESH = -45.0
 TARGET_PEAK = -3.0
 
 CATS = {
     "drum": {
-        "dir": r"G:\music\musickit\drum",
+        "dir": str(_MK_ROOT / "drum"),
         "pat": re.compile(r"(beat|drum|kick|snare|hat|tom|cym|perc|clap|shaker)", re.I),
         "max_ms": 16000,
         "min_ms": 100,   # 鼓 one-shot（kick/hat）常短于 300ms
     },
     "bass": {
-        "dir": r"G:\music\musickit\bass",
+        "dir": str(_MK_ROOT / "bass"),
         "pat": re.compile(r"(bass|808)", re.I),
         "max_ms": 12000,  # 4 小节慢速 bass loop
         "min_ms": 300,
     },
     "synth": {
-        "dir": r"G:\music\musickit\synth",
+        "dir": str(_MK_ROOT / "synth"),
         "pat": re.compile(r"__never__"),
         "max_ms": 8000,
         "min_ms": 300,

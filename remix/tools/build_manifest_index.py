@@ -15,8 +15,11 @@ import json
 import os
 import struct
 from datetime import datetime
+from pathlib import Path
 
-ROOT = r"G:\music\musickit"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+ROOT = str(_MK_ROOT)
 STEMS = r"G:\music\radio_music_stems"
 CS_STEMS = r"G:\music\csmusic_stems"
 CATEGORIES = [

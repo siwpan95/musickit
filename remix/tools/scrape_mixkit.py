@@ -13,8 +13,11 @@ import sys
 import time
 import urllib.request
 import urllib.parse
+from pathlib import Path
 
-DOWNLOADS = r"G:\music\musickit\archived\downloads"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+DOWNLOADS = str(_MK_ROOT / "archived" / "downloads")
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 
 # 类别 → 去向子目录（vocal 层 / sfx 层）

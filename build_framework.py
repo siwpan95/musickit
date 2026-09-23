@@ -8,13 +8,36 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
+import os
 
 sys.stdout.reconfigure(encoding="utf-8")
 MUSICKIT = Path(__file__).resolve().parent
-AUDIO_PIPELINE = Path(r"G:\tools\audio\audio_pipeline")
-STAGE = Path(r"G:\_job\framework_stage")
+# 2026-09-23 去本地化：外部编排层与构建暂存目录不再写死
+_AUDIO_PIPELINE_DEFAULT = MUSICKIT.parent / "audio-pipeline"      # 同级仓 repos/audio-pipeline
+AUDIO_PIPELINE = Path(os.environ.get("AUDIO_PIPELINE_ROOT") or _AUDIO_PIPELINE_DEFAULT)
+STAGE = Path(os.environ.get("MUSICKIT_STAGE") or (tempfile.gettempdir() / "musickit-framework-stage"))
 FRAMEWORK = STAGE / "framework"
-ISCC = Path(r"C:\Users\13122\AppData\Local\Programs\Inno Setup 6\ISCC.exe")
+# ISCC：环境变量 ISCC_BIN 优先，其次常见安装位置；都找不到时由 _require_iscc() 报错
+_ISCC_CANDIDATES = [
+    Path(os.environ.get("PROGRAMFILES(X86)", r"C:\Program Files (x86)")) / "Inno Setup 6" / "ISCC.exe",
+    Path(os.environ.get("LOCALAPPDATA", "")) / "Programs" / "Inno Setup 6" / "ISCC.exe",
+    Path(r"C:\Program Files\Inno Setup 6\ISCC.exe"),
+]
+
+
+def _require_iscc() -> Path:
+    env = os.environ.get("ISCC_BIN")
+    if env and Path(env).is_file():
+        return Path(env)
+    for c in _ISCC_CANDIDATES:
+        if c.is_file():
+            return c
+    raise SystemExit(
+        "[错误] 找不到 Inno Setup 的 ISCC.exe。请安装 Inno Setup 6 或设置 ISCC_BIN=<ISCC.exe 路径>。"
+    )
+
+
+ISCC = _require_iscc()
 
 SKIP_DIRS = {".venv", "venv", "__pycache__", ".pytest_cache", "bin", "output",
              "prompt_mixes", "prompt_mixes_json", "deliverables", "tests", "node_modules"}
@@ -88,7 +111,7 @@ def build_installer():
 
 def roundtrip():
     setup = MUSICKIT / "installer" / "musickit-framework-setup-1.0.0.exe"
-    target = Path(r"G:\_job\_framework_install_test")
+    target = Path(os.environ.get("MUSICKIT_INSTALL_TEST") or (tempfile.gettempdir() / "musickit-framework-install-test"))
     if target.exists():
         shutil.rmtree(target, ignore_errors=True)
     r = subprocess.run([str(setup), "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART",

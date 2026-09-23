@@ -9,8 +9,11 @@ Target classes (currently missing / thin in musickit):
 Brass is intentionally crawler-only (no clean brass-wind material on disk).
 """
 import os, re, sys, shutil
+from pathlib import Path
 
-ROOTS = [r"G:\BaiduNetdiskDownload\1", r"G:\tools\sfx\sounds"]
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+ROOTS = [os.environ.get("BAIDU_DOWNLOAD_ROOT", ""), str(_MK_ROOT.parent / "sfx-download" / "sounds")]   # 2026-09-23 去本地化
 EXCLUDE_DIRS = {"output"}  # user's own remix renders -> avoid circular ingestion
 AEXT = (".wav", ".mp3", ".flac", ".ogg")
 DO_COPY = True  # execute the harvest
@@ -28,7 +31,7 @@ RULES = [
     ("ethnic", "ethnic_world", re.compile(r"singing bowl|\btabla\b|\bdjembe\b|\bgong\b|\bkoto\b|\bsitar\b|\berhu\b|\bguzheng\b|china drum|\btaiko\b|shakuhachi|didgeridoo|\bkalimba\b|pan flute|\braga\b|santoor|balalaika|\boud\b|bouzouki|charango")),
 ]
 
-MUSICKIT = r"G:\music\musickit"
+MUSICKIT = str(_MK_ROOT)
 
 
 def classify(norm):

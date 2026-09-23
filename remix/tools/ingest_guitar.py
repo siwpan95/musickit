@@ -13,13 +13,16 @@ import re
 import sys
 from datetime import datetime
 
-_BIN = r"G:\music\musickit\remix\bin"
+_BIN = str(_MK_ROOT / "remix" / "bin")
 os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
 from pydub import AudioSegment  # noqa: E402
 from pydub.silence import detect_leading_silence  # noqa: E402
+from pathlib import Path
 
-GUITA_DIR = r"G:\music\musickit\guita"
-DOWNLOADS = r"G:\music\musickit\archived\downloads"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+GUITA_DIR = str(_MK_ROOT / "guita")
+DOWNLOADS = str(_MK_ROOT / "archived" / "downloads")
 MANIFEST_PATH = os.path.join(GUITA_DIR, "manifest.json")
 GTR_PAT = re.compile(r"(guitar|gtr|riff|chug|wah|fuzz|guit)", re.I)
 BASS_PAT = re.compile(r"bass", re.I)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# build_album.py - Assemble six instrumental tracks from G:/music/musickit stems and mix
+# build_album.py - Assemble six instrumental tracks from the musickit stems (2026-09-23 去本地化) and mix
 # each of them through MULTIPLE "mix engineer" style profiles. Same stems, same
 # arrangement, different console/EQ/compression/reverb/width philosophy per mixer,
 # so the styles are directly A/B-comparable.

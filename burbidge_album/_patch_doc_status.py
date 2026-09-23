@@ -1,5 +1,10 @@
+import os
+from pathlib import Path
+
+# 2026-09-23 去本地化：仓根由本文件位置推导（burbidge_album/ → 仓根），可用 MUSICKIT_ROOT 覆盖
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[1])
 # one-shot: update MUBERT_COMPARISON.md L1-L3 status + INTEGRATION.md tools
-p1 = r'G:/music/musickit/MUBERT_COMPARISON.md'
+p1 = str(_MK_ROOT / "MUBERT_COMPARISON.md")
 src = open(p1, encoding='utf-8').read()
 
 old = '''- **L1 静态频道页**（已完成约 90%）：album/<slug>/index.html 即频道页，总览页即频道列表。补一个「频道元数据 JSON 目录」（从 styles_manifest.json 直接生成）即可对齐 Mubert 频道目录概念。成本 ≈ 0。
@@ -20,7 +25,7 @@ src = src.replace(old2, new2, 1)
 open(p1, 'w', encoding='utf-8').write(src)
 print('MUBERT_COMPARISON.md updated')
 
-p2 = r'G:/music/musickit/INTEGRATION.md'
+p2 = str(_MK_ROOT / "INTEGRATION.md")
 src = open(p2, encoding='utf-8').read()
 old3 = '''## 扩展混音师'''
 new3 = '''## 混音师频道（Mubert 形态对齐）

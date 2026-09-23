@@ -1,5 +1,8 @@
 import os, json
-ROOT = r"G:\music\musickit"
+from pathlib import Path
+
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+ROOT = str(_MK_ROOT)
 POOLS = ["bass", "drum", "guita", "synth", "acapella", "sfx"]
 AEXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aac")
 for p in POOLS:
@@ -35,5 +38,6 @@ for p in POOLS:
     if dup:
         print(f"  >>> DUPLICATES(root+sub) count={len(dup)} e.g. {dup[:3]}")
 print("\n--- drum (150).wav specific ---")
-for loc in [r"G:\music\musickit\drum\drum (150).wav", r"G:\music\musickit\drum\drum_misc\drum (150).wav"]:
+for loc in [str(_MK_ROOT / "drum" / "drum (150).wav"), str(_MK_ROOT / "drum" / "drum_misc" / "drum (150).wav")]:
     print(f"  {'EXISTS' if os.path.exists(loc) else 'absent '}: {loc}")
+

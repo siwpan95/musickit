@@ -17,8 +17,10 @@ import os
 import shutil
 import collections
 import argparse
+from pathlib import Path
 
-ROOT = r"G:\music\musickit"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+ROOT = str(_MK_ROOT)
 AUDIO_EXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aac")
 
 # 仅细分这些池；cowbell / animal 无 taxonomy 子类，保持扁平
@@ -330,7 +332,7 @@ def main():
     except Exception:
         import traceback
         tb = traceback.format_exc()
-        with open(r"G:\subdiv_err.log", "w", encoding="utf-8") as ef:
+        with open(str(_MK_ROOT / "subdiv_err.log"), "w", encoding="utf-8") as ef:
             ef.write(tb)
         print("ERROR:\n" + tb, flush=True)
         raise

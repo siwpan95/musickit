@@ -8,8 +8,11 @@ directory, and append manifest entries for disk files not already present
 Affected pools: keys, strings (new), woodwind, ethnic.
 """
 import json, os
+from pathlib import Path
 
-MUSICKIT = r"G:\music\musickit"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+MUSICKIT = str(_MK_ROOT)
 POOLS = ["keys", "strings", "woodwind", "ethnic"]
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac")
 

@@ -1,18 +1,21 @@
 #!/usr/bin/env python
-"""Generate archive manifest (JSON + Markdown) for G:\BaiduNetdiskDownload.
+"""Generate archive manifest (JSON + Markdown) for the downloads root (env BAIDU_DOWNLOAD_ROOT).
 
-Records what was ingested into G:\music\musickit pools and where every downloaded
+Records what was ingested into the musickit pools and where every downloaded
 item was archived, so future sessions can check before re-downloading.
 """
 import os
 import json
 import datetime
 import collections
+from pathlib import Path
 
-BAIDU = r"G:\BaiduNetdiskDownload"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+BAIDU = os.environ.get("BAIDU_DOWNLOAD_ROOT", "")   # 2026-09-23 去本地化
 YASUOBAO = r"G:\music\yasuobao"
-ARCHIVED = r"G:\BaiduNetdiskDownload\archived"
-MUSICKIT = r"G:\music\musickit"
+ARCHIVED = str(Path(BAIDU) / "archived") if BAIDU else ""   # 2026-09-23 去本地化
+MUSICKIT = str(_MK_ROOT)
 
 AEXT = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aiff", ".aif")
 

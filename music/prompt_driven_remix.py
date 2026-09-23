@@ -36,7 +36,7 @@
   python prompt_driven_remix.py -c phonk
 
   # 批量生成 3 条不同风格，各驱动一段混音
-  python prompt_driven_remix.py -n 3 --out G:/music/musickit/music/prompt_mixes
+  python prompt_driven_remix.py -n 3 --out <MUSICKIT_ROOT>/music/prompt_mixes
 
   # 先由提示词工具导出 JSON，再喂给桥接器（解耦两类工具的版本）
   python music_prompt_generator.py -n 5 --export json -o prompts.json
@@ -87,7 +87,7 @@ _m_filter_release_safe = _m._filter_release_safe
 
 
 # ---------------------------------------------------------------------------
-# 乐器词 -> musickit 规范分类体系（由 G:\music\musickit\instrument_taxonomy.json 驱动）
+# 乐器词 -> musickit 规范分类体系（由 <MUSICKIT_ROOT>\instrument_taxonomy.json 驱动）
 # ---------------------------------------------------------------------------
 # taxonomy 把 music 工具的 242 个自由文本乐器词归并为 37 个规范类目，
 # 每类精确映射到 musickit 池 + 子类别 + 是否有样本。桥接器不再把不同家族

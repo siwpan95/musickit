@@ -16,13 +16,16 @@ import sys
 from datetime import datetime
 
 # pydub 需要 ffmpeg 在 PATH
-_BIN = r"G:\music\musickit\remix\bin"
+_BIN = str(_MK_ROOT / "remix" / "bin")
 os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
 from pydub import AudioSegment  # noqa: E402
 from pydub.silence import detect_leading_silence  # noqa: E402
+from pathlib import Path
 
-SYNTH_DIR = r"G:\music\musickit\synth"
-DOWNLOADS = r"G:\music\musickit\archived\downloads"
+_MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+SYNTH_DIR = str(_MK_ROOT / "synth")
+DOWNLOADS = str(_MK_ROOT / "archived" / "downloads")
 MANIFEST_PATH = os.path.join(SYNTH_DIR, "manifest.json")
 START_NUM = 51          # 从 51 起续号（1~50 为旧占位，将被移入 archived）
 MAX_FILES = 200         # 入库上限
