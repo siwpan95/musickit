@@ -1,6 +1,9 @@
-# G:\repos\musickit — phonk 混音项目（真实采样 + 本地混音引擎）
+# <PATH> — phonk 混音项目（真实采样 + 本地混音引擎）
 
-> 端口登记（2026-08-24）：mixer 流服务 **8010**（remix/tools）已登记于 `G:\docs\md\allin主工作区\端口分配表.md`；remix 任务日志审计 `python remix/main.py --tasks --out <目录>`。
+> 仓库：<https://gitee.com/siwpan/musickit> ｜ 许可：MIT（见 [LICENSE](LICENSE)）
+> 注：文中 <PATH> 为路径占位符，请替换为你本机实际的目录 / 可执行文件路径。
+
+> 端口登记（2026-08-24）：mixer 流服务 **8010**（remix/tools）已登记于 `<PATH>`；remix 任务日志审计 `python remix/main.py --tasks --out <目录>`。
 
 ## 目录结构
 
@@ -51,11 +54,11 @@ musickit/
 
 ```bash
 （cd remix）
-python G:\repos\musickit\remix\main.py --remix                                          # 默认 3 轨骨架、32 小节、BPM 随机
-python G:\repos\musickit\remix\main.py --remix --count 5 --bars 64 --bpm 140 --format wav
-python G:\repos\musickit\remix\main.py --remix --structure classic_drop --seed 42 --out output
-python G:\repos\musickit\remix\main.py --remix --release-safe                           # 发布安全模式（仅 free/pack 素材）
-python G:\repos\musickit\remix\main.py --remix --mixer-style wallace                    # 混音师风格着色（24 位，见下）
+python <PATH> --remix                                          # 默认 3 轨骨架、32 小节、BPM 随机
+python <PATH> --remix --count 5 --bars 64 --bpm 140 --format wav
+python <PATH> --remix --structure classic_drop --seed 42 --out output
+python <PATH> --remix --release-safe                           # 发布安全模式（仅 free/pack 素材）
+python <PATH> --remix --mixer-style wallace                    # 混音师风格着色（24 位，见下）
 
 usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm BPM]
                [--structure STRUCTURE] [--out OUT] [--format {wav,mp3,ogg,flac}]
@@ -76,9 +79,9 @@ usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm
 测试：`python -m pytest tests -q`（**112 passed, 1 skipped**）；快速档 `python -m pytest tests -q -m smoke`
 （16 个纯逻辑用例）。Python 3.13+ 需 `audioop-lts`；混音师风格链需 `scipy` + `soundfile`（均已在 requirements.txt）。
 
-## 提示词驱动混音（来自 G:\repos\musickit\music，同仓整合）
+## 提示词驱动混音（来自 <PATH>，同仓整合）
 
-`G:\repos\musickit\music\prompt_driven_remix.py` 把风格提示词经
+`<PATH>` 把风格提示词经
 `instrument_taxonomy.json`（242 词 → 37 类目）映射为本引擎调用：
 
 - 乐器词 → 池 + 角色：鼓/贝斯角色与引擎同口径**保底 ≥1 小节 loop**；
@@ -110,9 +113,9 @@ mixer_styles.py 参数化（逐总线 EQ/压缩/饱和/混响/宽度 + 风格母
 
 | 源 | 内容 | tier |
 |----|------|------|
-| `G:\assets\radio_music_stems` | 商业歌曲 Demucs 分离 stem（bass/drum/guita 编号 1~258） | restricted |
-| `G:\assets\csmusic_stems` | CS 游戏音乐粉丝提取 stem（编号 >=726，自动化并入） | restricted |
-| `G:\BaiduNetdiskDownload` | 商业采样包（Black Octopus/XAM/Singomakers/Loopmasters 等） | pack |
+| `<PATH>` | 商业歌曲 Demucs 分离 stem（bass/drum/guita 编号 1~258） | restricted |
+| `<PATH>` | CS 游戏音乐粉丝提取 stem（编号 >=726，自动化并入） | restricted |
+| `<PATH>` | 商业采样包（Black Octopus/XAM/Singomakers/Loopmasters 等） | pack |
 | Mixkit / MusicRadar SampleRadar | 免费可商用素材 | free |
 
 ## archived 定位（固化）
@@ -123,7 +126,7 @@ mixer_styles.py 参数化（逐总线 EQ/压缩/饱和/混响/宽度 + 风格母
 
 ## 版本控制
 
-`git`（gitee 仓库 `siwpan/musickit` 分支 `master`，本地同步工作区 `G:\repos\musickit`）：
+`git`（gitee 仓库 `siwpan/musickit` 分支 `master`，本地同步工作区 `<PATH>`）：
 素材音频不入库（仅各池 `manifest.json`），代码 / 文档 / manifest 全部跟踪；
 成品 wav/mp3、_stretch_cache/、prompt_mixes/、remix/output/ 由 .gitignore 排除。
 
@@ -132,7 +135,7 @@ mixer_styles.py 参数化（逐总线 EQ/压缩/饱和/混响/宽度 + 风格母
 
 ## 仓库索引标注（2026-08-27 · siwpan 统一治理）
 
-> musickit（phonk 混音项目，独立仓 siwpan/musickit）；本地对应 G:\repos\musickit。
+> musickit（phonk 混音项目，独立仓 siwpan/musickit）；本地对应 <PATH>。
 > 电台融合实验记录见 RADIO_MERGE.md；提示词生成器为独立仓 siwpan/music-prompt-generator。
 > **2026-09-02**：radio/ 直播端已从历史还原（93db08f~1）——此前被误判冗余移除；它与
 > private-radio-stations apps/audio（Node **转播版**）功能面不同（直播 vs 转播），非冗余，并存。
