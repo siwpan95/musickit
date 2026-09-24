@@ -28,7 +28,7 @@ UninstallDisplayName={#MyAppName}
 Name: "chinesesimp"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-; 2026-09-23 去本地化：源目录不再写死（原 G:\_job\framework_stage 已失效）。
+; 2026-09-23 去本地化：源目录不再写死（原路径已失效）。
 ; 由 build_framework.py 用 /DStageDir=<暂存目录> 传入；未传时回落到 iss 同级的 framework_stage。
 #ifndef StageDir
   #define StageDir AddBackslash(SourcePath) + "framework_stage"

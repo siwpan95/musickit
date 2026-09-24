@@ -16,7 +16,7 @@ from pathlib import Path
 
 _MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
 # 2026-09-23 去本地化：删除清单改由 环境变量 DEDUPE_DEL_LIST → <工作区>/notpython/kontakt_transcode/ 推导
-# （原 G:\tools\kontakt_transcode 已失效；工作区 = 仓根的上两级）
+# （原路径已失效；工作区 = 仓根的上两级）
 _DUP_LIST = Path(os.environ.get("DEDUPE_DEL_LIST")
                  or (_MK_ROOT.parent.parent / "notpython" / "kontakt_transcode" / "alldup_del.txt"))
 
