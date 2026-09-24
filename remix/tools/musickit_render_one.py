@@ -8,7 +8,7 @@
 musickit_source）直接消费。
 
 用法：
-  python musickit_render_one.py --channel random --bars 32 --format mp3 --out C:\\cache
+  python musickit_render_one.py --channel random --bars 32 --format mp3 --out <输出目录>
   python musickit_render_one.py --channel wallace --category phonk --seed 42 --release-safe
 
 输出（stdout，成功时 exit 0）：
