@@ -42,7 +42,7 @@ def parse_key(text):
     return best
 
 # Load manifest, build (cat -> file -> entry)
-manifest = json.load(open(MANIFEST))
+manifest = json.load(open(MANIFEST, encoding="utf-8"))   # 2026-09-23 修复：未指定编码时中文 Windows 会用 GBK 解码 UTF-8 而崩
 mcat = {}
 for cat, c in manifest["categories"].items():
     d = {}
@@ -121,5 +121,5 @@ for t in [90,100,105,110]:
             kc[key_root(x["key"])]+=1
     print(f"  {t} BPM keys:", dict(kc))
 
-json.dump({"base":BASE,"index":index}, open(OUT,"w"), ensure_ascii=False)
+json.dump({"base":BASE,"index":index}, open(OUT, "w", encoding="utf-8"), ensure_ascii=False)   # 2026-09-23 修复：写入必须显式 UTF-8
 print("\nWrote", OUT)

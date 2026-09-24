@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import dsp
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-IDX = json.load(open(os.path.join(HERE, "index.json")))
+IDX = json.load(open(os.path.join(HERE, "index.json"), encoding="utf-8"))   # 2026-09-23 修复：未指定编码时中文 Windows 用 GBK 解码 UTF-8 会崩
 INDEX = IDX["index"]
 SR = dsp.SR
 OUTDIR = os.path.join(HERE, "album")

@@ -20,7 +20,7 @@ SERIES = "The Mix Engineer Series"
 ARTIST = "Compiled & mixed with musickit stems"
 
 def load_data():
-    return json.load(open(MANIFEST))["styles"]
+    return json.load(open(MANIFEST, encoding="utf-8"))["styles"]   # 2026-09-23 修复：未指定编码时中文 Windows 用 GBK 解码 UTF-8 会崩
 
 def esc(s): return html.escape(str(s)) if s else "—"
 
