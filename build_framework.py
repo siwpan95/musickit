@@ -87,10 +87,10 @@ def stage_framework():
         "依赖：Python 3.12+（PATH 中的 python）、pydub/numpy/scipy/soundfile/audioop-lts。\n"
         "MIT · Copyright (c) 2026 siwpan\n", encoding="utf-8")
     (FRAMEWORK / "doctor.bat").write_text(
-        "@echo off\nchcp 65001 >nul\ncd /d \"%~dp0\"\npython audio_pipeline\cli.py doctor\npause\n",
+        "@echo off\nchcp 65001 >nul\ncd /d \"%~dp0\"\npython audio_pipeline\\cli.py doctor\npause\n",
         encoding="utf-8")
     (FRAMEWORK / "chain.bat").write_text(
-        "@echo off\nchcp 65001 >nul\ncd /d \"%~dp0\"\npython audio_pipeline\cli.py chain %*\npause\n",
+        "@echo off\nchcp 65001 >nul\ncd /d \"%~dp0\"\npython audio_pipeline\\cli.py chain %*\npause\n",
         encoding="utf-8")
     reqs = set()
     for p in (AUDIO_PIPELINE / "requirements.txt", MUSICKIT / "remix" / "requirements.txt"):
