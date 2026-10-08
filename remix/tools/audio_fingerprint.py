@@ -11,7 +11,7 @@
 ----
     from audio_fingerprint import envelope, envelope_corr, envelope_hash, sha256_file
 
-注意：本机 `F:\\Python314` 设了 `PYTHONSAFEPATH=1`，脚本目录不会自动进 sys.path，
+注意：本机 Python 设了 `PYTHONSAFEPATH=1`，脚本目录不会自动进 sys.path，
 入口脚本需要 `sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))` 后再 import。
 """
 

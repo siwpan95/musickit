@@ -9,14 +9,17 @@ Rules (all must match):
      (filenames embed ranges like 64-127; identical prefixes differing only in
      the range -> keep one, prefer the louder/higher one)
 
-Output: G:/notpython/kontakt_transcode/bst_wanted.txt (7z @listfile format)
+Output: <KONTAKT_TRANSCODE_ROOT>/bst_wanted.txt (7z @listfile format)
 """
 import collections
 import os
 import re
 
-LISTING = r"G:/notpython/kontakt_transcode/bst_listing.txt"
-OUT = r"G:/notpython/kontakt_transcode/bst_wanted.txt"
+# 数据根**去符盘**（铁律 5）：优先环境变量 KONTAKT_TRANSCODE_ROOT，
+# 未设置时用约定相对根（旧机为 <盘>:/notpython/kontakt_transcode）。
+_KT_ROOT = os.environ.get("KONTAKT_TRANSCODE_ROOT", "kontakt_transcode")
+LISTING = os.path.join(_KT_ROOT, "bst_listing.txt")
+OUT = os.path.join(_KT_ROOT, "bst_wanted.txt")
 
 # articulation-dir blacklist: legato-family / transitions / releases / loops
 BAD_ART = ("legato", "portamento", "release", "releases", "looped", "loop",

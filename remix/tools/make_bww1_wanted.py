@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """Build per-container selective-unpack lists for Berlin Woodwinds nkx monoliths.
 
-Input : G:/notpython/kontakt_transcode/bww1_lists/<container>.txt  (NkxTool list output)
-Output: G:/notpython/kontakt_transcode/bww1_wanted/<container>.txt  (@filelist for NkxTool unpack)
+Input : <KONTAKT_TRANSCODE_ROOT>/bww1_lists/<container>.txt  (NkxTool list output)
+Output: <KONTAKT_TRANSCODE_ROOT>/bww1_wanted/<container>.txt  (@filelist for NkxTool unpack)
 
 Rules:  " - AB.ncw" mic only; articulation dir not legato/runs/transition;
         round robin rep1 only (or no rep marker).
@@ -12,8 +12,11 @@ import glob
 import os
 import re
 
-SRC = r"G:/notpython/kontakt_transcode/bww1_lists"
-DST = r"G:/notpython/kontakt_transcode/bww1_wanted"
+# 数据根**去符盘**（铁律 5）：优先环境变量 KONTAKT_TRANSCODE_ROOT，
+# 未设置时用约定相对根（旧机为 <盘>:/notpython/kontakt_transcode）。
+_KT_ROOT = os.environ.get("KONTAKT_TRANSCODE_ROOT", "kontakt_transcode")
+SRC = os.path.join(_KT_ROOT, "bww1_lists")
+DST = os.path.join(_KT_ROOT, "bww1_wanted")
 
 BAD_ART = ("legato", "runs", "transition", "release", "looped", "loop", "portamento")
 KEEP_HINTS = ("stacc", "marcato", "trill", "sus", "repetition", "pizzicato",

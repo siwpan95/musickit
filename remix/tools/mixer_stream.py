@@ -11,7 +11,7 @@
 
 用法：
   python mixer_stream.py [--port 8010] [--bars 32] [--release-safe]
-依赖：F:/Python314（与 remix 引擎一致）；引擎经内置 ffmpeg 输出 mp3。
+依赖：Python 3.12+（与 remix 引擎一致）；引擎经内置 ffmpeg 输出 mp3。
 频道一致性 = 固定混音师签名链；新鲜感 = 随机流派提示词 + 随机 stems（fusion 增强）。
 """
 import argparse

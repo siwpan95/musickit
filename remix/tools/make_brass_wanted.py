@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """Build per-container selective-unpack lists for Brass Band Soloists nkx.
 
-Input : G:/notpython/kontakt_transcode/brass_lists/<container>.txt
-Output: G:/notpython/kontakt_transcode/brass_wanted/<container>.txt
+Input : <KONTAKT_TRANSCODE_ROOT>/brass_lists/<container>.txt  (见 SRC)
+Output: <KONTAKT_TRANSCODE_ROOT>/brass_wanted/<container>.txt  (见 DST)
 
 Rules:
   - prefer the "414" mic (main pair); skip CLOSE/FAR/M60L/M60R duplicates
@@ -15,8 +15,11 @@ import glob
 import os
 import re
 
-SRC = r"G:/notpython/kontakt_transcode/brass_lists"
-DST = r"G:/notpython/kontakt_transcode/brass_wanted"
+# 数据根**去符盘**（铁律 5）：优先环境变量 KONTAKT_TRANSCODE_ROOT，
+# 未设置时用约定相对根（旧机为 <盘>:/notpython/kontakt_transcode）。
+_KT_ROOT = os.environ.get("KONTAKT_TRANSCODE_ROOT", "kontakt_transcode")
+SRC = os.path.join(_KT_ROOT, "brass_lists")
+DST = os.path.join(_KT_ROOT, "brass_wanted")
 
 MICS = ("414", "CLOSE", "FAR", "M60L", "M60R")
 KEEP_ALL = ("MIDShort", "MIDAccent", "MIDSus", "MIDHardRelRR")  # hard rel RR tiny

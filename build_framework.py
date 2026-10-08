@@ -84,7 +84,7 @@ def stage_framework():
         "运行：\n"
         "- doctor.bat —— 环境诊断（依赖/渲染器/采样池可用性）\n"
         "- chain.bat --workspace <dir> --style phonk --bars 32 —— 一键链（提示词→混音→电台）\n\n"
-        "依赖：Python 3.12+（F:/Python314 或 PATH python）、pydub/numpy/scipy/soundfile/audioop-lts。\n"
+        "依赖：Python 3.12+（PATH 中的 python）、pydub/numpy/scipy/soundfile/audioop-lts。\n"
         "MIT · Copyright (c) 2026 siwpan\n", encoding="utf-8")
     (FRAMEWORK / "doctor.bat").write_text(
         "@echo off\nchcp 65001 >nul\ncd /d \"%~dp0\"\npython audio_pipeline\cli.py doctor\npause\n",

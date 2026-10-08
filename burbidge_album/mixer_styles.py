@@ -6,7 +6,7 @@
   1. burbidge_album/build_album.py —— 固定风格专辑（同一组 stems × 10 位混音师）
   2. musickit/remix/main.py        —— 随机风格混音引擎（--mixer-style 可选接入）
 
-只依赖 numpy/scipy（经同目录 dsp.py），供 F:/Python314 与专辑构建环境共用。
+只依赖 numpy/scipy（经同目录 dsp.py），供本机 Python 与专辑构建环境共用。
 每个风格 dict 的 buses 键：drums/bass/pad/lead/bg（分轨总线）与 master（母带），
 reverb 键定义 room/med/long 三组卷积 IR 参数。
 """

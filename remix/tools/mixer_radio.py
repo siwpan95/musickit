@@ -14,7 +14,7 @@
   python mixer_radio.py --channel ali --count 2 --release-safe
 
 输出：--out 目录下的曲目文件 + <slug>_radio.m3u8 播放列表（顺序播放即电台）+ radio_report.json。
-依赖：F:/Python314（与 remix 引擎一致，pydub + numpy/scipy/soundfile + 内置 ffmpeg）。
+依赖：Python 3.12+（与 remix 引擎一致，pydub + numpy/scipy/soundfile + 内置 ffmpeg）。
 """
 import argparse
 import json

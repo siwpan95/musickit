@@ -48,7 +48,7 @@
   # 发布安全模式：仅用 free/pack 授权素材
   python prompt_driven_remix.py -c phonk --release-safe
 
-依赖：运行需 F:\\Python314（pydub + numpy + audioop-lts），与 musickit 混音引擎一致。
+依赖：运行需 Python 3.12+（pydub + numpy + audioop-lts），与 musickit 混音引擎一致。
 """
 
 import argparse
