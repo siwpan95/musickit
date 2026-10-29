@@ -29,7 +29,7 @@ python radio/run.py            # 默认即随机渲染，首曲约 15~30 秒渲�
 python radio/run.py --expose   # + cloudflared 公网穿透
 ```
 
-引擎依赖（F:/Python314 已装）：pydub numpy scipy soundfile audioop-lts。
+引擎依赖（/Python314 已装）：pydub numpy scipy soundfile audioop-lts。
 
 ## 主要配置（radio/radio/config.py F 层）
 

@@ -11,7 +11,7 @@
 | 入口 | music/prompt_driven_remix.py（桥接器）→ remix/main.py::run_remix | burbidge_album/build_album.py |
 | 随机性 | 65 个流派风格池随机生成提示词（music/styles/），乐器经 instrument_taxonomy.json（242 词 → 37 类目）映射到素材池，随机选音 + 曲式模板 | 固定 6 首曲目、固定 stems 与编曲（seed 固定可复现） |
 | 混音 | 分轨 RMS 归一 + 曲式编排 + 峰值归一（无调音台签名） | 24 位混音师签名链（EQ/压缩/饱和/混响/宽度/母带） |
-| 运行环境 | F:\Python314（pydub + audioop-lts + numpy/scipy/soundfile） | PATH python 3.13 或 F:\Python314（numpy/scipy/soundfile） |
+| 运行环境 | /Python314（pydub + audioop-lts + numpy/scipy/soundfile） | PATH python 3.13 或 /Python314（numpy/scipy/soundfile） |
 
 ## 整合点：mixer_styles.py
 
@@ -30,19 +30,19 @@
 ## 用法
 
     # 随机提示词 + 固定某位混音师
-    F:/Python314/python.exe music/prompt_driven_remix.py -c phonk --mixer-style mikedean
+    /Python314/python.exe music/prompt_driven_remix.py -c phonk --mixer-style mikedean
 
     # 每条随机提示词随机配一位混音师
-    F:/Python314/python.exe music/prompt_driven_remix.py -n 3 --fusion --mixer-style random --seed 42
+    /Python314/python.exe music/prompt_driven_remix.py -n 3 --fusion --mixer-style random --seed 42
 
     # 同一提示词 × 24 位混音师（A/B 对比）
-    F:/Python314/python.exe music/music_prompt_generator.py -n 1 -c phonk --seed 7 --export json -o p.json
-    F:/Python314/python.exe music/prompt_driven_remix.py --prompt-json p.json --mixer-style burbidge
-    F:/Python314/python.exe music/prompt_driven_remix.py --prompt-json p.json --mixer-style ghenea
+    /Python314/python.exe music/music_prompt_generator.py -n 1 -c phonk --seed 7 --export json -o p.json
+    /Python314/python.exe music/prompt_driven_remix.py --prompt-json p.json --mixer-style burbidge
+    /Python314/python.exe music/prompt_driven_remix.py --prompt-json p.json --mixer-style ghenea
     ...（24 位依次替换）
 
     # remix 引擎直连
-    F:/Python314/python.exe remix/main.py --remix --mixer-style blake --seed 1
+    /Python314/python.exe remix/main.py --remix --mixer-style blake --seed 1
 
     # 固定风格专辑（同一 stems × 10 位混音师）
     python burbidge_album/build_album.py            # 全部 10 风格

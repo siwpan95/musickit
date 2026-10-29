@@ -24,7 +24,7 @@ pydub 只是 ffmpeg 的封装，**没有 ffmpeg 程序本工具无法运行**。
 
 ### 3. scipy / soundfile（混音师风格链）
 --mixer-style 与 burbidge_album 共享链依赖 scipy（信号处理）与 soundfile（音频读写），
-已写入 requirements.txt。现役环境 F:\Python314 已装齐（scipy 1.18 / soundfile 0.14）。
+已写入 requirements.txt。现役环境 /Python314 已装齐（scipy 1.18 / soundfile 0.14）。
 
 ## 安装
 
@@ -121,15 +121,15 @@ python main.py --remix --release-safe
 `--fusion` 为可选进阶路径（走 `music/` 提示词链 + **跨类融合**，随机混搭两类、乐器/情绪去重）。
 
 ```bash
-F:\Python314\python.exe tools\hourly_remix.py                       # 随机风格 × 2 分钟（全素材池，发布安全默认关）
-F:\Python314\python.exe tools\hourly_remix.py --mixer-style random  # 叠加随机混音师染色
-F:\Python314\python.exe tools\hourly_remix.py --fusion             # 进阶：提示词跨类融合（随机混搭两类）
-F:\Python314\python.exe tools\hourly_remix.py --count 5 --bpm 140  # 固定 5 轨 / 140BPM
-F:\Python314\python.exe tools\hourly_remix.py --seed 42             # 可复现
-F:\Python314\python.exe tools\hourly_remix.py --dry-run             # 只打印本次随机结果
-F:\Python314\python.exe tools\hourly_remix.py --release-safe        # 开启授权过滤（仅对外发布时）
-F:\Python314\python.exe tools\hourly_remix.py --sample-rate 96000   # 更高交付规格（96k/24bit）
-F:\Python314\python.exe tools\hourly_remix.py --format mp3 --bitrate 320k  # 有损兜底
+/Python314/python.exe tools\hourly_remix.py                       # 随机风格 × 2 分钟（全素材池，发布安全默认关）
+/Python314/python.exe tools\hourly_remix.py --mixer-style random  # 叠加随机混音师染色
+/Python314/python.exe tools\hourly_remix.py --fusion             # 进阶：提示词跨类融合（随机混搭两类）
+/Python314/python.exe tools\hourly_remix.py --count 5 --bpm 140  # 固定 5 轨 / 140BPM
+/Python314/python.exe tools\hourly_remix.py --seed 42             # 可复现
+/Python314/python.exe tools\hourly_remix.py --dry-run             # 只打印本次随机结果
+/Python314/python.exe tools\hourly_remix.py --release-safe        # 开启授权过滤（仅对外发布时）
+/Python314/python.exe tools\hourly_remix.py --sample-rate 96000   # 更高交付规格（96k/24bit）
+/Python314/python.exe tools\hourly_remix.py --format mp3 --bitrate 320k  # 有损兜底
 ```
 
 ### 交付规格（2026-09-17 起，默认 WAV）
@@ -170,7 +170,7 @@ F:\Python314\python.exe tools\hourly_remix.py --format mp3 --bitrate 320k  # 有
 - **交付规格校验**：导出后回读 codec / 采样率 / 位深 / 实测码率 / 体积写入 `delivery` 字段，
   只有 「码率>320kbps 且 采样率>44100Hz 且 体积<`--max-size-mb`(默认200) 且 时长在容差内」时
   `delivery_ok=true`；不满足则在 stdout 打 `DELIVERY=FAIL` 并列出原因。
-- **环境**：`F:\Python314`（pydub + numpy + scipy + soundfile + audioop-lts），
+- **环境**：`/Python314`（pydub + numpy + scipy + soundfile + audioop-lts），
   ffmpeg/ffprobe 用 `remix/bin` 内置版，无需系统 PATH。实测单首耗时约 22s。
 
 ## 编排配方持久化（recipe，2026-09-17 起）
@@ -209,11 +209,11 @@ mp3 → wav 只会得到「假无损」（内容已不可逆丢失）。正确�
 已存的 `seed / bpm / bars / structure / mixer_style / tracks` **重新渲染**（同种子同参数可逐字节复现）。
 
 ```bash
-F:\Python314\python.exe tools\rerender_from_index.py --dry-run       # 只列计划（30 首）
-F:\Python314\python.exe tools\rerender_from_index.py --limit 1       # 先试 1 首
-F:\Python314\python.exe tools\rerender_from_index.py                 # 全量（默认断点续跑）
-F:\Python314\python.exe tools\rerender_from_index.py --only-seed 42  # 只重渲指定 seed
-F:\Python314\python.exe tools\rerender_from_index.py --backfill-fingerprints  # 只补记指纹，不渲染
+/Python314/python.exe tools\rerender_from_index.py --dry-run       # 只列计划（30 首）
+/Python314/python.exe tools\rerender_from_index.py --limit 1       # 先试 1 首
+/Python314/python.exe tools\rerender_from_index.py                 # 全量（默认断点续跑）
+/Python314/python.exe tools\rerender_from_index.py --only-seed 42  # 只重渲指定 seed
+/Python314/python.exe tools\rerender_from_index.py --backfill-fingerprints  # 只补记指纹，不渲染
 ```
 
 - 输出到 `output/release/`，命名保持原文件名（改成 `.wav`）便于溯源，另写 `release_index.json` + `rerender.log`。
@@ -231,7 +231,7 @@ F:\Python314\python.exe tools\rerender_from_index.py --backfill-fingerprints  # 
 索引里的 `path` 已失效，**按文件名对不上**。因此改用**内容比对**：
 
 ```bash
-F:\Python314\python.exe tools\verify_release_fidelity.py --patch-index
+/Python314/python.exe tools\verify_release_fidelity.py --patch-index
 ```
 
 - 把两份音频解码为 8 kHz 单声道，取 10 ms 窗 RMS 包络算 Pearson r；同一编排 ≈ 0.999，不同内容明显偏低。
@@ -314,7 +314,7 @@ pytest tests/ -q -m smoke     # 快速冒烟档（纯逻辑用例，无 ffmpeg �
 - `bpm` → 混音目标速度
 - `moods` / `subgenre` → 曲式模板（`classic_drop` / `ambient_ghost` / `loop_stack`）
 
-运行桥接器需 `F:\Python314`（pydub + numpy + audioop-lts + scipy + soundfile），并把
+运行桥接器需 `/Python314`（pydub + numpy + audioop-lts + scipy + soundfile），并把
 `MUSICKIT_ROOT` 指向 `<仓库根>`（桥接器已默认设置）。详见 `<仓库根>/music/prompt_driven_remix.py`。
 桥接器同样支持 `--mixer-style`（slug 或 random，random 时每条提示词配一位随机混音师，
 所用混音师写入 --report 的 mixer_style 字段）。

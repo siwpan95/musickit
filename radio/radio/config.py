@@ -104,4 +104,4 @@ MUSICKIT_RENDER_TIMEOUT = 600        # 单曲渲染超时（秒）
 MUSICKIT_RENDER_QUEUE_DEPTH = 3      # 预渲染就绪队列深度
 MUSICKIT_RENDER_KEEP = 20            # 缓存目录最多保留的渲染文件数
 # 渲染子进程解释器：默认当前解释器（需 pydub/numpy/scipy/soundfile/audioop-lts）
-MUSICKIT_RENDER_PYTHON = ""          # 留空 = sys.executable；可填 F:\Python314\python.exe 等
+MUSICKIT_RENDER_PYTHON = ""          # 留空 = sys.executable；可填 python 等
