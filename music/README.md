@@ -212,7 +212,7 @@ python prompt_driven_remix.py -c phonk --release-safe
   避免单音采样被当 loop 循环产生随机音高；
 - 曲式模板选择规则外置在 `structure_moods.json`（同目录），改词表无需改代码。
 
-> 本项目已整合进 `<仓库根>/music/`（单一仓库，消除跨项目路径风险）。\n> 运行桥接器需 `F:\Python314`（pydub + numpy + audioop-lts），与 musickit 混音引擎一致。
+> 本项目已整合进 `<仓库根>/music/`（单一仓库，消除跨项目路径风险）。\n> 运行桥接器需 `/Python314`（pydub + numpy + audioop-lts），与 musickit 混音引擎一致。
 > 映射规则（乐器词→素材池、BPM 钳制、情绪→曲式模板）详见 `prompt_driven_remix.py` 顶部注释。
 
 ---

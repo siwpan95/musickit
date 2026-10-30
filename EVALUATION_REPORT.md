@@ -74,7 +74,7 @@
 
 ### 3.1 代码健康度 ✅
 
-`F:\Python314\python.exe -m pytest tests/` 实测 **77 passed / 1 skipped**。README 对 Python 3.13+ 需 `audioop-lts` 的说明准确，`requirements.txt` 已含该补丁。内置 `bin/ffmpeg.exe` 实现零外部依赖。
+`/Python314/python.exe -m pytest tests/` 实测 **77 passed / 1 skipped**。README 对 Python 3.13+ 需 `audioop-lts` 的说明准确，`requirements.txt` 已含该补丁。内置 `bin/ffmpeg.exe` 实现零外部依赖。
 
 ### 3.2 功能问题（按严重度）
 
