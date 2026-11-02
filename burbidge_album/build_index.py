@@ -85,7 +85,9 @@ for root, dirs, files in os.walk(BASE):
         # key from filename (basename without ext) + parent folder
         key = parse_key(os.path.splitext(fn)[0]) or parse_key(os.path.basename(os.path.dirname(full)))
         rec = {
-            "path": full, "cat": cat, "bpm": bpm, "key": key,
+            # 存相对仓库根的路径（2026-11-02 铁律 5 去符盘）：原写绝对路径，
+            # 换机/换盘后 index.json 即失效；消费方 build_album.py 会按仓库根拼接还原。
+            "path": rel.replace(os.sep, "/"), "cat": cat, "bpm": bpm, "key": key,
             "subcat": subcat, "pack": pack, "ext": os.path.splitext(fn)[1].lower(),
         }
         index.append(rec)
@@ -121,5 +123,7 @@ for t in [90,100,105,110]:
             kc[key_root(x["key"])]+=1
     print(f"  {t} BPM keys:", dict(kc))
 
-json.dump({"base":BASE,"index":index}, open(OUT, "w", encoding="utf-8"), ensure_ascii=False)   # 2026-09-23 修复：写入必须显式 UTF-8
+# 2026-11-02 铁律 5 去符盘：base 原写绝对仓库根，换机即失效且无消费方
+#（消费方 build_album.py 按自身位置推导根），改为相对标记 "."。
+json.dump({"base":".","index":index}, open(OUT, "w", encoding="utf-8"), ensure_ascii=False)   # 2026-09-23 修复：写入必须显式 UTF-8
 print("\nWrote", OUT)

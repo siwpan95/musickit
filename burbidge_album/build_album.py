@@ -19,6 +19,18 @@ os.makedirs(OUTDIR, exist_ok=True)
 os.makedirs(CACHE, exist_ok=True)
 random.seed(20260818)
 
+# 仓库根（2026-11-02 铁律 5 去符盘）：index.json 的 path 现存**相对仓库根**的路径，
+# 绝对路径写进版本库会随换机/换盘失效。这里按根还原成可读文件的绝对路径。
+# 兼容旧版 index.json（path 已是绝对路径）：绝对路径原样使用。
+_MK_ROOT = os.environ.get("MUSICKIT_ROOT") or os.path.dirname(HERE)
+
+
+def abs_path(rec_path):
+    """把 index.json 里的相对路径还原为绝对路径；已是绝对路径则原样返回。"""
+    if os.path.isabs(rec_path):
+        return rec_path
+    return os.path.join(_MK_ROOT, rec_path.replace("/", os.sep))
+
 def key_root(k):
     if not k: return None
     return k[0] + (k[1] if len(k) > 1 and k[1] in "#b" else "")
@@ -103,7 +115,7 @@ def select_stems(spec):
 
 # ---------------- helpers ----------------
 def load_stretch(rec, tempo):
-    x = dsp.load_audio(rec["path"], SR)
+    x = dsp.load_audio(abs_path(rec["path"]), SR)
     if rec["bpm"]:
         ratio = rec["bpm"] / tempo
         ratio = min(max(ratio, 1/1.5), 1.5)
@@ -148,7 +160,7 @@ def prepare_audio(recs, tempo, total):
     P = tile(cached_stretch(recs["pad"], tempo), total) if recs["pad"] else np.zeros((total,2),np.float32)
     Ld = tile(cached_stretch(recs["lead"], tempo), total) if recs["lead"] else np.zeros((total,2),np.float32)
     BG = tile(cached_stretch(recs["bg"], tempo), total) if recs["bg"] else np.zeros((total,2),np.float32)
-    SX = dsp.load_audio(recs["sfx"]["path"], SR) if recs["sfx"] else None
+    SX = dsp.load_audio(abs_path(recs["sfx"]["path"]), SR) if recs["sfx"] else None
     return dict(D=D, B=B, P=P, Ld=Ld, BG=BG, SX=SX)
 
 # style registry + chain renderers live in the shared mixer_styles module

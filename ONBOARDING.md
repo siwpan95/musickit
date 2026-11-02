@@ -277,11 +277,11 @@ PYTHON=/path/to/python bash scripts/ci_smoke.sh
 
 ```
 == 文档数字一致性 ==
-真实收集数：total=281  remix=223  music=58  smoke=159  smoke_music=36
+真实收集数：total=287  remix=229  music=58  smoke=165  smoke_music=36
 ✅ 文档数字与真实一致
 
 == pytest -m smoke ==
-158 passed, 1 skipped, 122 deselected in 3.46s
+164 passed, 1 skipped, 122 deselected in 3.85s
 
 ✅ 冒烟检查通过
 ```
@@ -295,7 +295,7 @@ PYTHON=/path/to/python bash scripts/ci_smoke.sh
 python -m pytest remix/tests music/tests -q
 ```
 
-实测：**280 passed, 1 skipped**（收集 281 条）。
+实测：**286 passed, 1 skipped**（收集 287 条）。
 
 ---
 
@@ -723,7 +723,7 @@ python -m pytest remix/tests music/tests -q
 python scripts/check_doc_counts.py
 ```
 
-**关于第 3 条**：仓库文档里写死的测试数字（如「**281 用例**」）由
+**关于第 3 条**：仓库文档里写死的测试数字（如「**287 用例**」）由
 `scripts/check_doc_counts.py` 做机械校验 —— 加了用例却忘了改文档会被它拦下。
 `--fix` 可自动改正这两类数字。
 
@@ -807,7 +807,7 @@ pip install -r requirements.txt                          # 或 requirements.lock
 # —— 验证 ——
 python remix/tools/doctor.py                             # 环境 + 素材自检
 bash scripts/ci_smoke.sh                                 # 自检 + 冒烟
-python -m pytest remix/tests music/tests -q              # 全量（281 条）
+python -m pytest remix/tests music/tests -q              # 全量（287 条）
 
 # —— 素材 ——
 python remix/tools/fetch_freepd.py --out D:/tmp/src --limit 4
