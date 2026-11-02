@@ -72,6 +72,14 @@ if [ "$DOCTOR_RC" -ge 2 ]; then
   exit 2
 fi
 
+# ---- 1.5) 文档里的测试数字必须与真实收集数一致 ----
+# 手写的「N passed」每加一条用例就静默过期一次，本仓已多次踩这个坑
+# （`--release-safe` 守红线、`7 处写死`、125 passed 早已是 191）。
+# 这里只用 pytest --collect-only 数用例，不执行，几秒内跑完。
+echo
+echo "== 文档数字一致性 =="
+"$PY" scripts/check_doc_counts.py || exit 1
+
 # ---- 2) 冒烟测试（纯逻辑，不需素材/编解码）----
 # 覆盖两侧：remix/tests（混音引擎）+ music/tests（提示词桥接：scale / scene / elements / fusion）。
 # 某些机器装了会炸的 pytest 第三方插件（如 hydra → antlr4 → typing.io），

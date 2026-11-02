@@ -253,7 +253,8 @@ python prompt_driven_remix.py -c phonk      # --release-safe 已废弃，无需�
 ## 测试
 
 ```bash
-python -m pytest tests -q          # 桥接器单元测试（12 用例，不依赖真实素材库）
+python -m pytest tests -q          # 桥接器 + 规则表单元测试（58 用例，不依赖真实素材库）
+python -m pytest tests -q -m smoke # 纯逻辑档（36 用例）
 python validate_styles.py --strict # 风格池完整性
 python demo_validator.py           # 导出数据质量校验
 python test_suite.py               # 生成器全量测评（刷新 TEST_REPORT.md）

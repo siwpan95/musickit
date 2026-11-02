@@ -152,8 +152,9 @@ usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm
 - 输出文件名同秒冲突自动递增（`_1/_2`），不会覆盖旧产物；
 - `MUSICKIT_ROOT` 环境变量可覆盖素材根目录。
 
-测试：`cd remix && python -m pytest tests -q`（**125 passed**，2026-11-02 实测）；快速档
-`python -m pytest tests -q -m smoke`（16 个纯逻辑用例）。
+测试：`python -m pytest remix/tests music/tests -q`（**261 passed**，2026-11-02 实测；引擎侧 203 /
+桥接器侧 58）；快速档 `python -m pytest remix/tests music/tests -q -m smoke`（**139 个纯逻辑用例**，
+无 ffmpeg 编解码、无真实素材依赖）。一行走完自检 + 冒烟：`bash scripts/ci_smoke.sh`。
 Python 3.13+ 需 `audioop-lts`；混音师风格链需 `scipy` + `soundfile`（均已在 requirements.txt）。
 ffmpeg / ffprobe 需自备（`remix/bin/` 或系统 PATH，解析见 `remix/core/binfind.py`）。
 
