@@ -79,6 +79,10 @@ python remix/tools/fetch_freepd.py --out D:/tmp/freepd_src --list      # 只列�
 python remix/tools/ingest_stems.py --src D:/tmp/freepd_src --source-tag freepd
 python remix/tools/ingest_stems.py --demucs-out D:/tmp/demucs_out      # 复用已分离产物
 python remix/tools/ingest_stems.py --src ... --dry-run                 # 只看计划
+
+# 按来源标签整批撤回（拿本地曲库做测试素材后的后悔药）
+python remix/tools/ingest_stems.py --purge-tag ftest --dry-run          # 先看会删什么
+python remix/tools/ingest_stems.py --purge-tag ftest                    # 真删
 ```
 
 | 项 | 说明 |

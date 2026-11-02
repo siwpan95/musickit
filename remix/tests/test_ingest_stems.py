@@ -128,3 +128,44 @@ class TestIngest:
         data = json.loads(open(os.path.join(mk_root, "drum", "manifest.json"),
                                encoding="utf-8").read())
         assert data["entries"] == []
+
+
+class TestPurgeByTag:
+    """可逆性：拿本地曲库做测试素材后，必须能按标签整批撤回。"""
+
+    def test_removes_entries_and_files(self, demucs_dir, mk_root):
+        ing.ingest(ing.collect_stems(demucs_dir, "htdemucs"), mk_root,
+                   "ftest", "测试素材", "unknown", "ftest", dry_run=False)
+
+        st = ing.purge_by_tag(mk_root, "ftest", dry_run=False)
+
+        assert st["pools"] == 4
+        assert st["entries"] == 4
+        assert st["files"] == 4
+        for pool in ("drum", "bass", "guita", "acapella"):
+            left = [f for f in os.listdir(os.path.join(mk_root, pool)) if f.endswith(".wav")]
+            assert left == [], f"{pool} 仍有残留音频"
+            data = json.loads(open(os.path.join(mk_root, pool, "manifest.json"),
+                                   encoding="utf-8").read())
+            assert data["entries"] == []
+
+    def test_dry_run_keeps_everything(self, demucs_dir, mk_root):
+        ing.ingest(ing.collect_stems(demucs_dir, "htdemucs"), mk_root,
+                   "ftest", "测试素材", "unknown", "ftest", dry_run=False)
+
+        st = ing.purge_by_tag(mk_root, "ftest", dry_run=True)
+        assert st["entries"] == 4
+        left = [f for f in os.listdir(os.path.join(mk_root, "drum")) if f.endswith(".wav")]
+        assert left == ["ftest__My_Song.wav"], "dry-run 不应删文件"
+
+    def test_other_tags_untouched(self, demucs_dir, mk_root):
+        stems = ing.collect_stems(demucs_dir, "htdemucs")
+        ing.ingest(stems, mk_root, "freepd", "CC0", "free", "freepd", dry_run=False)
+        ing.ingest(stems, mk_root, "ftest", "测试素材", "unknown", "ftest", dry_run=False)
+
+        ing.purge_by_tag(mk_root, "ftest", dry_run=False)
+
+        data = json.loads(open(os.path.join(mk_root, "drum", "manifest.json"),
+                               encoding="utf-8").read())
+        tags = [e["source_pack"] for e in data["entries"]]
+        assert tags == ["freepd"], "误删了其它来源的条目"

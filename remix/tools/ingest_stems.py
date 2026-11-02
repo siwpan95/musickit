@@ -266,11 +266,44 @@ def ingest(
     return stats
 
 
+def purge_by_tag(root: str, tag: str, dry_run: bool) -> dict:
+    """删除 source_pack == tag 的 manifest 条目与对应音频文件。"""
+    stats = {"entries": 0, "files": 0, "pools": 0}
+    for pool in sorted(STEM_TO_POOL.values()):
+        pool_dir = os.path.join(root, pool)
+        if not os.path.isdir(pool_dir):
+            continue
+        data = load_manifest(pool_dir)
+        keep, drop = [], []
+        for e in data.get("entries", []):
+            if isinstance(e, dict) and e.get("source_pack") == tag:
+                drop.append(e)
+            else:
+                keep.append(e)
+        if not drop:
+            continue
+        stats["pools"] += 1
+        stats["entries"] += len(drop)
+        data["entries"] = keep
+        for e in drop:
+            fpath = os.path.join(pool_dir, str(e.get("file", "")))
+            if os.path.isfile(fpath):
+                stats["files"] += 1
+                print(f"  - 删除 {pool}/{os.path.basename(fpath)}")
+                if not dry_run:
+                    os.remove(fpath)
+        save_manifest(pool_dir, data, dry_run)
+    return stats
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="整曲分离 → 灌入 musickit stem 池")
-    src_grp = ap.add_mutually_exclusive_group(required=True)
+    src_grp = ap.add_mutually_exclusive_group()
     src_grp.add_argument("--demucs-out", help="已有的 demucs 输出目录（跳过分离）")
     src_grp.add_argument("--src", help="整曲目录（内部调用 demucs 分离）")
+    ap.add_argument("--purge-tag", metavar="TAG",
+                    help="按 source_pack==TAG 删除条目与落盘文件（可逆性保障），"
+                         "常配合 --dry-run 先看会删什么")
     ap.add_argument("--root", default=os.environ.get("MUSICKIT_ROOT")
                     or os.path.dirname(_REMIX_DIR),
                     help="musickit 根目录（池所在处，默认仓库根）")
@@ -283,6 +316,17 @@ def main() -> int:
     ap.add_argument("--timeout", type=int, default=3600, help="demucs 超时秒数")
     ap.add_argument("--dry-run", action="store_true", help="只打印计划，不落盘")
     args = ap.parse_args()
+
+    if args.purge_tag:
+        st = purge_by_tag(args.root, args.purge_tag, args.dry_run)
+        print(f"\n清除 source_pack == '{args.purge_tag}'：池 {st['pools']} 个 / "
+              f"条目 {st['entries']} 条 / 文件 {st['files']} 个"
+              + ("（dry-run，未实际删除）" if args.dry_run else ""))
+        return 0
+
+    if not args.src and not args.demucs_out:
+        print("❌ 需要 --src / --demucs-out / --purge-tag 之一", file=sys.stderr)
+        return 2
 
     demucs_out = args.demucs_out
     if args.src:
