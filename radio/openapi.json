@@ -1,0 +1,2303 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "musickit Radio Station API",
+    "version": "2.0",
+    "description": "自托管网络电台（纯 Python + Flask）。提供音频流（ICY / 多码率 / HLS）、播放控制、 文件管理、状态监控、节目单与社群同步。\n体系结构：电台默认音源为 musickit 引擎的随机渲染输出（子进程调用 `remix/tools/musickit_render_one.py`）；亦可回退本地 `music/` 歌单。\n认证：Cookie-based Session。未配置文件 `.station_password` 时为本地/局域网信任模型 （写操作自动放行）；已配置后写操作需先 POST /login，否则返回 401。 安全方案名：`cookieAuth`（无显式 header 时依赖浏览器 Cookie）。\n",
+    "contact": {
+      "name": "siwpan",
+      "url": "https://gitee.com/siwpan/musickit"
+    },
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000",
+      "description": "本地/局域网默认端口（config.HTTP_PORT）"
+    },
+    {
+      "url": "http://0.0.0.0:8000",
+      "description": "监听所有网卡"
+    }
+  ],
+  "tags": [
+    {
+      "name": "流媒体",
+      "description": "音频流、HLS 切片、播客 RSS"
+    },
+    {
+      "name": "状态",
+      "description": "播放状态、健康、听众、元数据/封面/歌词"
+    },
+    {
+      "name": "控制",
+      "description": "播放控制（多数需登录）"
+    },
+    {
+      "name": "认证",
+      "description": "登录、登出、密码"
+    },
+    {
+      "name": "文件",
+      "description": "上传、列举、删除音乐文件"
+    },
+    {
+      "name": "节目单",
+      "description": "定时播放排程"
+    },
+    {
+      "name": "集成",
+      "description": "Discord / Telegram 社群同步"
+    },
+    {
+      "name": "文档",
+      "description": "自动 API 文档"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "cookieAuth": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "session",
+        "description": "Flask 会话 Cookie；POST /login 后由服务端 Set-Cookie 下发。"
+      }
+    },
+    "schemas": {
+      "Status": {
+        "type": "object",
+        "properties": {
+          "station": {
+            "type": "string"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "playlist",
+              "musickit"
+            ]
+          },
+          "current_title": {
+            "type": "string"
+          },
+          "paused": {
+            "type": "boolean"
+          },
+          "shuffle": {
+            "type": "boolean"
+          },
+          "listeners": {
+            "type": "integer"
+          },
+          "playlist_size": {
+            "type": "integer"
+          },
+          "musickit": {
+            "$ref": "#/components/schemas/MusickitStatus"
+          },
+          "history": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "requests": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "playlist": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "歌单文件名列表"
+          },
+          "recording": {
+            "type": "boolean"
+          },
+          "recording_path": {
+            "type": "string"
+          },
+          "elapsed": {
+            "type": "integer",
+            "description": "当前曲已播秒数"
+          },
+          "uptime": {
+            "type": "integer",
+            "description": "服务运行时长（秒）"
+          }
+        }
+      },
+      "MusickitStatus": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "rendering": {
+            "type": "boolean"
+          },
+          "channel": {
+            "type": "string",
+            "nullable": true
+          },
+          "bars": {
+            "type": "integer"
+          },
+          "queued": {
+            "type": "integer"
+          },
+          "rendered_count": {
+            "type": "integer"
+          },
+          "last_error": {
+            "type": "string"
+          },
+          "cache_dir": {
+            "type": "string"
+          },
+          "current": {
+            "type": "string"
+          }
+        }
+      },
+      "Health": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "mode": {
+            "type": "string"
+          },
+          "current_title": {
+            "type": "string"
+          },
+          "listeners": {
+            "type": "integer"
+          },
+          "subscribers": {
+            "type": "integer",
+            "description": "广播订阅队列数（应≈在线听众数）"
+          },
+          "uptime": {
+            "type": "integer"
+          },
+          "playlist_size": {
+            "type": "integer"
+          },
+          "recording": {
+            "type": "boolean"
+          },
+          "public_url": {
+            "type": "string",
+            "nullable": true
+          },
+          "disk": {
+            "type": "object",
+            "properties": {
+              "free_gb": {
+                "type": "number",
+                "nullable": true
+              },
+              "total_gb": {
+                "type": "number",
+                "nullable": true
+              }
+            }
+          },
+          "hls": {
+            "type": "object",
+            "description": "hls.status() 原样透传"
+          },
+          "ffmpeg": {
+            "type": "boolean"
+          },
+          "ffmpeg_path": {
+            "type": "string"
+          },
+          "deps": {
+            "type": "object",
+            "properties": {
+              "requests": {
+                "type": "boolean"
+              },
+              "waitress": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      },
+      "SimpleOk": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "error": {
+            "type": "string"
+          }
+        }
+      },
+      "UploadResult": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "task_id": {
+            "type": "string"
+          },
+          "uploaded": {
+            "type": "integer"
+          },
+          "failed": {
+            "type": "integer"
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "original": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "UploadProgress": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "done": {
+            "type": "integer"
+          },
+          "total": {
+            "type": "integer"
+          },
+          "percent": {
+            "type": "integer"
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "FileItem": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "size": {
+            "type": "integer"
+          },
+          "size_mb": {
+            "type": "number"
+          },
+          "modified": {
+            "type": "string"
+          }
+        }
+      },
+      "FileList": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FileItem"
+            }
+          }
+        }
+      },
+      "AuthStatus": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "configured": {
+            "type": "boolean"
+          },
+          "logged_in": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ScheduleItem": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string",
+            "example": "09:00",
+            "description": "HH:MM（24h）"
+          },
+          "weekdays": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 7
+            },
+            "description": "1=周一…7=周日；省略=每天"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "playlist_dir",
+              "shuffle"
+            ],
+            "description": "relay 已于 2026-08-23 剥离"
+          },
+          "dir": {
+            "type": "string",
+            "description": "playlist_dir 时的歌单子目录（相对项目根）"
+          }
+        }
+      },
+      "ScheduleGet": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ScheduleItem"
+            }
+          },
+          "upcoming": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "time": {
+                  "type": "string"
+                },
+                "action": {
+                  "type": "string"
+                },
+                "dir": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "weekdays": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                },
+                "fires_in_min": {
+                  "type": "integer"
+                },
+                "fires_at": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "IntegrationsGet": {
+        "type": "object",
+        "description": "仅返回布尔/非敏感状态，不泄露密钥",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          },
+          "discord": {
+            "type": "boolean"
+          },
+          "telegram": {
+            "type": "boolean"
+          }
+        }
+      },
+      "IntegrationsPost": {
+        "type": "object",
+        "properties": {
+          "discord_webhook": {
+            "type": "string",
+            "nullable": true
+          },
+          "telegram_token": {
+            "type": "string",
+            "nullable": true
+          },
+          "telegram_chat_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "enabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ListenerLog": {
+        "type": "object",
+        "properties": {
+          "recent": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ip": {
+                  "type": "string"
+                },
+                "ua": {
+                  "type": "string"
+                },
+                "duration": {
+                  "type": "integer"
+                },
+                "ended": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "online": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ip": {
+                  "type": "string"
+                },
+                "ua": {
+                  "type": "string"
+                },
+                "elapsed": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "online_count": {
+            "type": "integer"
+          }
+        }
+      },
+      "ListenerStats": {
+        "type": "object",
+        "properties": {
+          "hours": {
+            "type": "integer"
+          },
+          "curve": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "peak": {
+            "type": "integer"
+          },
+          "total_connects": {
+            "type": "integer"
+          },
+          "total_duration_sec": {
+            "type": "integer"
+          },
+          "top_ips": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ip": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "top_hours": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "hour": {
+                  "type": "integer"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      },
+      "Meta": {
+        "type": "object",
+        "description": "当前/指定本地曲目的 ID3/FLAC/M4A/OGG 标签（mutagen 读取）",
+        "additionalProperties": true
+      },
+      "Lyrics": {
+        "type": "object",
+        "properties": {
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "plain": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "local",
+              "lrclib",
+              "none"
+            ]
+          },
+          "synced": {
+            "type": "boolean"
+          }
+        }
+      },
+      "MusickitControl": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "start",
+              "stop"
+            ],
+            "default": "start"
+          },
+          "channel": {
+            "type": "string",
+            "nullable": true,
+            "description": "混音师 slug 或 random；null=沿用配置"
+          },
+          "bars": {
+            "type": "integer",
+            "nullable": true,
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "responses": {
+      "Unauthorized": {
+        "description": "未登录（已配置密码时）",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SimpleOk"
+            },
+            "example": {
+              "ok": false,
+              "error": "请先登录"
+            }
+          }
+        }
+      },
+      "BadRequest": {
+        "description": "请求参数错误",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SimpleOk"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "资源不存在",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SimpleOk"
+            }
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/stream": {
+      "get": {
+        "tags": [
+          "流媒体"
+        ],
+        "summary": "主音频流（支持 ICY 元数据）",
+        "description": "客户端声明 `Icy-MetaData: 1` 时插入 ICY 元数据（StreamTitle）；录音模式 强制转码固定 MP3。别名 `/stream.mp3` 供按扩展名识别音频的播放器/硬件使用。\n",
+        "responses": {
+          "200": {
+            "description": "音频流（audio/mpeg 或源格式）",
+            "headers": {
+              "icy-name": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "icy-genre": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "icy-br": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "icy-metaint": {
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            },
+            "content": {
+              "audio/mpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/stream.mp3": {
+      "get": {
+        "tags": [
+          "流媒体"
+        ],
+        "summary": "主音频流（.mp3 别名）",
+        "responses": {
+          "200": {
+            "description": "音频流",
+            "content": {
+              "audio/mpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/stream/{bitrate}": {
+      "get": {
+        "tags": [
+          "流媒体"
+        ],
+        "summary": "多码率挂载点",
+        "parameters": [
+          {
+            "name": "bitrate",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "enum": [
+                64,
+                320
+              ]
+            },
+            "description": "config.TRANSCODE_MOUNTS"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "转码到该码率的 MP3 流",
+            "content": {
+              "audio/mpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/hls/{name}": {
+      "get": {
+        "tags": [
+          "流媒体"
+        ],
+        "summary": "HLS 直播切片（.m3u8 / .ts）",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "如 live.m3u8 / v_128k.m3u8 / seg_000.ts"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "HLS 播放列表或切片（CORS 全开）",
+            "content": {
+              "application/vnd.apple.mpegurl": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "video/mp2t": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/rss": {
+      "get": {
+        "tags": [
+          "流媒体"
+        ],
+        "summary": "播客 RSS 2.0（基于 recordings/*.mp3）",
+        "responses": {
+          "200": {
+            "description": "RSS XML",
+            "content": {
+              "application/rss+xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recordings/{name}": {
+      "get": {
+        "tags": [
+          "流媒体"
+        ],
+        "summary": "录音文件下载（防目录穿越）",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "录音 MP3",
+            "content": {
+              "audio/mpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/status": {
+      "get": {
+        "tags": [
+          "状态"
+        ],
+        "summary": "当前播放状态 + 歌单信息",
+        "responses": {
+          "200": {
+            "description": "状态",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                },
+                "example": {
+                  "station": "我的Python电台",
+                  "genre": "Various",
+                  "mode": "musickit",
+                  "current_title": "随机渲染：Wallace · phonk · memphis · 140 BPM",
+                  "paused": false,
+                  "shuffle": false,
+                  "listeners": 3,
+                  "playlist_size": 0,
+                  "musickit": {
+                    "active": true,
+                    "rendering": false,
+                    "channel": "wallace",
+                    "bars": 32,
+                    "queued": 1,
+                    "rendered_count": 12,
+                    "last_error": "",
+                    "current": "随机渲染：Wallace · phonk"
+                  },
+                  "history": [
+                    "随机渲染：Wallace · phonk",
+                    "随机渲染：Ghenea · trap"
+                  ],
+                  "requests": [],
+                  "playlist": [],
+                  "recording": false,
+                  "recording_path": "",
+                  "elapsed": 42,
+                  "uptime": 73211
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "tags": [
+          "状态"
+        ],
+        "summary": "服务健康检查",
+        "responses": {
+          "200": {
+            "description": "健康",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Health"
+                },
+                "example": {
+                  "ok": true,
+                  "mode": "musickit",
+                  "current_title": "随机渲染：Wallace · phonk",
+                  "listeners": 3,
+                  "subscribers": 3,
+                  "uptime": 73211,
+                  "playlist_size": 0,
+                  "recording": false,
+                  "public_url": "https://xxxx.trycloudflare.com",
+                  "disk": {
+                    "free_gb": 120.4,
+                    "total_gb": 405.0
+                  },
+                  "hls": {
+                    "running": true,
+                    "last_error": ""
+                  },
+                  "ffmpeg": true,
+                  "ffmpeg_path": "D:/projects/repos/musickit/radio/ffmpeg/ffmpeg.exe",
+                  "deps": {
+                    "requests": true,
+                    "waitress": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/listeners": {
+      "get": {
+        "tags": [
+          "状态"
+        ],
+        "summary": "听众连接日志（最近 + 当前在线）",
+        "responses": {
+          "200": {
+            "description": "听众日志",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListenerLog"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/stats/listeners": {
+      "get": {
+        "tags": [
+          "状态"
+        ],
+        "summary": "24h 听众统计曲线",
+        "parameters": [
+          {
+            "name": "hours",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 24
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "统计",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListenerStats"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/meta": {
+      "get": {
+        "tags": [
+          "状态"
+        ],
+        "summary": "当前/指定本地曲目标签",
+        "parameters": [
+          {
+            "name": "path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "指定文件；缺省取当前播放的本地文件"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "标签",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Meta"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cover": {
+      "get": {
+        "tags": [
+          "状态"
+        ],
+        "summary": "当前/指定本地曲目内嵌封面",
+        "parameters": [
+          {
+            "name": "path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "封面图片",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/lyrics": {
+      "get": {
+        "tags": [
+          "状态"
+        ],
+        "summary": "当前/指定本地曲目歌词（LRC 优先 → LRCLIB 兜底）",
+        "parameters": [
+          {
+            "name": "path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "歌词",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lyrics"
+                },
+                "example": {
+                  "lines": [
+                    "[00:12.34] some lyric",
+                    "[00:16.00] more"
+                  ],
+                  "plain": "some lyric\nmore",
+                  "source": "local",
+                  "synced": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hls/status": {
+      "get": {
+        "tags": [
+          "状态"
+        ],
+        "summary": "HLS 切片器状态",
+        "responses": {
+          "200": {
+            "description": "切片状态",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public-url": {
+      "get": {
+        "tags": [
+          "状态"
+        ],
+        "summary": "公网穿透地址",
+        "responses": {
+          "200": {
+            "description": "公网地址",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "nullable": true
+                    }
+                  }
+                },
+                "example": {
+                  "url": "https://xxxx.trycloudflare.com"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/skip": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "下一首",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/play": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "继续播放（取消暂停）",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                },
+                "example": {
+                  "ok": true,
+                  "paused": false
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/stop": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "暂停播放",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                },
+                "example": {
+                  "ok": true,
+                  "paused": true
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/pause": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "切换暂停/播放",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                },
+                "example": {
+                  "ok": true,
+                  "paused": true
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/shuffle": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "随机播放开关",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                },
+                "example": {
+                  "ok": true,
+                  "shuffle": true
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/repeat": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "单曲循环开关",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                },
+                "example": {
+                  "ok": true,
+                  "repeat": false
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/volume": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "设置音量 (0-100)",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100,
+                    "default": 80
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                },
+                "example": {
+                  "ok": true,
+                  "volume": 80
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/rescan": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "重新扫描歌单",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                },
+                "example": {
+                  "ok": true,
+                  "count": 42
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/record": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "录音开关",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "start",
+                      "stop"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                },
+                "example": {
+                  "ok": true,
+                  "recording": true,
+                  "path": "D:/.../recordings/rec_20261102_173000.mp3"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "无 ffmpeg",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/musickit": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "musickit 随机渲染源 开始/停止/参数",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MusickitControl"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok": {
+                      "type": "boolean"
+                    },
+                    "mode": {
+                      "type": "string"
+                    },
+                    "musickit": {
+                      "$ref": "#/components/schemas/MusickitStatus"
+                    }
+                  }
+                },
+                "example": {
+                  "ok": true,
+                  "mode": "musickit",
+                  "musickit": {
+                    "active": true,
+                    "channel": "random",
+                    "bars": 32,
+                    "queued": 1
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "渲染失败",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/request": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "点歌（模糊匹配歌单内曲目）",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                },
+                "example": {
+                  "ok": true,
+                  "queue": [
+                    "song a"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "缺 title",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "歌单无此曲",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/request/clear": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "清空点歌队列",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/announce": {
+      "post": {
+        "tags": [
+          "控制"
+        ],
+        "summary": "立即把当前曲发布到 Discord/Telegram",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/login": {
+      "get": {
+        "tags": [
+          "认证"
+        ],
+        "summary": "登录页（已配置密码时）/ 首次设置页",
+        "responses": {
+          "200": {
+            "description": "HTML 登录页",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "认证"
+        ],
+        "summary": "登录 / 首次创建密码",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "302": {
+            "description": "重定向到控制面板（Set-Cookie）"
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "tags": [
+          "认证"
+        ],
+        "summary": "登出",
+        "responses": {
+          "302": {
+            "description": "重定向到登录页"
+          }
+        }
+      }
+    },
+    "/api/auth/status": {
+      "get": {
+        "tags": [
+          "认证"
+        ],
+        "summary": "认证状态",
+        "responses": {
+          "200": {
+            "description": "状态",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthStatus"
+                },
+                "example": {
+                  "ok": true,
+                  "configured": true,
+                  "logged_in": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/password": {
+      "post": {
+        "tags": [
+          "认证"
+        ],
+        "summary": "修改管理员密码",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "old": {
+                    "type": "string"
+                  },
+                  "new": {
+                    "type": "string",
+                    "minLength": 4
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "密码过短",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "未登录",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "原密码错误",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/upload": {
+      "post": {
+        "tags": [
+          "文件"
+        ],
+        "summary": "上传音乐文件（批量）",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UploadResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "未选文件",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/upload/progress/{task_id}": {
+      "get": {
+        "tags": [
+          "文件"
+        ],
+        "summary": "上传进度（JSON 或 SSE）",
+        "parameters": [
+          {
+            "name": "task_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "进度",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UploadProgress"
+                }
+              },
+              "text/event-stream": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "任务不存在",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/files": {
+      "get": {
+        "tags": [
+          "文件"
+        ],
+        "summary": "列出音乐文件",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "文件列表",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileList"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/files/{filename}": {
+      "delete": {
+        "tags": [
+          "文件"
+        ],
+        "summary": "删除音乐文件（防路径遍历）",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "filename",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "不支持的操作",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "文件不存在",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/schedule": {
+      "get": {
+        "tags": [
+          "节目单"
+        ],
+        "summary": "查看排程 + 即将触发",
+        "responses": {
+          "200": {
+            "description": "排程",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScheduleGet"
+                },
+                "example": {
+                  "enabled": true,
+                  "items": [
+                    {
+                      "name": "工作日白天",
+                      "time": "09:00",
+                      "weekdays": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "action": "playlist_dir",
+                      "dir": "music/light"
+                    }
+                  ],
+                  "upcoming": [
+                    {
+                      "name": "工作日白天",
+                      "time": "09:00",
+                      "action": "playlist_dir",
+                      "dir": "music/light",
+                      "fires_in_min": 320,
+                      "fires_at": "2026-11-03 09:00"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "节目单"
+        ],
+        "summary": "保存排程（原子写 schedule.json）",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ScheduleItem"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                },
+                "example": {
+                  "ok": true,
+                  "count": 2
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "items 必须为数组",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/schedule/enable": {
+      "post": {
+        "tags": [
+          "节目单"
+        ],
+        "summary": "启用/禁用节目单",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "enabled": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleOk"
+                },
+                "example": {
+                  "ok": true,
+                  "enabled": true
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/integrations": {
+      "get": {
+        "tags": [
+          "集成"
+        ],
+        "summary": "社群集成状态（不泄露密钥）",
+        "responses": {
+          "200": {
+            "description": "状态",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IntegrationsGet"
+                },
+                "example": {
+                  "enabled": true,
+                  "discord": true,
+                  "telegram": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "集成"
+        ],
+        "summary": "保存社群集成配置（原子写 integrations.json）",
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IntegrationsPost"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/openapi.json": {
+      "get": {
+        "tags": [
+          "文档"
+        ],
+        "summary": "本 OpenAPI 3.0 规范（JSON）",
+        "responses": {
+          "200": {
+            "description": "OpenAPI 规范",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/docs": {
+      "get": {
+        "tags": [
+          "文档"
+        ],
+        "summary": "Swagger UI 风格交互文档页",
+        "responses": {
+          "200": {
+            "description": "HTML 文档页",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

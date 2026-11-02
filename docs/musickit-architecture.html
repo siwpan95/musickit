@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>musickit 系统架构与设计文档</title>
+<style>
+  :root{
+    --bg:#fbfaf7; --panel:#ffffff; --ink:#1f2430; --sub:#5b6472;
+    --line:#d9d3c7; --accent:#b9772e; --accent2:#2f6f8f; --accent3:#6a7d3a;
+    --code:#2b2b2b; --soft:#f3efe6;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.6;font-size:15px}
+  .wrap{max-width:980px;margin:0 auto;padding:40px 28px 80px}
+  h1{font-size:30px;margin:0 0 4px;letter-spacing:.5px}
+  h2{font-size:21px;margin:42px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line);color:var(--accent)}
+  h3{font-size:17px;margin:26px 0 8px;color:var(--accent2)}
+  .lead{color:var(--sub);font-size:15px;margin:0 0 8px}
+  .meta{color:var(--sub);font-size:13px;margin-bottom:8px}
+  .tag{display:inline-block;background:var(--soft);border:1px solid var(--line);
+       border-radius:20px;padding:2px 12px;font-size:12px;color:var(--sub);margin-right:6px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+        padding:20px 22px;margin:16px 0;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .fig{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+       padding:14px;margin:18px 0;text-align:center}
+  .fig svg{width:100%;height:auto;max-width:760px}
+  .fig .cap{color:var(--sub);font-size:13px;margin-top:8px}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--soft);color:var(--ink);font-weight:600}
+  td code,code{background:#f0ece2;padding:1px 5px;border-radius:4px;font-size:12.5px;
+      font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;color:var(--code)}
+  .note{background:#fff7ec;border-left:4px solid var(--accent);padding:10px 14px;
+        border-radius:6px;margin:14px 0;font-size:14px}
+  .warn{background:#fdeeee;border-left:4px solid #c0392b;padding:10px 14px;border-radius:6px;margin:14px 0}
+  .ok{background:#eef6ec;border-left:4px solid var(--accent3);padding:10px 14px;border-radius:6px;margin:14px 0}
+  ul{margin:8px 0 8px 0;padding-left:22px}
+  li{margin:4px 0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:720px){.two{grid-template-columns:1fr}}
+  a{color:var(--accent2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>musickit · 系统架构与设计文档</h1>
+<div class="meta">分析对象：<code>D:\projects\repos\musickit</code> ｜ 仓库 gitee.com/siwpan/musickit ｜ MIT ｜ 生成于 2026-11-02</div>
+<div>
+  <span class="tag">Python 3.13+ / pydub · numpy · scipy · soundfile · audioop-lts</span>
+  <span class="tag">Flask 电台 (8000)</span>
+  <span class="tag">混音师流服务 (8010)</span>
+  <span class="tag">113 个 .py 文件</span>
+</div>
+
+<div class="card">
+<p class="lead"><b>一句话定位：</b>musickit 是一个「真实采样 + 本地混音引擎」项目，由两个可独立运行的子系统组成。</p>
+<ul>
+  <li><b>混音引擎</b>（<code>remix/</code> + <code>music/</code> + <code>burbidge_album/</code>）：把素材池里的真实采样，按 phonk 风格 / 风格提示词 / 固定混音师签名链，渲染成 WAV/MP3 混音文件。纯命令行 / GUI，无网络。</li>
+  <li><b>电台子系统</b>（<code>radio/</code>）：纯 Flask 写的 24/7 网络电台。<b>默认音源就是引擎的随机渲染输出</b>——它把引擎当成一个无限素材发生器，套上 ICY/HLS/多码率/录音/控制面板，对外提供 HTTP 流 + 控制 API。</li>
+</ul>
+<p class="lead">二者通过 <b>文件系统 + 子进程</b> 解耦：电台并不 import 引擎内部函数，而是 <code>subprocess</code> 调用 <code>remix/tools/musickit_render_one.py</code>，引擎崩了也不会带垮电台主进程（<code>radio/radio/musickit_source.py:158</code>）。</p>
+</div>
+
+<!-- ============ 高层架构 ============ -->
+<h2>1. 高层架构</h2>
+<div class="fig">
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#8a7c5e"/>
+    </marker>
+    <style>
+      .box{fill:#fff;stroke:#c9b48a;stroke-width:1.5;rx:8}
+      .box2{fill:#f3efe6;stroke:#9aa86b;stroke-width:1.5;rx:8}
+      .lbl{fill:#1f2430;font-size:13px;font-weight:600}
+      .sm{fill:#5b6472;font-size:11px}
+      .edge{stroke:#8a7c5e;stroke-width:1.6;fill:none}
+    </style>
+  </defs>
+
+  <!-- engine box -->
+  <rect class="box" x="20" y="40" width="330" height="240" rx="10"/>
+  <text class="lbl" x="40" y="66">混音引擎（无网络 · 进程内）</text>
+  <rect class="box2" x="40" y="80" width="290" height="46" rx="6"/>
+  <text class="sm" x="52" y="98">music/ 风格提示词生成器</text>
+  <text class="sm" x="52" y="116">generate() → 结构化提示词</text>
+  <rect class="box2" x="40" y="134" width="290" height="46" rx="6"/>
+  <text class="sm" x="52" y="152">prompt_driven_remix.py 桥接器</text>
+  <text class="sm" x="52" y="170">instrument_taxonomy 映射 → run_remix</text>
+  <rect class="box2" x="40" y="188" width="290" height="40" rx="6"/>
+  <text class="sm" x="52" y="206">remix/main.py :: run_remix()</text>
+  <text class="sm" x="52" y="222">选音→切片→编排→混音→母带</text>
+  <rect class="box2" x="40" y="234" width="290" height="34" rx="6"/>
+  <text class="sm" x="52" y="252">burbidge_album/mixer_styles.py 24 位签名链</text>
+
+  <!-- bridge -->
+  <path class="edge" d="M350,160 C420,160 430,160 470,160" marker-end="url(#a)"/>
+  <text class="sm" x="372" y="152" fill="#b9772e">subprocess</text>
+  <text class="sm" x="372" y="168" fill="#b9772e">musickit_render_one.py</text>
+
+  <!-- radio box -->
+  <rect class="box" x="470" y="40" width="270" height="240" rx="10"/>
+  <text class="lbl" x="490" y="66">电台子系统（Flask · :8000）</text>
+  <rect class="box2" x="490" y="80" width="230" height="40" rx="6"/>
+  <text class="sm" x="502" y="98">musickit_source.py 渲染队列</text>
+  <text class="sm" x="502" y="114">+ 本地 music/ 歌单</text>
+  <rect class="box2" x="490" y="128" width="230" height="40" rx="6"/>
+  <text class="sm" x="502" y="146">broadcaster.py 共享广播缓冲</text>
+  <text class="sm" x="502" y="162">1 生产者 → N 订阅队列</text>
+  <rect class="box2" x="490" y="176" width="230" height="46" rx="6"/>
+  <text class="sm" x="502" y="194">web.py：/stream · HLS · 控制 API</text>
+  <text class="sm" x="502" y="210">ICY / 多码率 / 录音 / PWA</text>
+  <rect class="box2" x="490" y="228" width="230" height="40" rx="6"/>
+  <text class="sm" x="502" y="246">客户端：浏览器/VLC/</text>
+  <text class="sm" x="502" y="262">Safari(HLS)/播客RSS</text>
+
+  <!-- listeners -->
+  <path class="edge" d="M600,280 L600,300" marker-end="url(#a)"/>
+  <!-- audio pools -->
+  <rect class="box" x="20" y="290" width="330" height="22" rx="6"/>
+  <text class="sm" x="28" y="305">素材池：bass drum guita synth cowbell acapella animal sfx keys strings brass woodwind ethnic（各含 manifest.json）</text>
+</svg>
+<div class="cap">图 1 · 引擎与电台是两个解耦子系统，通过「子进程渲染 + 落盘缓存」通信</div>
+</div>
+
+<!-- ============ 核心模块 ============ -->
+<h2>2. 核心模块与职责</h2>
+
+<h3>2.1 混音引擎模块</h3>
+<table>
+<tr><th>模块</th><th>文件</th><th>职责</th><th>关键接口</th></tr>
+<tr><td>提示词生成器</td><td><code>music/music_prompt_generator.py</code></td><td>65 流派风格池，生成结构化提示词 <code>{label, subgenre, instruments[], bpm, moods[], ...}</code></td><td><code>batch_generate(n, profile, fusion, seed)</code></td></tr>
+<tr><td>提示词→混音桥接</td><td><code>music/prompt_driven_remix.py</code></td><td>把提示词经 <code>instrument_taxonomy.json</code>（242 词→37 类目→池）映射为引擎参数；无样本乐器记入 <code>gaps</code>，绝不假映射。<br><b style="color:#c0392b">⚠ 仅 <code>instruments</code>/<code>bpm</code> 真正塑形音频，<code>label</code>/<code>subgenre</code>/<code>moods</code> 只选曲式，其余 7 字段被静默丢弃——详见第 7 节「提示词利用率分析」。</b></td><td><code>generate_prompts()</code> · <code>prompt_to_mix_params(data, rng, ...)</code> · <code>run_remix(...)</code></td></tr>
+<tr><td>混音主流程</td><td><code>remix/main.py</code></td><td>CLI + GUI 入口；随机选音（phonk 骨架保底 ≥1 小节 loop）、内容指纹去重、曲式编排、母带、交付规格、配方落库</td><td><code>run_remix(count, seed, out_dir, fmt, bars, bpm, structure, tracks, release_safe, mixer_style)</code> → 输出路径</td></tr>
+<tr><td>音频加载/导出</td><td><code>remix/core/audio_loader.py</code></td><td>用 pydub + 内置 ffmpeg 加载/导出音频</td><td><code>AudioLoader.export(seg, path, fmt, bitrate, codec, parameters)</code></td></tr>
+<tr><td>loop 切分/变速</td><td><code>remix/core/loop_slicer.py</code></td><td>能量峰切 1~2 小节 loop、BPM 提示解析、自相关估计 BPM、atempo 对齐、编排拼装</td><td><code>prepare_material()</code> · <code>build_arrangement()</code> · <code>bar_ms()</code> · <code>parse_bpm_hint()</code> · <code>audio_fingerprint()</code></td></tr>
+<tr><td>分轨混音</td><td><code>remix/core/audio_mixer.py</code></td><td>RMS 归一、overlay 叠加、逐小节增益曲线</td><td>内部混音原语</td></tr>
+<tr><td>混音师签名链</td><td><code>burbidge_album/mixer_styles.py</code></td><td>24 位混音师（burbidge/ghenea/clearmountain…）的总线 EQ/压缩/饱和/混响/宽度 + 母带链，<b>两条管线共用</b></td><td><code>resolve_style()</code> · <code>bus_chain()</code> · <code>master_chain()</code> · <code>STYLE_BY_SLUG</code> · <code>SLUGS</code></td></tr>
+<tr><td>DSP 原语</td><td><code>burbidge_album/dsp.py</code></td><td>卷积混响（IR 生成）、滤波、压缩等（仅依赖 numpy/scipy）</td><td><code>convolve_rev()</code> · <code>SR</code></td></tr>
+<tr><td>单曲渲染器</td><td><code>remix/tools/musickit_render_one.py</code></td><td>电台调用的渲染进程；向 stdout 输出一行 JSON 元数据</td><td><code>{"ok":true,"file":...,"style":...,"bpm":...,"duration_s":...}</code></td></tr>
+<tr><td>本地流服务</td><td><code>remix/tools/mixer_stream.py</code></td><td>把 24 频道做成 8010 端口无限流（类 Mubert 频道）</td><td><code>GET /api/channels|/stream/&lt;slug&gt;|/track/&lt;slug&gt;|/playlist/&lt;slug&gt;</code></td></tr>
+</table>
+
+<h3>2.2 电台子系统模块</h3>
+<table>
+<tr><th>模块</th><th>文件</th><th>职责</th><th>关键接口</th></tr>
+<tr><td>启动入口</td><td><code>radio/run.py</code></td><td>waitress（回退 Flask dev server）；--expose 穿透守护（cloudflared/ngrok/localhost.run）</td><td><code>main()</code> · <code>start_tunnel()</code></td></tr>
+<tr><td>状态机</td><td><code>radio/radio/station.py</code></td><td>线程安全的歌单管理 + 播放控制 + 点歌 + 录音 + 听众计数；<code>rescan()</code> 重建歌单</td><td><code>RadioStation.status()</code> · <code>next()</code> · <code>toggle_pause()</code> · <code>start_musickit()</code></td></tr>
+<tr><td>随机渲染源 (F 层)</td><td><code>radio/radio/musickit_source.py</code></td><td>后台线程持续 subprocess 渲染 → 深度 3 就绪队列；连续失败回退歌单</td><td><code>MusickitSource.start()</code> · <code>wait_current()</code> · <code>status()</code></td></tr>
+<tr><td>共享广播缓冲 (D2)</td><td><code>radio/radio/broadcaster.py</code></td><td>单生产者读源、按比特率节流、推给 N 个订阅队列（满则丢旧块背压）</td><td><code>Broadcaster.subscribe()</code> · <code>sub_count()</code> · <code>_push()</code></td></tr>
+<tr><td>流生成器</td><td><code>radio/radio/streamer.py</code></td><td><code>playlist_stream</code>（订阅广播+ICY）、<code>mount_stream</code>（per-listener 转码+录音+节流）</td><td><code>playlist_stream()</code> · <code>mount_stream()</code> · <code>_pace()</code></td></tr>
+<tr><td>HLS 切片 (D1)</td><td><code>radio/radio/hls.py</code></td><td>后台 ffmpeg 切 2s 片 + ABR 主/变播放列表；无 ffmpeg 安全跳过</td><td><code>hls.start()</code> · <code>hls.status()</code></td></tr>
+<tr><td>转码基础设施 (B 层)</td><td><code>radio/radio/transcoder.py</code></td><td>ffmpeg 转码 / jingle 前缀 / 录音 tee / 项目自带二进制</td><td><code>transcode()</code> · <code>chain()</code> · <code>record_tee()</code></td></tr>
+<tr><td>认证</td><td><code>radio/radio/auth.py</code></td><td>SHA-256+salt 密码（首次运行创建）、Cookie Session、<code>api_login_required</code></td><td><code>verify_password()</code> · <code>api_login_required()</code></td></tr>
+<tr><td>路由/控制面板</td><td><code>radio/radio/web.py</code></td><td>所有 HTTP 路由 + 流响应头；注册 auth / uploads / api_docs 蓝图</td><td>见第 4 节</td></tr>
+<tr><td>上传/文件管理</td><td><code>radio/radio/uploads.py</code></td><td>批量上传（mp3/ogg/flac/wav/m4a/aac/webm/wma/opus）、进度 SSE、列/删</td><td><code>register_routes(app)</code></td></tr>
+<tr><td>标签/封面/歌词</td><td><code>metadata.py</code> · <code>lyrics.py</code> · <code>mp3info.py</code></td><td>mutagen 读 ID3/APIC；LRC 优先 + LRCLIB 兜底；纯 Python MP3 帧头嗅探</td><td><code>get_meta()</code> · <code>get_cover_smart()</code> · <code>get_lyrics()</code> · <code>probe_audio()</code></td></tr>
+<tr><td>社群同步 (C3)</td><td><code>radio/radio/integrations.py</code></td><td>Discord webhook / Telegram 频道；GET 不泄露密钥</td><td><code>save()</code> · <code>announce_now()</code></td></tr>
+<tr><td>节目单 (E1)</td><td><code>radio/radio/schedule.py</code></td><td>每 30s 检查 schedule.json，到点切歌单目录/随机</td><td><code>load_schedule()</code> · <code>upcoming()</code></td></tr>
+<tr><td>听众统计 (E4)</td><td><code>radio/radio/stats.py</code></td><td>SQLite (WAL) 记录 connect/disconnect，聚合 24h 曲线/峰值/Top IP</td><td><code>init()</code> · <code>listener_stats(hours)</code></td></tr>
+</table>
+
+<!-- ============ 数据流 ============ -->
+<h2>3. 核心数据流</h2>
+
+<h3>3.1 一次混音的渲染管线</h3>
+<div class="fig">
+<svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <defs><marker id="b" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#2f6f8f"/></marker></defs>
+  <style>.s{fill:#fff;stroke:#2f6f8f;stroke-width:1.4;rx:7}.t{fill:#1f2430;font-size:11.5px}.e{stroke:#2f6f8f;stroke-width:1.5;fill:none}</style>
+  <rect class="s" x="6" y="100" width="120" height="50" rx="7"/><text class="t" x="16" y="118">提示词/CLI</text><text class="t" x="16" y="134">count·bpm·bars·seed</text>
+  <rect class="s" x="150" y="100" width="120" height="50" rx="7"/><text class="t" x="160" y="118">选音</text><text class="t" x="160" y="134">phonk 骨架保底 loop</text>
+  <rect class="s" x="294" y="100" width="120" height="50" rx="7"/><text class="t" x="304" y="118">加载+切片</text><text class="t" x="304" y="134">atempo BPM 对齐</text>
+  <rect class="s" x="438" y="100" width="120" height="50" rx="7"/><text class="t" x="448" y="118">曲式编排</text><text class="t" x="448" y="134">intro→drop→outro</text>
+  <rect class="s" x="582" y="100" width="120" height="50" rx="7"/><text class="t" x="592" y="118">混音+母带</text><text class="t" x="592" y="134">-1.5dBFS / 风格链</text>
+  <path class="e" d="M126,125 L148,125" marker-end="url(#b)"/>
+  <path class="e" d="M270,125 L292,125" marker-end="url(#b)"/>
+  <path class="e" d="M414,125 L436,125" marker-end="url(#b)"/>
+  <path class="e" d="M558,125 L580,125" marker-end="url(#b)"/>
+  <rect class="s" x="294" y="12" width="244" height="40" rx="7" style="stroke:#9aa86b"/>
+  <text class="t" x="304" y="30">manifest.json 池（license_tier·duration_s）</text><text class="t" x="304" y="44">→ --release-safe 仅 free/pack</text>
+  <path class="e" d="M416,52 L416,98" marker-end="url(#b)"/>
+  <rect class="s" x="582" y="170" width="120" height="44" rx="7" style="stroke:#b9772e"/>
+  <text class="t" x="592" y="188">交付 WAV 48k/24bit</text><text class="t" x="592" y="202">或 MP3/ogg 320k</text>
+  <path class="e" d="M642,150 L642,168" marker-end="url(#b)"/>
+  <rect class="s" x="20" y="170" width="150" height="44" rx="7" style="stroke:#6a7d3a"/>
+  <text class="t" x="30" y="188">build_recipe() 落库</text><text class="t" x="30" y="202">配方+引擎指纹</text>
+  <path class="e" d="M170,150 L170,192" marker-end="url(#b)"/>
+</svg>
+<div class="cap">图 2 · 混音渲染管线（remix/main.py :: run_remix）</div>
+</div>
+
+<div class="note">关键数据结构：<code>tracks</code> 为 <code>[(category, path), ...]</code>；每条素材在 <code>prepare_material</code> 后成为 <code>{role, cat, seg, path, gain_db, start_bar, end_bar, gain_curve, seg_b}</code> 的 <code>materials</code> 列表（<code>remix/main.py:736</code>）。骨架层（drum/bass/guita）强制 <code>ROLE_LOOP</code>，sfx 强制 <code>ROLE_ACCENT</code>。</div>
+
+<h3>3.2 电台广播管线（含 musickit 源接入）</h3>
+<div class="fig">
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <defs><marker id="c" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#b9772e"/></marker></defs>
+  <style>.s{fill:#fff;stroke:#b9772e;stroke-width:1.4;rx:7}.t{fill:#1f2430;font-size:11px}.e{stroke:#b9772e;stroke-width:1.5;fill:none}</style>
+
+  <rect class="s" x="6" y="20" width="150" height="46" rx="7"/>
+  <text class="t" x="14" y="38">musickit 源 (F层)</text><text class="t" x="14" y="54">subprocess 渲染→队列</text>
+  <rect class="s" x="6" y="84" width="150" height="46" rx="7"/>
+  <text class="t" x="14" y="102">本地歌单 music/</text><text class="t" x="14" y="118">rescan() 扫描</text>
+  <path class="e" d="M156,43 L230,90" marker-end="url(#c)"/>
+  <path class="e" d="M156,107 L230,100" marker-end="url(#c)"/>
+
+  <rect class="s" x="232" y="78" width="150" height="50" rx="7" style="stroke:#2f6f8f"/>
+  <text class="t" x="240" y="98">Broadcaster</text><text class="t" x="240" y="114">1 生产者读源·节流</text>
+  <text class="t" x="240" y="128">→N 订阅队列</text>
+
+  <rect class="s" x="404" y="20" width="150" height="46" rx="7"/>
+  <text class="t" x="412" y="38">/stream ICY</text><text class="t" x="412" y="54">playlist_stream 订阅</text>
+  <rect class="s" x="404" y="78" width="150" height="46" rx="7"/>
+  <text class="t" x="412" y="96">/stream/&lt;k&gt;</text><text class="t" x="412" y="112">mount_stream 转码</text>
+  <rect class="s" x="404" y="136" width="150" height="46" rx="7"/>
+  <text class="t" x="412" y="154">HLS 切片</text><text class="t" x="412" y="170">/hls/live.m3u8</text>
+  <rect class="s" x="404" y="194" width="150" height="46" rx="7"/>
+  <text class="t" x="412" y="212">录音 /recordings</text><text class="t" x="412" y="228">record_tee</text>
+
+  <path class="e" d="M382,103 L402,43" marker-end="url(#c)"/>
+  <path class="e" d="M382,103 L402,101" marker-end="url(#c)"/>
+  <path class="e" d="M382,103 L402,159" marker-end="url(#c)"/>
+  <path class="e" d="M382,103 L402,217" marker-end="url(#c)"/>
+
+  <rect class="s" x="578" y="60" width="166" height="120" rx="7" style="stroke:#6a7d3a"/>
+  <text class="t" x="586" y="80">客户端</text>
+  <text class="t" x="586" y="98">· VLC / 播放在线广播</text>
+  <text class="t" x="586" y="114">· 浏览器控制面板</text>
+  <text class="t" x="586" y="130">· Safari/iOS (HLS)</text>
+  <text class="t" x="586" y="146">· 播客 RSS 回听</text>
+  <text class="t" x="586" y="162">· 公网隧道收听</text>
+  <path class="e" d="M554,43 L576,90" marker-end="url(#c)"/>
+  <path class="e" d="M554,101 L576,110" marker-end="url(#c)"/>
+  <path class="e" d="M554,159 L576,130" marker-end="url(#c)"/>
+  <path class="e" d="M554,217 L576,150" marker-end="url(#c)"/>
+</svg>
+<div class="cap">图 3 · 电台广播管线：一个广播者生产者，多路消费者（ICY 流 / 多码率 / HLS / 录音）</div>
+</div>
+
+<div class="ok">设计亮点（贴在项目代码注释里）：
+<ul>
+  <li><b>D2 共享广播</b>：N 个听众 = 1 次磁盘读（原来 N 次），<code>Broadcaster.sub_count()</code> 异常膨胀＝订阅泄漏（<code>_push</code> 的 finally 没跑到）。</li>
+  <li><b>慢客户端背压</b>：订阅队列满（maxsize=64）丢最旧块，听众跳秒不断流。</li>
+  <li><b>快读客户端节流</b>：<code>_pace()</code> 按码率限速，根治 ffmpeg/HLS 抽干节目的 29× 快读问题。</li>
+  <li><b>引擎崩溃隔离</b>：musickit 源是子进程，连续 5 次失败自动回退本地歌单（<code>musickit_source.py:104</code>）。</li>
+</ul>
+</div>
+
+<!-- ============ API ============ -->
+<h2>4. API 接口分析</h2>
+<p class="lead">项目实际暴露 <b>两个独立的 HTTP 服务</b>，且彼此端口不同。现有仓库里的 <code>radio/radio/api_docs.py</code> 只覆盖电台 8000 端口的一部分、且缺请求/响应 schema、缺示例、漏了若干真实路由。本交付物另生成两份完整 OpenAPI v3 规范：</p>
+<div class="two">
+  <div class="card">
+    <h3 style="margin-top:0">① 电台控制 API</h3>
+    <p class="lead">Flask · <code>radio/run.py</code> · 默认 <code>:8000</code></p>
+    <p>~40 个路由：音频流（/stream、/stream/&lt;bitrate&gt;、/hls/&lt;name&gt;）、状态（/api/status、/api/health、/api/listeners、/api/stats/listeners）、播放控制（skip/play/stop/pause/shuffle/repeat/volume/rescan/record/musickit/request）、认证（/login、/api/auth/*）、文件（/api/upload、/api/files）、节目单、集成、文档（/api/openapi.json、/api/docs）。</p>
+    <p><a href="radio-openapi.yaml">→ radio-openapi.yaml</a></p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">② 混音师流服务 API</h3>
+    <p class="lead">http.server · <code>remix/tools/mixer_stream.py</code> · 默认 <code>:8010</code></p>
+    <p>4 个路由：<code>GET /api/channels</code>（24 频道目录）、<code>GET /api/stream/&lt;slug&gt;</code>（无限流）、<code>GET /api/track/&lt;slug&gt;?seed=&amp;bars=</code>（单曲下载）、<code>GET /api/playlist/&lt;slug&gt;</code>（m3u）。零依赖标准库实现。</p>
+    <p><a href="mixer-stream-openapi.yaml">→ mixer-stream-openapi.yaml</a></p>
+  </div>
+</div>
+
+<div class="warn"><b>现有 api_docs.py 与实际代码的不一致（已修正于新规范）：</b>
+<ul>
+  <li>文档表列了 <code>POST /api/next</code>，但 web.py 实际路由是 <code>POST /api/skip</code>——<b>名字对不上</b>。</li>
+  <li>api_docs API_DEFS 中 <code>/api/files/&lt;filename&gt;</code> 的 path 含一个零宽字符（U+200B），会导致 OpenAPI 路径参数解析异常；实际代码用的是 <code>&lt;path:filename&gt;</code>（<code>uploads.py:176</code>）。</li>
+  <li>漏登记的真实路由：<code>GET /api/musickit</code>、<code>GET /api/docs</code>、<code>GET /api/openapi.json</code>、<code>GET /api/public-url</code>、<code>GET /api/request/clear</code>、<code>POST /api/schedule/enable</code>、<code>GET /api/stats/listeners</code>。</li>
+  <li>现有 spec 所有 operation 的 <code>responses</code> 只有 <code>200 成功</code>，无 400/401/403/404、无请求体 schema、无示例——不可直接用于代码生成或客户端 SDK。</li>
+</ul>
+</div>
+
+<h3>4.1 电台 API 关键响应结构（真实字段）</h3>
+<table>
+<tr><th>端点</th><th>响应关键字段</th></tr>
+<tr><td><code>GET /api/status</code></td><td><code>station, genre, mode(playlist|musickit), current_title, paused, shuffle, listeners, playlist_size, musickit{active,rendering,channel,bars,queued,rendered_count,last_error,current}, history[], requests[], playlist[], recording, recording_path, elapsed, uptime</code></td></tr>
+<tr><td><code>GET /api/health</code></td><td><code>ok, mode, current_title, listeners, subscribers, uptime, playlist_size, recording, public_url, disk{free_gb,total_gb}, hls{...}, ffmpeg, ffmpeg_path, deps{requests,waitress}</code></td></tr>
+<tr><td><code>POST /api/upload</code></td><td><code>ok, task_id, uploaded, failed, files[{name,original}], errors[{name,reason}]</code></td></tr>
+<tr><td><code>GET /api/upload/progress/&lt;task_id&gt;</code></td><td><code>ok, done, total, percent, files[], errors[]</code>（Accept: text/event-stream 时返回 SSE）</td></tr>
+<tr><td><code>GET /api/files</code></td><td><code>ok, count, files[{name,size,size_mb,modified}]</code></td></tr>
+<tr><td><code>GET/POST /api/schedule</code></td><td>GET <code>{enabled, items[], upcoming[]}</code>；POST <code>{ok, count}</code>；body <code>{items:[{name,time,weekdays,action,dir}]}</code></td></tr>
+<tr><td><code>POST /api/musickit</code></td><td>body <code>{action:"start"|"stop", channel, bars}</code> → <code>{ok, mode, musickit:{...}}</code></td></tr>
+</table>
+
+<h3>4.2 认证模型</h3>
+<p class="lead">密码以 <code>SHA-256(salt:password)</code> 落盘（<code>.station_password</code>，盐 16 字节 hex），首次 POST /login 即创建。<b>未配置文件时本地/局域网信任模型</b>：<code>api_login_required</code> 在 <code>is_configured()==False</code> 时视为已登录（否则新机器面板控制按钮会静默 401）。已配置后未登录的写操作返回 <code>401 {"ok":false,"error":"请先登录"}</code>。</p>
+
+<!-- ============ 数据契约 ============ -->
+<h2>5. 数据契约（素材池 / 配方）</h2>
+<table>
+<tr><th>契约</th><th>结构</th><th>位置</th></tr>
+<tr><td>素材池 manifest</td><td><code>{generated_by, entries:[{file, source_pack, original, original_rel, license, duration_s, sha256, subcategory, license_tier(free|pack|restricted|unknown), content_kind(stem|loop|unknown)}]}</code></td><td>各池目录 <code>*/manifest.json</code></td></tr>
+<tr><td>渲染配方 recipe</td><td><code>{engine{remix_version,sha256...}, inputs{count,seed,bpm,bars,structure,release_safe,mixer_style}, structure{name,template,sections,fade_out_bars}, tracks[{cat,role,rel,gain_db,start_bar,end_bar,...}], constants, mixer, output{...}, recipe_digest}</code></td><td><code>run_remix(recipe_out=...)</code> 落库（pipeline.log / 报告）</td></tr>
+<tr><td>渲染器 stdout</td><td><code>{ok:true, file, channel, style, style_zh, label, subgenre, bpm, bars, duration_s}</code></td><td><code>musickit_render_one.py</code></td></tr>
+<tr><td>instrument_taxonomy</td><td><code>{word_map:{词→类目}, canonical_classes:{类目→{pool,subcategory,available,mixer_role,prefer_subdirs}}, pools:[...]}</code>——242 词→37 类目→13 池</td><td>仓库根 <code>instrument_taxonomy.json</code></td></tr>
+<tr><td>电台听众统计</td><td>SQLite <code>listener_events(ts INTEGER, ip TEXT, ua TEXT, duration INTEGER, action TEXT)</code></td><td><code>radio/radio.db</code></td></tr>
+</table>
+
+<!-- ============ 部署 ============ -->
+<h2>6. 部署与运行</h2>
+<div class="card">
+<pre style="margin:0;font-size:13px;background:#f0ece2;padding:12px;border-radius:8px;overflow:auto"># 启动电台（默认音源 = musickit 随机渲染）
+python radio/run.py                 # 本地 http://localhost:8000
+python radio/run.py --expose        # + cloudflared 公网穿透
+
+# 单独起混音师流服务（类 Mubert 频道）
+python remix/tools/mixer_stream.py --port 8010 --bars 32
+
+# 一次性混音（phonk 风格）
+python remix/main.py --remix --count 5 --bars 64 --bpm 140 --format wav
+python remix/main.py --remix --release-safe --mixer-style wallace
+
+# 提示词驱动混音
+python music/prompt_driven_remix.py -c phonk --release-safe</pre>
+</div>
+<div class="note">端口登记：电台控制面板/流 <b>8000</b>（config.HTTP_PORT）；混音师流服务 <b>8010</b>（README 端口登记）。两个服务相互独立，电台默认通过子进程调用引擎渲染，不依赖 8010。</div>
+
+<!-- ============ 提示词利用率 ============ -->
+<h2>7. 提示词利用率分析（⚠ 重点）</h2>
+<div class="warn"><b>核心结论：提示词驱动混音「吃不全」提示词。</b>生成器 <code>music_prompt_generator.generate()</code> 一次产出 <b>12 个字段</b>，但桥接器 <code>music/prompt_driven_remix.py::prompt_to_mix_params()</code> 实际只读取其中 <b>5 个</b>；真正改声音的只有 <b>instruments</b> 与 <b>bpm</b> 两个，<b>label/subgenre/moods</b> 仅用于从 3 个曲式模板里选 1 个，其余 <b>7 个字段（scale / elements / scene / sentence / english / fusion / fusion_with）完全不进入音频</b>。即提示词里相当比例的语义信息被静默丢弃。</div>
+
+<h3>7.1 字段级覆盖率矩阵</h3>
+<table>
+<tr><th>生成器字段</th><th>含义</th><th>是否驱动音频</th><th>实际去向 / 映射</th><th>备注</th></tr>
+<tr><td><code>instruments[]</code></td><td>乐器清单</td><td><b style="color:#6a7d3a">✅ 完全</b></td><td><code>map_instrument</code> → 37 类目 → 13 池 → 抽真实采样轨道（<code>role_files</code>）</td><td>唯一决定「放什么声音」的字段；无样本乐器记入 <code>gaps</code></td></tr>
+<tr><td><code>bpm</code></td><td>速度</td><td><b style="color:#6a7d3a">✅ 完全</b></td><td>钳制到 [70,200] → <code>run_remix(bpm=)</code></td><td>决定整体速度</td></tr>
+<tr><td><code>label</code></td><td>风格名（如 Phonk）</td><td><b style="color:#b9772e">◐ 部分</b></td><td>与 subgenre+moods 拼成小写文本，送入 <code>choose_structure</code> 命中 <code>structure_moods.json</code> 选曲式</td><td>只影响曲式骨架，不动音色/编配</td></tr>
+<tr><td><code>subgenre</code></td><td>子流派名</td><td><b style="color:#b9772e">◐ 部分</b></td><td>同上，仅进关键词 blob 选曲式</td><td>同上</td></tr>
+<tr><td><code>moods[]</code></td><td>情绪词</td><td><b style="color:#b9772e">◐ 部分</b></td><td>同上，进曲式关键词 blob</td><td>同上</td></tr>
+<tr><td><code>scale</code></td><td>调式/音阶</td><td><b style="color:#c0392b">❌ 丢弃</b></td><td><code>prompt_to_mix_params</code> 不读取</td><td>引擎无移调/调式 DSP，采样固定音高</td></tr>
+<tr><td><code>elements[]</code></td><td>氛围细节词</td><td><b style="color:#c0392b">❌ 丢弃</b></td><td>不读取</td><td>「雨声/霓虹/街道」等无任何对应音频层</td></tr>
+<tr><td><code>scene</code></td><td>场景</td><td><b style="color:#c0392b">❌ 丢弃</b></td><td>不读取</td><td>无映射</td></tr>
+<tr><td><code>sentence</code></td><td>自然语言提示词全文</td><td><b style="color:#c0392b">❌ 丢弃（仅日志）</b></td><td>dry-run / 控制台打印</td><td>不驱动音频，仅展示</td></tr>
+<tr><td><code>english</code></td><td>英文标签</td><td><b style="color:#c0392b">❌ 丢弃</b></td><td>不读取</td><td>—</td></tr>
+<tr><td><code>fusion</code></td><td>是否融合</td><td><b style="color:#c0392b">❌ 丢弃</b></td><td><code>_normalize_prompt</code> 保留但 <code>prompt_to_mix_params</code> 不读</td><td>融合对象不额外约束混音</td></tr>
+<tr><td><code>fusion_with</code></td><td>融合对象</td><td><b style="color:#c0392b">❌ 丢弃</b></td><td>同上</td><td>—</td></tr>
+</table>
+<div class="note">统计口径：生成器 <code>generate()</code> 返回 12 字段（<code>music_prompt_generator.py:239</code>）；桥接器 <code>prompt_to_mix_params</code> 仅取 <code>bpm</code> / <code>instruments</code> / <code>label</code> / <code>subgenre</code> / <code>moods</code>（<code>prompt_driven_remix.py:248/258/313</code>）。其中 <b>instruments + bpm</b> 直接塑形音频，<b>label/subgenre/moods</b> 仅从 <code>{ambient_ghost, classic_drop, loop_stack}</code> 三选一，<b>scale / elements / scene / sentence / english / fusion / fusion_with</b> 共 7 字段从不进入音频管线。</div>
+
+<h3>7.2 为什么这值得强调</h3>
+<ul>
+  <li><b>提示词的「声学意图」大量落空</b>：上游给出调式（scale）、氛围元素（elements）、场景（scene）时，期望听到对应的音乐色彩，但引擎对这些词没有任何响应——出来的曲子和没写这些词时一模一样。</li>
+  <li><b>融合（fusion）名存实亡</b>：<code>generate(fusion=True)</code> 会注入 <code>fusion_with</code> 第二类风格，但桥接器并不把融合对象当作额外乐器/约束，结果和单风格无差别。</li>
+  <li><b>自然语言提示词（sentence）零利用率</b>：这是最「像 AI 提示词」的字段，却只用于打印，完全没参与混音——对「提示词驱动」的叙事是个明显短板。</li>
+  <li><b>信息不对称风险</b>：<code>--report</code> 只记 label/bpm/structure/tracks/gaps，外部调用方无法从输出反推「哪些提示词被忽略」，容易误以为全部生效。</li>
+</ul>
+
+<h3>7.3 强化覆盖的落地建议</h3>
+<table>
+<tr><th>被丢弃字段</th><th>可接入的现有能力</th><th>建议做法</th></tr>
+<tr><td><code>scale</code></td><td><code>remix/core/loop_slicer.py</code> 已有 atempo 对齐；池 manifest 可加 <code>key</code> 字段</td><td>给采样打调性标签，按 scale 选同 key/近 key 素材，或加一层 pitch-shift 落到目标调；无该 DSP 时至少按 key 过滤避免打架</td></tr>
+<tr><td><code>elements[]</code></td><td>已存在 <code>animal</code> 池与 <code>sfx</code> 池</td><td>把「雨声/风/街道」等映射到 sfx/animal 池，作为氛围 accent 层接入 <code>ROLE_ACCENT</code></td></tr>
+<tr><td><code>scene</code></td><td><code>structure_moods.json</code> 关键词表已外置</td><td>并入 moods 的曲式/情绪判定，或映射到 <code>mixer_style</code> 着色（如「赛博」→某混音师链）</td></tr>
+<tr><td><code>sentence</code></td><td><code>run_remix</code> 已有 recipe 落库</td><td>写入输出文件 ID3 comment / recipe 文本，至少保留可追溯；进阶可做关键词回填驱动的兜底映射</td></tr>
+<tr><td><code>fusion</code> / <code>fusion_with</code></td><td><code>instruments</code> 已支持跨类目</td><td>把 <code>fusion_with</code> 的 instruments 作为额外轨道约束真正并入，让融合产生可听差异</td></tr>
+</table>
+
+<h2>8. 结论</h2>
+<ul>
+  <li>架构清晰<a href="#">分层解耦</a>：混音引擎（纯计算）+ 电台（纯服务）通过文件/子进程通信，任一半宕机不互相拖垮。</li>
+  <li>性能设计扎实：共享广播缓冲 + 背压 + 节流，适合个人/小圈子电台（waitress 并发）。</li>
+  <li>可复现性工程到位：每次渲染落 <code>build_recipe</code> + 引擎指纹，便于漂移归因；<code>--release-safe</code> 守住授权红线。</li>
+  <li><b>API 文档是短板</b>：既有 <code>api_docs.py</code> 路由名/字段不全、无示例，已用两份 OpenAPI v3 规范补齐（见同目录）。</li>
+  <li><b>提示词利用率是第二大短板（重点）</b>：生成器产出 12 字段，桥接器仅真正消费 <code>instruments</code>+<code>bpm</code>（另 3 字段只选曲式），<code>scale/elements/scene/sentence/fusion</code> 等 7 字段被静默丢弃。详见第 7 节覆盖率矩阵与强化建议——若要做到「提示词所写即所得」，需把被丢弃字段接入现有池/DSP（见 7.3）。</li>
+</ul>
+
+</div>
+</body>
+</html>

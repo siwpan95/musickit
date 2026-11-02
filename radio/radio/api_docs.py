@@ -1,105 +1,47 @@
-"""API 文档：基于路由自省自动生成在线文档页。
+"""API 文档：基于提交到仓库的权威 OpenAPI 规范生成在线文档。
 
-访问 /api/docs 查看交互式 API 文档（仿 Swagger UI 风格）。
+- GET /api/openapi.json  → 返回仓库内 radio/openapi.json（与 remix/tools/mixer-stream-openapi.yaml
+  为同一套规范的 8000 端口部分，二者合并即完整 API 面）。
+- GET /api/docs          → Swagger UI 风格交互文档页（读取 /api/openapi.json）。
+
+历史说明：早期版本用 API_DEFS + _build_spec() 手工拼一个只有「200 成功」的
+瘦规范，漏登记了 /api/musickit、/api/docs 等真实路由、路径参数还混了零宽字符、
+且无请求/响应 schema 与示例。现改为：规范以 radio/openapi.json 为单一事实源
+（由 musickit-analysis/radio-openapi.yaml 生成），本模块只负责读取与渲染。
 """
-from flask import Blueprint, jsonify
+import json
+import os
+from flask import Blueprint, jsonify, Response
 
 docs_bp = Blueprint("docs", __name__)
 
-# 手动定义 API 路由文档（自动注册时填充）
-API_DEFS = [
-    # ── 流媒体 ──
-    {"method": "GET",    "path": "/stream/<bitrate>",          "tag": "流媒体", "desc": "多码率音频流（如 /stream/64, /stream/320）", "auth": False},
-    {"method": "GET",    "path": "/stream",                    "tag": "流媒体", "desc": "默认音频流（支持 ICY 元数据）", "auth": False},
-    {"method": "GET",    "path": "/hls/<name>",                "tag": "流媒体", "desc": "HLS 直播切片（.m3u8 / .ts）", "auth": False},
-    {"method": "GET",    "path": "/rss",                       "tag": "流媒体", "desc": "播客 RSS（录制存档）", "auth": False},
-    # ── 状态 ──
-    {"method": "GET",    "path": "/api/status",                "tag": "状态",   "desc": "当前播放状态 + 歌单信息", "auth": False},
-    {"method": "GET",    "path": "/api/health",                "tag": "状态",   "desc": "服务健康检查（磁盘/运行时间/监听数）", "auth": False},
-    {"method": "GET",    "path": "/api/listeners",             "tag": "状态",   "desc": "听众连接日志", "auth": False},
-    {"method": "GET",    "path": "/api/stats/listeners",       "tag": "状态",   "desc": "24h 听众统计曲线", "auth": False},
-    {"method": "GET",    "path": "/api/meta",                  "tag": "状态",   "desc": "当前曲目标签元数据", "auth": False},
-    {"method": "GET",    "path": "/api/cover",                 "tag": "状态",   "desc": "当前曲目封面图", "auth": False},
-    {"method": "GET",    "path": "/api/lyrics",                "tag": "状态",   "desc": "当前曲目歌词（LRC）", "auth": False},
-    {"method": "GET",    "path": "/api/hls/status",            "tag": "状态",   "desc": "HLS 切片器状态", "auth": False},
-    {"method": "GET",    "path": "/api/public-url",            "tag": "状态",   "desc": "公网穿透地址", "auth": False},
-    # ── 控制（需登录） ──
-    {"method": "POST",   "path": "/api/play",                  "tag": "控制",   "desc": "播放 / 继续", "auth": True},
-    {"method": "POST",   "path": "/api/stop",                  "tag": "控制",   "desc": "暂停播放", "auth": True},
-    {"method": "POST",   "path": "/api/pause",                 "tag": "控制",   "desc": "切换暂停/播放", "auth": True},
-    {"method": "POST",   "path": "/api/skip",                  "tag": "控制",   "desc": "下一首", "auth": True},
-    {"method": "POST",   "path": "/api/shuffle",               "tag": "控制",   "desc": "随机模式开关", "auth": True},
-    {"method": "POST",   "path": "/api/repeat",                "tag": "控制",   "desc": "单曲循环开关", "auth": True},
-    {"method": "POST",   "path": "/api/volume",                "tag": "控制",   "desc": "设置音量 (0-100)", "auth": True},
-    {"method": "POST",   "path": "/api/rescan",                "tag": "控制",   "desc": "重新扫描歌单", "auth": True},
-    {"method": "POST",   "path": "/api/record",                "tag": "控制",   "desc": "录音开关", "auth": True},
-    {"method": "POST",   "path": "/api/request",               "tag": "控制",   "desc": "点歌（模糊匹配）", "auth": False},
-    {"method": "POST",   "path": "/api/request/clear",         "tag": "控制",   "desc": "清空点歌队列", "auth": True},
-    {"method": "POST",   "path": "/api/announce",              "tag": "控制",   "desc": "立即分享到 Discord/Telegram", "auth": True},
-    # ── 认证 ──
-    {"method": "POST",   "path": "/login",                     "tag": "认证",   "desc": "用户登录（Cookie Session）", "auth": False},
-    {"method": "GET",    "path": "/logout",                    "tag": "认证",   "desc": "用户登出", "auth": False},
-    {"method": "GET",    "path": "/api/auth/status",           "tag": "认证",   "desc": "查询认证状态", "auth": False},
-    {"method": "POST",   "path": "/api/auth/password",         "tag": "认证",   "desc": "修改管理员密码", "auth": True},
-    # ── 文件管理 ──
-    {"method": "POST",   "path": "/api/upload",                "tag": "文件",   "desc": "上传音乐文件（批量）", "auth": True},
-    {"method": "GET",    "path": "/api/upload/progress/<task_id>","tag": "文件", "desc": "查询上传进度", "auth": True},
-    {"method": "GET",    "path": "/api/files",                 "tag": "文件",   "desc": "列出所有音乐文件", "auth": True},
-    {"method": "DELETE", "path": "/api/files/<filename>",      "tag": "文件",   "desc": "删除音乐文件", "auth": True},
-    {"method": "GET",    "path": "/files",                     "tag": "文件",   "desc": "文件管理 Web 页面", "auth": True},
-    # ── 节目单 ──
-    {"method": "GET",    "path": "/api/schedule",              "tag": "节目单", "desc": "查看排程", "auth": False},
-    {"method": "POST",   "path": "/api/schedule",              "tag": "节目单", "desc": "保存排程", "auth": True},
-    {"method": "POST",   "path": "/api/schedule/enable",       "tag": "节目单", "desc": "启用/禁用节目单", "auth": True},
-    # ── 集成 ──
-    {"method": "GET",    "path": "/api/integrations",          "tag": "集成",   "desc": "社群集成状态（Discord/Telegram）", "auth": False},
-    {"method": "POST",   "path": "/api/integrations",          "tag": "集成",   "desc": "保存社群集成配置", "auth": True},
-]
+# 权威规范文件（与 radio/ 同目录，由 radio-openapi.yaml 生成）
+_SPEC_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "openapi.json"
+)
+
+
+def _load_spec():
+    try:
+        with open(_SPEC_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
+@docs_bp.route("/api/openapi.json")
+def openapi_spec():
+    """返回 OpenAPI 3.0 规范 JSON（仓库单一事实源）。"""
+    spec = _load_spec()
+    if spec is None:
+        return jsonify({"error": "openapi.json not found in radio/"}), 500
+    return jsonify(spec)
 
 
 @docs_bp.route("/api/docs")
 def api_docs():
     """渲染 API 文档页面。"""
     return _render_swagger_page()
-
-
-@docs_bp.route("/api/openapi.json")
-def openapi_spec():
-    """返回 OpenAPI 3.0 规范 JSON。"""
-    return jsonify(_build_spec())
-
-
-def _build_spec():
-    """构建 OpenAPI 3.0 规范。"""
-    paths = {}
-    tags = set()
-    for d in API_DEFS:
-        tags.add(d["tag"])
-        # 标准化路径
-        raw = d["path"]
-        # Flask 参数 <xxx> → OpenAPI {xxx}
-        clean_path = raw.replace("<", "{").replace(">", "}")
-        if clean_path not in paths:
-            paths[clean_path] = {}
-        op = {
-            "operationId": f"{d['method'].lower()}_{clean_path.strip('/').replace('/', '_').replace('{', '').replace('}', '')}"[:80],
-            "summary": d["desc"],
-            "tags": [d["tag"]],
-            "security": [{"cookieAuth": []}] if d["auth"] else [],
-            "responses": {"200": {"description": "成功"}},
-        }
-        paths[clean_path][d["method"].lower()] = op
-
-    return {
-        "openapi": "3.0.3",
-        "info": {
-            "title": "Radio Station API",
-            "version": "2.0",
-            "description": "自托管网络电台 API — 支持流媒体控制、文件管理、全球电台搜索等功能。\n\n认证方式：Cookie-based Session（先 POST /login 获取 cookie）。"
-        },
-        "tags": [{"name": t, "description": ""} for t in sorted(tags)],
-        "paths": paths,
-    }
 
 
 def _render_swagger_page():

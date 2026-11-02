@@ -1,0 +1,167 @@
+openapi: 3.0.3
+info:
+  title: musickit Mixer Stream API
+  version: "1.0"
+  description: >
+    本地混音师流服务（类 Mubert 频道无限流）。把 24 位混音师签名链做成
+    本地无限音频流，每个频道一个后台渲染线程，连续输出 MP3 帧。
+
+    实现：纯标准库 `http.server`（`remix/tools/mixer_stream.py`），零第三方依赖。
+    启动：`python remix/tools/mixer_stream.py --port 8010 --bars 32 [--release-safe]`。
+
+    与电台 8000 端口的区别：本服务是「频道形态」的无限流（每 slug 一个固定混音师），
+    电台 8000 是「控制面板 + 广播」形态。二者相互独立。
+  contact:
+    name: siwpan
+    url: https://gitee.com/siwpan/musickit
+  license:
+    name: MIT
+
+servers:
+  - url: http://127.0.0.1:8010
+    description: 默认监听（localhost）
+  - url: http://localhost:8010
+    description: 默认监听
+
+tags:
+  - name: 频道
+    description: 频道目录与无限流
+
+components:
+  schemas:
+    Channel:
+      type: object
+      properties:
+        slug: { type: string, example: "wallace" }
+        name: { type: string, example: "Andrew Scheps" }
+        zh: { type: string, example: "安德鲁·谢普斯" }
+        color: { type: string, example: "#d9a441" }
+        tagline: { type: string, example: "warm console · vocal-forward" }
+        refs: { type: array, items: { type: string } }
+        target_lufs: { type: number, example: -13.0 }
+    ChannelsResponse:
+      type: object
+      properties:
+        channels:
+          type: array
+          items: { $ref: '#/components/schemas/Channel' }
+
+paths:
+  /:
+    get:
+      tags: [频道]
+      summary: 频道主页（24 张卡片 + 内置 <audio> 播放器）
+      responses:
+        '200':
+          description: HTML 频道主页
+          content: { text/html: { schema: { type: string } } }
+
+  /api/channels:
+    get:
+      tags: [频道]
+      summary: 频道目录 JSON
+      responses:
+        '200':
+          description: 全部 24 个频道
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ChannelsResponse' }
+              example:
+                channels:
+                  - slug: "burbidge"
+                    name: "Craig Burbidge"
+                    zh: "克雷格·伯比奇"
+                    color: "#d9a441"
+                    tagline: "warm console · vocal-forward · lush plate"
+                    refs: ["Barry White", "Brian McKnight", "张惠妹"]
+                    target_lufs: -13.0
+                  - slug: "ghenea"
+                    name: "Serban Ghenea"
+                    zh: "塞尔班·吉尼亚"
+                    color: "#7fd4ff"
+                    tagline: "hyper-clean · bright air · loud but polite"
+                    refs: ["Taylor Swift", "The Weeknd", "Dua Lipa"]
+                    target_lufs: -9.0
+
+  /api/stream/{slug}:
+    get:
+      tags: [频道]
+      summary: 无限流（连续 MP3 帧，边播边渲染）
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema: { type: string }
+          description: "混音师 slug，见 /api/channels"
+      responses:
+        '200':
+          description: 音频流（audio/mpeg，chunked，无长度）
+          headers:
+            Cache-Control: { schema: { type: string } }
+          content:
+            audio/mpeg: { schema: { type: string, format: binary } }
+        '404':
+          description: 未知频道
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+              example: { error: "unknown channel wallacex" }
+
+  /api/track/{slug}:
+    get:
+      tags: [频道]
+      summary: 单曲渲染并下载
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema: { type: string }
+        - name: seed
+          in: query
+          required: false
+          schema: { type: integer, default: 1 }
+          description: 随机种子（可复现）
+        - name: bars
+          in: query
+          required: false
+          schema: { type: integer, default: 32 }
+          description: 每曲小节数
+      responses:
+        '200':
+          description: 渲染好的 MP3 文件
+          headers:
+            Content-Disposition: { schema: { type: string } }
+          content:
+            audio/mpeg: { schema: { type: string, format: binary } }
+        '404':
+          description: 未知频道
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: { error: { type: string } }
+
+  /api/playlist/{slug}:
+    get:
+      tags: [频道]
+      summary: 播放列表（m3u，指向 stream 端点）
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: M3U 播放列表
+          content:
+            audio/x-mpegurl: { schema: { type: string } }
+        '404':
+          description: 未知频道
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: { error: { type: string } }
