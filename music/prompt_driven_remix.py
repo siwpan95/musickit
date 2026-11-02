@@ -82,6 +82,7 @@ _spec = _ilu.spec_from_file_location("musickit_remix_main", os.path.join(REMIX_D
 _m = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_m)
 run_remix = _m.run_remix
+from scene_style import resolve as _resolve_scene_style  # noqa: E402
 pick_loop_candidate = _m.pick_loop_candidate
 _m_filter_release_safe = _m._filter_release_safe
 
@@ -444,6 +445,8 @@ def main():
                    help="输出格式（默认 wav）")
     p.add_argument("--dry-run", action="store_true",
                    help="只打印提示词->混音参数映射，不真正混音")
+    p.add_argument("--no-scene-style", action="store_true",
+                   help="关闭 scene→混音师 的规则映射（默认开启；显式 --mixer-style 永远优先）")
     p.add_argument("--mixer-style", type=str, default=None,
                    help="混音师风格着色（burbidge/ghenea/clearmountain/marroquin/pensado/"
                         "blake/lordalge/schmitt/mikedean/stent/random；默认不启用）")
@@ -499,12 +502,22 @@ def main():
                                   release_safe=args.release_safe)
         if args.structure:
             mp["structure"] = args.structure
+        # 优先级：显式 --mixer-style > scene 规则表 > 原有行为
         mixer_slug = args.mixer_style
+        scene_why = ""
+        if mixer_slug in (None, "random") and not args.no_scene_style:
+            hit = _resolve_scene_style(data.get("scene"))
+            if hit:
+                mixer_slug, scene_why = hit
         if mixer_slug == "random":
             mixer_slug = _random_mixer_slug(rng)
         mp["mixer_style"] = mixer_slug
         if mixer_slug:
-            print(f"  mixer-style = {mixer_slug}")
+            src = "scene 规则" if scene_why else "指定"
+            print(f"  mixer-style = {mixer_slug}  （来源：{src}"
+                  + (f"；{scene_why}" if scene_why else "") + "）")
+        elif args.mixer_style in (None, "random"):
+            print("  mixer-style = 不启用（scene 未命中规则表，保持原行为）")
         label = data.get("label", "")
         print(f"\n【#{i}】{label} ｜ {data.get('subgenre','')}")
         print(f"  提示词：{data.get('sentence','')}")

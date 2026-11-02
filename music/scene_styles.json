@@ -1,0 +1,75 @@
+{
+  "_comment": "scene → 混音师签名链。规则按顺序匹配，命中即止；未命中则由调用方走原有随机。匹配依据是各混音师的 tagline（见 burbidge_album/mixer_styles.py），不凭空指派。",
+  "_field": {
+    "match": "关键词列表（子串匹配，不区分大小写）",
+    "slug": "mixer_styles.SLUGS 之一",
+    "why": "为什么这个场景适合这条签名链"
+  },
+  "rules": [
+    {
+      "match": ["深夜", "午夜", "凌晨", "夜行", "夜晚", "睡前"],
+      "slug": "shebib",
+      "why": "dark · sparse · underwater mood —— 深夜要的是留白与低频包裹，不是亮度"
+    },
+    {
+      "match": ["都市夜景", "霓虹", "赛博", "街头夜", "city pop"],
+      "slug": "ali",
+      "why": "dark · deep · atmospheric soul —— 城市夜景的厚度与空间感"
+    },
+    {
+      "match": ["派对", "夜店", "蹦迪", "舞池", "热场", "狂欢"],
+      "slug": "lordalge",
+      "why": "loud · punchy · radio bright —— 派对场合优先冲击力与亮度"
+    },
+    {
+      "match": ["说唱", "嘻哈", "808", "trap", "街头", "boombap"],
+      "slug": "marroquin",
+      "why": "deep 808 lows · hard kick · modern loudness —— 808 系需要硬底与低频"
+    },
+    {
+      "match": ["摇滚", "金属", "乐队", "arena", "体育场"],
+      "slug": "wallace",
+      "why": "massive drums · dense but clear · arena loud —— 摇滚的鼓墙与大场面"
+    },
+    {
+      "match": ["影视", "配乐", "纪录片", "电影", "剧情", "短片"],
+      "slug": "schmitt",
+      "why": "natural · transparent · dynamic —— 影视需要动态与透明，不能压死"
+    },
+    {
+      "match": ["极限运动", "游戏战斗", "战斗", "追逐", "动作", "电竞"],
+      "slug": "mikedean",
+      "why": "saturated · spacey · huge stereo —— 动作场景要饱和与巨大立体声"
+    },
+    {
+      "match": ["冥想", "瑜伽", "放松", "助眠", "疗愈", "ambient", "氛围"],
+      "slug": "guzauski",
+      "why": "clean · musical · effortless polish —— 冥想类不能有刺激感"
+    },
+    {
+      "match": ["现场", "live", "独立", "咖啡馆", "酒吧", "演出", "小场地"],
+      "slug": "albini",
+      "why": "raw · room-honest · zero hype —— 现场感来自房间与真实，不靠修饰"
+    },
+    {
+      "match": ["复古", "怀旧", "磁带", "老旧", "lo-fi", "lofi", "低保真"],
+      "slug": "elevado",
+      "why": "warm analog · tape soul · live feel —— 复古要的是磁带温度"
+    },
+    {
+      "match": ["时尚", "秀场", "广告", "品牌", "宣传片", "走秀"],
+      "slug": "ghenea",
+      "why": "hyper-clean · bright air · loud but polite —— 商业影像要干净通透"
+    },
+    {
+      "match": ["旅行", "vlog", "公路", "户外", "夏日", "自驾"],
+      "slug": "scheps",
+      "why": "punchy · natural · loud but breathing —— 旅行内容要自然且有呼吸"
+    },
+    {
+      "match": ["民谣", "原声", "木吉他", "钢琴", "人声", "抒情", "华语"],
+      "slug": "zhoutianche",
+      "why": "清晰 · 精致 · 人声为核心 —— 人声主导的题材优先人声清晰度"
+    }
+  ]
+}
