@@ -1,0 +1,12 @@
+# 调性标注的可选依赖（仅 remix/tools/detect_keys.py 需要）
+#
+# 为什么单独一个文件：librosa 会连带拉进 numba/llvmlite/scikit-learn 等一大堆东西，
+# 比混音引擎本身重得多。只是渲染混音、或只读已有 manifest 里的 key 字段，都不需要它。
+#
+#   pip install -r remix/requirements-keys.txt
+#   python remix/tools/detect_keys.py --root <素材根> --write
+#
+# 缺这个包时混音照常工作：main.py 读 manifest 里已标注的 key，没有标注的素材
+# 按「未知调性」处理（不参与 key 偏好，也不会报错）。
+
+librosa>=0.10

@@ -1,4 +1,18 @@
-# musickit dependencies (auto-generated 2026-08-20)
-numpy
-pytest
-soundfile
+# musickit 仓库级依赖入口（一次装齐混音引擎 + 桥接器 + 测试）
+#
+# 这个文件原本是 2026-08-20 自动生成的快照，只有 numpy / pytest / soundfile ——
+# 少了 pydub / scipy / audioop-lts，而 README 当时却写「scipy + soundfile 均已在
+# requirements.txt」。现在改成显式聚合，只做一件事：把子目录的清单汇到一起。
+#
+# 用法：
+#   pip install -r requirements.txt
+#
+# 只做混音（不需要测试）：pip install -r remix/requirements.txt
+# 要跑电台服务：           pip install -r radio/requirements.txt（Flask/waitress 等，与混音解耦）
+# 要重新标注素材调性：     pip install -r remix/requirements-keys.txt（librosa，较重，可选）
+# 需要完全复现的版本：     pip install -r requirements.lock.txt（== 锁定，见该文件说明）
+
+-r remix/requirements.txt
+
+# 测试
+pytest>=8.0

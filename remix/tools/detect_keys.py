@@ -44,10 +44,29 @@ PROF_MAJOR = [6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 
 PROF_MINOR = [6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17]
 
 
+def _need_librosa():
+    """取 librosa，缺了就给出能照做的提示。
+
+    为什么要这层：librosa 是可选依赖（会连带 numba/llvmlite 一大堆），
+    没装时裸 import 只会抛 `ModuleNotFoundError: No module named 'librosa'`，
+    使用者不知道这是"可选没装"还是"环境坏了"，也不知道该装什么。
+    """
+    try:
+        import librosa
+    except ImportError as exc:
+        raise SystemExit(
+            "缺少 librosa —— 调性检测需要它（渲染混音本身不需要）。\n"
+            "  安装：pip install -r remix/requirements-keys.txt\n"
+            "  已有 key 的素材不受影响：main.py 会按 manifest 读，未标注的按「未知调」处理。\n"
+            f"  原始错误：{exc}"
+        ) from exc
+    return librosa
+
+
 def estimate_key(path: str, excerpt_s: float = 30.0) -> tuple[int, str, float, float] | None:
     """返回 (音级, 'major'|'minor', 置信度, 次佳差值)；失败返回 None。"""
     import numpy as np
-    import librosa
+    librosa = _need_librosa()
     import soundfile as sf
 
     try:
@@ -89,7 +108,7 @@ def estimate_key_from_files(paths: list[str], excerpt_s: float = 30.0):
     相加后保留完整和声，估计稳定得多。
     """
     import numpy as np
-    import librosa
+    librosa = _need_librosa()
     import soundfile as sf
 
     ys = []
