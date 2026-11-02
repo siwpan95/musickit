@@ -65,6 +65,37 @@ musickit/
 历史遗留字段 `license_tier` 仍保留在 manifest 中，但**不再参与任何判定**。
 相关脚本 `remix/tools/tag_license_tiers.py`、`audit_licenses.py` 仅作历史参考。
 
+### 素材入库（整曲 → stem → 池）
+
+`bass / drum / guita / acapella` 四个池要的是**分离后的 stem**，而公版站给的是整曲。
+两步走（2026-11-02 实测可用）：
+
+```bash
+# 1) 抓公版曲（CC0；服务端渲染页，直链支持 Range）
+python remix/tools/fetch_freepd.py --out D:/tmp/freepd_src --limit 4
+python remix/tools/fetch_freepd.py --out D:/tmp/freepd_src --list      # 只列出不下载
+
+# 2) 归一化 → demucs 四轨 → 分池落盘 + 更新 manifest
+python remix/tools/ingest_stems.py --src D:/tmp/freepd_src --source-tag freepd
+python remix/tools/ingest_stems.py --demucs-out D:/tmp/demucs_out      # 复用已分离产物
+python remix/tools/ingest_stems.py --src ... --dry-run                 # 只看计划
+```
+
+| 项 | 说明 |
+|---|---|
+| stem 映射 | `drums→drum`、`bass→bass`、`other→guita`、`vocals→acapella` |
+| 落盘命名 | `<source_tag>__<曲名>.wav`（stem 类型由所在池隐含） |
+| manifest | 按 basename upsert，写入 `sha256 / duration_s / license / content_kind=stem` |
+| 幂等 | 目标文件已存在且 sha256 相同则跳过 |
+| 依赖 | `torch` + `demucs`（`--python` 可指定装它们的解释器；本机 `E:\Python314` 已装） |
+| 实测成本 | CPU 分离约 **1.2× 实时**（240s 曲 ≈ 3.3 分钟/首） |
+
+> 输入会先用 ffmpeg 归一化为 44.1k/2ch/16bit WAV 再送 demucs —— demucs 自带加载器
+> 对部分 mp3 流会报 `malformed stream: mpa: invalid main_data offset`，且其 ffmpeg 回退
+> 在本机识别不到，归一化可同时绕开这两个问题。
+>
+> 音频本身仍被 `.gitignore` 排除，只有 `manifest.json` 入库。
+
 ## 混音（remix）
 
 ```bash
