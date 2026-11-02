@@ -19202,6 +19202,54 @@
       "sha256": "21aebff97fca93522fb478bd384231e3712700f09c35c310ba2f1db9359cc117",
       "subcategory": "full_stem",
       "content_kind": "stem"
+    },
+    {
+      "file": "freepd__Baltic_Levity.wav",
+      "source_pack": "freepd",
+      "original": "Baltic Levity.mp3",
+      "original_rel": "freepd/Baltic Levity.mp3",
+      "license": "CC0 1.0 Public Domain (freepd.cn)",
+      "license_tier": "free",
+      "duration_s": 48.048,
+      "sha256": "6236bbadb54ae45ca07f559c89a97046afa94fa06c53323ccb89db4952950587",
+      "subcategory": "full_stem",
+      "content_kind": "stem"
+    },
+    {
+      "file": "freepd__Barnville.wav",
+      "source_pack": "freepd",
+      "original": "Barnville.mp3",
+      "original_rel": "freepd/Barnville.mp3",
+      "license": "CC0 1.0 Public Domain (freepd.cn)",
+      "license_tier": "free",
+      "duration_s": 101.747,
+      "sha256": "045acc25955423504f54fcca93750c0820a73e902f2932feb9e1d4c7ddf7503f",
+      "subcategory": "full_stem",
+      "content_kind": "stem"
+    },
+    {
+      "file": "freepd__Barroom_Ballet.wav",
+      "source_pack": "freepd",
+      "original": "Barroom Ballet.mp3",
+      "original_rel": "freepd/Barroom Ballet.mp3",
+      "license": "CC0 1.0 Public Domain (freepd.cn)",
+      "license_tier": "free",
+      "duration_s": 56.472,
+      "sha256": "7511068927212909ffdcd67e98114b8657f1aaff32caff22a975296a6a58f357",
+      "subcategory": "full_stem",
+      "content_kind": "stem"
+    },
+    {
+      "file": "freepd__BeBop_for_Joey.wav",
+      "source_pack": "freepd",
+      "original": "BeBop for Joey.mp3",
+      "original_rel": "freepd/BeBop for Joey.mp3",
+      "license": "CC0 1.0 Public Domain (freepd.cn)",
+      "license_tier": "free",
+      "duration_s": 139.389,
+      "sha256": "30174561e50dd762ecf2631c80764a34ff6202d9e904e270962305f9444fb046",
+      "subcategory": "full_stem",
+      "content_kind": "stem"
     }
   ],
   "generated": "2026-08-18T07:34:30",

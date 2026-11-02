@@ -142,7 +142,27 @@ def upsert_entry(data: dict, entry: dict) -> str:
     return "insert"
 
 
-def transcode_inputs(src_dir: str, work_dir: str, timeout: int = 900) -> list[str]:
+def pending_tracks(src_dir: str, root: str, source_tag: str) -> list[str]:
+    """挑出尚未灌库的曲目（四池里都已有同名目标文件则视为已完成）。
+
+    为什么需要：`--src` 模式每次都跑完整 demucs 分离（≈1.2× 实时）。对一个几十首的
+    目录做增量补充时，重跑全部等于白烧几小时。这里按「目标文件是否已存在」做便宜判断
+    （分离前无法算 sha256），配合 `--force` 可强制重做。
+    """
+    tracks = [f for f in sorted(os.listdir(src_dir)) if f.lower().endswith(AUDIO_EXT)]
+    pending: list[str] = []
+    for name in tracks:
+        slug = slugify(os.path.splitext(name)[0])
+        target = f"{source_tag}__{slug}.wav"
+        if all(os.path.isfile(os.path.join(root, pool, target)) for pool in STEM_TO_POOL.values()):
+            print(f"  [跳过] {name}（四池均已存在 {target}）")
+            continue
+        pending.append(name)
+    return pending
+
+
+def transcode_inputs(src_dir: str, work_dir: str, timeout: int = 900,
+                     only: list[str] | None = None) -> list[str]:
     """把各种输入格式统一转成 44.1k/2ch/16bit WAV。
 
     为什么必须做：demucs 的音频加载器先走 sphn，对某些 mp3 流会报
@@ -153,9 +173,11 @@ def transcode_inputs(src_dir: str, work_dir: str, timeout: int = 900) -> list[st
 
     ffmpeg = _require_bin("ffmpeg")
     os.makedirs(work_dir, exist_ok=True)
-    tracks = [f for f in sorted(os.listdir(src_dir)) if f.lower().endswith(AUDIO_EXT)]
+    tracks = only if only is not None else [
+        f for f in sorted(os.listdir(src_dir)) if f.lower().endswith(AUDIO_EXT)
+    ]
     if not tracks:
-        raise FileNotFoundError(f"{src_dir} 下没有音频文件")
+        raise FileNotFoundError(f"{src_dir} 下没有待处理的音频文件")
     outs: list[str] = []
     for name in tracks:
         src = os.path.join(src_dir, name)
@@ -315,6 +337,8 @@ def main() -> int:
     ap.add_argument("--license-tier", default="free", help="license_tier（历史字段，仅记录）")
     ap.add_argument("--timeout", type=int, default=3600, help="demucs 超时秒数")
     ap.add_argument("--dry-run", action="store_true", help="只打印计划，不落盘")
+    ap.add_argument("--force", action="store_true",
+                    help="忽略「四池已存在同名文件」，强制重新分离（默认跳过已完成）")
     args = ap.parse_args()
 
     if args.purge_tag:
@@ -330,10 +354,17 @@ def main() -> int:
 
     demucs_out = args.demucs_out
     if args.src:
+        if args.force:
+            todo = None
+        else:
+            todo = pending_tracks(args.src, args.root, args.source_tag)
+            if not todo:
+                print("✅ 该目录下所有曲目都已灌库，无需重做（--force 可强制重跑）")
+                return 0
         work = tempfile.mkdtemp(prefix="stems_src_")
         print(f"[1/2] 归一化输入 → {work}")
         try:
-            wavs = transcode_inputs(args.src, work)
+            wavs = transcode_inputs(args.src, work, only=todo)
         except Exception as e:  # noqa: BLE001
             print(f"❌ 输入预处理失败: {e}", file=sys.stderr)
             return 2

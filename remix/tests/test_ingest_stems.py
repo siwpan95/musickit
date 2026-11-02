@@ -169,3 +169,31 @@ class TestPurgeByTag:
                                encoding="utf-8").read())
         tags = [e["source_pack"] for e in data["entries"]]
         assert tags == ["freepd"], "误删了其它来源的条目"
+
+
+class TestPendingTracks:
+    """增量补充：已灌库的曲目不应再被重新分离（否则几十首目录重跑=白烧几小时）。"""
+
+    def _mk(self, tmp_path, present: tuple[str, ...]):
+        src = tmp_path / "src"
+        src.mkdir()
+        (src / "Song.mp3").write_bytes(b"x")
+        root = tmp_path / "root"
+        for pool in present:
+            d = root / pool
+            d.mkdir(parents=True, exist_ok=True)
+            (d / "freepd__Song.wav").write_bytes(b"x")
+        return str(src), str(root)
+
+    def test_skips_when_all_four_pools_present(self, tmp_path):
+        src, root = self._mk(tmp_path, ("drum", "bass", "guita", "acapella"))
+        assert ing.pending_tracks(src, root, "freepd") == []
+
+    def test_keeps_when_partially_present(self, tmp_path):
+        src, root = self._mk(tmp_path, ("drum", "bass"))  # 只灌了一半
+        assert ing.pending_tracks(src, root, "freepd") == ["Song.mp3"]
+
+    def test_tag_matters(self, tmp_path):
+        src, root = self._mk(tmp_path, ("drum", "bass", "guita", "acapella"))
+        # 目标名带 tag，换 tag 就应视为未灌
+        assert ing.pending_tracks(src, root, "ftest") == ["Song.mp3"]
