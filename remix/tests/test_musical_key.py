@@ -97,39 +97,53 @@ class TestFormat:
 
 
 class TestPreferOrdering:
-    """引擎侧的排序：只重排、不删除（池子小的时候硬过滤会选不出音）。"""
+    """引擎侧的取舍：返回 (兼容子集, 其余)，两者相加必须等于全部（不许丢素材）。"""
 
     def _entries(self):
         return {"guita": {
-            "same.wav":   {"key": "C", "scale": "minor", "key_confidence": 0.9},
-            "fifth.wav":  {"key": "G", "scale": "minor", "key_confidence": 0.9},
-            "rel.wav":    {"key": "Eb", "scale": "major", "key_confidence": 0.9},
-            "far.wav":    {"key": "F#", "scale": "major", "key_confidence": 0.9},
-            "nokey.wav":  {},
-            "lowconf.wav": {"key": "C", "scale": "minor", "key_confidence": 0.01},
+            "same.wav":    {"key": "C",  "scale": "minor", "key_confidence": 0.9},
+            "fifth.wav":   {"key": "G",  "scale": "minor", "key_confidence": 0.9},
+            "rel.wav":     {"key": "Eb", "scale": "major", "key_confidence": 0.9},
+            "far.wav":     {"key": "F#", "scale": "major", "key_confidence": 0.9},
+            "par.wav":     {"key": "C",  "scale": "major", "key_confidence": 0.9},
+            "nokey.wav":   {},
+            "lowconf.wav": {"key": "C",  "scale": "minor", "key_confidence": 0.01},
         }}
 
-    def test_orders_by_compatibility_keeps_all(self):
+    def test_splits_into_compatible_and_rest(self):
         import main as mk_main
 
-        files = ["far.wav", "nokey.wav", "fifth.wav", "same.wav", "rel.wav", "lowconf.wav"]
-        ordered, stats = mk_main._prefer_key_compatible(
+        files = ["far.wav", "nokey.wav", "fifth.wav", "same.wav",
+                 "rel.wav", "par.wav", "lowconf.wav"]
+        compat, rest, stats = mk_main._prefer_key_compatible(
             files, "guita", self._entries(), mk.parse_target("Cm"))
 
-        assert len(ordered) == len(files), "不得丢素材"
-        assert ordered[0] == "same.wav"          # C minor 最优
-        assert ordered[1] == "rel.wav"           # Eb major = C minor 的关系大调
-        assert ordered[2] == "fifth.wav"         # G minor：五度关系，确定可用
-        # 未知调性排在「已知可用」之后，但仍在「确定不兼容」之前
-        assert set(ordered[3:5]) == {"nokey.wav", "lowconf.wav"}
-        assert ordered[-1] == "far.wav"          # F# major：不兼容，排最后
-        assert stats["same"] == 1
-        assert stats["unknown"] == 2             # nokey + lowconf（置信度过低按未知）
+        # 不许丢素材
+        assert sorted(compat + rest) == sorted(files)
 
-    def test_no_target_keeps_original_order(self):
+        # 兼容子集 = 同调 + 关系调 + 五度（按优先级排序）
+        assert compat[0] == "same.wav"       # C minor
+        assert compat[1] == "rel.wav"        # Eb major = 关系大调
+        assert compat[2] == "fifth.wav"      # G minor = 五度
+        assert set(compat) == {"same.wav", "rel.wav", "fifth.wav"}
+
+        # 其余：同主音(C major)、未知、低置信、不兼容
+        assert set(rest) == {"par.wav", "nokey.wav", "lowconf.wav", "far.wav"}
+        assert stats["same"] == 1 and stats["relative"] == 1 and stats["fifth"] == 1
+
+    def test_no_target_means_no_preference(self):
         import main as mk_main
 
-        files = ["b.wav", "a.wav"]
-        ordered, stats = mk_main._prefer_key_compatible(files, "guita", {}, None)
-        assert ordered == files
-        assert stats.get("same", 0) == 0
+        compat, rest, stats = mk_main._prefer_key_compatible(
+            ["b.wav", "a.wav"], "guita", {}, None)
+        assert compat == []
+        assert rest == ["b.wav", "a.wav"]     # 全部落到 rest，调用方会原样使用
+
+    def test_all_incompatible_gives_empty_compat(self):
+        """全部不兼容时 compat 为空 → 调用方放宽到 rest（不会选不出音）。"""
+        import main as mk_main
+
+        compat, rest, _ = mk_main._prefer_key_compatible(
+            ["far.wav"], "guita", self._entries(), mk.parse_target("Cm"))
+        assert compat == []
+        assert rest == ["far.wav"]

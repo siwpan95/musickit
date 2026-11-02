@@ -353,15 +353,16 @@ def _prefer_key_compatible(
     cat: str,
     entries: dict[str, dict],
     target: tuple[int | None, str | None] | None,
-) -> tuple[list[str], dict[str, int]]:
-    """按调性兼容度**重排**候选（不删除任何素材），返回 (新顺序, 各档计数)。
+) -> tuple[list[str], list[str], dict[str, int]]:
+    """按调性把候选分成 (兼容子集, 其余)，返回 (compatible, rest, 各档计数)。
 
-    为什么不硬过滤：素材池可能很小（当前每池个位数），硬过滤会直接选不出音。
-    重排保证「有兼容的就优先用兼容的」，没有时仍能退回不兼容素材并把情况报出来。
+    为什么用子集而不是排序：选音走 `pick_loop_candidate`，它是按时长/命名挑的，
+    **不看列表顺序** —— 只重排等于没做（实测同种子下 --key C 与 --key F# 选出一模一样的曲子）。
+    也不能硬过滤：池子小的时候会直接选不出音。故「有兼容子集就用子集，没有就退回全部」。
     """
     stats = {"same": 0, "relative": 0, "fifth": 0, "parallel": 0, "incompat": 0, "unknown": 0}
     if not target or not files:
-        return files, stats
+        return [], list(files), stats
 
     pool = entries.get(cat, {})
     scored: list[tuple[int, int, str]] = []
@@ -388,7 +389,10 @@ def _prefer_key_compatible(
         scored.append((r, i, path))
 
     scored.sort(key=lambda t: (t[0], t[1]))
-    return [p for _, _, p in scored], stats
+    # 兼容子集：同调 / 关系调 / 五度关系（rank <= RANK_FIFTH）
+    compat = [p for r, _, p in scored if r <= musical_key.RANK_FIFTH]
+    rest = [p for r, _, p in scored if r > musical_key.RANK_FIFTH]
+    return compat, rest, stats
 
 
 def _collect_category_files(category_dir: str) -> list[str]:
@@ -515,9 +519,15 @@ def _pick_random_tracks(
         if release_safe:
             files = _filter_release_safe(files, cat, entries, dropped)
         if target_key:
-            files, st = _prefer_key_compatible(files, cat, entries, target_key)
+            compat, rest, st = _prefer_key_compatible(files, cat, entries, target_key)
             for k, v in st.items():
                 key_stats[k] = key_stats.get(k, 0) + v
+            if compat:
+                files = compat
+            else:
+                # 该池无兼容素材 → 放宽到全部，并记一次「放宽」（否则会选不出音）
+                files = compat + rest
+                key_stats["relaxed"] = key_stats.get("relaxed", 0) + 1
         by_cat[cat] = files
         all_files.extend(files)
 
@@ -528,7 +538,8 @@ def _pick_random_tracks(
               f"（同调 {key_stats.get('same', 0)} / 关系调 {key_stats.get('relative', 0)}"
               f" / 五度 {key_stats.get('fifth', 0)}）"
               f"，主音不同 {key_stats.get('parallel', 0)}，不兼容 {key_stats.get('incompat', 0)}"
-              f"，未知 {key_stats.get('unknown', 0)}")
+              f"，未知 {key_stats.get('unknown', 0)}"
+              + (f"｜{key_stats['relaxed']} 个池无兼容素材已放宽" if key_stats.get("relaxed") else ""))
 
     if release_safe and dropped:
         print("[remix] --release-safe：已剔除受限/未知授权素材 "
