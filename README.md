@@ -91,6 +91,22 @@ ffmpeg / ffprobe 需自备（`remix/bin/` 或系统 PATH，解析见 `remix/core
 > 注：`music/test_suite.py` 是**评测报告生成器**（打印检查点并通过率），不是 pytest 用例；
 > 其产物 `TEST_REPORT.md` / `demo_test.*` 均已在 .gitignore 内，不入版本库。
 
+## 自检与冒烟（本地 / CI 通用）
+
+```bash
+python remix/tools/doctor.py        # 环境 + 素材一致性自检（0 通过 / 1 告警 / 2 硬失败）
+bash scripts/ci_smoke.sh            # 自检 + 冒烟测试（CI 只需调这一个）
+PYTHON=/e/Python314/python.exe bash scripts/ci_smoke.sh   # 指定解释器
+FULL=1 bash scripts/ci_smoke.sh     # 附带全量单测
+```
+
+`doctor.py` 会打印每个素材池的「manifest 条目数 / 磁盘文件数 / 缺失数」——
+干净克隆下 13 个池全为 0（素材被 .gitignore 排除，属预期），此时退出码为 1（告警而非失败）。
+
+> CI 接入：Gitee Go 新建流水线，构建脚本填 `bash scripts/ci_smoke.sh` 即可。
+> 本仓暂**未**提交 `.workflow/*.yml` —— Gitee Go 的流水线 YAML 需在仓库实际开启后
+> 按平台当前版本核对字段，避免提交一份跑不起来的配置。
+
 ## 提示词驱动混音（来自 <PATH>，同仓整合）
 
 `<PATH>` 把风格提示词经
