@@ -67,3 +67,5 @@ installer/
 /remix/_env_probe*
 /remix/_hourly_*.txt
 /remix/_run*.txt
+# 测试产物（可再生，2026-10-30）
+music/TEST_REPORT.md
