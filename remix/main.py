@@ -777,6 +777,7 @@ def run_remix(
     release_safe: bool = False,
     mixer_style: str | None = None,
     key: str | None = None,
+    note: str | None = None,
     sample_rate: int | None = None,
     bit_depth: int | None = None,
     bitrate: str | None = None,
@@ -1012,6 +1013,24 @@ def run_remix(
     # 导出后断言：文件存在、非空、可回读且时长合理
     _verify_exported(output_path, bpm, bars)
 
+    # sentence 落盘：把提示词的整句写进 ID3 comment，成品自带「怎么做的」痕迹
+    _tag_result = None
+    if note:
+        from core.tagging import write_tags
+
+        _tag_result = write_tags(
+            output_path,
+            title=os.path.splitext(os.path.basename(output_path))[0],
+            artist="musickit",
+            album=(style["slug"] if style else None),
+            comment=note,
+        )
+        if _tag_result["ok"]:
+            print(f"[remix] 已写入元数据：{', '.join(_tag_result['written'])}")
+        else:
+            print(f"[remix] 警告：元数据写入失败（不影响成品）：{_tag_result['error']}",
+                  file=sys.stderr)
+
     print(f"[remix] 交付规格：{fmt.upper()} {spec['sample_rate']}Hz / {spec['bit_depth']}bit / "
           f"{spec['channels']}ch ≈ {spec['kbps']:.0f} kbps"
           + (f"（码率 {_bitrate}）" if _bitrate else ""))
@@ -1021,6 +1040,8 @@ def run_remix(
             "sample_rate": spec["sample_rate"], "bit_depth": spec["bit_depth"],
             "codec": spec["codec"],
             "duration_ms": int(duration_ms(output_path)),
+            "note": note,
+            "tags": (_tag_result or {}).get("written"),
         })
 
     print(f"[remix] 混音完成（{len(mix) / 1000:.1f}s，{bpm}BPM x {bars} 小节），"
@@ -1067,6 +1088,10 @@ def main():
     parser.add_argument(
         "--release-safe", action="store_true",
         help="【已废弃】素材均为公共领域，本开关不再做任何过滤（保留以兼容旧脚本）",
+    )
+    parser.add_argument(
+        "--note", type=str, default=None, metavar="TEXT",
+        help="写入成品 ID3 comment 的文本（提示词驱动路径自动传 sentence，便于事后追溯）",
     )
     parser.add_argument(
         "--key", type=str, default=None, metavar="KEY",
@@ -1117,7 +1142,8 @@ def main():
             result = run_remix(count=args.count, seed=args.seed, out_dir=args.out,
                                fmt=args.format, bars=args.bars, bpm=args.bpm,
                                structure=args.structure, release_safe=args.release_safe,
-                               mixer_style=args.mixer_style, key=args.key)
+                               mixer_style=args.mixer_style, key=args.key,
+                               note=args.note)
         except MixValidationError as _exc:
             tasklog.append("stage_error", stage="remix", run_id=run_id, error=str(_exc)[:300])
             tasklog.append("run_end", run_id=run_id, ok=False, errors=1)
