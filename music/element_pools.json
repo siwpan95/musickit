@@ -1,0 +1,59 @@
+{
+  "_comment": "elements → 氛围层素材。生成器的 elements 是「雨声/霓虹/街道」这类氛围词，此前完全丢弃。规则按顺序匹配，命中即止；未命中记入 gaps，不假映射。file_match 是对池内 original 文件名（小写）的子串过滤，依据是实抓到的素材（animal 有鸟/狼/虫/牛，sfx 有 wind/whoosh/impact/glitch）。",
+  "rules": [
+    {
+      "match": ["雨", "下雨", "rain", "细雨"],
+      "pool": "sfx",
+      "file_match": ["rain", "wind", "noise"],
+      "why": "sfx 池的 noise/wind 类最接近雨的底噪质感（无真实雨声素材，用噪声层替代已尽量接近）"
+    },
+    {
+      "match": ["风", "wind", "呼啸", "旷野"],
+      "pool": "sfx",
+      "file_match": ["wind", "whoosh", "air"],
+      "why": "whoosh/wind/air 是真实的风声类采样"
+    },
+    {
+      "match": ["森林", "鸟", "bird", "清晨", "林间"],
+      "pool": "animal",
+      "file_match": ["bird"],
+      "why": "animal 池有真实鸟鸣采样（Forest_birds_singing）"
+    },
+    {
+      "match": ["狼", "荒野", "wild", "夜晚"],
+      "pool": "animal",
+      "file_match": ["wolf"],
+      "why": "animal 池有狼嚎采样，适合荒野/夜行氛围"
+    },
+    {
+      "match": ["虫", "蟋蟀", "cricket", "夏夜"],
+      "pool": "animal",
+      "file_match": ["cricket"],
+      "why": "蟋蟀鸣叫是夏夜标志性环境声"
+    },
+    {
+      "match": ["农场", "乡村", "牛", "cow", "田园"],
+      "pool": "animal",
+      "file_match": ["cow", "goat", "sheep"],
+      "why": "animal 池有牛/羊/山羊真实录音，对应田园场景"
+    },
+    {
+      "match": ["霓虹", "都市", "街道", "city", "赛博"],
+      "pool": "sfx",
+      "file_match": ["glitch", "laser", "robot"],
+      "why": "无真实街景声，用电子故障/激光类纹理替代城市霓虹的电子质感"
+    },
+    {
+      "match": ["冲击", "重击", "爆", "impact", "撞击"],
+      "pool": "sfx",
+      "file_match": ["impact", "hit", "thunder"],
+      "why": "impact/hit/thunder 是真实冲击类采样"
+    },
+    {
+      "match": ["过渡", "转场", "transition", "上升", "riser"],
+      "pool": "sfx",
+      "file_match": ["transition", "riser", "sweep"],
+      "why": "过渡/上冲类采样用于段落衔接"
+    }
+  ]
+}

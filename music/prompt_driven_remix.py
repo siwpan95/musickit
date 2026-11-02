@@ -83,6 +83,7 @@ _m = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_m)
 run_remix = _m.run_remix
 from scene_style import resolve as _resolve_scene_style  # noqa: E402
+from element_pool import resolve as _resolve_elements  # noqa: E402
 pick_loop_candidate = _m.pick_loop_candidate
 _m_filter_release_safe = _m._filter_release_safe
 
@@ -238,7 +239,7 @@ def _pool_entries() -> dict[str, dict[str, dict]]:
 
 def prompt_to_mix_params(data: dict, rng: random.Random,
                          max_tracks: int = 5, add_skeleton: bool = True,
-                         release_safe: bool = False):
+                         release_safe: bool = False, max_accents: int = 2):
     """把一条提示词字典转换为 run_remix 的调用参数。
 
     Returns:
@@ -306,9 +307,18 @@ def prompt_to_mix_params(data: dict, rng: random.Random,
                     tracks.append((sk, path))
                     seen_roles.add(sk)
 
-    # 4) 上限裁剪（引擎最多 8 轨）
+    # 4) 氛围层：elements → sfx / animal 的真实素材（点缀层，引擎里天然走 ROLE_ACCENT）
+    _picks, _egaps = _resolve_elements(
+        data.get("elements"), entries, MUSICKIT_ROOT, rng,
+        max_accents=max_accents, skip={path for _, path in tracks},
+    )
+    if _egaps:
+        gaps.extend(_egaps)
+
+    # 5) 上限裁剪（引擎最多 8 轨）：先给点缀层留位，避免被乐器轨挤掉
     max_tracks = max(1, min(max_tracks, 8))
-    tracks = tracks[:max_tracks]
+    budget = max(1, 8 - len(_picks))
+    tracks = tracks[: min(max_tracks, budget)] + [(pool, path) for pool, path, _, _ in _picks]
 
     # 5) 曲式
     structure = choose_structure(data.get("label", ""),
@@ -325,7 +335,8 @@ def prompt_to_mix_params(data: dict, rng: random.Random,
         "key": data.get("scale") or None,
         # sentence：整句自然语言，此前只被打印；写进成品 ID3 comment 以便事后追溯
         "note": data.get("sentence") or None,
-        "note": f"instruments={data.get('instruments')}",
+        "elements": [p[2] for p in _picks],      # 实际落地的氛围词（便于报告）
+        "instruments_note": f"instruments={data.get('instruments')}",
         "gaps": gaps,
     }
 
