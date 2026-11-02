@@ -12,6 +12,10 @@
 
 > 端口登记（2026-08-24）：mixer 流服务 **8010**（remix/tools）已登记于 `<PATH>`；remix 任务日志审计 `python remix/main.py --tasks --out <目录>`。
 
+> 👋 **第一次接触本仓库？** 请先读 **[新人开发上手指南 · ONBOARDING.md](ONBOARDING.md)** ——
+> 环境准备、代码获取、素材补齐、启动各模块、常见问题、贡献规范，全部命令均经实测。
+> 本 README 讲「有什么」，ONBOARDING 讲「怎么跑起来」。
+
 ## 目录结构
 
 ```
@@ -39,7 +43,7 @@ musickit/
 │                   # 与 private-radio-stations apps/audio（Node 转播版）并存
 ├── instrument_taxonomy.json   # 规范乐器分类体系：242 乐器词 → 37 类目 → 13 池
 ├── manifest_index.json        # 总索引（自动化每 6h 重建，不入版本库）
-└── README.md / INTEGRATION.md / EVALUATION_REPORT.md / FIX_PLAN.md /
+└── README.md / ONBOARDING.md（新人上手指南）/ INTEGRATION.md / EVALUATION_REPORT.md / FIX_PLAN.md /
     MUBERT_RESEARCH.md / MUBERT_METHODOLOGY.md / MUBERT_COMPARISON.md
 ```
 
