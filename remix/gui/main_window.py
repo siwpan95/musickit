@@ -427,12 +427,9 @@ class MixerApp:
     # ---- 音轨选择 ----
 
     def _phonk_main_module(self):
-        """返回 main 模块对象（GUI 由 main.py 启动时为 __main__，否则 import main）。"""
-        m = sys.modules.get("__main__")
-        if m is not None and hasattr(m, "run_remix"):
-            return m
-        import main as mod  # noqa: F401
-        return mod
+        """返回 main 模块对象（统一走 core/boot.load_main，全进程只有一个）。"""
+        from core.boot import load_main
+        return load_main()
 
     def _phonk_load_sources(self) -> None:
         """加载各素材目录下的音频文件列表（basename 供下拉框显示）。"""

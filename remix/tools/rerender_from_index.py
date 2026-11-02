@@ -30,7 +30,6 @@ from __future__ import annotations
 
 import argparse
 import contextlib
-import importlib.util
 import io
 import json
 import os
@@ -93,12 +92,9 @@ def load_remix_main():
     for p in (MUSIC_DIR, REMIX_DIR):
         if p not in sys.path:
             sys.path.insert(0, p)
-    spec = importlib.util.spec_from_file_location(
-        "musickit_remix_main_rr", os.path.join(REMIX_DIR, "main.py"))
-    mod = importlib.util.module_from_spec(spec)
-    sys.modules["musickit_remix_main_rr"] = mod
-    spec.loader.exec_module(mod)
-    return mod
+    # 走统一入口；原先自己 spec 加载成 musickit_remix_main_rr，与其它入口是两份对象
+    from core.boot import load_main  # noqa: E402
+    return load_main()
 
 
 def read_json(path: str, default):

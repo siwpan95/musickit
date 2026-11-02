@@ -116,7 +116,10 @@ def load_stack():
     for p in (MUSIC_DIR, REMIX_DIR):
         if p not in sys.path:
             sys.path.insert(0, p)
-    remix_main = _load_module("musickit_remix_main", os.path.join(REMIX_DIR, "main.py"))
+    # main 走统一入口（全进程一个对象）；这里原先自己 spec 加载成 musickit_remix_main，
+    # 与其他入口的 main 是两份不同的模块对象，模块级状态各算各的。
+    from core.boot import load_main  # noqa: E402
+    remix_main = load_main()
     pdr = mpg = None
     if getattr(args_pass, "fusion", False):  # 延迟判断是否加载重链路
         pdr = _load_module("musickit_prompt_driven_remix",
@@ -234,6 +237,38 @@ def probe_delivery(path: str, ffprobe: str) -> dict:
     except Exception as exc:  # noqa: BLE001
         info = {"probe_error": str(exc)}
     return info
+
+
+def delivery_verdict(d_ok: bool | None) -> str:
+    """三态 → 输出用的词。None 是「本机没 ffprobe、未校验」，不是失败。"""
+    if d_ok is None:
+        return "UNVERIFIED"
+    return "OK" if d_ok else "FAIL"
+
+
+def verify_delivery(path: str, target_sec: float, tolerance: float,
+                    max_size_mb: float) -> tuple[dict, bool | None, list[str]]:
+    """回读交付规格，返回 (info, 是否合规, 原因)。
+
+    合规判定是**三态**：
+      True  —— ffprobe 实测通过
+      False —— ffprobe 实测不合规
+      None  —— 本机没有 ffprobe，**未校验**（既不能说合规，也不该说失败）
+
+    为什么不再 `binfind.require("ffprobe")`：走到这一步时文件已经渲染并落盘了，
+    缺一个外部二进制就把整条无人值守任务崩掉、连索引都不写，代价远大于
+    「这一项没验」。老代码就是这么在本机崩的（渲染成功 → 收尾抛 BinaryNotFound）。
+    """
+    from core.binfind import resolve as _resolve_bin
+
+    ffprobe_bin = _resolve_bin("ffprobe")
+    if not ffprobe_bin:
+        return ({"error": "ffprobe 未找到"},
+                None,
+                ["ffprobe 未找到，容器参数无法回读（文件已生成）"])
+    info = probe_delivery(path, ffprobe_bin)
+    ok, reasons = judge_delivery(info, target_sec, tolerance, max_size_mb)
+    return info, ok, reasons
 
 
 def judge_delivery(info: dict, target_sec: float, tolerance: float,
@@ -431,16 +466,17 @@ def main() -> int:
             f"偏差 {delta:+.2f}s{' OK' if ok else ' WARN 超容差'}）| {size_mb}MB | "
             f"耗时 {elapsed:.1f}s | 第 {attempt} 次尝试", log_path)
 
-        # 交付规格回读（ffprobe 实测，不信任自述参数）
-        from core.binfind import require as _require_bin
-        ffprobe_bin = _require_bin("ffprobe")
-        info = probe_delivery(final, ffprobe_bin)
-        d_ok, d_reasons = judge_delivery(info, args.target_sec, args.tolerance,
-                                         args.max_size_mb)
-        log(f"交付规格：{info.get('codec','?')} {info.get('sample_rate','?')}Hz/"
-            f"{info.get('bit_depth','?')}bit/{info.get('channels','?')}ch "
-            f"≈ {info.get('kbps','?')}kbps | {info.get('size_mb','?')}MB | "
-            f"{'合规 ✅' if d_ok else '不合规 ❌ ' + '; '.join(d_reasons)}", log_path)
+        # 交付规格回读（ffprobe 实测，不信任自述参数）；缺 ffprobe 时降级为「未校验」
+        info, d_ok, d_reasons = verify_delivery(
+            final, args.target_sec, args.tolerance, args.max_size_mb)
+        if d_ok is None:
+            log("交付规格：未校验 —— ffprobe 未找到（文件已生成，仍写入索引）。"
+                "补装后可回读：winget install ffmpeg", log_path)
+        else:
+            log(f"交付规格：{info.get('codec','?')} {info.get('sample_rate','?')}Hz/"
+                f"{info.get('bit_depth','?')}bit/{info.get('channels','?')}ch "
+                f"≈ {info.get('kbps','?')}kbps | {info.get('size_mb','?')}MB | "
+                f"{'合规 ✅' if d_ok else '不合规 ❌ ' + '; '.join(d_reasons)}", log_path)
 
         # 内容指纹（跨编码稳定）：日后重渲可用它证明「还是原来那一首」
         try:
@@ -472,11 +508,11 @@ def main() -> int:
             write_playlist(index_path, entries)
             log(f"索引已更新：{len(entries)} 首（{index_path}）", log_path)
         print(f"OUTPUT={final}")
-        print(f"DELIVERY={'OK' if d_ok else 'FAIL'} codec={info.get('codec')} "
+        print(f"DELIVERY={delivery_verdict(d_ok)} codec={info.get('codec')} "
               f"sr={info.get('sample_rate')} depth={info.get('bit_depth')} "
               f"ch={info.get('channels')} kbps={info.get('kbps')} "
               f"size_mb={info.get('size_mb')}")
-        if not d_ok:
+        if d_ok is False:
             print(f"DELIVERY_FAIL_REASONS={'; '.join(d_reasons)}", file=sys.stderr)
         return 0
 

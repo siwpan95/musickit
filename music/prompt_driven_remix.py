@@ -76,11 +76,13 @@ sys.path.insert(0, REMIX_DIR)          # musickit.remix.main
 
 import music_prompt_generator as mpg   # noqa: E402
 
-# 用 importlib 按路径加载 musickit 的 main，避免与任何同名模块冲突
-import importlib.util as _ilu          # noqa: E402
-_spec = _ilu.spec_from_file_location("musickit_remix_main", os.path.join(REMIX_DIR, "main.py"))
-_m = _ilu.module_from_spec(_spec)
-_spec.loader.exec_module(_m)
+# 用统一入口加载 musickit 的 main（core/boot.py）。
+# 原先这里用 spec_from_file_location("musickit_remix_main", ...) 自己加载，
+# 而且**没有注册进 sys.modules** —— 于是同一进程里可能同时存在多份 main 对象，
+# 模块级状态（converter / MUSICKIT_ROOT / PATH）各算各的。现在全仓只认一个。
+from core.boot import load_main as _load_remix_main  # noqa: E402
+
+_m = _load_remix_main()
 run_remix = _m.run_remix
 from scene_style import resolve as _resolve_scene_style  # noqa: E402
 from element_pool import resolve as _resolve_elements  # noqa: E402
