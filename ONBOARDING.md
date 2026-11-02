@@ -291,6 +291,10 @@ PYTHON=/path/to/python bash scripts/ci_smoke.sh
 ✅ 冒烟检查通过
 ```
 
+> `pytest` 的 Tk 用例（`test_progress_reporter`）会**偶发** skip —— 本机 `tcl/tcl8.6/init.tcl`
+> 明明在，初始化却偶尔失败。所以你看到的 `passed` 可能比上面少一条（195 而不是 196），
+> **这是环境抖动不是故障**：门禁按**收集数**核对，不看 passed。
+
 > **冒烟档（`-m smoke`）不碰 ffmpeg 编解码、不依赖真实素材**，秒级跑完。
 > 这是你验证「代码环境没问题」的最快路径。
 
