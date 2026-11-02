@@ -104,6 +104,43 @@ python remix/tools/ingest_stems.py --purge-tag ftest                    # 真删
 >
 > 音频本身仍被 `.gitignore` 排除，只有 `manifest.json` 入库。
 
+### 乐器池入库（单音 one-shot，爱荷华 MIS）
+
+`keys / strings / brass / woodwind / ethnic` 五个池长期是「manifest 里上万条索引、
+磁盘上 0 个文件」—— 那些条目指向商业采样包，音频本体从没进过仓库，选音时等于无米下锅。
+
+[University of Iowa Musical Instrument Samples（MIS）](https://theremin.music.uiowa.edu/MIS.html)
+是实测可下、且**一份覆盖四个池**的公版源：站点自 1997 年公开，原话
+*"may be downloaded and used for any projects, without restrictions"*（无 NC、无强制署名）。
+内容是**每个音一条单音 one-shot**，不用拆 SoundFont。
+
+```bash
+# 先看计划（不下载）
+python remix/tools/fetch_iowa_mis.py --limit 2 --dry-run
+
+# 四池各下 10 条
+python remix/tools/fetch_iowa_mis.py --instruments piano violin trumpet flute --limit 10
+
+# 13 件乐器一次铺开（弦乐/铜管/木管/键盘）
+python remix/tools/fetch_iowa_mis.py --instruments piano violin viola cello doublebass \
+    trumpet frenchhorn trombone tuba saxophone flute oboe clarinet bassoon --limit 10
+```
+
+| 项 | 说明 |
+|---|---|
+| 覆盖 | 弦乐 violin/viola/cello/doublebass、铜管 trumpet/frenchhorn/trombone/tuba/sax、木管 flute/oboe/clarinet/bassoon、键盘 piano |
+| 落盘 | 平铺在池根，`iowa__<原文件名>.wav`（池子的既有约定：文件在根，靠 `subcategory` 分类） |
+| 转码 | AIFF → 44.1kHz/16bit WAV；保持原声道（`audio_loader` 会按目标声道统一，不必强上立体声） |
+| 选取 | 默认**等距**抽取，不是取前 N 条 —— 页面按力度/奏法分组，取前 N 会全挤在同一个力度、音域也偏低 |
+| manifest | 写 `source_pack / original / original_rel / license 原文 / source_url / duration_s / sha256`，`content_kind=oneshot` |
+| **`key` 只按文件名写单音** | 除钢琴外文件名是**音域范围**（`Violin.arco.pp.sulG.G3B3.aiff` 表示覆盖 G3~B3），根音不明确 —— 按起点猜音级会污染 `--key`，所以范围样本不写。单音文件（`Piano.ff.B5.aiff`）直接写 `key: "B"` + `key_pitch_only: true`，选音时走「只比音级」的兼容判定（`musical_key.rank_pitch`）。为什么不信 chroma：实测 `Piano.ff.B5` 被判成 C#m（conf 0.38 / margin 0.05），高音区泛音把音级带偏了，而文件名是准的 |
+| 幂等 | 目标文件已存在则跳过；`--force` 重下重转 |
+| 缓存 | 原始 AIFF 存在 `%TEMP%/musickit_iowa`，可 `--cache` 指定 |
+
+> 缺口：**ethnic（民族乐器）没有可用的公版源**。FreePats 的 ethnic 目录只有卡林巴/口弦琴，
+> 二胡/古筝/笛子/唢呐这类不存在；archive.org 与 GitHub 在本机不可达。
+> FreePats 另有 CC0 立式钢琴（`UprightPianoKW`）与竖琴，可作为 keys 的补充，但需 7-Zip 解包。
+
 ### 调性标注与 `--key`（T2-1）
 
 提示词里的 `scale` 一直是「只读不用」的字段（详见架构文档 §7）。T2-1 先做**不做
@@ -156,8 +193,8 @@ usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm
 - 输出文件名同秒冲突自动递增（`_1/_2`），不会覆盖旧产物；
 - `MUSICKIT_ROOT` 环境变量可覆盖素材根目录。
 
-测试：`python -m pytest remix/tests music/tests -q`（**287 用例**，2026-11-02 实测；引擎侧 229 /
-桥接器侧 58）；快速档 `python -m pytest remix/tests music/tests -q -m smoke`（**165 个纯逻辑用例**，
+测试：`python -m pytest remix/tests music/tests -q`（**312 用例**，2026-11-02 实测；引擎侧 254 /
+桥接器侧 58）；快速档 `python -m pytest remix/tests music/tests -q -m smoke`（**190 个纯逻辑用例**，
 无 ffmpeg 编解码、无真实素材依赖）。一行走完自检 + 冒烟：`bash scripts/ci_smoke.sh`。
 Python 3.13+ 需 `audioop-lts`；混音师风格链需 `scipy` + `soundfile`（均已在 requirements.txt）。
 ffmpeg / ffprobe 需自备（`remix/bin/` 或系统 PATH，解析见 `remix/core/binfind.py`）。

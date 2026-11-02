@@ -196,6 +196,34 @@ def rank_mode_only(mode_a: str | None, mode_b: str | None) -> int:
     return RANK_SAME if mode_a == mode_b else RANK_PARALLEL
 
 
+def rank_pitch(pc: int | None, target: tuple[int | None, str | None] | None) -> int:
+    """单音素材的兼容度：只知道**音级**、不知道调式。
+
+    为什么单独一条：持续单音（钢琴单键、弦乐一个音）本身没有大小调色彩，
+    但它落在哪个音级是确定的 —— 文件名就写着（`Piano.ff.B5.aiff`），
+    这种情况下把它当"未知"等于白丢信息，硬安一个 major/minor 又会让 `rank()`
+    按调式关系误判（实测 `Piano.ff.B5` 用 chroma 判成了 C#m，conf 只有 0.38
+    —— 高音区泛音把音级带偏了，而文件名是准的）。
+
+    判定只按音级距离：
+      - 同音级 → RANK_SAME
+      - 纯五/四度 → RANK_FIFTH
+      - 其余 → RANK_PARALLEL（可用但不优先）
+    最后一个**不判不兼容**：单个音几乎能和任何调共存（经过音、延伸音），
+    判成不兼容会把可用素材误杀。
+    """
+    if pc is None or not target:
+        return RANK_FIFTH
+    target_pc = target[0]
+    if target_pc is None:
+        return RANK_FIFTH          # 目标只给了调式、没有主音 → 没法比
+    if pc == target_pc:
+        return RANK_SAME
+    if (pc - target_pc) % 12 in (7, 5):
+        return RANK_FIFTH
+    return RANK_PARALLEL
+
+
 def format_target(target: tuple[int | None, str | None] | None) -> str:
     if not target:
         return "未指定"
