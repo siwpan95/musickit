@@ -100,6 +100,33 @@ python remix/tools/ingest_stems.py --purge-tag ftest                    # 真删
 >
 > 音频本身仍被 `.gitignore` 排除，只有 `manifest.json` 入库。
 
+### 调性标注与 `--key`（T2-1）
+
+提示词里的 `scale` 一直是「只读不用」的字段（详见架构文档 §7）。T2-1 先做**不做
+pitch-shift 的最小闭环**：给素材标调性，选音时优先挑兼容的，避免调性打架。
+
+```bash
+# 1) 估计每个素材的调性（librosa chroma + Krumhansl 轮廓），写回 manifest
+python remix/tools/detect_keys.py                 # 只补缺 key 的
+python remix/tools/detect_keys.py --force         # 全部重算
+python remix/tools/detect_keys.py --pools bass guita --dry-run
+
+# 2) 混音时指定目标调性
+python remix/main.py --remix --key Am             # 完整调性（含主音）
+python remix/main.py --remix --key 小调           # 只给调式（无主音）
+```
+
+| 概念 | 说明 |
+|---|---|
+| 兼容等级 | 同调(0) → 关系大小调(1) → 纯五/四度(2) → 同主音大小调(3) → 不兼容(9) |
+| 未知调性 | 排在「已知可用」之后、「确定不兼容」之前（可能合也可能不合） |
+| **只重排、不删除** | 池子小的时候硬过滤会直接选不出音，故降级使用并在日志报告各档计数 |
+| 调式名 | `scale` 是调式（小调/多利亚/布鲁斯/大调/利底亚…），无主音 → 只比色彩 |
+| 仅标注有音高的池 | bass/guita/keys/strings/brass/woodwind/ethnic/synth/acapella；drum/cowbell/animal/sfx 无调性 |
+
+> 提示词驱动路径已透传：`prompt_driven_remix.py` 把 `data["scale"]` 作为 `key=` 传给引擎，
+> 于是「小调」类提示词会优先挑小调素材，「五声 / 无调性」不做任何偏好。
+
 ## 混音（remix）
 
 ```bash

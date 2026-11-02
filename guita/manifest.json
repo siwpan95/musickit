@@ -19189,7 +19189,12 @@
       "duration_s": 239.448,
       "sha256": "ee2ddae8d28bb04139ba7492d668d43f3f63c42eb3641cdf0450c42a382bdc3b",
       "subcategory": "full_stem",
-      "content_kind": "stem"
+      "content_kind": "stem",
+      "key": "C",
+      "scale": "major",
+      "key_confidence": 0.8182,
+      "key_margin": 0.022,
+      "key_source": "track_mix"
     },
     {
       "file": "freepd__Attic_Secrets.wav",
@@ -19201,7 +19206,12 @@
       "duration_s": 66.403,
       "sha256": "21aebff97fca93522fb478bd384231e3712700f09c35c310ba2f1db9359cc117",
       "subcategory": "full_stem",
-      "content_kind": "stem"
+      "content_kind": "stem",
+      "key": "A#",
+      "scale": "major",
+      "key_confidence": 0.6588,
+      "key_margin": 0.1464,
+      "key_source": "track_mix"
     },
     {
       "file": "freepd__Baltic_Levity.wav",
@@ -19213,7 +19223,12 @@
       "duration_s": 48.048,
       "sha256": "6236bbadb54ae45ca07f559c89a97046afa94fa06c53323ccb89db4952950587",
       "subcategory": "full_stem",
-      "content_kind": "stem"
+      "content_kind": "stem",
+      "key": "C",
+      "scale": "major",
+      "key_confidence": 0.6387,
+      "key_margin": 0.0333,
+      "key_source": "track_mix"
     },
     {
       "file": "freepd__Barnville.wav",
@@ -19225,7 +19240,12 @@
       "duration_s": 101.747,
       "sha256": "045acc25955423504f54fcca93750c0820a73e902f2932feb9e1d4c7ddf7503f",
       "subcategory": "full_stem",
-      "content_kind": "stem"
+      "content_kind": "stem",
+      "key": "E",
+      "scale": "major",
+      "key_confidence": 0.85,
+      "key_margin": 0.1198,
+      "key_source": "track_mix"
     },
     {
       "file": "freepd__Barroom_Ballet.wav",
@@ -19237,7 +19257,12 @@
       "duration_s": 56.472,
       "sha256": "7511068927212909ffdcd67e98114b8657f1aaff32caff22a975296a6a58f357",
       "subcategory": "full_stem",
-      "content_kind": "stem"
+      "content_kind": "stem",
+      "key": "G",
+      "scale": "major",
+      "key_confidence": 0.883,
+      "key_margin": 0.1064,
+      "key_source": "track_mix"
     },
     {
       "file": "freepd__BeBop_for_Joey.wav",
@@ -19249,9 +19274,15 @@
       "duration_s": 139.389,
       "sha256": "30174561e50dd762ecf2631c80764a34ff6202d9e904e270962305f9444fb046",
       "subcategory": "full_stem",
-      "content_kind": "stem"
+      "content_kind": "stem",
+      "key": "F",
+      "scale": "major",
+      "key_confidence": 0.6418,
+      "key_margin": 0.01,
+      "key_source": "track_mix"
     }
   ],
   "generated": "2026-08-18T07:34:30",
-  "last_ingested_by": "ingest_stems.py"
+  "last_ingested_by": "ingest_stems.py",
+  "last_key_scan_by": "detect_keys.py"
 }

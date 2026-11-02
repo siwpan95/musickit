@@ -318,6 +318,10 @@ def prompt_to_mix_params(data: dict, rng: random.Random,
         "bpm": bpm,
         "structure": structure,
         "tracks": tracks,
+        # T2-1：把提示词的 scale（调式名，无主音）作为调性偏好传给引擎；
+        # 引擎侧 musical_key.parse_target() 会把「小调/多利亚/布鲁斯」归到 minor 族，
+        # 「大调/利底亚」归到 major 族，「五声/无调性」视为不指定。
+        "key": data.get("scale") or None,
         "note": f"instruments={data.get('instruments')}",
         "gaps": gaps,
     }
@@ -502,7 +506,8 @@ def main():
         label = data.get("label", "")
         print(f"\n【#{i}】{label} ｜ {data.get('subgenre','')}")
         print(f"  提示词：{data.get('sentence','')}")
-        print(f"  驱动  -> BPM={mp['bpm']}  structure={mp['structure']}")
+        print(f"  驱动  -> BPM={mp['bpm']}  structure={mp['structure']}"
+              + (f"  key={mp['key']}" if mp.get("key") else ""))
         for ci, (cat, path) in enumerate(mp["tracks"], 1):
             print(f"    {ci}. [{cat}] {os.path.basename(path)}")
         if mp.get("gaps"):
@@ -523,6 +528,7 @@ def main():
             tracks=mp["tracks"],
             release_safe=args.release_safe,
             mixer_style=mixer_slug,
+            key=mp.get("key"),
         )
         results.append({"prompt": data, "mapping": mp, "output": out})
         print(f"  ✅ 混音已保存：{out}")

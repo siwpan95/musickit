@@ -55,7 +55,23 @@ def parse_tracks(html: str) -> list[tuple[str, str, str]]:
     return out
 
 
+def _remote_size(rel: str, timeout: int = 30) -> int:
+    """HEAD 取远端大小；失败返回 -1。"""
+    try:
+        req = urllib.request.Request(BASE + rel, headers=UA, method="HEAD")
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return int(r.headers.get("Content-Length") or -1)
+    except Exception:  # noqa: BLE001
+        return -1
+
+
 def download(rel: str, dest: str, timeout: int = 300) -> int:
+    """下载单个曲目；已存在且大小一致则跳过（返回 0 表示跳过）。"""
+    if os.path.isfile(dest):
+        local = os.path.getsize(dest)
+        remote = _remote_size(rel, timeout=min(timeout, 30))
+        if remote > 0 and local == remote:
+            return 0
     req = urllib.request.Request(BASE + rel, headers=UA)
     with urllib.request.urlopen(req, timeout=timeout) as r:
         data = r.read()
@@ -103,6 +119,10 @@ def main() -> int:
         dst = os.path.join(args.out, safe)
         try:
             size = download(rel, dst, args.timeout)
+            if size == 0:
+                print(f"  ⏭️  {safe}（已存在，大小一致，跳过）")
+                skip += 1
+                continue
             print(f"  ✅ {safe}  ({size/1024/1024:.1f} MB)  ← {decoded}")
             ok += 1
         except Exception as e:  # noqa: BLE001

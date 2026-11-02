@@ -73,6 +73,7 @@ LOSSY_BITRATE = {"mp3": "320k", "ogg": "320k", "aac": "320k"}
 # 引擎版本：影响声音的实现变更必须递增（会记入每首的 recipe.engine，便于漂移归因）
 REMIX_VERSION = "2.1.0"
 
+from core import musical_key  # noqa: E402
 from core.loop_slicer import bar_ms, duration_ms, duration_ms_or  # noqa: E402
 
 
@@ -347,6 +348,49 @@ def _manifest_duration_ms(meta: dict | None) -> int:
     return ms if ms > 0 else 0
 
 
+def _prefer_key_compatible(
+    files: list[str],
+    cat: str,
+    entries: dict[str, dict],
+    target: tuple[int | None, str | None] | None,
+) -> tuple[list[str], dict[str, int]]:
+    """按调性兼容度**重排**候选（不删除任何素材），返回 (新顺序, 各档计数)。
+
+    为什么不硬过滤：素材池可能很小（当前每池个位数），硬过滤会直接选不出音。
+    重排保证「有兼容的就优先用兼容的」，没有时仍能退回不兼容素材并把情况报出来。
+    """
+    stats = {"same": 0, "relative": 0, "fifth": 0, "parallel": 0, "incompat": 0, "unknown": 0}
+    if not target or not files:
+        return files, stats
+
+    pool = entries.get(cat, {})
+    scored: list[tuple[int, int, str]] = []
+    for i, path in enumerate(files):
+        e = pool.get(os.path.basename(path)) or {}
+        key_name, scale = e.get("key"), e.get("scale")
+        conf = float(e.get("key_confidence") or 0.0)
+        cand = None
+        pc = musical_key.to_pc(key_name)
+        if pc is not None and scale in ("major", "minor") and conf >= 0.05:
+            cand = (pc, scale)
+        if cand is None:
+            stats["unknown"] += 1
+            # 未知排在「已知五度关系」之后：它可能合也可能不合，不该挤掉确定可用的
+            scored.append((musical_key.RANK_PARALLEL, i, path))
+            continue
+        r = musical_key.rank(target, cand)
+        for name, val in (("same", musical_key.RANK_SAME), ("relative", musical_key.RANK_RELATIVE),
+                          ("fifth", musical_key.RANK_FIFTH), ("parallel", musical_key.RANK_PARALLEL),
+                          ("incompat", musical_key.RANK_INCOMPATIBLE)):
+            if r == val:
+                stats[name] += 1
+                break
+        scored.append((r, i, path))
+
+    scored.sort(key=lambda t: (t[0], t[1]))
+    return [p for _, _, p in scored], stats
+
+
 def _collect_category_files(category_dir: str) -> list[str]:
     """收集某类素材目录下的所有音频文件（含子类子目录，递归）。"""
     if not os.path.isdir(category_dir):
@@ -448,6 +492,7 @@ def _pick_random_tracks(
     bpm: int,
     entries: dict[str, dict[str, dict]] | None = None,
     release_safe: bool = False,
+    target_key: tuple[int | None, str | None] | None = None,
 ) -> list[tuple[str, str]]:
     """按 phonk 风格随机挑选音轨。
 
@@ -464,12 +509,26 @@ def _pick_random_tracks(
     by_cat: dict[str, list[str]] = {}
     all_files: list[str] = []
     dropped: list[tuple[str, int]] = []
+    key_stats: dict[str, int] = {}
     for cat in _RANDOM_POOLS:
         files = _collect_category_files(os.path.join(_MUSICKIT_ROOT, cat))
         if release_safe:
             files = _filter_release_safe(files, cat, entries, dropped)
+        if target_key:
+            files, st = _prefer_key_compatible(files, cat, entries, target_key)
+            for k, v in st.items():
+                key_stats[k] = key_stats.get(k, 0) + v
         by_cat[cat] = files
         all_files.extend(files)
+
+    if target_key:
+        name = musical_key.format_target(target_key)
+        compat = key_stats.get("same", 0) + key_stats.get("relative", 0) + key_stats.get("fifth", 0)
+        print(f"[remix] 目标调性 {name}：兼容候选 {compat} 条"
+              f"（同调 {key_stats.get('same', 0)} / 关系调 {key_stats.get('relative', 0)}"
+              f" / 五度 {key_stats.get('fifth', 0)}）"
+              f"，主音不同 {key_stats.get('parallel', 0)}，不兼容 {key_stats.get('incompat', 0)}"
+              f"，未知 {key_stats.get('unknown', 0)}")
 
     if release_safe and dropped:
         print("[remix] --release-safe：已剔除受限/未知授权素材 "
@@ -706,6 +765,7 @@ def run_remix(
     tracks: list[tuple[str, str]] | None = None,
     release_safe: bool = False,
     mixer_style: str | None = None,
+    key: str | None = None,
     sample_rate: int | None = None,
     bit_depth: int | None = None,
     bitrate: str | None = None,
@@ -734,6 +794,11 @@ def run_remix(
 
     count = max(1, min(count, 8))
     rng = random.Random(seed)
+    # T2-1：目标调性（提示词 scale / CLI --key）。解析失败按「未指定」处理，不做任何偏好。
+    _target_key = musical_key.parse_target(key)
+    if key and _target_key is None:
+        print(f"[remix] 警告：无法解析调性 {key!r}（示例：Cm / Am / F# major / A小调），本次不做调性偏好",
+              file=sys.stderr)
     style = style_irs = ms_mod = None
     if mixer_style:
         style, style_irs, ms_mod = _load_mixer_style(mixer_style, rng)
@@ -769,7 +834,8 @@ def run_remix(
         # 2026-11-02：原 `--release-safe` 的 tier 过滤已废弃（素材均为公版）
         tracks = chosen
     else:
-        tracks = _pick_random_tracks(count, seed, bpm, entries_by_cat, release_safe)
+        tracks = _pick_random_tracks(count, seed, bpm, entries_by_cat, release_safe,
+                                     target_key=_target_key)
 
     # F6：内容指纹去重（同采样只保留一份，跨 mp3/wav 格式）
     fps: dict[str, str] = {}
@@ -992,6 +1058,11 @@ def main():
         help="【已废弃】素材均为公共领域，本开关不再做任何过滤（保留以兼容旧脚本）",
     )
     parser.add_argument(
+        "--key", type=str, default=None, metavar="KEY",
+        help="目标调性（如 Cm / Am / F# major / A小调）：优先选用同调/关系调/五度关系素材；"
+             "解析失败则不做偏好。素材调性由 remix/tools/detect_keys.py 预先标注",
+    )
+    parser.add_argument(
         "--mixer-style", type=str, default=None,
         help="混音师风格着色（burbidge/ghenea/clearmountain/marroquin/pensado/blake/"
              "lordalge/schmitt/mikedean/stent/random；默认不启用，保持原 phonk 处理链）",
@@ -1035,7 +1106,7 @@ def main():
             result = run_remix(count=args.count, seed=args.seed, out_dir=args.out,
                                fmt=args.format, bars=args.bars, bpm=args.bpm,
                                structure=args.structure, release_safe=args.release_safe,
-                               mixer_style=args.mixer_style)
+                               mixer_style=args.mixer_style, key=args.key)
         except MixValidationError as _exc:
             tasklog.append("stage_error", stage="remix", run_id=run_id, error=str(_exc)[:300])
             tasklog.append("run_end", run_id=run_id, ok=False, errors=1)
