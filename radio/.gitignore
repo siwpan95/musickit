@@ -10,6 +10,8 @@ public_url.txt
 __smoke_out.txt
 __smoke_err.txt
 .station_password
+# 社群同步凭据（含 Discord webhook / Telegram token）—— 只提交 .example
+integrations.json
 
 # ---------- 便携依赖包（体积大不入库；部署时 pip install -r requirements.txt）----------
 packages/
