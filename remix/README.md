@@ -79,7 +79,6 @@ python main.py --remix --count 5 --bars 8 --bpm 140 --format mp3
 python main.py --remix --seed 42 --bars 16 --out output
 
 # 发布安全模式：仅使用授权层级 free/pack 的素材（restricted/unknown 一律剔除）
-python main.py --remix --release-safe
 ```
 
 **混音师风格着色（--mixer-style，可选；不传时行为不变）**：
@@ -98,7 +97,8 @@ python main.py --remix --release-safe
 - 骨架层（drum/bass/guita）**保底挑选 >=1 小节的 loop/stem**（manifest 时长优先，
   未知时长则整曲 stem 命名优先 + ffprobe 抽样探测），混音时强制循环层，
   杜绝 one-shot 被抽成唯一鼓轨导致整曲失去律动；
-- `--release-safe`：按各池 manifest 的 `license_tier` 过滤，只留 free/pack。
+- ~~`--release-safe`：按 `license_tier` 过滤~~ → **已废弃（2026-11-02）**：素材均为公共领域，
+  该开关不再做任何过滤；参数仍接受以兼容旧脚本。
 
 素材根目录可用环境变量 `MUSICKIT_ROOT` 覆盖（默认 remix 的上级目录）。
 
@@ -135,7 +135,6 @@ python main.py --remix --release-safe
 /Python314/python.exe tools\hourly_remix.py --count 5 --bpm 140  # 固定 5 轨 / 140BPM
 /Python314/python.exe tools\hourly_remix.py --seed 42             # 可复现
 /Python314/python.exe tools\hourly_remix.py --dry-run             # 只打印本次随机结果
-/Python314/python.exe tools\hourly_remix.py --release-safe        # 开启授权过滤（仅对外发布时）
 /Python314/python.exe tools\hourly_remix.py --sample-rate 96000   # 更高交付规格（96k/24bit）
 /Python314/python.exe tools\hourly_remix.py --format mp3 --bitrate 320k  # 有损兜底
 ```
@@ -164,8 +163,7 @@ python main.py --remix --release-safe
 | 混音师染色（叠加层，可选） | `--mixer-style`（默认 `none`；`random` 随机一位） | 24 位混音师签名总线 + 母带链。只影响音色/响度，不影响选曲。 |
 | 跨类融合（进阶路径，可选） | `--fusion` | music 提示词链 + 跨类融合（随机混搭两类、乐器/情绪去重）→ 映射为具体素材轨。声学更丰富，但属复杂实现，默认不走。 |
 
-**发布安全（默认关）**：`--release-safe` 显式开启时只用各池 manifest 中 `license_tier ∈ {free, pack}` 的
-素材，restricted/unknown 一律剔除，满足网易云等平台对外发布要求。**默认关闭**，全素材池参与，避免内容过于单调；自用或确认授权后再开。
+**~~发布安全（默认关）~~ 已废弃（2026-11-02）**：素材均为公共领域，`--release-safe` 不再做任何过滤（原行为是按 `license_tier ∈ {free, pack}` 选材，只放行全库 31.7%、且被 B 变体绕过，已移除）。
 
 - **时长控制**：`bars = round(target_sec * bpm / 240)`（4 拍/小节）；BPM 从风格区间取偶数 →
   `bars = bpm/2`，理论时长精确 120.0s（实测偏差 <0.1s）。
@@ -269,7 +267,7 @@ mp3 → wav 只会得到「假无损」（内容已不可逆丢失）。正确�
 | 高通/低通 | 滤波截止频率可调 |
 | phonk beat 混音 | loop 切片 + 小节编排 + 内容去重，输出固定小节数（`--bars`/`--bpm`） |
 | 骨架保底选音 | drum/bass/guita 强制选取 >=1 小节 loop/stem 并强制循环层 |
-| 发布安全模式 | --release-safe 仅用 free/pack 授权素材（license_tier 过滤） |
+| ~~发布安全模式~~ | 已废弃（2026-11-02）：素材全为公版，`--release-safe` 不再过滤 |
 | 防覆盖命名 | 输出文件名同秒冲突自动递增（_1/_2） |
 | 混音师风格着色 | --mixer-style：24 位混音师分轨总线链 + 风格母带（共享 burbidge_album/mixer_styles.py） |
 | 混音师电台 | tools/mixer_radio.py：固定签名 × 随机流派连续产出（m3u8 + 报告） |
@@ -299,7 +297,7 @@ remix/
 │   └── ...                 # 采样入库/审计/查重等治理脚本
 ├── utils/
 │   └── progress_reporter.py# 线程安全进度报告
-└── tests/                  # pytest 测试套件（含 main.py 选音逻辑 / --release-safe 覆盖）
+└── tests/                  # pytest 测试套件（含 main.py 选音逻辑 / 导出断言 / binfind）
 ```
 
 ## 测试

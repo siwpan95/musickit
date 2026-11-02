@@ -182,7 +182,7 @@
   <path class="e" d="M414,125 L436,125" marker-end="url(#b)"/>
   <path class="e" d="M558,125 L580,125" marker-end="url(#b)"/>
   <rect class="s" x="294" y="12" width="244" height="40" rx="7" style="stroke:#9aa86b"/>
-  <text class="t" x="304" y="30">manifest.json 池（license_tier·duration_s）</text><text class="t" x="304" y="44">→ --release-safe 仅 free/pack</text>
+  <text class="t" x="304" y="30">manifest.json 池（license_tier·duration_s）</text><text class="t" x="304" y="44">→ 素材均为公共领域（license_tier 已废弃）</text>
   <path class="e" d="M416,52 L416,98" marker-end="url(#b)"/>
   <rect class="s" x="582" y="170" width="120" height="44" rx="7" style="stroke:#b9772e"/>
   <text class="t" x="592" y="188">交付 WAV 48k/24bit</text><text class="t" x="592" y="202">或 MP3/ogg 320k</text>
@@ -297,7 +297,7 @@
 <h2>5. 数据契约（素材池 / 配方）</h2>
 <table>
 <tr><th>契约</th><th>结构</th><th>位置</th></tr>
-<tr><td>素材池 manifest</td><td><code>{generated_by, entries:[{file, source_pack, original, original_rel, license, duration_s, sha256, subcategory, license_tier(free|pack|restricted|unknown), content_kind(stem|loop|unknown)}]}</code></td><td>各池目录 <code>*/manifest.json</code></td></tr>
+<tr><td>素材池 manifest</td><td><code>{generated_by, entries:[{file, source_pack, original, original_rel, license, duration_s, sha256, subcategory, license_tier(free|pack|restricted|unknown), content_kind(stem|loop|unknown)<br><b style="color:#c0392b">⚠ license_tier 为历史遗留字段，2026-11-02 起不再参与任何判定（素材均为公共领域）</b>}]}</code></td><td>各池目录 <code>*/manifest.json</code></td></tr>
 <tr><td>渲染配方 recipe</td><td><code>{engine{remix_version,sha256...}, inputs{count,seed,bpm,bars,structure,release_safe,mixer_style}, structure{name,template,sections,fade_out_bars}, tracks[{cat,role,rel,gain_db,start_bar,end_bar,...}], constants, mixer, output{...}, recipe_digest}</code></td><td><code>run_remix(recipe_out=...)</code> 落库（pipeline.log / 报告）</td></tr>
 <tr><td>渲染器 stdout</td><td><code>{ok:true, file, channel, style, style_zh, label, subgenre, bpm, bars, duration_s}</code></td><td><code>musickit_render_one.py</code></td></tr>
 <tr><td>instrument_taxonomy</td><td><code>{word_map:{词→类目}, canonical_classes:{类目→{pool,subcategory,available,mixer_role,prefer_subdirs}}, pools:[...]}</code>——242 词→37 类目→13 池</td><td>仓库根 <code>instrument_taxonomy.json</code></td></tr>
@@ -367,7 +367,7 @@ python music/prompt_driven_remix.py -c phonk --release-safe</pre>
 <ul>
   <li>架构清晰<a href="#">分层解耦</a>：混音引擎（纯计算）+ 电台（纯服务）通过文件/子进程通信，任一半宕机不互相拖垮。</li>
   <li>性能设计扎实：共享广播缓冲 + 背压 + 节流，适合个人/小圈子电台（waitress 并发）。</li>
-  <li>可复现性工程到位：每次渲染落 <code>build_recipe</code> + 引擎指纹，便于漂移归因；<code>--release-safe</code> 守住授权红线。</li>
+  <li>可复现性工程到位：每次渲染落 <code>build_recipe</code> + 引擎指纹，便于漂移归因。<br><b>注（2026-11-02 修订）</b>：原此处写「<code>--release-safe</code> 守住授权红线」，该表述已撤销 —— 素材均为公共领域，无需授权隔离；且该过滤曾被 B 变体绕过、并会砍掉 68.3% 素材，现已废弃。</li>
   <li><b>API 文档是短板</b>：既有 <code>api_docs.py</code> 路由名/字段不全、无示例，已用两份 OpenAPI v3 规范补齐（见同目录）。</li>
   <li><b>提示词利用率是第二大短板（重点）</b>：生成器产出 12 字段，桥接器仅真正消费 <code>instruments</code>+<code>bpm</code>（另 3 字段只选曲式），<code>scale/elements/scene/sentence/fusion</code> 等 7 字段被静默丢弃。详见第 7 节覆盖率矩阵与强化建议——若要做到「提示词所写即所得」，需把被丢弃字段接入现有池/DSP（见 7.3）。</li>
 </ul>

@@ -43,19 +43,27 @@ musickit/
     MUBERT_RESEARCH.md / MUBERT_METHODOLOGY.md / MUBERT_COMPARISON.md
 ```
 
-## 素材授权（license_tier，写入各池 manifest.json）
+## 素材授权
 
-| tier | 含义 | 混音默认 | --release-safe |
-|------|------|---------|----------------|
-| `free` | 可免费商用（Mixkit、MusicRadar SampleRadar） | ✅ 用 | ✅ 用 |
-| `pack` | 商业采样包（EULA 允许音乐制作与发布成品；样本勿转售） | ✅ 用 | ✅ 用 |
-| `restricted` | 商业歌曲 Demucs stem / 粉丝提取游戏音乐（仅个人练习与研究） | ✅ 用（个人用途） | ❌ 剔除 |
-| `unknown` | 来源未记录 | ✅ 用（个人用途） | ❌ 剔除 |
+**本项目素材均为公共领域（Public Domain），可自由用于制作与发布。**
 
-- 授权治理脚本：`remix/tools/tag_license_tiers.py`（标注 tier + 补全 license，备份在
-  `archived/manifest_backup_20260817/`）、`remix/tools/audit_licenses.py`（巡检分布）。
-- **发布前请用 `--release-safe` 跑一次**：它只从 free/pack 素材选音，
-  彻底避开商业歌曲 stem 与来源不明素材。
+> ⚠️ **`--release-safe` 已于 2026-11-02 废弃**：它按 manifest 的 `license_tier` 过滤，
+> 但该字段严重失真（30,259 条中 `unknown` 占 64.7%、`restricted` 仅 3.6%），
+> 而实际素材全为公版。该开关只放行 `free`+`pack`（31.7%），等于无谓砍掉 68.3% 素材，
+> 且其过滤逻辑曾被 B 变体（`bars>12` 换素材）绕过 —— 保护为零、代价很大。
+> 现已改为**不做任何过滤**：参数仍接受（兼容旧脚本），但不再影响选音。
+
+公版素材来源参考（可自行扩充）：
+
+| 站点 | 内容 | 说明 |
+|------|------|------|
+| <https://freepd.cn/music> | FreePD 中文镜像 · 公共领域音乐 | 免注册直下，适合做 stem 源 |
+| <https://freepd.com> | FreePD 原站（CC0） | 经典/氛围/电子分类齐全 |
+| <https://mixkit.co/free-stock-music> | Mixkit 免费音乐 | 免费商用，无需署名 |
+| <https://freesound.org> | Freesound（按 CC0 筛选） | one-shot / 环境音最全 |
+
+历史遗留字段 `license_tier` 仍保留在 manifest 中，但**不再参与任何判定**。
+相关脚本 `remix/tools/tag_license_tiers.py`、`audit_licenses.py` 仅作历史参考。
 
 ## 混音（remix）
 
@@ -64,12 +72,11 @@ musickit/
 python <PATH> --remix                                          # 默认 3 轨骨架、32 小节、BPM 随机
 python <PATH> --remix --count 5 --bars 64 --bpm 140 --format wav
 python <PATH> --remix --structure classic_drop --seed 42 --out output
-python <PATH> --remix --release-safe                           # 发布安全模式（仅 free/pack 素材）
 python <PATH> --remix --mixer-style wallace                    # 混音师风格着色（24 位，见下）
 
 usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm BPM]
                [--structure STRUCTURE] [--out OUT] [--format {wav,mp3,ogg,flac}]
-               [--release-safe] [--mixer-style {24位混音师slug|random}]
+               [--mixer-style {24位混音师slug|random}]
 ```
 
 **选音规则（2026-08-17 起）**：
@@ -117,7 +124,7 @@ FULL=1 bash scripts/ci_smoke.sh     # 附带全量单测
   排除单音采样（如 "EHn_susDyn_..._D3"），最后才全量回退；
 - 无样本/无匹配的乐器记入 `gaps`，绝不假映射；
 - 曲式模板选择规则外置在 `structure_moods.json`（改词表无需改代码）；
-- 支持 `--release-safe`（与引擎同口径过滤）。
+- ~~支持 `--release-safe`~~ → 该开关已于 2026-11-02 废弃（素材全为公版，不再过滤）。
 
 ## 固定风格专辑与混音师频道（burbidge_album）
 

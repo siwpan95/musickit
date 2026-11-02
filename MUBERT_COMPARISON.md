@@ -29,6 +29,8 @@ musickit 与 Mubert 都拥有「随机风格」与「固定风格」两条轴，
 | 结构编排 | 生成式编排 + intensity 参数（引擎黑盒） | 曲式模板库 templates/structures.json（classic_drop / ambient_ghost / loop_stack，显式小节数）——移植自 Mubert jingle 方法论 |
 | 可复现性 | 「一致性引擎」保证风格稳定 + 每次新鲜，**不可重放** | --seed 位级复现：同参数必出同字节（已实测） |
 | 分轨控制 | 分轨不可导出；Quick Remix 只能整曲重生成 | 全链路逐轨可控，可导出真分轨 |
+> ⚠️ **时效声明（2026-11-02）**：本文写作时本项目还用 `license_tier` 做授权隔离；现素材均为公共领域，`--release-safe` 已废弃（不再过滤），下文中相关对比仅作历史记录。
+
 | 版权 | 平台背书 royalty-free / DMCA-free（按套餐条款） | 逐文件 license_tier 审计，--release-safe 过滤 free/pack |
 | 产品形态 | 云 API / App / 无限流媒体，按次计费（$0.01/次起） | 本地 CLI / GUI，离线零 API 成本，12.8s/曲 |
 | 生成速度 | 60s 曲目约 10 秒 | 32 小节约 55s 曲目约 13 秒（本地，无网络往返） |

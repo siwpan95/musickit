@@ -201,7 +201,7 @@ python prompt_driven_remix.py --prompt-json prompts.json
 python prompt_driven_remix.py -c trap --dry-run
 
 # 发布安全模式：仅用 musickit 中授权层级为 free/pack 的素材
-python prompt_driven_remix.py -c phonk --release-safe
+python prompt_driven_remix.py -c phonk      # --release-safe 已废弃，无需再加
 ```
 
 **选音口径（2026-08-17 起，与混音引擎一致）**：

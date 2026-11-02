@@ -11,11 +11,11 @@ agent_created: true
 
 ## 常用命令
 - 混音：python G:\repos\musickit\remix\main.py --remix [--count 5 --bars 64 --bpm 140 --structure classic_drop --seed 42 --mixer-style wallace]
-- 发布安全：--release-safe（只用 free/pack 素材）
+- ~~发布安全：--release-safe~~ → 已废弃（2026-11-02，素材均为公共领域，不再过滤）
 - 授权治理：remix/tools/tag_license_tiers.py、audit_licenses.py
 
 ## 关键约定
-- 素材授权分 4 级（free/pack/restricted/unknown），发布前必须 --release-safe
+- 素材均为**公共领域**，可自由发布；manifest 的 license_tier 为历史遗留字段，已不参与判定
 - manifest_index.json 每 6h 自动重建，不入版本库
 - MUSICKIT_ROOT 环境变量可覆盖素材根
 - archived/ 只进不出
