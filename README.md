@@ -32,7 +32,7 @@ musickit/
 ├── archived/      # 🗑️ 垃圾桶/归档区：只进不出（见 archived/README.md）
 ├── music/         # 风格提示词生成器（65 流派风格池）+ 提示词→混音桥接器
 ├── burbidge_album/# 固定风格专辑管线：同一 stems × 24 位混音师签名链（mixer_styles.py）
-├── remix/         # 混音应用（main.py + core/gui/utils/tools/tests + 内置 ffmpeg）
+├── remix/         # 混音应用（main.py + core/gui/utils/tools/tests；ffmpeg/ffprobe 需自备，见下）
 │                   # tools/ 含混音师电台 mixer_radio.py 与本地流服务 mixer_stream.py
 ├── radio/         # 📻 电台输出端（管线终点）：纯 Python+Flask 24/7 推流，
 │                   # 默认音源=musickit 随机渲染；2026-09-02 从历史 93db08f~1 还原，

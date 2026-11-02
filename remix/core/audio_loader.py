@@ -17,18 +17,17 @@ from typing import Callable
 
 from pydub import AudioSegment
 
-# 使用项目内置 ffmpeg / ffprobe（bin/ 目录，零外部依赖）。
-# 放在 import pydub 之后，覆盖 converter / ffprobe 指向，确保任何入口
-# （GUI / CLI / 测试）都能找到编解码器，无需系统安装 ffmpeg。
-_BIN_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "bin")
-if os.path.isdir(_BIN_DIR):
-    os.environ["PATH"] = _BIN_DIR + os.pathsep + os.environ.get("PATH", "")
-    _FFMPEG = os.path.join(_BIN_DIR, "ffmpeg.exe" if os.name == "nt" else "ffmpeg")
-    _FFPROBE = os.path.join(_BIN_DIR, "ffprobe.exe" if os.name == "nt" else "ffprobe")
-    if os.path.isfile(_FFMPEG):
-        AudioSegment.converter = _FFMPEG
-    if os.path.isfile(_FFPROBE):
-        AudioSegment.ffprobe = _FFPROBE
+# 使用项目内置 ffmpeg / ffprobe（bin/ 优先，其次系统 PATH）。
+# 只覆盖真实存在的 `AudioSegment.converter`；pydub 0.25.1 **没有**
+# `AudioSegment.ffprobe` 属性（历史代码那行是无效赋值），它靠 `which("ffprobe")`
+# 走 PATH，因此这里用 ensure_path_env() 把 bin/ 前置即可。
+from . import binfind as _binfind
+
+_binfind.ensure_path_env()
+_FFMPEG = _binfind.resolve("ffmpeg")
+_FFPROBE = _binfind.resolve("ffprobe")
+if _FFMPEG:
+    AudioSegment.converter = _FFMPEG
 
 
 # ======================================================================

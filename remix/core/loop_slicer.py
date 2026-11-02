@@ -21,21 +21,31 @@ import random
 import re
 import struct
 import subprocess
+import sys
 
 import numpy as np
 from pydub import AudioSegment
 
-_BIN_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "bin")
-_FFMPEG = os.path.join(_BIN_DIR, "ffmpeg.exe" if os.name == "nt" else "ffmpeg")
-_FFPROBE = os.path.join(_BIN_DIR, "ffprobe.exe" if os.name == "nt" else "ffprobe")
+from . import binfind
 
-# 任何入口（CLI/GUI/测试）都能找到编解码器，无需系统安装 ffmpeg
-if os.path.isdir(_BIN_DIR):
-    os.environ["PATH"] = _BIN_DIR + os.pathsep + os.environ.get("PATH", "")
-    if os.path.isfile(_FFMPEG):
-        AudioSegment.converter = _FFMPEG
-    if os.path.isfile(_FFPROBE):
-        AudioSegment.ffprobe = _FFPROBE
+_BIN_DIR = binfind.BIN_DIR
+# 统一解析：bin/ 内置优先 → 系统 PATH → None（缺件在使用处显式报错，不再静默降级）
+_FFMPEG = binfind.resolve("ffmpeg")
+_FFPROBE = binfind.resolve("ffprobe")
+
+# 任何入口（CLI/GUI/测试）都能找到编解码器：bin/ 存在就前置进 PATH。
+# 注意 pydub 0.25.1 的实际情况：
+#   - `AudioSegment.converter` 是真实存在的类属性，可覆盖 → 指向解析到的 ffmpeg；
+#   - **不存在** `AudioSegment.ffprobe` 属性（历史代码那行赋值是无效的 no-op），
+#     pydub 通过 `pydub.utils.get_prober_name()` → `which("ffprobe")` 走 PATH 查找。
+#     所以让 pydub 找到 ffprobe 的唯一手段就是把它所在目录放进 PATH（ensure_path_env）。
+# 本项目自己的 duration_ms 用绝对路径解析，不依赖 pydub 的 prober。
+binfind.ensure_path_env()
+if _FFMPEG:
+    AudioSegment.converter = _FFMPEG
+
+# 告警只打一次，避免长批量任务刷屏
+_warned_missing_probe = False
 
 # 角色 → 铺排方式
 ROLE_LOOP = "loop"      # 循环填满
@@ -48,23 +58,83 @@ def bar_ms(bpm: int, bars: int = 1) -> int:
     return int(round(60000.0 / bpm * 4 * bars))
 
 
-def duration_ms(path: str) -> int:
-    """ffprobe 探测时长（毫秒），失败返回 0。"""
+def _ffmpeg() -> str:
+    """取 ffmpeg 绝对路径；缺失时抛出带安装指引的 BinaryNotFound。"""
+    return binfind.require("ffmpeg")
+
+
+def _duration_ms_via_soundfile(path: str) -> int:
+    """用 soundfile 读时长（wav/flac/ogg 等无需 ffprobe）。失败返回 0。"""
     try:
-        r = subprocess.run(
-            [_FFPROBE, "-v", "error", "-show_entries", "format=duration",
-             "-of", "json", path],
-            capture_output=True, text=True, timeout=60,
+        import soundfile as sf  # 项目依赖，纯读头部，不解码
+
+        info = sf.info(path)
+        if info.samplerate and info.frames:
+            return int(round(info.frames / float(info.samplerate) * 1000))
+    except Exception:  # noqa: BLE001 —— 仅作为兜底，失败即放弃
+        pass
+    return 0
+
+
+def duration_ms(path: str) -> int:
+    """探测时长（毫秒）。
+
+    探测链：ffprobe（覆盖全格式）→ soundfile（wav/flac/ogg 等容器直读头部）→ 0。
+    全部失败时向 stderr **打印一次明确告警**（含实际解析到的路径），不再静默 ——
+    静默返回 0 会让选音/切片/B 变体判断整条链路悄悄走错分支。
+
+    已知 manifest 时长时请优先用 `duration_ms_or(path, fallback_ms)`。
+    """
+    global _warned_missing_probe
+    if _FFPROBE:
+        try:
+            r = subprocess.run(
+                [_FFPROBE, "-v", "error", "-show_entries", "format=duration",
+                 "-of", "json", path],
+                capture_output=True, text=True, timeout=60,
+            )
+            return int(round(float(json.loads(r.stdout)["format"]["duration"]) * 1000))
+        except Exception as e:  # noqa: BLE001 —— 探测失败不应中断渲染，但要留痕
+            ms = _duration_ms_via_soundfile(path)
+            if ms:
+                return ms
+            if not _warned_missing_probe:
+                _warned_missing_probe = True
+                print(
+                    f"[remix] 警告：ffprobe 探测失败（{_FFPROBE}）"
+                    f"{type(e).__name__}: {e}；soundfile 兜底亦失败。首个样本：{path}",
+                    file=sys.stderr,
+                )
+            return 0
+    # 无 ffprobe：先用 soundfile 兜底，仍不行才告警
+    ms = _duration_ms_via_soundfile(path)
+    if ms:
+        return ms
+    if not _warned_missing_probe:
+        _warned_missing_probe = True
+        print(
+            f"[remix] 警告：未找到 ffprobe（{binfind.BIN_DIR} 与系统 PATH 均无），"
+            f"且 soundfile 无法读取该格式；时长探测将返回 0，选音与切片会退化。"
+            f"请放入 ffprobe.exe 或安装 ffmpeg 后重试。首个样本：{path}",
+            file=sys.stderr,
         )
-        return int(round(float(json.loads(r.stdout)["format"]["duration"]) * 1000))
-    except Exception:
-        return 0
+    return 0
+
+
+def duration_ms_or(path: str, fallback_ms: int | None = None) -> int:
+    """优先使用已知时长（manifest 的 duration_s），缺失才探测。
+
+    这样即使 ffprobe 缺失，只要 manifest 有时长记录，选音仍能走「已知时长」快路。
+    """
+    if fallback_ms and fallback_ms > 0:
+        return int(fallback_ms)
+    return duration_ms(path)
 
 
 def read_envelope(path: str, sr: int = 8000) -> list[int]:
     """把音频解码为 sr 采样率单声道 s16 包络样本（用于低内存能量扫描）。"""
     r = subprocess.run(
-        [_FFMPEG, "-v", "error", "-i", path, "-ac", "1", "-ar", str(sr),
+        [_ffmpeg(), "-v", "error", "-i", path, "-ac", "1", "-ar", str(sr),
          "-f", "s16le", "-"],
         capture_output=True, timeout=300,
     )
@@ -105,7 +175,7 @@ def load_slice(path: str, start_ms: int, dur_ms: int, tempo: float = 1.0) -> Aud
 
     tempo: atempo 变速系数（>1 加速，输出长度 = 输入/tempo）。
     """
-    args = [_FFMPEG, "-v", "error", "-ss", f"{start_ms / 1000.0:.3f}",
+    args = [_ffmpeg(), "-v", "error", "-ss", f"{start_ms / 1000.0:.3f}",
             "-t", f"{dur_ms / 1000.0:.3f}", "-i", path]
     if tempo and abs(tempo - 1.0) > 1e-3:
         args += ["-af", f"atempo={tempo:.4f}"]
@@ -237,7 +307,7 @@ def audio_fingerprint(path: str) -> str:
     head = b""
     try:
         r = subprocess.run(
-            [_FFMPEG, "-v", "error", "-t", "0.5", "-i", path,
+            [_ffmpeg(), "-v", "error", "-t", "0.5", "-i", path,
              "-ac", "1", "-ar", "8000", "-f", "s16le", "-"],
             capture_output=True, timeout=60,
         )

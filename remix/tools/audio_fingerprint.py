@@ -22,8 +22,14 @@ import os
 import subprocess
 import sys
 
-_BIN = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "bin")
-FFMPEG = os.path.join(_BIN, "ffmpeg.exe" if sys.platform == "win32" else "ffmpeg")
+# 二进制解析统一走 core.binfind（bin/ 优先 → 系统 PATH → 明确报错）
+__REMIX_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if __REMIX_DIR not in sys.path:
+    sys.path.insert(0, __REMIX_DIR)   # 本机 PYTHONSAFEPATH=1，脚本目录不自动入 sys.path
+from core.binfind import require as _require_bin  # noqa: E402
+def _need(name: str) -> str:
+    """惰性解析外部二进制：真正用到时才报错，保证 --help 等入口仍可用。"""
+    return _require_bin(name)
 
 ENVELOPE_SR = 8000
 WIN_MS = 10
@@ -48,7 +54,7 @@ def envelope(path: str, sr: int = ENVELOPE_SR, win_ms: int = WIN_MS):
     win = max(1, sr * win_ms // 1000)
     try:
         r = subprocess.run(
-            [FFMPEG, "-v", "error", "-i", path, "-ac", "1", "-ar", str(sr),
+            [_need("ffmpeg"), "-v", "error", "-i", path, "-ac", "1", "-ar", str(sr),
              "-f", "f32le", "-"],
             capture_output=True, timeout=300,
         )

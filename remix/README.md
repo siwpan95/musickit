@@ -9,11 +9,19 @@
 
 ## ⚠️ 环境要求（重要）
 
-### 1. ffmpeg 必须安装且在 PATH 中
-pydub 只是 ffmpeg 的封装，**没有 ffmpeg 程序本工具无法运行**。
+### 1. ffmpeg **与 ffprobe** 需自备（二选一放置）
+pydub 只是 ffmpeg 的封装，**没有这两个二进制本工具无法运行**。
 
-- 下载：https://ffmpeg.org/download.html
-- 安装后确认命令行能执行 `ffmpeg -version` 和 `ffprobe -version`
+解析顺序（统一由 `core/binfind.py` 完成，全仓唯一入口）：
+
+1. `remix/bin/ffmpeg.exe` / `remix/bin/ffprobe.exe`（项目自带优先，可锁定版本）
+2. 系统 `PATH`（`shutil.which`）
+3. 都没有 → 明确报错并给出安装指引（不再静默降级）
+
+- 下载：https://ffmpeg.org/download.html（含 `ffprobe`）；或 `winget install ffmpeg`
+- 自检：`python -c "from core.binfind import status; print(status())"`
+- **注意**：`ffprobe` 缺失时 `duration_ms()` 会先退回 `soundfile`（wav/flac/ogg/mp3），
+  仍失败才告警并返回 0 —— 不再静默。
 
 ### 2. Python 版本与 audioop
 - **Python ≤ 3.12**：`pip install -r requirements.txt` 即可。
@@ -171,7 +179,8 @@ python main.py --remix --release-safe
   只有 「码率>320kbps 且 采样率>44100Hz 且 体积<`--max-size-mb`(默认200) 且 时长在容差内」时
   `delivery_ok=true`；不满足则在 stdout 打 `DELIVERY=FAIL` 并列出原因。
 - **环境**：`/Python314`（pydub + numpy + scipy + soundfile + audioop-lts），
-  ffmpeg/ffprobe 用 `remix/bin` 内置版，无需系统 PATH。实测单首耗时约 22s。
+  ffmpeg/ffprobe 按 `core/binfind.py` 的顺序解析（`remix/bin` 优先，其次系统 PATH）。
+  实测单首耗时约 22s。
 
 ## 编排配方持久化（recipe，2026-09-17 起）
 

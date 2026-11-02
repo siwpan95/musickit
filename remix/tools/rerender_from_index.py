@@ -63,8 +63,14 @@ if _TOOLS_DIR not in sys.path:
     sys.path.insert(0, _TOOLS_DIR)
 import audio_fingerprint  # noqa: E402
 
-FFPROBE = os.path.join(REMIX_DIR, "bin", "ffprobe.exe" if sys.platform == "win32" else "ffprobe")
-FFMPEG = os.path.join(REMIX_DIR, "bin", "ffmpeg.exe" if sys.platform == "win32" else "ffmpeg")
+# 二进制解析统一走 core.binfind（bin/ 优先 → 系统 PATH → 明确报错）
+__REMIX_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if __REMIX_DIR not in sys.path:
+    sys.path.insert(0, __REMIX_DIR)   # 本机 PYTHONSAFEPATH=1，脚本目录不自动入 sys.path
+from core.binfind import require as _require_bin  # noqa: E402
+def _need(name: str) -> str:
+    """惰性解析外部二进制：真正用到时才报错，保证 --help 等入口仍可用。"""
+    return _require_bin(name)
 
 # 交付规格（与 main.py DELIVERY_SPEC 保持一致）
 SR = 48000
@@ -149,7 +155,7 @@ def envelope_corr(a_path: str, b_path: str) -> float | None:
 def probe(path: str) -> dict:
     try:
         r = subprocess.run(
-            [FFPROBE, "-v", "error", "-show_entries",
+            [_need("ffprobe"), "-v", "error", "-show_entries",
              "stream=codec_name,sample_rate,channels,bits_per_raw_sample,bits_per_sample:"
              "format=duration,size,bit_rate",
              "-of", "json", path],

@@ -432,8 +432,8 @@ def main() -> int:
             f"耗时 {elapsed:.1f}s | 第 {attempt} 次尝试", log_path)
 
         # 交付规格回读（ffprobe 实测，不信任自述参数）
-        ffprobe_bin = os.path.join(REMIX_DIR, "bin",
-                                   "ffprobe.exe" if sys.platform == "win32" else "ffprobe")
+        from core.binfind import require as _require_bin
+        ffprobe_bin = _require_bin("ffprobe")
         info = probe_delivery(final, ffprobe_bin)
         d_ok, d_reasons = judge_delivery(info, args.target_sec, args.tolerance,
                                          args.max_size_mb)

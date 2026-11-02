@@ -30,9 +30,12 @@ if _SCRIPT_DIR not in sys.path:
     sys.path.insert(0, _SCRIPT_DIR)
 
 # =========================================================================
-# pydub 使用项目内置 ffmpeg / ffprobe（bin/ 目录，零外部依赖）
+# pydub 使用项目内置 ffmpeg / ffprobe（bin/ 优先，其次系统 PATH）
 # 必须在 import pydub 之前把 bin/ 加入 PATH，否则 import 时 pydub 找不到
 # ffmpeg 会发出 RuntimeWarning。
+# 解析统一走 core.binfind，且**只在确实存在时才覆盖** pydub 的指向 —— 无条件
+# 覆盖会把 converter 指到一个不存在的路径，连「系统装了 ffmpeg」也用不了，
+# 并且会污染同进程内其它入口（GUI / 测试）的全局状态。
 # =========================================================================
 _PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 _BIN_DIR = os.path.join(_PROJECT_ROOT, "bin")
@@ -40,11 +43,15 @@ os.environ["PATH"] = _BIN_DIR + os.pathsep + os.environ.get("PATH", "")
 
 import pydub  # noqa: E402
 
-_BUNDLED_FFMPEG = os.path.join(_BIN_DIR, "ffmpeg.exe" if sys.platform == "win32" else "ffmpeg")
-_BUNDLED_FFPROBE = os.path.join(_BIN_DIR, "ffprobe.exe" if sys.platform == "win32" else "ffprobe")
+from core import binfind as _binfind  # noqa: E402
 
-pydub.AudioSegment.converter = _BUNDLED_FFMPEG
-pydub.AudioSegment.ffprobe = _BUNDLED_FFPROBE
+_FFMPEG_PATH = _binfind.resolve("ffmpeg")
+_FFPROBE_PATH = _binfind.resolve("ffprobe")
+
+# 只覆盖真实存在的 converter；pydub 0.25.1 无 `AudioSegment.ffprobe` 属性，
+# 它靠 which("ffprobe") 走 PATH（上面已把 bin/ 前置）。
+if _FFMPEG_PATH:
+    pydub.AudioSegment.converter = _FFMPEG_PATH
 
 # =========================================================================
 # 发布级交付规格（2026-09-17 起生效，面向网易云音乐）
@@ -66,7 +73,7 @@ LOSSY_BITRATE = {"mp3": "320k", "ogg": "320k", "aac": "320k"}
 # 引擎版本：影响声音的实现变更必须递增（会记入每首的 recipe.engine，便于漂移归因）
 REMIX_VERSION = "2.1.0"
 
-from core.loop_slicer import bar_ms, duration_ms  # noqa: E402
+from core.loop_slicer import bar_ms, duration_ms, duration_ms_or  # noqa: E402
 
 
 # =========================================================================
@@ -234,6 +241,20 @@ def _apply_delivery_spec(segment, fmt: str,
         "parameters": parameters,
         "kbps": round(sr * depth * ch / 1000.0, 1),
     }
+
+
+def _manifest_duration_ms(meta: dict | None) -> int:
+    """从 manifest 条目取时长（毫秒）；缺失/非法返回 0。
+
+    有了它，ffprobe 缺失时仍能走「已知时长」快路，不必退化成「时长恒 0」。
+    """
+    if not meta:
+        return 0
+    try:
+        ms = int(round(float(meta.get("duration_s")) * 1000))
+    except (TypeError, ValueError):
+        return 0
+    return ms if ms > 0 else 0
 
 
 def _collect_category_files(category_dir: str) -> list[str]:
@@ -690,7 +711,9 @@ def run_remix(
     print(f"[remix] BPM={bpm}，共 {bars} 小节（{bar_ms(bpm, bars) / 1000:.1f}s），"
           f"已选择 {len(tracks)} 条音轨（phonk 风格）：")
     for i, (cat, path) in enumerate(tracks, 1):
-        dur = duration_ms(path) / 1000.0
+        dur = duration_ms_or(
+            path, _manifest_duration_ms(_cat_manifest.get(os.path.basename(path)))
+        ) / 1000.0
         print(f"  {i}. [{cat}] {os.path.basename(path)} ({dur:.1f}s)")
 
     # 段落编排：模板驱动（不足 min_bars 自动全铺平）
@@ -716,7 +739,7 @@ def run_remix(
         meta = _cat_manifest.get(os.path.basename(path))
         if meta:
             src_bpm = parse_bpm_hint(meta.get("original_rel", "") or meta.get("original", ""))
-        dur = duration_ms(path)
+        dur = duration_ms_or(path, _manifest_duration_ms(meta))
         # A 变体：曲首区间搜索
         seg = prepare_material(path, bpm, rng, source_bpm=src_bpm,
                                search_start_sec=0.0, search_max_sec=120.0)

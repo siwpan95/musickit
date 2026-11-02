@@ -23,7 +23,14 @@ from pathlib import Path
 _MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])
 SRC_ROOT = os.environ.get("ACAPELLA_SRC", "")
 DEST = str(_MK_ROOT / "acapella")
-FFPROBE = str(_MK_ROOT / "remix" / "bin" / "ffprobe.exe")
+# 二进制解析统一走 core.binfind（bin/ 优先 → 系统 PATH → 明确报错）
+__REMIX_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if __REMIX_DIR not in sys.path:
+    sys.path.insert(0, __REMIX_DIR)   # 本机 PYTHONSAFEPATH=1，脚本目录不自动入 sys.path
+from core.binfind import require as _require_bin  # noqa: E402
+def _need(name: str) -> str:
+    """惰性解析外部二进制：真正用到时才报错，保证 --help 等入口仍可用。"""
+    return _require_bin(name)
 MANIFEST = os.path.join(DEST, "manifest.json")
 SOURCE_PACK = "coollider_acapellas"
 LICENSE = ("Coollider Acapellas Vols.1-42 (commercial sample pack; license unknown — "
@@ -35,7 +42,7 @@ CHUNK = 4 * 1024 * 1024
 def probe_duration(path):
     try:
         out = subprocess.run(
-            [FFPROBE, "-v", "error", "-show_entries", "format=duration",
+            [_need("ffprobe"), "-v", "error", "-show_entries", "format=duration",
              "-of", "default=nw=1:nk=1", path],
             capture_output=True, text=True, timeout=30,
         )

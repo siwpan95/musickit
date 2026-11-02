@@ -17,7 +17,14 @@ from pathlib import Path
 
 _MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
 DOWNLOADS = str(_MK_ROOT / "archived" / "downloads")
-FFPROBE = str(_MK_ROOT / "remix" / "bin" / "ffprobe.exe")
+# 二进制解析统一走 core.binfind（bin/ 优先 → 系统 PATH → 明确报错）
+__REMIX_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if __REMIX_DIR not in sys.path:
+    sys.path.insert(0, __REMIX_DIR)   # 本机 PYTHONSAFEPATH=1，脚本目录不自动入 sys.path
+from core.binfind import require as _require_bin  # noqa: E402
+def _need(name: str) -> str:
+    """惰性解析外部二进制：真正用到时才报错，保证 --help 等入口仍可用。"""
+    return _require_bin(name)
 AUDIO_EXT = (".wav", ".mp3", ".ogg", ".flac", ".m4a", ".aiff", ".aif")
 INCLUDE = re.compile(r"(synth|syn\b|lead|key|chord|pad|stab|bass|organ|piano|pluck|arp|melody|wave|glass|operator|guitar|gtr|riff|chug|wah|fuzz)", re.I)
 EXCLUDE = re.compile(r"(beat|drum|kick|snare|hat|tom|cym|perc|fx|sfx|vocal|voice|shaker|clap|fill|riser|impact|noise|foley)", re.I)
@@ -29,7 +36,7 @@ def probe(path):
     """返回 (duration, sample_rate) 或 None。"""
     try:
         r = subprocess.run(
-            [FFPROBE, "-v", "error", "-select_streams", "a:0",
+            [_need("ffprobe"), "-v", "error", "-select_streams", "a:0",
              "-show_entries", "stream=duration,sample_rate",
              "-of", "json", path],
             capture_output=True, text=True, timeout=30,
@@ -39,7 +46,7 @@ def probe(path):
         dur = float(st.get("duration") or 0)
         if dur <= 0:
             r2 = subprocess.run(
-                [FFPROBE, "-v", "error", "-show_entries", "format=duration",
+                [_need("ffprobe"), "-v", "error", "-show_entries", "format=duration",
                  "-of", "json", path],
                 capture_output=True, text=True, timeout=30,
             )
@@ -57,7 +64,7 @@ def mean_volume(path):
     """用 volumedetect 取平均音量（dB），失败返回 -100。"""
     try:
         r = subprocess.run(
-            [FFPROBE.replace("ffprobe.exe", "ffmpeg.exe"), "-hide_banner", "-i", path,
+            [_need("ffmpeg"), "-hide_banner", "-i", path,
              "-af", "volumedetect", "-f", "null", "NUL"],
             capture_output=True, text=True, timeout=60,
         )
