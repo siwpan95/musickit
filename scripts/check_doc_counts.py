@@ -57,7 +57,9 @@ def actual() -> dict[str, int]:
 
 # (文件, 正则, 取值键, 人类可读名)
 CHECKS = [
-    ("README.md", r"\*\*(\d+) passed\*\*", "total", "全量 passed"),
+    # 注意用「用例」而不是「passed」：门禁数的是 --collect-only 的**收集数**，
+    # 而 passed 数在有 skip 时会少一条（本仓 Tk 用例偶发 skip），两个口径不同名才对得上。
+    ("README.md", r"\*\*(\d+) 用例\*\*", "total", "全量用例数"),
     ("README.md", r"引擎侧 (\d+)", "remix", "引擎侧用例数"),
     ("README.md", r"桥接器侧 (\d+)", "music", "桥接器侧用例数"),
     ("README.md", r"\*\*(\d+) 个纯逻辑用例\*\*", "smoke", "冒烟纯逻辑用例数"),

@@ -16,13 +16,18 @@ import sys
 from datetime import datetime
 
 # pydub 需要 ffmpeg 在 PATH
-_BIN = str(_MK_ROOT / "remix" / "bin")
-os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
 from pydub import AudioSegment  # noqa: E402
 from pydub.silence import detect_leading_silence  # noqa: E402
 from pathlib import Path
 
 _MK_ROOT = Path(os.environ.get("MUSICKIT_ROOT") or Path(__file__).resolve().parents[2])   # 2026-09-23 去本地化（仓根）
+
+# pydub 调 ffmpeg 时按 PATH 查找；这里幂等前置。
+# 原写法有两处问题：① `_MK_ROOT` 在这行之后才定义 → 导入即 NameError，脚本根本跑不起来；
+# ② 直接赋值，同一进程内重复导入会把同一个 bin/ 反复叠加进 PATH。
+_BIN = str(_MK_ROOT / "remix" / "bin")
+if _BIN not in os.environ.get("PATH", "").split(os.pathsep):
+    os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
 
 SYNTH_DIR = str(_MK_ROOT / "synth")
 DOWNLOADS = str(_MK_ROOT / "archived" / "downloads")

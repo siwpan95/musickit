@@ -24,7 +24,8 @@ if _REMIX_DIR not in sys.path:
     sys.path.insert(0, _REMIX_DIR)
 
 _BIN = str(_MK_ROOT / "remix" / "bin")
-os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
+if _BIN not in os.environ.get("PATH", "").split(os.pathsep):
+    os.environ["PATH"] = _BIN + os.pathsep + os.environ.get("PATH", "")
 from pydub import AudioSegment  # noqa: E402
 from pydub.silence import detect_leading_silence  # noqa: E402
 

@@ -39,11 +39,16 @@ if _SCRIPT_DIR not in sys.path:
 # =========================================================================
 _PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 _BIN_DIR = os.path.join(_PROJECT_ROOT, "bin")
-os.environ["PATH"] = _BIN_DIR + os.pathsep + os.environ.get("PATH", "")
 
 import pydub  # noqa: E402
 
 from core import binfind as _binfind  # noqa: E402
+
+# 把 bin/ 前置到 PATH 交给 binfind 统一处理（幂等）。
+# 这里原先是 `os.environ["PATH"] = _BIN_DIR + ...` 直写：main.py 会被 GUI、
+# hourly_remix、测试等多处以不同模块名重复加载，每加载一次 PATH 就多一段
+# 相同的 bin/（实测 3 次加载 → 41 段变 44 段），越跑越长。
+_binfind.ensure_path_env()
 
 _FFMPEG_PATH = _binfind.resolve("ffmpeg")
 _FFPROBE_PATH = _binfind.resolve("ffprobe")
