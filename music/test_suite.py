@@ -274,26 +274,22 @@ print("\n" + "=" * 70)
 print("综合测评评分卡")
 print("=" * 70)
 
-score_items = [
-    ("功能完整性（CLI 全部模式可用）", 10),
-    ("数据完整性（分类字段 + BPM 查表）", 10 if all_fields_ok and bpm_ok else 6),
-    ("生成鲁棒性（字段校验 + 融合）", 10 if bad_gen == 0 and fusion_bad == 0 else 6),
-    ("导出可靠性（JSON/CSV 往返）", 10),
-    ("性能（2000 条压力）", 10 if dt < N / 500 else 7),
-    ("分布公平（覆盖+均匀）", 10 if coverage == N_STYLES and max_c < (M/N_STYLES)*2.5 else 7),
-    ("边界处理（异常/越界）", 10),
-]
-total_score = sum(s for _, s in score_items)
-max_score = sum(10 for _ in score_items)
-for label, sc in score_items:
-    REPORT.append(f"  🟢 {label}: {sc}/10")
-REPORT.append(f"  🏆 综合得分: {total_score}/{max_score}  ({total_score/max_score*100:.0f}分)")
-
-pct = total_score / max_score * 100
-grade = ("A（优秀）" if pct >= 90 else
-         "B（良好）" if pct >= 80 else
-         "C（合格）" if pct >= 70 else "D（需改进）")
-REPORT.append(f"  📊 评级: {grade}")
+# 2026-11-02：此处原先是一张「7 维评分卡」，其中 3 项（功能完整性 / 导出可靠性 /
+# 边界处理）无论实际结果都写死 10 分，等于只要脚本跑完就报满分 —— 那是谎报，不是评测。
+# 改为只呈现**无法说谎**的统计：通过率 + 失败明细。
+total_checks = PASS + FAIL
+pass_rate = (PASS / total_checks * 100) if total_checks else 0.0
+grade = ("A（优秀）" if pass_rate >= 95 and FAIL == 0 else
+         "B（良好）" if pass_rate >= 90 else
+         "C（合格）" if pass_rate >= 80 else "D（需改进）")
+REPORT.append(f"  📊 通过率: {pass_rate:.1f}%  (PASS={PASS} / FAIL={FAIL}，共 {total_checks} 个检查点)")
+REPORT.append(f"  📊 评级: {grade}  —— 仅由通过率决定，不含主观维度分")
+_failed = [ln.strip() for ln in REPORT if ln.strip().startswith("❌")]
+if _failed:
+    REPORT.append("  ⚠️ 失败明细：")
+    REPORT.extend("   " + ln for ln in _failed)
+else:
+    REPORT.append("  ✅ 全部检查点通过")
 
 # 汇总输出
 print("\n".join(REPORT))
@@ -304,8 +300,8 @@ print("=" * 70)
 with open(OUT_REPORT, "w", encoding="utf-8") as f:
     f.write("# 纯音乐风格提示词生成器 — 测试与综合测评报告\n\n")
     f.write(f"- 测试时间：自动生成\n- 分类总数：{N_STYLES}\n")
-    f.write(f"- 综合得分：{total_score}/{max_score}（{pct:.0f}分，评级 {grade}）\n")
-    f.write(f"- 用例：PASS={PASS} FAIL={FAIL}\n\n")
+    f.write(f"- 通过率：{pass_rate:.1f}%（PASS={PASS} / FAIL={FAIL}，共 {total_checks} 个检查点）")
+    f.write(f"- 评级：{grade}（仅由通过率决定）")
     f.write("## 明细\n\n")
     f.write("\n".join(REPORT) + "\n")
 
