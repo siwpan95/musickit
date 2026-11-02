@@ -20,6 +20,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import subprocess
@@ -45,6 +46,52 @@ def _count(targets: list[str], extra: list[str] | None = None) -> int:
     return int(m[-1][0] or m[-1][1])
 
 
+def _manifest_total() -> int:
+    """13 个池的 manifest 条目总数。
+
+    为什么也纳入门禁：文档里会写「manifest 记着 N 条素材」，而每灌一次库这个数
+    就变（本次加 137 条 iowa 采样就变了）。它是典型的"文档说 X 实际 Y"来源。
+    """
+    total = 0
+    for pool in sorted(os.listdir(ROOT)):
+        mp = os.path.join(ROOT, pool, "manifest.json")
+        if not os.path.isfile(mp):
+            continue
+        try:
+            with open(mp, encoding="utf-8") as f:
+                data = json.load(f)
+        except (OSError, ValueError):
+            continue
+        entries = data.get("entries") if isinstance(data, dict) else None
+        if isinstance(entries, list):
+            total += len(entries)
+    return total
+
+
+def _iowa_total() -> int:
+    """爱荷华 MIS 素材的 manifest 条目数（文件名以 iowa__ 开头）。
+
+    与 _manifest_total 一样是**入库索引**里的确定值：manifest 入库、音频不入库，
+    所以干净克隆上也是这个数 —— 文档里写"灌了多少条"不会因机器而异。
+    """
+    n = 0
+    for pool in sorted(os.listdir(ROOT)):
+        mp = os.path.join(ROOT, pool, "manifest.json")
+        if not os.path.isfile(mp):
+            continue
+        try:
+            with open(mp, encoding="utf-8") as f:
+                data = json.load(f)
+        except (OSError, ValueError):
+            continue
+        entries = data.get("entries") if isinstance(data, dict) else None
+        if not isinstance(entries, list):
+            continue
+        n += sum(1 for e in entries
+                 if isinstance(e, dict) and str(e.get("file", "")).startswith("iowa__"))
+    return n
+
+
 def actual() -> dict[str, int]:
     return {
         "total": _count(list(DIRS)),
@@ -52,6 +99,8 @@ def actual() -> dict[str, int]:
         "music": _count(["music/tests"]),
         "smoke": _count(list(DIRS), ["-m", "smoke"]),
         "smoke_music": _count(["music/tests"], ["-m", "smoke"]),
+        "manifest_total": _manifest_total(),
+        "iowa_total": _iowa_total(),
     }
 
 
@@ -65,6 +114,20 @@ CHECKS = [
     ("README.md", r"\*\*(\d+) 个纯逻辑用例\*\*", "smoke", "冒烟纯逻辑用例数"),
     ("music/README.md", r"单元测试（(\d+) 用例", "music", "桥接器用例数"),
     ("music/README.md", r"纯逻辑档（(\d+) 用例", "smoke_music", "桥接器纯逻辑档用例数"),
+    # ONBOARDING.md（另一个会话新增的上手指南）：同样有手写数字，同样会过期。
+    # 它原本不在门禁覆盖范围内，加了 137 条用例后数字就悄悄错了 —— 这正是门禁的意义。
+    ("ONBOARDING.md", r"全量（(\d+) 条）", "total", "全量用例数（速查表）"),
+    ("ONBOARDING.md", r"\*\*(\d+) 用例\*\*", "total", "全量用例数（正文）"),
+    ("ONBOARDING.md", r"(?<![A-Za-z_])total=(\d+)", "total", "门禁输出里的 total"),
+    ("ONBOARDING.md", r"(?<![A-Za-z_])remix=(\d+)", "remix", "门禁输出里的 remix"),
+    ("ONBOARDING.md", r"(?<![A-Za-z_])music=(\d+)", "music", "门禁输出里的 music"),
+    ("ONBOARDING.md", r"(?<![A-Za-z_])smoke=(\d+)", "smoke", "门禁输出里的 smoke"),
+    ("ONBOARDING.md", r"(?<![A-Za-z_])smoke_music=(\d+)", "smoke_music", "门禁输出里的 smoke_music"),
+    ("ONBOARDING.md", r"(\d+) passed(?:, \d+ skipped)?, \d+ deselected", "smoke", "冒烟档用例数"),
+    ("ONBOARDING.md", r"登记了 (\d+) 条素材", "manifest_total", "manifest 条目总数"),
+    ("ONBOARDING.md", r"manifest 记着 (\d+) 条", "manifest_total", "manifest 条目总数（doctor 段）"),
+    ("ONBOARDING.md", r"合计\s+(\d+)", "manifest_total", "doctor 示例里的合计行"),
+    ("ONBOARDING.md", r"灌入 (\d+) 条", "iowa_total", "爱荷华 MIS 素材条数"),
 ]
 
 

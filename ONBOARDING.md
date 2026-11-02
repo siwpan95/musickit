@@ -214,7 +214,7 @@ musickit/
 └── scripts/ci_smoke.sh        # 一键自检 + 冒烟
 ```
 
-**关键认知**：13 个素材池目录**只有 `manifest.json`**（登记了 30494 条素材的
+**关键认知**：13 个素材池目录**只有 `manifest.json`**（登记了 30631 条素材的
 文件名、时长、sha256、来源），音频文件本身被 `.gitignore` 排除。
 
 | 目录 | 入库内容 | 不入库内容 |
@@ -243,17 +243,22 @@ ffmpeg     : <仓库路径>\remix\bin\ffmpeg.exe
 ffprobe    : <仓库路径>\remix\bin\ffprobe.exe
 
 池           manifest      磁盘      缺失
-bass             889     869      20
-drum            4001    3981      20
+bass             889      20     869
+drum            4001      20    3981
+keys            2675      10    2665
+strings         2884      40    2844
 ...
-合计             30494   30259     115
+合计             30631     372   30259
 ```
+
+> 数字取自 2026-11-03 实测（仓库路径下已有部分素材）。`manifest` 列是**入库的索引条数**，
+> 与机器无关（每个池的 `manifest.json` 都入库）；`磁盘` 列因人而异，取决于你本地恢复了多少素材。
 
 **干净克隆**（**这是新人的预期状态，不是故障**）：
 
 ```
 ⚠️ 告警：
-   - 素材池为空（manifest 记着 30494 条，磁盘 0 个文件）—— 干净克隆下的预期状态；要渲染需先恢复素材
+   - 素材池为空（manifest 记着 30631 条，磁盘 0 个文件）—— 干净克隆下的预期状态；要渲染需先恢复素材
 
 退出码 1（0=通过 / 1=告警 / 2=硬失败）
 ```
@@ -281,7 +286,7 @@ PYTHON=/path/to/python bash scripts/ci_smoke.sh
 ✅ 文档数字与真实一致
 
 == pytest -m smoke ==
-195 passed, 1 skipped, 122 deselected in 3.88s
+196 passed, 122 deselected in 3.92s
 
 ✅ 冒烟检查通过
 ```
@@ -295,7 +300,7 @@ PYTHON=/path/to/python bash scripts/ci_smoke.sh
 python -m pytest remix/tests music/tests -q
 ```
 
-实测：**317 passed, 1 skipped**（收集 318 条）。
+实测：**318 用例**（收集数；偶发的 Tk 用例会 skip，所以 `passed` 可能少一条 —— 门禁按**收集数**核对）。
 
 ---
 
@@ -400,6 +405,31 @@ python remix/tools/detect_keys.py --pools bass guita --dry-run
 python remix/main.py --remix --key Am       # 完整调性
 python remix/main.py --remix --key 小调     # 只给调式（无主音）
 ```
+
+> ⚠️ **单音素材别信 chroma**：`detect_keys` 用 librosa 估调，实测 `Piano.ff.B5` 被判成 **C#m**
+> （conf 仅 0.38 / margin 0.05）—— 高音区泛音把音级带偏了。所以 `fetch_iowa_mis.py` 抓来的单音
+> 走**文件名音级**（`key_pitch_only`），选音时按 `musical_key.rank_pitch()` 只比音级比较。
+
+### 4.6 素材从哪来（把空池填起来）
+
+干净克隆里 13 个池只有 `manifest.json`，音频不在库里。要真正跑起来，得先灌素材。
+两条已验证可用的路：
+
+```bash
+# ① 整曲 → stem（demucs 分离成 bass/drum/guita/acapella）
+python remix/tools/fetch_freepd.py --out D:/tmp/src --limit 4
+python remix/tools/ingest_stems.py --src D:/tmp/src --source-tag freepd
+
+# ② 乐器单音（一次覆盖 keys/strings/brass/woodwind 四池）
+python remix/tools/fetch_iowa_mis.py --limit 2 --dry-run     # 先看计划
+python remix/tools/fetch_iowa_mis.py --instruments piano violin trumpet flute --limit 10
+```
+
+② 用的是爱荷华大学乐器采样库（MIS），站点声明「可自由用于任何项目、无限制」，内容是**每音一条单音
+one-shot**。实测灌入 137 条（13 件乐器各 10 条），全部 44.1kHz/16bit，manifest 记来源/授权原文/直链/sha256。
+
+> **ethnic（民族乐器）没有可用的公版源**：FreePats 的 ethnic 目录只有卡林巴/口弦琴，
+> 二胡/古筝/笛子/唢呐这类不存在；archive.org 与 GitHub 在本机不可达。这一池目前只能手工补。
 
 ---
 
