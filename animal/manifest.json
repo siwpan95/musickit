@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-14T14:12:55",
+  "generated": "2026-11-02T20:24:36",
   "entries": [
     {
       "file": "vocal (1).wav",
@@ -1468,6 +1468,356 @@
       "duration_s": null,
       "license_tier": "unknown",
       "content_kind": "unknown"
+    },
+    {
+      "file": "animal (1).wav",
+      "source_pack": "mixkit_animals",
+      "original": "108_Cartoon_monkey_mocking_and_giggling.wav",
+      "original_rel": "mixkit_animals/108_Cartoon_monkey_mocking_and_giggling.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.8,
+      "sha256": "0e1b37819b9560e9fd897980518af2efc48db6550d88af54bd1df6fd8aae1f6d"
+    },
+    {
+      "file": "animal (2).wav",
+      "source_pack": "mixkit_animals",
+      "original": "1212_Forest_birds_singing.wav",
+      "original_rel": "mixkit_animals/1212_Forest_birds_singing.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.92,
+      "sha256": "874760a0af4b535885671ca85cf4dc76523e346a7d11d068dda0a954b2bb7536"
+    },
+    {
+      "file": "animal (3).wav",
+      "source_pack": "mixkit_animals",
+      "original": "13_Aggressive_beast_roar.wav",
+      "original_rel": "mixkit_animals/13_Aggressive_beast_roar.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.17,
+      "sha256": "dae23c1111a2ad2341ec7677cfa3cee2105a881457f7d9748881d5da0be0a9ad"
+    },
+    {
+      "file": "animal (4).wav",
+      "source_pack": "mixkit_animals",
+      "original": "1741_Sheep_sounds.wav",
+      "original_rel": "mixkit_animals/1741_Sheep_sounds.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 0.54,
+      "sha256": "660c831fc6c83c74c548eb82acd9f69bc5c028ccfdafc9e3fc75b5840ad0bcc9"
+    },
+    {
+      "file": "animal (5).wav",
+      "source_pack": "mixkit_animals",
+      "original": "1744_Cow_moo.wav",
+      "original_rel": "mixkit_animals/1744_Cow_moo.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 2.0,
+      "sha256": "48940eeca1a6f63f109e9f11dce19ed962579a5bb613d8d3c4d519bb8a8f697f"
+    },
+    {
+      "file": "animal (6).wav",
+      "source_pack": "mixkit_animals",
+      "original": "1751_Cow_moo_in_the_barn.wav",
+      "original_rel": "mixkit_animals/1751_Cow_moo_in_the_barn.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.87,
+      "sha256": "188b2d0cd2b88ce0fd0a87bc7c4e5aad6853079fab4946a7760ba80a38408bff"
+    },
+    {
+      "file": "animal (7).wav",
+      "source_pack": "mixkit_animals",
+      "original": "1763_Farm_goat_baa.wav",
+      "original_rel": "mixkit_animals/1763_Farm_goat_baa.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 0.9,
+      "sha256": "e6eb3c503cd24f627b988dca9a1e8354232fb4dbff1c2e2eecaba3b853b16d3a"
+    },
+    {
+      "file": "animal (8).wav",
+      "source_pack": "mixkit_animals",
+      "original": "1775_Wolf_howling.wav",
+      "original_rel": "mixkit_animals/1775_Wolf_howling.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 6.87,
+      "sha256": "faf2e52815806a7c977b2758cd935f8d1808e17341a79c85385b2c5e23f4a052"
+    },
+    {
+      "file": "animal (9).wav",
+      "source_pack": "mixkit_animals",
+      "original": "1776_Wolves_pack_howling.wav",
+      "original_rel": "mixkit_animals/1776_Wolves_pack_howling.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 4.32,
+      "sha256": "37adfd63a9208559fb81d6c0b3f82c263245d6e7392408cd6e95c1873132d35c"
+    },
+    {
+      "file": "animal (10).wav",
+      "source_pack": "mixkit_animals",
+      "original": "1780_Single_cricket_screech.wav",
+      "original_rel": "mixkit_animals/1780_Single_cricket_screech.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.08,
+      "sha256": "973eb8f811498705de70a46a54f9f12f1fcb6bfaa0578908a7ea20f921a760f5"
+    },
+    {
+      "file": "animal (11).wav",
+      "source_pack": "mixkit_animals",
+      "original": "17_Little_birds_singing_in_the_trees.wav",
+      "original_rel": "mixkit_animals/17_Little_birds_singing_in_the_trees.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 7.84,
+      "sha256": "e6b66283c46ab800e306e7de7d0f1d3036a2b2e86548c28c2370be63dc3784d3"
+    },
+    {
+      "file": "animal (12).wav",
+      "source_pack": "mixkit_animals",
+      "original": "1_Dog_barking_twice.wav",
+      "original_rel": "mixkit_animals/1_Dog_barking_twice.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.1,
+      "sha256": "8233f38a9958fe28f5d63e12a4a942ad22af27f5d3b2bf7492b280c1d2f1ec7c"
+    },
+    {
+      "file": "animal (13).wav",
+      "source_pack": "mixkit_animals",
+      "original": "20_Flock_of_wild_geese.wav",
+      "original_rel": "mixkit_animals/20_Flock_of_wild_geese.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 5.0,
+      "sha256": "62abaa77e9d3c9315622a370430056dbaae87562cce3a49488707cdbb0d994c5"
+    },
+    {
+      "file": "animal (14).wav",
+      "source_pack": "mixkit_animals",
+      "original": "23_Little_bird_calling_chirp.wav",
+      "original_rel": "mixkit_animals/23_Little_bird_calling_chirp.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 0.93,
+      "sha256": "414b5f19daeeb629ff2babe7661f5bcf1986ddace63e0abf4bba5a9d46aacb57"
+    },
+    {
+      "file": "animal (15).wav",
+      "source_pack": "mixkit_animals",
+      "original": "2462_Rooster_crowing_in_the_morning.wav",
+      "original_rel": "mixkit_animals/2462_Rooster_crowing_in_the_morning.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 2.59,
+      "sha256": "cf5c4ee9a573257ddb0d42f4f4ed87ab9af685755355341750464d544a3f616a"
+    },
+    {
+      "file": "animal (16).wav",
+      "source_pack": "mixkit_animals",
+      "original": "2485_Wolves_at_scary_forest.wav",
+      "original_rel": "mixkit_animals/2485_Wolves_at_scary_forest.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 9.18,
+      "sha256": "bfbec760b152aeed5b825d8eabc8943d8c074d80562a63ed8fb3fd6d9ada807b"
+    },
+    {
+      "file": "animal (17).wav",
+      "source_pack": "mixkit_animals",
+      "original": "2697_Fly_wings_movement.wav",
+      "original_rel": "mixkit_animals/2697_Fly_wings_movement.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 3.8,
+      "sha256": "309178b9df3ab4a11481c2a40ff70342990815ef036c07b213d9cd7034af0394"
+    },
+    {
+      "file": "animal (18).wav",
+      "source_pack": "mixkit_animals",
+      "original": "27_Tropical_bird_squeak.wav",
+      "original_rel": "mixkit_animals/27_Tropical_bird_squeak.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.0,
+      "sha256": "03cc6adf840c49fefcd493db3e011e07d0aa80abd78452ddca0cfef9cc5c8d1f"
+    },
+    {
+      "file": "animal (19).wav",
+      "source_pack": "mixkit_animals",
+      "original": "309_Angry_dragon_growl.wav",
+      "original_rel": "mixkit_animals/309_Angry_dragon_growl.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 3.81,
+      "sha256": "22ca2fe6543ad3bc6823b1631f6d0939f37a36de9194e72ad50160ac73189f2f"
+    },
+    {
+      "file": "animal (20).wav",
+      "source_pack": "mixkit_animals",
+      "original": "45_Domestic_cat_hungry_meow.wav",
+      "original_rel": "mixkit_animals/45_Domestic_cat_hungry_meow.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 0.64,
+      "sha256": "173a98497623e4d041cde0fb9498ae7d1556d839785a641338dcb3c96ceac0d4"
+    },
+    {
+      "file": "animal (21).wav",
+      "source_pack": "mixkit_animals",
+      "original": "51_Annoyed_big_dog_barking.wav",
+      "original_rel": "mixkit_animals/51_Annoyed_big_dog_barking.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 2.37,
+      "sha256": "acfd99611877f2bc84dd3304a7b285a7a7f510b31e72621604c5733017ba8264"
+    },
+    {
+      "file": "animal (22).wav",
+      "source_pack": "mixkit_animals",
+      "original": "54_Medium_size_angry_dog_bark.wav",
+      "original_rel": "mixkit_animals/54_Medium_size_angry_dog_bark.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.39,
+      "sha256": "9f24681cbcc75d143533ee750fd0d092f77064114aea8f4f46c483f56dfc7311"
+    },
+    {
+      "file": "animal (23).wav",
+      "source_pack": "mixkit_animals",
+      "original": "59_Giant_dog_aggressive_growl.wav",
+      "original_rel": "mixkit_animals/59_Giant_dog_aggressive_growl.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 5.35,
+      "sha256": "878bb0e964ceb61b5a82676752ec10e2e3ff2fa98987dc256b00493d1ae26abd"
+    },
+    {
+      "file": "animal (24).wav",
+      "source_pack": "mixkit_animals",
+      "original": "60_Horde_of_barking_dogs.wav",
+      "original_rel": "mixkit_animals/60_Horde_of_barking_dogs.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 9.95,
+      "sha256": "c33c4bd3142e5307b8f35f163bc9af8d7a7aaa1e6dad2efe0adc94591024241c"
+    },
+    {
+      "file": "animal (25).wav",
+      "source_pack": "mixkit_animals",
+      "original": "6_Wild_lion_animal_roar.wav",
+      "original_rel": "mixkit_animals/6_Wild_lion_animal_roar.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.03,
+      "sha256": "d963f0806cbfabdbe74fed3c2eb5bf90ed94b263ec83c047d83eb73b553ca308"
+    },
+    {
+      "file": "animal (26).wav",
+      "source_pack": "mixkit_animals",
+      "original": "76_Intense_horse_stallion_neigh.wav",
+      "original_rel": "mixkit_animals/76_Intense_horse_stallion_neigh.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.96,
+      "sha256": "e0c0717ac3d135c26036b5a4c2b42da88463b4daddb104d18d76391f5e49bcac"
+    },
+    {
+      "file": "animal (27).wav",
+      "source_pack": "mixkit_animals",
+      "original": "77_Horse_fast_gallop_in_the_dirt.wav",
+      "original_rel": "mixkit_animals/77_Horse_fast_gallop_in_the_dirt.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 12.57,
+      "sha256": "79e78c3ab1f9569b185f0b86b4b0e255f6437a5fb95da55e36b932672380249c"
+    },
+    {
+      "file": "animal (28).wav",
+      "source_pack": "mixkit_animals",
+      "original": "83_Horse_fast_gallop_on_a_concrete_surface.wav",
+      "original_rel": "mixkit_animals/83_Horse_fast_gallop_on_a_concrete_surface.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 12.72,
+      "sha256": "4905e8be40eb70380d4a1b0de66a0d599026eaff90041696fbe37c5cd6cf69c2"
+    },
+    {
+      "file": "animal (29).wav",
+      "source_pack": "mixkit_animals",
+      "original": "85_Scared_horse_neighing.wav",
+      "original_rel": "mixkit_animals/85_Scared_horse_neighing.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.81,
+      "sha256": "21ee5ce08128fbcc19b40415396159ea8f618031867a0b581bbbd3fe5f226453"
+    },
+    {
+      "file": "animal (30).wav",
+      "source_pack": "mixkit_animals",
+      "original": "86_Little_cat_attention_meow.wav",
+      "original_rel": "mixkit_animals/86_Little_cat_attention_meow.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 0.54,
+      "sha256": "1eb8e716d86d76062dd319d85a3c3ea756a587577140d84426e9bf601684886a"
+    },
+    {
+      "file": "animal (31).wav",
+      "source_pack": "mixkit_animals",
+      "original": "87_Little_cat_pain_meow.wav",
+      "original_rel": "mixkit_animals/87_Little_cat_pain_meow.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 0.7,
+      "sha256": "a1d0a04214181e5fc704b8702bb17e1938b062f6d25975302d1ff0202e8027b8"
+    },
+    {
+      "file": "animal (32).wav",
+      "source_pack": "mixkit_animals",
+      "original": "91_Cartoon_little_cat_meow.wav",
+      "original_rel": "mixkit_animals/91_Cartoon_little_cat_meow.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 1.09,
+      "sha256": "7528f21ce6cb72a0175e4229130640b02926038533e0cb325dd11ba6dd071036"
+    },
+    {
+      "file": "animal (33).wav",
+      "source_pack": "mixkit_animals",
+      "original": "92_Cartoon_kitty_begging_meow.wav",
+      "original_rel": "mixkit_animals/92_Cartoon_kitty_begging_meow.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 2.08,
+      "sha256": "8b495d4aff969c4e62516c65aa696783758c7bc054f8968f554d46abc0085536"
+    },
+    {
+      "file": "animal (34).wav",
+      "source_pack": "mixkit_animals",
+      "original": "93_Sweet_kitty_meow.wav",
+      "original_rel": "mixkit_animals/93_Sweet_kitty_meow.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 0.76,
+      "sha256": "cd7a909516b839c08668b1fe0cabf9136dcb7cec5bc5c0fda8e595f3e64ea1f0"
+    },
+    {
+      "file": "animal (35).wav",
+      "source_pack": "mixkit_animals",
+      "original": "96_Big_wild_cat_long_purr.wav",
+      "original_rel": "mixkit_animals/96_Big_wild_cat_long_purr.wav",
+      "license": "Mixkit License (personal/commercial free; do not redistribute the SFX as-is)",
+      "license_tier": "free",
+      "duration_s": 3.2,
+      "sha256": "a14fdca5afaf65c4dd594ac78ac95ddb9adbd13ac8f8d7dd7db87de4ae9a5d2f"
     }
   ]
 }
