@@ -254,11 +254,13 @@ if __name__ == "__main__":
     for m in manifest:
         merged[m["slug"]] = m
     final = [merged[s["slug"]] for s in STYLES if s["slug"] in merged]
-    json.dump({"styles": final}, open(os.path.join(OUTDIR, "styles_manifest.json"), "w"),
-              ensure_ascii=False, indent=2)
+    # 用 with：json.dump(..., open(...)) 这种写法既不关句柄、也没指定 encoding ——
+    # Windows 默认 GBK，遇到中文 style 名会 UnicodeEncodeError 或写出乱码。
+    with open(os.path.join(OUTDIR, "styles_manifest.json"), "w", encoding="utf-8") as f:
+        json.dump({"styles": final}, f, ensure_ascii=False, indent=2)
     # backward-compat: album_manifest.json keeps the Burbidge entries (old format)
     burb = next((m for m in final if m["slug"] == "burbidge"), None)
     if burb:
-        json.dump(burb["tracks"], open(os.path.join(OUTDIR, "album_manifest.json"), "w"),
-                  ensure_ascii=False, indent=2)
+        with open(os.path.join(OUTDIR, "album_manifest.json"), "w", encoding="utf-8") as f:
+            json.dump(burb["tracks"], f, ensure_ascii=False, indent=2)
     print(f"\nDone. {len(styles)} style(s) x {len(TRACKS)} tracks rendered to", OUTDIR)
