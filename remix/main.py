@@ -243,6 +243,94 @@ def _apply_delivery_spec(segment, fmt: str,
     }
 
 
+class MixValidationError(RuntimeError):
+    """导出前后的断言失败（空音频 / 静音 / 时长异常 / 文件不可读）。
+
+    这类产物历史上会「正常报成功」：`--bars -1` 曾产出 102 字节、0 帧的空 WAV
+    并打印「已保存至」。把断言放在导出**前**（内存对象）与导出**后**（落盘文件）
+    两处，才能堵住「参数没生效」被误当成「艺术选择」。
+    """
+
+
+def _positive_int(text: str) -> int:
+    """argparse 类型：必须是 >= 1 的整数。"""
+    try:
+        value = int(text)
+    except (TypeError, ValueError):
+        raise argparse.ArgumentTypeError(f"需要整数，收到 {text!r}") from None
+    if value < 1:
+        raise argparse.ArgumentTypeError(f"必须 >= 1，收到 {value}")
+    return value
+
+
+def _bpm_int(text: str) -> int:
+    """argparse 类型：BPM 必须是 20~400 的整数（0 会让 bar_ms 除零）。"""
+    try:
+        value = int(text)
+    except (TypeError, ValueError):
+        raise argparse.ArgumentTypeError(f"需要整数，收到 {text!r}") from None
+    if not 20 <= value <= 400:
+        raise argparse.ArgumentTypeError(f"BPM 需在 20~400，收到 {value}")
+    return value
+
+
+def _validate_mix(mix, bpm: int, bars: int) -> None:
+    """导出前断言：拒绝空 / 静音 / 时长异常的混音结果。
+
+    同时对 bpm/bars 做下界检查：CLI 已用 argparse 拦住非法值，但 GUI、提示词
+    桥接器、电台渲染器都是**编程调用** run_remix，绕过了 argparse。
+    """
+    if bars < 1:
+        raise MixValidationError(f"bars 非法：{bars}（必须 >= 1）")
+    if bpm <= 0:
+        raise MixValidationError(f"bpm 非法：{bpm}（必须 > 0）")
+    total_ms = len(mix)
+    frames = mix.frame_count() if hasattr(mix, "frame_count") else total_ms
+    if total_ms <= 0 or frames <= 0:
+        raise MixValidationError(
+            f"混音结果为空（{total_ms}ms / {frames} frames），已中止导出"
+            f"（bpm={bpm}，bars={bars}）"
+        )
+    peak = mix.max_dBFS
+    if peak is None or peak == float("-inf") or peak < -90.0:
+        raise MixValidationError(
+            f"混音结果静音（峰值 {peak} dBFS），已中止导出（bpm={bpm}，bars={bars}）"
+        )
+    expected_ms = bar_ms(bpm, bars)
+    # 容差：至少 1 小节的宽度，且不小于 2%（淡出/取整/结尾补齐都会带来小幅偏差）
+    tolerance = max(bar_ms(bpm), int(expected_ms * 0.02))
+    if expected_ms > 0 and abs(total_ms - expected_ms) > tolerance:
+        raise MixValidationError(
+            f"混音时长异常：实际 {total_ms}ms，期望 {expected_ms}ms"
+            f"（bpm={bpm}，bars={bars}，容差 {tolerance}ms），已中止导出"
+        )
+
+
+def _verify_exported(path: str, bpm: int, bars: int) -> None:
+    """导出后断言：文件必须存在、非空、可被读回且时长合理。
+
+    不能只信「export 没抛异常」—— 空 WAV（102 字节 / 0 帧）同样能写成功。
+    """
+    if not os.path.isfile(path):
+        raise MixValidationError(f"导出失败：文件不存在 {path}")
+    size = os.path.getsize(path)
+    if size < 512:  # 合法容器远大于此；曾观测到空 WAV 为 102 字节
+        try:
+            os.remove(path)
+        finally:
+            pass
+        raise MixValidationError(f"导出产物过小（{size} 字节），已删除：{path}")
+    probed = duration_ms(path)
+    expected_ms = bar_ms(bpm, bars)
+    if probed > 0 and expected_ms > 0:
+        tolerance = max(bar_ms(bpm), int(expected_ms * 0.02))
+        if abs(probed - expected_ms) > tolerance:
+            raise MixValidationError(
+                f"导出产物时长异常：回读 {probed}ms，期望 {expected_ms}ms"
+                f"（容差 {tolerance}ms），文件保留待查：{path}"
+            )
+
+
 def _manifest_duration_ms(meta: dict | None) -> int:
     """从 manifest 条目取时长（毫秒）；缺失/非法返回 0。
 
@@ -390,6 +478,18 @@ def _pick_random_tracks(
               + "、".join(f"{c} {n}" for c, n in dropped), file=sys.stderr)
 
     if not all_files:
+        # 区分两种「没有素材」：磁盘真的没有 vs 被 --release-safe 全剔除了。
+        # 混成一句会把用户引去检查素材目录，而真实原因是过滤（历史上误导过排查）。
+        if release_safe and dropped:
+            total = sum(n for _, n in dropped)
+            raise FileNotFoundError(
+                f"--release-safe 剔除了全部 {total} 条素材（"
+                + "、".join(f"{c} {n}" for c, n in dropped)
+                + f"），因此无可选音轨。原因是这些文件在 manifest 中缺少 "
+                f"license_tier，或其 tier 不属于 free/pack。\n"
+                f"素材目录本身有文件：{_MUSICKIT_ROOT}。"
+                f"若要使用它们，请补全 manifest 的 license_tier，或去掉 --release-safe。"
+            )
         raise FileNotFoundError(
             f"在 {_MUSICKIT_ROOT} 下未找到任何音频素材"
             f"（请确认 bass / drum / guita / cowbell / synth 目录中存在音频文件）。"
@@ -844,6 +944,8 @@ def run_remix(
 
     # 交付规格：无损 48k/24bit（默认），有损 48k/16bit + 上限码率
     mix, spec = _apply_delivery_spec(mix, fmt, sample_rate, bit_depth)
+    # 导出前后置断言：空/静音/时长异常一律中止，不产生「成功」的坏文件
+    _validate_mix(mix, bpm, bars)
     _bitrate = bitrate or LOSSY_BITRATE.get((fmt or "").lower())
     if out_dir is None:
         out_dir = os.path.join(_PROJECT_ROOT, "output")
@@ -851,6 +953,8 @@ def run_remix(
     output_path = make_unique_path(out_dir, "phonk_remix", "", fmt)
     AudioLoader.export(mix, output_path, fmt=fmt, bitrate=_bitrate,
                        codec=spec["codec"], parameters=spec["parameters"])
+    # 导出后断言：文件存在、非空、可回读且时长合理
+    _verify_exported(output_path, bpm, bars)
 
     print(f"[remix] 交付规格：{fmt.upper()} {spec['sample_rate']}Hz / {spec['bit_depth']}bit / "
           f"{spec['channels']}ch ≈ {spec['kbps']:.0f} kbps"
@@ -877,7 +981,7 @@ def main():
         help="命令行模式：从 bass/drum/guita 随机选音混音（phonk 风格）",
     )
     parser.add_argument(
-        "--count", type=int, default=3,
+        "--count", type=_positive_int, default=3,
         help="混音音轨数（默认 3：drum+bass+guita 最小骨架；典型 phonk 4~6）",
     )
     parser.add_argument(
@@ -885,11 +989,11 @@ def main():
         help="随机种子，固定可复现选择",
     )
     parser.add_argument(
-        "--bars", type=int, default=32,
+        "--bars", type=_positive_int, default=32,
         help="输出小节数（默认 32，约 55s@140BPM；>12 小节自动编排 intro→drop→outro 段落）",
     )
     parser.add_argument(
-        "--bpm", type=int, default=None,
+        "--bpm", type=_bpm_int, default=None,
         help="混音速度 BPM（默认随机 110~150）",
     )
     parser.add_argument(
@@ -953,6 +1057,11 @@ def main():
                                fmt=args.format, bars=args.bars, bpm=args.bpm,
                                structure=args.structure, release_safe=args.release_safe,
                                mixer_style=args.mixer_style)
+        except MixValidationError as _exc:
+            tasklog.append("stage_error", stage="remix", run_id=run_id, error=str(_exc)[:300])
+            tasklog.append("run_end", run_id=run_id, ok=False, errors=1)
+            print(f"[remix] 错误：{_exc}", file=sys.stderr)
+            raise SystemExit(2)
         except Exception as _exc:
             tasklog.append("stage_error", stage="remix", run_id=run_id, error=str(_exc)[:300])
             tasklog.append("run_end", run_id=run_id, ok=False, errors=1)

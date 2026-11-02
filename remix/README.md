@@ -178,6 +178,12 @@ python main.py --remix --release-safe
 - **交付规格校验**：导出后回读 codec / 采样率 / 位深 / 实测码率 / 体积写入 `delivery` 字段，
   只有 「码率>320kbps 且 采样率>44100Hz 且 体积<`--max-size-mb`(默认200) 且 时长在容差内」时
   `delivery_ok=true`；不满足则在 stdout 打 `DELIVERY=FAIL` 并列出原因。
+
+- **导出前后断言（2026-11-02 起）**：`run_remix` 在导出**前**校验内存混音结果
+  （非空 / 非静音 / 时长匹配 `bars × bar_ms`，容差 ≥1 小节），在导出**后**校验落盘文件
+  （存在 / ≥512 字节 / 可回读时长合理）。任一不满足即抛 `MixValidationError`，
+  CLI 打印中文错误并以 **exit 2** 退出，**不再产出「已保存至」的空文件**。
+  同时 `--count` / `--bars` / `--bpm` 在 argparse 层做下界校验（BPM 20~400）。
 - **环境**：`/Python314`（pydub + numpy + scipy + soundfile + audioop-lts），
   ffmpeg/ffprobe 按 `core/binfind.py` 的顺序解析（`remix/bin` 优先，其次系统 PATH）。
   实测单首耗时约 22s。
