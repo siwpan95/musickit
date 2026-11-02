@@ -353,42 +353,52 @@ def main() -> int:
         return 2
 
     demucs_out = args.demucs_out
-    if args.src:
-        if args.force:
-            todo = None
-        else:
-            todo = pending_tracks(args.src, args.root, args.source_tag)
-            if not todo:
-                print("✅ 该目录下所有曲目都已灌库，无需重做（--force 可强制重跑）")
-                return 0
-        work = tempfile.mkdtemp(prefix="stems_src_")
-        print(f"[1/2] 归一化输入 → {work}")
-        try:
-            wavs = transcode_inputs(args.src, work, only=todo)
-        except Exception as e:  # noqa: BLE001
-            print(f"❌ 输入预处理失败: {e}", file=sys.stderr)
+    created_tmp = []  # 仅记录我们新建的临时目录，绝不碰用户显式传入的 --demucs-out
+    try:
+        if args.src:
+            if args.force:
+                todo = None
+            else:
+                todo = pending_tracks(args.src, args.root, args.source_tag)
+                if not todo:
+                    print("✅ 该目录下所有曲目都已灌库，无需重做（--force 可强制重跑）")
+                    return 0
+            work = tempfile.mkdtemp(prefix="stems_src_")
+            created_tmp.append(work)
+            print(f"[1/2] 归一化输入 → {work}")
+            try:
+                wavs = transcode_inputs(args.src, work, only=todo)
+            except Exception as e:  # noqa: BLE001
+                print(f"❌ 输入预处理失败: {e}", file=sys.stderr)
+                return 2
+            demucs_out = tempfile.mkdtemp(prefix="demucs_")
+            created_tmp.append(demucs_out)
+            print(f"[2/2] 分离 → {demucs_out}")
+            rc = run_demucs(wavs, demucs_out, args.model, args.python, args.timeout)
+            if rc != 0:
+                print(f"❌ demucs 退出码 {rc}（已成功的曲目仍会被灌入）", file=sys.stderr)
+
+        stems = collect_stems(demucs_out, args.model)
+        if not stems:
+            print(f"❌ 在 {demucs_out} 下没找到任何 {{drums,bass,other,vocals}}.wav", file=sys.stderr)
             return 2
-        demucs_out = tempfile.mkdtemp(prefix="demucs_")
-        print(f"[2/2] 分离 → {demucs_out}")
-        rc = run_demucs(wavs, demucs_out, args.model, args.python, args.timeout)
-        if rc != 0:
-            print(f"❌ demucs 退出码 {rc}（已成功的曲目仍会被灌入）", file=sys.stderr)
 
-    stems = collect_stems(demucs_out, args.model)
-    if not stems:
-        print(f"❌ 在 {demucs_out} 下没找到任何 {{drums,bass,other,vocals}}.wav", file=sys.stderr)
-        return 2
+        print(f"发现 {len(stems)} 个 stem，目标根目录 {args.root}"
+              + ("（dry-run）" if args.dry_run else ""))
+        stats = ingest(stems, args.root, args.source_tag, args.license,
+                       args.license_tier, args.source_tag, args.dry_run)
 
-    print(f"发现 {len(stems)} 个 stem，目标根目录 {args.root}"
-          + ("（dry-run）" if args.dry_run else ""))
-    stats = ingest(stems, args.root, args.source_tag, args.license,
-                   args.license_tier, args.source_tag, args.dry_run)
-
-    print("\n汇总：新增 {insert} / 更新 {update} / 跳过(内容相同) {skip_same} / "
-          "缺池 {missing_pool} / 空文件 {empty}".format(**stats))
-    if args.dry_run:
-        print("（dry-run：未写入任何文件或 manifest）")
-    return 0
+        print("\n汇总：新增 {insert} / 更新 {update} / 跳过(内容相同) {skip_same} / "
+              "缺池 {missing_pool} / 空文件 {empty}".format(**stats))
+        if args.dry_run:
+            print("（dry-run：未写入任何文件或 manifest）")
+        return 0
+    finally:
+        # mkdtemp 不会自动回收；每次灌库都留下 GB 级临时 WAV（20 首 stem 流程约 25 分钟），
+        # 不清理会慢慢吃满磁盘。只删我们新建的，用户传入的 --demucs-out 原样保留。
+        for d in created_tmp:
+            if os.path.isdir(d):
+                shutil.rmtree(d, ignore_errors=True)
 
 
 if __name__ == "__main__":

@@ -3,8 +3,8 @@
 r"""重算 manifest sha256 戳（只读源文件，--apply 时备份后改写 manifest）。
 
 背景：2026-08-18 校验发现 84%（1,563/1,869）的 manifest sha256 与实际内容不符
-（入库脚本当年盖错戳）。原则：元数据必须来自内容——本工具按 (subcategory, 文件名)
-定位文件、全量哈希后重写 sha256 字段。
+（入库脚本当年盖错戳）。原则：元数据必须来自内容——本工具按「池根/文件名」
+定位文件（subcategory 仅作分类字段，不是目录）、全量哈希后重写 sha256 字段。
 
 用法：
   python refresh_manifest_hashes.py --root <MUSICKIT_ROOT>            # dry-run（仅统计）
@@ -28,6 +28,44 @@ def full_sha(path: str) -> str:
         for chunk in iter(lambda: f.read(1024 * 1024), b""):
             h.update(chunk)
     return h.hexdigest()
+
+
+def detect_indent(path: str) -> int:
+    """探测原文件的缩进宽度 —— 写回时必须保持一致。
+
+    为什么：manifest 是入库索引，diff 要能一眼看出"只改了哪些条目"。
+    缩进一变，几千行就全变成"改了"，review 与 bisect 都废了。
+    """
+    try:
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                if line.startswith(" "):
+                    return max(1, len(line) - len(line.lstrip(" ")))
+    except OSError:
+        pass
+    return 2
+
+
+def save_manifest(path: str, data: dict) -> None:
+    """按原格式原子写回：保留缩进、强制 LF、保留末尾换行。
+
+    两个曾经踩过的坑：
+    ① `open(path, "w")` 在 Windows 下默认写 CRLF，会把整份 manifest 改成 CRLF，
+       diff 从「改了 5 条」变成「全文件都变了」；
+    ② 先 truncate 再写不是原子的，并发读会读到半截 JSON。
+    """
+    indent = detect_indent(path)
+    raw = b""
+    if os.path.isfile(path):
+        with open(path, "rb") as f:
+            raw = f.read()
+    trailing_nl = raw.endswith(b"\n")
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(data, f, ensure_ascii=False, indent=indent)
+        if trailing_nl:
+            f.write("\n")
+    os.replace(tmp, path)
 
 
 def main():
@@ -54,12 +92,15 @@ def main():
             if not args.all and not e.get("sha256"):
                 continue
             total += 1
-            sub = e.get("subcategory") or "(root)"
-            if sub == "(root)":
-                path = os.path.join(args.root, pool, e["file"])
-            else:
-                path = os.path.join(args.root, pool, sub, e["file"])
-            if not os.path.isfile(path):
+            # 文件按约定平铺在池根（靠 subcategory 字段分类，不在子目录里）。
+            # 优先用平铺路径，找不到再退到「池/subcategory/文件」以兼容可能的旧布局。
+            base = os.path.join(args.root, pool)
+            sub = e.get("subcategory")
+            candidates = [os.path.join(base, e["file"])]
+            if sub:
+                candidates.append(os.path.join(base, sub, e["file"]))
+            path = next((c for c in candidates if os.path.isfile(c)), None)
+            if path is None:
                 missing_files += 1
                 continue
             actual = full_sha(path)
@@ -73,8 +114,7 @@ def main():
                                       "manifest_backup_hashes_20260818")
             os.makedirs(backup_dir, exist_ok=True)
             shutil.copy2(mp, os.path.join(backup_dir, f"{pool}_manifest.json"))
-            with open(mp, "w", encoding="utf-8") as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
+            save_manifest(mp, data)
 
     print(f"处理条目 {total}；需修正 sha256：{updated}；文件缺失：{missing_files}")
     for pool in POOLS:

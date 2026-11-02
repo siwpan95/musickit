@@ -282,17 +282,20 @@ PYTHON=/path/to/python bash scripts/ci_smoke.sh
 
 ```
 == 文档数字一致性 ==
-真实收集数：total=318  remix=260  music=58  smoke=196  smoke_music=36
+真实收集数：total=343  remix=285  music=58  smoke=221  smoke_music=36
 ✅ 文档数字与真实一致
 
+== 编码门禁（文本模式 open 需显式 encoding） ==
+✅ 文本模式 open() 均已显式指定 encoding（扫了 109 个 .py）
+
 == pytest -m smoke ==
-196 passed, 122 deselected in 3.92s
+221 passed, 122 deselected in 3.92s
 
 ✅ 冒烟检查通过
 ```
 
 > `pytest` 的 Tk 用例（`test_progress_reporter`）会**偶发** skip —— 本机 `tcl/tcl8.6/init.tcl`
-> 明明在，初始化却偶尔失败。所以你看到的 `passed` 可能比上面少一条（195 而不是 196），
+> 明明在，初始化却偶尔失败。所以你看到的 `passed` 可能比上面少一条（220 而不是 221），
 > **这是环境抖动不是故障**：门禁按**收集数**核对，不看 passed。
 
 > **冒烟档（`-m smoke`）不碰 ffmpeg 编解码、不依赖真实素材**，秒级跑完。
@@ -304,7 +307,7 @@ PYTHON=/path/to/python bash scripts/ci_smoke.sh
 python -m pytest remix/tests music/tests -q
 ```
 
-实测：**318 用例**（收集数；偶发的 Tk 用例会 skip，所以 `passed` 可能少一条 —— 门禁按**收集数**核对）。
+实测：**343 用例**（收集数；偶发的 Tk 用例会 skip，所以 `passed` 可能少一条 —— 门禁按**收集数**核对）。
 
 ---
 
@@ -755,11 +758,20 @@ python -m pytest remix/tests music/tests -q
 
 # 3) 文档数字一致性门禁
 python scripts/check_doc_counts.py
+
+# 4) 编码门禁（文本模式 open 必须显式 encoding）
+python scripts/check_encoding.py
 ```
 
-**关于第 3 条**：仓库文档里写死的测试数字（如「**318 用例**」）由
+**关于第 3 条**：仓库文档里写死的测试数字（如「**343 用例**」）由
 `scripts/check_doc_counts.py` 做机械校验 —— 加了用例却忘了改文档会被它拦下。
 `--fix` 可自动改正这两类数字。
+
+**关于第 4 条**：Windows 上 `open()` 默认用 locale 编码（中文系统是 GBK），
+写中文内容（中文路径 / 素材标题 / ID3 注释 / manifest 里的中文 license 文本）
+会写出乱码或直接 `UnicodeEncodeError`。这类 bug 在 UTF-8 locale 的开发机上不复现，
+所以由 `scripts/check_encoding.py` 做机械门禁：文本模式的 `open()` 缺 `encoding=`
+就报错退出。**二进制模式不要加 `encoding=`**（那样本身就是非法用法）。
 
 ```bash
 python scripts/check_doc_counts.py --fix
@@ -796,7 +808,7 @@ git ls-remote origin master     # 确认远端 SHA 与本地一致
 | 3 | **`archived/` 只进不出** | 垃圾桶/归档区：移动而非删除，不参与混音 |
 | 4 | **文档数字必须与代码一致** | 由 `check_doc_counts.py` 门禁，不靠人记 |
 | 5 | **生成物不提交** | `remix/output/`、`burbidge_album/album/`、`_stretch_cache/`、`TEST_REPORT.md` 均已排除 |
-| 6 | **中文编码显式声明** | 脚本首行 `# -*- coding: utf-8 -*-`；读写中文文件用 `encoding="utf-8"` |
+| 6 | **中文编码显式声明** | 脚本首行 `# -*- coding: utf-8 -*-`；读写中文文件用 `encoding="utf-8"`；由 `check_encoding.py` 门禁 |
 | 7 | **文件名用 ASCII** | 避免 `新建文本文档.py` 这类中文文件名（本仓已因此踩坑并重命名） |
 | 8 | **失败要说人话** | 错误信息要带**具体路径与操作建议**，不要抛裸 `[WinError 2]` |
 | 9 | **合并前先同步** | `git fetch origin` 后确认无分叉再动手 |
@@ -841,7 +853,7 @@ pip install -r requirements.txt                          # 或 requirements.lock
 # —— 验证 ——
 python remix/tools/doctor.py                             # 环境 + 素材自检
 bash scripts/ci_smoke.sh                                 # 自检 + 冒烟
-python -m pytest remix/tests music/tests -q              # 全量（318 条）
+python -m pytest remix/tests music/tests -q              # 全量（343 条）
 
 # —— 素材 ——
 python remix/tools/fetch_freepd.py --out D:/tmp/src --limit 4
@@ -858,6 +870,7 @@ python radio/run.py                                      # 网络电台
 # —— 贡献 ——
 git checkout -b feature/xxx
 bash scripts/ci_smoke.sh && python scripts/check_doc_counts.py
+python scripts/check_encoding.py
 git commit -m "feat(remix): xxx" && git push origin feature/xxx
 ```
 

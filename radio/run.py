@@ -208,7 +208,7 @@ def start_tunnel(port, mode="quick"):
                  "-o", "ServerAliveCountMax=3",
                  "-R", f"80:localhost:{port}", "nokey@localhost.run"],
                 stdin=subprocess.DEVNULL,
-                stdout=open(log_file, "w"), stderr=subprocess.STDOUT,
+                stdout=open(log_file, "w", encoding="utf-8"), stderr=subprocess.STDOUT,
             )
 
         def _watch_lhr():
@@ -285,7 +285,7 @@ def start_tunnel(port, mode="quick"):
                 cmd += ["--url", domain]
             return subprocess.Popen(
                 cmd,
-                stdout=open(log_file, "w"), stderr=subprocess.STDOUT,
+                stdout=open(log_file, "w", encoding="utf-8"), stderr=subprocess.STDOUT,
             )
 
         def _watch_ngrok():
@@ -352,7 +352,7 @@ def start_tunnel(port, mode="quick"):
     def _spawn_cf():
         return subprocess.Popen(
             [bin_, "tunnel", "--url", f"http://localhost:{port}", "--no-autoupdate"],
-            stdout=open(log_file, "w"), stderr=subprocess.STDOUT,
+            stdout=open(log_file, "w", encoding="utf-8"), stderr=subprocess.STDOUT,
         )
 
     def _watch_cf():

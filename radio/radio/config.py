@@ -1,5 +1,6 @@
 """电台全局配置 —— 改这里就能定制你的电台。"""
 import os
+import shutil
 
 # 项目根目录（run.py 所在目录）
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -50,12 +51,18 @@ FFMPEG_DIR = os.path.join(BASE_DIR, "ffmpeg")
 
 
 def _bundled_bin(name):
-    """返回项目自带二进制的绝对路径；不存在则回退为裸名字（走 PATH）。"""
+    """返回项目自带或 PATH 中二进制的**绝对路径**；都找不到返回 None。
+
+    为什么不用裸名：Windows 的 CreateProcess 搜索顺序里**当前目录优先于 System32**，
+    若进程启动时的 cwd 里放一个同名 exe 就能劫持这次调用（expose.sh 会 cd 到 radio/
+    再启动服务，cwd 可控）。所以任何传给 subprocess 的可执行文件都必须是绝对路径。
+    """
     for fn in (name + ".exe", name):
         p = os.path.join(FFMPEG_DIR, fn)
         if os.path.isfile(p):
-            return p
-    return name
+            return os.path.abspath(p)
+    # shutil.which 返回绝对路径或 None（不会返回裸名）
+    return shutil.which(name)
 
 
 FFMPEG = _bundled_bin("ffmpeg")

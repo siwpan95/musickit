@@ -11,6 +11,7 @@
 """
 import os
 import subprocess
+import shutil
 import threading
 import time
 
@@ -42,8 +43,8 @@ _started_at = 0.0
 
 
 def _ffmpeg_bin():
-    """定位 ffmpeg：统一走 config.FFMPEG（与 transcoder 一致，默认 "ffmpeg" 取 PATH）。"""
-    return getattr(config, "FFMPEG", "ffmpeg")
+    """定位 ffmpeg：统一走 config.FFMPEG（与 transcoder 一致，绝对路径；找不到为 None）。"""
+    return getattr(config, "FFMPEG", None)
 
 
 def variants():
@@ -132,6 +133,8 @@ def reap_orphans():
     误杀到转码用的 ffmpeg。末尾带路径分隔符，防止误伤 hls_ffmpeg.log 之类的同前缀路径。
     """
     needle = HLS_DIR.rstrip("\\/") + os.sep
+    # 收尸命令也必须走绝对路径 + 显式 cwd，避免被 cwd 里的同名 exe 劫持
+    safe_cwd = _PROJECT_ROOT
     try:
         if os.name == "nt":
             # PowerShell 单引号字符串里反斜杠是字面量，-like 只认 * 和 ?，直接拼路径即可
@@ -140,12 +143,18 @@ def reap_orphans():
                 "Where-Object { $_.CommandLine -like '*" + needle.replace("'", "''") + "*' } | "
                 "ForEach-Object { Stop-Process -Id $_.ProcessId -Force }"
             )
+            pwsh = shutil.which("powershell") or shutil.which("pwsh")
+            if pwsh is None:
+                return
             subprocess.run(
-                ["powershell", "-NoProfile", "-NonInteractive", "-Command", ps],
-                capture_output=True, timeout=20,
+                [pwsh, "-NoProfile", "-NonInteractive", "-Command", ps],
+                capture_output=True, timeout=20, cwd=safe_cwd,
             )
         else:
-            subprocess.run(["pkill", "-f", needle], capture_output=True, timeout=10)
+            pkill = shutil.which("pkill")
+            if pkill is None:
+                return
+            subprocess.run([pkill, "-f", needle], capture_output=True, timeout=10, cwd=safe_cwd)
     except Exception:
         pass
 
@@ -168,6 +177,11 @@ def _runner():
     global _proc, _restarts, _last_error, _started_at
     while not _stop:
         errf = None
+        if _ffmpeg_bin() is None:
+            _last_error = ("找不到 ffmpeg：请把 ffmpeg.exe 放到 %s/ffmpeg/ 或安装到 PATH"
+                           % config.FFMPEG_DIR)
+            time.sleep(5)
+            continue
         try:
             os.makedirs(HLS_DIR, exist_ok=True)
             # 清理旧切片，避免重启后残留段污染 playlist

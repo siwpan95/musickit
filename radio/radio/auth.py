@@ -101,7 +101,7 @@ def is_configured() -> bool:
 def _read_password():
     """读取密码哈希文件，返回 (hash, salt) 或 (None, None)。"""
     try:
-        with open(_PASSWD_PATH, "r") as f:
+        with open(_PASSWD_PATH, "r", encoding="utf-8") as f:
             h, s = f.read().strip().split(":", 1)
         return h, s
     except Exception:
@@ -120,7 +120,7 @@ def set_password(password: str):
     """设置/修改密码（原子写）。"""
     h, s = _hash_password(password)
     tmp = _PASSWD_PATH + ".tmp"
-    with open(tmp, "w") as f:
+    with open(tmp, "w", encoding="utf-8") as f:
         f.write(f"{h}:{s}")
     os.replace(tmp, _PASSWD_PATH)
 

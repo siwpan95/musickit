@@ -9,6 +9,7 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import sys
 from datetime import datetime
 
@@ -39,6 +40,15 @@ SILENCE_THRESH = -45.0
 TARGET_PEAK = -3.0
 MAX_MS = 16000
 MIN_MS = 100
+
+
+def _sha256_file(path: str) -> str:
+    """文件字节的 sha256 —— 与 ingest_stems / fetch_iowa_mis / verify_manifest_hashes 同口径。"""
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
 
 
 def _to_wav(src: str, tmpdir: str) -> str:
@@ -119,28 +129,39 @@ def main():
             if not name.lower().endswith((".wav", ".mp3")):
                 continue
             try:
+                # 临时目录要活到"导出并算哈希"之后，所以整个处理过程都在 with 里 ——
+                # 原先 with 只包住转码那两行，`_td` 立刻就被删了。
                 with tempfile.TemporaryDirectory(prefix="mixkit_") as _td:
                     _wav = _to_wav(os.path.join(src_dir, name), _td)
                     seg = AudioSegment.from_file(_wav)
-                seg = seg.set_channels(2).set_frame_rate(44100).set_sample_width(2)
-                if not (MIN_MS <= len(seg) <= MAX_MS):
-                    continue
-                lead = detect_leading_silence(seg, silence_threshold=SILENCE_THRESH, chunk_size=10)
-                seg = seg[lead:]
-                rev = seg.reverse()
-                trail = detect_leading_silence(rev, silence_threshold=SILENCE_THRESH, chunk_size=10)
-                seg = seg[:len(seg) - trail]
-                if len(seg) < MIN_MS or seg.dBFS < SILENCE_THRESH:
-                    continue
-                seg = seg.apply_gain(TARGET_PEAK - seg.max_dBFS)
-                h = hashlib.sha256(seg.raw_data).hexdigest()
-                if h in seen:
-                    dup += 1
-                    continue
-                seen.add(h)
-                out_name = f"{cfg['prefix']} ({num}).wav"
-                if not args.dry_run:
-                    seg.export(os.path.join(cfg["dir"], out_name), format="wav")
+                    seg = seg.set_channels(2).set_frame_rate(44100).set_sample_width(2)
+                    if not (MIN_MS <= len(seg) <= MAX_MS):
+                        continue
+                    lead = detect_leading_silence(seg, silence_threshold=SILENCE_THRESH, chunk_size=10)
+                    seg = seg[lead:]
+                    rev = seg.reverse()
+                    trail = detect_leading_silence(rev, silence_threshold=SILENCE_THRESH, chunk_size=10)
+                    seg = seg[:len(seg) - trail]
+                    if len(seg) < MIN_MS or seg.dBFS < SILENCE_THRESH:
+                        continue
+                    seg = seg.apply_gain(TARGET_PEAK - seg.max_dBFS)
+
+                    # 导出到临时文件再算哈希 —— 哈希必须是**文件字节**的哈希。
+                    # 为什么：仓库里其它入库脚本（ingest_stems / fetch_iowa_mis）和权威校验器
+                    # （verify_manifest_hashes.py、doctor.py --hash）统一用文件字节口径。
+                    # 这里原来算的是 seg.raw_data（内存 PCM）的哈希，于是 mixkit 来源的素材
+                    # 在 doctor --hash 里**全部**报不符（实测 sfx 227/240、animal 35/35 全红），
+                    # 真正被改坏的文件反而淹没在噪声里。
+                    _tmp_out = os.path.join(_td, "out.wav")
+                    seg.export(_tmp_out, format="wav")
+                    h = _sha256_file(_tmp_out)
+                    if h in seen:
+                        dup += 1
+                        continue
+                    seen.add(h)
+                    out_name = f"{cfg['prefix']} ({num}).wav"
+                    if not args.dry_run:
+                        shutil.move(_tmp_out, os.path.join(cfg["dir"], out_name))
                 manifest["entries"].append({
                     "file": out_name,
                     "source_pack": sub,

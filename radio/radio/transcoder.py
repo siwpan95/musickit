@@ -11,12 +11,18 @@ from . import config
 
 def ffmpeg_available():
     """ffmpeg 与 ffprobe 是否都可用。"""
+    if not config.FFMPEG or not config.FFPROBE:
+        return False
     from shutil import which
     return bool(which(config.FFMPEG)) and bool(which(config.FFPROBE))
 
 
 def transcode(url, bitrate, low_latency=True):
     """生成器：把 url（远程 http(s) 或本地文件）转码为固定码率 MP3 并逐块产出。"""
+    if not config.FFMPEG:
+        raise RuntimeError(
+            "找不到 ffmpeg：请把 ffmpeg.exe 放到 %s/ffmpeg/ 或安装到 PATH"
+            % config.FFMPEG_DIR)
     cmd = [config.FFMPEG, "-hide_banner", "-loglevel", "error"]
     if low_latency:
         cmd += ["-fflags", "nobuffer", "-flags", "low_delay", "-avioflags", "direct"]
@@ -45,6 +51,10 @@ def transcode(url, bitrate, low_latency=True):
 def transcode_fade(url, bitrate, dur, fade=2.0):
     """E2：转码 + 开头淡入 + 末尾淡出（afade 滤镜）。
     dur=时长秒（None 则只淡入）；fade=淡入淡出秒数。供 broadcaster CROSSFADE 模式用。"""
+    if not config.FFMPEG:
+        raise RuntimeError(
+            "找不到 ffmpeg：请把 ffmpeg.exe 放到 %s/ffmpeg/ 或安装到 PATH"
+            % config.FFMPEG_DIR)
     af = f"afade=in:0:d={fade}"
     if dur and dur > fade * 2:
         af += f",afade=out:st={dur - fade}:d={fade}"

@@ -193,8 +193,8 @@ usage: main.py [-h] [--remix] [--count COUNT] [--seed SEED] [--bars BARS] [--bpm
 - 输出文件名同秒冲突自动递增（`_1/_2`），不会覆盖旧产物；
 - `MUSICKIT_ROOT` 环境变量可覆盖素材根目录。
 
-测试：`python -m pytest remix/tests music/tests -q`（**318 用例**，2026-11-02 实测；引擎侧 260 /
-桥接器侧 58）；快速档 `python -m pytest remix/tests music/tests -q -m smoke`（**196 个纯逻辑用例**，
+测试：`python -m pytest remix/tests music/tests -q`（**343 用例**，2026-11-02 实测；引擎侧 285 /
+桥接器侧 58）；快速档 `python -m pytest remix/tests music/tests -q -m smoke`（**221 个纯逻辑用例**，
 无 ffmpeg 编解码、无真实素材依赖）。一行走完自检 + 冒烟：`bash scripts/ci_smoke.sh`。
 Python 3.13+ 需 `audioop-lts`；混音师风格链需 `scipy` + `soundfile`（均已在 requirements.txt）。
 ffmpeg / ffprobe 需自备（`remix/bin/` 或系统 PATH，解析见 `remix/core/binfind.py`）。
@@ -210,6 +210,12 @@ bash scripts/ci_smoke.sh            # 自检 + 冒烟测试（CI 只需调这一
 PYTHON=/e/Python314/python.exe bash scripts/ci_smoke.sh   # 指定解释器
 FULL=1 bash scripts/ci_smoke.sh     # 附带全量单测
 ```
+
+`ci_smoke.sh` 依次跑：环境自检 → 文档数字一致性 → **编码门禁** → 冒烟测试。
+其中编码门禁要求 `remix/`、`music/` 与 `radio/` 下**文本模式**的 `open()` 必须显式写
+`encoding="utf-8"` —— Windows 上 `open()` 默认用 locale 编码（中文系统是 GBK），
+写中文内容（中文路径 / 素材标题 / ID3 注释 / manifest 里的中文 license 文本）
+会写出乱码或直接 `UnicodeEncodeError`。二进制模式**不要**加 `encoding=`。
 
 `doctor.py` 会打印每个素材池的「manifest 条目数 / 磁盘文件数 / 缺失数」——
 干净克隆下 13 个池全为 0（素材被 .gitignore 排除，属预期），此时退出码为 1（告警而非失败）。

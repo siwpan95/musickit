@@ -163,7 +163,7 @@ def test_make_unique_path_no_collision(tmp_path):
     from utils import make_unique_path
 
     p1 = make_unique_path(str(tmp_path), "phonk_remix", "", "wav")
-    open(p1, "w").close()
+    open(p1, "w", encoding="utf-8").close()
     p2 = make_unique_path(str(tmp_path), "phonk_remix", "", "wav")
     assert p2 != p1
     assert not os.path.exists(p2)

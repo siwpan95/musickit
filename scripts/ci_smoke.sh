@@ -80,6 +80,14 @@ echo
 echo "== 文档数字一致性 =="
 "$PY" scripts/check_doc_counts.py || exit 1
 
+# ---- 1.6) 文本模式 open() 必须显式写 encoding ----
+# Windows 上 open() 默认用 locale 编码（中文系统是 GBK），写中文内容（路径/标题/
+# ID3 注释/manifest 里的中文 license）会写出乱码或直接 UnicodeEncodeError。
+# 开发机（UTF-8 locale）不复现，所以必须靠机械门禁兜住，而不是靠人记得写。
+echo
+echo "== 编码门禁（文本模式 open 需显式 encoding） =="
+"$PY" scripts/check_encoding.py || exit 1
+
 # ---- 2) 冒烟测试（纯逻辑，不需素材/编解码）----
 # 覆盖两侧：remix/tests（混音引擎）+ music/tests（提示词桥接：scale / scene / elements / fusion）。
 # 某些机器装了会炸的 pytest 第三方插件（如 hydra → antlr4 → typing.io），
