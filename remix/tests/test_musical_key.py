@@ -147,3 +147,74 @@ class TestPreferOrdering:
             ["far.wav"], "guita", self._entries(), mk.parse_target("Cm"))
         assert compat == []
         assert rest == ["far.wav"]
+
+
+class TestRankPitch:
+    """单音素材只知音级、不知调式时的兼容度。
+
+    真实现场：`Piano.ff.B5` 用 chroma 判成了 C#m（conf 0.38 / margin 0.05），
+    高音区泛音把音级带偏；而文件名写着 B。所以单音走「只看音级」这条路。
+    """
+
+    def test_same_pitch_class_is_best(self):
+        assert mk.rank_pitch(11, mk.parse_target("Bm")) == mk.RANK_SAME
+        assert mk.rank_pitch(0, mk.parse_target("C major")) == mk.RANK_SAME
+
+    def test_fifth_and_fourth(self):
+        # B 相对 E：E(4)+7 = 11 → 纯五
+        assert mk.rank_pitch(11, mk.parse_target("E")) == mk.RANK_FIFTH
+        assert mk.rank_pitch(4, mk.parse_target("B")) == mk.RANK_FIFTH
+
+    def test_other_pitches_are_usable_not_incompatible(self):
+        """单个音能当经过音/延伸音，不该判成不兼容（否则误杀可用素材）。"""
+        r = mk.rank_pitch(2, mk.parse_target("Bm"))
+        assert r == mk.RANK_PARALLEL
+        assert r != mk.RANK_INCOMPATIBLE
+
+    def test_unknown_target_falls_back_to_fifth(self):
+        assert mk.rank_pitch(11, None) == mk.RANK_FIFTH
+        # 目标只有调式、没有主音 → 没法比音级
+        assert mk.rank_pitch(11, (None, "minor")) == mk.RANK_FIFTH
+
+    def test_none_pitch(self):
+        assert mk.rank_pitch(None, mk.parse_target("C")) == mk.RANK_FIFTH
+
+
+class TestPitchOnlyEntriesAreUsed:
+    """带 key_pitch_only 的条目必须真正参与选音，不能被当成「未知」。"""
+
+    def _entries(self):
+        return {"keys": {
+            "b.wav":  {"key": "B",  "key_pitch_only": True, "key_confidence": 1.0},
+            "e.wav":  {"key": "E",  "key_pitch_only": True, "key_confidence": 1.0},
+            "c.wav":  {"key": "C",  "key_pitch_only": True, "key_confidence": 1.0},
+        }}
+
+    def test_pitch_only_material_enters_compat_subset(self):
+        import main as mk_main
+
+        compat, rest, stats = mk_main._prefer_key_compatible(
+            ["b.wav", "e.wav", "c.wav"], "keys", self._entries(), mk.parse_target("Bm"))
+        # B 同音级、E 纯五度 → 进兼容子集；C 落在「可用不优先」
+        assert "b.wav" in compat and "e.wav" in compat
+        assert "c.wav" in rest
+        assert stats["pitch_only"] == 3, "三条都应被识别为「仅音级」而非未知"
+        assert stats["unknown"] == 0
+
+    def test_pitch_only_wins_over_stale_scale(self):
+        """key_pitch_only 必须优先于 scale —— 否则会拼出没人测过的调式。
+
+        真实现场：`Piano.ff.B5` 文件名是 B，detect_keys 却按 chroma 写成 C#m；
+        刷新元数据后条目变成 key=B + scale=minor + key_pitch_only=True，
+        若读取侧先看 scale，就会被当成"B 小调"。
+        """
+        import main as mk_main
+
+        entries = {"keys": {"x.wav": {"key": "B", "scale": "minor",
+                                      "key_pitch_only": True, "key_confidence": 1.0}}}
+        compat, rest, stats = mk_main._prefer_key_compatible(
+            ["x.wav"], "keys", entries, mk.parse_target("B"))
+
+        assert "x.wav" in compat, "应走音级判定（同音级＝最合），而不是被 scale 带到别处"
+        assert stats["pitch_only"] == 1
+        assert stats["same"] == 1

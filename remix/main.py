@@ -365,7 +365,8 @@ def _prefer_key_compatible(
     **不看列表顺序** —— 只重排等于没做（实测同种子下 --key C 与 --key F# 选出一模一样的曲子）。
     也不能硬过滤：池子小的时候会直接选不出音。故「有兼容子集就用子集，没有就退回全部」。
     """
-    stats = {"same": 0, "relative": 0, "fifth": 0, "parallel": 0, "incompat": 0, "unknown": 0}
+    stats = {"same": 0, "relative": 0, "fifth": 0, "parallel": 0, "incompat": 0,
+             "unknown": 0, "pitch_only": 0}
     if not target or not files:
         return [], list(files), stats
 
@@ -375,23 +376,30 @@ def _prefer_key_compatible(
         e = pool.get(os.path.basename(path)) or {}
         key_name, scale = e.get("key"), e.get("scale")
         conf = float(e.get("key_confidence") or 0.0)
-        cand = None
         pc = musical_key.to_pc(key_name)
-        if pc is not None and scale in ("major", "minor") and conf >= 0.05:
-            cand = (pc, scale)
-        if cand is None:
+        rank_val: int | None = None
+        if pc is not None and conf >= 0.05:
+            # key_pitch_only 优先于 scale：它表示"音级确定、调式不适用"。
+            # 反过来（先看 scale）会把两者混成假信息 —— 实测 Piano.ff.B5 被 chroma
+            # 判成 C#m 写了 scale=minor，而文件名给出的音级是 B，
+            # 于是条目变成"B 音级 + 小调"这种谁也没测出来的调式。
+            if e.get("key_pitch_only"):
+                rank_val = musical_key.rank_pitch(pc, target)
+                stats["pitch_only"] += 1
+            elif scale in ("major", "minor"):
+                rank_val = musical_key.rank(target, (pc, scale))
+        if rank_val is None:
             stats["unknown"] += 1
             # 未知排在「已知五度关系」之后：它可能合也可能不合，不该挤掉确定可用的
             scored.append((musical_key.RANK_PARALLEL, i, path))
             continue
-        r = musical_key.rank(target, cand)
         for name, val in (("same", musical_key.RANK_SAME), ("relative", musical_key.RANK_RELATIVE),
                           ("fifth", musical_key.RANK_FIFTH), ("parallel", musical_key.RANK_PARALLEL),
                           ("incompat", musical_key.RANK_INCOMPATIBLE)):
-            if r == val:
+            if rank_val == val:
                 stats[name] += 1
                 break
-        scored.append((r, i, path))
+        scored.append((rank_val, i, path))
 
     scored.sort(key=lambda t: (t[0], t[1]))
     # 兼容子集：同调 / 关系调 / 五度关系（rank <= RANK_FIFTH）
