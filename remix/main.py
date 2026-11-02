@@ -140,6 +140,8 @@ _RANDOM_POOLS = ["bass", "drum", "guita", "cowbell", "synth", "animal", "sfx"]
 _SKELETON_CATS = {"drum", "bass", "guita"}
 
 # --release-safe 允许的授权层级：free/pack 可用于对外发布；restricted/unknown 仅个人使用。
+# 【已废弃 2026-11-02】原 --release-safe 的放行层级。素材均为公共领域，
+# 该过滤已移除；常量保留供历史脚本/文档引用，不再参与任何判定。
 _RELEASE_SAFE_TIERS = {"free", "pack"}
 
 
@@ -378,26 +380,22 @@ def _load_pool_manifests(root: str) -> dict[str, dict[str, dict]]:
 
 def _filter_release_safe(
     files: list[str],
-    cat: str,
-    entries: dict[str, dict[str, dict]],
-    dropped: list[tuple[str, int]],
+    cat: str,  # noqa: ARG001 —— 保留签名以兼容旧调用方
+    entries: dict[str, dict[str, dict]],  # noqa: ARG001
+    dropped: list[tuple[str, int]],  # noqa: ARG001
 ) -> list[str]:
-    """--release-safe 过滤：只保留 license_tier 为 free/pack 的素材。
+    """【已废弃 2026-11-02】原 `--release-safe` 的 tier 过滤，现为恒等函数。
 
-    manifest 无记录或 tier 缺失/unknown/restricted 的文件一律剔除，
-    剔除数量追加到 dropped（[(类别, 剔除数)]）。
+    废弃原因：本项目素材均为**公共领域（Public Domain）**，不存在需要隔离的
+    版权素材；而 manifest 的 `license_tier` 本身严重失真（30,259 条中 64.7%
+    是 unknown、仅 3.6% 标 restricted），据此过滤只会无谓地砍掉 68.3% 的可用
+    素材，且该过滤还曾被 B 变体绕过 —— 保护为零、代价很大。
+
+    保留函数仅为兼容 `music/prompt_driven_remix.py` 与
+    `remix/tools/hourly_remix.py` 的现有 import（它们仍会调用）。
+    行为：原样返回 files，不产生任何 dropped 记录。
     """
-    pool = entries.get(cat, {})
-    kept: list[str] = []
-    for path in files:
-        e = pool.get(os.path.basename(path))
-        tier = (e or {}).get("license_tier")
-        if tier in _RELEASE_SAFE_TIERS:
-            kept.append(path)
-    n = len(files) - len(kept)
-    if n:
-        dropped.append((cat, n))
-    return kept
+    return files
 
 
 def pick_loop_candidate(
@@ -478,21 +476,11 @@ def _pick_random_tracks(
               + "、".join(f"{c} {n}" for c, n in dropped), file=sys.stderr)
 
     if not all_files:
-        # 区分两种「没有素材」：磁盘真的没有 vs 被 --release-safe 全剔除了。
-        # 混成一句会把用户引去检查素材目录，而真实原因是过滤（历史上误导过排查）。
-        if release_safe and dropped:
-            total = sum(n for _, n in dropped)
-            raise FileNotFoundError(
-                f"--release-safe 剔除了全部 {total} 条素材（"
-                + "、".join(f"{c} {n}" for c, n in dropped)
-                + f"），因此无可选音轨。原因是这些文件在 manifest 中缺少 "
-                f"license_tier，或其 tier 不属于 free/pack。\n"
-                f"素材目录本身有文件：{_MUSICKIT_ROOT}。"
-                f"若要使用它们，请补全 manifest 的 license_tier，或去掉 --release-safe。"
-            )
+        # 2026-11-02：原「被 --release-safe 全剔除」的分支已随过滤废弃而移除。
         raise FileNotFoundError(
             f"在 {_MUSICKIT_ROOT} 下未找到任何音频素材"
             f"（请确认 bass / drum / guita / cowbell / synth 目录中存在音频文件）。"
+            f"可用 `python remix/tools/doctor.py` 检查各池 manifest 与磁盘是否一致。"
         )
 
     chosen: list[tuple[str, str]] = []
@@ -778,16 +766,7 @@ def run_remix(
                 chosen.append((cat, path))
         if not chosen:
             raise FileNotFoundError("手动指定的音轨文件均不存在，请重新选择。")
-        if release_safe:
-            before = len(chosen)
-            chosen = [
-                (cat, path) for cat, path in chosen
-                if (entries_by_cat.get(cat, {}).get(os.path.basename(path)) or {}).get("license_tier")
-                in _RELEASE_SAFE_TIERS
-            ]
-            if len(chosen) < before:
-                print(f"[remix] --release-safe：剔除 {before - len(chosen)} 条受限/未知授权音轨",
-                      file=sys.stderr)
+        # 2026-11-02：原 `--release-safe` 的 tier 过滤已废弃（素材均为公版）
         tracks = chosen
     else:
         tracks = _pick_random_tracks(count, seed, bpm, entries_by_cat, release_safe)
@@ -1010,7 +989,7 @@ def main():
     )
     parser.add_argument(
         "--release-safe", action="store_true",
-        help="发布安全模式：仅使用授权层级为 free/pack 的素材（restricted/unknown 一律剔除）",
+        help="【已废弃】素材均为公共领域，本开关不再做任何过滤（保留以兼容旧脚本）",
     )
     parser.add_argument(
         "--mixer-style", type=str, default=None,

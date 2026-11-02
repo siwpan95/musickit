@@ -115,7 +115,7 @@ def test_pick_random_tracks_skeleton_loopable(fake_root):
 
 
 @pytest.mark.smoke
-def test_pick_random_tracks_release_safe_filters(fake_root):
+def test_release_safe_no_longer_filters(fake_root):
     drum = fake_root / "drum"
     write_wav(make_tone(5000), str(drum / "drum (1).wav"))
     (drum / "manifest.json").write_text(
@@ -138,12 +138,15 @@ def test_pick_random_tracks_release_safe_filters(fake_root):
     tracks = main._pick_random_tracks(3, seed=7, bpm=120, entries=entries,
                                       release_safe=True)
     cats = [c for c, _ in tracks]
-    assert "drum" not in cats                       # restricted 被剔除
-    assert "bass" in cats and "guita" in cats       # free/pack 保留
+    # 2026-11-02 起 `--release-safe` 不再过滤（素材均为公共领域）：
+    # 标 restricted 的鼓也必须被选中，且三类骨架齐全。
+    assert "drum" in cats, "release_safe 已废弃，不应再剔除任何素材"
+    assert set(cats) == {"drum", "bass", "guita"}
 
 
 @pytest.mark.smoke
-def test_filter_release_safe_reports_dropped():
+def test_filter_release_safe_is_now_identity():
+    """已废弃：函数保留为兼容位，必须原样返回且不产生 dropped 记录。"""
     files = ["a.wav", "b.wav"]
     entries = {"drum": {
         "a.wav": {"license_tier": "free"},
@@ -151,8 +154,8 @@ def test_filter_release_safe_reports_dropped():
     }}
     dropped: list = []
     kept = main._filter_release_safe(files, "drum", entries, dropped)
-    assert kept == ["a.wav"]
-    assert dropped == [("drum", 1)]
+    assert kept == files, "不应再按 tier 剔除"
+    assert dropped == [], "不应再记录剔除数"
 
 
 @pytest.mark.smoke
