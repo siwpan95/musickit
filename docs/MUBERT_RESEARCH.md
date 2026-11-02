@@ -1,5 +1,7 @@
 # Mubert 调研报告 —— 对 G:\music\musickit 的潜在帮助分析
 
+> **存档说明**（2026-11-03 归类）：文中 `G:\music\musickit` 为历史路径（该盘已移除），现址为仓库根目录。
+
 > 调研日期：2026-08-13（联网检索 mubert.com 官方站、API 文档、第三方评测 chatgate/ProductCool/Musicseed 等）
 > 目的：评估 Mubert（AI 生成音乐平台）能否帮助当前 phonk 混音项目
 

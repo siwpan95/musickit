@@ -1,5 +1,8 @@
 # 📻 radio 并入 musickit —— 合并说明
 
+> **存档说明**（2026-11-03 归类）：文中 `G:\music\radio`、`G:\music\musickit` 为历史路径
+> （该盘已移除），现址为仓库根目录下的 `radio/`。
+
 > **2026-09-02 还原记录**：radio/ 曾于 2026-08-27（93db08f）被整体移出，理由
 > 「电台已迁 private-radio-stations 架构化线」。事后核查：Node 线（apps/audio）
 > 是**转播版 Relay Only**（只转播外部流、无 musickit 音源，本地歌单/排程等已移除），

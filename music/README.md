@@ -233,7 +233,7 @@ python prompt_driven_remix.py -c phonk      # --release-safe 已废弃，无需�
 - 母带：风格母带链（glue 压缩、M/S 宽度、饱和、目标 LUFS、砖墙限幅，峰值 -1.5 dBFS
   为 mp3 等有损编码留余量）。
 - 频道形态工具：本地电台 remix/tools/mixer_radio.py、本地无限流 remix/tools/mixer_stream.py，
-  与 Mubert 的异同及频道可行性见 MUBERT_COMPARISON.md。
+  与 Mubert 的异同及频道可行性见 [docs/MUBERT_COMPARISON.md](../docs/MUBERT_COMPARISON.md)。
 
     # 固定某位混音师（如 Mike Dean 的饱和太空感）
     python prompt_driven_remix.py -c phonk --mixer-style mikedean

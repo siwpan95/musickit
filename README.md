@@ -43,8 +43,17 @@ musickit/
 │                   # 与 private-radio-stations apps/audio（Node 转播版）并存
 ├── instrument_taxonomy.json   # 规范乐器分类体系：242 乐器词 → 37 类目 → 13 池
 ├── manifest_index.json        # 总索引（自动化每 6h 重建，不入版本库）
-└── README.md / ONBOARDING.md（新人上手指南）/ INTEGRATION.md / EVALUATION_REPORT.md / FIX_PLAN.md /
-    MUBERT_RESEARCH.md / MUBERT_METHODOLOGY.md / MUBERT_COMPARISON.md
+├── docs/         # 文档归类区
+│   ├── musickit-architecture.html   # 架构设计文档（§7 能力补全建议的源头）
+│   ├── INTEGRATION.md               # 双管线整合总览（固定风格 × 随机风格）
+│   ├── MUBERT_RESEARCH.md           # Mubert 调研报告
+│   ├── MUBERT_METHODOLOGY.md        # Mubert 方法论移植
+│   ├── MUBERT_COMPARISON.md         # Mubert 对比报告
+│   ├── EVALUATION_REPORT.md         # 项目评估报告（2026-08-13）
+│   ├── FIX_PLAN.md                  # 修复计划（v2）
+│   ├── RADIO_MERGE.md               # radio 并入说明
+│   └── 深度评估_20260817.md / 深度评估_更正_20260817.md
+└── README.md / ONBOARDING.md（新人上手指南）/ SKILL.md
 ```
 
 ## 素材授权
@@ -252,7 +261,7 @@ mixer_styles.py 参数化（逐总线 EQ/压缩/饱和/混响/宽度 + 风格母
   （本地电台，输出 m3u8）；python remix/tools/mixer_stream.py --port 8010
   （本地无限流：/api/channels /api/stream/<slug> /api/track/<slug>）。
 
-设计与 Mubert 的异同及频道可行性详见 MUBERT_COMPARISON.md，整合总览见 INTEGRATION.md。
+设计与 Mubert 的异同及频道可行性详见 [docs/MUBERT_COMPARISON.md](docs/MUBERT_COMPARISON.md)，整合总览见 [docs/INTEGRATION.md](docs/INTEGRATION.md)。
 
 ## 采样源（与 license_tier 对应）
 
@@ -281,7 +290,7 @@ mixer_styles.py 参数化（逐总线 EQ/压缩/饱和/混响/宽度 + 风格母
 ## 仓库索引标注（2026-08-27 · siwpan 统一治理）
 
 > musickit（phonk 混音项目，独立仓 siwpan/musickit）；本地对应 <PATH>。
-> 电台融合实验记录见 RADIO_MERGE.md；提示词生成器为独立仓 siwpan/music-prompt-generator。
+> 电台融合实验记录见 [docs/RADIO_MERGE.md](docs/RADIO_MERGE.md)；提示词生成器为独立仓 siwpan/music-prompt-generator。
 > **2026-09-02**：radio/ 直播端已从历史还原（93db08f~1）——此前被误判冗余移除；它与
 > private-radio-stations apps/audio（Node **转播版**）功能面不同（直播 vs 转播），非冗余，并存。
 > 本标注为发布面统一追加，不改变原有内容。

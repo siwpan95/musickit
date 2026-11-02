@@ -112,7 +112,7 @@ python main.py --remix --seed 42 --bars 16 --out output
 其它 synth / 采样。最小可用骨架为 3 轨（鼓 + 贝斯 + 旋律），
 典型完整制作约 4~6 轨。本工具默认随机选 3 条，可用 `--count` 调整。
 
-## 混音师频道（类 Mubert 频道形态，详见 MUBERT_COMPARISON.md L1~L3）
+## 混音师频道（类 Mubert 频道形态，详见 [docs/MUBERT_COMPARISON.md](../docs/MUBERT_COMPARISON.md) L1~L3）
 
     python tools/mixer_radio.py --channel wallace --count 3     # 本地混音师电台 -> <slug>_radio.m3u8
     python tools/mixer_stream.py --port 8010                    # 本地无限流服务（浏览器即播）
@@ -288,7 +288,7 @@ remix/
 ├── templates/
 │   └── structures.json     # 曲式模板库（classic_drop / ambient_ghost / loop_stack）
 ├── tools/
-│   ├── mixer_radio.py      # 本地混音师电台（MUBERT_COMPARISON.md L2）
+│   ├── mixer_radio.py      # 本地混音师电台（docs/MUBERT_COMPARISON.md L2）
 │   ├── mixer_stream.py     # 本地混音师无限流服务（L3）
 │   ├── hourly_remix.py     # 每小时随机风格混音驱动（固定 2 分钟 + 索引/播放列表/日志）
 │   ├── rerender_from_index.py      # 按索引参数复现历史混音为发布级 WAV

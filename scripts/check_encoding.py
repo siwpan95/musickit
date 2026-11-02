@@ -171,7 +171,18 @@ def iter_py_files(root: str, top: str) -> list[str]:
     base = os.path.join(root, top)
     out: list[str] = []
     for dirpath, dirnames, filenames in os.walk(base):
-        dirnames[:] = [d for d in dirnames if d != "__pycache__"]
+        # 排除虚拟环境与缓存目录（2026-11-03 修）：
+        # 只排 __pycache__ 时，本机 remix/.venv 里的第三方包被当成仓库源码扫，
+        # 导致 test_repo_is_clean 报「scipy/stats/tests/... 缺 encoding」——
+        # 那是别人家的代码，不是本仓的责任。
+        # 判据：目录名以 . 开头（.venv/.orphan/.tox…）、名为 venv/env/virtualenv，
+        # 或为 __pycache__。
+        dirnames[:] = [
+            d for d in dirnames
+            if d != "__pycache__"
+            and not d.startswith(".")
+            and d.lower() not in ("venv", "env", "virtualenv")
+        ]
         for fn in filenames:
             if fn.endswith(".py"):
                 out.append(os.path.join(dirpath, fn))

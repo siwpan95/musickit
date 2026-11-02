@@ -8,7 +8,7 @@
 > 这是新人最大的认知落差，本文档第一优先讲清楚。
 >
 > **配套文档**：功能全貌见 [README.md](README.md)；两条管线打通关系见
-> [INTEGRATION.md](INTEGRATION.md)；素材调性体系见 README「调性标注与 `--key`」。
+> [docs/INTEGRATION.md](docs/INTEGRATION.md)；素材调性体系见 README「调性标注与 `--key`」。
 
 ---
 

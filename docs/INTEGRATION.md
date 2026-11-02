@@ -53,7 +53,7 @@
 - remix/tools/mixer_radio.py：本地混音师电台（--channel wallace --count 3，输出 m3u8 播放列表 + 报告）
 - remix/tools/mixer_stream.py：本地流服务（http://127.0.0.1:8010/，频道主页 /api/channels /api/stream/<slug> /api/track/<slug>）
 - burbidge_album/album/channels.json：24 频道目录（generate_album_docs.py 自动生成）
-- 详见 MUBERT_COMPARISON.md 第五章可行性专题
+- 详见 [MUBERT_COMPARISON.md](MUBERT_COMPARISON.md) 第五章可行性专题
 
 ## 扩展混音师
 
