@@ -88,6 +88,20 @@ def duration_s(path: str) -> float:
     return 0.0
 
 
+def _detect_indent(mpath: str) -> int:
+    """沿用既有 manifest 的缩进，避免整库重排（历史上是 2 空格）。"""
+    try:
+        with open(mpath, encoding="utf-8") as f:
+            for line in f:
+                if line.startswith(" "):
+                    return max(1, len(line) - len(line.lstrip(" ")))
+                if line.strip() and not line.startswith("{"):
+                    break
+    except OSError:
+        pass
+    return 2
+
+
 def load_manifest(pool_dir: str) -> dict:
     mpath = os.path.join(pool_dir, "manifest.json")
     if os.path.isfile(mpath):
@@ -95,20 +109,26 @@ def load_manifest(pool_dir: str) -> dict:
             with open(mpath, encoding="utf-8") as f:
                 d = json.load(f)
             if isinstance(d, dict) and isinstance(d.get("entries"), list):
+                d["_indent"] = _detect_indent(mpath)
                 return d
         except Exception:  # noqa: BLE001
             pass
-    return {"generated_by": "ingest_stems.py", "entries": []}
+    return {"generated_by": "ingest_stems.py", "entries": [], "_indent": 2}
 
 
 def save_manifest(pool_dir: str, data: dict, dry_run: bool) -> None:
+    """写回 manifest：保留原缩进与 LF 换行，保留原 generated_by 出处。"""
     if dry_run:
         return
     mpath = os.path.join(pool_dir, "manifest.json")
     tmp = mpath + ".tmp"
-    data["generated_by"] = "ingest_stems.py"
-    with open(tmp, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=1)
+    indent = data.pop("_indent", 2)
+    # 不覆盖原 generated_by（那是「谁生成过这个池」的出处），单独记本次灌库者
+    data.setdefault("generated_by", "ingest_stems.py")
+    data["last_ingested_by"] = "ingest_stems.py"
+    with open(tmp, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(data, f, ensure_ascii=False, indent=indent)
+        f.write("\n")
     os.replace(tmp, mpath)
 
 
@@ -211,15 +231,13 @@ def ingest(
         dst = os.path.join(pool_dir, name)
         sha = sha256_file(src)
 
-        if os.path.isfile(dst) and sha256_file(dst) == sha:
+        same_on_disk = os.path.isfile(dst) and sha256_file(dst) == sha
+        if same_on_disk:
             stats["skip_same"] += 1
-            d = per_pool.setdefault(pool, {"insert": 0, "update": 0, "skip": 0,
-                                            "_manifest": None})
-            d["skip"] += 1
-            continue
-
-        if not dry_run:
+        elif not dry_run:
             shutil.copy2(src, dst)
+        # 注意：即使文件已存在也要继续走到 upsert —— 否则「manifest 被回滚/清空但
+        # 音频还在」的场景下，条目永远补不回来（静默漏记）。
 
         data = per_pool.setdefault(pool, {"insert": 0, "update": 0, "skip": 0, "_manifest": None})
         if data["_manifest"] is None:
