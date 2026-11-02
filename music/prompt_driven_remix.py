@@ -237,9 +237,31 @@ def _pool_entries() -> dict[str, dict[str, dict]]:
     return out
 
 
+def _fusion_style_instruments(fusion_with: str | None) -> tuple[str, list[str]]:
+    """按 key 找到融合风格，返回 (label, 它的招牌乐器列表)。
+
+    为什么需要：`generate(fusion_with=...)` 产出的 `instruments` 是**混合池里重采样**，
+    实测会丢掉主风格的招牌乐器（新古典 × 中国民族乐器 → 竖琴/大提琴消失、只剩编钟）。
+    于是「融合」听起来只是换了一批乐器，听不出是两个风格的结合。
+    这里显式取回第二风格的招牌乐器，让两侧都出声。
+    """
+    if not fusion_with:
+        return "", []
+    try:
+        import music_prompt_generator as _gen
+
+        for prof in getattr(_gen, "STYLES", []):
+            if getattr(prof, "key", None) == fusion_with:
+                return getattr(prof, "label", fusion_with) or fusion_with, list(prof.instruments or [])
+    except Exception:  # noqa: BLE001
+        pass
+    return "", []
+
+
 def prompt_to_mix_params(data: dict, rng: random.Random,
                          max_tracks: int = 5, add_skeleton: bool = True,
-                         release_safe: bool = False, max_accents: int = 2):
+                         release_safe: bool = False, max_accents: int = 2,
+                         max_fusion_tracks: int = 2):
     """把一条提示词字典转换为 run_remix 的调用参数。
 
     Returns:
@@ -307,18 +329,51 @@ def prompt_to_mix_params(data: dict, rng: random.Random,
                     tracks.append((sk, path))
                     seen_roles.add(sk)
 
+    # 3.5) 融合：显式补上第二风格的招牌乐器（generate 的 instruments 会丢掉主风格）
+    # 单独存放而不直接 append 到 tracks：第 5 步的裁剪是从头部切的，挂在尾部会被静默截掉，
+    # 而 fusion_added 仍会报告"已补入"→ 假报告。这里让融合轨在第 5 步优先占位。
+    fusion_label, fusion_insts = _fusion_style_instruments(data.get("fusion_with"))
+    fusion_tracks: list[tuple[str, str, str]] = []   # (乐器名, mixer_role, 文件)
+    if data.get("fusion") and fusion_insts:
+        existing = {str(x).strip().lower() for x in (data.get("instruments") or [])}
+        for inst in fusion_insts:
+            if len(fusion_tracks) >= max_fusion_tracks:
+                break
+            if str(inst).strip().lower() in existing:
+                continue
+            m = map_instrument(inst)
+            if m is None or not m["available"]:
+                continue
+            files = collect_for_pool(m["pool"])
+            if files:
+                files = _prefer_subdirs(files, m["pool"], m.get("prefer_subdirs") or [])
+                if m["mixer_role"] in _MELODIC_ROLES:
+                    files = _loop_preferring(files, entries.get(m["pool"]))
+            if not files:
+                continue
+            fusion_tracks.append((inst, m["mixer_role"], rng.choice(files)))
+
     # 4) 氛围层：elements → sfx / animal 的真实素材（点缀层，引擎里天然走 ROLE_ACCENT）
     _picks, _egaps = _resolve_elements(
         data.get("elements"), entries, MUSICKIT_ROOT, rng,
-        max_accents=max_accents, skip={path for _, path in tracks},
+        max_accents=max_accents,
+        skip={path for _, path in tracks} | {p for _, _, p in fusion_tracks},
     )
     if _egaps:
         gaps.extend(_egaps)
 
-    # 5) 上限裁剪（引擎最多 8 轨）：先给点缀层留位，避免被乐器轨挤掉
+    # 5) 上限裁剪（引擎最多 8 轨）：先给点缀层留位，避免被乐器轨挤掉；
+    #    融合轨是**显式额外请求**——在 max_tracks 之上另占额度，只受引擎 8 轨硬上限约束。
+    #    否则 max_tracks 被基础轨用满时，融合只能顶替掉一条基础轨，等于又变回"换乐器"。
     max_tracks = max(1, min(max_tracks, 8))
-    budget = max(1, 8 - len(_picks))
-    tracks = tracks[: min(max_tracks, budget)] + [(pool, path) for pool, path, _, _ in _picks]
+    hard = max(1, 8 - len(_picks))
+    limit = max(1, min(hard, max_tracks + len(fusion_tracks)))
+    fusion_kept = fusion_tracks[:limit]
+    base_kept = tracks[: max(0, limit - len(fusion_kept))]
+    tracks = base_kept + [(role, path) for _, role, path in fusion_kept] \
+        + [(pool, path) for pool, path, _, _ in _picks]
+    # fusion_added 必须等于实际留在 tracks 里的融合轨，否则就是假报告
+    fusion_added = [inst for inst, _, _ in fusion_kept]
 
     # 5) 曲式
     structure = choose_structure(data.get("label", ""),
@@ -336,6 +391,8 @@ def prompt_to_mix_params(data: dict, rng: random.Random,
         # sentence：整句自然语言，此前只被打印；写进成品 ID3 comment 以便事后追溯
         "note": data.get("sentence") or None,
         "elements": [p[2] for p in _picks],      # 实际落地的氛围词（便于报告）
+        "fusion_label": fusion_label,
+        "fusion_added": fusion_added,            # 融合时真正补进来的第二风格乐器
         "instruments_note": f"instruments={data.get('instruments')}",
         "gaps": gaps,
     }
@@ -537,6 +594,10 @@ def main():
               + ("  note=有" if mp.get("note") else ""))
         for ci, (cat, path) in enumerate(mp["tracks"], 1):
             print(f"    {ci}. [{cat}] {os.path.basename(path)}")
+        if mp.get("fusion_label"):
+            added = mp.get("fusion_added") or []
+            print(f"  融合  -> {mp['fusion_label']}："
+                  + (f"补入 {added}" if added else "无可补乐器（对应池无素材）"))
         if mp.get("gaps"):
             print(f"  ⚠ 跳过（musickit 无样本/无匹配）：{mp['gaps']}")
 
@@ -569,6 +630,8 @@ def main():
             "mixer_style": r["mapping"].get("mixer_style"),
             "tracks": [list(t) for t in r["mapping"]["tracks"]],
             "gaps": r["mapping"].get("gaps", []),
+            "fusion_label": r["mapping"].get("fusion_label") or "",
+            "fusion_added": r["mapping"].get("fusion_added") or [],
             "output": r["output"],
         } for r in results]
         with open(args.report, "w", encoding="utf-8") as f:

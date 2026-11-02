@@ -360,8 +360,25 @@ python music/prompt_driven_remix.py -c phonk --release-safe</pre>
 <tr><td><code>elements[]</code></td><td>已存在 <code>animal</code> 池与 <code>sfx</code> 池</td><td>把「雨声/风/街道」等映射到 sfx/animal 池，作为氛围 accent 层接入 <code>ROLE_ACCENT</code></td></tr>
 <tr><td><code>scene</code></td><td><code>structure_moods.json</code> 关键词表已外置</td><td>并入 moods 的曲式/情绪判定，或映射到 <code>mixer_style</code> 着色（如「赛博」→某混音师链）</td></tr>
 <tr><td><code>sentence</code></td><td><code>run_remix</code> 已有 recipe 落库</td><td>写入输出文件 ID3 comment / recipe 文本，至少保留可追溯；进阶可做关键词回填驱动的兜底映射</td></tr>
-<tr><td><code>fusion</code> / <code>fusion_with</code></td><td><code>instruments</code> 已支持跨类目</td><td>把 <code>fusion_with</code> 的 instruments 作为额外轨道约束真正并入，让融合产生可听差异</td></tr>
+    <tr><td><code>fusion</code> / <code>fusion_with</code></td><td><code>instruments</code> 已支持跨类目</td><td>把 <code>fusion_with</code> 的 instruments 作为额外轨道约束真正并入，让融合产生可听差异</td></tr>
 </table>
+
+<h3>7.4 落地进度（2026-11-02 实做记录）</h3>
+<p>上表 5 项已全部落地。每项都先取证再改，并留可复跑的验证方式：</p>
+<table>
+<tr><th>字段</th><th>状态</th><th>落点</th><th>硬证据</th></tr>
+<tr><td><code>scale</code></td><td>✅ 已落地</td><td><code>remix/core/musical_key.py</code>（调性解析/兼容分级）+ <code>remix/tools/detect_keys.py</code>（Krumhansl-Schmuckler 估调）+ <code>main.py::_prefer_key_compatible</code></td><td>改 <code>--key</code> 后选出的曲目集合实际不同（不是重排——<code>pick_loop_candidate</code> 不看列表顺序，故改为「同调/近调子集优先」）</td></tr>
+<tr><td><code>elements[]</code></td><td>✅ 已落地</td><td><code>music/element_pool.py</code> + <code>element_pools.json</code>（9 条规则）→ sfx / animal 池</td><td>命中→挑真实素材作 <code>accent</code> 层；未命中→计入 <code>gaps</code>，绝不假映射</td></tr>
+<tr><td><code>scene</code></td><td>✅ 已落地</td><td><code>music/scene_style.py</code> + <code>scene_styles.json</code>（13 条规则）→ <code>mixer_style</code></td><td>dry-run 打印 <code>mixer-style = X（来源：scene 规则；why）</code>；未命中则明示「不启用」</td></tr>
+<tr><td><code>sentence</code></td><td>✅ 已落地</td><td><code>remix/core/tagging.py</code>（WAV 走 <code>mutagen.wave</code> + COMM 帧）</td><td>成品 ID3 comment 可读回原句；WAV 用 easy 接口读不到 COMM，必须走帧接口</td></tr>
+<tr><td><code>fusion</code> / <code>fusion_with</code></td><td>✅ 已落地</td><td><code>prompt_driven_remix.py::_fusion_style_instruments</code> + 第 3.5 步额外并入</td><td>真实渲染：基础 5 轨全保留 + 融合鼓轨并入 = 6 轨（两条 <code>drum</code> 并存），不是顶替</td></tr>
+</table>
+<div class="warn"><b>fusion 的两个坑（都已修，且都有回归测试）</b>
+<ol>
+<li><b>「融合」原本只是换了一批乐器</b>：<code>generate(fusion_with=...)</code> 的 <code>instruments</code> 是混合池重采样，实测会丢掉主风格招牌乐器（新古典 × 中国民族乐器 → 竖琴/大提琴消失、只剩编钟）。故桥接器显式取回第二风格乐器补轨。</li>
+<li><b>补了却被静默截掉，还照报「已补入」</b>：第 5 步轨道裁剪从<b>头部</b>切，挂在尾部的融合轨被丢掉，<code>fusion_added</code> 仍非空 → 假报告。且即便不被截掉，<code>max_tracks</code> 被基础轨用满时融合只能<b>顶替</b>一条基础轨，仍等于换乐器。现改为融合轨在 <code>max_tracks</code> 之上<b>额外占额度</b>（只受引擎 8 轨硬上限约束），<code>fusion_added</code> 必须等于实际留在 <code>tracks</code> 里的融合轨。</li>
+</ol>
+回归测试：<code>music/tests/test_fusion.py::TestFusionSurvivesTruncation</code>（把修复回退后该用例确实转红）。</div>
 
 <h2>8. 结论</h2>
 <ul>
@@ -369,7 +386,7 @@ python music/prompt_driven_remix.py -c phonk --release-safe</pre>
   <li>性能设计扎实：共享广播缓冲 + 背压 + 节流，适合个人/小圈子电台（waitress 并发）。</li>
   <li>可复现性工程到位：每次渲染落 <code>build_recipe</code> + 引擎指纹，便于漂移归因。<br><b>注（2026-11-02 修订）</b>：原此处写「<code>--release-safe</code> 守住授权红线」，该表述已撤销 —— 素材均为公共领域，无需授权隔离；且该过滤曾被 B 变体绕过、并会砍掉 68.3% 素材，现已废弃。</li>
   <li><b>API 文档是短板</b>：既有 <code>api_docs.py</code> 路由名/字段不全、无示例，已用两份 OpenAPI v3 规范补齐（见同目录）。</li>
-  <li><b>提示词利用率是第二大短板（重点）</b>：生成器产出 12 字段，桥接器仅真正消费 <code>instruments</code>+<code>bpm</code>（另 3 字段只选曲式），<code>scale/elements/scene/sentence/fusion</code> 等 7 字段被静默丢弃。详见第 7 节覆盖率矩阵与强化建议——若要做到「提示词所写即所得」，需把被丢弃字段接入现有池/DSP（见 7.3）。</li>
+  <li><b>提示词利用率曾是第二大短板，现已基本补齐</b>：审计时生成器产出 12 字段、桥接器仅真正消费 <code>instruments</code>+<code>bpm</code>，<code>scale/elements/scene/sentence/fusion</code> 等 7 字段被静默丢弃。<b>（2026-11-02 修订）</b><code>scale</code>、<code>elements</code>、<code>scene</code>、<code>sentence</code>、<code>fusion/fusion_with</code> 五项均已接入真实音频路径并有回归测试，详见 7.4。仍留 <code>english</code> 等纯展示字段。</li>
 </ul>
 
 </div>
