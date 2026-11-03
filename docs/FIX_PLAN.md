@@ -2,7 +2,7 @@
 
 > **存档说明**（2026-11-03 归类）：本文记录的是 **2026-08-13 ~ 08-17** 的修复计划与执行记录，
 > 文中 `G:\music\musickit` 为历史路径（该盘已移除），现址为仓库根目录。
-> 后续进展见 `deliverables/gstack/priority-plan-musickit-2026-11-02.md`。
+> 后续进展见 `docs/audits/priority-plan-musickit-2026-11-02.md`。
 
 > 依据：2026-08-13《musickit 项目评估报告》+ 用户裁定（含 16:43 补充）
 > 原则：**先规划后执行**；所有素材移动只 move 不 delete；每阶段有 dry-run 与验收标准

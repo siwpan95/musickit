@@ -16,7 +16,7 @@
 - **真正的阻塞只剩 2 个**：① **ffmpeg/ffprobe 未入库 + `duration_ms()` 静默返回 0**（新环境 100% 跑不起来；且它会掩盖其他缺陷）；② **素材池本机为空 + 仓库零 CI**（音频域完全无法验证，112 个通过的测试全在纯逻辑层）。
 - **⚠️ v3 更正（2026-11-02 18:5x）**：初稿把 `music/test_suite.py` 判为「自撰修复报告生成器、7 处写死 `✅ 修复: ✓`」——**该结论不成立，已撤回**。全仓 grep 无此字符串，`check()` 是按条件判定的真断言，`198-243` 行是 JSON/CSV 往返校验。真实问题小得多：评分卡有 3 项写死满分（功能完整性/导出可靠性/边界处理），已改为通过率统计。**教训：转述成员结论前必须自己 grep 一次原文。**
 - **已撤销的一条**：`--release-safe` 的 B 变体绕过。作为**代码契约**它是真 bug（flag 与实现不符），但作为**风险**它不存在 —— 且实测该开关只放行 **31.7%** 素材（9,607/30,259），**主动砍掉 68.3%**。零收益、高摩擦，建议 retire 而非修复。
-- **下一步**：81 条原始发现去重后 73 条，按 T0→T3 四档排好，见 `priority-plan-musickit-2026-11-02.md`。
+- **下一步**：81 条原始发现去重后 73 条，按 T0→T3 四档排好，见 `docs/audits/priority-plan-musickit-2026-11-02.md`。
 
 ---
 
@@ -170,7 +170,7 @@
 
 ---
 
-## ✅ 行动清单（v2 重排为 T0→T3，详见 `priority-plan-musickit-2026-11-02.md`）
+## ✅ 行动清单（v2 重排为 T0→T3，详见 `docs/audits/priority-plan-musickit-2026-11-02.md`）
 
 | # | 行动 | 负责方 | 优先级 | 验收标准 |
 |---|------|--------|--------|---------|
@@ -206,7 +206,7 @@
    - 最终核验（18:15:56）：`remix/bin/` 仅 `README.md`、`git status` 为空、HEAD 仍 `f43df88`、素材池无残留（非 manifest 文件数全为 0）。
    - **这本身被列为一项发现**：环境预置不可见 ⇒ 同一条命令在不同时刻可能得到不同结果 ⇒ 本轮所有「实测」结论都必须带时间戳与前置条件才可复现。
 5. **未做的检查**：未做渗透测试、未做性能压测、未做成品音频主观听感评估、未审计 `radio/radio-apk/` 与 PWA 前端、未跑 FFmpeg 模糊测试。
-   - **「提示词字段利用率」不在本报告范围**：该主题已由 `docs/musickit-architecture.html` §7 覆盖。我复核了它的核心结论——**成立**：`generate()` 产出 12 字段（`music_prompt_generator.py:239`），`prompt_to_mix_params` 只读 5 个（`bpm`:248、`instruments`:258、`label/subgenre/moods`:313-315 仅送 `choose_structure`），`scale/elements/scene/sentence/english/fusion/fusion_with` 共 **7 字段确被静默丢弃**。优先级排期见 `priority-plan-musickit-2026-11-02.md` §4。
+   - **「提示词字段利用率」不在本报告范围**：该主题已由 `docs/musickit-architecture.html` §7 覆盖。我复核了它的核心结论——**成立**：`generate()` 产出 12 字段（`music_prompt_generator.py:239`），`prompt_to_mix_params` 只读 5 个（`bpm`:248、`instruments`:258、`label/subgenre/moods`:313-315 仅送 `choose_structure`），`scale/elements/scene/sentence/english/fusion/fusion_with` 共 **7 字段确被静默丢弃**。优先级排期见 `docs/audits/priority-plan-musickit-2026-11-02.md` §4。
 6. **severity 是主理人统一后的口径**。三位成员原始严重度不一致（同一问题分别被标 P0/P1/P2），第 2 节已按「影响面 × 触发概率 × 可恢复性」重新归一，可能与成员原文不同。
 
 ---
