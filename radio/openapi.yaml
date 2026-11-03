@@ -440,7 +440,7 @@ paths:
                 disk: { free_gb: 120.4, total_gb: 405.0 }
                 hls: { running: true, last_error: "" }
                 ffmpeg: true
-                ffmpeg_path: "D:/projects/repos/musickit/radio/ffmpeg/ffmpeg.exe"
+                ffmpeg_path: "<MUSICKIT_ROOT>/radio/ffmpeg/ffmpeg.exe"
                 deps: { requests: true, waitress: true }
   /api/listeners:
     get:
@@ -627,7 +627,7 @@ paths:
               properties:
                 action: { type: string, enum: [start, stop] }
       responses:
-        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/SimpleOk' }, example: { ok: true, recording: true, path: "D:/.../recordings/rec_20261102_173000.mp3" } } } }
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/SimpleOk' }, example: { ok: true, recording: true, path: "<MUSICKIT_ROOT>/recordings/rec_20261102_173000.mp3" } } } }
         '500': { description: 无 ffmpeg, content: { application/json: { schema: { $ref: '#/components/schemas/SimpleOk' } } } }
         '401': { $ref: '#/components/responses/Unauthorized' }
   /api/musickit:

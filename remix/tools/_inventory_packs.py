@@ -1,4 +1,4 @@
-"""Read-only inventory of G:\\BaiduNetdiskDownload: count audio files per pack.
+"""Read-only inventory of a local Baidu-netdisk download root (env BAIDU_DOWNLOAD_ROOT): count audio files per pack.
 
 Groups by the immediate sub-folder (already-extracted packs) or by archive
 filename (still-compressed packs). For archives we read the listing only

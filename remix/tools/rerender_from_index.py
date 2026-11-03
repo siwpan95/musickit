@@ -18,12 +18,12 @@ mixer_style`（+ `release_safe`、`tracks`）**重新渲染**。
      用客观数字证明「重渲 == 原曲」，而不是"看起来一样"。
 * 增量写 `release_index.json`，支持 `--resume` 断点续跑。
 
-用法（Windows / F:\\Python314）
+用法（Windows，建议在项目 .venv 下运行）
 ------------------------------
-    F:\\Python314\\python.exe tools\\rerender_from_index.py --dry-run        # 只列计划
-    F:\\Python314\\python.exe tools\\rerender_from_index.py --limit 1        # 先试 1 首
-    F:\\Python314\\python.exe tools\\rerender_from_index.py                  # 全量（默认续跑）
-    F:\\Python314\\python.exe tools\\rerender_from_index.py --only-seed 949014691
+    python tools\\rerender_from_index.py --dry-run        # 只列计划
+    python tools\\rerender_from_index.py --limit 1        # 先试 1 首
+    python tools\\rerender_from_index.py                  # 全量（默认续跑）
+    python tools\\rerender_from_index.py --only-seed 949014691
 """
 
 from __future__ import annotations

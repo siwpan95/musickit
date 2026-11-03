@@ -954,7 +954,7 @@
                     "last_error": ""
                   },
                   "ffmpeg": true,
-                  "ffmpeg_path": "D:/projects/repos/musickit/radio/ffmpeg/ffmpeg.exe",
+                  "ffmpeg_path": "<MUSICKIT_ROOT>/radio/ffmpeg/ffmpeg.exe",
                   "deps": {
                     "requests": true,
                     "waitress": true
@@ -1487,7 +1487,7 @@
                 "example": {
                   "ok": true,
                   "recording": true,
-                  "path": "D:/.../recordings/rec_20261102_173000.mp3"
+                  "path": "<MUSICKIT_ROOT>/recordings/rec_20261102_173000.mp3"
                 }
               }
             }

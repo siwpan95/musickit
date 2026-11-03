@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "description": "musickit 规范乐器分类体系：由 G:\\tools\\music 的 63 风格池 242 乐器词归并而成",
+  "description": "musickit 规范乐器分类体系：由 <MUSICKIT_ROOT>\\music 的 63 风格池 242 乐器词归并而成",
   "pools": [
     "bass",
     "drum",

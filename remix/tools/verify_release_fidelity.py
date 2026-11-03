@@ -16,8 +16,8 @@
 
 用法
 ----
-    F:\\Python314\\python.exe tools\\verify_release_fidelity.py            # 全量核验
-    F:\\Python314\\python.exe tools\\verify_release_fidelity.py --min-r 0.98
+    python tools\\verify_release_fidelity.py            # 全量核验
+    python tools\\verify_release_fidelity.py --min-r 0.98
 """
 
 from __future__ import annotations

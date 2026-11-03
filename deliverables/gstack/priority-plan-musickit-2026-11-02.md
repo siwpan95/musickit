@@ -532,7 +532,7 @@ key_pitch_only=True`。读取侧若先看 `scale`，就会得出**「B 小调」
 | 14 资源泄漏（临时目录/句柄） | ✅ 已闭合（ba676c4） | `ingest_stems.py` 的 `work`/`demucs_out` 两个 `mkdtemp` 包进 `try/finally`，退出时 `shutil.rmtree` 仅删自建目录（绝不删用户 `--demucs-out`）；磁盘级 GB 级临时 WAV 泄漏消除 |
 | 16 编码：文本 `open()` 缺 `encoding=` | ✅ 已闭合（ba676c4） | `remix/`+`music/`+`radio/` 文本 `open()` 全部补 `encoding="utf-8"`；`scripts/check_encoding.py`（AST 扫描，129 个 .py）接进 `ci_smoke.sh`；门禁实测 129/129 通过 |
 | 17 死代码：`remix/origin.py.bak` 入库 | ✅ 已闭合 | 该 `.bak` 本就未入库（`.gitignore:74` 已有 `*.bak`，`git ls-files \| grep origin.py.bak` 无结果），与 `origin.py` 内容完全相同、无独有修复，无残留入库风险 |
-| 18 路径处理 | ⏸ 未动 | 风险较低（`remix/` 侧已统一用 `__file__` 推绝对路径），待 16/17 落地后再看 |
+| 18 路径处理 | ✅ 已闭合（2026-11-03） | `remix/` 侧早已统一用 `__file__` 推绝对路径；本轮收口残留：regenerate `instrument_taxonomy.json`（去 `G:\tools\music` 旧盘符）、`radio/openapi.{json,yaml}` 示例路径改 `<MUSICKIT_ROOT>`、3 个工具用法段（`hourly_remix`/`rerender_from_index`/`verify_release_fidelity`）的 `F:\Python314\python.exe` 改通用 `python`、`_inventory_packs` docstring 去 `G:\BaiduNetdiskDownload` 改 env 驱动；`C:\Program Files`/`C:\Windows`/`D:\private-radio-stations-2.0` 属系统路径或历史迁移注记，按惯例保留 |
 | 24 radio 子进程劫持 | ✅ 已闭合（ba676c4） | `config._bundled_bin()` 只返回绝对路径或 `None`（永不裸名）；`hls.reap_orphans()` 用 `shutil.which` 取 powershell/pkill 并传 `cwd=_PROJECT_ROOT`；`transcoder`/`hls` 在 ffmpeg 缺失时早退或抛明确错误；新增 `radio/tests/test_hardening.py`（4 项）覆盖 |
 | release-safe 侵权定级 | ✅ 已撤销 | P0 → P3，材料全公版；过滤已改为恒等函数 |
 | §7.3 五项（scale/elements/scene/sentence/fusion） | ✅ 全部落地 | 见 §14 |
@@ -568,6 +568,6 @@ key_pitch_only=True`。读取侧若先看 `scale`，就会得出**「B 小调」
   - 哈希一致性 bug：`refresh_manifest_hashes.py` 改扁平池根优先解析，重跑后 `doctor --hash` 全池 sha256 不匹配归零（animal / sfx manifest 写入真实哈希）；
   - 测试 + 文档：新增 `radio/tests/test_hardening.py`（4）、`remix/tests/test_check_encoding.py`（25）；README / ONBOARDING 同步；pytest.ini 加 `radio/tests`。
 - **验证**：`check_encoding.py` 129/129 通过；新测试 29 passed；全量 pytest **346 passed / 1 skipped**；`ci_smoke.sh` exit 0；`doctor --hash` 全池 0 不匹配；推送后 `master` 与 `origin/master` 0/0 同步。
-- **仍未动**：#18 路径处理（低风险，`remix/` 已用 `__file__` 推绝对路径；#16/#17 已全闭合，可择机收口）。
+- **已闭合（2026-11-03）**：#18 路径处理（见 §18 收尾表；`remix/` 已用 `__file__` 推绝对路径，本轮收口剩余的文档/工具示例硬编码盘符）。外部阻塞项（ethnic 池、ffprobe、Gitee Go 流水线）仍待上游。
 
-**审计处置总览**：P0 全闭合；#13b / #13d / #14 / #16 / #17 / #24 已闭合；仅剩 #18（低风险，未动）与若干外部阻塞项（ethnic 池、ffprobe、Gitee Go 流水线）。
+**审计处置总览**：P0 全闭合；#13b / #13d / #14 / #16 / #17 / #18 / #24 已闭合；仅剩若干外部阻塞项（ethnic 池、ffprobe、Gitee Go 流水线）待上游。

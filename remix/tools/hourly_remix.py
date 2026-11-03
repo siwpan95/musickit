@@ -34,17 +34,17 @@ BPM 取偶数 -> bars = bpm/2，理论时长精确 120.0s（实测偏差 <0.1s�
     （--fusion 模式为 _fusion_<风格>_...；--format 可切 mp3/ogg/flac）
 同目录维护 hourly_index.json（逐首元数据 + 时长/交付规格校验）、playlist.m3u8、hourly_remix.log。
 
-用法（Windows / F:\\Python314）
+用法（Windows，建议在项目 .venv 下运行）
 ------------------------------
-    F:\\Python314\\python.exe tools\\hourly_remix.py                       # 随机风格 x 2 分钟（全素材池）
-    F:\\Python314\\python.exe tools\\hourly_remix.py --mixer-style random   # 叠加随机混音师染色
-    F:\\Python314\\python.exe tools\\hourly_remix.py --fusion               # 走提示词跨类融合（进阶）
-    F:\\Python314\\python.exe tools\\hourly_remix.py --count 5 --bpm 140    # 固定 5 轨 / 140BPM
-    F:\\Python314\\python.exe tools\\hourly_remix.py --seed 42              # 可复现
-    F:\\Python314\\python.exe tools\\hourly_remix.py --dry-run              # 只打印本次随机结果
-    F:\\Python314\\python.exe tools\\hourly_remix.py --release-safe         # 开启授权过滤（仅发布安全时）
-    F:\\Python314\\python.exe tools\\hourly_remix.py --sample-rate 96000 --bit-depth 24  # 更高交付规格
-    F:\\Python314\\python.exe tools\\hourly_remix.py --format mp3 --bitrate 320k        # 有损兜底
+    python tools\\hourly_remix.py                       # 随机风格 x 2 分钟（全素材池）
+    python tools\\hourly_remix.py --mixer-style random   # 叠加随机混音师染色
+    python tools\\hourly_remix.py --fusion               # 走提示词跨类融合（进阶）
+    python tools\\hourly_remix.py --count 5 --bpm 140    # 固定 5 轨 / 140BPM
+    python tools\\hourly_remix.py --seed 42              # 可复现
+    python tools\\hourly_remix.py --dry-run              # 只打印本次随机结果
+    python tools\\hourly_remix.py --release-safe         # 开启授权过滤（仅发布安全时）
+    python tools\\hourly_remix.py --sample-rate 96000 --bit-depth 24  # 更高交付规格
+    python tools\\hourly_remix.py --format mp3 --bitrate 320k        # 有损兜底
 """
 
 from __future__ import annotations
