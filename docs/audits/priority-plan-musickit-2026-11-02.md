@@ -2,7 +2,7 @@
 
 **日期**：2026-11-02 18:28
 **规划基准**：`docs/musickit-architecture.html`（HEAD `f43df88` 随代码一同提交）
-**辅助输入**：`full-audit-musickit-2026-11-02.md`（73 条审计发现）
+**辅助输入**：`docs/audits/full-audit-musickit-2026-11-02.md`（73 条审计发现）
 **前提**：素材为公版，无侵权问题；`--release-safe` 已撤销 P0
 
 > v2 曾试图用 workbuddy 成长中心画像做权重依据 —— 抓不到（SPA），且基准本就选错。本版改用项目**自己的架构设计文档**：它已经把短板写在明面上，不需要外部画像来猜。
